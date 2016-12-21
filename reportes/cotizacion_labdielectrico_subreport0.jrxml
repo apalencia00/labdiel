@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport0" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="564eebc9-bf96-411e-86f4-0c5d48aa47e1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="91"/>
+	<parameter name="ncotic" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT c."NUM_COTIZACION", c."FK_CLIENTE", c."FK_USUARIO",
+       c."FK_EMPLEADO", c."FECHA_REGISTRO", c."ESTADO", c."US_MODIFICA", c."FECHA_MODIFICACION",
+       c."FK_REVISION_ENSAYO_EQUIPO", cl."NOMBRE" || ' ' || cl."APELLIDO" as cliente, cl."IDE_NIT",cl."TELEFONO_CONTACTO", cl."DIRECCION"
+  FROM labor."COTIZACION" c , labor."CLIENTE" cl WHERE "ID_CLIENTE" = "FK_CLIENTE" AND c."NUM_COTIZACION" = $P{ncotic}  ;]]>
+	</queryString>
+	<field name="NUM_COTIZACION" class="java.lang.String"/>
+	<field name="FK_CLIENTE" class="java.lang.Integer"/>
+	<field name="FK_USUARIO" class="java.lang.Integer"/>
+	<field name="FK_EMPLEADO" class="java.lang.Integer"/>
+	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
+	<field name="ESTADO" class="java.lang.String"/>
+	<field name="US_MODIFICA" class="java.lang.Integer"/>
+	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
+	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
+	<field name="cliente" class="java.lang.String"/>
+	<field name="IDE_NIT" class="java.lang.String">
+		<fieldDescription><![CDATA[---]]></fieldDescription>
+	</field>
+	<field name="TELEFONO_CONTACTO" class="java.lang.String"/>
+	<field name="DIRECCION" class="java.lang.String"/>
+	<title>
+		<band height="14" splitType="Stretch"/>
+	</title>
+	<detail>
+		<band height="480">
+			<staticText>
+				<reportElement x="0" y="129" width="100" height="20" uuid="aeccd8f8-d33c-41c2-9a2a-b0425878a732"/>
+				<text><![CDATA[Correo Electronico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="371" width="246" height="20" uuid="9196471a-ee5e-4a5e-b10f-862b8a7ce962"/>
+				<text><![CDATA[Calle 42 No 44-51 Barranquilla-Atlantico		]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="195" width="342" height="20" uuid="e6346461-e1e1-4984-93fb-a215a4edc33c"/>
+				<text><![CDATA[REF.: Cotización para ensayo de equipos para trabajos en redes eléctricas energizadas.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="45" width="31" height="20" uuid="13ee6136-03d7-470c-940e-7b6557d6a053"/>
+				<text><![CDATA[NIT:	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="26" width="100" height="20" uuid="d53205a2-4ece-4c3b-b82f-af515b938f6e"/>
+				<text><![CDATA[Señores]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="66" width="57" height="20" uuid="37c69359-2590-45f8-92d7-6e8613789135"/>
+				<text><![CDATA[Atencion:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="385" width="246" height="20" uuid="5e671dc8-2841-477a-ad3b-5837bba36238"/>
+				<text><![CDATA[Teléfono: +57 5 3515740 Ext. 27]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="149" width="100" height="20" uuid="9327dd0c-5e3f-4612-ac61-04f5527d5ca5"/>
+				<text><![CDATA[Ciudad:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="413" width="246" height="16" forecolor="#000000" uuid="23f69c52-440d-48df-ba8b-217d453f47a7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1. ALCANCE ESPECÍFICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="4aad0018-8dbd-4cc0-a8e9-4f28d7c7a0c3"/>
+				<text><![CDATA[Barranquilla,
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="328" width="153" height="20" uuid="b0dfc57a-7d39-4947-9092-851ecd934b66"/>
+				<text><![CDATA[Gerardo Luis Ramírez Zapata
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="88" width="57" height="20" uuid="d329957f-f357-4f97-a9c0-e82c5d34509a"/>
+				<text><![CDATA[Direccion:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="429" width="539" height="51" forecolor="#000000" uuid="66a902ac-a2fb-454b-813a-83fcbeb4ba3a"/>
+				<text><![CDATA[Ensayo para la verificación dieléctrica de los elementos referenciados en esta oferta mediante la utilización de equipos de ensayos y métodos normalizados. Para la ejecución de estos ensayos se realizaran las actividades descritas en normativas internacionales en su ultima version vigente al momento de la ejecución de los mismos, las cuales se relacionan a continuación.
+
+
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="300" width="84" height="20" uuid="45ca87c8-10ef-41bd-91de-c236424c4b0a"/>
+				<text><![CDATA[Cordialmente,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="108" width="57" height="20" uuid="b5478e68-1a93-41c2-bfe9-5ae5ef3b6f82"/>
+				<text><![CDATA[Telefono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="251" width="545" height="46" uuid="89746748-6a9d-426a-8e7e-c7f62c67c411"/>
+				<text><![CDATA[Nos complace presentarle nuestra oferta de servicios para la realización de Ensayos eléctricos a los Equipos de Elevación y/o Protección Personal para trabajos en redes eléctricas energizadas, según los lineamientos de la norma ISO 17025 versión 2005 y los estandares de referencia aplicables para cada uno de los ensayos.
+
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="342" width="153" height="20" uuid="a04b9b93-23c3-4b2f-b17e-ad336f8f74fc"/>
+				<text><![CDATA[Ingeniero Laboratorio Dieléctrico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="220" width="84" height="20" uuid="f333ede9-2b3d-4bf0-902e-dfbbb4aef475"/>
+				<text><![CDATA[Respetado Señor:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="382" y="7" width="160" height="20" uuid="af88b409-e47d-4e6f-acd1-e641aa039c3d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NUM_COTIZACION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="26" width="248" height="20" uuid="54d7660e-a486-4c7b-aca6-c2e6060614f5"/>
+				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="46" width="150" height="20" uuid="f9d2cc13-965a-42ef-aff1-687f978a9fec"/>
+				<textFieldExpression><![CDATA[$F{IDE_NIT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="86" width="176" height="20" uuid="def7204e-02fb-4175-b70f-f11777760e44"/>
+				<textFieldExpression><![CDATA[$F{DIRECCION}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement x="117" y="106" width="100" height="20" uuid="e4765106-8cc4-40eb-bd83-b699a2107f3e"/>
+				<textFieldExpression><![CDATA[$F{TELEFONO_CONTACTO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

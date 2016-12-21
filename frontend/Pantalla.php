@@ -8,15 +8,18 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
+  
     <title>Starter Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-notifications.css">
+      <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      
+      <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
 
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
+      <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
+      <script src="js/bootstrap-toggle.min.js"></script>
   </head>
 
   <body>

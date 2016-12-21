@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida_subreport_Mantas" language="groovy" pageWidth="216" pageHeight="802" columnWidth="216" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d616a894-9cbb-4cde-b931-8d24780329e3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select count(1),  ce."DESCRIPCION" ,ec."MARCA"
+
+from   labor."EQUIPO_CLIENTE" ec ,labor."TIPO_EQUIPO" tp, labor."CLASE_EQUIPO" ce
+
+where   ec."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
+
+AND tp."FK_CLASE_EQUIPO" in (17,18,19,20,21)
+
+AND tp."ID_TIPO_EQUIPO" in (22,23,24,25,26)
+
+AND ce."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO"
+
+GROUP BY  ce."DESCRIPCION" ,ec."MARCA"]]>
+	</queryString>
+	<field name="count" class="java.lang.Long"/>
+	<field name="DESCRIPCION" class="java.lang.String"/>
+	<field name="MARCA" class="java.lang.String"/>
+	<title>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="216" height="20" backcolor="#CCCCCC" uuid="d734c7db-5fad-4997-a511-f2ee8049d17b"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3. MANTAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="71" height="20" uuid="f5222cfe-3a8c-4035-943f-d6a3f54b5e5a"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="22" width="91" height="20" uuid="b6b56198-35c5-4eb6-9029-19bed44e5510"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MARCA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="22" width="54" height="20" uuid="8c1858c1-92ce-43cb-88bd-a5c599bf379d"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CANTIDAD]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="71" y="0" width="41" height="20" uuid="89b2f806-eb67-4260-af5b-079cf846ed17"/>
+				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="71" height="20" uuid="04609a1a-d2fc-432d-868a-fbe270bd04fb"/>
+				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="0" width="100" height="20" uuid="e5ed0c61-4a4b-4449-ad51-750ee2627731"/>
+				<textFieldExpression><![CDATA[$F{MARCA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

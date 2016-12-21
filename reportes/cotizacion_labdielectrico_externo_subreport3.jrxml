@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_subreport3" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="dab5fcd6-524e-4c1e-b1a1-318f82d8a0c2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="270"/>
+	<title>
+		<band height="19" splitType="Stretch"/>
+	</title>
+	<detail>
+		<band height="644" splitType="Stretch">
+			<staticText>
+				<reportElement x="4" y="89" width="555" height="31" forecolor="#000000" uuid="7804edaa-a80c-4c9f-8799-f8d5b918b8ed"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[• No debe existir ninguna fuga a lo largo del recorrido de los conductos hidráulicos y conexiones del boom.
+"
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="20" width="139" height="16" forecolor="#000000" uuid="9423a2d7-770a-46be-a9ad-5b7c2bc3696e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.1 Booms y liners.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="69" width="245" height="20" forecolor="#000000" uuid="788bd6b1-7113-447e-a6ee-527fd5610e91"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[• Debe haberse retirado el liner del  Boom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="136" width="555" height="35" forecolor="#000000" uuid="059e1eb0-9b96-4bf9-9283-e5c525bdcd8e"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Los elementos tales como guantes, mangas, cubridores de líneas, cubiertas, mantas, etc, deberán cumplir con las siguientes condiciones al momento de ser recibidos en nuestras instalaciones:
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="173" width="228" height="16" forecolor="#000000" uuid="8d38e07f-cd55-4804-9bf9-8b2c49a6b1ce"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.3 Pértigas telescópicas y tipo bastón]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="189" width="555" height="35" forecolor="#000000" uuid="dbc55f87-400d-46b4-9445-84b1b55a46b3"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[• Deben estar libres de polvo, aceite o cualquier otro material en su superficie externa y
+  en su interior.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="317" width="555" height="46" forecolor="#000000" uuid="df143baf-e811-4a18-8111-f9154459ea0f"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[• La inspección visual determina si se puede realizar el ensayo. En el caso de los equipos, si hacen falta accesorios necesarios para los ensayos, o de encontrar daños o defectos en los elementos, estos NO se reciben.  							]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="4" y="507" width="555" height="17" forecolor="#000000" backcolor="#FFFF00" uuid="90929708-ec09-4136-9f1b-5aacb72b6067"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[• El tiempo estimado de ensayo para ejecucion del servicio sera:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="4" width="401" height="16" forecolor="#000000" uuid="7c640b19-dadd-4e7d-bd81-6c708773fbd4"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2. CONDICIONES PARA RECEPCIÓN DE LOS ÍTEMS A ENSAYAR.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="224" width="228" height="16" forecolor="#000000" uuid="8fb4d958-3a7c-4e68-80a1-0cdcbf194f13"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3. ENSAYOS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="363" width="555" height="65" forecolor="#000000" uuid="48483787-6807-4db5-8c55-23dd3e75e7d0"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[• Una vez realizada la inspección visual y antes de proceder a realizar el ensayo, se realiza una inspección detallada en el laboratorio para verificar el correcto estado del ítem. En el caso de encontrarse No conformidades por las cuales no se pueda realizar el servicio, se le informará al cliente y se hará entrega del ítem.							]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="36" width="555" height="33" forecolor="#000000" uuid="7e07f2e8-19b0-4a08-a312-761107e620c0"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[• Al momento de ingresar a las instalaciones, el boom a ser sometido a ensayo  debe   estar libre de aceites o cualquier otro liquido contaminante sobre su superficie  interna y externa.
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="120" width="401" height="16" forecolor="#000000" uuid="f456946d-9532-457b-b5ea-fdbf625c7d1f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.2 Elementos para trabajos en líneas eléctricas energizadas.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="428" width="555" height="79" forecolor="#000000" uuid="c2379151-590c-4ece-8cbf-7e1f3a513d6a"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[• Cuando no sea posible identificar las características de clase de uso o nivel de tensión de operación del equipo, se asumirá la información entregada por el cliente como la referencia para determinar la tensión de ensayo de los equipos. En este caso será responsabilidad del cliente los daños que pueda sufrir el equipo durante el ensayo si estos son causados por información incorrecta enviada por él.							]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="239" width="555" height="35" forecolor="#000000" uuid="a4a1483a-16ab-4970-9dd2-dfad9786cd96"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[• El usuario del servicio debe disponer de personal y recursos para el acompañamiento del personal del laboratorio durante la ejecucion de los ensayos.
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="274" width="555" height="43" forecolor="#000000" uuid="e6552a46-fdd2-4a97-baeb-7cdf3f0c1fc6"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[• El servicio es prestado por el LABORATORIO DIELÉCTRICO DE JLB Y CIA LTDA. Los ensayos se realizaran en]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

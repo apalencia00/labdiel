@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subreport1_cotizacion" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b872aba2-4088-4801-9516-094c6ae5aefd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="16" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="246" height="16" forecolor="#000000" uuid="2753ec4f-7838-4942-a2c7-06c771d7a4b2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1. ALCANCE ESPECÍFICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="18" width="555" height="51" forecolor="#000000" uuid="ec83d84c-0a6c-4037-a42c-57ca91c81b59"/>
+				<text><![CDATA[Ensayo para la verificación dieléctrica de los elementos referenciados en esta oferta mediante la utilización de equipos de ensayos y métodos normalizados. Para la ejecución de estos ensayos se realizaran las actividades descritas en normativas internacionales en su ultima version vigente al momento de la ejecución de los mismos, las cuales se relacionan a continuación.
+
+
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="144" y="74" width="243" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="47e1f7c5-0b82-46a0-828f-04ae284800ba"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOCUMENTOS  DE REFERENCIA PARA ENSAYO
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="30" y="74" width="114" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="a749c115-8891-4ccc-86d1-628c87590ee0"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EQUIPO A ENSAYAR	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="387" y="74" width="124" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="01ce15e2-fd2a-455d-bcab-3a2727748794"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CANTIDAD]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="28" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="58" width="555" height="14" forecolor="#000000" uuid="712e3931-f94b-4343-adb2-30a5a28b61b5"/>
+				<text><![CDATA[• Debe haberse retirado el liner del  Boom.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="16" width="120" height="16" forecolor="#000000" uuid="0adc8c4f-bb5d-465c-a048-29c9bcdc14e1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.1 Booms y liners.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="32" width="555" height="26" forecolor="#000000" uuid="b3631fa7-b4e2-4559-8219-56d4e2f6ee1f"/>
+				<text><![CDATA[• Al momento de ingresar a las instalaciones, el boom a ser sometido a ensayo  debe   estar libre de aceites o cualquier otro liquido contaminante sobre su superficie  interna y externa.                                                     							]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="392" height="16" forecolor="#000000" uuid="b994a1e7-e7b8-4838-81cc-a9eda137540b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2. CONDICIONES PARA RECEPCIÓN DE LOS ÍTEMS A ENSAYAR.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="72" width="555" height="14" forecolor="#000000" uuid="abf2f53d-e6cb-4029-a15c-f463dde6a21c"/>
+				<text><![CDATA[• No debe existir ninguna fuga a lo largo del recorrido de los conductos hidráulicos y conexiones del boom.]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

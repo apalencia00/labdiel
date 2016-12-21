@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_subreport5" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="677bc3f0-8ea0-4bd4-9155-78166527e04c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<title>
+		<band height="6" splitType="Stretch"/>
+	</title>
+	<detail>
+		<band height="627" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="437" width="376" height="20" backcolor="#FFFF33" uuid="65fc57d1-c6a6-4752-972d-44bcbf042c16"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MODIFICACIONES AL ALCANCE DE LOS TRABAJOS.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="68" width="376" height="20" backcolor="#FFFF33" uuid="721e4efd-b799-41f4-a3a8-ee4049ff7b3a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5. FORMA DE PAGO: De contado antes de iniciar los ensayos.							]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="317" width="544" height="82" uuid="e19a37b0-e957-4f85-9cd2-d2adf17c3173"/>
+				<text><![CDATA[EL OFERENTE responde por el cumplimiento pleno de sus obligaciones según la presente oferta.  En relación con los perjuicios, EL OFERENTE únicamente responderá por el daño emergente derivado de las acciones u omisiones que le sean directamente imputables.  En ningún evento EL OFERENTE responderá por lucro cesante, daños indirectos, consecuenciales, y/o perdida de información. En todo caso, la responsabilidad del OFERENTE en ningún evento excederá el cien por ciento del valor del presente negocio jurídico, salvo en los eventos de dolor o culpa grave, en los cuales la responsabilidad será plena.							]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="495" width="544" height="15" uuid="9913868b-e096-4bca-89ce-50d175e1f58b"/>
+				<text><![CDATA[Gracias por su atención y estaremos atentos a sus comentarios e inquietudes.						]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="10" width="544" height="58" uuid="d84d020b-583b-48a8-b3ad-6c2c04626d41"/>
+				<text><![CDATA[Los precios son firmes en pesos colombianos y el IVA se liquidará y cobrará según porcentaje vigente en la fecha de facturación, lo mismo que los nuevos impuestos ó aumentos de los impuestos existentes, de orden nacional, departamental ó municipal que intervengan en la facturación final.  El costo discriminado en cada capítulo de la oferta, corresponde al valor neto a pagar después de las deducciones legales que debe realizar el cliente.
+
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="419" width="544" height="18" uuid="a8a459d2-59e7-4afe-9081-2d1b73a5a337"/>
+				<text><![CDATA[La oferta tiene una valides de 30 días contados a partir de la fecha de emisión de la misma.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="297" width="376" height="20" backcolor="#FFFF33" uuid="5e1c65be-5eaf-467e-90da-9ad038f8bc4c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[7. RESPONSABILIDAD.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="88" width="544" height="58" uuid="47d4fcc8-77f2-4e88-8ee3-44d2180ef1ca"/>
+				<text><![CDATA[En caso de aceptar la oferta favor consignar en las siguientes cuentas:
+Cuenta Corriente No. 20138920-2 del Helm Bank o a la Cuenta de ahorro número 110879584-3 del Banco Colpatria, la cuenta se encuentra a nombre de Jorge León Bedoya Marín Y CIA LTDA con NIT 800072453-3. Enviar una copia de la consignación o la transferencia bancaria por correo electrónico o fax.
+Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="399" width="376" height="20" backcolor="#FFFF33" uuid="abeee8db-9148-4fd1-9c82-8a2c9ab83e76"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VALIDEZ DE LA OFERTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="457" width="544" height="38" uuid="bc6cb6b8-3fea-44d0-8127-6f0a8af47b9a"/>
+				<text><![CDATA[Si durante el desarrollo de los trabajos descritos en la presente oferta, surgen trabajos adicionales a los ítems, se modificará el alcance de la presente oferta y  JLB Y CIA LTDA, realizará una oferta adicional para tomar en consideración las modificaciones pertinentes. 							]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="166" width="544" height="131" uuid="28849d5a-9364-4ea3-9043-8f877d9abf56"/>
+				<text><![CDATA[Los trabajos anteriormente mencionados serán realizados en el Laboratorio Dieléctrico de JLB Y CIA LTDA.
+Una vez recibida la Consignación o la orden de compra u orden de trabajo de acuerdo a las condiciones de pago, se realizará la programación del ítem para que sea traído al laboratorio. En el caso que el ítem se traiga sin dicha consignación u orden de servicio, por mutuo acuerdo, sólo se comienzan los trabajos hasta que sea autorizado por medio de estas dos formas (consignación u orden) el servicio que va a prestar el laboratorio.
+Los resultados de los ensayos  se entregarán al cliente en máximo 5 días hábiles después de la terminacion de los ensayos contratados.
+
+El laboratorio no se hará cargo de los costos de transporte, ni se responsabiliza de  los daños que puedan ocurrir durante este.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="514" width="544" height="15" uuid="c9dfd50e-681b-4770-8441-25df77393d32"/>
+				<text><![CDATA[Cordialmente,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="146" width="376" height="20" backcolor="#FFFF33" uuid="58425f7e-bb33-4b94-868a-a1c5eb1a84cb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6. PLAZO Y SITIO PARA EFECTUAR LOS TRABAJOS.]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_subreport2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bfaab448-9cb6-4b6f-98b6-77c9ca9c4949">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT coti."NUM_COTIZACION", coti."FK_CLIENTE", coti."FK_USUARIO",
+       coti."FK_EMPLEADO", coti."FECHA_REGISTRO", coti."ESTADO", coti."US_MODIFICA", coti."FECHA_MODIFICACION",tpe."DESCRIPCION",
+       coti."FK_REVISION_ENSAYO_EQUIPO",dt."FK_COD_TIPO_EQUIPO",pr."DOCUMENTO"
+  FROM labor."COTIZACION" coti, labor."DETALLE_COTIZACION" dt, labor."PROCEDIMIENTO_REFERENCIA" pr, labor."TIPO_EQUIPO" tpe
+
+WHERE "NUM_COTIZACION" = dt."FK_COTIZACION" AND dt."FK_COD_TIPO_EQUIPO" = tpe."ID_TIPO_EQUIPO" AND tpe."FK_PROCEDIMIENTO" = pr."ID_PROC_REFE" AND coti."NUM_COTIZACION" = $P{ncotic}]]>
+	</queryString>
+	<field name="NUM_COTIZACION" class="java.lang.String"/>
+	<field name="FK_CLIENTE" class="java.lang.Integer"/>
+	<field name="FK_USUARIO" class="java.lang.Integer"/>
+	<field name="FK_EMPLEADO" class="java.lang.Integer"/>
+	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
+	<field name="ESTADO" class="java.lang.String"/>
+	<field name="US_MODIFICA" class="java.lang.Integer"/>
+	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
+	<field name="DESCRIPCION" class="java.lang.String"/>
+	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
+	<field name="FK_COD_TIPO_EQUIPO" class="java.lang.Integer"/>
+	<field name="DOCUMENTO" class="java.lang.String"/>
+	<title>
+		<band height="54"/>
+	</title>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="114" y="-11" width="437" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="fbea63a3-f877-4dd1-bd5b-a18015e64d04"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOCUMENTOS  DE REFERENCIA PARA ENSAYO
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="-11" width="114" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="ca5532d2-a6c2-4f9b-a129-f1103cc51c29"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EQUIPO A ENSAYAR	]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="114" height="20" uuid="947b8d21-f529-400c-aa05-0ea2ea3c32bc"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="0" width="437" height="20" uuid="684b7ad8-a13a-46f1-89d7-d711b63ac09e"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DOCUMENTO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

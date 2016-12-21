@@ -10,198 +10,187 @@ session_start();
 
 if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['admon_mod'] != null  )  {
 
-      $usuario = $_SESSION['admon_mod'];
-      $datos_mod = json_decode($usuario,true);
-    
-      $us = $usuario[0]['nusuario'];
+  $usuario = $_SESSION['admon_mod'];
+  $datos_mod = json_decode($usuario,true);
 
-?>
+  $us = $usuario[0]['nusuario'];
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>:: Laboratorio Dielectrico</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  ?>
 
-  <style type="text/css">
-      
-.the-legend {
-    border-style: none;
-    border-width: 0;
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 0;
-}
-.the-fieldset {
-    border: 2px groove threedface #444;
-    -webkit-box-shadow:  0px 0px 0px 0px #000;
-            box-shadow:  0px 0px 0px 0px #000;
-}
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>:: Laboratorio Dielectrico</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
-  </style>
+    <style type="text/css">
+
+      .the-legend {
+        border-style: none;
+        border-width: 0;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 0;
+      }
+      .the-fieldset {
+        border: 2px groove threedface #444;
+        -webkit-box-shadow:  0px 0px 0px 0px #000;
+        box-shadow:  0px 0px 0px 0px #000;
+      }
+
+    </style>
 
 
-  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-notifications.css">
-  <script src="js/jquery-1.9.1.min.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-notifications.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/registro_equipos_cliente.js" ></script>
+    <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
 
-   </head>
+
+  </head>
 
   <body>
 
-<div class="container">
-            <form class="form-horizontal" role="form">
-                <h2>Registro Equipos Cliente</h2>
+    <div class="container">
+      <form class="form-horizontal" id="form" role="form">
+        <h2>Registro Equipos Cliente</h2>
 
-                
-                  <div class="form-group">
-                    <label for="tipodoc" class="control-label col-sm-4">Seleccione Cliente</label>
-                    <div class="col-sm-2">
+        <div class="row"  >
 
-                         <select id="tipodoc" class="form-control">
-                              <option>Seleccione </option>
-                        </select>
-                    </div>
+          <div class="form-group">
+            <label for="tipodoc" class="control-label col-sm-4">Seleccione Cliente</label>
+            <div class="col-sm-2">
 
-                    </div>
+             <select style="width:auto;" id="listCliente" class="form-control">
+              <option>Seleccione </option>
+            </select>
+          </div>
 
-
-
-                <div class="form-group">
-
-        
-                    <label for="numdoc" class="control-label col-sm-4"> No. Documento/NIT</label>
-                    <div class="col-sm-2">
-                        <input type="text" id="docu" placeholder="Documento/NIT" class="form-control" autofocus>
-                        <span class="help-block"></span>
-                    </div>
-                </div>
-
-                <p>
-
-              <fieldset class="the-fieldset">
-                    
-                        <legend class="the-legend">Registrar Equipos</legend>
-
-   
-                        <div class="form-group">
-
-        
-                    <label for="numdoc" class="control-label col-sm-4"> Codigo Cliente</label>
-                    <div class="col-sm-2">
-                        <input type="text" id="docu" placeholder="6789" class="form-control col-lg-4" autofocus readonly="" >
-                        <span class="help-block"></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-
-        
-                    <label for="numdoc" class="control-label col-sm-4">Codigo Producto</label>
-                    <div class="col-sm-8">
-                        <input type="text"  id="docu" placeholder="Codigo Producto" class="form-control col-lg-100" autofocus>
-                                           </div>
-
-                </div>
-
-                 <div class="form-group">
-
-        
-                    <label for="numdoc" class="control-label col-sm-4">Nombre Equipo</label>
-                    <div class="col-sm-8">
-                        <input type="text"  id="docu" placeholder="Nombre Equipo" class="form-control col-lg-100" autofocus>
-                       
-                    </div>
-
-                </div>
-
-                 <div class="form-group">
-
-        
-                    <label for="numdoc" class="control-label col-sm-4">Marca Equipo</label>
-                    <div class="col-sm-8">
-                        <input type="text"  id="docu" placeholder="Marca Equipo" class="form-control col-lg-100" autofocus>
-                       
-                    </div>
-
-                </div>
+        </div>
 
 
-                  <div class="form-group">
-                    <label for="tipodoc" class="control-label col-sm-4">Clase Equipo</label>
-                    <div class="col-sm-2">
 
-                         <select id="tipodoc" class="form-control">
-                              <option>Seleccione Equipo</option>
-                        </select>
-                    </div>
-
-                    </div>
+        <div class="form-group">
 
 
-               </fieldset>
-               
-             <div class="form-group">
-                    <div class="col-sm-2 col-sm-offset-3">
-                        <button type="submit" class="btn btn-primary btn-block">Añadir</button>
-                    </div>
-                </div>
+          <label for="numdoc" class="control-label col-sm-4"> No. Documento/NIT</label>
+          <div class="col-sm-2">
+            <input type="text" id="docu" placeholder="Documento/NIT" class="form-control" autofocus>
+            <span class="help-block"></span>
+          </div>
 
-                <table class="table table-striped">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-                
-            </form> <!-- /form -->
+        </div>
+
+       
+
+      </div>
+
+      <p>
+
+        <fieldset class="the-fieldset">
+
+
+
+          <legend class="the-legend">Registrar Equipos</legend>
+
+          <div class="form-group">
+            <label for="tipodoc" class="control-label col-sm-4">Tipo Equipo</label>
+            <div class="col-sm-2">
+
+             <select id="tipo_equipo"  class="form-control" style="width:auto;" >
+              <option>Seleccione Equipo</option>
+            </select>
+          </div>
+
+        </div>  
+
+
+        <div class="form-group">
+
+
+          <label for="numdoc" class="control-label col-sm-4">Codigo Producto</label>
+          <div class="col-sm-8">
+            <input type="text"  id="cod_producto" placeholder="Codigo Producto" class="form-control col-lg-100" autofocus>
+          </div>
+
+        </div>
+
+        <div class="form-group">
+
+
+          <label for="numdoc" class="control-label col-sm-4">Nombre Equipo</label>
+          <div class="col-sm-8">
+            <input type="text"  id="nomb_equipo" placeholder="Nombre Equipo" class="form-control col-lg-100" autofocus>
+
+          </div>
+
+        </div>
+
+        <div class="form-group">
+
+
+          <label for="numdoc" class="control-label col-sm-4">Marca Equipo</label>
+          <div class="col-sm-8">
+            <input type="text"  id="marca" placeholder="Marca Equipo" class="form-control col-lg-100" autofocus>
+
+          </div>
+
+        </div>  
+
+
+
+
+
+      </fieldset>
+
+      <div class="form-group">
+        <div class="col-sm-2 col-sm-offset-3">
+          <button type="submit" id="submit" class="btn btn-primary btn-block">Añadir</button>
+        </div>
+      </div>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Cod. Equipo</th>
+            <th>Descripcion</th>
+            <th>Cliente</th>
+
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+            <td colspan="3">
+              <div id="act_table" style="width: 100%; height: 200px; overflow-y: scroll;" > </div></td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </form> <!-- /form -->
+
+    </div>
     
-</div>
-    
-</body>
+  </body>
 
-        </html>
+  </html>
 
-<?php }
-else{
+  <?php }
+  else{
 
-header("Location: 500.php");
+    header("Location: 500.php");
 
- unset($_SESSION['admon_mod']);
-        
+    unset($_SESSION['admon_mod']);
+
         // DESTROY COOKIE
-        if (isset($_COOKIE['key'])) {
-    unset($_COOKIE['key']);
-    setcookie('key', '', time() - 3600, '/');
+    if (isset($_COOKIE['key'])) {
+      unset($_COOKIE['key']);
+      setcookie('key', '', time() - 3600, '/');
 
-  }
+    }
 
 
-} ?>
+  } ?>

@@ -25,43 +25,22 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
-   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-notifications.css">
-  <script src="js/jquery-1.9.1.min.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-notifications.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/registro_equipos_aprobados.js" ></script>
+    <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
 
-  <script type="text/javascript">
-    
-    $(document).on("click", "#myclass", function () {
-      
-     var codigo = $(this).data('id');
-     $("#cod_equipo").val( codigo );
-     $("#tipo_equipo").val( "GUANTES DIELECTRICOS" );
-     $("#cantidad").val(" 100 ");
-
-
-     
-});
-
-    $(document).on("click", "#guardar", function(){
-
-
-
-    });
-
-    
-  </script>
-
-
- 
-
+    <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="js/bootstrap-toggle.min.js"></script>
+    <script src="js/bootstrap-waitingfor.js"></script>
 
    </head>
 
   <body>
 
 <div class="container">
-            <form class="form-horizontal" role="form">
+            <form id="form" class="form-horizontal" role="form">
                 <h2>Equipos Aprobados</h2>
 
             <fieldset  >    
@@ -73,24 +52,19 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
  <table class="table table-striped">
   <thead>
     <tr>
-      <th>#</th>
+  
       <th>Codigo Equipo</th>
       <th>Tipo Equipo</th>
       <th>Cantidad</th>
      <th>Cliente</th>
-      <th>Estado</th>
+
         </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td data-toggle="modal" id="myclass" data-id="GA001" data-target="#myModal"  scope="row" >GA001</td>
-      <td>GUANTES DIELECTRICOS</td>
-      <td>100</td>
-      <td>Andres Palencia</td>
-      <td>Pendiente Aprobacion</td>
-     
-    </tr>
+            <td colspan="5">
+              <div id="act_table" style="width: 100%; height: 200px; overflow-y: scroll;" > </div></td>
+            </tr>
   </tbody>
 </table>
                 
@@ -103,7 +77,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
   <table class="table table-striped">
   <thead>
     <tr>
-      <th>#</th>
+     
       <th>Codigo Producto</th>
       <th>Tipo Equipo</th>
       <th>Cantidad</th>
@@ -113,12 +87,15 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
   </thead>
   <tbody>
     <tr>
-     <td> </td>
-    </tr>
+            <td colspan="5">
+              <div id="act_table2" style="width: 100%; height: 200px; overflow-y: scroll;" > </div></td>
+            </tr>
   </tbody>
 </table>
  
 </fieldset>
+
+<button type="button" id="generar" class="btn btn-primary">Generar</button>
             </form> <!-- /form -->
     
 </div>
@@ -160,14 +137,14 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
                               <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3">
-                        <button type="button" id="guardar" class="btn btn-primary btn-block">Guardar</button>
+                        
                     </div>
                 </div>
             </form> <!-- /form -->
       </div>
       <div class="modal-footer">
        
-        <button type="button" class="btn btn-primary">Aceptar</button>
+        <button type="button" id="aceptar" class="btn btn-primary">Aceptar</button>
       </div>
     </div>
   </div>
