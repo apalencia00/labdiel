@@ -32,6 +32,7 @@
                 msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
                 console.log("Wuapea papa");
                 $.ajax({ url: "backend/Source/Login.php", 
+                    
                  type: "GET",
                  contentType: "application/json",
                  dataType: 'json',

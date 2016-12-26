@@ -19,9 +19,11 @@ $(document).ready(function(){
 
 		success : function(json){
 
+			try{
+
 			var $select = $("select#listCliente");
 
-			var obj = $.parseJSON(json);
+			var obj = jQuery.parseJSON(json);
 
 			console.log(obj);
 
@@ -30,6 +32,12 @@ $(document).ready(function(){
 				$select.append('<option value=' + obj[i]['id_cliente'] + '>' + obj[i]['nombre'] + '</option>'); 	
 
 			}
+
+			}catch(e){
+    if(e){
+    // If fails, Do something else
+    }
+}
 
 		}
 
@@ -46,6 +54,7 @@ $(document).ready(function(){
 		success: function(json)
 		{
 
+			try{
 			
 			var $select = $('#ciudad'); 
 
@@ -56,6 +65,12 @@ $(document).ready(function(){
 				$select.append('<option value=' + obj[i]['divipo'] + '>' + obj[i]['descripcion'] + '</option>'); 	
 
 			}
+
+			}catch(e){
+    if(e){
+    // If fails, Do something else
+    }
+}
 		}
 	});
 
@@ -71,6 +86,8 @@ $(document).ready(function(){
 			success: function(json)
 			{
 
+				try{
+
 				var $select = $("#tipoequipo");
 
 				var obj = jQuery.parseJSON(json);
@@ -80,6 +97,12 @@ $(document).ready(function(){
 				$select.append('<option value=' + obj[i]['tipo_equipo'] + '>' + obj[i]['descripcion'] + ' - ' + obj[i]['desc_clase'] + '</option>'); 	
 
 			}
+
+			}catch(e){
+    if(e){
+    // If fails, Do something else
+    }
+}
 
 			}
 		});
@@ -193,20 +216,49 @@ $(document).ready(function(){
 
     	var result = getTds();
     	var cliente_id     = $("select#listCliente").val();
+    	var cantidad   = $("#cantidad").val();
 
-    	
+    	if(cantidad != "" || cantidad <= 0){
+
     		$.ajax({
     			
     			url: '../backend/Source/Ensayo_Equipo.php',
     			type: 'GET',
     			contentType : "application/json",
     			dataType : "json",
-    			data : {"method" : 'regDetalleEnsayo',"datos" : result, "cliente" : cliente_id, "revision" : $("#idrevision").val() },
-    			success: function(data)
+    			data : {"method" : 'regDetalleEnsayo',"datos" : result, "cliente" : cliente_id, "revision" : $("#idrevision").val(), "cantidad" : cantidad },
+    			success: function(json)
     			{
-    				console.log(data);
+    					
+
+					if(json){
+
+					var arr = jQuery.parseJSON(json);
+					console.log(arr);									
+					var html = '<table class="table table-striped" border="0">';
+					var i = 0;
+					$.each(arr, function(key, value){
+
+						console.log(arr);
+						html += '<td width="10%" >' +  'CAMBIAR' + '</td>' + '<td width="10%" >' +  arr[key].fk_cod_tipo_equipo_in + '</td>' + '<td width="10%" >' + arr[key].cantidad_equipo + '</td>'  +  '<td width="10%" >' + arr[key].fk_cliente_in + '</td>' + '</td>' ;
+						html += '</tr>';
+
+						
+
+					});
+					
+					html += '</table>';
+					$('#act_table').html(html);
+				
+
+				}
+
     			}
     		});
+
+    }else{
+    	alert("Debe Seleccionar una cantidad");
+    }
     
     	
 		localStorage.clear();
@@ -256,6 +308,8 @@ $(document).ready(function(){
 				success: function(json)
 				{
 
+					if(json){
+
 					var arr = jQuery.parseJSON(json);
 					console.log(arr);									
 					var html = '<table class="table table-striped" border="0">';
@@ -272,15 +326,32 @@ $(document).ready(function(){
 					
 					html += '</table>';
 					$('#act_table').html(html);
-					
+				
+
+				}	
 
 				}
+
+
+
 			});
 		
 
 		
 
 	});
+
+	$("#pdfgen").click(function(){
+
+		//alert("WUAPEAAAA!!!");
+
+  var win = window.open('http://localhost:8080/LabDielectrico/webresources/recibo_inout/imprimirCotizacion='+$("#nocotic").val()+"&id_cliente=1000", '_blank');
+  win.focus();
+
+
+	});
+
+
 
 	function getTds(){
 

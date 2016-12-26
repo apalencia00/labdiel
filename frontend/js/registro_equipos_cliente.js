@@ -60,6 +60,8 @@ $(document).ready(function(){
 
 		success : function(json){
 
+			try{
+
 			var $select = $('#listCliente');
 
 			var obj = jQuery.parseJSON( json);
@@ -74,6 +76,12 @@ $(document).ready(function(){
 			}
 
 		}
+
+		}catch(e){
+    if(e){
+    // If fails, Do something else
+    }
+}
 
 		}
 	});
@@ -94,6 +102,8 @@ $(document).ready(function(){
 
 		success : function(json){
 
+			try{
+
 			var $select = $('#tipo_equipo');
 
 			var obj = jQuery.parseJSON( json);
@@ -108,6 +118,12 @@ $(document).ready(function(){
 			}
 
 		}
+
+		}catch(e){
+    if(e){
+    // If fails, Do something else
+    }
+}
 
 		}
 	});

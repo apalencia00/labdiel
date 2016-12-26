@@ -8,7 +8,7 @@
 	</parameter>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[select * from labor."COTIZACION" where "ESTADO" = 'P'  AND "NUM_COTIZACION" = $P{ncotic}  ;]]>
+		<![CDATA[select * from labor."COTIZACION" where "ESTADO" = 'A'  AND "NUM_COTIZACION" = $P{ncotic}  ;]]>
 	</queryString>
 	<field name="ID_COTIZACION" class="java.lang.Integer"/>
 	<field name="NUM_COTIZACION" class="java.lang.String"/>

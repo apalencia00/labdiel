@@ -1,109 +1,214 @@
 
 $(document).ready(function(){
-console.log("DOM READY!!");
+	console.log("DOM READY!!");
 
-$("#form").submit(function(event){
+	$("#form").submit(function(event){
 
-	event.preventDefault();
-
-
+		event.preventDefault();
 
 
-});
 
-$.ajax({
-		
-		url: '../backend/Source/Oferta_Servicio.php',
-		type: 'GET',
-		contentType : "application/json",
-		dataType : "json",
-		data : {"method" : 'getnumbercotic'},
 
-		success: function(json)
-		{
-
-			var obj = jQuery.parseJSON(json);
-			console.log(obj[0].num_cotizacion);
-			localStorage.setItem("ncotic",obj[0].num_cotizacion);
-
-		}
 	});
 
- $(document).on("click", "#myclass", function () {
-      
-     var codigo = $(this).data('id');
-     $("#cod_equipo").val( codigo );
-     $("#tipo_equipo").val( "GUANTES DIELECTRICOS" );
-     $("#cantidad").val("1");
+
+
+	$.ajax({
+
+		url : "../backend/Source/Oferta_Servicio.php",
+		type : "GET",
+		dataType : "json",
+		contentType : "application/json",
+		data : {"method" : 'getlistCliente'},
+
+		success : function(json){
+
+			try{
+
+				var $select = $("#listCliente");
+
+				var obj = jQuery.parseJSON(json);
+		 //console.log(obj);
+
+		 for (var i = 0 ;obj.length - 1; i++) {
+
+		 	$select.append('<option value=' + obj[i]['id_cliente'] + '>' + obj[i]['nombre'] + '</option>'); 	
+
+		 }
+
+		}catch(e){}
 
 
 
+	}
 
-     
 });
 
-    $(document).on("click", "#aceptar", function(){
-    		var html = '<table class="table table-striped" border="0">';
-    		html += '<td width="10%" >' +  3 + '</td>' + '<td width="10%" >' +  1 + '</td>'  ;
-			html += '</tr>';
+	$("select#listCliente").change(function(){
 
-			html += '</table>';
-				$('#act_table2').html(html); 
-
-    });
-
-var session_id_coti = localStorage.getItem("ncotic");
-
-		if(!session_id_coti){
-			localStorage.setItem("ncotic" , session_id_coti);
-			
-		}
-
-$.ajax({
+		$.ajax({
 
 
 
-url : "../backend/Source/Equipos_aprobados.php",
-type : "GET",
-dataType : "json",
-contentType : "application/json",
-data : {"method" : 'getEquiposCotizados', 'cotizacion' :  session_id_coti },
+			url: '../backend/Source/Equipos_aprobados.php',
+			type: 'GET',
+			contentType : "application/json",
+			dataType : "json",
+			data : {"method" : 'getCotizacionCliente', "cliente" : $("#listCliente").val()},
+			success: function(json)
+			{
 
-success : function(json){
+				try{
 
-var arr = jQuery.parseJSON(json);
-		 
-		 console.log(arr[0].fk_cod_tipo_equipo);
+					var arr = jQuery.parseJSON(json);
 
-				 					
+					var html = '<table class="table table-striped" border="0">';
+
+					$.each(arr, function(key, value){
+
+						//console.log(arr[0].num_cotizacion);
+						var idcoti = arr[key].id_cotizacion;
+						html += '<tr> <td onclick="loadEquiposCotizados('+idcoti+')"  width="10%"  >' +  idcoti + '</td>' ;
+						html += '<td width="10%" >' +  arr[key].num_cotizacion + '</td>' ;
+						html += '<td width="10%" >' +  arr[key].fecha_registro + '</td>' ;
+						html += '<td width="10%" >' +  arr[key].nombre_cliente + '</td>' ;
+						html += '</tr>';
+
+					});
+
+					html += '</table>';
+					$('#act_table_cotic').html(html); 	
+
+				}catch(e){}
+			}
+		});
+
+	});
+
+
+
+	$(document).on("click", "#myclass", function () {
+
+		var codigo = $(this).data('id');
+		$("#cotizacion").val( codigo );
+		$("#tipo_equipo").val( "GUANTES DIELECTRICOS" );
+		$("#cantidad").val("1");
+
+
+
+
+
+	});
+
+	$(document).on("click", "#aceptarTodo", function(){
+
+		var codigoe =	$("#myModal #cod_equipo").val();
+		var cantidad =  $("#myModal #cantidad").val();
+		localStorage.setItem("cantie",cantidad);
+		var cotic = localStorage.getItem("coti");
+		
+
+		$.ajax({
+
+			url: '../backend/Source/Equipos_aprobados.php',
+			type: 'GET',
+			contentType : "application/json",
+			dataType : "json",
+			data : {"method" : 'aprobarCantidadEquipo', "tipoe" : codigoe, "cantidad" : cantidad, "cotinum" : cotic},
+			success: function(json)
+			{
+				var arr = jQuery.parseJSON(json);
+
 				var html = '<table class="table table-striped" border="0">';
 				var i = 0;
 				$.each(arr, function(key, value){
 
-					console.log(arr[key]);
-					html += '<td width="10%" data-toggle="modal" id="myclass" data-id="'+arr[key].fk_cod_tipo_equipo+'" data-target="#myModal"  scope="row" >' +  arr[key].fk_cod_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].cantidad + '</td>'  ;
+					html += '<td width="10%" scope="row" data-toggle="modal" id="myclass" data-id="'+arr[key].fk_cotizacion+'" data-target="#myModal2" >' +  arr[key].fk_cod_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion_equipo + '</td>' + '<td width="10%" >' + arr[key].cantidad + '</td>'  ;
+					html += '</tr>';
+
+				});
+				
+				html += '</table>';
+				$('#act_table').html(html);
+				localStorage.clear();
+
+			}
+		});
+
+
+	});
+
+
+
+});
+
+$("#generarTodo").click(function(){
+
+        var codigoe  =  $("#myModal2 #cod_equipo").val();
+		var cantidad =  $("#myModal2 #cantidad").val();
+		localStorage.setItem("cantie",cantidad);
+		var cotic = localStorage.getItem("coti");
+		
+
+
+});
+
+
+function loadEquiposCotizados(val){
+
+	localStorage.setItem("coti", val);
+
+	$.ajax({
+
+		url : "../backend/Source/Equipos_aprobados.php",
+		type : "GET",
+		dataType : "json",
+		contentType : "application/json",
+		data : {"method" : 'getEquiposCotizados', 'cotizacion' :  val },
+
+		success : function(json){
+
+			try{
+
+				var arr = jQuery.parseJSON(json);
+
+//a				console.log(arr);
+
+				var html = '<table class="table table-striped" border="0">';
+				var i = 0;
+				$.each(arr, function(key, value){
+
+					//console.log("AQUI ESTOY!!"+arr);
+					html += ' <tr> <td width="10%" scope="row" data-toggle="modal" id="myclass" onclick="setDatosAprobados()"  >' +  arr[key].fk_cod_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion_equipo + '</td>' + '<td width="10%" >' +  arr[key].cantidad+ '</td>'  ;
 					html += '</tr>';
 
 				});
 
 				html += '</table>';
-				$('#act_table').html(html); 	
+				$('#act_table').html(html);   
+
+			}catch(e){}
+
+
+		}
+
+	});
+
+}
+
+function setDatosAprobados(){
+
+	ventana = window.open("");
+	ventana.focus();
 
 
 }
 
-});
-
-localStorage.clear();
-
-$("#generar").click(function(){
 
 
-	waitingDialog.show('Generando Codigos.. Por favor espere');setTimeout(function () {waitingDialog.hide();}, 5000)
 
-});
 
-});
+
 
 
 

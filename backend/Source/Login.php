@@ -4,23 +4,33 @@ require '../ConexionBD/Conexion.php';
 
 error_reporting(0);
 
+ if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
+
 $usuario    = $_GET['un'];
 $contrasena = $_GET['pw'];
 
 if($usuario != "" || $contrasena != "")
 {
 
-
+        
         $conn = new Conexion();
         
         $conn->conectar_auth($usuario,$contrasena);
+
+        #var_dump($conn); exit();
         
         $res = $conn->query("SELECT * FROM auth.\"USUARIO\" WHERE usuanom = '$usuario' ");
 
         if($res){
 
+
             $_SESSION['un'] = $usuario;
             $_SESSION['pw'] = $contrasena;
+
+            //var_dump($usuario);
 
             $data = array("user" => $usuario);
 
@@ -28,6 +38,8 @@ if($usuario != "" || $contrasena != "")
 
                 echo json_encode(array('success' => true, 'root' => $mod));
                 $_SESSION['admon_mod'] = $mod;
+
+                
         }else{
             echo json_encode(array('success' => true, 'root' => 'Error usuario invalido'));
         }

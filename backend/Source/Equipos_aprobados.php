@@ -36,6 +36,27 @@ if(isset($_GET['method'])){
         getEquiposCotizados($ncoti);
             break;
 
+            case 'getCotizacionCliente':
+                # code...
+
+            getCotizacionCliente($_GET['cliente']);
+                break;
+
+
+                case 'aprobarCantidadEquipo':
+                    # code...
+
+                $params = array("equipo" => $_GET['tipoe'], "cantidad" => $_GET['cantidad'] , "fk_cotizacion" => $_GET['cotinum'] , "fk_usuario" => $usuario);
+
+                aprobarCantidadEquipo($params);
+                    break;
+
+                    case 'getCantidadAprobados':
+                        # code...
+
+                    getCantidadAprobados();
+                        break;
+
                                          
         
     }
@@ -69,6 +90,56 @@ if(!$result){
 
 curl_close($curl);
 
+
+}
+
+# 3012042992
+function getCotizacionCliente($cliente){
+
+
+ $curl = curl_init();
+
+curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/listarCotizacionesCliente?id_cliente=".$cliente);
+
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+$result = curl_exec($curl);
+
+if(!$result){
+
+    die('Error: "' . curl_error($curl). '" - Code: ');
+}else{
+    echo json_encode($result);
+}
+
+curl_close($curl);
+
+
+}
+
+function aprobarCantidadEquipo($p){
+
+
+
+     $curl = curl_init();
+    
+    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/aprobacionEquiposLab?". http_build_query($p));
+
+    #var_dump("http://localhost:8080/LabDielectrico/webresources/cotizacion/aprobacionEquiposLab?". http_build_query($p));
+    
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    
+    $result = curl_exec($curl);
+    
+    if(!$result){
+    
+        die('Error: "' . curl_error($curl). '" - Code: ');
+    }else{
+        echo json_encode($result);
+    }
+    
+    curl_close($curl);
+    
 
 }
 

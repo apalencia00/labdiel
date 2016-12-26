@@ -61,7 +61,7 @@ $( document ).ready(function() {
 
 		success : function(json){
 
-//json);
+try{
 		var $select = $('#tipodoc'); 
 
 		var obj = jQuery.parseJSON( json);
@@ -77,6 +77,12 @@ $( document ).ready(function() {
 			}
 
 		}
+
+		}catch(e){
+    if(e){
+    // If fails, Do something else
+    }
+}
 
 		}
 
@@ -95,7 +101,8 @@ $( document ).ready(function() {
 
 		success : function(json){
 
-//json);
+try{
+
 var $select = $('#ciudad'); 
 
 var obj = jQuery.parseJSON( json);
@@ -105,6 +112,12 @@ for (var i = 0 ;obj.length - 1; i++) {
 
 	$select.append('<option value=' + obj[i]['divipo'] + '>' + obj[i]['descripcion'] + '</option>'); 	
 
+}
+
+}catch(e){
+    if(e){
+    // If fails, Do something else
+    }
 }
 
 }

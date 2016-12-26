@@ -184,62 +184,22 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
         </div>
 
+        
+<div class="form-group">
+  <div class="col-sm-4 col-sm-offset-10">
+    <button type="submit" id="generarpdf" class="btn btn-danger">PDF</button>
+  </div>
+</div>
+
+
         </div>
 
 
       </fieldset>
 
-      <fieldset  >
+   
 
-       <legend>Detalle Equipos Cotizados</legend>
-
-
-
-       <label> Desea Continuar ?  </label>
-       <input type="checkbox" id="checkdetalle" disabled data-toggle="toggle">
-
-
-
-       <table id="tbl1" class="table table-striped">
-        <thead>
-          <tr>
-
-            <th>Codigo Equipo</th>
-            <th>Tipo Equipo</th>
-            <th>Cantidad</th>
-            <th>Valor Unitario</th>
-            <th>Aprobación</th>
-
-          </tr>
-        </thead>
-        <tbody id="tbody">
-          <tr>
-            <td colspan="5">
-              <div id="act_table" style="width: 100%; height: 200px; overflow-y: scroll;" > </div></td>
-            </tr>
-
-          </tbody>
-        </table>
-
-
-
-<div class="row">
-
-        <div class="form-group">
-  <div class="col-sm-2 col-sm-offset-3">
-    <button type="submit" id="aprobar"  class="btn btn-primary">Aprobar</button>
-  </div>
-</div>
-
-
-<div class="form-group">
-  <div class="col-sm-4 col-sm-offset-10">
-    <button type="submit" id="genped" class="btn btn-danger">PDF</button>
-  </div>
-</div>
-
-</div>
-      </fieldset>
+    
 
 
 

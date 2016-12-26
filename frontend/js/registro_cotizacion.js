@@ -20,6 +20,15 @@ $("#genped").click(function(){
 
 });
 
+
+$("#generarpdf").click(function(){
+	alert("WUAPEAA");
+  var win = window.open('http://localhost:8080/LabDielectrico/webresources/recibo_inout/imprimirCotizacion?ncotic='+$("#nocotic").val()+"id_cliente=1000", '_blank');
+  win.focus();
+
+
+});
+
 $.ajax({
 		
 		url: '../backend/Source/Oferta_Servicio.php',
@@ -48,6 +57,7 @@ data : {"method" : 'getlistCliente'},
 
 success : function(json){
 
+try{
 
 var $select = $("#listCliente");
 
@@ -59,6 +69,10 @@ var obj = jQuery.parseJSON(json);
 				$select.append('<option value=' + obj[i]['id_cliente'] + '>' + obj[i]['nombre'] + '</option>'); 	
 
 			}
+
+}catch(e){}
+
+
 
 }
 
@@ -150,6 +164,7 @@ $("#checkdetalle").change("click", function(){
 
 $('#aprobar').on('click', function() {
   //Get checked checkboxes
+
   var checkedCheckboxes = $("#tbl1 :checkbox:checked"),
     arr = [];
 
@@ -171,6 +186,8 @@ $('#aprobar').on('click', function() {
     var value3 = $(siblings[2]).text(); // cantidad
     var value4 = $(siblings[3]).text(); // valor
 
+  
+
     }
 
     	$.ajax({
@@ -182,7 +199,7 @@ $('#aprobar').on('click', function() {
     		data : {"method" : 'regDetalleCotizacion',"cotizacion" : $("#nocotic").val(), "codigoe" : value1, "cantidad" : value3, "valor" : value4},
     		success: function(data)
     		{
-
+    			
     		}
     	});
 

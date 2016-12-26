@@ -5,7 +5,10 @@ error_reporting(E_ALL);
 //require_once(realpath($_SERVER["DOCUMENT_ROOT"]) . '/labdiel/backend/ConexionBD/Conexion.php');
 //require_once(realpath($_SERVER["DOCUMENT_ROOT"]) . '/labdiel/vendor/fergusean/nusoap/lib/nusoap.php');
 
-session_start(); 
+ if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
 
 $usuario = 0;
 
@@ -36,7 +39,7 @@ if(isset($_GET['method'])){
 
 
         
-        $params = array("fk_cod_tipo_equipo_in" => $datos[1], "cantidad_equipo_in" => $datos[2], "fk_revision_ensayo_equipo_in" => $_GET['revision'], "fk_cliente_in" =>$cliente , "fk_id_usuario_in" =>$usuario );
+        $params = array("fk_cod_tipo_equipo_in" => $datos[1], "cantidad_equipo_in" => $datos[2], "fk_revision_ensayo_equipo_in" => $_GET['revision'], "fk_cliente_in" =>$cliente , "fk_id_usuario_in" =>$usuario, "cantidad_equipo_in" => $_GET['cantidad'] );
 
 
         regDetalleEnsayo($params);
@@ -153,6 +156,8 @@ function getInfoEnsayoRevisionCliente_TipoEquipos_Equipos_Cliente($param){
      $curl = curl_init();
     
     curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/getInfoEnsayoRevisionCliente_TipoEquipos_Equipos_Cliente?". http_build_query($param) );
+
+    #var_dump("http://localhost:8080/LabDielectrico/webresources/ensayo/getInfoEnsayoRevisionCliente_TipoEquipos_Equipos_Cliente?". http_build_query($param) ); exit();
     
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     

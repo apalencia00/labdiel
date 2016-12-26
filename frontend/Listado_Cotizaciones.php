@@ -6,15 +6,14 @@ error_reporting(E_ALL);
 require_once '../backend/Model/Modulo.php';
 
 if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    } 
+{ 
+  session_start(); 
+}
 
 
 if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['admon_mod'] != null  )  {
 
   $usuario = $_SESSION['admon_mod'];
-  #$datos_mod = json_decode($usuario,true);
 
   $us = $usuario[0]['nusuario'];
 
@@ -44,63 +43,70 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     <div class="container">
       <form id="form" class="form-horizontal" role="form">
+        <h2>Cotizaciones Cliente</h2>
 
-        <h2>Programacion Equipos</h2>
+        <fieldset>
 
-        <fieldset  >    
+       
 
-         <table class="table table-striped">
+
+        <table id="dataTable" class="table table-striped">
           <thead>
-            <tr>
+            <tr id="row">
 
-              <th>Codigo Equipo</th>
-              <th>Tipo Equipo</th>
-              <th>Cantidad</th>
+              <th>Cotizacion</th>
+              <th>Fecha Creacion</th>
+
               <th>Cliente</th>
 
             </tr>
           </thead>
-           <tbody>
-      <tr>
-        <td data-toggle="modal" id="myclass" data-id="GA001" data-target="#myModal"  scope="row" >GA001</td>
-        <td>MANGAS DIELECTRICAS</td>
-        <td></td>
-      </tr>
-      
-    </tbody>
+          <tbody id="mybody">
+            <tr>
+              <td colspan="5" id="rowd">
+                <div id="act_table_cotic" style="width: 100%; height: 200px; overflow-y: scroll;" > </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </fieldset>
+
+
+
+
+      <fieldset  >    
+
+        <legend> Inventario Ensayo Cliente </legend>
+
+
+
+        <table  class="table table-striped">
+          <thead>
+            <tr >
+
+              <th>Codigo Equipo</th>
+              <th>Tipo Equipo</th>
+              <th>Cantidad</th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="5">
+                <div id="act_table" style="width: 100%; height: 200px; overflow-y: scroll;" > </div></td>
+              </tr>
+            </tbody>
           </table>
 
         </fieldset>
 
+       
+          <button type="button" id="generar" class="btn btn-primary">Aprobar</button>
+        </form> <!-- /form -->
 
-        <button type="button" id="generar" class="btn btn-primary">Generar</button>
-      </form> <!-- /form -->
-
-    </div>
-
-    <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title" id="myModalLabel">Procedimientos Equipos</h4>
       </div>
-      <div class="modal-body">
-         </div>
-      <div class="modal-footer">
-        
-        1. Desconecte el Equipo de la corriente.
-
-        2. Contecte a la corriente.
-        
-      </div>
-    </div>
-  </div>
-</div>
-
     
   </body>
 

@@ -5,14 +5,16 @@ error_reporting(E_ALL);
 
 require_once '../backend/Model/Modulo.php';
 
-session_start(); 
+if(!isset($_SESSION)) 
+{ 
+  session_start(); 
+}
 
 
 if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['admon_mod'] != null  )  {
 
   $usuario = $_SESSION['admon_mod'];
-  $datos_mod = json_decode($usuario,true);
-
+  
   $us = $usuario[0]['nusuario'];
 
   ?>
@@ -66,12 +68,12 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           </div>
         </div>
 
-         <div class="form-group">
+        <div class="form-group">
 
-            <input type="hidden" id="idrevision" >
-          </div>
-          
+          <input type="hidden" id="idrevision" >
         </div>
+
+      </div>
 
       
       <fieldset class="the-fieldset">
@@ -173,23 +175,23 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
   <div class="row" >
-    
-      <div class="form-group">
 
-  <label class="control-label col-sm-4"> Lugar de ejecución   </label>
-  
-  <div class="radio col-sm-4 col-xs-5">
-    <label><input type="radio" name="ejecucion" value="0" checked="checked">Laboratorio</label>
-  </div>
-  <div class="radio col-sm-4 col-xs-8">
-    <label><input type="radio" name="ejecucion" value="1">Instalacion Externa</label>
-  </div>
+    <div class="form-group">
+
+      <label class="control-label col-sm-4"> Lugar de ejecución   </label>
+
+      <div class="radio col-sm-4 col-xs-5">
+        <label><input type="radio" name="ejecucion" value="0" checked="checked">Laboratorio</label>
+      </div>
+      <div class="radio col-sm-4 col-xs-8">
+        <label><input type="radio" name="ejecucion" value="1">Instalacion Externa</label>
+      </div>
 
 
 
-  </div>
+    </div>
 
-  <div class="form-group">
+    <div class="form-group">
 
 
       <label for="numdoc" class="control-label col-sm-4">Direccion Revision</label>
@@ -198,9 +200,9 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
       </div>
 
-  </div>
+    </div>
 
-</br>
+  </br>
 
 </fieldset>
 
@@ -208,11 +210,11 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 <div class="row">
 
-<div class="form-group">
-  <div class="col-sm-2 col-sm-offset-1">
-    <button type="submit" id="addensayo"  class="btn btn-primary">Aceptar</button>
+  <div class="form-group">
+    <div class="col-sm-2 col-sm-offset-1">
+      <button type="submit" id="addensayo"  class="btn btn-primary">Aceptar</button>
+    </div>
   </div>
-</div>
 
 </div>
 
@@ -220,34 +222,52 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 <fieldset  >
 
+  <div class="row">
+
+   <legend>Detalle Ensayo Ensayar</legend>
+
+   <div class="form-group">
+    <label for="tipodoc" class="control-label col-sm-2">Clase Equipo</label>
+    <div class="col-sm-2">
+
+     <select id="tipoequipo" class="form-control">
+      <option>Seleccione Equipo</option>
+    </select>
+  </div>
+
+</div>
+
+<div class="form-group" >
+
+  <label for="cant" class="control-label col-sm-4">Cantidad</label>
+  <div class="col-sm-2" >
+
+    <input type="text" name="cantidad" id="cantidad">
+
+  </div>
+
+</div>
+
+
+</div>
+
+
+</br>
+
 <div class="row">
 
- <legend>Detalle Ensayo Ensayar</legend>
-
- <div class="form-group">
-  <label for="tipodoc" class="control-label col-sm-2">Clase Equipo</label>
-  <div class="col-sm-2">
-
-   <select id="tipoequipo" class="form-control">
-    <option>Seleccione Equipo</option>
-  </select>
-</div>
-
-</div>
-
-
-<div class="form-group">
-  <div class="col-sm-2 col-sm-offset-3">
-    <button type="submit" id="adddetalleensayo"  class="btn btn-primary">Agregar</button>
+  <div class="form-group">
+  <div class="col-sm-2 col-sm-offset-1">
+      <button type="submit" id="adddetalleensayo"  class="btn btn-primary">Agregar</button>
+    </div>
   </div>
-</div>
 
 
-<div class="form-group">
-  <div class="col-sm-4 col-sm-offset-10">
-    <button type="submit" class="btn btn-danger">PDF</button>
+  <div class="form-group">
+    <div class="col-sm-2 col-sm-offset-1">
+      <button type="submit" class="btn btn-danger">PDF</button>
+    </div>
   </div>
-</div>
 
 </div>
 
@@ -256,7 +276,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 <table id="mytable" class="table table-striped">
   <thead>
     <tr>
-      
+
       <th>Equipo</th>
       <th>Codigo Equipo</th>
       <th>Cantidad</th>
@@ -266,15 +286,15 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
   <tbody>
     <tr>
       <tbody id="tbody">
-          <tr>
-            <td colspan="5">
-              <div id="act_table" style="width: 100%; height: 200px; overflow-y: scroll;" > </div></td>
-            </tr>
+        <tr>
+          <td colspan="5">
+            <div id="act_table" style="width: 100%; height: 200px; overflow-y: scroll;" > </div></td>
+          </tr>
 
-          </tbody>
-    </tr>
-  </tbody>
-</table>
+        </tbody>
+      </tr>
+    </tbody>
+  </table>
 
 
 

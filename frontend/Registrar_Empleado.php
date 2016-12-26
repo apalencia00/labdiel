@@ -5,13 +5,16 @@ error_reporting(E_ALL);
 
 require_once '../backend/Model/Modulo.php';
 
-session_start(); 
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
 
 
 if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['admon_mod'] != null  )  {
 
       $usuario = $_SESSION['admon_mod'];
-      $datos_mod = json_decode($usuario,true);
+      #$datos_mod = json_decode($usuario,true);
     
       $us = $usuario[0]['nusuario'];
 

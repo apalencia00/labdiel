@@ -5,13 +5,18 @@ error_reporting(E_ALL);
 //require_once(realpath($_SERVER["DOCUMENT_ROOT"]) . '/labdiel/backend/ConexionBD/Conexion.php');
 //require_once(realpath($_SERVER["DOCUMENT_ROOT"]) . '/labdiel/vendor/fergusean/nusoap/lib/nusoap.php');
 
-session_start(); 
+ if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
 
 $usuario = 0;
 
 if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['admon_mod'] != null  )  {
 
   $usuario = $_SESSION['admon_mod'][0]['nusuario'];
+
+  
 
 if(isset($_GET['method'])){
 

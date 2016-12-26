@@ -45,8 +45,8 @@
                         <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
                         <span id="text-login-msg">Digite su usuario y contrasenna.</span>
                     </div>
-                    <input id="login_username" class="form-control" type="text" placeholder="Username" required>
-                    <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                    <input id="login_username" class="form-control" type="text" value="labordiel" placeholder="Username" required>
+                    <input id="login_password" class="form-control" value="labordiel+-" type="password" placeholder="Password" required>
                     <div class="checkbox">
                         <label>
                             <input type="checkbox"> Remember me
