@@ -58,7 +58,7 @@ function getserialesEquipos($coti){
 
    $curl = curl_init();
 
-   curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/getDetalleSerialesEquipos?fk_cotizacion=".$coti);
+   curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/getDetalleSerialesEquipos?fk_cotizacion=".$coti);
 
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -82,7 +82,7 @@ function registro_inspeccion_entrada_equipos($parameters){
 
    $curl = curl_init();
 
-   curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/ensayosCliente?".http_build_query($parameters));
+   curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/ensayo/ensayosCliente?".http_build_query($parameters));
 
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 

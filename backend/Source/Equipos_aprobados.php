@@ -104,9 +104,9 @@ $param = array("ncotic" => $coti);
 
  $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/getEquiposCotizados?".http_build_query($param));
+curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/getEquiposCotizados?".http_build_query($param));
 
-//var_dump("http://localhost:8080/LabDielectrico/webresources/cotizacion/getEquiposCotizados?ncotic=".$coti);
+//var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/getEquiposCotizados?ncotic=".$coti);
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -130,7 +130,7 @@ function getCotizacionCliente($cliente){
 
  $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/listarCotizacionesCliente?id_cliente=".$cliente);
+curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/listarCotizacionesCliente?id_cliente=".$cliente);
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -154,9 +154,9 @@ function aprobarCantidadEquipo($p){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/aprobacionEquiposLab?". http_build_query($p));
+    curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/aprobacionEquiposLab?". http_build_query($p));
 
-    #var_dump("http://localhost:8080/LabDielectrico/webresources/cotizacion/aprobacionEquiposLab?". http_build_query($p));
+    #var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/aprobacionEquiposLab?". http_build_query($p));
     
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     
@@ -180,9 +180,9 @@ function regdetalle_serial($param){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
+    curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
     
-    #var_dump("http://localhost:8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
+    #var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
     
     curl_exec($curl);
     

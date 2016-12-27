@@ -175,7 +175,7 @@ alert("WUAPEA!! WILLy");
 	var obs_inspeccion 		= $("#obs_inspeccion").val();
 	var cotic 				= $("#cotic").val();
 
-	console.log( "La clas : "       +clase_eq);
+	/*console.log( "La clas : "       +clase_eq);
 	console.log( "La desc clase : " +obs_clase);
 	console.log( "La tension : " clase_eq);
 	console.log( "La clas : " clase_eq);
@@ -202,7 +202,7 @@ alert("WUAPEA!! WILLy");
 	console.log( "La clas : " clase_eq);
 	console.log( "La clas : " clase_eq);
 	console.log( "La clas : " clase_eq);
-
+*/
 	$.ajax({
 		
 		url: '../backend/Source/Registro_inspeccion.php',
