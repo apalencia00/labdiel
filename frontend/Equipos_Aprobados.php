@@ -41,6 +41,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     <script type="text/javascript">
 
 
+    
       
 
 
@@ -62,6 +63,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
              <select id="listCliente" class="form-control">
               <option value="0" >Seleccione </option>
+
             </select>
           </div>
 
@@ -110,30 +112,13 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           <tbody>
             <tr>
               <td colspan="5">
-                <div id="act_table" style="width: 100%; height: 100px; overflow-y: scroll;" > </div></td>
+                <div id="act_table" style="width: 100%; height: 400px; overflow-y: scroll;" > </div></td>
               </tr>
             </tbody>
           </table>
 
-              <table  class="table table-striped">
-          <thead>
-            <tr >
-
-              <th>Codigo Equipo</th>
-              <th>Tipo Equipo</th>
-              <th>Cantidad</th>
-
-
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="5">
-                <div id="act_table2" style="width: 100%; height: 100px; overflow-y: scroll;" > </div></td>
-              </tr>
-            </tbody>
-          </table>
-          <button type="button" id="generar" class="btn btn-primary">Generar</button>
+              
+          
         </fieldset>
 
          
@@ -150,7 +135,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-              <h4 class="modal-title" id="myModalLabel">Detalle Inventario</h4>
+              <h4 class="modal-title" id="myModalLabel">Detalle Inventarioss</h4>
             </div>
             <div class="modal-body">
              <form class="form-horizontal" role="form">
@@ -166,9 +151,15 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
               <div class="form-group">
                 <label for="numdoc" class="control-label col-sm-4"> Codigo Equipo</label>
                 <div class="col-sm-6">
-                  <input type="text" id="cod_equipo" placeholder="" class="form-control" autofocus>
-                  <span class="help-block"></span>
-                </div>
+                  
+                  <select id="cod_equipo"> 
+
+                  <option value="0">Seleccione</option>
+                  <option value="1">15339 - Guantes Dilectricos - Clase 00 </option>
+
+                  </select>
+
+                  </div>
               </div>
               <div class="form-group">
                 <label for="pnombre" class="col-sm-3 control-label">Tipo Equipo</label>
@@ -194,62 +185,12 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           <div class="modal-footer">
 
             <button type="button" id="aceptarTodo" class="btn btn-primary">Aceptar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <!-- Modal -->
-      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-              <h4 class="modal-title" id="myModalLabel">Generar Codigos Equipo</h4>
-            </div>
-            <div class="modal-body">
-             <form class="form-horizontal" role="form">
-
-              <div class="form-group">
-                <label for="numdoc" class="control-label col-sm-4"> Codigo Equipo</label>
-                <div class="col-sm-6">
-                  <input type="text" id="cod_equipo" placeholder="" class="form-control" autofocus>
-                  <span class="help-block"></span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="pnombre" class="col-sm-3 control-label">Tipo Equipo</label>
-                <div class="col-sm-9">
-                  <input type="text" id="tipo_equipo" placeholder="" class="form-control">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="papallido" class="col-sm-3 control-label">Cantidad</label>
-                <div class="col-sm-9">
-                  <input type="text readonly id="cantidad" placeholder="" class="form-control">
-                </div>
-              </div>
-
-
-              <div class="form-group">
-                <div class="col-sm-9 col-sm-offset-3">
-
-                </div>
-              </div>
-            </form> <!-- /form -->
-          </div>
-          <div class="modal-footer">
-
             <button type="button" id="generarTodo" class="btn btn-primary">Generar Codigos</button>
           </div>
         </div>
       </div>
     </div>
-    
+          
   </body>
 
   </html>

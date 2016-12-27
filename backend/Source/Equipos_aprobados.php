@@ -57,6 +57,37 @@ if(isset($_GET['method'])){
                     getCantidadAprobados();
                         break;
 
+                        case 'regdetalle_serial':
+                            # code...
+
+                        $cantidad = (int)$_GET['cant_equi'];
+                        #var_dump($cantidad);
+                        
+                        $eeee = $_GET['desc_equipo'];
+
+                        #var_dump($eeee);
+
+                        $div = explode("-", $eeee);
+                        
+                        #var_dump($div[0]);
+
+                        for ($i=0; $i <= $cantidad ; $i++) { 
+                                
+                     $cod_serial_equipo = "INF-" .$_GET['cod_equipos'] . "-" . $div[0] . "-2016"; 
+
+                            $params = array("codigo_equipo" => $_GET['cod_equipos'], "serial" => $cod_serial_equipo , "fk_cotizacion" => $_GET['cotizacion']);
+
+                           # var_dump($params); exit();
+
+                            regdetalle_serial($params);
+                         
+                        }
+
+                       
+
+                        
+                            break;
+
                                          
         
     }
@@ -140,6 +171,24 @@ function aprobarCantidadEquipo($p){
     
     curl_close($curl);
     
+
+}
+
+function regdetalle_serial($param){
+
+
+
+     $curl = curl_init();
+    
+    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
+    
+    #var_dump("http://localhost:8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
+    
+    curl_exec($curl);
+    
+    curl_close($curl);
+    
+
 
 }
 

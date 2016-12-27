@@ -59,22 +59,9 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     <div class="container">
       <form class="form-horizontal" id="form" role="form">
-        <h2>Registro Equipos Cliente</h2>
+        <h2>Registro Equipos</h2>
 
         <div class="row"  >
-
-          <div class="form-group">
-            <label for="tipodoc" class="control-label col-sm-4">Seleccione Cliente</label>
-            <div class="col-sm-2">
-
-             <select style="width:auto;" id="listCliente" class="form-control">
-              <option>Seleccione </option>
-            </select>
-          </div>
-
-        </div>
-
-
 
         <div class="form-group">
 
@@ -160,13 +147,13 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           <tr>
             <th>Cod. Equipo</th>
             <th>Descripcion</th>
-            <th>Cliente</th>
+           
 
           </tr>
         </thead>
         <tbody id="tbody">
           <tr>
-            <td colspan="3">
+            <td colspan="2">
               <div id="act_table" style="width: 100%; height: 200px; overflow-y: scroll;" > </div></td>
             </tr>
 

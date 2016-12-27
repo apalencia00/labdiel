@@ -47,6 +47,11 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
             window.frames[0].location.href = page;
         }
     }
+
+     function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+
 </script>
 
 <link href="../css/style_menu.css" rel="stylesheet" type="text/css" />
@@ -94,7 +99,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
 
-<iframe frameborder="0" align="top" scrolling="no" width="100%" height="150%" target="_parent" name="servicio" id="servicio" ></iframe>   
+<iframe frameborder="0" align="top" scrolling="no"  onload="resizeIframe(this)" target="_parent" name="servicio" id="servicio" ></iframe>   
 </body>
 </html>
 

@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+
 	console.log("DOM READY!!");
 
 	$("#form").submit(function(event){
@@ -68,7 +69,7 @@ $(document).ready(function(){
 
 						//console.log(arr[0].num_cotizacion);
 						var idcoti = arr[key].id_cotizacion;
-						html += '<tr> <td onclick="loadEquiposCotizados('+idcoti+')"  width="10%"  >' +  idcoti + '</td>' ;
+						html += '<tr> <td scope="row" data-toggle="modal" id="myclass2" data-id="'+idcoti+'" data-target="#myModal" width="10%"  >' +  idcoti + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].num_cotizacion + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].fecha_registro + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].nombre_cliente + '</td>' ;
@@ -87,26 +88,57 @@ $(document).ready(function(){
 
 
 
-	$(document).on("click", "#myclass", function () {
+	$(document).on("click", "#myclass2", function () {
 
 		var codigo = $(this).data('id');
 		$("#cotizacion").val( codigo );
-		$("#tipo_equipo").val( "GUANTES DIELECTRICOS" );
-		$("#cantidad").val("1");
+		
+		$.ajax({
+
+		url : "../backend/Source/Equipos_aprobados.php",
+		type : "GET",
+		dataType : "json",
+		contentType : "application/json",
+		data : {"method" : 'getEquiposCotizados', 'cotizacion' :  codigo },
+
+		success : function(json){
+
+			try{
+
+				var arr = jQuery.parseJSON(json);
+
+//a				console.log(arr);
+
+				var html = '<table class="table table-striped" border="0">';
+				var i = 0;
+				$.each(arr, function(key, value){
+
+					//console.log("AQUI ESTOY!!"+arr);
+					html += ' <tr> <td width="10%"    >' +  arr[key].fk_cod_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion_equipo + '</td>' + '<td width="10%" >' +  arr[key].cantidad+ '</td>'  ;
+					html += '</tr>';
+
+				});
+
+				html += '</table>';
+				$('#act_table').html(html);   
+
+			}catch(e){}
 
 
-
-
+		}
 
 	});
 
+	});
+
+
+	
+
 	$(document).on("click", "#aceptarTodo", function(){
 
-		var codigoe =	$("#myModal #cod_equipo").val();
-		var cantidad =  $("#myModal #cantidad").val();
-		localStorage.setItem("cantie",cantidad);
-		var cotic = localStorage.getItem("coti");
-		
+		var codigoe   =	$("#myModal #cod_equipo").val();
+		var cantidad  = $("#myModal #cantidad").val();
+		var cotic     = $("#myModal #cotizacion").val();
 
 		$.ajax({
 
@@ -123,7 +155,7 @@ $(document).ready(function(){
 				var i = 0;
 				$.each(arr, function(key, value){
 
-					html += '<td width="10%" scope="row" data-toggle="modal" id="myclass" data-id="'+arr[key].fk_cotizacion+'" data-target="#myModal2" >' +  arr[key].fk_cod_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion_equipo + '</td>' + '<td width="10%" >' + arr[key].cantidad + '</td>'  ;
+					html += '<td width="10%"  >' +  arr[key].fk_cod_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion_equipo + '</td>' + '<td width="10%" >' + arr[key].cantidad + '</td>'  ;
 					html += '</tr>';
 
 				});
@@ -138,23 +170,41 @@ $(document).ready(function(){
 
 	});
 
+$("#myModal #generarTodo").click(function(){
 
+        var codigoe    =  $("#myModal #cod_equipo").val();
+        var textoequipo=  $("#myModal #cod_equipo option:selected").text();
+		var cantidad   =  $("#myModal #cantidad").val();
+		var cotizacion =  $("#myModal #cotizacion").val();
+
+			//alert(textoequipo);
+			
+					$.ajax({
+					
+						url: '../backend/Source/Equipos_aprobados.php',
+						type: 'GET',
+						contentType : "application/json",
+						dataType : "json",
+						data : {'method' : 'regdetalle_serial','cod_equipos' : codigoe, 'desc_equipo' : textoequipo, 'cant_equi' : cantidad, 'cotizacion' : cotizacion},
+						success: function(data)
+						{
+							
+
+
+
+						}
+					});
+				
+	});
 
 });
 
-$("#generarTodo").click(function(){
-
-        var codigoe  =  $("#myModal2 #cod_equipo").val();
-		var cantidad =  $("#myModal2 #cantidad").val();
-		localStorage.setItem("cantie",cantidad);
-		var cotic = localStorage.getItem("coti");
-		
 
 
-});
+        //alert($(this).attr('#myModal #cod_equipo'));
 
 
-function loadEquiposCotizados(val){
+/*function loadEquiposCotizados(val){
 
 	localStorage.setItem("coti", val);
 
@@ -179,7 +229,7 @@ function loadEquiposCotizados(val){
 				$.each(arr, function(key, value){
 
 					//console.log("AQUI ESTOY!!"+arr);
-					html += ' <tr> <td width="10%" scope="row" data-toggle="modal" id="myclass" onclick="setDatosAprobados()"  >' +  arr[key].fk_cod_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion_equipo + '</td>' + '<td width="10%" >' +  arr[key].cantidad+ '</td>'  ;
+					html += ' <tr> <td width="10%" scope="row" data-toggle="modal" id="myclass" data-id="'+arr[key].fk_cotizacion+'" data-target="#myModal"   >' +  arr[key].fk_cod_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion_equipo + '</td>' + '<td width="10%" >' +  arr[key].cantidad+ '</td>'  ;
 					html += '</tr>';
 
 				});
@@ -195,15 +245,7 @@ function loadEquiposCotizados(val){
 	});
 
 }
-
-function setDatosAprobados(){
-
-	ventana = window.open("");
-	ventana.focus();
-
-
-}
-
+*/
 
 
 
