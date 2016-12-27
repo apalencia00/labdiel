@@ -20,7 +20,7 @@ if($usuario != "" || $contrasena != "")
         
         $conn->conectar_auth($usuario,$contrasena);
 
-        #var_dump($conn); exit();
+        var_dump($conn); 
         
         $res = $conn->query("SELECT * FROM auth.\"USUARIO\" WHERE usuanom = '$usuario' ");
 
