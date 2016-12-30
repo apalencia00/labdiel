@@ -127,7 +127,6 @@ function gettipoequipo(){
 
 function regDetalleEnsayo($param){
 
-
      $curl = curl_init();
     
     curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/regDetalleEnsayo?". http_build_query($param));

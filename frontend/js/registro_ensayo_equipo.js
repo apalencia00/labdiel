@@ -246,7 +246,7 @@ $(document).ready(function(){
 					$.each(arr, function(key, value){
 
 						console.log(arr);
-						html += '<td width="10%" >' +  'CAMBIAR' + '</td>' + '<td width="10%" >' +  arr[key].fk_cod_tipo_equipo_in + '</td>' + '<td width="10%" >' + arr[key].cantidad_equipo + '</td>'  +  '<td width="10%" >' + arr[key].fk_cliente_in + '</td>' + '</td>' ;
+						html += '<td width="10%" >' +  arr[key].fk_cod_tipo_equipo_in + '</td>' + '<td width="10%" >' +  arr[key].fk_cod_tipo_equipo_in + '</td>' + '<td width="10%" >' + arr[key].cantidad_equipo + '</td>'  +  '<td width="10%" >' + arr[key].fk_cliente_in + '</td>' + '</td>' ;
 						html += '</tr>';
 
 						

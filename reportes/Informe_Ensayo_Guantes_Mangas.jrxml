@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="864" pageHeight="842" columnWidth="824" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="211"/>
+	<title>
+		<band height="58" splitType="Stretch">
+			<image>
+				<reportElement x="1" y="2" width="75" height="52" uuid="2788508b-4116-484f-a2ec-99f3e4221991"/>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\7.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="288" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="93" height="20" uuid="d89e2e01-c751-484d-957a-71e5057df5a1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente/Customer
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="93" height="20" uuid="dacdc2b6-8d20-4e24-90ef-f2fa66c1e187"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección/Address
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="150" height="20" uuid="daaee9b0-fe8b-43e1-b8bd-d3bff6a89ecf"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No de Informe/Report Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="20" width="150" height="20" uuid="337ab042-d992-41df-8e2a-3b04b4662eb1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Equipo /Equipment]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="181" y="40" width="94" height="20" uuid="6c681b7d-5616-4808-9aad-5567562f8230"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="60" width="161" height="34" uuid="091ac0c1-7e0d-4c05-ba4a-4679211ae8c7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Servicio Autorizado por Cliente
+Autorized service by customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="94" width="161" height="17" uuid="5c94a1a0-d594-47ba-a3e5-601636ec7789"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ciudad/City]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="111" width="160" height="40" uuid="f0a878ad-5476-407c-9ddb-0c137a55321e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Recepción del equipo/Date received
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="151" width="160" height="40" uuid="d5ab3a4d-a862-4e2d-be4b-a7335e7a3e43"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de ensayo a equipo        /Date test
+				]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="191" width="160" height="20" uuid="4523cd18-4611-4bfc-8a60-d8187036335b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha del Informe/Date report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="40" width="150" height="41" uuid="442b1acf-ea06-4126-b0cb-7302bcf5904e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unidad de medida para ensayo/ Unit test  measurement
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="81" width="150" height="13" uuid="6a69c538-d7c0-4e79-93fd-adda9c74f3db"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Exactitud/Accuaracy (%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="98" width="150" height="41" uuid="2e144985-c9b8-4257-96de-34407ae8deea"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estandar de referencia/Reference standard
+						]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="214" width="357" height="20" uuid="26622e09-2da3-42b9-b803-04dddb3b8d7f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Información de equipo utilizado para ensayo/test equipment information
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="237" width="160" height="20" uuid="36e50c1c-5464-4f1d-a799-8589bc4497bd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código interno/Internal Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="237" width="62" height="20" uuid="fb67680f-4e90-4adb-845f-d18a529b8f7a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Serie/Serial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="237" width="135" height="20" uuid="ae11d06f-4534-41a1-a2ae-57520589ce84"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Certificado/Certificate Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="237" width="112" height="20" uuid="3f1571c3-a86b-417d-84b6-883b9ed0d79d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trazado a/Traceable to					]]></text>
+			</staticText>
+		</band>
+		<band height="145">
+			<staticText>
+				<reportElement x="1" y="0" width="199" height="20" uuid="f53e39b7-8469-4355-b688-657b8b95a855"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Condiciones ambientales/Enviromental conditio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="26" width="159" height="20" uuid="a99fc961-4441-4a92-81e4-e72f6fc696b4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Temperatura/Temperature (°C)			]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="26" width="252" height="20" uuid="0ac9ebe8-f10c-48c4-8dd9-728805de3833"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Humedad Relativa(%HR)/Relative Humidity(%RH)									]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="52" width="553" height="60" uuid="ab066ee0-9a4e-4828-859e-a665ee7e3ed7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Incertidumbre de medición/ Uncertaintiny Measurement
+La incertidumbre reportada representa la incertidumbre expandida a un nivel de  confianza de 95% utilizando un factor de cobertura k=2/ The reported uncertainties represent expanded uncertainties expressed at approximately the 95% confidence level using a coverage factor k=2."																								]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="115" width="181" height="20" uuid="bb197a76-891c-4ba2-9e86-92f902b8b198"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+			</staticText>
+		</band>
+		<band height="50">
+			<staticText>
+				<reportElement x="0" y="0" width="142" height="50" uuid="1cdcad50-ed0a-4cda-9333-216916e6dbfe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código interno
+Del equipo/
+Internal code equipment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="0" width="86" height="50" uuid="61eff778-24a2-47f6-8b8c-0d791327de35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Equipo
+Equipment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="0" width="86" height="50" uuid="ffae61a3-0abd-4f29-b3cb-e94abce73ecd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clase
+Class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="0" width="129" height="50" uuid="d7591bed-d77e-4c96-963a-f7b6c0f07e10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tensión de
+Ensayo [kV]  A.C
+Test voltage [kV] A.C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="112" height="50" uuid="aa6839eb-138c-4678-a584-07fd382aff61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tensión de uso [kV]  A.C.
+Operation Voltage [kV] A.C
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="557" y="0" width="108" height="50" uuid="76d0db25-1bbb-4ada-af42-31786af0ab2c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]
+
+]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

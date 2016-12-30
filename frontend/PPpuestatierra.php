@@ -50,7 +50,7 @@
                type: 'GET',
                contentType : "application/json",
                dataType : "json",
-               data : {"method" : 'addiniEnsayo', 'seriale' : elserial, "clase" : clase, "obs_clase" : obs_clase, "tension" : tension, "obs_tension" : obs_tension, "tipo" : tipo, "obs_tipo" : obs_tipo , "estilo" : estilo, "obs_estilo" : obs_estilo, "color" : color, "obs_color", "talla" : talla, "obs_talla" obs_tall, "longitud" : longitud, "obs_longitud" },
+               data : {"method" : 'addiniEnsayo', 'seriale' : elserial, "clase" : clase, "obs_clase" : obs_clase, "tension" : tension, "obs_tension" : obs_tension, "tipo" : tipo, "obs_tipo" : obs_tipo , "estilo" : estilo, "obs_estilo" : obs_estilo, "color" : color, "obs_color" :  obs_color, "talla" : talla, "obs_talla" : obs_tall, "longitud" : longitud, "obs_longitud" : obs_longitud },
                success: function(json)
                {
                     

@@ -42,12 +42,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     $(document).ready(function(){
 
-      $(document).on("click", "myModal", function () {
-
-      var data = $(this).data('id');
-      alert(data);
-
-    });
+      
 
     });
 
@@ -170,12 +165,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
                 <label for="numdoc" class="control-label col-sm-4"> Codigo Equipo</label>
                 <div class="col-sm-6">
                   
-                  <select id="cod_equipo" class="form-group"> 
-
-                  <option value="0">Seleccione</option>
-                  <option value="2">15339 - Guantes Dilectricos - Clase 00 </option>
-
-                  </select>
+                 <input type="text" name="cod_equipo" id="cod_equipo">
 
                   </div>
               </div>

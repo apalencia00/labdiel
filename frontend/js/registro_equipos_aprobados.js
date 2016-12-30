@@ -14,6 +14,13 @@ $(document).ready(function(){
 
 	});
 
+	$(document).on("click", "#myclass3", function () {
+
+      var data = $(this).data('id');
+      $("#cod_equipo").val(data);
+
+    });
+
 
 
 	$.ajax({
@@ -93,6 +100,10 @@ $(document).ready(function(){
 
 
 	$(document).on("click", "#myclass2", function () {
+
+	
+
+		//console.log("WUAPEAA WILLY " + Something); 
 		
 		var codigo = $("#ncotic").val();
 		$("#cotizacion").val(codigo);
