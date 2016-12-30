@@ -2,6 +2,8 @@
 
 require '../ConexionBD/Conexion.php';
 
+phpinfo();
+
 error_reporting(E_ALL);
 
  if(!isset($_SESSION)) 
