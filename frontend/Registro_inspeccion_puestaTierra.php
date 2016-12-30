@@ -154,20 +154,14 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
         <div class="span12">
             <ul class="nav nav-tabs" id="myTabs">
               <li class="active"><a href="#home" data-toggle="tab">1.   Registro de Datos al momento del Ensayo </a></li>
-              <li><a href="#dpa" data-toggle="tab">2. Inspeccion de condiciones del equipo</a></li>
-              <li><a href="#rn" data-toggle="tab">3. Registro de Datos al momento del Ensayo </a></li>
+             
             </ul>
             
             <div class="tab-content" >
               <div class="tab-pane active" id="home" data-src="">
-                  <iframe frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="embed-responsive-item" width="100%" height="400px" src="PPEnsayo.php"></iframe>           
+                  <iframe frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="embed-responsive-item" width="100%" height="400px" src="PPpuestatierra.php"></iframe>           
                 </div>
-              <div class="tab-pane" id="dpa" data-src="">
-                  <iframe frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="embed-responsive-item" width="100%" height="500px"  src="SPEnsayo.php"></iframe>
-                </div>
-              <div class="tab-pane" id="rn" data-src="">
-                  <iframe class="embed-responsive-item" width="100%" height="500px" src="TPEnsayo.php"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
-                </div>
+              
             </div>
         </div>
     </div>

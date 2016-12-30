@@ -34,12 +34,12 @@ if(isset($_GET['method'])){
         case 'regDetalleEnsayo':
             # code...
 
-        $datos = explode("-", $_GET['datos']);
+        $datos = $_GET['datos'];
         $cliente = $_GET["cliente"];
 
-
+        //var_dump($datos);
         
-        $params = array("fk_cod_tipo_equipo_in" => $datos[1], "cantidad_equipo_in" => $datos[2], "fk_revision_ensayo_equipo_in" => $_GET['revision'], "fk_cliente_in" =>$cliente , "fk_id_usuario_in" =>$usuario, "cantidad_equipo_in" => $_GET['cantidad'] );
+        $params = array("fk_cod_tipo_equipo_in" => $datos, "cantidad_equipo_in" => $_GET['cantidad'], "fk_revision_ensayo_equipo_in" => $_GET['revision'], "fk_cliente_in" =>$cliente , "fk_id_usuario_in" =>$usuario);
 
 
         regDetalleEnsayo($params);
@@ -56,9 +56,9 @@ if(isset($_GET['method'])){
             case 'getInfoRevisio_Equipo':
                 # code...
 
-            $params = array("id_cliente" => $_GET['cliente'], "id_revision_ensayo" => $_GET['revisionensayo'], "fk_id_tipo_equipo" => $_GET['equipo']);
+            #$params = array("id_cliente" => $_GET['cliente'], "id_revision_ensayo" => $_GET['revisionensayo'], "fk_id_tipo_equipo" => $_GET['equipo']);
 
-            getInfoEnsayoRevisionCliente_TipoEquipos_Equipos_Cliente($params);
+            getInfoEnsayoRevisionCliente_TipoEquipos_Equipos_Cliente();
 
                 break;
 
@@ -84,7 +84,7 @@ function registroEnsayoEquipo($param){
     
     $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/ensayo/registroEnsayo?". http_build_query($param));
+curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/registroEnsayo?". http_build_query($param));
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -107,7 +107,7 @@ function gettipoequipo(){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/ensayo/listtipoEquipo");
+    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/listtipoEquipo");
     
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     
@@ -130,7 +130,7 @@ function regDetalleEnsayo($param){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/ensayo/regDetalleEnsayo?". http_build_query($param));
+    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/regDetalleEnsayo?". http_build_query($param));
 
        
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
@@ -155,7 +155,7 @@ function getInfoEnsayoRevisionCliente_TipoEquipos_Equipos_Cliente($param){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/ensayo/getInfoEnsayoRevisionCliente_TipoEquipos_Equipos_Cliente?". http_build_query($param) );
+    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/getInfoEnsayoRevisionCliente_TipoEquipos_Equipos_Cliente?". http_build_query($param) );
 
     #var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/ensayo/getInfoEnsayoRevisionCliente_TipoEquipos_Equipos_Cliente?". http_build_query($param) ); exit();
     
@@ -180,7 +180,7 @@ function getLastIDRevisionByUsuario($usu){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/ensayo/getLastIDRevisionByUsuario?id_usuario=".$usu);
+    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/getLastIDRevisionByUsuario?id_usuario=".$usu);
     
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     

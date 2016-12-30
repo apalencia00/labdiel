@@ -1,4 +1,6 @@
 
+var number_cotic;
+
 $(document).ready(function(){
 
 	console.log("DOM READY!!");
@@ -69,7 +71,9 @@ $(document).ready(function(){
 
 						//console.log(arr[0].num_cotizacion);
 						var idcoti = arr[key].id_cotizacion;
-						html += '<tr> <td scope="row" data-toggle="modal" id="myclass2" data-id="'+idcoti+'" data-target="#myModal" width="10%"  >' +  idcoti + '</td>' ;
+						
+
+						html += '<tr> <td width="10%" class="myclass2" id="myclass2" >' +  idcoti + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].num_cotizacion + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].fecha_registro + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].nombre_cliente + '</td>' ;
@@ -89,115 +93,169 @@ $(document).ready(function(){
 
 
 	$(document).on("click", "#myclass2", function () {
-
-		var codigo = $(this).data('id');
-		$("#cotizacion").val( codigo );
+		
+		var codigo = $("#ncotic").val();
+		$("#cotizacion").val(codigo);
+		localStorage.setItem("numbcotizacion", 'COTIC -' + codigo);
 		
 		$.ajax({
 
-		url : "../backend/Source/Equipos_aprobados.php",
-		type : "GET",
-		dataType : "json",
-		contentType : "application/json",
-		data : {"method" : 'getEquiposCotizados', 'cotizacion' :  codigo },
+			url : "../backend/Source/Equipos_aprobados.php",
+			type : "GET",
+			dataType : "json",
+			contentType : "application/json",
+			data : {"method" : 'getEquiposCotizados', 'cotizacion' :  codigo },
 
-		success : function(json){
+			success : function(json){
 
-			try{
+				try{
 
-				var arr = jQuery.parseJSON(json);
+					var arr = jQuery.parseJSON(json);
 
-//a				console.log(arr);
+					console.log(arr);
 
-				var html = '<table class="table table-striped" border="0">';
-				var i = 0;
-				$.each(arr, function(key, value){
+					var html = '<table class="table table-striped" border="0">';
+					var i = 0;
+					$.each(arr, function(key, value){
 
 					//console.log("AQUI ESTOY!!"+arr);
-					html += ' <tr> <td width="10%"    >' +  arr[key].fk_cod_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion_equipo + '</td>' + '<td width="10%" >' +  arr[key].cantidad+ '</td>'  ;
+					html += ' <tr> <td width="10%" scope="row" data-toggle="modal" id="myclass3" data-id="'+arr[key].fk_cod_tipo_equipo+'" data-target="#myModal" width="10%"   >' +  arr[key].fk_cod_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion_equipo + '</td>' + '<td width="10%" >' +  arr[key].cantidad+ '</td>'  ;
 					html += '</tr>';
 
 				});
 
-				html += '</table>';
-				$('#act_table').html(html);   
+					html += '</table>';
+					$('#act_table').html(html);   
 
-			}catch(e){}
+				}catch(e){}
+
+
+			}
+
+		});
+
+	});
+
+	$( "#ncotic" ).keypress(function( event ) {
+		if ( event.which == 13 ) {
+			event.preventDefault();
+
+			number_cotic = $("#ncotic").val();
+			//alert(number_cotic);
+			$.ajax({
+
+			url: '../backend/Source/Equipos_aprobados.php',
+			type: 'GET',
+			contentType : "application/json",
+			dataType : "json",
+			data : {"method" : 'getCotizacion', "numbcoti" : number_cotic},
+			success: function(json)
+			{
+
+				try{
+
+					var arr = jQuery.parseJSON(json);
+
+					var html = '<table class="table table-striped" border="0">';
+
+					$.each(arr, function(key, value){
+
+						//console.log(arr[0].num_cotizacion);
+						var idcoti = arr[key].id_cotizacion;
+						
+
+						html += '<tr> <td width="10%" class="myclass2" id="myclass2" >' +  idcoti + '</td>' ;
+						html += '<td width="10%" >' +  arr[key].num_cotizacion + '</td>' ;
+						html += '<td width="10%" >' +  arr[key].fecha_registro + '</td>' ;
+						html += '<td width="10%" >' +  arr[key].nombre_cliente + '</td>' ;
+						html += '</tr>';
+
+					});
+
+					html += '</table>';
+					$('#act_table_cotic').html(html); 	
+
+				}catch(e){}
+			}
+		});
 
 
 		}
 
 	});
 
-	});
 
 
-	
 
-	$(document).on("click", "#aceptarTodo", function(){
+		$(document).on("click", "#aceptarTodo", function(){
 
-		var codigoe   =	$("#myModal #cod_equipo").val();
-		var cantidad  = $("#myModal #cantidad").val();
-		var cotic     = $("#myModal #cotizacion").val();
+			var codigoe   =	$("#myModal #cod_equipo").val();
+			var cantidad  = $("#myModal #cantidad").val();
+			var cotic     = $("#myModal #cotizacion").val();
 
-		$.ajax({
+			$.ajax({
 
-			url: '../backend/Source/Equipos_aprobados.php',
-			type: 'GET',
-			contentType : "application/json",
-			dataType : "json",
-			data : {"method" : 'aprobarCantidadEquipo', "tipoe" : codigoe, "cantidad" : cantidad, "cotinum" : cotic},
-			success: function(json)
-			{
-				var arr = jQuery.parseJSON(json);
+				url: '../backend/Source/Equipos_aprobados.php',
+				type: 'GET',
+				contentType : "application/json",
+				dataType : "json",
+				data : {"method" : 'aprobarCantidadEquipo', "tipoe" : codigoe, "cantidad" : cantidad, "cotinum" : cotic},
+				success: function(json)
+				{
+					var arr = jQuery.parseJSON(json);
 
-				var html = '<table class="table table-striped" border="0">';
-				var i = 0;
-				$.each(arr, function(key, value){
+					var html = '<table class="table table-striped" border="0">';
+					var i = 0;
+					$.each(arr, function(key, value){
 
-					html += '<td width="10%"  >' +  arr[key].fk_cod_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion_equipo + '</td>' + '<td width="10%" >' + arr[key].cantidad + '</td>'  ;
-					html += '</tr>';
+						html += '<td width="10%"  >' +  arr[key].fk_cod_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion_equipo + '</td>' + '<td width="10%" >' + arr[key].cantidad + '</td>'  ;
+						html += '</tr>';
 
-				});
-				
-				html += '</table>';
-				$('#act_table').html(html);
-				localStorage.clear();
+					});
+
+					html += '</table>';
+					$('#act_table').html(html);
+				//localStorage.clear();
 
 			}
 		});
 
 
-	});
+		});
 
-$("#myModal #generarTodo").click(function(){
+		$("#myModal #generarTodo").click(function(){
 
-        var codigoe    =  $("#myModal #cod_equipo").val();
-        var textoequipo=  $("#myModal #cod_equipo option:selected").text();
-		var cantidad   =  $("#myModal #cantidad").val();
-		var cotizacion =  $("#myModal #cotizacion").val();
+			var codigoe    =  $("#myModal #cod_equipo").val();
+			var textoequipo=  $("#myModal #cod_equipo option:selected").text();
+			var cantidad   =  $("#myModal #cantidad").val();
+			var cotizacion =  $("#myModal #cotizacion").val();
 
 			//alert(textoequipo);
 			
-					$.ajax({
-					
-						url: '../backend/Source/Equipos_aprobados.php',
-						type: 'GET',
-						contentType : "application/json",
-						dataType : "json",
-						data : {'method' : 'regdetalle_serial','cod_equipos' : codigoe, 'desc_equipo' : textoequipo, 'cant_equi' : cantidad, 'cotizacion' : cotizacion},
-						success: function(data)
-						{
-							
+			$.ajax({
+
+				url: '../backend/Source/Equipos_aprobados.php',
+				type: 'GET',
+				contentType : "application/json",
+				dataType : "json",
+				data : {'method' : 'regdetalle_serial','cod_equipos' : codigoe, 'desc_equipo' : textoequipo, 'cant_equi' : cantidad, 'cotizacion' : cotizacion},
+				success: function(data)
+				{
 
 
 
-						}
-					});
-				
+
+				},
+				beforeSend : function(){
+
+					waitingDialog.show('Cargando.. Por favor espere');setTimeout(function () {waitingDialog.hide();}, 5000)
+
+				}
+			});
+
+		});
+
 	});
-
-});
 
 
 

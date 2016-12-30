@@ -49,7 +49,9 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     <div class="container">
       <form id="form" class="form form-inline" role="form">
-        <h2>Cotizacion </h2> 
+        <h2>Recibo de Entrada - Salida de Caja </h2> 
+
+        <p> 
 
         <div class="row">
 

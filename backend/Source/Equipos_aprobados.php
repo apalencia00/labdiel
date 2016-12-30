@@ -2,10 +2,13 @@
 
 error_reporting(E_ALL);
 
-//require_once(realpath($_SERVER["DOCUMENT_ROOT"]) . '/labdiel/backend/ConexionBD/Conexion.php');
+require_once(realpath($_SERVER["DOCUMENT_ROOT"]) . '/labdiel/backend/ConexionBD/Conexion.php');
 //require_once(realpath($_SERVER["DOCUMENT_ROOT"]) . '/labdiel/vendor/fergusean/nusoap/lib/nusoap.php');
 
-session_start(); 
+  if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 
 $usuario = 0;
 
@@ -42,6 +45,14 @@ if(isset($_GET['method'])){
             getCotizacionCliente($_GET['cliente']);
                 break;
 
+                case 'getCotizacion':
+
+                $numbcoti = $_GET['numbcoti'];
+
+                getCotizacion($numbcoti);
+
+                    break;
+
 
                 case 'aprobarCantidadEquipo':
                     # code...
@@ -71,26 +82,51 @@ if(isset($_GET['method'])){
                         
                         #var_dump($div[0]);
 
-                        for ($i=0; $i <= $cantidad ; $i++) { 
+                        $conectarbd = new Conexion();
+
+                        $conectarbd->conectar();
+
+                        $id_equipo = $_GET['cod_equipos'];
+
+                    
+                        $sql ="SELECT \"COD_EQUIPO\", \"FK_UNIDAD\" FROM labor.\"EQUIPO_INVENTARIO_EMPRESA\" WHERE \"FK_TIPO_EQUIPO\" = $id_equipo order by \"COD_EQUIPO\" desc limit 1";
+
+                        $res = $conectarbd->executeView($sql);
+
+                        $codigo_equipo_asignado = $res["COD_EQUIPO"];
+                        $unidad_eq = $res["FK_UNIDAD"];
+
+                        $division_cod = explode("-", $codigo_equipo_asignado);
+
+                        $division_num_eq = $division_cod[1];
+
+                        //$get_number = intval(preg_replace('/[^0-9]+/', '', $division_num_eq),10);
+                        $get_number = 0;
+                        $pos = strpos($division_num_eq, 'B');
+
+                       if($pos){ 
+
+                        for ($i = 0; $i <= $cantidad - 1 ; $i ++) { 
                                 
-                     $cod_serial_equipo = "INF-" .$_GET['cod_equipos'] . "-" . $div[0] . "-2016"; 
+                           $get_number++;
+                           $cod_serial_equipo = $division_cod[0] . '-' . $get_number . 'A' ; 
 
                             $params = array("codigo_equipo" => $_GET['cod_equipos'], "serial" => $cod_serial_equipo , "fk_cotizacion" => $_GET['cotizacion']);
 
-                           # var_dump($params); exit();
-
                             regdetalle_serial($params);
-                         
+
+
                         }
 
-                       
+                    }
 
-                        
                             break;
+
+                        }
 
                                          
         
-    }
+    
 
 }else{
     echo "la variable no existe";
@@ -98,13 +134,14 @@ if(isset($_GET['method'])){
 
 }
 
+
 function getEquiposCotizados($coti){
 
 $param = array("ncotic" => $coti);
 
  $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/getEquiposCotizados?".http_build_query($param));
+curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/getEquiposCotizados?".http_build_query($param));
 
 //var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/getEquiposCotizados?ncotic=".$coti);
 
@@ -130,7 +167,7 @@ function getCotizacionCliente($cliente){
 
  $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/listarCotizacionesCliente?id_cliente=".$cliente);
+curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/listarCotizacionesCliente?id_cliente=".$cliente);
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -154,7 +191,7 @@ function aprobarCantidadEquipo($p){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/aprobacionEquiposLab?". http_build_query($p));
+    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/aprobacionEquiposLab?". http_build_query($p));
 
     #var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/aprobacionEquiposLab?". http_build_query($p));
     
@@ -180,7 +217,7 @@ function regdetalle_serial($param){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
+    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
     
     #var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
     
@@ -188,6 +225,30 @@ function regdetalle_serial($param){
     
     curl_close($curl);
     
+
+
+}
+
+function getCotizacion($numbcoti){
+
+
+ $curl = curl_init();
+
+curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/listarCotizacionesBycotic?id_cotizacion=".$numbcoti);
+
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+$result = curl_exec($curl);
+
+if(!$result){
+
+    die('Error: "' . curl_error($curl). '" - Code: ');
+}else{
+    echo json_encode($result);
+}
+
+curl_close($curl);
+
 
 
 }

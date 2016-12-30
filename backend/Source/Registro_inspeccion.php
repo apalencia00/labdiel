@@ -20,6 +20,14 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     switch ($method) {
 
+      case 'addiniEnsayo':
+
+      $param = array("serial" => $_GET['seriale'], "clase" => $_GET['clase'], "obsclase" => $_GET['obs_clase'], "tension" => $_GET[''] );
+
+      addiniEnsayo($param);
+        # code...
+        break;
+
      case 'getserialesEquipos':
             # code...
 
@@ -58,7 +66,7 @@ function getserialesEquipos($coti){
 
    $curl = curl_init();
 
-   curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/getDetalleSerialesEquipos?fk_cotizacion=".$coti);
+   curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/getDetalleSerialesEquipos?fk_cotizacion=".$coti);
 
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -82,7 +90,7 @@ function registro_inspeccion_entrada_equipos($parameters){
 
    $curl = curl_init();
 
-   curl_setopt($curl, CURLOPT_URL, "http://173.199.148.4:8080/LabDielectrico/webresources/ensayo/ensayosCliente?".http_build_query($parameters));
+   curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/ensayosCliente?".http_build_query($parameters));
 
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -97,5 +105,29 @@ function registro_inspeccion_entrada_equipos($parameters){
 
 curl_close($curl);
 
+
+}
+
+function addiniEnsayo($paramst)
+
+{
+
+   $curl = curl_init();
+  
+  curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/inspeccion/registroInicioInspeccion?".http_build_query($paramst));
+  
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+  
+  $result = curl_exec();
+  
+  if(!$result){
+  
+      die('Error: "' . curl_error($curl). '" - Code: ');
+  }else{
+      echo json_encode($result);
+  }
+  
+  curl_close($curl);
+  
 
 }

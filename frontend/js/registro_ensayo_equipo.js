@@ -88,13 +88,15 @@ $(document).ready(function(){
 
 				try{
 
+					console.log(json);
+
 				var $select = $("#tipoequipo");
 
 				var obj = jQuery.parseJSON(json);
 				
-				for (var i = 1 ;obj.length - 1; i++) {
+				for (var i = 0 ;obj.length ; i++) {
 				
-				$select.append('<option value=' + obj[i]['tipo_equipo'] + '>' + obj[i]['descripcion'] + ' - ' + obj[i]['desc_clase'] + '</option>'); 	
+				$select.append('<option value=' + obj[i]['tipo_equipo'] + '>' + obj[i]['descripcion'] +  '</option>'); 	
 
 			}
 
@@ -214,9 +216,13 @@ $(document).ready(function(){
 
 	$("#adddetalleensayo").click(function(){
 
-    	var result = getTds();
-    	var cliente_id     = $("select#listCliente").val();
-    	var cantidad   = $("#cantidad").val();
+    	//var result = getTds();
+
+    	//console.log(result);
+    	var detalle_clase_eq = $("#tipoequipo").val();
+    	console.log(detalle_clase_eq);
+    	var cliente_id       = $("select#listCliente").val();
+    	var cantidad         = $("#cantidad").val();
 
     	if(cantidad != "" || cantidad <= 0){
 
@@ -226,7 +232,7 @@ $(document).ready(function(){
     			type: 'GET',
     			contentType : "application/json",
     			dataType : "json",
-    			data : {"method" : 'regDetalleEnsayo',"datos" : result, "cliente" : cliente_id, "revision" : $("#idrevision").val(), "cantidad" : cantidad },
+    			data : {"method" : 'regDetalleEnsayo',"datos" : detalle_clase_eq, "cliente" : cliente_id, "revision" : $("#idrevision").val(), "cantidad" : cantidad },
     			success: function(json)
     			{
     					
@@ -288,59 +294,59 @@ $(document).ready(function(){
 	
 
 
-	$("select#tipoequipo").change(function(){
+/*	 	$("select#tipoequipo").change(function(){
 
-		var cliente_id     = $("select#listCliente").val();
-		var este_equipo    = $(this).val();
-		var session_id_rev = $("#idrevision").val();
+	 		var cliente_id     = $("select#listCliente").val();
+	 		var este_equipo    = $(this).val();
+	 		var session_id_rev = $("#idrevision").val();
 
-		console.log(cliente_id);
-		console.log(este_equipo);
-		console.log(session_id_rev);
+	 		console.log(cliente_id);
+	 		console.log(este_equipo);
+	 		console.log(session_id_rev);
 
-			$.ajax({
-				
-				url: '../backend/Source/Ensayo_Equipo.php',
-				type: 'GET',
-				contentType : "application/json",
-				dataType : "json",
-				data : {"method" : 'getInfoRevisio_Equipo', "cliente" : cliente_id, 'revisionensayo' : session_id_rev, 'equipo' : este_equipo},
-				success: function(json)
-				{
+	 		$.ajax({
+	 			
+	 			url: '../backend/Source/Ensayo_Equipo.php',
+	 			type: 'GET',
+	 			contentType : "application/json",
+	 			dataType : "json",
+	 			data : {"method" : 'getInfoRevisio_Equipo', "cliente" : cliente_id, 'revisionensayo' : session_id_rev, 'equipo' : este_equipo},
+	 			success: function(json)
+	 			{
 
-					if(json){
+	 				if(json){
 
-					var arr = jQuery.parseJSON(json);
-					console.log(arr);									
-					var html = '<table class="table table-striped" border="0">';
-					var i = 0;
-					$.each(arr, function(key, value){
+	 					var arr = jQuery.parseJSON(json);
+	 					console.log(arr);									
+	 					var html = '<table class="table table-striped" border="0">';
+	 					var i = 0;
+	 					$.each(arr, function(key, value){
 
-						console.log(arr);
-						html += '<td width="10%" >' +  arr[key].descripcion + '</td>' + '<td width="10%" >' +  arr[key].id_tipo_equipo + '</td>' + '<td width="10%" >' + arr[key].cantidad + '</td>'  +  '<td width="10%" >' + arr[key].fk_cliente_in + '</td>' + '</td>' ;
-						html += '</tr>';
+	 						console.log(arr);
+	 						html += '<td width="10%" >' +  arr[key].descripcion + '</td>' + '<td width="10%" >' +  arr[key].id_tipo_equipo + '</td>' + '<td width="10%" >' + arr[key].cantidad + '</td>'  +  '<td width="10%" >' + arr[key].fk_cliente_in + '</td>' + '</td>' ;
+	 						html += '</tr>';
 
-						
+	 						
 
-					});
-					
-					html += '</table>';
-					$('#act_table').html(html);
-				
+	 					});
+	 					
+	 					html += '</table>';
+	 					$('#act_table').html(html);
+	 					
 
-				}	
+	 				}	
 
-				}
+	 			}
 
 
 
-			});
-		
+	 		});
+	 		
 
-		
+	 		
 
-	});
-
+	 	});
+*/
 	$("#pdfgen").click(function(){
 
 		//alert("WUAPEAAAA!!!");

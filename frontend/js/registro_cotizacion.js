@@ -22,7 +22,7 @@ $("#genped").click(function(){
 
 
 $("#generarpdf").click(function(){
-	alert("WUAPEAA");
+	
   var win = window.open('http://localhost:8080/LabDielectrico/webresources/recibo_inout/imprimirCotizacion?ncotic='+$("#nocotic").val()+"id_cliente=1000", '_blank');
   win.focus();
 
