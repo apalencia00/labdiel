@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport3" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a2d64b84-25c5-43ad-8fcb-406fe46db8e1">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.x" value="54"/>
+	<property name="ireport.y" value="20"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -115,8 +115,6 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 				<textFieldExpression><![CDATA[$F{CANTIDAD}]]></textFieldExpression>
 			</textField>
 		</band>
-	</detail>
-	<summary>
 		<band height="50">
 			<staticText>
 				<reportElement mode="Opaque" x="411" y="11" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
@@ -140,5 +138,5 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 				<text><![CDATA[Total]]></text>
 			</staticText>
 		</band>
-	</summary>
+	</detail>
 </jasperReport>

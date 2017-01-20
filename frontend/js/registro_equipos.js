@@ -5,9 +5,7 @@ $(document).ready(function(){
 
 		event.preventDefault();
 
-		var cod_equipo = $("#cod_equipo").val();
-		var nom_equipo = $("#nom_equipo").val();
-		var marca      = $("#marca").val();
+		var desc = $("#desc").val();
 		var claseeq    = $("#claseeq").val();
 		var unidad     = $("#unidad").val();
 		var proc_eq    = $("#procedimiento").val();
@@ -19,18 +17,142 @@ $(document).ready(function(){
 				type: 'GET',
 				contentType : "application/json",
 				dataType : "json",
-				data : {"method" : 'add' , "cod_equipo" : cod_equipo, "nomb" : nom_equipo, "marca" : marca, "clase" : claseeq, "unidad" : unidad, "proc_eq" : proc_eq },
+				data : {"method" : 'addParam' , "desc" : desc, "clase" : claseeq, "unidad" : unidad, "proc_eq" : proc_eq }
+				,
+				beforeSend: function(){
+
+				waitingDialog.show('Cargando.. Por favor espere');setTimeout(function () {waitingDialog.hide();}, 2000);
+
+				//submit.prop('disabled', true);
+     			
+ 			},
 				success: function(json)
 				{
-					
+			
+           			var obj = jQuery.parseJSON(json);
+					console.log(obj);
 
-					console.log(json);
+					if(obj.success){ 
+
+					BootstrapDialog.show({
+						title : 'Operacion Exitosa',
+						type : BootstrapDialog.TYPE_SUCCESS,
+						message: obj.mensaje,
+						buttons: [{
+							label: 'Aceptar',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					});    
+
+				 }else{
+
+				 	BootstrapDialog.show({
+				 		title : 'Error',
+						type : BootstrapDialog.TYPE_INFO,
+						message: obj.mensaje,
+						buttons: [{
+							label: 'Ok',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					});  
+
+				 }
+   // ......   
+
+				},
+				error : function(event){
+
+					BootstrapDialog.show({
+						title : 'Operacion Exitosa',
+						type : BootstrapDialog.TYPE_DANGER,
+						message: 'Error no se pudo realizar la solicitud',
+						buttons: [{
+							label: 'Ok',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					}); 
 
 				}
 			});
 		
 		
 
+
+	});
+
+	$("#submit_equipo").click(function(){
+
+		var cod_equipo		  = $("#cod_equipo").val();
+		var serial_interno    = $("#serial_interno").val();
+		var marca     		  = $("#marca").val();
+		var tipo    	      = $("#tipo").val();
+
+		$.ajax({
+		
+				url: '../backend/Source/Registro_equipos.php',
+				type: 'GET',
+				contentType : "application/json",
+				dataType : "json",
+				data : {"method" : 'add' , "cod_equipo" : cod_equipo, "serial_interno" : serial_interno, "marca" : marca, "tipo" : tipo },
+				success: function(json)
+				{
+
+					console.log(json);
+					var obj = jQuery.parseJSON(json);
+					console.log(obj);
+					if(obj.success){ 
+
+					BootstrapDialog.show({
+						title : 'Operacion Exitosa',
+						type : BootstrapDialog.TYPE_SUCCESS,
+						message: obj.mensaje,
+						buttons: [{
+							label: 'Aceptar',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					});    
+
+				 }else{
+
+				 	BootstrapDialog.show({
+				 		title : 'Error',
+						type : BootstrapDialog.TYPE_INFO,
+						message: obj.mensaje,
+						buttons: [{
+							label: 'Ok',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					});  
+
+				 }
+
+				},
+				error : function(event){
+
+					BootstrapDialog.show({
+						title : 'Operacion Exitosa',
+						type : BootstrapDialog.TYPE_DANGER,
+						message: 'Error no se pudo realizar la solicitud',
+						buttons: [{
+							label: 'Ok',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					}); 
+
+				}
+			});
 
 	});
 
@@ -74,6 +196,39 @@ $(document).ready(function(){
 		type: 'GET',
 		contentType : "application/json",
 		dataType : "json",
+		data : {"method" : 'gettipo'},
+		success: function(json)
+		{
+			
+			try{
+		var $select = $('#tipo'); 
+
+		var obj = jQuery.parseJSON( json);
+		 
+		 console.log(obj);
+
+		if(obj != null){
+
+			for (var i = 0 ;obj.length - 1; i++) {
+				
+				$select.append('<option value=' + obj[i]['tipo_equipo'] + '>' + obj[i]['descripcion'] + '</option>'); 	
+
+			}
+
+		}
+
+		}catch(e){}
+
+		}
+	});
+
+
+	$.ajax({
+
+		url: '../backend/Source/Registro_equipos.php',
+		type: 'GET',
+		contentType : "application/json",
+		dataType : "json",
 		data : {"method" : 'getProcedimiento'},
 		success: function(json)
 		{
@@ -99,6 +254,87 @@ $(document).ready(function(){
 
 
 		}
+	});
+
+	$("#btn_reg").click(function(){
+
+		var tipo_equipo = $("#tipo").val();
+		var precio      = $("#precio").val();
+
+		$.ajax({
+		
+				url: '../backend/Source/Registro_equipos.php',
+				type: 'GET',
+				contentType : "application/json",
+				dataType : "json",
+				data : {"method" : 'addPrecio' , "tipoe" : tipo_equipo, "precio" : precio }
+				,
+				beforeSend: function(){
+
+				waitingDialog.show('Cargando.. Por favor espere');setTimeout(function () {waitingDialog.hide();}, 2000);
+
+				//submit.prop('disabled', true);
+     			
+ 			},
+				success: function(json)
+				{
+			
+           			var obj = jQuery.parseJSON(json);
+					console.log(obj);
+
+					if(obj.success){ 
+
+					BootstrapDialog.show({
+						title : 'Operacion Exitosa',
+						type : BootstrapDialog.TYPE_SUCCESS,
+						message: obj.mensaje,
+						buttons: [{
+							label: 'Aceptar',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					});    
+
+				 }else{
+
+				 	BootstrapDialog.show({
+				 		title : 'Error',
+						type : BootstrapDialog.TYPE_INFO,
+						message: obj.mensaje,
+						buttons: [{
+							label: 'Ok',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					});  
+
+				 }
+   // ......   
+
+				},
+				error : function(event){
+
+					BootstrapDialog.show({
+						title : 'Error Grave',
+						type : BootstrapDialog.TYPE_DANGER,
+						message: 'Error no se pudo realizar la solicitud',
+						buttons: [{
+							label: 'Ok',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					}); 
+
+				}
+			});
+
+
+
+
+
 	});
 
 

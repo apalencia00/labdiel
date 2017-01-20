@@ -10,15 +10,19 @@ error_reporting(E_ALL);
         session_start(); 
     }
 
+
+
 $usuario = 0;
 
 if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['admon_mod'] != null  )  {
 
   $usuario = $_SESSION['admon_mod'][0]['nusuario'];
 
-  
 
 if(isset($_GET['method'])){
+
+         $ip_serv   = $_SERVER['SERVER_ADDR'];
+    $name_serv = $_SERVER['SERVER_NAME'];
 
 
     $method = $_GET['method'];
@@ -107,7 +111,10 @@ function getTipoId(){
     $curl = curl_init();
 
 
-    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cliente/tipoIdentificacion");
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/tipoIdentificacion");
+
+#var_dump("http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/tipoIdentificacion");
+
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
     $result = curl_exec($curl);
@@ -124,7 +131,7 @@ function getTipoId(){
 function getCiudad(){
 
     $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cliente/ciudad");
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/ciudad");
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
     $result = curl_exec($curl);
@@ -142,7 +149,7 @@ function registrarCliente($params,$us)
 
    $curl = curl_init();
   
-      curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cliente/registroCliente?" .http_build_query($params) );
+      curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/registroCliente?" .http_build_query($params) );
     
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -165,7 +172,7 @@ function registroEquipo_Cliente($params, $us){
 
 $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cliente/registroEquipo?" .http_build_query($params));
+curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/registroEquipo?" .http_build_query($params));
 
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
@@ -188,7 +195,7 @@ function getListCliente(){
 
 $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cliente/getListCliente");
+curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/getListCliente");
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -209,7 +216,7 @@ function getTipoEquipo(){
 
 $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cliente/getTipoEquipo");
+curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/getTipoEquipo");
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 

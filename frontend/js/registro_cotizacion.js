@@ -14,7 +14,9 @@ $("#form").submit(function(event){
 
 $("#genped").click(function(){
 	//alert("WUAPEAA");
-  var win = window.open('http://localhost:8080/LabDielectrico/webresources/cotizacion/imprimirCotizacion?ncotic='+$("#nocotic").val(), '_blank');
+	 var men = prompt("Tiempo estimado de ensayo para ejecucion del servicio");
+
+  var win = window.open('http://localhost:8080/LabDielectrico/webresources/cotizacion/imprimirCotizacion?ncotic='+$("#nocotic").val()+"&tiempo="+men, '_blank');
   win.focus();
 
 
@@ -23,8 +25,9 @@ $("#genped").click(function(){
 
 $("#generarpdf").click(function(){
 	
-  var win = window.open('http://localhost:8080/LabDielectrico/webresources/recibo_inout/imprimirCotizacion?ncotic='+$("#nocotic").val()+"id_cliente=1000", '_blank');
-  win.focus();
+    
+var win = window.open('http://localhost:8080/LabDielectrico/webresources/recibo_inout/imprimirCotizacion?ncotic='+$("#nocotic").val()+"id_cliente="+$("#listCliente").val(), '_blank');
+win.focus();
 
 
 });
@@ -90,8 +93,6 @@ $("select#listCliente").change(function(){
 		contentType : "application/json",
 		data : {"method" : 'getClienteById' ,"cliente" : value },
 
-
-
 		success : function(json){
 
 			var arr = jQuery.parseJSON(json);
@@ -120,7 +121,7 @@ $("#checkdetalle").change("click", function(){
 
 	var value = $("select#listCliente").val();
 
-  $.ajax({
+    $.ajax({
 
  	url : "../backend/Source/Oferta_Servicio.php",
 		type : "GET",
@@ -145,7 +146,7 @@ $("#checkdetalle").change("click", function(){
 				$.each(arr, function(key, value){
 						
 						console.log(arr[key]);
-					html += '<td width="10%" >' +  arr[key].id_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion + '</td>' + '<td width="10%" >' +  arr[key].cantidad + '</td>' + '<td width="10%" >' + arr[key].valor + '</td>'  + '<td width="10%" align="center" > <input type="checkbox"   >  </td>' ;
+					html += '<td width="10%" >' +  arr[key].id_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion + '</td>' + '<td width="10%" >' +  arr[key].cantidad + '</td>' + '<td width="10%" >' + arr[key].valor + '</td>' ;
 					html += '</tr>';
 
 				});
@@ -163,53 +164,40 @@ $("#checkdetalle").change("click", function(){
   });
 
 $('#aprobar').on('click', function() {
-  //Get checked checkboxes
 
-  var checkedCheckboxes = $("#tbl1 :checkbox:checked"),
-    arr = [];
 
-  //For each checkbox
-  for (var i = 0; i < checkedCheckboxes.length; i++) {
+var table = document.getElementById('act_table'), 
+    rows = table.getElementsByTagName('tr'),
+    i, j, cells, customerId;
 
-    //Get checkbox
-    var checkbox = $(checkedCheckboxes[i]);
-
-    //Get checkbox value
-    var checkboxValue = checkbox.val();
-
-    //Get siblings
-    var siblings = checkbox.parent().siblings();
-
-    //Get values of siblings
-    var value1 = $(siblings[0]).text(); //codigo equipo
-    var value2 = $(siblings[1]).text(); // tipo equipo
-    var value3 = $(siblings[2]).text(); // cantidad
-    var value4 = $(siblings[3]).text(); // valor
-
-  
-
+for (i = 0, j = rows.length; i < j; ++i) {
+    cells = rows[i].getElementsByTagName('td');
+    if (!cells.length) {
+        continue;
     }
 
+    console.log(cells[0].innerHTML);
+    console.log(cells[2].innerHTML);
+    console.log(cells[3].innerHTML);
+   
     	$.ajax({
     		
     		url: '../backend/Source/Oferta_Servicio.php',
     		type: 'GET',
     		contentType : "application/json",
     		dataType : "json",
-    		data : {"method" : 'regDetalleCotizacion',"cotizacion" : $("#nocotic").val(), "codigoe" : value1, "cantidad" : value3, "valor" : value4},
-    		success: function(data)
+    		data : {"method" : 'regDetalleCotizacion',"cotizacion" : $("#nocotic").val(), "codigoe" : cells[0].innerHTML, "cantidad" : cells[2].innerHTML, "valor" : cells[3].innerHTML},
+    		success: function(json)
     		{
-    			
+    			console.log(json);
     		}
     	});
 
-    
-
-
-  
+    }
 
 });
 
+ 
 
 });
 

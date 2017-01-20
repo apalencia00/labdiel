@@ -31,14 +31,59 @@ $( document ).ready(function() {
 			
 			beforeSend: function(){
 
-				submitButton.prop('disabled', true);
+				//submitButton.prop('disabled', true);
      			
  			},
 			 success: function(json){
 
-			 	alert(json);
+			 		var obj = jQuery.parseJSON(json);
+					console.log(obj);
+					if(obj.success){ 
+
+					BootstrapDialog.show({
+						title : 'Operacion Exitosa',
+						type : BootstrapDialog.TYPE_SUCCESS,
+						message: obj.root,
+						buttons: [{
+							label: 'Aceptar',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					});    
+
+				 }else{
+
+				 	BootstrapDialog.show({
+				 		title : 'Error',
+						type : BootstrapDialog.TYPE_INFO,
+						message: obj.root,
+						buttons: [{
+							label: 'Ok',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					});  
+
+				 }
    // ......
-			}
+			},
+			error : function(event){
+
+					BootstrapDialog.show({
+						title : 'Operacion Exitosa',
+						type : BootstrapDialog.TYPE_DANGER,
+						message: 'Error no se pudo realizar la solicitud',
+						buttons: [{
+							label: 'Ok',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					}); 
+
+				}
 
 
 
@@ -68,16 +113,11 @@ try{
 		 
 		 console.log(obj);
 
-		if(obj != null){
-
 			for (var i = 0 ;obj.length - 1; i++) {
 				
 				$select.append('<option value=' + obj[i]['tipo_id'] + '>' + obj[i]['descripcion'] + '</option>'); 	
 
 			}
-
-		}
-
 		}catch(e){
     if(e){
     // If fails, Do something else

@@ -34,6 +34,16 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     <script type="text/javascript" src="js/registro_inspeccion.js" ></script>
     <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
 
+    <style type="text/css">
+      
+      @media screen and (min-width: 768px) {
+  
+  #myModal .modal-dialog  {width:1200px;}
+
+}
+
+    </style>
+
     <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="js/bootstrap-toggle.min.js"></script>
     <script src="js/bootstrap-waitingfor.js"></script>
@@ -51,6 +61,8 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     }
 
 });
+
+
 
 
 
@@ -103,7 +115,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           <tbody >
             <tr>
               <td colspan="5">
-                <div id="act_table_cotic" style="width: 100%; height: 70px; overflow-y: scroll;" > </div>
+                <div id="act_table_cotic" style="width: 100%; height: 200px; overflow-y: scroll;" > </div>
               </td>
             </tr>
           </tbody>
@@ -129,10 +141,10 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           <table  class="table table-striped">
             <thead>
               <tr >
-                <th>Id Serial</th>
+                 <th>Codigo Asignado</th> 
                 <th>Marca Fabricante</th>
                 <th>Tipo Equipo</th>
-                <th>Codigo Asignado</th>
+               
 
 
 
@@ -141,13 +153,15 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
             <tbody>
               <tr>
                 <td colspan="5">
-                  <div id="act_table_serial" style="width: 100%; height: 100px; overflow-y: scroll;" > </div></td>
+                  <div id="act_table_serial" style="width: 100%; height: 200px; overflow-y: scroll;" > </div></td>
                 </tr>
               </tbody>
             </table>
 
 
           </fieldset>
+
+          <!--
 
   <div class="container">
     <div class="row">
@@ -160,7 +174,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
             
             <div class="tab-content" >
               <div class="tab-pane active" id="home" data-src="">
-                  <iframe frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="embed-responsive-item" width="100%" height="400px" src="PPEnsayo.php"></iframe>           
+                  <iframe id="frameid1" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="embed-responsive-item" width="100%" height="400px" src="PPEnsayo.php"></iframe>           
                 </div>
               <div class="tab-pane" id="dpa" data-src="">
                   <iframe frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="embed-responsive-item" width="100%" height="500px"  src="SPEnsayo.php"></iframe>
@@ -173,6 +187,54 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     </div>
 </div>
 
+-->
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" id="">Ensayo Equipo  </h4>
+         <label class="label label-info"  name="num_serial" id="num_serial"> </label>
+         <input type="hidden" name="num_serialequipo" id="num_serialequipo" >
+      </div>
+      <div class="modal-body">
+            
+             <div class="container">
+    <div class="row">
+        <div class="span12">
+            <ul class="nav nav-tabs" id="myTabs">
+              <li class="active"><a href="#home" data-toggle="tab">1.   Registro de Datos al momento del Ensayo </a></li>
+              <li><a href="#dpa" data-toggle="tab">2. Inspeccion de condiciones del equipo</a></li>
+              <li><a href="#rn" data-toggle="tab">3. Registro de Datos al momento del Ensayo </a></li>
+            </ul>
+            
+            <div class="tab-content" >
+              <div class="tab-pane active" id="home" data-src="">
+                  <iframe id="frameid1" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="embed-responsive-item" width="100%" height="400px" src="PPEnsayo.php"></iframe>           
+                </div>
+              <div class="tab-pane" id="dpa" data-src="">
+                  <iframe frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="embed-responsive-item" width="100%" height="500px"  src="SPEnsayo.php"></iframe>
+                </div>
+              <div class="tab-pane" id="rn" data-src="">
+                  <iframe class="embed-responsive-item" width="100%" height="500px" src="TPEnsayo.php"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>            
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
         </form> <!-- /form -->

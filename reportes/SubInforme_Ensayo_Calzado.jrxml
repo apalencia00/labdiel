@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Mantas" language="groovy" pageWidth="648" pageHeight="842" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45b6efbc-c99e-4961-82c7-0fcd6ed89616">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT "ID_INSPECCION_EQUIPO", "FK_COTIZACION", "FK_ID_SERIAL_EQUIPO",
+       "CLASE", "OBS_CLASE", "TENSION", "OBS_TENSION", "TIPO", "OBS_TIPO",
+       "ESTILO", "OBS_ESTILO", "COLOR", "OBS_COLOR", "TALLA", "OBS_TALL",
+       "LONGITUD", "OBS_LONGITUD", "PERFORACION", "OBS_PERFORACION",
+       "ABRASION", "OBS_ABRASION", "DEGRADACION", "OZONO", "OBS_OZONO",
+       "CRISTAL", "QUEMADURA", "OBS_QUEMADURA", "CONTAMINACION", "OBS_CONTAMINACION",
+       "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
+       "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
+       "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*
+  FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co
+
+ WHERE ins."FK_COTIZACION" = co."ID_COTIZACION" AND co."FK_CLIENTE" = c."ID_CLIENTE" AND substr("FK_ID_SERIAL_EQUIPO", 1, 1) = 'C'    ;]]>
+	</queryString>
+	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
+	<field name="FK_COTIZACION" class="java.lang.Integer"/>
+	<field name="FK_ID_SERIAL_EQUIPO" class="java.lang.String"/>
+	<field name="CLASE" class="java.lang.Integer"/>
+	<field name="OBS_CLASE" class="java.lang.String"/>
+	<field name="TENSION" class="java.lang.Integer"/>
+	<field name="OBS_TENSION" class="java.lang.String"/>
+	<field name="TIPO" class="java.lang.Integer"/>
+	<field name="OBS_TIPO" class="java.lang.String"/>
+	<field name="ESTILO" class="java.lang.Integer"/>
+	<field name="OBS_ESTILO" class="java.lang.String"/>
+	<field name="COLOR" class="java.lang.Integer"/>
+	<field name="OBS_COLOR" class="java.lang.String"/>
+	<field name="TALLA" class="java.lang.Integer"/>
+	<field name="OBS_TALL" class="java.lang.String"/>
+	<field name="LONGITUD" class="java.lang.Integer"/>
+	<field name="OBS_LONGITUD" class="java.lang.String"/>
+	<field name="PERFORACION" class="java.lang.Integer"/>
+	<field name="OBS_PERFORACION" class="java.lang.String"/>
+	<field name="ABRASION" class="java.lang.Integer"/>
+	<field name="OBS_ABRASION" class="java.lang.String">
+		<fieldDescription><![CDATA[
+]]></fieldDescription>
+	</field>
+	<field name="DEGRADACION" class="java.lang.Integer"/>
+	<field name="OZONO" class="java.lang.Integer"/>
+	<field name="OBS_OZONO" class="java.lang.String"/>
+	<field name="CRISTAL" class="java.lang.Integer"/>
+	<field name="QUEMADURA" class="java.lang.Integer"/>
+	<field name="OBS_QUEMADURA" class="java.lang.String"/>
+	<field name="CONTAMINACION" class="java.lang.Integer"/>
+	<field name="OBS_CONTAMINACION" class="java.lang.String"/>
+	<field name="INFLADO" class="java.lang.Integer"/>
+	<field name="OBS_INFLADO" class="java.lang.String"/>
+	<field name="INSPECCION" class="java.lang.Integer"/>
+	<field name="OBS_INSPECCION" class="java.lang.String"/>
+	<field name="OBS_DEGRADACION" class="java.lang.String"/>
+	<field name="OBS_CRISTAL" class="java.lang.String"/>
+	<field name="TENSION_ENSAYO" class="java.lang.Double"/>
+	<field name="CORRIENTE_FUGA" class="java.lang.Double"/>
+	<field name="TEMPERATURA" class="java.lang.Double"/>
+	<field name="HUMEDAD" class="java.lang.Double"/>
+	<field name="TIEMPO_ENSAYO_MIN" class="java.lang.Integer"/>
+	<field name="OBS_FINAL" class="java.lang.String"/>
+	<field name="ID_CLIENTE" class="java.lang.Long">
+		<fieldDescription><![CDATA[--]]></fieldDescription>
+	</field>
+	<field name="TIPO_IDE" class="java.lang.Integer"/>
+	<field name="IDE_NIT" class="java.lang.String">
+		<fieldDescription><![CDATA[---]]></fieldDescription>
+	</field>
+	<field name="NOMBRE" class="java.lang.String"/>
+	<field name="TELEFONO_CONTACTO" class="java.lang.String"/>
+	<field name="CIUDAD" class="java.lang.Integer"/>
+	<field name="CONTACTO" class="java.lang.String"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<field name="DIRECCION" class="java.lang.String"/>
+	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
+	<field name="USUARIO" class="java.lang.Integer"/>
+	<field name="APELLIDO" class="java.lang.String"/>
+	<title>
+		<band height="56" splitType="Stretch">
+			<staticText>
+				<reportElement x="358" y="0" width="112" height="50" uuid="94858183-b0e4-499d-aaab-3c9bb49ede52"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tensión de uso [kV]  A.C.
+Operation Voltage [kV] A.C
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="119" height="50" uuid="9bf227ff-d67f-4832-bcf5-1856e4c2eb56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código interno
+Del equipo/
+Internal code equipment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="0" width="86" height="50" uuid="3c98b68e-426b-46fe-9e44-342f3ee2c81b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Incertidumbre
+/Uncertainty
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="0" width="100" height="50" uuid="c212270b-e331-4347-89bb-bb4edaeb5699"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tensión de
+Ensayo [kV]  A.C
+Test voltage [kV] A.C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="58" height="50" uuid="4a7bfd97-823c-4554-8b7c-6af2a5154d15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clase
+Class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="0" width="81" height="50" uuid="8e870d4e-314a-4280-9c10-a5c956ef49d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Equipo
+Equipment]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="119" height="20" uuid="0cca44de-8e70-4284-8179-5669a6a70059"/>
+				<textFieldExpression><![CDATA[$F{FK_ID_SERIAL_EQUIPO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="58" height="20" uuid="36acc6ae-0af6-4cda-8b55-65229c9051e5"/>
+				<textFieldExpression><![CDATA[$F{CLASE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="258" y="0" width="100" height="20" uuid="d2b7f548-5a85-425d-8b8d-cf5e492e8cdc"/>
+				<textFieldExpression><![CDATA[$F{OBS_TENSION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="358" y="0" width="100" height="20" uuid="da663696-6e28-4323-a374-728cfbbd06fc"/>
+				<textFieldExpression><![CDATA[$F{OBS_TENSION}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

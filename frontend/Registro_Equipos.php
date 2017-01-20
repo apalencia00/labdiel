@@ -47,10 +47,12 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-notifications.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-dialog.css">
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/registro_equipos.js" ></script>
     <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
+    <script type="text/javascript" src="js/bootstrap-dialog.js" ></script>
 
 
   </head>
@@ -76,10 +78,9 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           <div class="form-group">
 
 
-            <label for="numdoc" class="control-label col-sm-4">Nombre Equipo</label>
+          <label for="numdoc" class="control-label col-sm-4">Serial Interno Equipo</label>
             <div class="col-sm-8">
-              <input type="text"  id="nomb_equipo" placeholder="Nombre Equipo" class="form-control col-lg-100" autofocus>
-
+              <input type="text"  id="serial_interno" placeholder="Serial Interno Producto" class="form-control col-lg-100" autofocus>
             </div>
 
           </div>
@@ -89,34 +90,23 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
             <label for="numdoc" class="control-label col-sm-4">Marca Equipo</label>
             <div class="col-sm-8">
-              <input type="text"  id="marca" placeholder="Marca Equipo" class="form-control col-lg-100" autofocus>
+              <input type="text"  id="marca" placeholder="Nombre Equipo" class="form-control col-lg-100" autofocus>
 
             </div>
 
-          </div>  
+          </div>
+
+        
 
           <div class="form-group">
 
 
-            <label for="numdoc" class="control-label col-sm-4">Clase Equipo</label>
+            <label for="numdoc" class="control-label col-sm-4">Tipo Equipo</label>
             <div class="col-sm-8">
               
-              <select id="claseeq"></select>
-
-            </div>
-
-          </div> 
-
-          <div class="form-group">
-
-
-            <label for="numdoc" class="control-label col-sm-4">Unidad Equipo</label>
-            <div class="col-sm-8">
-              
-              <select id="unidad">
-                  
-                  <option value="1">Unidad</option>
-                  <option value="2">Medicion</option>
+              <select id="tipo" class="form-control">
+                
+                <option value="-1" >Seleccione</option>
 
               </select>
 
@@ -124,20 +114,10 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
           </div> 
 
-          <div class="form-group">
 
+          <button type="button" id="submit_equipo" class="btn btn-primary btn-block">Registrar</button>
 
-            <label for="numdoc" class="control-label col-sm-4">Procedimiento Equipo</label>
-            <div class="col-sm-8">
-              
-              <select id="procedimiento" ></select>
-
-            </div>
-
-          </div> 
-
-
-          <button type="submit" id="submit" class="btn btn-primary btn-block">Registrar</button>
+  
 
 
         </fieldset>
@@ -146,6 +126,9 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
       </div>
 
+
+
+    
     </body>
 
     </html>

@@ -6,4 +6,11 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'UCSDMath\\Pdf\\' => array($vendorDir . '/ucsdmath/pdf/src/Pdf'),
+    'UCSDMath\\Functions\\' => array($vendorDir . '/ucsdmath/functions/src/Functions'),
+    'UCSDMath\\DependencyInjection\\' => array($vendorDir . '/ucsdmath/dependency-injection/src/DependencyInjection'),
+    'UCSDMath\\Configuration\\' => array($vendorDir . '/ucsdmath/configuration/src/Configuration'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
+    'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
 );

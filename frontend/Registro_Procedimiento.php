@@ -31,7 +31,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-notifications.css">
       <script src="../node_modules/jquery/dist/jquery.min.js"></script>
       <script src="bootstrap/js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="js/registro_cliente.js" ></script>
+      <script type="text/javascript" src="js/registro_equipos.js" ></script>
       <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
 
   </head>
@@ -40,13 +40,13 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     <div class="container">
         <form class="form-horizontal" id="form" role="form" >
-            <h2>Registro Cliente</h2>
+            <h2>Registro Procedimiento</h2>
 
             <div class="form-group">
                 <label for="tipodoc" class="control-label col-sm-4">Tipo Equipo</label>
                 <div class="col-sm-6">
 
-                   <select id="tipoequipo" class="form-control">
+                   <select id="tipo" class="form-control">
                       <option>Seleccione Tipo</option>
                   </select>
               </div>

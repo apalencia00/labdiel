@@ -2,9 +2,9 @@
 
 require '../ConexionBD/Conexion.php';
 
-phpinfo();
+#phpinfo();
 
-error_reporting(E_ALL);
+error_reporting(0);
 
  if(!isset($_SESSION)) 
     { 
@@ -22,7 +22,7 @@ if($usuario != "" || $contrasena != "")
         
         $conn->conectar_auth($usuario,$contrasena);
 
-        var_dump($conn); 
+        #var_dump($conn); 
         
         $res = $conn->query("SELECT * FROM auth.\"USUARIO\" WHERE usuanom = '$usuario' ");
 

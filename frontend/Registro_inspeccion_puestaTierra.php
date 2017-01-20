@@ -31,12 +31,22 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/registro_inspeccion.js" ></script>
+    <script type="text/javascript" src="js/registro_puestatierra.js" ></script>
     <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
 
     <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="js/bootstrap-toggle.min.js"></script>
     <script src="js/bootstrap-waitingfor.js"></script>
+
+       <style type="text/css">
+      
+      @media screen and (min-width: 768px) {
+  
+  #myModal .modal-dialog  {width:1200px;}
+
+}
+
+    </style>
 
     <script type="text/javascript">
 
@@ -61,7 +71,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
   <body onload="">
 
     <div class="container">
-      <form id="form" class="form-inline" role="form">
+      <form id="form" class="form form-inline" role="form">
         <h2>Inspeccion de Equipos</h2>
 
         <fieldset>
@@ -79,7 +89,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
             <label for="tipodoc" class="control-label col-sm-2">Seleccione Cliente</label>
             <div class="col-sm-2 col-xs-5">
 
-             <select id="listCliente" class="form-control">
+             <select id="listClientetierra" class="form-control">
               <option value="0" >Seleccione </option>
             </select>
           </div>
@@ -103,7 +113,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           <tbody >
             <tr>
               <td colspan="5">
-                <div id="act_table_cotic" style="width: 100%; height: 70px; overflow-y: scroll;" > </div>
+                <div id="act_table_cotictierra" style="width: 100%; height: 70px; overflow-y: scroll;" > </div>
               </td>
             </tr>
           </tbody>
@@ -141,7 +151,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
             <tbody>
               <tr>
                 <td colspan="5">
-                  <div id="act_table_serial" style="width: 100%; height: 100px; overflow-y: scroll;" > </div></td>
+                  <div id="act_table_serialtierra" style="width: 100%; height: 100px; overflow-y: scroll;" > </div></td>
                 </tr>
               </tbody>
             </table>
@@ -149,25 +159,52 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
           </fieldset>
 
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" id="">Ensayo Equipo  </h4>
+         <label class="label label-danger"  name="num_serial" id="num_serial"> </label>
+         <input type="hidden" name="num_serialequipo" id="num_serialequipo" >
+      </div>
+      <div class="modal-body">
+
+
+            
   <div class="container">
     <div class="row">
         <div class="span12">
             <ul class="nav nav-tabs" id="myTabs">
               <li class="active"><a href="#home" data-toggle="tab">1.   Registro de Datos al momento del Ensayo </a></li>
-             
+
+              
             </ul>
             
             <div class="tab-content" >
+
               <div class="tab-pane active" id="home" data-src="">
-                  <iframe frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="embed-responsive-item" width="100%" height="400px" src="PPpuestatierra.php"></iframe>           
+                  <iframe id="frameid1" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="embed-responsive-item" width="100%" height="400px" src="PPpuestatierra.php"></iframe>           
                 </div>
               
             </div>
         </div>
     </div>
+</div>            
+
+
+      </div>
+      <div id="footer" class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" id="btn_aceptartierra"  class="btn btn-primary pull-right">Aceptar</button>
+      </div>
+    </div>
+
+  </div>
 </div>
-
-
 
         </form> <!-- /form -->
 

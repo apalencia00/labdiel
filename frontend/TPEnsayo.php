@@ -17,6 +17,54 @@
     <script src="js/bootstrap-toggle.min.js"></script>
     <script src="js/bootstrap-waitingfor.js"></script>
 
+     <script type="text/javascript">
+
+       $(document).ready(function(){
+         
+        $("#btnfinal").click(function(e)
+{
+  
+  e.preventDefault();
+ 
+  var cotic         = $("#cotic" , parent.document).val();
+  var serial        = $("#num_serialequipo", parent.document).val();
+  var tension       = $("#tension").val();
+  var fuga          = $("#fuga").val();
+  var temperatura   = $("#temperatura").val();
+  var humedad       = $("#humedad").val();
+  var tiempo        = $("#tiempo").val();
+  var observaciones = $("#observaciones").val();
+
+
+
+  $.ajax({
+    
+    url: '../backend/Source/Registro_inspeccion.php',
+    type: 'GET',
+    contentType : "application/json",
+    dataType : "json",
+    data : {"method" : 'addTercerEnsayo', 'serial' : serial, "cotizacion" : cotic,
+             "tension" : tension, "fuga" : fuga, "temperatura" : temperatura, "humedad" : humedad, "tiempo" : tiempo, "observaciones" : observaciones
+
+
+  },
+
+  success: function(json)
+  {
+
+    console.log(json);
+
+  }
+});
+
+
+
+});
+
+      });
+
+       </script>
+
   </head>
   <body>
 
@@ -25,7 +73,7 @@
       <p> 
 
         <form class="form-horizontal" role="form">
-
+         
          <div class="form-group">
           <label for="numcot" class="control-label col-sm-4">Norma Aplicable al ensayo </label>
           <div class="col-sm-6">
@@ -112,22 +160,20 @@
         </div>
 
 
-        <div class="form-group">
-          <label for="numdoc" class="control-label col-sm-4">OBSERVACIONES  
+        <div class="form-group"> 
             
           </label>
-          <div class="col-sm-6">
-            
-            <input type="text" name="observaciones" id="observaciones">
+          <div class="form-group">
+  <label for="obs_ozono" class="control-label col-sm-4">Observacion</label>
+  <div class="col-sm-2 col-xs-5">
 
-          </div>
+   <textarea id="obs_quemadura"></textarea>
+ </div>
+
+</div>
         </div>
         
-        <div class="form-group">
-          <div class="col-sm-9 col-sm-offset-3">
-
-          </div>
-        </div>
+     <button type="submit" id="btnfinal"  class="btn btn-primary pull-right">Aceptar</button>
 
 
 

@@ -89,7 +89,7 @@ function getListCliente(){
 
 $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cliente/getListCliente");
+curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/getListCliente");
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -111,7 +111,7 @@ function getClienteById($id){
     
     $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cliente/getClienteById?id_cliente=".$id);
+curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/getClienteById?id_cliente=".$id);
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -132,9 +132,9 @@ function getEquipoEnsayo($params){
 
     $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/ensayosCliente?".http_build_query($params));
+curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/ensayo/ensayosCliente?".http_build_query($params));
 
-//var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/ensayo/ensayosCliente?".http_build_query($params));
+#var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/ensayo/ensayosCliente?".http_build_query($params));
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -158,7 +158,7 @@ function insertarDetalleEquipoCotizacion(){
 
     $curl  = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/regdetallecotizacion?id_cliente");
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/regdetallecotizacion?id_cliente");
     
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     
@@ -182,7 +182,7 @@ function getCurrentCoticByUsuario($usu){
 
  $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/getCurrentcotic?id_usuario=".$usu);
+curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/getCurrentcotic?id_usuario=".$usu);
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -207,9 +207,9 @@ function regDetalleCotizacion($params){
 
  $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/cotizacion/regdetallecotizacion?".http_build_query($params));
+curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/regdetallecotizacion?".http_build_query($params));
 
-#var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/regdetallecotizacion?".http_build_query($params));
+var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/regdetallecotizacion?".http_build_query($params));
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 

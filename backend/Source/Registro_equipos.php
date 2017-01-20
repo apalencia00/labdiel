@@ -28,9 +28,9 @@ if(isset($_GET['method'])){
         case 'add':
             # code...
 
-        $params = array("");
+    $params = array("cod_equipo" => $_GET['cod_equipo'], "marca" => $_GET['marca'], "serial_interno" => $_GET['serial_interno'], "tipo" => $_GET['tipo'] );
 
-        registrarEquipo();
+        registrarEquipo($params);
 
             break;
 
@@ -43,9 +43,31 @@ if(isset($_GET['method'])){
            case 'getProcedimiento':
                # code...
 
-           getProcedimiento("" => $_GET['']);
+           getProcedimiento();
 
                break;
+
+               case 'addParam':
+                 # code...
+
+
+$params = array("nombre" => $_GET['desc'] , "clase"  => $_GET['clase'] , "unidad" => $_GET['unidad'], "proc_eq" => $_GET['proc_eq']);
+addParam( $params );
+
+                 break;
+
+                 case 'gettipo':
+                   # code...
+
+                 gettipo();
+                   break;
+
+                   case 'addPrecio':
+                       # code...
+                   $paramst = array("tipoe" => $_GET['tipoe'], "precio" => $_GET['precio']);
+                   addPrecio($paramst);
+
+                       break;
 
     }
 
@@ -60,7 +82,7 @@ function getclase(){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/registroEquipo/getClase");
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/registroEquipo/getClase");
     
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     
@@ -84,7 +106,7 @@ function getProcedimiento(){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/registroEquipo/getProcedimiento");
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/registroEquipo/getProcedimiento");
     
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     
@@ -102,7 +124,98 @@ function getProcedimiento(){
 
 }
 
-function registrarEquipo(){
+function registrarEquipo($param){
 
+  $curl = curl_init();
+    
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/registroEquipo/regEquipo?" . http_build_query($param));
+
+    #var_dump("http://localhost:8080/LabDielectrico/webresources/registroEquipo/regEquipo?" . http_build_query($param));
+    
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    
+    $result = curl_exec($curl);
+    
+    if(!$result){
+    
+        die('Error: "' . curl_error($curl). '" - Code: ');
+    }else{
+        echo json_encode($result);
+    }
+    
+    curl_close($curl);
+    
+
+}
+
+function addParam($param){
+
+
+  $curl = curl_init();
+    
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/registroEquipo/regParamEquipo?" . http_build_query($param));
+
+    #var_dump("http://localhost:8080/LabDielectrico/webresources/registroEquipo/regEquipo?" . http_build_query($param));
+    
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    
+    $result = curl_exec($curl);
+    
+    if(!$result){
+    
+        die('Error: "' . curl_error($curl). '" - Code: ');
+    }else{
+        echo json_encode($result);
+    }
+    
+    curl_close($curl);
+
+}
+
+function gettipo(){
+
+  $curl = curl_init();
+    
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/registroEquipo/getTipo");
+
+    #var_dump("http://localhost:8080/LabDielectrico/webresources/registroEquipo/regEquipo?" . http_build_query($param));
+    
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    
+    $result = curl_exec($curl);
+    
+    if(!$result){
+    
+        die('Error: "' . curl_error($curl). '" - Code: ');
+    }else{
+        echo json_encode($result);
+    }
+    
+    curl_close($curl);
+
+
+
+}
+
+function addPrecio($param){
+
+     $curl = curl_init();
+    
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/registroEquipo/regPrecio?" . http_build_query($param));
+
+    #var_dump("http://localhost:8080/LabDielectrico/webresources/registroEquipo/regEquipo?" . http_build_query($param));
+    
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    
+    $result = curl_exec($curl);
+    
+    if(!$result){
+    
+        die('Error: "' . curl_error($curl). '" - Code: ');
+    }else{
+        echo json_encode($result);
+    }
+    
+    curl_close($curl);
 
 }

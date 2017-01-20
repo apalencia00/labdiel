@@ -23,50 +23,90 @@
 
           $("#aprobar1").click(function(){
 
-           var coti          = $("#cotic",parent.document);
-           var numcotic      = coti[0].value;
-           var elserial      = localStorage.getItem("serie");
-           var serieequipo   = elserial;
-           var clase         = $("#clase").val();
-           var obs_clase     = $("#obs").val();
-           var tension       = $("#tension").val();
-           var obs_tension   = $("#obs2").val();
-           var tipo          = $("#tipo").val();
-           var obs_tipo      = $("#obs3").val();
-           var estilo        = $("#estilo").val();
-           var obs_estilo    = $("#obs4").val();
-           var color         = $("#color").val();
-           var obs_color     = $("#obs5").val();
-           var talla         = $("#talla").val();
-           var obs_tall      = $("#obs6").val();
-           var longitud      = $("#longitud").val();
-           var obs_longitud  = $("#obs7").val();
+
+  var clase_eq        = $("#clase").val();
+  var obs_clase       = $("#obs").val();
+  var tension_eq      = $("#tension").val();
+  var obs_tension     = $("#obs2").val();
+  var tipo_eq         = $("#tipo").val();
+  var obs_tipo        = $("#obs3").val();
+  var estilo_eq       = $("#estilo").val();
+  var obs_estilo      = $("#obs4").val();
+  var color_eq        = $("#color").val();
+  var obs_color       = $("#obs5").val();
+  var talla_eq        = $("#talla").val();
+  var obs_talla       = $("#obs6").val();
+  var longitud_eq     = $("#longitud").val();
+  var obs_longitud    = $("#obs7").val();
+/*  var perforacion_eq    = $("#perforacion").val();
+  var obs_perforacion   = $("#obs8").val();
+  var abrasion_eq     = $("#abrasion").val();
+  var obs_abrasion    = $("#obs9").val();
+  var degradacion_eq    = $("#degradacion").val();
+  var obs_degradacion   = $("#obs10").val();
+  var ozono_equipo      = $("#ozono").val();
+  var obs_ozono       = $("#obs11").val();
+  var cristal_eq      = $("#cristal").val();
+  var obs_cristal     = $("#obs_cristal").val();
+  var quemadura_eq    = $("#quemadura").val();
+  var obs_quemadura     = $("#obs_quemadura").val();
+  var contaminacion_eq  = $("#contaminacion").val();
+  var obs_contaminacion   = $("#obs_contamiacion").val();
+  var inflado_eq      = $("#inflado").val();
+  var obs_inflado     = $("#obs_inflado").val();
+  var inspeccion_eq     = $("#inspeccion").val();
+  var obs_inspeccion    = $("#obs_inspeccion").val();*/
 
 
-
-             $.ajax({
-              
-               url: '../backend/Source/registro_inspeccion.php',
-               type: 'GET',
-               contentType : "application/json",
-               dataType : "json",
-               data : {"method" : 'addiniEnsayo', 'seriale' : elserial, "clase" : clase, "obs_clase" : obs_clase, "tension" : tension, "obs_tension" : obs_tension, "tipo" : tipo, "obs_tipo" : obs_tipo , "estilo" : estilo, "obs_estilo" : obs_estilo, "color" : color, "obs_color" : obs_color, "talla" : talla, "obs_talla" : obs_tall, "longitud" : longitud, "obs_longitud" :  ''},
-               success: function(json)
-               {
-                    
-                    console.log(json);
-
-               }
-             });
-      
+  var cotic         = $("#cotic" , parent.document).val();
+  var serial        = $("#num_serialequipo", parent.document).val();
 
 
+  console.log("La cotizacion " + cotic + " El serial es " + serial);
+
+  $.ajax({
+    
+    url: '../backend/Source/Registro_inspeccion.php',
+    type: 'GET',
+    contentType : "application/json",
+    dataType : "json",
+    data : {"method" : 'addiniEnsayo', 'serial' : serial, "cotizacion" : cotic,
+    'clase' : clase_eq, 'obsclase' : obs_clase, 
+    'tension' : tension_eq, 'obs_tension' : obs_tension,  
+    'tipoeq' : tipo_eq, 'obs_tipo' : obs_tipo, 'estilo' :estilo_eq  ,'obestilo' : obs_estilo,
+    'coloreq' : color_eq, 'obscolor' : obs_color,
+    'tallaeq' : talla_eq, 'obstalla' : obs_talla,
+    'longitudeq' : longitud_eq, 'obs_logintud' : obs_longitud
+   /* 'perforacioneq' : perforacion_eq, 'obsperforacion' : obs_perforacion,
+    'abrasioneq' : abrasion_eq, 'obs_abrasion' : obs_abrasion,
+    'degradacioneq' : degradacion_eq, 'obsdegradacion' : obs_degradacion,
+    'ozonoeq' : ozono_equipo, 'obsozono' : obs_ozono,
+    'cristaleq' : cristal_eq, 'obscristal' : obs_cristal,
+    'quemaduraeq' : quemadura_eq, 'obsquemadura' : obs_quemadura,
+    'contaminacioneq' : contaminacion_eq, 'obscontaminacion' : obs_contaminacion,
+    'infladoeq' : inflado_eq, 'obsinflado' : obs_inflado,
+    'inspeccioneq' : inspeccion_eq, 'obsinspeccion' : obs_inspeccion*/  
+
+
+  },
+  success : function(json){
+
+      console.log(json);
+
+  }
 
 
 
           });
 
+
+
+      
+        
+
        });
+
+        })
 
        </script>
 
@@ -82,7 +122,7 @@
 
           <div class="row">
 
-            <div class="form-group">
+             <div class="form-group">
               <label for="tipodoc" class="control-label col-sm-6">Clase</label>
               <div class="col-sm-2 col-xs-5">
 

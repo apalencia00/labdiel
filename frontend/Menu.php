@@ -57,7 +57,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 <link href="../css/style_menu.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body onload="javascript:llamarPhp('<?php echo "Estadistico.php" ?>')" >
     
     <table width="100%" height="25px" >
         <tr>
@@ -78,7 +78,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     <div id="cssmenu" >
 <ul id="">
 
-<li><a href="#" onClick="llamarPhp('Estadistico.php')">ESTADISTICAS</a></li>
+<li><a href="#" onClick="llamarPhp('Estadistico.php')">Estadistico</a></li>
            
            <?php
 

@@ -208,7 +208,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
             <th>Tipo Equipo</th>
             <th>Cantidad</th>
             <th>Valor Unitario</th>
-            <th>Aprobación</th>
+            
 
           </tr>
         </thead>
@@ -227,7 +227,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
         <div class="form-group">
   <div class="col-sm-2 col-sm-offset-3">
-    <button type="submit" id="aprobar"  class="btn btn-primary">Aprobar</button>
+    <button type="submit" id="aprobar"  class="btn btn-primary">Aceptar</button>
   </div>
 </div>
 

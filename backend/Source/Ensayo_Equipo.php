@@ -84,7 +84,7 @@ function registroEnsayoEquipo($param){
     
     $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/registroEnsayo?". http_build_query($param));
+curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/ensayo/registroEnsayo?". http_build_query($param));
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
@@ -107,7 +107,7 @@ function gettipoequipo(){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/listtipoEquipo");
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/ensayo/listtipoEquipo");
     
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     
@@ -129,7 +129,7 @@ function regDetalleEnsayo($param){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/regDetalleEnsayo?". http_build_query($param));
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/ensayo/regDetalleEnsayo?". http_build_query($param));
 
        
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
@@ -154,7 +154,7 @@ function getInfoEnsayoRevisionCliente_TipoEquipos_Equipos_Cliente($param){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/getInfoEnsayoRevisionCliente_TipoEquipos_Equipos_Cliente?". http_build_query($param) );
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/ensayo/getInfoEnsayoRevisionCliente_TipoEquipos_Equipos_Cliente?". http_build_query($param) );
 
     #var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/ensayo/getInfoEnsayoRevisionCliente_TipoEquipos_Equipos_Cliente?". http_build_query($param) ); exit();
     
@@ -179,7 +179,7 @@ function getLastIDRevisionByUsuario($usu){
 
      $curl = curl_init();
     
-    curl_setopt($curl, CURLOPT_URL, "http://localhost:8080/LabDielectrico/webresources/ensayo/getLastIDRevisionByUsuario?id_usuario=".$usu);
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/ensayo/getLastIDRevisionByUsuario?id_usuario=".$usu);
     
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     

@@ -1,5 +1,7 @@
 {
     "require": {
-        "fergusean/nusoap": "^0.9.5"
+        "fergusean/nusoap": "^0.9.5",
+        "ucsdmath/pdf": "^1.5",
+        "phpoffice/phpexcel": "^1.8"
     }
 }

@@ -23,7 +23,7 @@
 <div class="container">
     <div class="row">
         <h1 class="text-center">Bienvenido Laboratorio Dielectrico</h1>
-        <p class="text-center"><a href="#" class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Clickame!</a></p>
+        <p class="text-center"><a href="#" class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Login</a></p>
     </div>
 </div>
 <!-- END # BOOTSNIP INFO -->
@@ -35,7 +35,7 @@
       <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header" align="center">
-              <img class="img-circle" id="img_logo" src="frontend/images/pp.jpg">
+              <img class="img-circle" id="img_logo" src="">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
             </button>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="modal-footer">
                     <div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Aceptar</button>
                     </div>
                     <div>
                         <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>

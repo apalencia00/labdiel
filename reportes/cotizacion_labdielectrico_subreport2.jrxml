@@ -2,7 +2,24 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4f35fdf4-f29c-46b3-af1b-c299d9f0115a">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="348"/>
+	<property name="ireport.y" value="395"/>
+	<parameter name="ncotic" class="java.lang.String"/>
+	<parameter name="tiiempo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT coti.*
+  FROM labor."COTIZACION" coti
+WHERE  coti."NUM_COTIZACION" = $P{ncotic}]]>
+	</queryString>
+	<field name="ID_COTIZACION" class="java.lang.Integer"/>
+	<field name="NUM_COTIZACION" class="java.lang.String"/>
+	<field name="FK_CLIENTE" class="java.lang.Integer"/>
+	<field name="FK_USUARIO" class="java.lang.Integer"/>
+	<field name="FK_EMPLEADO" class="java.lang.Integer"/>
+	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
+	<field name="ESTADO" class="java.lang.String"/>
+	<field name="US_MODIFICA" class="java.lang.Integer"/>
+	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
+	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
 	<title>
 		<band height="19" splitType="Stretch"/>
 	</title>
@@ -132,6 +149,10 @@
 				</textElement>
 				<text><![CDATA[• Cuando no sea posible identificar las características de clase de uso o nivel de tensión de operación del equipo, se asumirá la información entregada por el cliente como la referencia para determinar la tensión de ensayo de los equipos. En este caso será responsabilidad del cliente los daños que pueda sufrir el equipo durante el ensayo si estos son causados por información incorrecta enviada por él.							]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="0" y="508" width="555" height="151" uuid="9eb76084-f2a5-4194-a549-76f524ce9f7d"/>
+				<textFieldExpression><![CDATA[$P{tiiempo}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>

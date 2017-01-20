@@ -54,6 +54,8 @@ $(document).ready(function(){
 
 });
 
+
+
 	$("select#listCliente").change(function(){
 
 		$.ajax({
@@ -80,7 +82,7 @@ $(document).ready(function(){
 						var idcoti = arr[key].id_cotizacion;
 						
 
-						html += '<tr> <td width="10%" class="myclass2" id="myclass2" >' +  idcoti + '</td>' ;
+						html += '<tr> <td width="10%" class="myclass2" id="myclass2" data-id="'+idcoti+'" >' +  idcoti + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].num_cotizacion + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].fecha_registro + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].nombre_cliente + '</td>' ;
@@ -101,13 +103,18 @@ $(document).ready(function(){
 
 	$(document).on("click", "#myclass2", function () {
 
-	
+		var codigo ;
 
-		//console.log("WUAPEAA WILLY " + Something); 
-		
-		var codigo = $("#ncotic").val();
+			if( $("#ncotic").val() != "" ){
+
+			codigo	= $("#ncotic").val();
+
+			}else{
+				codigo = $(this).data('id');
+			}
+
 		$("#cotizacion").val(codigo);
-		localStorage.setItem("numbcotizacion", 'COTIC -' + codigo);
+		localStorage.setItem("numbcotizacion", 'COTIC-' + codigo);
 		
 		$.ajax({
 
@@ -120,6 +127,7 @@ $(document).ready(function(){
 			success : function(json){
 
 				try{
+
 
 					var arr = jQuery.parseJSON(json);
 
@@ -134,6 +142,8 @@ $(document).ready(function(){
 					html += '</tr>';
 
 				});
+
+					
 
 					html += '</table>';
 					$('#act_table').html(html);   
@@ -170,12 +180,9 @@ $(document).ready(function(){
 					var html = '<table class="table table-striped" border="0">';
 
 					$.each(arr, function(key, value){
-
-						//console.log(arr[0].num_cotizacion);
-						var idcoti = arr[key].id_cotizacion;
 						
 
-						html += '<tr> <td width="10%" class="myclass2" id="myclass2" >' +  idcoti + '</td>' ;
+						html += '<tr> <td width="10%" class="myclass2" id="myclass2" >' +  arr[key].id_cotizacion + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].num_cotizacion + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].fecha_registro + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].nombre_cliente + '</td>' ;
@@ -213,22 +220,43 @@ $(document).ready(function(){
 				data : {"method" : 'aprobarCantidadEquipo', "tipoe" : codigoe, "cantidad" : cantidad, "cotinum" : cotic},
 				success: function(json)
 				{
-					var arr = jQuery.parseJSON(json);
+						var obj = jQuery.parseJSON(json);
+						BootstrapDialog.show({
+						title : 'Operacion Exitosa',
+						type : BootstrapDialog.TYPE_SUCCESS,
+						message: obj.mensaje,
+						buttons: [{
+							label: 'Aceptar',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					});  
 
-					var html = '<table class="table table-striped" border="0">';
-					var i = 0;
-					$.each(arr, function(key, value){
+						getListaAprobados(cotic);
+					
 
-						html += '<td width="10%"  >' +  arr[key].fk_cod_tipo_equipo + '</td>' + '<td width="10%" >' +  arr[key].descripcion_equipo + '</td>' + '<td width="10%" >' + arr[key].cantidad + '</td>'  ;
-						html += '</tr>';
+			},error : function(event){
 
-					});
+					BootstrapDialog.show({
+						title : 'Operacion Exitosa',
+						type : BootstrapDialog.TYPE_DANGER,
+						message: 'Error no se pudo realizar la solicitud',
+						buttons: [{
+							label: 'Ok',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					}); 
 
-					html += '</table>';
-					$('#act_table').html(html);
-				//localStorage.clear();
+				},
 
-			}
+				complete : function(event, xhr, settings){
+
+					getListaAprobados(cotic);
+					
+				}
 		});
 
 
@@ -266,7 +294,49 @@ $(document).ready(function(){
 
 		});
 
+
+
+
 	});
+
+function getListaAprobados(){ 
+
+	$.ajax({
+
+			url: '../backend/Source/Equipos_aprobados.php',
+			type: 'GET',
+			contentType : "application/json",
+			dataType : "json",
+			data : {"method" : 'getEquiposAprobados', "cotizacion" : localStorage.getItem("numbcotizacion") },
+			success: function(json)
+			{
+				//console.log(json);
+				try{
+
+					var arr = jQuery.parseJSON(json);
+
+					var html = '<table class="table table-striped" border="0">';
+
+					$.each(arr, function(key, value){
+					console.log(arr);					
+
+						html += '<tr> <td width="10%">' +  arr[key].fk_cod_tipo_equipo + '</td>' ;
+						html += '<td width="10%" >' +  arr[key].descr + '</td>' ;
+				
+						html += '<td width="10%" >' +  arr[key].cantidad + '</td>' ;
+						html += '</tr>';
+
+					});
+
+					html += '</table>';
+					$('#act_table_aprobados').html(html); 	
+
+				}catch(e){}
+			}
+		});
+
+
+	 }
 
 
 

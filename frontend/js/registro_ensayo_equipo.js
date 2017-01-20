@@ -146,15 +146,72 @@ $(document).ready(function(){
 					contentType : "application/json",
 					dataType : "json",
 					data : {"method" : 'addennsayo', "fecha" : fechax, "cliente" : cliente, "lugare" : lugar_revision, "direrev" : dire_rev, "capacidad" : 'S', 'ensayoindoor' : res},
+					beforeSend: function(){
+
+					waitingDialog.show('Cargando.. Por favor espere');setTimeout(function () {waitingDialog.hide();}, 2000);
+
+     			
+ 					},
+
 					success: function(json)
 					{
 						
-						alert(json);
+					console.log(json);
+					var obj = jQuery.parseJSON(json);
+					console.log(obj);
+					if(obj.success){ 
 
-					}
+					BootstrapDialog.show({
+						title : 'Operacion Exitosa',
+						type : BootstrapDialog.TYPE_SUCCESS,
+						message: obj.root,
+						buttons: [{
+							label: 'Aceptar',
+							action: function(dialogItself){
+								dialogItself.close();
+								location.reload();
+							}
+						} ]
+					});    
+
+				 }else{
+
+				 	BootstrapDialog.show({
+				 		title : 'Error',
+						type : BootstrapDialog.TYPE_INFO,
+						message: obj.root,
+						buttons: [{
+							label: 'Ok',
+							action: function(dialogItself){
+								dialogItself.close();
+								location.reload();
+							}
+						} ]
+					});  
+
+				 }
+
+
+					},
+					error : function(event){
+
+					BootstrapDialog.show({
+						title : 'Operacion Exitosa',
+						type : BootstrapDialog.TYPE_DANGER,
+						message: 'Error no se pudo realizar la solicitud',
+						buttons: [{
+							label: 'Ok',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					}); 
+
+				}
+
 				});
 			
-			
+				
 
 		});
 
@@ -216,12 +273,10 @@ $(document).ready(function(){
 
 	$("#adddetalleensayo").click(function(){
 
-    	//var result = getTds();
-
-    	//console.log(result);
     	var detalle_clase_eq = $("#tipoequipo").val();
     	console.log(detalle_clase_eq);
     	var cliente_id       = $("select#listCliente").val();
+    	console.log("cliente "+cliente_id);
     	var cantidad         = $("#cantidad").val();
 
     	if(cantidad != "" || cantidad <= 0){
@@ -246,7 +301,7 @@ $(document).ready(function(){
 					$.each(arr, function(key, value){
 
 						console.log(arr);
-						html += '<td width="10%" >' +  arr[key].fk_cod_tipo_equipo_in + '</td>' + '<td width="10%" >' +  arr[key].fk_cod_tipo_equipo_in + '</td>' + '<td width="10%" >' + arr[key].cantidad_equipo + '</td>'  +  '<td width="10%" >' + arr[key].fk_cliente_in + '</td>' + '</td>' ;
+						html += '<td width="10%" >' +  arr[key].fk_cod_tipo_equipo_in + '</td>' + '<td width="10%" >' +  arr[key].descripcion + '</td>' + '<td width="10%" >' + arr[key].cantidad_equipo + '</td>'  +  '<td width="10%" >' + arr[key].fk_revision_ensayo_equipo + '</td>' ;
 						html += '</tr>';
 
 						
@@ -347,15 +402,7 @@ $(document).ready(function(){
 
 	 	});
 */
-	$("#pdfgen").click(function(){
-
-		//alert("WUAPEAAAA!!!");
-
-  var win = window.open('http://localhost:8080/LabDielectrico/webresources/recibo_inout/imprimirCotizacion='+$("#nocotic").val()+"&id_cliente=1000", '_blank');
-  win.focus();
-
-
-	});
+	
 
 
 

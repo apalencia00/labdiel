@@ -29,10 +29,17 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
       <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-notifications.css">
+      <link rel="stylesheet" type="text/css" href="css/bootstrap-dialog.css">
       <script src="../node_modules/jquery/dist/jquery.min.js"></script>
       <script src="bootstrap/js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="js/registro_cliente.js" ></script>
+      <script type="text/javascript" src="js/registro_equipos.js" ></script>
       <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
+
+      <script type="text/javascript" src="js/bootstrap-dialog.js" ></script>
+
+     <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="js/bootstrap-toggle.min.js"></script>
+    <script src="js/bootstrap-waitingfor.js"></script>
 
   </head>
 
@@ -40,13 +47,13 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     <div class="container">
         <form class="form-horizontal" id="form" role="form" >
-            <h2>Registro Cliente</h2>
+            <h2>Registro Precios</h2>
 
             <div class="form-group">
-                <label for="tipodoc" class="control-label col-sm-4">Tipo Equipo</label>
+                <label for="tipee" class="control-label col-sm-4">Tipo Equipo</label>
                 <div class="col-sm-6">
 
-                   <select id="tipoequipo" class="form-control">
+                   <select id="tipo" class="form-control">
                       <option>Seleccione Tipo</option>
                   </select>
               </div>
@@ -63,7 +70,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
                                 <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3">
-                        <button type="submit" id="submitbutton" class="btn btn-primary btn-block">Registrar</button>
+                        <button type="button" id="btn_reg" class="btn btn-primary btn-block">Registrar</button>
                     </div>
                 </div>
             </form> <!-- /form -->

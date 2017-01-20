@@ -28,13 +28,15 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-notifications.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-dialog.css">
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/registro_equipos_aprobados.js" ></script>
     <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
+    <script type="text/javascript" src="js/bootstrap-dialog.js" ></script>
 
-    <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
+     <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="js/bootstrap-toggle.min.js"></script>
     <script src="js/bootstrap-waitingfor.js"></script>
 
@@ -107,9 +109,9 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
       </fieldset>
 
-      <fieldset  >    
+       <fieldset  >    
 
-        <legend> Inventario Ensayo Cliente </legend>
+        <legend> Inventario Equipos Cotizados </legend>
 
         <table  class="table table-striped">
           <thead>
@@ -125,13 +127,36 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           <tbody>
             <tr>
               <td colspan="5">
-                <div id="act_table" style="width: 100%; height: 400px; overflow-y: scroll;" > </div></td>
+                <div id="act_table" style="width: 100%; height: 200px; overflow-y: scroll;" > </div></td>
               </tr>
             </tbody>
           </table>
+         
+        </fieldset>
 
-              
-          
+      <fieldset  >    
+
+        <legend> Inventario Aprobados Laboratorio </legend>
+
+        <table  class="table table-striped">
+          <thead>
+            <tr >
+
+              <th>Codigo Equipo</th>
+              <th>Tipo Equipo</th>
+              <th>Cantidad</th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="5">
+                <div id="act_table_aprobados" style="width: 100%; height: 200px; overflow-y: scroll;" > </div></td>
+              </tr>
+            </tbody>
+          </table>
+         
         </fieldset>
 
          

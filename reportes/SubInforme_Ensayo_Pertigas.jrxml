@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Mantas" language="groovy" pageWidth="648" pageHeight="842" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45b6efbc-c99e-4961-82c7-0fcd6ed89616">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT "iD_PERTIGAS", "FK_SERIAL_EQUIPO", "TRAMO", "T1", "T2", "T3",
+       "T4", "T5", "T6", "T7", "T8", "T9", "TMA", "HUMEDAD", "TENSION",
+       "TIEMPO", "TF1", "TF2", "TF3", "TF4", "TF5", "TF6", "TF7", "TF8",
+       "TF9", "FK_COTIZACION", "OBS_TENSION", "COLOR", "OBS_COLOR",
+       "LONGITUD", "OBS_LONGITUD", "PERFORACION", "OBS_PERFORACION",
+       "ABRASION", "OBS_ABRASION", "DEGRADACION", "OBS_DEGRADACION",
+       "COBERTURA", "OBS_COBERTURA", "CRISTAL", "OBS_CRISTAL", "QUEMADURA",
+       "OBS_QUEMADURA", "CONTAMINACION", "OBS_CONTAMINACION", "APRUEBA",
+       "OBS_APRUEBA"
+  FROM labor."REGISTRO_ENSAYO_PERTIGAS" ins, labor."CLIENTE" c, labor."COTIZACION" co
+
+ WHERE ins."FK_COTIZACION" = co."ID_COTIZACION" AND co."FK_CLIENTE" = c."ID_CLIENTE"  ;]]>
+	</queryString>
+	<field name="iD_PERTIGAS" class="java.lang.Integer"/>
+	<field name="FK_SERIAL_EQUIPO" class="java.lang.String"/>
+	<field name="TRAMO" class="java.lang.Integer"/>
+	<field name="T1" class="java.lang.Double"/>
+	<field name="T2" class="java.lang.Double"/>
+	<field name="T3" class="java.lang.Double"/>
+	<field name="T4" class="java.lang.Double"/>
+	<field name="T5" class="java.lang.Double"/>
+	<field name="T6" class="java.lang.Double"/>
+	<field name="T7" class="java.lang.Double"/>
+	<field name="T8" class="java.lang.Double"/>
+	<field name="T9" class="java.lang.Double"/>
+	<field name="TMA" class="java.lang.Double"/>
+	<field name="HUMEDAD" class="java.lang.Double"/>
+	<field name="TENSION" class="java.lang.Double"/>
+	<field name="TIEMPO" class="java.lang.Double"/>
+	<field name="TF1" class="java.lang.Double"/>
+	<field name="TF2" class="java.lang.Double"/>
+	<field name="TF3" class="java.lang.Double"/>
+	<field name="TF4" class="java.lang.Double"/>
+	<field name="TF5" class="java.lang.Double"/>
+	<field name="TF6" class="java.lang.Double"/>
+	<field name="TF7" class="java.lang.Double"/>
+	<field name="TF8" class="java.lang.Double"/>
+	<field name="TF9" class="java.lang.Double"/>
+	<field name="FK_COTIZACION" class="java.lang.Integer"/>
+	<field name="OBS_TENSION" class="java.lang.String"/>
+	<field name="COLOR" class="java.lang.Integer"/>
+	<field name="OBS_COLOR" class="java.lang.String"/>
+	<field name="LONGITUD" class="java.lang.Integer"/>
+	<field name="OBS_LONGITUD" class="java.lang.String"/>
+	<field name="PERFORACION" class="java.lang.Integer"/>
+	<field name="OBS_PERFORACION" class="java.lang.String"/>
+	<field name="ABRASION" class="java.lang.Integer"/>
+	<field name="OBS_ABRASION" class="java.lang.String"/>
+	<field name="DEGRADACION" class="java.lang.Integer"/>
+	<field name="OBS_DEGRADACION" class="java.lang.String"/>
+	<field name="COBERTURA" class="java.lang.Integer"/>
+	<field name="OBS_COBERTURA" class="java.lang.String"/>
+	<field name="CRISTAL" class="java.lang.Integer"/>
+	<field name="OBS_CRISTAL" class="java.lang.String"/>
+	<field name="QUEMADURA" class="java.lang.Integer"/>
+	<field name="OBS_QUEMADURA" class="java.lang.String"/>
+	<field name="CONTAMINACION" class="java.lang.Integer"/>
+	<field name="OBS_CONTAMINACION" class="java.lang.String"/>
+	<field name="APRUEBA" class="java.lang.Integer"/>
+	<field name="OBS_APRUEBA" class="java.lang.String"/>
+	<title>
+		<band height="56" splitType="Stretch">
+			<staticText>
+				<reportElement x="301" y="0" width="112" height="50" uuid="94858183-b0e4-499d-aaab-3c9bb49ede52"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tensión de uso [kV]  A.C.
+Operation Voltage [kV] A.C
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="119" height="50" uuid="9bf227ff-d67f-4832-bcf5-1856e4c2eb56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código interno
+Del equipo/
+Internal code equipment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="0" width="86" height="50" uuid="3c98b68e-426b-46fe-9e44-342f3ee2c81b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Incertidumbre
+/Uncertainty
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="0" width="100" height="50" uuid="c212270b-e331-4347-89bb-bb4edaeb5699"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Longitud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="0" width="81" height="50" uuid="8e870d4e-314a-4280-9c10-a5c956ef49d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Equipo
+Equipment]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="119" height="20" uuid="02c53b15-3612-4f67-a4d4-1e2bd9d6d4e5"/>
+				<textFieldExpression><![CDATA[$F{FK_SERIAL_EQUIPO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="0" width="112" height="20" uuid="1d0e572e-2246-432f-a60d-e003324e2eca"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{OBS_TENSION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="0" width="100" height="20" uuid="f2c9651a-522e-4df1-8e8a-985171938f7e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{OBS_LONGITUD}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
