@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="864" pageHeight="842" columnWidth="824" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="824" pageHeight="802" columnWidth="824" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="1.2100000000000002"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="97"/>
+	<property name="ireport.y" value="308"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT coti."ID_COTIZACION", coti."NUM_COTIZACION", coti."FK_CLIENTE", coti."FK_USUARIO",
@@ -47,7 +47,7 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND 
 		</band>
 	</title>
 	<detail>
-		<band height="288" splitType="Stretch">
+		<band height="257" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="93" height="20" uuid="d89e2e01-c751-484d-957a-71e5057df5a1"/>
 				<textElement>
@@ -229,31 +229,39 @@ Autorized service by customer]]></text>
 				</textElement>
 				<text><![CDATA[N°]]></text>
 			</staticText>
-		</band>
-		<band height="145">
 			<staticText>
-				<reportElement x="1" y="0" width="199" height="20" uuid="f53e39b7-8469-4355-b688-657b8b95a855"/>
+				<reportElement x="687" y="20" width="137" height="20" uuid="e79c9744-65f5-4d49-a822-05085f91b6a8"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Guantes Dielectricas]]></text>
+			</staticText>
+		</band>
+		<band height="50"/>
+		<band height="160">
+			<staticText>
+				<reportElement x="2" y="14" width="199" height="20" uuid="f53e39b7-8469-4355-b688-657b8b95a855"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Condiciones ambientales/Enviromental conditio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="26" width="159" height="20" uuid="a99fc961-4441-4a92-81e4-e72f6fc696b4"/>
+				<reportElement x="2" y="40" width="159" height="20" uuid="a99fc961-4441-4a92-81e4-e72f6fc696b4"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature (°C)			]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="218" y="26" width="252" height="20" uuid="0ac9ebe8-f10c-48c4-8dd9-728805de3833"/>
+				<reportElement x="219" y="40" width="252" height="20" uuid="0ac9ebe8-f10c-48c4-8dd9-728805de3833"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Humedad Relativa(%HR)/Relative Humidity(%RH)									]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="52" width="553" height="60" uuid="ab066ee0-9a4e-4828-859e-a665ee7e3ed7"/>
+				<reportElement x="3" y="66" width="553" height="60" uuid="ab066ee0-9a4e-4828-859e-a665ee7e3ed7"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -261,7 +269,7 @@ Autorized service by customer]]></text>
 La incertidumbre reportada representa la incertidumbre expandida a un nivel de  confianza de 95% utilizando un factor de cobertura k=2/ The reported uncertainties represent expanded uncertainties expressed at approximately the 95% confidence level using a coverage factor k=2."																								]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="115" width="181" height="20" uuid="bb197a76-891c-4ba2-9e86-92f902b8b198"/>
+				<reportElement x="1" y="129" width="181" height="20" uuid="bb197a76-891c-4ba2-9e86-92f902b8b198"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -275,6 +283,5 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\SubInforme_Ensayo_Guantes.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="24"/>
 	</detail>
 </jasperReport>

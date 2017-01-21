@@ -12,10 +12,10 @@
        "CRISTAL", "QUEMADURA", "OBS_QUEMADURA", "CONTAMINACION", "OBS_CONTAMINACION",
        "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
-       "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*
-  FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co
+       "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*,cl."DESCRIPCION" as laclase
+  FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co, labor."TIPO_EQUIPO" eq, labor."CLASE_EQUIPO" cl, labor."EQUIPO_INVENTARIO_EMPRESA" emp
 
- WHERE ins."FK_COTIZACION" = co."ID_COTIZACION" AND co."FK_CLIENTE" = c."ID_CLIENTE" AND substr("FK_ID_SERIAL_EQUIPO", 1, 1) = 'C'    ;]]>
+ WHERE ins."FK_COTIZACION" = co."ID_COTIZACION" AND co."FK_CLIENTE" = c."ID_CLIENTE" AND substr("FK_ID_SERIAL_EQUIPO", 1, 1) = 'C' AND emp."COD_EQUIPO" = "FK_ID_SERIAL_EQUIPO" AND emp."FK_TIPO_EQUIPO" = cl."ID_CLASE_EQUIPO"  ;]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.Integer"/>
@@ -37,10 +37,7 @@
 	<field name="PERFORACION" class="java.lang.Integer"/>
 	<field name="OBS_PERFORACION" class="java.lang.String"/>
 	<field name="ABRASION" class="java.lang.Integer"/>
-	<field name="OBS_ABRASION" class="java.lang.String">
-		<fieldDescription><![CDATA[
-]]></fieldDescription>
-	</field>
+	<field name="OBS_ABRASION" class="java.lang.String"/>
 	<field name="DEGRADACION" class="java.lang.Integer"/>
 	<field name="OZONO" class="java.lang.Integer"/>
 	<field name="OBS_OZONO" class="java.lang.String"/>
@@ -77,6 +74,7 @@
 	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
 	<field name="USUARIO" class="java.lang.Integer"/>
 	<field name="APELLIDO" class="java.lang.String"/>
+	<field name="laclase" class="java.lang.String"/>
 	<title>
 		<band height="56" splitType="Stretch">
 			<staticText>
@@ -151,6 +149,10 @@ Equipment]]></text>
 			<textField>
 				<reportElement x="358" y="0" width="100" height="20" uuid="da663696-6e28-4323-a374-728cfbbd06fc"/>
 				<textFieldExpression><![CDATA[$F{OBS_TENSION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="0" width="81" height="20" uuid="d9fa9e6b-bb71-45a5-843e-45ab1a1ec6ef"/>
+				<textFieldExpression><![CDATA[$F{laclase}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

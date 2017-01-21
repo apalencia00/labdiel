@@ -3,9 +3,20 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<title>
-		<band height="35" splitType="Stretch"/>
-	</title>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tiempo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT "ID_DETALLE_ENSAYO_EQUIPO", "FK_TIPO_EQUIPO_CLIENTE", "CANTIDAD_EQUIPO",
+       "FK_USU_CREADOR", "FK_REVISION_ENSAYO_EQUIPO"
+  FROM labor."DETALLE_ENSAYO_EQUIPO" LIMIT 1;]]>
+	</queryString>
+	<field name="ID_DETALLE_ENSAYO_EQUIPO" class="java.lang.Integer"/>
+	<field name="FK_TIPO_EQUIPO_CLIENTE" class="java.lang.Integer"/>
+	<field name="CANTIDAD_EQUIPO" class="java.lang.Integer"/>
+	<field name="FK_USU_CREADOR" class="java.lang.Integer"/>
+	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
 	<detail>
 		<band height="588" splitType="Stretch">
 			<staticText>

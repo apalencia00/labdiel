@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Calzado_subreport1" language="groovy" pageWidth="864" pageHeight="802" columnWidth="864" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="88959000-896c-4222-b897-c5c549cb65c5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT "ID_EQUIPO", "COD_EQUIPO", "MARCA", "FK_TIPO_EQUIPO", "FECHA_REGISTRO",
+       "ESTADO", "SERIAL_INTERNO"
+  FROM labor."EQUIPO_INVENTARIO_EMPRESA" WHERE   substr("COD_EQUIPO", 1, 1) = 'C';]]>
+	</queryString>
+	<field name="ID_EQUIPO" class="java.lang.Long"/>
+	<field name="COD_EQUIPO" class="java.lang.String"/>
+	<field name="MARCA" class="java.lang.String"/>
+	<field name="FK_TIPO_EQUIPO" class="java.lang.Integer"/>
+	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
+	<field name="ESTADO" class="java.lang.String"/>
+	<field name="SERIAL_INTERNO" class="java.lang.String"/>
+	<group name="COD_EQUIPO">
+		<groupExpression><![CDATA[$F{COD_EQUIPO}]]></groupExpression>
+	</group>
+	<group name="FK_TIPO_EQUIPO">
+		<groupExpression><![CDATA[$F{FK_TIPO_EQUIPO}]]></groupExpression>
+	</group>
+	<group name="SERIAL_INTERNO">
+		<groupExpression><![CDATA[$F{SERIAL_INTERNO}]]></groupExpression>
+	</group>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="96" y="0" width="100" height="20" uuid="a4f45eb2-da93-4722-a831-e1012a1ac2b5"/>
+				<textFieldExpression><![CDATA[$F{COD_EQUIPO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="100" height="20" uuid="1831a75e-7778-4eca-a462-e98d390395fc"/>
+				<textFieldExpression><![CDATA[$F{SERIAL_INTERNO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="536" y="0" width="100" height="20" uuid="f38062cb-e583-4c84-b9ac-150a2be968f5"/>
+				<textFieldExpression><![CDATA[$F{ID_EQUIPO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

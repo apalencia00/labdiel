@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport3" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a2d64b84-25c5-43ad-8fcb-406fe46db8e1">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="54"/>
-	<property name="ireport.y" value="20"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
+	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select coti."NUM_COTIZACION", coti."ESTADO",dtc."VALOR_UNITARIO"::text,eq."DESCRIPCION" as elequipo, un."DESCRIPCION" as unidad, dtc."CANTIDAD",eq."ID_TIPO_EQUIPO"
 
@@ -21,9 +22,9 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 	<field name="unidad" class="java.lang.String"/>
 	<field name="CANTIDAD" class="java.lang.Integer"/>
 	<field name="ID_TIPO_EQUIPO" class="java.lang.Integer"/>
-	<title>
-		<band height="30" splitType="Stretch"/>
-	</title>
+	<variable name="VALOR_UNITARIO_1" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{VALOR_UNITARIO}]]></variableExpression>
+	</variable>
 	<pageHeader>
 		<band height="84">
 			<staticText>
@@ -114,29 +115,35 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CANTIDAD}]]></textFieldExpression>
 			</textField>
+			<textField>
+				<reportElement x="397" y="0" width="81" height="20" uuid="860e61bd-7b36-4508-8bf2-3a821bcdfcfb"/>
+				<textFieldExpression><![CDATA[$F{VALOR_UNITARIO}]]></textFieldExpression>
+			</textField>
 		</band>
-		<band height="50">
+	</detail>
+	<summary>
+		<band height="40">
 			<staticText>
-				<reportElement mode="Opaque" x="411" y="11" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
+				<reportElement mode="Opaque" x="397" y="11" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Iva 16%]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="411" y="22" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
+				<reportElement mode="Opaque" x="397" y="22" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total Servicio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="411" y="0" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
+				<reportElement mode="Opaque" x="397" y="0" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total]]></text>
 			</staticText>
 		</band>
-	</detail>
+	</summary>
 </jasperReport>

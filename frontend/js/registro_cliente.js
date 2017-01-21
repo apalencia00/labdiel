@@ -36,14 +36,14 @@ $( document ).ready(function() {
  			},
 			 success: function(json){
 
-			 		var obj = jQuery.parseJSON(json);
-					console.log(obj);
-					if(obj.success){ 
+			 		///var obj = jQuery.parseJSON(json);
+					//console.log(obj);
+					if(json.success){ 
 
 					BootstrapDialog.show({
 						title : 'Operacion Exitosa',
 						type : BootstrapDialog.TYPE_SUCCESS,
-						message: obj.root,
+						message: json.root,
 						buttons: [{
 							label: 'Aceptar',
 							action: function(dialogItself){
@@ -57,7 +57,7 @@ $( document ).ready(function() {
 				 	BootstrapDialog.show({
 				 		title : 'Error',
 						type : BootstrapDialog.TYPE_INFO,
-						message: obj.root,
+						message: json.root,
 						buttons: [{
 							label: 'Ok',
 							action: function(dialogItself){
@@ -72,7 +72,7 @@ $( document ).ready(function() {
 			error : function(event){
 
 					BootstrapDialog.show({
-						title : 'Operacion Exitosa',
+						title : 'Error en Peticion',
 						type : BootstrapDialog.TYPE_DANGER,
 						message: 'Error no se pudo realizar la solicitud',
 						buttons: [{

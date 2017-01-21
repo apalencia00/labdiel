@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mantas" language="groovy" pageWidth="864" pageHeight="842" columnWidth="824" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0a2187d4-18fd-416e-b868-e427a8b2c851">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mantas" language="groovy" pageWidth="824" pageHeight="802" columnWidth="824" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="0a2187d4-18fd-416e-b868-e427a8b2c851">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="360"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -51,16 +51,16 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND 
 	<detail>
 		<band height="280" splitType="Stretch">
 			<staticText>
-				<reportElement x="547" y="3" width="150" height="20" uuid="14e5be6c-803b-44ec-916d-bbc660e7446d"/>
+				<reportElement x="587" y="3" width="150" height="20" uuid="14e5be6c-803b-44ec-916d-bbc660e7446d"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[No de Informe/Report Number]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="11" y="128" width="160" height="40" uuid="32f4a926-cf12-4be8-ba0a-b1a44073afb9"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Fecha de Recepción del equipo/Date received
 
@@ -69,14 +69,14 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND 
 			<staticText>
 				<reportElement x="123" y="240" width="160" height="20" uuid="58f9c451-2dc7-4dd7-8c62-9f8eee0061c1"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Código interno/Internal Code]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="10" y="23" width="93" height="20" uuid="26e97099-dc51-4282-b0ba-8436da69630e"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Dirección/Address
 ]]></text>
@@ -84,7 +84,7 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND 
 			<staticText>
 				<reportElement x="10" y="77" width="161" height="34" uuid="60d98c82-45b2-4fdb-90ce-6da321a24d02"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Servicio Autorizado por Cliente
 Autorized service by customer]]></text>
@@ -92,14 +92,14 @@ Autorized service by customer]]></text>
 			<staticText>
 				<reportElement x="10" y="111" width="161" height="17" uuid="f9d87b7c-990d-4b2c-b4ee-958cb28aeaff"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Ciudad/City]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="547" y="101" width="150" height="41" uuid="215a76a6-3fb0-4e20-bf13-687267069387"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Estandar de referencia/Reference standard
 						]]></text>
@@ -107,7 +107,7 @@ Autorized service by customer]]></text>
 			<staticText>
 				<reportElement x="11" y="211" width="357" height="20" uuid="ae0d8443-fad5-4033-919a-31f733c016e2"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Información de equipo utilizado para ensayo/test equipment information
 ]]></text>
@@ -115,21 +115,21 @@ Autorized service by customer]]></text>
 			<staticText>
 				<reportElement x="547" y="84" width="150" height="13" uuid="bb0b4671-de71-4a36-9939-42fc8c21da5e"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Exactitud/Accuaracy (%)]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="398" y="240" width="135" height="20" uuid="6b73581d-3e51-4d64-a840-f872c7b43697"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[No. Certificado/Certificate Number]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="11" y="168" width="160" height="40" uuid="6b5d1164-98b4-44b1-9272-8c9de498a443"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Fecha de ensayo a equipo        /Date test
 				]]></text>
@@ -137,36 +137,36 @@ Autorized service by customer]]></text>
 			<staticText>
 				<reportElement x="10" y="3" width="93" height="20" uuid="f28d9371-0e68-4fa7-993d-c88918781c87"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Cliente/Customer
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="547" y="23" width="150" height="20" uuid="359832ee-1c7d-4583-b05c-40c7a6915667"/>
+				<reportElement x="587" y="23" width="150" height="20" uuid="359832ee-1c7d-4583-b05c-40c7a6915667"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Equipo /Equipment]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="566" y="240" width="112" height="20" uuid="f20d07bc-df78-43d4-b0eb-cf389d933309"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Trazado a/Traceable to					]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="304" y="240" width="62" height="20" uuid="20fef993-195f-448f-bca5-88438ef2006e"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Serie/Serial]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="547" y="43" width="150" height="41" uuid="dd3ef43a-4395-4669-b3a6-c408a5f5131c"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Unidad de medida para ensayo/ Unit test  measurement
 
@@ -174,16 +174,16 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="748" y="3" width="76" height="20" forecolor="#FF0000" uuid="a9ad2870-bdcd-4fd3-a042-f71933dd8e0a"/>
+				<reportElement x="788" y="3" width="76" height="20" forecolor="#FF0000" uuid="a9ad2870-bdcd-4fd3-a042-f71933dd8e0a"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NUM_COTIZACION}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="715" y="3" width="33" height="20" forecolor="#FF0000" uuid="fac5ea44-e347-443c-a030-a536f2dcb805"/>
+				<reportElement x="755" y="3" width="33" height="20" forecolor="#FF0000" uuid="fac5ea44-e347-443c-a030-a536f2dcb805"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[N°]]></text>
 			</staticText>
@@ -224,47 +224,48 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="153">
+		<band height="47"/>
+		<band height="137">
 			<staticText>
-				<reportElement x="228" y="36" width="252" height="20" uuid="1b75156c-c7f2-4968-92f3-567faf60262d"/>
+				<reportElement x="226" y="28" width="252" height="20" uuid="1b75156c-c7f2-4968-92f3-567faf60262d"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Humedad Relativa(%HR)/Relative Humidity(%RH)									]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="12" y="62" width="553" height="60" uuid="ac01ce47-eb08-4098-8a06-6dcfa0ac6d06"/>
+				<reportElement x="10" y="54" width="553" height="60" uuid="ac01ce47-eb08-4098-8a06-6dcfa0ac6d06"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Incertidumbre de medición/ Uncertaintiny Measurement
 La incertidumbre reportada representa la incertidumbre expandida a un nivel de  confianza de 95% utilizando un factor de cobertura k=2/ The reported uncertainties represent expanded uncertainties expressed at approximately the 95% confidence level using a coverage factor k=2."																								]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="11" y="36" width="159" height="20" uuid="0b5d2f53-cbf4-4f91-b149-e3a9e690c768"/>
+				<reportElement x="9" y="28" width="159" height="20" uuid="0b5d2f53-cbf4-4f91-b149-e3a9e690c768"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature (°C)			]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="11" y="10" width="199" height="20" uuid="85ea1bc9-2bba-475f-9675-080539726e83"/>
+				<reportElement x="9" y="2" width="199" height="20" uuid="85ea1bc9-2bba-475f-9675-080539726e83"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Condiciones ambientales/Enviromental conditio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="125" width="181" height="20" uuid="107e38dc-8078-4748-8530-3ad53de973f8"/>
+				<reportElement x="8" y="117" width="181" height="20" uuid="107e38dc-8078-4748-8530-3ad53de973f8"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
 			</staticText>
 		</band>
-		<band height="35">
+		<band height="50">
 			<subreport>
-				<reportElement x="0" y="0" width="824" height="35" uuid="eeea33d1-26a9-476b-9399-646bf344ec8c"/>
+				<reportElement x="0" y="5" width="824" height="45" uuid="eeea33d1-26a9-476b-9399-646bf344ec8c"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\SubInforme_Ensayo_Mantas.jasper"]]></subreportExpression>
 			</subreport>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico" language="groovy" pageWidth="595" pageHeight="842" columnWidth="277" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ec21f255-4bb1-4ab7-a063-8dca9a77192f">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico" language="groovy" pageWidth="555" pageHeight="802" columnWidth="277" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ec21f255-4bb1-4ab7-a063-8dca9a77192f">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -41,7 +41,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="44" splitType="Stretch">
+		<band height="46" splitType="Stretch">
 			<subreport>
 				<reportElement x="0" y="4" width="555" height="40" uuid="4fabf21b-7410-49d1-9446-bcde770b75a2"/>
 				<subreportParameter name="tiempo">
@@ -51,47 +51,59 @@
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\Users\\Windows 10\\Documents\\NetBeansProjects\\LabDielectrico\\reportes\\cotizacion_labdielectrico_subreport0.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["..\\reportes\\cotizacion_labdielectrico_subreport0.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="41">
 			<subreport>
 				<reportElement x="0" y="2" width="555" height="37" uuid="4cf4c017-6ffb-4ce7-926d-7ba49e84f42e"/>
+				<subreportParameter name="tiempo">
+					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
+				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\Users\\Windows 10\\Documents\\NetBeansProjects\\LabDielectrico\\reportes\\cotizacion_labdielectrico_subreport1.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["..\\reportes\\cotizacion_labdielectrico_subreport1.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="39">
+		<band height="41">
 			<subreport>
-				<reportElement x="0" y="1" width="555" height="37" uuid="282d30b8-d014-42bd-92c2-7d01cc3de18d"/>
+				<reportElement x="0" y="2" width="555" height="37" uuid="282d30b8-d014-42bd-92c2-7d01cc3de18d"/>
 				<subreportParameter name="tiempo">
-					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
+					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\Users\\Windows 10\\Documents\\NetBeansProjects\\LabDielectrico\\reportes\\cotizacion_labdielectrico_subreport2.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["..\\reportes\\cotizacion_labdielectrico_subreport2.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="42">
 			<subreport>
 				<reportElement x="0" y="0" width="555" height="39" uuid="ad0562e0-2a9f-4f36-91b2-71a8593f4973"/>
+				<subreportParameter name="tiempo">
+					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
+				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\Users\\Windows 10\\Documents\\NetBeansProjects\\LabDielectrico\\reportes\\cotizacion_labdielectrico_subreport3.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["..\\reportes\\cotizacion_labdielectrico_subreport3.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="43">
 			<subreport>
 				<reportElement x="0" y="0" width="555" height="43" uuid="bf0f2e32-4374-408b-9137-fc6f546b0da9"/>
+				<subreportParameter name="tiempo">
+					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\Users\\Windows 10\\Documents\\NetBeansProjects\\LabDielectrico\\reportes\\cotizacion_labdielectrico_subreport4v1.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["..\\reportes\\cotizacion_labdielectrico_subreport4v1.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>
