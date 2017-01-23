@@ -39,11 +39,11 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
     <script type="text/javascript">
-      
+
       function callPaget(page){
 
         if(page != ""){
-          
+
           window.frames[0].location.href = page;
         }
       }
@@ -52,7 +52,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
         var r = confirm("¿Desea cerrar sesión?");
         if (r == true) {
-          
+
          $.ajax({ url: "../back-end/Source/CerrarSession.php", 
            type: "GET",
            contentType: "application/json",
@@ -60,7 +60,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
            data: {}, 
 
            success: function(json){
-             
+
              var res = json.success;                     
              
              if(res){
@@ -86,123 +86,65 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 </head>
 <body onload="javascript:callPaget('<?php echo "Estadistico.php?" ?>')" >
 
-  <nav class="navbar navbar-inverse">
+ <div class="container">
+
+  <!-- Static navbar -->
+  <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dw-s2" aria-expanded="false">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-
-        
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-
-            <li><a href="#" onClick="callPaget('Estadistico.php')">Estadistico</a></li>
-
-            <?php            
-
-            $mod = new Modulo();
-            
-            foreach ($mod->getModule() as $v) {  ?>
-            <li class="dropdown">
-             <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo $v['ID_MODULE'] ?>"> <?php echo $v['MODULOS'] ?> <span class="caret"></span></a>
-             <ul class="dropdown-menu">
-
-              <?php
-              
-              foreach ($mod->getSubMenu($us,$v['ID_MODULE']) as $s) {  ?>
-              <li><a href="#" onclick="callPaget('<?php echo $s['mod'] ?>')" ><?php echo $s['MODULO']  ?></a></li> 
-
-              <?php } ?>
-
-
-              
-
-            </ul>
-          </li>
-
-          <?php }  ?>
-
-
-          
-
-
-          <ul class="nav navbar-nav navbar-right">
-            
-            <li><a href="#" onclick="CerrarSesion();" ><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
-          </ul>
-        </div>
-
-
+        <a class="navbar-brand" href="#">Labs.| Dielectrico</a>
       </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+         <li><a href="#" onClick="callPaget('Estadistico.php')">BurnCharter</a></li>
+
+         <?php            
+
+         $mod = new Modulo();
+
+         foreach ($mod->getModule() as $v) {  ?>
+         <li class="dropdown">
+           <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo $v['ID_MODULE'] ?>"> <?php echo $v['MODULOS'] ?> <span class="caret"></span></a>
+           <ul class="dropdown-menu">
+
+            <?php
+
+            foreach ($mod->getSubMenu($us,$v['ID_MODULE']) as $s) {  ?>
+            <li><a href="#" onclick="callPaget('<?php echo $s['mod'] ?>')" ><?php echo $s['MODULO']  ?></a></li> 
+
+            <?php } ?>
+
+
+          </ul>
+          </li>
+          <?php }  ?>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
     </nav>
 
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="jumbotron">
 
-    <div id="dw-s2" class="bmd-layout-drawer bg-faded">
-      <header>
-        <!--     <a class="navbar-brand">Title</a> -->
-      </header>
-      <ul class="list-group">
-        <a class="list-group-item">Link 1</a>
-        <a class="list-group-item">Link 2</a>
-        <a class="list-group-item">Link 3</a>
-      </ul>
-    </div>
-
-
-    
-    <div class="container">
-      
-
-
-
+      <iframe frameborder="0" align="top" scrolling="no" width="100%" height="1000px" target="_parent" name="servicio" id="servicio" ></iframe>   
 
     </div>
 
-    <iframe frameborder="0" align="top" scrolling="no" width="100%" height="1000px" target="_parent" name="servicio" id="servicio" ></iframe>   
-
-  </body>
-
-  <script>
-    $(function(){
-      $('.sw-aside').affix({
-        offset: {
-      top: $('.sw-header').outerHeight() - 45 // margin
-    }
-  })
-    })
-  </script>
-
-  <script>
-
-    $(function(){
-
-  $("#actionmenu").click( function(){ //3042457504 -- cra74 n 81 92
-
-    var className = $("#actionmenu").attr('class');
-
-    if(className == 'dropdown dropdown-notifications' ){
-
-      $("#actionmenu").removeClass('dropdown dropdown-notifications');
-      $("#actionmenu").addClass('dropdown dropdown-notifications open');
-
-    }else{
-
-      $("#actionmenu").removeClass('dropdown dropdown-notifications open');
-      $("#actionmenu").addClass('dropdown dropdown-notifications');
+  </div> <!-- /container -->
 
 
-    }
 
-  });
+</body>
 
-});
-
-
-</script>
 
 </html>
 
