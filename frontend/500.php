@@ -61,6 +61,19 @@ body{
 	color:rgb(114, 173, 38);
 }	
 </style>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-notifications.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
+
+    <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="js/bootstrap-toggle.min.js"></script>
+
+
 </head>
 
 <script type="text/javascript">
