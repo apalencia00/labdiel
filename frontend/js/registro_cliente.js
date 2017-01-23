@@ -36,8 +36,8 @@ $( document ).ready(function() {
  			},
 			 success: function(json){
 
-			 		var obj = jQuery.parseJSON(json);
-					console.log(obj);
+			 		//var obj = jQuery.parseJSON(json);
+					//console.log(obj);
 					if(json.success){ 
 
 					BootstrapDialog.show({
