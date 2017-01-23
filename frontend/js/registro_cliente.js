@@ -31,19 +31,22 @@ $( document ).ready(function() {
 			
 			beforeSend: function(){
 
-				//submitButton.prop('disabled', true);
+				waitingDialog.show('Cargando.. Por favor espere');setTimeout(function () {waitingDialog.hide();}, 2000)
+
      			
  			},
 			 success: function(json){
 
-			 		//var obj = jQuery.parseJSON(json);
-					//console.log(obj);
-					if(json.success){ 
+			 	try{ 
+
+			 		var obj = jQuery.parseJSON(json);
+					console.log(obj.success);
+					if(obj.success){ 
 
 					BootstrapDialog.show({
 						title : 'Operacion Exitosa',
 						type : BootstrapDialog.TYPE_SUCCESS,
-						message: json.root,
+						message: obj.root,
 						buttons: [{
 							label: 'Aceptar',
 							action: function(dialogItself){
@@ -57,7 +60,7 @@ $( document ).ready(function() {
 				 	BootstrapDialog.show({
 				 		title : 'Error',
 						type : BootstrapDialog.TYPE_DANGER,
-						message: json.root,
+						message: obj.root,
 						buttons: [{
 							label: 'Ok',
 							action: function(dialogItself){
@@ -67,6 +70,8 @@ $( document ).ready(function() {
 					});  
 
 				 }
+
+				  }catch(e){}
    // ......
 			},
 			error : function(event){
