@@ -16,7 +16,7 @@ $("#genped").click(function(){
 	//alert("WUAPEAA");
 	 var men = prompt("Tiempo estimado de ensayo para ejecucion del servicio");
 
-  var win = window.open('http://localhost:8080/LabDielectrico/webresources/cotizacion/imprimirCotizacion?ncotic='+$("#nocotic").val()+"&tiempo="+men, '_blank');
+  var win = window.open('http://ec2-35-154-118-56.ap-south-1.compute.amazonaws.com:8080/LabDielectrico/webresources/cotizacion/imprimirCotizacion?ncotic='+$("#nocotic").val()+"&tiempo="+men, '_blank');
   win.focus();
 
 
@@ -26,7 +26,7 @@ $("#genped").click(function(){
 $("#generarpdf").click(function(){
 	
     
-var win = window.open('http://localhost:8080/LabDielectrico/webresources/recibo_inout/imprimirCotizacion?ncotic='+$("#nocotic").val()+"id_cliente="+$("#listCliente").val(), '_blank');
+var win = window.open('http://ec2-35-154-118-56.ap-south-1.compute.amazonaws.com:8080/LabDielectrico/webresources/recibo_inout/imprimirCotizacion?ncotic='+$("#nocotic").val()+"id_cliente="+$("#listCliente").val(), '_blank');
 win.focus();
 
 
