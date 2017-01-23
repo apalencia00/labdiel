@@ -102,7 +102,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-         <li><a href="#" onClick="callPaget('Estadistico.php')">BurnCharter</a></li>
+         <li><a href="#" onClick="callPaget('Estadistico.php')">Estadistico</a></li>
 
          <?php            
 
@@ -125,7 +125,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           </li>
           <?php }  ?>
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="./" onclick="CerrarSesion();" >Salir <span class="sr-only">(current)</span></a></li>
             
           </ul>
         </div><!--/.nav-collapse -->
