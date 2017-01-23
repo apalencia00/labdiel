@@ -40,13 +40,13 @@ $( document ).ready(function() {
 			 	try{ 
 
 			 		var obj = jQuery.parseJSON(json);
-					console.log(json.success);
-					if(json.success){ 
+					console.log(obj.success);
+					if(obj.success){ 
 
 					BootstrapDialog.show({
 						title : 'Operacion Exitosa',
 						type : BootstrapDialog.TYPE_SUCCESS,
-						message: json.root,
+						message: obj.root,
 						buttons: [{
 							label: 'Aceptar',
 							action: function(dialogItself){
@@ -60,7 +60,7 @@ $( document ).ready(function() {
 				 	BootstrapDialog.show({
 				 		title : 'Error',
 						type : BootstrapDialog.TYPE_DANGER,
-						message: json.root,
+						message: obj.root,
 						buttons: [{
 							label: 'Ok',
 							action: function(dialogItself){
