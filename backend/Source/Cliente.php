@@ -46,6 +46,9 @@ if(isset($_GET['method'])){
 
         $params = array("tipoid" => (int)$tipo, "documento" => $doc, "nombre" => $nombre, "tel_cliente" => $tele, "cod_ciudad" => (int)$ciudad, "cod_depto" => 1,  "contacto" => $contacto, "email" => $email, "direccion" => $direccion, "fecha_registro" => date('Y-m-d'), "usu_creador" => (int)$usuario, "apellido" => $apellido ) ;
 
+
+
+
         registrarCliente($params,$usuario);
 
         break;
@@ -150,6 +153,8 @@ function registrarCliente($params,$us)
    $curl = curl_init();
   
       curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/registroCliente?" .http_build_query($params) );
+
+      var_dump("http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/registroCliente?" .http_build_query($params) );
     
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
