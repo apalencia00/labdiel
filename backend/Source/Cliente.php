@@ -44,12 +44,12 @@ if(isset($_GET['method'])){
         
         $direccion = $_GET['direccion'];
 
-        $params = array("tipoid" => (int)$tipo, "documento" => $doc, "nombre" => $nombre, "tel_cliente" => $tele, "cod_ciudad" => (int)$ciudad, "cod_depto" => 1,  "contacto" => $contacto, "email" => $email, "direccion" => $direccion, "fecha_registro" => date('Y-m-d'), "usu_creador" => (int)$usuario, "apellido" => $apellido ) ;
+        $params = array("tipoid" => $tipo, "documento" => $doc, "nombre" => $nombre, "tel_cliente" => $tele, "cod_ciudad" => $ciudad, "cod_depto" => 1,  "contacto" => $contacto, "email" => $email, "direccion" => $direccion, "fecha_registro" => date('Y-m-d'), "usu_creador" => $usuario, "apellido" => $apellido ) ;
 
 
 
 
-        registrarCliente($params,$usuario);
+        registrarCliente($params);
 
         break;
 
@@ -146,7 +146,7 @@ function getCiudad(){
 
 }
 
-function registrarCliente($params,$us)
+function registrarCliente($params)
 
 {
 
@@ -154,7 +154,7 @@ function registrarCliente($params,$us)
   
       curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/registroCliente?" .http_build_query($params) );
 
-      var_dump("http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/registroCliente?" .http_build_query($params) );
+      #var_dump("http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cliente/registroCliente?" .http_build_query($params) );
     
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
