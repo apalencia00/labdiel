@@ -148,7 +148,7 @@ $(document).ready(function(){
 
 	 	console.log("aqui bacano :" + cotic);
 
-  var win = window.open('http://localhost:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoGuante?cotic=COTIC-'+cotic, '_blank');
+  var win = window.open('http://35.154.118.56:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoGuante?cotic=COTIC-'+cotic, '_blank');
   win.focus();
 
 
@@ -158,7 +158,7 @@ $(document).ready(function(){
 
       	var cotic = $("#form #ncotic").val();
 
-  var win = window.open('http://localhost:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoMantas?cotic=COTIC-'+cotic, '_blank');
+  var win = window.open('http://35.154.118.56:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoMantas?cotic=COTIC-'+cotic, '_blank');
   win.focus();
 
 
@@ -168,7 +168,7 @@ $(document).ready(function(){
 
       	var cotic = $("#form #ncotic").val();
 
-  var win = window.open('http://localhost:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoCalzado?cotic=COTIC-'+cotic, '_blank');
+  var win = window.open('http://35.154.118.56:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoCalzado?cotic=COTIC-'+cotic, '_blank');
   win.focus();
 
 
@@ -178,7 +178,7 @@ $(document).ready(function(){
 
       	var cotic = $("#form #ncotic").val();
 
-  var win = window.open('http://localhost:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoPuestaTierra?cotic=COTIC-'+cotic, '_blank');
+  var win = window.open('http://35.154.118.56:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoPuestaTierra?cotic=COTIC-'+cotic, '_blank');
   win.focus();
 
 
@@ -190,7 +190,7 @@ $(document).ready(function(){
 
       	var cotic = $("#form #ncotic").val();
 
-  var win = window.open('http://localhost:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoGuante?cotic=COTIC-'+cotic, '_blank');
+  var win = window.open('http://35.154.118.56:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoGuante?cotic=COTIC-'+cotic, '_blank');
   win.focus();
 
 
@@ -202,7 +202,7 @@ $(document).ready(function(){
 
       	var cotic = $("#form #ncotic").val();
 
-  var win = window.open('http://localhost:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoGuante?cotic=COTIC-'+cotic, '_blank');
+  var win = window.open('http://35.154.118.56:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoGuante?cotic=COTIC-'+cotic, '_blank');
   win.focus();
 
 

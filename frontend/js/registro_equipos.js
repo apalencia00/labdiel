@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 				 	BootstrapDialog.show({
 				 		title : 'Error',
-						type : BootstrapDialog.TYPE_INFO,
+						type : BootstrapDialog.TYPE_DANGER,
 						message: obj.mensaje,
 						buttons: [{
 							label: 'Ok',
@@ -67,7 +67,7 @@ $(document).ready(function(){
 				error : function(event){
 
 					BootstrapDialog.show({
-						title : 'Operacion Exitosa',
+						title : 'Error en Peticion',
 						type : BootstrapDialog.TYPE_DANGER,
 						message: 'Error no se pudo realizar la solicitud',
 						buttons: [{
@@ -317,7 +317,7 @@ $(document).ready(function(){
 				error : function(event){
 
 					BootstrapDialog.show({
-						title : 'Error Grave',
+						title : 'Error en Peticion',
 						type : BootstrapDialog.TYPE_DANGER,
 						message: 'Error no se pudo realizar la solicitud',
 						buttons: [{

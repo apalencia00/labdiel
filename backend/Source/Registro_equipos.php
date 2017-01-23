@@ -64,7 +64,7 @@ addParam( $params );
 
                    case 'addPrecio':
                        # code...
-                   $paramst = array("tipoe" => $_GET['tipoe'], "precio" => $_GET['precio']);
+                   $paramst = array("tipoeq" => $_GET['tipoe'], "precio" => $_GET['precio']);
                    addPrecio($paramst);
 
                        break;

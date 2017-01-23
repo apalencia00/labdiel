@@ -44,6 +44,7 @@
       var perforacion           = $("#perforacion").val();
       var obs_perforacion       = $("#obs_perforacion").val();
       var inspeccion            = $("#inspeccion").val();
+      var obs_inspeccion        = $("#obs_inspeccion").val();
       
       
       $.ajax({
@@ -52,9 +53,7 @@
         type: 'GET',
         contentType : "application/json",
         dataType : "json",
-        data : {"method" : 'addsecondEnsayoLinears', 'cotizacion' : cotic, 'serial' : serial, 
-
-
+        data : {"method" : 'addsecondEnsayoLinears', 'cotizacion' : cotic, 'serial' : serial, "tipo" : tipo, "aceite" : aceite, "obs8" : obs8, "abrasion" : abrasion, "obs9" : obs9, "degradacion" : degradacion, "obs10" : obs10, "polvo" : polvo, "obs11" : obs11, "quemadura" : quemadura, "obs_quemadura" : obs_quemadura, "perforacion" : perforacion, "obs_perforacion" : obs_perforacion, "inspeccion" : inspeccion, "obs_inspeccion" : obs_inspeccion
       },
 
       success: function(json)

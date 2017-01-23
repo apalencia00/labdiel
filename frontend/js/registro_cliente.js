@@ -36,8 +36,8 @@ $( document ).ready(function() {
  			},
 			 success: function(json){
 
-			 		///var obj = jQuery.parseJSON(json);
-					//console.log(obj);
+			 		var obj = jQuery.parseJSON(json);
+					console.log(obj);
 					if(json.success){ 
 
 					BootstrapDialog.show({
@@ -56,7 +56,7 @@ $( document ).ready(function() {
 
 				 	BootstrapDialog.show({
 				 		title : 'Error',
-						type : BootstrapDialog.TYPE_INFO,
+						type : BootstrapDialog.TYPE_DANGER,
 						message: json.root,
 						buttons: [{
 							label: 'Ok',

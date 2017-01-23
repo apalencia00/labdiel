@@ -44,7 +44,7 @@ if(isset($_GET['method'])){
         
         $direccion = $_GET['direccion'];
 
-        $params = array("tipoid" => (int)$tipo, "documento" => $doc, "nombre" => $nombre, "apellido" => $apellido, "tel_cliente" => $tele, "cod_ciudad" => (int)$ciudad, "cod_depto" => (int)1,  "contacto" => $contacto, "email" => $email, "direccion" => $direccion, "fecha_registro" => date('Y-m-d'), "usu_creador" => (int)$usuario);
+        $params = array("tipoid" => (int)$tipo, "documento" => $doc, "nombre" => $nombre, "tel_cliente" => $tele, "cod_ciudad" => (int)$ciudad, "cod_depto" => 1,  "contacto" => $contacto, "email" => $email, "direccion" => $direccion, "fecha_registro" => date('Y-m-d'), "usu_creador" => (int)$usuario, "apellido" => $apellido ) ;
 
         registrarCliente($params,$usuario);
 
