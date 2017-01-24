@@ -70,7 +70,7 @@
 			<subreport>
 				<reportElement x="0" y="2" width="555" height="37" uuid="282d30b8-d014-42bd-92c2-7d01cc3de18d"/>
 				<subreportParameter name="tiempo">
-					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
+					<subreportParameterExpression><![CDATA[$P{tiempo}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
