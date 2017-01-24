@@ -8,6 +8,7 @@
 	</parameter>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
+	<parameter name="subreport" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select * from labor."COTIZACION" where "ESTADO" = 'A'  AND "NUM_COTIZACION" = $P{ncotic}  ;]]>
 	</queryString>
@@ -43,7 +44,7 @@
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["..\\reportes\\cotizacion_labdielectrico_subreport0.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{subreport} + "cotizacion_labdielectrico_subreport0.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="41">
