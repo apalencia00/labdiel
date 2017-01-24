@@ -5,6 +5,7 @@
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
+	<parameter name="subreport" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT coti."NUM_COTIZACION", coti."FK_CLIENTE", coti."FK_USUARIO",
        coti."FK_EMPLEADO", coti."FECHA_REGISTRO", coti."ESTADO", coti."US_MODIFICA", coti."FECHA_MODIFICACION",tpe."DESCRIPCION",

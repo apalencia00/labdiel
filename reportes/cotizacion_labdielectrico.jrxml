@@ -51,7 +51,7 @@
 					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA[$P{subreport}+ " reportes\\cotizacion_labdielectrico_subreport0.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{subreport}+ "/cotizacion_labdielectrico_subreport0.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="41">
@@ -63,8 +63,11 @@
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="subreport">
+					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
+				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["..\\reportes\\cotizacion_labdielectrico_subreport1.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{subreport} + "/cotizacion_labdielectrico_subreport1.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="41">
