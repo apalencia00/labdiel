@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="824" pageHeight="802" columnWidth="824" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="1.2100000000000002"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="308"/>
+	<property name="ireport.y" value="364"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT coti."ID_COTIZACION", coti."NUM_COTIZACION", coti."FK_CLIENTE", coti."FK_USUARIO",
@@ -280,7 +280,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 			<subreport>
 				<reportElement x="2" y="0" width="822" height="51" uuid="c21385a6-a224-4bc9-8105-cc70cfc045db"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\SubInforme_Ensayo_Guantes.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/SubInforme_Ensayo_Guantes.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>
