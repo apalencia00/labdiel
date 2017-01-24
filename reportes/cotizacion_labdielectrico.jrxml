@@ -31,6 +31,10 @@
 				</textElement>
 				<text><![CDATA[NO VIGENTE]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="52" y="54" width="100" height="20" uuid="697117f5-615b-4951-93dd-cf6884115041"/>
+				<textFieldExpression><![CDATA[$P{subreport}]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 	<detail>
@@ -47,7 +51,7 @@
 					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["..\\reportes\\cotizacion_labdielectrico_subreport0.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["..\\reportes\\SubInforme_Ensayo_Pertigas2.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="41">
