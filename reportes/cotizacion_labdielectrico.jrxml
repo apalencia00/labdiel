@@ -23,14 +23,6 @@
 	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
 	<title>
 		<band height="74" splitType="Stretch">
-			<image>
-				<reportElement x="0" y="0" width="97" height="66" uuid="827e0077-b93a-4b13-a4be-43a518614c64"/>
-				<imageExpression><![CDATA[$P{REPORT_CONTEXT} + "reportes/7.jpg"]]></imageExpression>
-			</image>
-			<image>
-				<reportElement x="457" y="2" width="98" height="63" uuid="7f366474-981b-4f4c-9fa0-061c43db048a"/>
-				<imageExpression><![CDATA[$P{REPORT_CONTEXT} + "reportes/onac.jpg"]]></imageExpression>
-			</image>
 			<staticText>
 				<reportElement x="27" y="0" width="481" height="74" forecolor="#FF0000" uuid="d0094c31-4a77-4482-958d-7bf57438e94b"/>
 				<textElement textAlignment="Center">
@@ -51,9 +43,7 @@
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA[$P{REPORT_CONTEXT} + "reportes\\cotizacion_labdielectrico_subreport0.jasper"
-
-]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{REPORT_CONTEXT} + "reportes\\cotizacion_labdielectrico_subreport0.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="41">
