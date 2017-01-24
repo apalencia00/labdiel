@@ -44,7 +44,7 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND 
 		<band height="64" splitType="Stretch">
 			<image>
 				<reportElement x="0" y="0" width="75" height="52" uuid="a4af9c4f-0df7-48d2-86e7-b100c8f85d90"/>
-				<imageExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\7.jpg"]]></imageExpression>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
 			</image>
 		</band>
 	</title>
