@@ -63,7 +63,7 @@
 					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA[$P{subreport} + "/cotizacion_labdielectrico_subreport1.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport1.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="41">
@@ -76,7 +76,7 @@
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["..\\reportes\\cotizacion_labdielectrico_subreport2.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport2.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="42">
@@ -89,7 +89,7 @@
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["..\\reportes\\cotizacion_labdielectrico_subreport3.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport3.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="43">
@@ -102,7 +102,7 @@
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["..\\reportes\\cotizacion_labdielectrico_subreport4v1.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport4v1.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>
