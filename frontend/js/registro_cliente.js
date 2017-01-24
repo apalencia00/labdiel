@@ -37,6 +37,8 @@ $( document ).ready(function() {
  			},
 			 success: function(json){
 
+			 	console.log(json);
+
 			 	try{ 
 
 			 		var obj = jQuery.parseJSON(json);
