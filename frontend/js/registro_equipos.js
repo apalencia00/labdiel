@@ -203,19 +203,15 @@ $(document).ready(function(){
 			try{
 		var $select = $('#tipo'); 
 
-		var obj = jQuery.parseJSON( json);
+		var obj = jQuery.parseJSON(json);
 		 
 		 console.log(obj);
 
-		if(obj != null){
-
-			for (var i = 0 ;obj.length - 1; i++) {
+				for (var i = 0 ;obj.length - 1; i++) {
 				
 				$select.append('<option value=' + obj[i]['tipo_equipo'] + '>' + obj[i]['descripcion'] + '</option>'); 	
 
 			}
-
-		}
 
 		}catch(e){}
 
