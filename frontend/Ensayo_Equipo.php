@@ -80,9 +80,6 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       
       <fieldset class="the-fieldset">
 
-        <legend class="the-legend">Detalle Cliente</legend>
-
-
         <div class="row">
 
          <div class="form-group">
@@ -172,7 +169,17 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     </div>
 
-    <div class="form-group">
+   
+
+
+
+  </div>
+
+
+
+  <div class="row" >
+
+   <div class="form-group">
 
       <label class="control-label col-sm-4"> Lugar de ejecución   </label>
 
@@ -186,14 +193,6 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
     </div>
-
-
-
-  </div>
-
-
-
-  <div class="row" >
 
     
 
