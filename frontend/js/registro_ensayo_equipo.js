@@ -344,7 +344,7 @@ $(document).ready(function(){
 	 			console.log(arr);
 	 			$("#idrevision").val(arr[0].id_revision_ensayo);
 
-	 			 }
+	 			 }catch(e){}
 	 		}
 	 	});
 
