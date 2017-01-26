@@ -258,13 +258,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 </div>
 
-
-</div>
-
-
-<div class="row">
-
-  <div class="form-group">
+<div class="form-group">
     <div class="col-sm-2 col-sm-offset-1">
       <button type="submit" id="adddetalleensayo"  class="btn btn-primary">Agregar</button>
     </div>
@@ -276,6 +270,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       <button type="submit" class="btn btn-danger">PDF</button>
     </div>
   </div>
+
 
 </div>
 
