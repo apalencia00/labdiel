@@ -206,7 +206,7 @@ $(document).ready(function(){
 
 		var obj = jQuery.parseJSON(json);
 		 
-		 console.log(obj);
+		 console.log(obj[0]);
 		 console.log("Dale Andres");
 
 				for (var i = 0 ;obj.length - 1; i++) {
