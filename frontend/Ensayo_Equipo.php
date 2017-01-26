@@ -129,6 +129,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
         <label for="numdoc" class="control-label col-sm-4">Telefono</label>
         <div class="col-sm-2 col-xs-5">
           <input type="text"  id="tele" placeholder="Telefono Contacto" class="form-control col-lg-4" autofocus>
+          <span class="help-block"></span>
 
         </div>
 
@@ -198,7 +199,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       <label><input type="radio" name="ejecucion" value="1">Ejecucion Externa</label>
     </div>
 
-
+<span class="help-block"></span>
 
   </div>
 
