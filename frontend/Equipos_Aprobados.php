@@ -127,7 +127,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           <tbody>
             <tr>
               <td colspan="5">
-                <div id="act_table" style="width: 100%; height: 200px; overflow-y: scroll;" > </div></td>
+                <div id="act_table" style="width: 100%; height: 100px; overflow-y: scroll;" > </div></td>
               </tr>
             </tbody>
           </table>
