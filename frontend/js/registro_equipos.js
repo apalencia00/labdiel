@@ -200,7 +200,7 @@ $(document).ready(function(){
 		success: function(json)
 		{
 			
-			try{
+	
 		var $select = $('#tipo'); 
 
 		var obj = jQuery.parseJSON(json);
@@ -213,11 +213,8 @@ $(document).ready(function(){
 
 			}
 
-		
+			 }
 
-		}catch(e){}
-
-		}
 	});
 
 
