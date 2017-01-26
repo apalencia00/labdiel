@@ -11,28 +11,28 @@ $(document).ready(function(){
 		var proc_eq    = $("#procedimiento").val();
 
 
-			$.ajax({
-		
-				url: '../backend/Source/Registro_equipos.php',
-				type: 'GET',
-				contentType : "application/json",
-				dataType : "json",
-				data : {"method" : 'addParam' , "desc" : desc, "clase" : claseeq, "unidad" : unidad, "proc_eq" : proc_eq }
-				,
-				beforeSend: function(){
+		$.ajax({
+			
+			url: '../backend/Source/Registro_equipos.php',
+			type: 'GET',
+			contentType : "application/json",
+			dataType : "json",
+			data : {"method" : 'addParam' , "desc" : desc, "clase" : claseeq, "unidad" : unidad, "proc_eq" : proc_eq }
+			,
+			beforeSend: function(){
 
 				waitingDialog.show('Cargando.. Por favor espere');setTimeout(function () {waitingDialog.hide();}, 2000);
 
 				//submit.prop('disabled', true);
-     			
- 			},
-				success: function(json)
-				{
-			
-           			var obj = jQuery.parseJSON(json);
-					console.log(obj);
+				
+			},
+			success: function(json)
+			{
+				
+				var obj = jQuery.parseJSON(json);
+				console.log(obj);
 
-					if(obj.success){ 
+				if(obj.success){ 
 
 					BootstrapDialog.show({
 						title : 'Operacion Exitosa',
@@ -46,10 +46,10 @@ $(document).ready(function(){
 						} ]
 					});    
 
-				 }else{
+				}else{
 
-				 	BootstrapDialog.show({
-				 		title : 'Error',
+					BootstrapDialog.show({
+						title : 'Error',
 						type : BootstrapDialog.TYPE_DANGER,
 						message: obj.mensaje,
 						buttons: [{
@@ -60,26 +60,26 @@ $(document).ready(function(){
 						} ]
 					});  
 
-				 }
+				}
    // ......   
 
-				},
-				error : function(event){
+},
+error : function(event){
 
-					BootstrapDialog.show({
-						title : 'Error en Peticion',
-						type : BootstrapDialog.TYPE_DANGER,
-						message: 'Error no se pudo realizar la solicitud',
-						buttons: [{
-							label: 'Ok',
-							action: function(dialogItself){
-								dialogItself.close();
-							}
-						} ]
-					}); 
+	BootstrapDialog.show({
+		title : 'Error en Peticion',
+		type : BootstrapDialog.TYPE_DANGER,
+		message: 'Error no se pudo realizar la solicitud',
+		buttons: [{
+			label: 'Ok',
+			action: function(dialogItself){
+				dialogItself.close();
+			}
+		} ]
+	}); 
 
-				}
-			});
+}
+});
 		
 		
 
@@ -94,19 +94,19 @@ $(document).ready(function(){
 		var tipo    	      = $("#tipo").val();
 
 		$.ajax({
-		
-				url: '../backend/Source/Registro_equipos.php',
-				type: 'GET',
-				contentType : "application/json",
-				dataType : "json",
-				data : {"method" : 'add' , "cod_equipo" : cod_equipo, "serial_interno" : serial_interno, "marca" : marca, "tipo" : tipo },
-				success: function(json)
-				{
+			
+			url: '../backend/Source/Registro_equipos.php',
+			type: 'GET',
+			contentType : "application/json",
+			dataType : "json",
+			data : {"method" : 'add' , "cod_equipo" : cod_equipo, "serial_interno" : serial_interno, "marca" : marca, "tipo" : tipo },
+			success: function(json)
+			{
 
-					console.log(json);
-					var obj = jQuery.parseJSON(json);
-					console.log(obj);
-					if(obj.success){ 
+				console.log(json);
+				var obj = jQuery.parseJSON(json);
+				console.log(obj);
+				if(obj.success){ 
 
 					BootstrapDialog.show({
 						title : 'Operacion Exitosa',
@@ -120,10 +120,10 @@ $(document).ready(function(){
 						} ]
 					});    
 
-				 }else{
+				}else{
 
-				 	BootstrapDialog.show({
-				 		title : 'Error',
+					BootstrapDialog.show({
+						title : 'Error',
 						type : BootstrapDialog.TYPE_INFO,
 						message: obj.mensaje,
 						buttons: [{
@@ -134,25 +134,25 @@ $(document).ready(function(){
 						} ]
 					});  
 
-				 }
-
-				},
-				error : function(event){
-
-					BootstrapDialog.show({
-						title : 'Operacion Exitosa',
-						type : BootstrapDialog.TYPE_DANGER,
-						message: 'Error no se pudo realizar la solicitud',
-						buttons: [{
-							label: 'Ok',
-							action: function(dialogItself){
-								dialogItself.close();
-							}
-						} ]
-					}); 
-
 				}
-			});
+
+			},
+			error : function(event){
+
+				BootstrapDialog.show({
+					title : 'Operacion Exitosa',
+					type : BootstrapDialog.TYPE_DANGER,
+					message: 'Error no se pudo realizar la solicitud',
+					buttons: [{
+						label: 'Ok',
+						action: function(dialogItself){
+							dialogItself.close();
+						}
+					} ]
+				}); 
+
+			}
+		});
 
 	});
 
@@ -168,23 +168,23 @@ $(document).ready(function(){
 		{
 			
 			try{
-		var $select = $('#claseeq'); 
+				var $select = $('#claseeq'); 
 
-		var obj = jQuery.parseJSON( json);
-		 
-		 console.log(obj);
-
-		if(obj != null){
-
-			for (var i = 0 ;obj.length - 1; i++) {
+				var obj = jQuery.parseJSON( json);
 				
-				$select.append('<option value=' + obj[i]['id_clase'] + '>' + obj[i]['descripcion'] + '</option>'); 	
+				console.log(obj);
 
-			}
+				if(obj != null){
 
-		}
+					for (var i = 0 ;obj.length - 1; i++) {
+						
+						$select.append('<option value=' + obj[i]['id_clase'] + '>' + obj[i]['descripcion'] + '</option>'); 	
 
-		}catch(e){}
+					}
+
+				}
+
+			}catch(e){}
 
 		}
 	});
@@ -200,14 +200,12 @@ $(document).ready(function(){
 		success: function(json)
 		{
 			
-	
-		var select = $('select#tipo'); 
+			
+			var select = $('select#tipo'); 
 
-		var obj = jQuery.parseJSON(json);
-		 
-		 console.log(obj);
-
-		 document.getElementById("precio").value = obj;
+			var obj = jQuery.parseJSON(json);
+			
+			console.log(obj);
 
 			for (var i = 0 ;obj.length - 1; i++) {
 				
@@ -215,7 +213,7 @@ $(document).ready(function(){
 
 			}
 
-			 }
+		}
 
 	});
 
@@ -229,25 +227,25 @@ $(document).ready(function(){
 		data : {"method" : 'getProcedimiento'},
 		success: function(json)
 		{
+			
+			try{
+				var $select = $('#procedimiento'); 
+
+				var obj = jQuery.parseJSON(json);
 				
-				try{
-		var $select = $('#procedimiento'); 
+				console.log(obj);
 
-		var obj = jQuery.parseJSON(json);
-		 
-		 console.log(obj);
+				if(obj != null){
 
-		if(obj != null){
+					for (var i = 0 ;obj.length - 1; i++) {
+						
+						$select.append('<option value=' + obj[i]['id_procedimiento'] + '>' + obj[i]['documento'] + '</option>'); 	
 
-			for (var i = 0 ;obj.length - 1; i++) {
-				
-				$select.append('<option value=' + obj[i]['id_procedimiento'] + '>' + obj[i]['documento'] + '</option>'); 	
+					}
 
-			}
+				}
 
-		}
-
-		}catch(e){}
+			}catch(e){}
 
 
 		}
@@ -259,27 +257,27 @@ $(document).ready(function(){
 		var precio      = $("#precio").val();
 
 		$.ajax({
-		
-				url: '../backend/Source/Registro_equipos.php',
-				type: 'GET',
-				contentType : "application/json",
-				dataType : "json",
-				data : {"method" : 'addPrecio' , "tipoe" : tipo_equipo, "precio" : precio }
-				,
-				beforeSend: function(){
+			
+			url: '../backend/Source/Registro_equipos.php',
+			type: 'GET',
+			contentType : "application/json",
+			dataType : "json",
+			data : {"method" : 'addPrecio' , "tipoe" : tipo_equipo, "precio" : precio }
+			,
+			beforeSend: function(){
 
 				waitingDialog.show('Cargando.. Por favor espere');setTimeout(function () {waitingDialog.hide();}, 2000);
 
 				//submit.prop('disabled', true);
-     			
- 			},
-				success: function(json)
-				{
-			
-           			var obj = jQuery.parseJSON(json);
-					console.log(obj);
+				
+			},
+			success: function(json)
+			{
+				
+				var obj = jQuery.parseJSON(json);
+				console.log(obj);
 
-					if(obj.success){ 
+				if(obj.success){ 
 
 					BootstrapDialog.show({
 						title : 'Operacion Exitosa',
@@ -293,10 +291,10 @@ $(document).ready(function(){
 						} ]
 					});    
 
-				 }else{
+				}else{
 
-				 	BootstrapDialog.show({
-				 		title : 'Error',
+					BootstrapDialog.show({
+						title : 'Error',
 						type : BootstrapDialog.TYPE_INFO,
 						message: obj.mensaje,
 						buttons: [{
@@ -307,26 +305,26 @@ $(document).ready(function(){
 						} ]
 					});  
 
-				 }
+				}
    // ......   
 
-				},
-				error : function(event){
+},
+error : function(event){
 
-					BootstrapDialog.show({
-						title : 'Error en Peticion',
-						type : BootstrapDialog.TYPE_DANGER,
-						message: 'Error no se pudo realizar la solicitud',
-						buttons: [{
-							label: 'Ok',
-							action: function(dialogItself){
-								dialogItself.close();
-							}
-						} ]
-					}); 
+	BootstrapDialog.show({
+		title : 'Error en Peticion',
+		type : BootstrapDialog.TYPE_DANGER,
+		message: 'Error no se pudo realizar la solicitud',
+		buttons: [{
+			label: 'Ok',
+			action: function(dialogItself){
+				dialogItself.close();
+			}
+		} ]
+	}); 
 
-				}
-			});
+}
+});
 
 
 
