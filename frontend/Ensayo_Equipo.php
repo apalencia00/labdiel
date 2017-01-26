@@ -50,37 +50,37 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
         <fieldset  >
           
           <legend>Ensayo Equipo</legend>
-       
+          
 
-        <div class="row">
+          <div class="row">
+
+            <div class="form-group">
+              <label for="tipodoc" class="control-label col-sm-2">Cliente</label>
+              <div class="col-sm-2 col-xs-5">
+
+               <select id="listCliente" class="form-control">
+                <option>Seleccione </option>
+              </select>
+            </div>
+
+          </div>
 
           <div class="form-group">
-            <label for="tipodoc" class="control-label col-sm-2">Cliente</label>
-            <div class="col-sm-2 col-xs-5">
 
-             <select id="listCliente" class="form-control">
-              <option>Seleccione </option>
-            </select>
+
+            <label for="numdoc" class="control-label col-sm-4">Documento</label>
+            <div class="col-sm-8 col-xs-5">
+              <input type="text" id="docu" placeholder="Documento/NIT" class="form-control col-lg-4" autofocus>
+
+            </div>
+          </div>
+
+          <div class="form-group">
+
+            <input type="hidden" id="idrevision" >
           </div>
 
         </div>
-
-        <div class="form-group">
-
-
-          <label for="numdoc" class="control-label col-sm-4">Documento</label>
-          <div class="col-sm-8 col-xs-5">
-            <input type="text" id="docu" placeholder="Documento/NIT" class="form-control col-lg-4" autofocus>
-
-          </div>
-        </div>
-
-        <div class="form-group">
-
-          <input type="hidden" id="idrevision" >
-        </div>
-
-      </div>
 
         <div class="row">
 
@@ -171,7 +171,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     </div>
 
-   
+    
 
 
 
@@ -183,34 +183,32 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
    <div class="form-group">
 
-      <label class="control-label col-sm-4"> Ejecucion </label>
+    <div class="radio col-sm-8 col-xs-5">
+      <label><input type="radio" name="ejecucion" value="0" checked="checked">Ejecucion Laboratorio</label>
+    </div>
 
-      <div class="radio col-sm-8 col-xs-5">
-        <label><input type="radio" name="ejecucion" value="0" checked="checked">Laboratorio</label>
-      </div>
-
-      <div class="radio col-sm-8 col-xs-5">
-        <label><input type="radio" name="ejecucion" value="1">Externa</label>
-      </div>
+    <div class="radio col-sm-8 col-xs-5">
+      <label><input type="radio" name="ejecucion" value="1">Ejecucion Externa</label>
+    </div>
 
 
+
+  </div>
+
+  
+
+  <div class="form-group">
+
+
+    <label for="numdoc" class="control-label col-sm-4">Revision</label>
+    <div class="col-sm-8 col-xs-5">
+      <input type="text"  id="direrev" placeholder="" disabled="disabled" class="form-control col-lg-6" autofocus>
 
     </div>
 
-    
+  </div>
 
-    <div class="form-group">
-
-
-      <label for="numdoc" class="control-label col-sm-4">Revision</label>
-      <div class="col-sm-8 col-xs-5">
-        <input type="text"  id="direrev" placeholder="" disabled="disabled" class="form-control col-lg-6" autofocus>
-
-      </div>
-
-    </div>
-
-    </div>
+</div>
 
 
 <div class="row">
@@ -224,18 +222,18 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 </div>
 
 
-  <div class="row">
+<div class="row">
 
-   <legend>Detalle Ensayo Ensayar</legend>
+ <legend>Detalle Ensayo Ensayar</legend>
 
-   <div class="form-group">
-    <label for="tipodoc" class="control-label col-sm-2">Clase Equipo</label>
-    <div class="col-sm-2">
+ <div class="form-group">
+  <label for="tipodoc" class="control-label col-sm-2">Clase Equipo</label>
+  <div class="col-sm-2">
 
-     <select id="tipoequipo" class="form-control">
-      <option>Seleccione Equipo</option>
-    </select>
-  </div>
+   <select id="tipoequipo" class="form-control">
+    <option>Seleccione Equipo</option>
+  </select>
+</div>
 
 </div>
 
@@ -257,7 +255,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 <div class="row">
 
   <div class="form-group">
-  <div class="col-sm-2 col-sm-offset-1">
+    <div class="col-sm-2 col-sm-offset-1">
       <button type="submit" id="adddetalleensayo"  class="btn btn-primary">Agregar</button>
     </div>
   </div>
@@ -295,7 +293,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     </tbody>
   </table>
 
- </fieldset>
+</fieldset>
 
 </form> <!-- /form -->
 
