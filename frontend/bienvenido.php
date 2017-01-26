@@ -132,15 +132,16 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       </div><!--/.container-fluid -->
     </nav>
 
-    <!-- Main component for a primary marketing message or call to 
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="container">
 
       <iframe frameborder="0" align="top" scrolling="no" width="100%" height="600px" target="_parent" name="servicio" id="servicio" ></iframe>   
 
- 
+    </div>
 
   </div> <!-- /container -->
 
-    <footer class="footer">
+  <footer class="footer">
       <div class="container">
         <p class="text-muted">@Developed Andres Palencia</p>
       </div>
