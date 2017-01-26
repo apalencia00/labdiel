@@ -46,7 +46,11 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     <div class="container">
 
       <form class="form form-inline" role="form" id="form">
-        <h2>Ensayo Equipos</h2>
+        
+        <fieldset  >
+          
+          <legend>Ensayo Equipo</legend>
+       
 
         <div class="row">
 
@@ -297,7 +301,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     </tbody>
   </table>
 
-
+ </fieldset>
 
 </form> <!-- /form -->
 
