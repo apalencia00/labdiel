@@ -60,6 +60,7 @@ addParam( $params );
                    # code...
 
                  gettipo();
+                 
                    break;
 
                    case 'addPrecio':

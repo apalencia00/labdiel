@@ -101,7 +101,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           <div class="form-group">
 
 
-            <label for="numdoc" class="control-label col-sm-4">Tipo Equipo</label>
+            <label for="tip" class="control-label col-sm-4">Tipo Equipo</label>
             <div class="col-sm-8">
               
               <select id="tipo" class="form-control">

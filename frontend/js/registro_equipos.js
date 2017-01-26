@@ -200,12 +200,14 @@ $(document).ready(function(){
 		success: function(json)
 		{
 			
-			try{
+		try{
+
 		var $select = $('#tipo'); 
 
 		var obj = jQuery.parseJSON(json);
 		 
 		 console.log(obj);
+		 console.log("Dale Andres");
 
 				for (var i = 0 ;obj.length - 1; i++) {
 				
@@ -213,7 +215,7 @@ $(document).ready(function(){
 
 			}
 
-		}catch(e){}
+		}catch(e){ }
 
 		}
 	});
