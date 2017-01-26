@@ -89,7 +89,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
           <label for="numdoc" class="control-label col-sm-4">Fecha Solicitud</label>
-          <div class="col-sm-4 col-xs-5">
+          <div class="col-sm-2 col-xs-5">
             <input type="text" id="fecha" placeholder="" value="<?php echo date('Y-m-d') ?>" class="form-control col-lg-4" autofocus readonly="" >
             <span class="help-block"></span>
           </div>
@@ -100,7 +100,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
           <label for="numdoc" class="control-label col-sm-4">Documento/NIT</label>
-          <div class="col-sm-4 col-xs-5">
+          <div class="col-sm-2 col-xs-5">
             <input type="text" id="docu" placeholder="" class="form-control col-lg-4" autofocus readonly="" >
             <span class="help-block"></span>
           </div>
@@ -110,7 +110,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
           <label for="numdoc" class="control-label col-sm-4">Cliente</label>
-          <div class="col-sm-4 col-xs-5">
+          <div class="col-sm-2 col-xs-5">
             <input type="text"  id="nombre" placeholder="" class="form-control col-lg-4" autofocus>
           </div>
 
