@@ -201,9 +201,9 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     <div class="form-group">
 
 
-      <label for="numdoc" class="control-label col-sm-4">Direccion Revision</label>
-      <div class="col-sm-2 col-xs-5">
-        <input type="text"  id="direrev" placeholder="" disabled="disabled" class="form-control col-lg-4" autofocus>
+      <label for="numdoc" class="control-label col-sm-4">Revision</label>
+      <div class="col-sm-8 col-xs-5">
+        <input type="text"  id="direrev" placeholder="" disabled="disabled" class="form-control col-lg-6" autofocus>
 
       </div>
 
