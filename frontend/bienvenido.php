@@ -40,68 +40,73 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     <style type="text/css">
       
-      .embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-}
-.embed-container iframe {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-    </style>
-
-
-    <script type="text/javascript">
-
-      function callPaget(page){
-
-        if(page != ""){
-
-          window.frames[0].location.href = page;
-        }
-      }
-
-      function CerrarSesion(){
-
-        var r = confirm("¿Desea cerrar sesión?");
-        if (r == true) {
-
-         $.ajax({ url: "../back-end/Source/CerrarSession.php", 
-           type: "GET",
-           contentType: "application/json",
-           dataType: 'json',
-           data: {}, 
-
-           success: function(json){
-
-             var res = json.success;                     
-             
-             if(res){
-              window.location = '../index.php';
-            }else{
-              alert(json.root[0].mensaje);
-            }
-
-          }
-
-        });
-
-       } else {
-        alert("Error al intentar cerrar sesión");
-      }
-
-      
-
+     .embed-container {
+      position: relative;
+      height: 0;
+      overflow: hidden;
+    }
+    .16by9 {
+      padding-bottom: 56.25%;
+    }
+    .4by3 {
+      padding-bottom: 75%;
+    }
+    .embed-container iframe {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
 
-  </script>
+
+  </style>
+
+
+  <script type="text/javascript">
+
+    function callPaget(page){
+
+      if(page != ""){
+
+        window.frames[0].location.href = page;
+      }
+    }
+
+    function CerrarSesion(){
+
+      var r = confirm("¿Desea cerrar sesión?");
+      if (r == true) {
+
+       $.ajax({ url: "../back-end/Source/CerrarSession.php", 
+         type: "GET",
+         contentType: "application/json",
+         dataType: 'json',
+         data: {}, 
+
+         success: function(json){
+
+           var res = json.success;                     
+           
+           if(res){
+            window.location = '../index.php';
+          }else{
+            alert(json.root[0].mensaje);
+          }
+
+        }
+
+      });
+
+     } else {
+      alert("Error al intentar cerrar sesión");
+    }
+
+    
+
+  }
+
+</script>
 
 </head>
 <body onload="javascript:callPaget('<?php echo "Estadistico.php?" ?>')" >
@@ -142,30 +147,30 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
           </ul>
-          </li>
-          <?php }  ?>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="./" onclick="CerrarSesion();" >Salir <span class="sr-only">(current)</span></a></li>
-            
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div><!--/.container-fluid -->
-    </nav>
+        </li>
+        <?php }  ?>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="./" onclick="CerrarSesion();" >Salir <span class="sr-only">(current)</span></a></li>
+          
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
 
-    <!-- Main component for a primary marketing message or call to action -->
-    <div class="embed-container">
+  <!-- Main component for a primary marketing message or call to action -->
+  <div class="embed-container">
 
-      <iframe  frameborder="0"  name="servicio" id="servicio" allowfullscreen ></iframe>   
+    <iframe  frameborder="0" scrolling="no"  name="servicio" id="servicio" allowfullscreen ></iframe>   
 
-    </div>
+  </div>
 
-  </div> <!-- /container -->
+</div> <!-- /container -->
 
-  <footer class="footer">
-      <div class="container">
-        <p class="text-muted">@Developed Andres Palencia</p>
-      </div>
-    </footer>
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">@Developed Andres Palencia</p>
+  </div>
+</footer>
 
 
 </body>
