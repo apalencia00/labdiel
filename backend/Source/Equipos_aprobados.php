@@ -5,10 +5,10 @@ error_reporting(E_ALL);
 require_once(realpath($_SERVER["DOCUMENT_ROOT"]) . '/labdiel/backend/ConexionBD/Conexion.php');
 //require_once(realpath($_SERVER["DOCUMENT_ROOT"]) . '/labdiel/vendor/fergusean/nusoap/lib/nusoap.php');
 
-  if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    } 
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 
 $usuario = 0;
 
@@ -16,7 +16,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
   $usuario = $_SESSION['admon_mod'][0]['nusuario'];
 
-if(isset($_GET['method'])){
+  if(isset($_GET['method'])){
 
 
     $method = $_GET['method'];
@@ -37,48 +37,48 @@ if(isset($_GET['method'])){
         $ncoti = $_GET['cotizacion'];
 
         getEquiposCotizados($ncoti);
-            break;
+        break;
 
-            case 'getCotizacionCliente':
+        case 'getCotizacionCliente':
                 # code...
 
-            getCotizacionCliente($_GET['cliente']);
-                break;
+        getCotizacionCliente($_GET['cliente']);
+        break;
 
-                case 'getCotizacion':
+        case 'getCotizacion':
 
-                $numbcoti = $_GET['numbcoti'];
+        $numbcoti = $_GET['numbcoti'];
 
-                getCotizacion($numbcoti);
+        getCotizacion($numbcoti);
 
-                    break;
+        break;
 
 
-                case 'aprobarCantidadEquipo':
+        case 'aprobarCantidadEquipo':
                     # code...
 
-                $params = array("equipo" => $_GET['tipoe'], "cantidad" => $_GET['cantidad'] , "fk_cotizacion" => $_GET['cotinum'] , "fk_usuario" => $usuario);
+        $params = array("equipo" => $_GET['tipoe'], "cantidad" => $_GET['cantidad'] , "fk_cotizacion" => $_GET['cotinum'] , "fk_usuario" => $usuario);
 
-                aprobarCantidadEquipo($params);
-                    break;
+        aprobarCantidadEquipo($params);
+        break;
 
-                    case 'getCantidadAprobados':
+        case 'getCantidadAprobados':
                         # code...
 
-                    getCantidadAprobados();
-                        break;
+        getCantidadAprobados();
+        break;
 
-                        case 'regdetalle_serial':
+        case 'regdetalle_serial':
                             # code...
 
-                        $cantidad = (int)$_GET['cant_equi'];
+        $cantidad = (int)$_GET['cant_equi'];
                         #var_dump($cantidad);
-                        
-                        $eeee = $_GET['desc_equipo'];
+        
+                        /*$eeee = $_GET['desc_equipo'];
 
                         #var_dump($eeee);
 
-                        $div = explode("-", $eeee);
+                        $div = explode("-", $eeee);*/
                         
                         #var_dump($div[0]);
 
@@ -88,7 +88,7 @@ if(isset($_GET['method'])){
 
                         $id_equipo = $_GET['cod_equipos'];
 
-                    
+                        
                         $sql ="SELECT \"COD_EQUIPO\", \"FK_UNIDAD\" FROM labor.\"EQUIPO_INVENTARIO_EMPRESA\", labor.\"TIPO_EQUIPO\" t WHERE \"FK_TIPO_EQUIPO\" = $id_equipo and t.\"ID_TIPO_EQUIPO\" = \"FK_TIPO_EQUIPO\"  order by \"COD_EQUIPO\" desc limit 1";
 
                         $res = $conectarbd->executeView($sql);
@@ -99,115 +99,115 @@ if(isset($_GET['method'])){
                         $get_number = 0;
                         if($unidad_eq == 2){
 
-                        $division_num_eq = $division_cod[1];
+                            $division_num_eq = $division_cod[1];
                         # var_dump($division_cod); exit();
 
                         //$get_number = intval(preg_replace('/[^0-9]+/', '', $division_num_eq),10);
-                        
-                        $pos = strpos($division_num_eq, 'B');
+                            
+                            $pos = strpos($division_num_eq, 'B');
 
-                       if($pos){ 
+                            if($pos){ 
 
-                        for ($i = 0; $i <= $cantidad - 1 ; $i ++) { 
-                                
-                           $get_number++;
-                           $cod_serial_equipo = $division_cod[0] . '-' . $get_number . 'A' ; 
+                                for ($i = 0; $i <= $cantidad - 1 ; $i ++) { 
+                                    
+                                 $get_number++;
+                                 $cod_serial_equipo = $division_cod[0] . '-' . $get_number . 'A' ; 
 
-                            $params = array("codigo_equipo" => $_GET['cod_equipos'], "serial" => $cod_serial_equipo , "fk_cotizacion" => $_GET['cotizacion']);
+                                 $params = array("codigo_equipo" => $_GET['cod_equipos'], "serial" => $cod_serial_equipo , "fk_cotizacion" => $_GET['cotizacion']);
 
-                            regdetalle_serial($params);
+                                 regdetalle_serial($params);
 
 
-                        }
+                             }
 
-                    }
+                         }
 
                      }else{
 
-                             for ($i = 0; $i <= $cantidad - 1 ; $i ++) { 
-                                
-                           $get_number++;
-                           $cod_serial_equipo = $division_cod[0] . '-' . $get_number . 'A' ; 
+                       for ($i = 0; $i <= $cantidad - 1 ; $i ++) { 
+                        
+                         $get_number++;
+                         $cod_serial_equipo = $division_cod[0] . '-' . $get_number . 'A' ; 
 
-                            $params = array("codigo_equipo" => $_GET['cod_equipos'], "serial" => $cod_serial_equipo , "fk_cotizacion" => $_GET['cotizacion']);
+                         $params = array("codigo_equipo" => $_GET['cod_equipos'], "serial" => $cod_serial_equipo , "fk_cotizacion" => $_GET['cotizacion']);
 
-                            regdetalle_serial($params);
-
-
-                        }
+                         regdetalle_serial($params);
 
 
                      }
 
-                            break;
+
+                 }
+
+                 break;
 
 
-                            case 'getEquiposAprobados':
+                 case 'getEquiposAprobados':
                                 # code...
 
-                            getEquiposAprobados($_GET['cotizacion']);
+                 getEquiposAprobados($_GET['cotizacion']);
 
-                                break;
+                 break;
 
-                        }
+             }
 
-                                         
-        
-    
+             
+             
+             
 
-}else{
-    echo "la variable no existe";
-}
+         }else{
+            echo "la variable no existe";
+        }
 
-}
+    }
 
 
-function getEquiposCotizados($coti){
+    function getEquiposCotizados($coti){
 
-$param = array("ncotic" => $coti);
+        $param = array("ncotic" => $coti);
 
- $curl = curl_init();
+        $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/getEquiposCotizados?".http_build_query($param));
+        curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/getEquiposCotizados?".http_build_query($param));
 
 //var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/getEquiposCotizados?ncotic=".$coti);
 
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
-$result = curl_exec($curl);
+        $result = curl_exec($curl);
 
-if(!$result){
+        if(!$result){
 
-    die('Error: "' . curl_error($curl). '" - Code: ');
-}else{
-    echo json_encode($result);
-}
+            die('Error: "' . curl_error($curl). '" - Code: ');
+        }else{
+            echo json_encode($result);
+        }
 
-curl_close($curl);
+        curl_close($curl);
 
 
-}
+    }
 
 # 3012042992
-function getCotizacionCliente($cliente){
+    function getCotizacionCliente($cliente){
 
 
- $curl = curl_init();
+       $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/listarCotizacionesCliente?id_cliente=".$cliente);
+       curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/listarCotizacionesCliente?id_cliente=".$cliente);
 
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+       curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
-$result = curl_exec($curl);
+       $result = curl_exec($curl);
 
-if(!$result){
+       if(!$result){
 
-    die('Error: "' . curl_error($curl). '" - Code: ');
-}else{
-    echo json_encode($result);
-}
+        die('Error: "' . curl_error($curl). '" - Code: ');
+    }else{
+        echo json_encode($result);
+    }
 
-curl_close($curl);
+    curl_close($curl);
 
 
 }
@@ -216,25 +216,25 @@ function aprobarCantidadEquipo($p){
 
 
 
-     $curl = curl_init();
-    
-    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/aprobacionEquiposLab?". http_build_query($p));
+   $curl = curl_init();
+   
+   curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/aprobacionEquiposLab?". http_build_query($p));
 
     #var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/aprobacionEquiposLab?". http_build_query($p));
+   
+   curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+   
+   $result = curl_exec($curl);
+   
+   if(!$result){
     
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-    
-    $result = curl_exec($curl);
-    
-    if(!$result){
-    
-        die('Error: "' . curl_error($curl). '" - Code: ');
-    }else{
-        echo json_encode($result);
-    }
-    
-    curl_close($curl);
-    
+    die('Error: "' . curl_error($curl). '" - Code: ');
+}else{
+    echo json_encode($result);
+}
+
+curl_close($curl);
+
 
 }
 
@@ -242,16 +242,16 @@ function regdetalle_serial($param){
 
 
 
-     $curl = curl_init();
-    
-    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
-    
+   $curl = curl_init();
+   
+   curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
+   
     #var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
-    
-    curl_exec($curl);
-    
-    curl_close($curl);
-    
+   
+   curl_exec($curl);
+   
+   curl_close($curl);
+   
 
 
 }
@@ -259,15 +259,15 @@ function regdetalle_serial($param){
 function getCotizacion($numbcoti){
 
 
- $curl = curl_init();
+   $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/listarCotizacionesBycotic?id_cotizacion=".$numbcoti);
+   curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/listarCotizacionesBycotic?id_cotizacion=".$numbcoti);
 
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+   curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
-$result = curl_exec($curl);
+   $result = curl_exec($curl);
 
-if(!$result){
+   if(!$result){
 
     die('Error: "' . curl_error($curl). '" - Code: ');
 }else{
@@ -282,25 +282,25 @@ curl_close($curl);
 
 function getEquiposAprobados($params3){
 
-$curl = curl_init();
-  
-  curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/getEquiposAprobados?fk_cotizacion=".$params3);
+    $curl = curl_init();
+    
+    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/getEquiposAprobados?fk_cotizacion=".$params3);
 
 
   #var_dump("http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/getEquiposAprobados?fk_cotizacion=".$params3);
-  
-  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-  
-  $result = curl_exec($curl);
-  
-  if(!$result){
+    
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    
+    $result = curl_exec($curl);
+    
+    if(!$result){
 
-    die('Error: "' . curl_error($curl). '" - Code: ');
-  }else{
-    echo json_encode($result);
-  }
-  
-  curl_close($curl);
+        die('Error: "' . curl_error($curl). '" - Code: ');
+    }else{
+        echo json_encode($result);
+    }
+    
+    curl_close($curl);
 
 
 

@@ -265,7 +265,7 @@ $(document).ready(function(){
 		$("#myModal #generarTodo").click(function(){
 
 			var codigoe    =  $("#myModal #cod_equipo").val();
-			var textoequipo=  $("#myModal #cod_equipo option:selected").text();
+			//var textoequipo=  $("#myModal #cod_equipo option:selected").text();
 			var cantidad   =  $("#myModal #cantidad").val();
 			var cotizacion =  $("#myModal #cotizacion").val();
 
@@ -277,7 +277,7 @@ $(document).ready(function(){
 				type: 'GET',
 				contentType : "application/json",
 				dataType : "json",
-				data : {'method' : 'regdetalle_serial','cod_equipos' : codigoe, 'desc_equipo' : textoequipo, 'cant_equi' : cantidad, 'cotizacion' : cotizacion},
+				data : {'method' : 'regdetalle_serial','cod_equipos' : codigoe, 'cant_equi' : cantidad, 'cotizacion' : cotizacion},
 				success: function(data)
 				{
 

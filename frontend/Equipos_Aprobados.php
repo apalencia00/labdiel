@@ -190,7 +190,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
                 <label for="numdoc" class="control-label col-sm-4"> Codigo Equipo</label>
                 <div class="col-sm-6">
                   
-                 <input type="text" name="cod_equipo" id="cod_equipo">
+                 <input class="form-control" type="text" readonly="readonly" name="cod_equipo" id="cod_equipo">
 
                   </div>
               </div>
