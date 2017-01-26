@@ -38,27 +38,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     <script src="js/bootstrap-toggle.min.js"></script>
 
 
-    <style type="text/css">
-      
-      .embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-}
-.embed-container iframe {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-    </style>
-
-
-    <script type="text/javascript">
+       <script type="text/javascript">
 
       function callPaget(page){
 
@@ -153,7 +133,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     </nav>
 
     <!-- Main component for a primary marketing message or call to action -->
-    <div class="embed-container">
+    <div class="container">
 
       <iframe  frameborder="0" scrolling="no" height="150%" width="100%"  name="servicio" id="servicio" allowfullscreen ></iframe>   
 

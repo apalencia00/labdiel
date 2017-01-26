@@ -200,7 +200,7 @@ error : function(event){
 		success: function(json)
 		{
 			
-			
+			try{ 
 			var selecttipo = $('select#tipo'); 
 
 			var obj = jQuery.parseJSON(json);
@@ -213,7 +213,9 @@ error : function(event){
 				console.log(obj[i]['tipo_equipo']);
 			}
 
-		}
+		}catch(e){}
+
+		 }
 
 	});
 
