@@ -201,7 +201,7 @@ $(document).ready(function(){
 		{
 			
 	
-		var select = $('#tipo'); 
+		var select = $('select#tipo'); 
 
 		var obj = jQuery.parseJSON(json);
 		 
