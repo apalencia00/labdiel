@@ -135,17 +135,21 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     <!-- Main component for a primary marketing message or call to action -->
     <div class="container">
 
-      <iframe  frameborder="0" scrolling="no" height="900px" width="100%"  name="servicio" id="servicio" allowfullscreen ></iframe>   
+      <iframe  frameborder="0" scrolling="no" height="800px" width="100%"  name="servicio" id="servicio" allowfullscreen ></iframe>   
 
     </div>
 
   </div> <!-- /container -->
-
-  <footer class="footer">
-      <div class="container">
-        <p class="text-muted">@Developed Andres Palencia</p>
-      </div>
-    </footer>
+ <div class="footer-bottom">
+        <div class="container">
+            <div class="pull-left"> Developed © Andres Palencia.</div>
+            <div class="pull-right">
+                <ul>
+                   
+                </ul> 
+            </div>
+        </div>
+    </div> <!--/.footer-bottom--> 
 
 
 </body>
