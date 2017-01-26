@@ -181,7 +181,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
    <div class="form-group">
 
-      <label class="control-label col-sm-4"> Lugar de ejecución   </label>
+      <label class="control-label col-sm-4"> Ejecucion </label>
 
       <div class="radio col-sm-4 col-xs-5">
         <label><input type="radio" name="ejecucion" value="0" checked="checked">Laboratorio</label>
@@ -247,7 +247,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
   <label for="cant" class="control-label col-sm-4">Cantidad</label>
   <div class="col-sm-2" >
 
-    <input type="text" name="cantidad" id="cantidad">
+    <input class="form-control" type="text" name="cantidad" id="cantidad">
 
   </div>
 
