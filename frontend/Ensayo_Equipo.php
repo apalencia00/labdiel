@@ -123,7 +123,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
        <div class="form-group">
 
 
-        <label for="numdoc" class="control-label col-sm-4">Tel. Contacto</label>
+        <label for="numdoc" class="control-label col-sm-4">Telefono</label>
         <div class="col-sm-4 col-xs-5">
           <input type="text"  id="tele" placeholder="Telefono Contacto" class="form-control col-lg-4" autofocus>
 
@@ -132,12 +132,23 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       </div>
 
       <div class="form-group">
-        <label for="tipodoc" class="control-label col-sm-4">Seleccione Ciudad</label>
+        <label for="tipodoc" class="control-label col-sm-4">Ciudad</label>
         <div class="col-sm-4 col-xs-5">
 
          <select id="ciudad" class="form-control">
           <option>Seleccione </option>
         </select>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+
+
+      <label for="numdoc" class="control-label col-sm-4">Email</label>
+      <div class="col-sm-4 col-xs-5">
+        <input type="text"  id="email" placeholder="example@example.co" class="form-control col-lg-4" autofocus>
+
       </div>
 
     </div>
@@ -148,16 +159,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
   <div class="row">
 
-    <div class="form-group">
-
-
-      <label for="numdoc" class="control-label col-sm-4">Correo Electronico</label>
-      <div class="col-sm-4 col-xs-5">
-        <input type="text"  id="email" placeholder="example@example.co" class="form-control col-lg-4" autofocus>
-
-      </div>
-
-    </div>
+    
 
     <div class="form-group">
 
@@ -169,14 +171,6 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       </div>
 
     </div>
-
-
-
-  </div>
-
-
-
-  <div class="row" >
 
     <div class="form-group">
 
@@ -193,6 +187,16 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     </div>
 
+
+
+  </div>
+
+
+
+  <div class="row" >
+
+    
+
     <div class="form-group">
 
 
@@ -204,11 +208,11 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     </div>
 
-  </br>
+    </div>
+
 
 </fieldset>
 
-</br>
 
 <div class="row">
 
