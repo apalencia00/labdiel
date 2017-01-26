@@ -100,7 +100,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
                         if($unidad_eq == 2){
 
                             $division_num_eq = $division_cod[1];
-                        # var_dump($division_cod); exit();
+                            var_dump($division_cod); exit();
 
                         //$get_number = intval(preg_replace('/[^0-9]+/', '', $division_num_eq),10);
                             
