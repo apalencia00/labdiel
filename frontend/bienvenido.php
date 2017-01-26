@@ -283,7 +283,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
   </div> <!-- /container -->
  <div class="footer-bottom">
         <div class="container">
-            <div class="pull-left"> Developed © Andres Palencia.</div>
+            <div class="pull-left"> Developed © Andres Palencia Florez.</div>
             <div class="pull-right">
                 <ul>
 
@@ -291,7 +291,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
                         <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
                         <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
                         <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
-                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                       
                         <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
                     </ul>
                    

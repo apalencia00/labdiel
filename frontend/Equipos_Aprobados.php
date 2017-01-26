@@ -198,7 +198,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
               <div class="form-group">
                 <label for="papallido" class="col-sm-3 control-label">Cantidad</label>
                 <div class="col-sm-9">
-                   <select id="cantidad" class="form-group"> 
+                   <select class="form-control" id="cantidad" class="form-group"> 
 
                   <option value="1">1</option>
                   <option value="2">2</option>
