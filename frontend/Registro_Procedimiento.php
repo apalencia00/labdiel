@@ -29,7 +29,8 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
       <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-notifications.css">
-      <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
       <script src="bootstrap/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="js/registro_equipos.js" ></script>
       <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
