@@ -46,11 +46,11 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     <div class="container">
 
       <form class="form form-inline" role="form" id="form">
-        
+
         <fieldset  >
-          
+
           <legend>Ensayo Equipo</legend>
-          
+
 
           <div class="row">
 
@@ -61,6 +61,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
                <select id="listCliente" class="form-control">
                 <option>Seleccione </option>
               </select>
+               <span class="help-block"></span>
             </div>
 
           </div>
@@ -73,12 +74,14 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
               <input type="text" id="docu" placeholder="Documento/NIT" class="form-control col-lg-4" autofocus>
 
             </div>
+             <span class="help-block"></span>
           </div>
 
           <div class="form-group">
-
+            <div class="col-sm-8 col-xs-5">
             <input type="hidden" id="idrevision" >
-          </div>
+            </div>
+            </div>
 
         </div>
 
@@ -111,6 +114,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           <label for="numdoc" class="control-label col-sm-4">Cliente</label>
           <div class="col-sm-2 col-xs-5">
             <input type="text"  id="nombre" placeholder="" class="form-control col-lg-4" autofocus>
+             <span class="help-block"></span>
           </div>
 
         </div>
@@ -158,7 +162,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
   <div class="row">
 
-    
+
 
     <div class="form-group">
 
@@ -171,7 +175,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     </div>
 
-    
+
 
 
 
@@ -195,7 +199,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
   </div>
 
-  
+
 
   <div class="form-group">
 
