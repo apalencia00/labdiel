@@ -150,7 +150,8 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
       <label for="numdoc" class="control-label col-sm-4">Email</label>
       <div class="col-sm-2 col-xs-5">
-        <input type="text"  id="email" placeholder="example@example.co" class="form-control col-lg-4" autofocus>
+        <input type="text"  id="email" placeholder="example@example.co" class="form-control col-lg-4" autofocus> 
+        <span class="help-block"></span>
 
       </div>
 
@@ -170,6 +171,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       <label for="numdoc" class="control-label col-sm-4">Direccion</label>
       <div class="col-sm-2 col-xs-5">
         <input type="text"  id="dire" placeholder="" class="form-control col-lg-4" autofocus>
+         <span class="help-block"></span>
 
       </div>
 
