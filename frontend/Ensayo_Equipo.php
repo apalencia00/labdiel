@@ -138,9 +138,10 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
         <label for="tipodoc" class="control-label col-sm-4">Ciudad</label>
         <div class="col-sm-2 col-xs-5">
 
-         <select id="ciudad" class="form-control">
+         <select id="ciudad" class="form-control col-lg-4">
           <option>Seleccione </option>
         </select>
+        <span class="help-block"></span>
       </div>
 
     </div>
