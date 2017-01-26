@@ -114,7 +114,7 @@ $(document).ready(function(){
 			}
 
 		$("#cotizacion").val(codigo);
-		localStorage.setItem("numbcotizacion", 'COTIC-' + codigo);
+		localStorage.setItem("numbcotizacion", codigo);
 		
 		$.ajax({
 
