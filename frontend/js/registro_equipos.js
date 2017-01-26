@@ -91,7 +91,7 @@ $(document).ready(function(){
 		var cod_equipo		  = $("#cod_equipo").val();
 		var serial_interno    = $("#serial_interno").val();
 		var marca     		  = $("#marca").val();
-		var tipo    	      = $("#tipoeq").val();
+		var tipo    	      = $("#tipo").val();
 
 		$.ajax({
 		
@@ -200,24 +200,22 @@ $(document).ready(function(){
 		success: function(json)
 		{
 			
-		try{
-
-		var $select = $('#tipoeq'); 
+			try{
+		var $select = $('#tipo'); 
 
 		var obj = jQuery.parseJSON(json);
 		 
-		 console.log(obj[0]);
-		 console.log("Dale Andres");
+		 console.log(obj);
 
-				for (var i = 0 ;obj.length - 1; i++) {
-
+			for (var i = 0 ;obj.length - 1; i++) {
+				
 				$select.append('<option value=' + obj[i]['tipo_equipo'] + '>' + obj[i]['descripcion'] + '</option>'); 	
-
-				//$select.append('<option value=' + obj[i]['tipo_equipo'] + '>' + obj[i]['descripcion'] + '</option>'); 	
 
 			}
 
-		}catch(e){ }
+		
+
+		}catch(e){}
 
 		}
 	});
@@ -258,7 +256,7 @@ $(document).ready(function(){
 
 	$("#btn_reg").click(function(){
 
-		var tipo_equipo = $("#tipoeq").val();
+		var tipo_equipo = $("#tipo").val();
 		var precio      = $("#precio").val();
 
 		$.ajax({
