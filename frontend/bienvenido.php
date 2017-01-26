@@ -135,7 +135,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     <!-- Main component for a primary marketing message or call to action -->
     <div class="container">
 
-      <iframe frameborder="0" align="top" scrolling="no" width="100%" height="1000px" target="_parent" name="servicio" id="servicio" ></iframe>   
+      <iframe class="embed-responsive-item" frameborder="0" align="top" scrolling="no" width="100%"  target="_parent" name="servicio" id="servicio" ></iframe>   
 
     </div>
 
