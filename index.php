@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="frontend/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="front-end/css/login_bootstrap.css">
+    <link rel="stylesheet" href="frontend/css/login_bootstrap.css">
      <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script src="frontend/js/login_bootstrap.js"></script>
