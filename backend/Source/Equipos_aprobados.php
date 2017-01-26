@@ -94,6 +94,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
                         $res = $conectarbd->executeView($sql);
 
                         $codigo_equipo_asignado = $res["COD_EQUIPO"];
+                        var_dump($division_cod);
                         $unidad_eq = $res["FK_UNIDAD"];
                         $division_cod = explode("-", $codigo_equipo_asignado);
                         $get_number = 0;
