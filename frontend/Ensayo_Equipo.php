@@ -56,9 +56,9 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
             <div class="form-group">
               <label for="tipodoc" class="control-label col-sm-2">Cliente</label>
-              <div class="col-sm-4 col-xs-5">
+              <div class="col-sm-4 col-xs-7">
 
-               <select id="listCliente" class="form-control">
+               <select id="listCliente" class="form-control col-sm-4">
                 <option>Seleccione </option>
               </select>
                <span class="help-block"></span>
