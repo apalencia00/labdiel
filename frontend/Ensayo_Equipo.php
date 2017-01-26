@@ -44,6 +44,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
   <body>
 
     <div class="container">
+
       <form class="form form-inline" role="form" id="form">
         <h2>Ensayo Equipos</h2>
 
@@ -223,9 +224,6 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 </div>
 
-</br>
-
-<fieldset  >
 
   <div class="row">
 
@@ -257,8 +255,6 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 </div>
 
 
-</br>
-
 <div class="row">
 
   <div class="form-group">
@@ -276,7 +272,6 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 </div>
 
-</fieldset>
 
 <table id="mytable" class="table table-striped">
   <thead>
