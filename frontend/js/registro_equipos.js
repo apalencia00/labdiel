@@ -201,7 +201,7 @@ error : function(event){
 		{
 			
 			
-			var select = $('select#tipo'); 
+			var selecttipo = $('select#tipo'); 
 
 			var obj = jQuery.parseJSON(json);
 			
@@ -209,7 +209,7 @@ error : function(event){
 
 			for (var i = 0 ;obj.length - 1; i++) {
 				
-				select.append('<option value=' + obj[i]['tipo_equipo'] + '>' + obj[i]['descripcion'] + '</option>'); 	
+				selecttipo.append("<option value=" + obj[i]['tipo_equipo'] + ">" + obj[i]['descripcion'] + "</option>"); 	
 
 			}
 
