@@ -72,9 +72,9 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
             <label for="numdoc" class="control-label col-sm-4">Documento</label>
             <div class="col-sm-8 col-xs-5">
               <input type="text" id="docu" placeholder="Documento/NIT" class="form-control col-lg-4" autofocus>
-
+              <span class="help-block"></span>
             </div>
-             <span class="help-block"></span>
+             
           </div>
 
           <div class="form-group">
@@ -192,14 +192,16 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
    <div class="form-group">
 
     <div class="radio col-sm-8 col-xs-5">
-      <label><input type="radio" name="ejecucion" value="0" checked="checked">Ejecucion Laboratorio</label>
+      <input type="radio" name="ejecucion" value="0" checked="checked">Ejecucion Laboratorio
+      <span class="help-block"></span>
     </div>
 
     <div class="radio col-sm-8 col-xs-5">
-      <label><input type="radio" name="ejecucion" value="1">Ejecucion Externa</label>
+      <input type="radio" name="ejecucion" value="1">Ejecucion Externa
+      <span class="help-block"></span>
     </div>
 
-<span class="help-block"></span>
+
 
   </div>
 
