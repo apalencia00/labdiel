@@ -82,7 +82,7 @@ $(document).ready(function(){
 						var idcoti = arr[key].id_cotizacion;
 						
 
-						html += '<tr> <td width="10%" class="myclass2" id="myclass2" data-id="'+num_cotizacion+'" >' +  idcoti + '</td>' ;
+						html += '<tr> <td width="10%" class="myclass2" id="myclass2" data-id="'+arr[key].num_cotizacion+'" >' +  idcoti + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].num_cotizacion + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].fecha_registro + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].nombre_cliente + '</td>' ;
