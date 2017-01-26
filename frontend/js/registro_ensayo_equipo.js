@@ -339,9 +339,12 @@ $(document).ready(function(){
 	 		data : {'method' : 'getLastIDRevisionByUsuario'},
 	 		success: function(data)
 	 		{
+	 			try{ 
 	 			arr = jQuery.parseJSON(data);
 	 			console.log(arr);
 	 			$("#idrevision").val(arr[0].id_revision_ensayo);
+
+	 			 }
 	 		}
 	 	});
 

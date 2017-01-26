@@ -184,10 +184,11 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
       <label class="control-label col-sm-4"> Ejecucion </label>
 
-      <div class="radio col-sm-2 col-xs-5">
+      <div class="radio col-sm-8 col-xs-5">
         <label><input type="radio" name="ejecucion" value="0" checked="checked">Laboratorio</label>
       </div>
-      <div class="radio col-sm-2 col-xs-8">
+
+      <div class="radio col-sm-8 col-xs-5">
         <label><input type="radio" name="ejecucion" value="1">Externa</label>
       </div>
 
