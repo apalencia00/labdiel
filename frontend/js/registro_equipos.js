@@ -207,10 +207,10 @@ error : function(event){
 			
 			console.log(obj);
 
-			for (var i = 0 ;obj.length - 1; i++) {
+			for (var i = 0 ;obj.length; i++) {
 				
 				selecttipo.append("<option value=" + obj[i]['tipo_equipo'] + ">" + obj[i]['descripcion'] + "</option>"); 	
-
+				console.log(obj[i]['tipo_equipo']);
 			}
 
 		}
