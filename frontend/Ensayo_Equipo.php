@@ -82,9 +82,6 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
       </div>
 
-      
-      <fieldset class="the-fieldset">
-
         <div class="row">
 
          <div class="form-group">
@@ -214,9 +211,6 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     </div>
 
     </div>
-
-
-</fieldset>
 
 
 <div class="row">
