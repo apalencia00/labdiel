@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="frontend/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="frontend/css/login_bootstrap.css">
      <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="frontend/js/jquery-ui.min.js"></script>
     <script src="frontend/js/login_bootstrap.js"></script>
     <script src="frontend/bootstrap/js/bootstrap.min.js"></script>
 </head>
