@@ -207,6 +207,8 @@ $(document).ready(function(){
 		 
 		 console.log(obj);
 
+		 document.getElementById("precio").value = obj;
+
 			for (var i = 0 ;obj.length - 1; i++) {
 				
 				select.append('<option value=' + obj[i]['tipo_equipo'] + '>' + obj[i]['descripcion'] + '</option>'); 	
