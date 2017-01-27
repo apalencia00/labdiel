@@ -69,7 +69,7 @@ $(document).ready(function(){
 
 						//console.log(arr[0].num_cotizacion);
 						var idcoti = arr[key].id_cotizacion;
-						html += '<tr> <td scope="row"   id="myclass3"  data-id="'+arr[key].num_cotizacion+'"  width="10%"  >' +  idcoti + '</td>' ;
+						html += '<tr> <td scope="row"   id="myclass3"  data-id="'+idcoti+'"  width="10%"  >' +  idcoti + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].num_cotizacion + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].fecha_registro + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].nombre_cliente + '</td>' ;
@@ -100,11 +100,8 @@ $(document).ready(function(){
 				codigo = $(this).data('id');
 			}
 
-
-		console.log(codigo);
-
-		$("#cotic").val( codigo );
-		//$("#cotizacion").val( codigo );
+			$("#cotic").val(codigo);
+			//localStorage.setItem("numbcotizacion", codigo);
 		
 		$.ajax({
 
