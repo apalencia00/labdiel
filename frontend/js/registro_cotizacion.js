@@ -189,7 +189,54 @@ for (i = 0, j = rows.length; i < j; ++i) {
     		data : {"method" : 'regDetalleCotizacion',"cotizacion" : $("#nocotic").val(), "codigoe" : cells[0].innerHTML, "cantidad" : cells[2].innerHTML, "valor" : cells[3].innerHTML},
     		success: function(json)
     		{
-    			console.log(json);
+
+    				console.log(json);
+
+    			var obj = jQuery.parseJSON(json);
+					console.log(obj.success);
+					if(obj.success){ 
+
+					BootstrapDialog.show({
+						title : 'Operacion Exitosa',
+						type : BootstrapDialog.TYPE_SUCCESS,
+						message: obj.root,
+						buttons: [{
+							label: 'Aceptar',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					});    
+
+				 }else{
+
+				 	BootstrapDialog.show({
+				 		title : 'Error',
+						type : BootstrapDialog.TYPE_DANGER,
+						message: obj.root,
+						buttons: [{
+							label: 'Ok',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					});  
+
+				 }
+    		},error : function(event){
+
+    			BootstrapDialog.show({
+						title : 'Error en Peticion',
+						type : BootstrapDialog.TYPE_DANGER,
+						message: 'Error no se pudo realizar la solicitud',
+						buttons: [{
+							label: 'Ok',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					}); 
+
     		}
     	});
 

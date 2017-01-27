@@ -18,7 +18,7 @@
        <script src="js/bootstrap-waitingfor.js"></script>
 
        <script type="text/javascript">
-         
+
          $(document).ready(function(){
 
           $("#aprobar1").click(function(){
@@ -65,7 +65,7 @@
   console.log("La cotizacion " + cotic + " El serial es " + serial);
 
   $.ajax({
-    
+
     url: '../backend/Source/Registro_inspeccion.php',
     type: 'GET',
     contentType : "application/json",
@@ -101,8 +101,8 @@
 
 
 
-  
-  
+
+
 
 });
 
@@ -118,9 +118,7 @@
       <div class="container">
         <form id="form" class="form form-inline" role="form">
 
-          <p>
-
-            <div class="row">
+                   <div class="row">
 
              <div class="form-group">
               <label for="tipodoc" class="control-label col-sm-6">Clase</label>
@@ -170,8 +168,7 @@
 
       </div>
 
-      <p>
-
+  
         <div class="row" >
 
           <div class="form-group">
@@ -223,8 +220,6 @@
       </div>
 
     </div>
-
-    <p>
 
       <div class="row">
 
@@ -281,9 +276,6 @@
 </div>
 
 
-<p>
-
-
   <div class="row" >
 
     <div class="form-group">
@@ -317,7 +309,6 @@
 
 <button type="submit" id="aprobar1"  class="btn btn-primary pull-right">Aceptar</button>
 
-</fieldset>
 
 </form>
 

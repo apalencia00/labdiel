@@ -209,7 +209,7 @@ function regDetalleCotizacion($params){
 
 curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/regdetallecotizacion?".http_build_query($params));
 
-var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/regdetallecotizacion?".http_build_query($params));
+#var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/regdetallecotizacion?".http_build_query($params));
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
