@@ -248,7 +248,7 @@ function regdetalle_serial($param){
    
    curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
    
-    #var_dump("http://173.199.148.4:8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param));
+    var_dump("http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/cotizacion/regDetalleSerials?" . http_build_query($param)");
    
    curl_exec($curl);
    
