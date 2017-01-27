@@ -187,12 +187,19 @@ for (i = 0, j = rows.length; i < j; ++i) {
     		contentType : "application/json",
     		dataType : "json",
     		data : {"method" : 'regDetalleCotizacion',"cotizacion" : $("#nocotic").val(), "codigoe" : cells[0].innerHTML, "cantidad" : cells[2].innerHTML, "valor" : cells[3].innerHTML},
+    		beforeSend : function(){
+
+    			waitingDialog.show('Cargando.. Por favor espere');setTimeout(function () {waitingDialog.hide();}, 2000)
+
+
+    		},
+
     		success: function(json)
     		{
 
-    				console.log(json);
+    			console.log(json[0]);
 
-    			var obj = jQuery.parseJSON(json);
+    			var obj = jQuery.parseJSON(json[0]);
 					console.log(obj.success);
 					if(obj.success){ 
 
