@@ -78,7 +78,7 @@ $(document).ready(function(){
 						var idcoti = arr[key].id_cotizacion;
 						
 
-						html += '<tr> <td width="10%" scope="row" data-toggle="modal" id="myclass3" data-id="'+idcoti+'" data-target="#myModal" >' +  idcoti + '</td>' ;
+						html += '<tr> <td width="10%" scope="row" data-toggle="modal" id="myclass3" data-id="'+arr[key].num_cotizacion+'" data-target="#myModal" >' +  idcoti + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].num_cotizacion + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].fecha_registro + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].nombre_cliente + '</td>' ;

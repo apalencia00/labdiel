@@ -69,7 +69,7 @@ $(document).ready(function(){
 
 						//console.log(arr[0].num_cotizacion);
 						var idcoti = arr[key].id_cotizacion;
-						html += '<tr> <td scope="row"   id="myclass3"  data-id="'+idcoti+'"  width="10%"  >' +  idcoti + '</td>' ;
+						html += '<tr> <td scope="row"   id="myclass3"  data-id="'+arr[key].num_cotizacion+'"  width="10%"  >' +  idcoti + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].num_cotizacion + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].fecha_registro + '</td>' ;
 						html += '<td width="10%" >' +  arr[key].nombre_cliente + '</td>' ;
@@ -90,18 +90,12 @@ $(document).ready(function(){
 
 	$(document).on("click", "#myclass3", function () {
 
-		var codigo ;
+		var codigo = $(this).data('id');
 
-			if( $("#ncotic").val() != "" ){
+		console.log(codigo);
 
-			codigo	= $("#ncotic").val();
-
-			}else{
-				codigo = $(this).data('id');
-			}
-
-			$("#cotic").val(codigo);
-			//localStorage.setItem("numbcotizacion", codigo);
+		$("#cotic").val( codigo );
+		//$("#cotizacion").val( codigo );
 		
 		$.ajax({
 
