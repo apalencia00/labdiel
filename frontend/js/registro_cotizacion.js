@@ -186,7 +186,8 @@ for (i = 0, j = rows.length; i < j; ++i) {
     		type: 'GET',
     		contentType : "application/json",
     		dataType : "json",
-    		data : {"method" : 'regDetalleCotizacion',"cotizacion" : $("#nocotic").val(), "codigoe" : cells[0].innerHTML, "cantidad" : cells[2].innerHTML, "valor" : cells[3].innerHTML},
+    		data : {"method" : 'regDetalleCotizacion',"cotizacion" : $("#nocotic").val(), "codigoe" : cells[0].innerHTML, "cantidad" : cells[2].innerHTML, "valor" : cells[3].innerHTML}
+    		,
     		beforeSend : function(){
 
     			waitingDialog.show('Cargando.. Por favor espere');setTimeout(function () {waitingDialog.hide();}, 2000)
@@ -199,37 +200,9 @@ for (i = 0, j = rows.length; i < j; ++i) {
 
     			console.log(json);
 
-    			var obj = jQuery.parseJSON(json);
-					console.log(obj.success);
-					if(obj.success){ 
+    			
 
-					BootstrapDialog.show({
-						title : 'Operacion Exitosa',
-						type : BootstrapDialog.TYPE_SUCCESS,
-						message: obj.mensaje,
-						buttons: [{
-							label: 'Aceptar',
-							action: function(dialogItself){
-								dialogItself.close();
-							}
-						} ]
-					});    
-
-				 }else{
-
-				 	BootstrapDialog.show({
-				 		title : 'Error',
-						type : BootstrapDialog.TYPE_DANGER,
-						message: obj.mensaje,
-						buttons: [{
-							label: 'Ok',
-							action: function(dialogItself){
-								dialogItself.close();
-							}
-						} ]
-					});  
-
-				 }
+				 
     		},error : function(event){
 
     			BootstrapDialog.show({
@@ -243,6 +216,22 @@ for (i = 0, j = rows.length; i < j; ++i) {
 							}
 						} ]
 					}); 
+
+    		},
+
+    		complete : function(events){
+
+    			BootstrapDialog.show({
+						title : 'Operacion Exitosa',
+						type : BootstrapDialog.TYPE_SUCCESS,
+						message: 'Registro satisfactorio',
+						buttons: [{
+							label: 'Aceptar',
+							action: function(dialogItself){
+								dialogItself.close();
+							}
+						} ]
+					});  
 
     		}
     	});
