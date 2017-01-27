@@ -197,16 +197,16 @@ for (i = 0, j = rows.length; i < j; ++i) {
     		success: function(json)
     		{
 
-    			console.log(json[0]);
+    			console.log(json);
 
-    			var obj = jQuery.parseJSON(json[0]);
+    			var obj = jQuery.parseJSON(json);
 					console.log(obj.success);
-					if(obj.success){ 
+					if(obj[0].success){ 
 
 					BootstrapDialog.show({
 						title : 'Operacion Exitosa',
 						type : BootstrapDialog.TYPE_SUCCESS,
-						message: obj.mensaje,
+						message: obj[0].mensaje,
 						buttons: [{
 							label: 'Aceptar',
 							action: function(dialogItself){
@@ -220,7 +220,7 @@ for (i = 0, j = rows.length; i < j; ++i) {
 				 	BootstrapDialog.show({
 				 		title : 'Error',
 						type : BootstrapDialog.TYPE_DANGER,
-						message: obj.mensaje,
+						message: obj[0].mensaje,
 						buttons: [{
 							label: 'Ok',
 							action: function(dialogItself){
