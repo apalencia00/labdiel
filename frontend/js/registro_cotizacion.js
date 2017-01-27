@@ -192,14 +192,14 @@ for (i = 0, j = rows.length; i < j; ++i) {
 
     				console.log(json);
 
-    			//var obj = jQuery.parseJSON(json);
+    			var obj = jQuery.parseJSON(json);
 					console.log(obj.success);
-					if(json.success){ 
+					if(obj.success){ 
 
 					BootstrapDialog.show({
 						title : 'Operacion Exitosa',
 						type : BootstrapDialog.TYPE_SUCCESS,
-						message: json.mensaje,
+						message: obj.mensaje,
 						buttons: [{
 							label: 'Aceptar',
 							action: function(dialogItself){
@@ -213,7 +213,7 @@ for (i = 0, j = rows.length; i < j; ++i) {
 				 	BootstrapDialog.show({
 				 		title : 'Error',
 						type : BootstrapDialog.TYPE_DANGER,
-						message: json.mensaje,
+						message: obj.mensaje,
 						buttons: [{
 							label: 'Ok',
 							action: function(dialogItself){
