@@ -97,6 +97,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
                         
                         $unidad_eq = $res["FK_UNIDAD"];
                         $division_cod = explode("-", $codigo_equipo_asignado);
+                        var_dump($division_cod);
                         $get_number = 0;
                         if($unidad_eq == 2){
 
