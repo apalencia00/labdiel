@@ -19,25 +19,25 @@
 
        <script type="text/javascript">
          
-       $(document).ready(function(){
+         $(document).ready(function(){
 
           $("#aprobar1").click(function(){
 
 
-  var clase_eq        = $("#clase").val();
-  var obs_clase       = $("#obs").val();
-  var tension_eq      = $("#tension").val();
-  var obs_tension     = $("#obs2").val();
-  var tipo_eq         = $("#tipo").val();
-  var obs_tipo        = $("#obs3").val();
-  var estilo_eq       = $("#estilo").val();
-  var obs_estilo      = $("#obs4").val();
-  var color_eq        = $("#color").val();
-  var obs_color       = $("#obs5").val();
-  var talla_eq        = $("#talla").val();
-  var obs_talla       = $("#obs6").val();
-  var longitud_eq     = $("#longitud").val();
-  var obs_longitud    = $("#obs7").val();
+            var clase_eq        = $("#clase").val();
+            var obs_clase       = $("#obs").val();
+            var tension_eq      = $("#tension").val();
+            var obs_tension     = $("#obs2").val();
+            var tipo_eq         = $("#tipo").val();
+            var obs_tipo        = $("#obs3").val();
+            var estilo_eq       = $("#estilo").val();
+            var obs_estilo      = $("#obs4").val();
+            var color_eq        = $("#color").val();
+            var obs_color       = $("#obs5").val();
+            var talla_eq        = $("#talla").val();
+            var obs_talla       = $("#obs6").val();
+            var longitud_eq     = $("#longitud").val();
+            var obs_longitud    = $("#obs7").val();
 /*  var perforacion_eq    = $("#perforacion").val();
   var obs_perforacion   = $("#obs8").val();
   var abrasion_eq     = $("#abrasion").val();
@@ -91,36 +91,36 @@
   },
   success : function(json){
 
-      console.log(json);
+    console.log(json);
 
   }
 
 
 
-          });
+});
 
 
 
-      
-        
+  
+  
 
-       });
+});
 
         })
 
-       </script>
+      </script>
 
-     </head>
-     <body>
+    </head>
+    <body>
 
 
 
       <div class="container">
         <form id="form" class="form form-inline" role="form">
 
-        <p>
+          <p>
 
-          <div class="row">
+            <div class="row">
 
              <div class="form-group">
               <label for="tipodoc" class="control-label col-sm-6">Clase</label>
@@ -137,7 +137,9 @@
 
           <div class="form-group">
             <label for="comment">DESC:</label>
-            <textarea class="form-control" rows="2" id="obs"></textarea>
+            <div class="col-sm-2 col-xs-5">
+              <textarea class="form-control" rows="2" id="obs"></textarea>
+            </div>
           </div>
 
 
@@ -160,8 +162,10 @@
 
         <div class="form-group">
           <label for="comment">DESC:</label>
-          <textarea class="form-control" rows="2" id="obs2"></textarea>
-        </div> 
+          <div class="col-sm-2 col-xs-5">
+            <textarea class="form-control" rows="2" id="obs2"></textarea>
+          </div> 
+        </div>
 
 
       </div>
@@ -188,8 +192,10 @@
 
         <div class="form-group">
           <label for="comment">DESC:</label>
-          <textarea class="form-control" rows="2" id="obs3"></textarea>
-        </div> 
+          <div class="col-sm-2 col-xs-5">
+            <textarea class="form-control" rows="2" id="obs3"></textarea>
+          </div> 
+        </div>
 
         <div class="form-group">
 
@@ -211,8 +217,9 @@
 
       <div class="form-group">
         <label for="comment">DESC:</label>
-
-        <textarea class="form-control" rows="2" id="obs4"></textarea>
+        <div class="col-sm-2 col-xs-5">
+          <textarea class="form-control" rows="2" id="obs4"></textarea>
+        </div>
       </div>
 
     </div>
@@ -240,8 +247,9 @@
 
     <div class="form-group">
       <label for="comment">DESC:</label>
-
-      <textarea class="form-control" rows="2" id="obs5"></textarea>
+      <div class="col-sm-2 col-xs-5">
+        <textarea class="form-control" rows="2" id="obs5"></textarea>
+      </div>
     </div>
 
     <div class="form-group">
@@ -263,8 +271,9 @@
 
   <div class="form-group">
     <label for="comment">DESC:</label>
-
-    <textarea class="form-control" rows="2" id="obs6"></textarea>
+    <div class="col-sm-2 col-xs-5">
+      <textarea class="form-control" rows="2" id="obs6"></textarea>
+    </div>
   </div>
 
 
@@ -294,18 +303,19 @@
     </div>
   </div>
 
- <div class="form-group">
+  <div class="form-group">
     <label for="comment">DESC:</label>
-
-    <textarea class="form-control" rows="2" id="obs6"></textarea>
+    <div class="col-sm-2 col-xs-5">
+      <textarea class="form-control" rows="2" id="obs6"></textarea>
+    </div>
   </div>
 
 
- </div>
+</div>
 
- </div>
+</div>
 
- <button type="submit" id="aprobar1"  class="btn btn-primary pull-right">Aceptar</button>
+<button type="submit" id="aprobar1"  class="btn btn-primary pull-right">Aceptar</button>
 
 </fieldset>
 
