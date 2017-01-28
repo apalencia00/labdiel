@@ -93,6 +93,12 @@ error : function(event){
 		var marca     		  = $("#marca").val();
 		var tipo    	      = $("#tipo").val();
 
+		 //
+
+		 var pathern = new RegExp("([A-Z]*?){0,3}\-([0-9])\w([A-B]*?){0}");
+
+		 if(pathern.test(cod_equipo)){ 
+
 		$.ajax({
 			
 			url: '../backend/Source/Registro_equipos.php',
@@ -153,6 +159,11 @@ error : function(event){
 
 			}
 		});
+
+
+	    }else{
+	    	console.log("error este codigo no es valido");
+	    }
 
 	});
 
