@@ -162,7 +162,9 @@ error : function(event){
 
 
 	    }else{
-	    	console.log("error este codigo no es valido");
+	    	console.log("Error este codigo no es valido");
+	    	$("#error").prop("display:block");
+	    	$("#error").val("Error este codigo no es valido");
 	    }
 
 	});

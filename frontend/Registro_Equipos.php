@@ -43,6 +43,17 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
         box-shadow:  0px 0px 0px 0px #000;
       }
 
+      .error-div{
+
+        border-style: none;
+        border-width: 0;
+        font-size: 14px;
+        color: red;
+
+
+
+      }
+
     </style>
 
 
@@ -74,7 +85,11 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
               <input type="text"  id="cod_equipo" placeholder="Codigo Producto" class="form-control col-lg-100" autofocus>
             </div>
 
+            
+
           </div>
+
+          <div class="error-div" style="display:block;"  id="error"></div>
 
           <div class="form-group">
 
