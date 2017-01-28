@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL);
 
-require_once '../ConexionBD/Conexion.php';
+require_once 'ConexionBD/Conexion.php';
 
 class Modulo {
     
