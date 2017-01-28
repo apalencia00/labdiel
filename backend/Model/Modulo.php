@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL);
 
-require_once (realpath($_SERVER["DOCUMENT_ROOT"]) . '/labdiel/backend/ConexionBD/Conexion.php');
+require_once ('/labdiel/backend/ConexionBD/Conexion.php');
 
 class Modulo {
     
