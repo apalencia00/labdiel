@@ -1,0 +1,5 @@
+ErrorDocument 500 /labdiel/crash-recover 
+ErrorDocument 500 "Sorry, our script crashed. Oh dear" 
+ErrorDocument 500 http://xxx/ 
+ErrorDocument 404 /labdiel/not_found.html 
+ErrorDocument 401 /labdiel/how_to_subscribe.html
