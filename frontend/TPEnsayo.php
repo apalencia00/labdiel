@@ -167,7 +167,7 @@
   <label for="obs_ozono" class="control-label col-sm-4">Observacion</label>
   <div class="col-sm-2 col-xs-5">
 
-   <textarea id="obs_quemadura"></textarea>
+   <textarea id="obsfinal"></textarea>
  </div>
 
 </div>
