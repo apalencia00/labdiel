@@ -43,7 +43,7 @@
               type: 'GET',
               contentType : "application/json",
               dataType : "json",
-              data : {"method" : 'addiniEnsayoPertigas', 'serial' : serial, "cotizacion" : cotic, "tension" : tension, "obs_tension" : obs_tension, "color" : color,"obs_color" : obs_color, "longitud" : longitud, "obs_longitud" : obs_longitud
+              data : {"method" : 'addiniEnsayoPertigas', 'serial' : serial, "cotizacion" : cotic, "tramo" : tramo, "tension" : tension, "obs_tension" : obs_tension, "color" : color,"obs_color" : obs_color, "longitud" : longitud, "obs_longitud" : obs_longitud
 
             },
             success : function(json){

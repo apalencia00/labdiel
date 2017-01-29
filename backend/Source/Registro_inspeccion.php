@@ -108,7 +108,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
       case 'addiniEnsayoPertigas':
                 # code...
-      $param = array('serial' => $_GET['serial'], "cotizacion" => $_GET['cotizacion'], "tension" => $_GET['tension'], "obs_tension" => $_GET['obs_tension'], "color" => $_GET['color'],"obs_color" => $_GET['obs_color'], "longitud" => $_GET['longitud'], "obs_longitud" => $_GET['obs_longitud']);
+      $param = array('serial' => $_GET['serial'], "cotizacion" => $_GET['cotizacion'], "tramo" => $_GET['tramo'] , "tension" => $_GET['tension'], "obs_tension" => $_GET['obs_tension'], "color" => $_GET['color'],"obs_color" => $_GET['obs_color'], "longitud" => $_GET['longitud'], "obs_longitud" => $_GET['obs_longitud']);
 
       addiniEnsayoPertigas($param);
       break;
