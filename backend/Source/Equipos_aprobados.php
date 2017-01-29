@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL);
 
-require_once(realpath($_SERVER["DOCUMENT_ROOT"]) . '/labdiel/backend/ConexionBD/Conexion.php');
+require $_SERVER['DOCUMENT_ROOT']."/backend/ConexionBD/Conexion.php";
 //require_once(realpath($_SERVER["DOCUMENT_ROOT"]) . '/labdiel/vendor/fergusean/nusoap/lib/nusoap.php');
 
 if(!isset($_SESSION)) 
