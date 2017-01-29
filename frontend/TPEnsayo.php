@@ -54,7 +54,7 @@
         waitingDialog.show('Cargando.. Por favor espere');setTimeout(function () {waitingDialog.hide();}, 2000)
 
           
-      }
+      },
 
   success: function(json)
   {
@@ -98,6 +98,8 @@
           }catch(e){}
 
   }
+
+
 });
 
 
