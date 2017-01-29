@@ -3,6 +3,9 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT "ID_INSPECCION_EQUIPO", "FK_COTIZACION", "FK_ID_SERIAL_EQUIPO",
        "CLASE", "OBS_CLASE", "TENSION", "OBS_TENSION", "TIPO", "OBS_TIPO",
@@ -15,10 +18,10 @@
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*,cl."DESCRIPCION" as laclase
   FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co, labor."TIPO_EQUIPO" eq, labor."CLASE_EQUIPO" cl, labor."EQUIPO_INVENTARIO_EMPRESA" emp
 
- WHERE ins."FK_COTIZACION" = co."ID_COTIZACION" AND co."FK_CLIENTE" = c."ID_CLIENTE" AND substr("FK_ID_SERIAL_EQUIPO", 1, 1) = 'C' AND emp."COD_EQUIPO" = "FK_ID_SERIAL_EQUIPO" AND emp."FK_TIPO_EQUIPO" = cl."ID_CLASE_EQUIPO"  ;]]>
+ WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" AND co."FK_CLIENTE" = c."ID_CLIENTE" AND substr("FK_ID_SERIAL_EQUIPO", 1, 1) = 'C' AND emp."COD_EQUIPO" = "FK_ID_SERIAL_EQUIPO" AND emp."FK_TIPO_EQUIPO" = cl."ID_CLASE_EQUIPO" AND "FK_COTIZACION" = $P{ncotic} ;]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
-	<field name="FK_COTIZACION" class="java.lang.Integer"/>
+	<field name="FK_COTIZACION" class="java.lang.String"/>
 	<field name="FK_ID_SERIAL_EQUIPO" class="java.lang.String"/>
 	<field name="CLASE" class="java.lang.Integer"/>
 	<field name="OBS_CLASE" class="java.lang.String"/>
