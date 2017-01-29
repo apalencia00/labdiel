@@ -95,7 +95,7 @@ error : function(event){
 
 		 //
 
-		 var pathern = new RegExp("([A-Z]*?){0,3}\-([0-9])\w([A-B]*?){0}");
+		 var pathern = new RegExp("([A-Z])\w*([A-Z]){0}\w-([0-9]){0}\w([A-B]){0,1}");
 
 		 if(pathern.test(cod_equipo)){ 
 
