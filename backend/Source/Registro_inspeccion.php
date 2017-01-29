@@ -40,7 +40,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       case 'addTercerEnsayo':
             # code...
 
-      $param3 = array("serial" => $_GET['serial'], "cotizacion" => $_GET['cotizacion'],"tension" => $_GET['tension'], "fuga" => $_GET['fuga'], "temperatura" => $_GET['temperatura'], "humedad" => $_GET['humedad'], "tiempo" => $_GET['tiempo'], "obs_final" => $_GET['obser']);
+      $param3 = array("serial" => $_GET['serial'], "cotizacion" => $_GET['cotizacion'],"tension" => $_GET['tension'], "corriente" => $_GET['fuga'], "temperatura" => $_GET['temperatura'], "humedad" => $_GET['humedad'], "tiempo" => $_GET['tiempo'], "obs_final" => $_GET['obser']);
 
       addTercerEnsayo($param3);
 
