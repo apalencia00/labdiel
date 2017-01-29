@@ -77,12 +77,13 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
         <fieldset class="the-fieldset">
 
-          <div class="form-group">
+          <div id="classmadre" class="form-group">
 
 
           <label for="numdoc" class="control-label col-sm-4">Codigo Equipo</label>
             <div class="col-sm-8">
               <input type="text"  id="cod_equipo" placeholder="Codigo Producto" class="form-control col-lg-100" autofocus>
+              
             </div>
 
             

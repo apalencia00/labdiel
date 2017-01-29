@@ -163,8 +163,8 @@ error : function(event){
 
 	    }else{
 	    	console.log("Error este codigo no es valido");
-	    	$("#error").prop("display:block");
-	    	$("#error").val("Error este codigo no es valido");
+	    	$("#classmadre").addClass("class:form-group has-error has-feedback");
+	    	
 	    }
 
 	});

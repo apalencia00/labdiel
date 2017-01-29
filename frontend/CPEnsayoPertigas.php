@@ -18,11 +18,13 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-notifications.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-dialog.css">
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/registro_inspeccion.js" ></script>
     <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
+ <script type="text/javascript" src="js/bootstrap-dialog.js" ></script>
 
     <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="js/bootstrap-toggle.min.js"></script>
