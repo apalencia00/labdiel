@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL);
 
-require $_SERVER['DOCUMENT_ROOT']."/labdiel/backend/ConexionBD/Conexion.php";
+require $_SERVER['DOCUMENT_ROOT']."/backend/ConexionBD/Conexion.php";
 
 class Modulo {
     
