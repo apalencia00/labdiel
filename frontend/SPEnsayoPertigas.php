@@ -72,7 +72,7 @@
           BootstrapDialog.show({
             title : 'Operacion Exitosa',
             type : BootstrapDialog.TYPE_SUCCESS,
-            message: obj.root,
+            message: obj.mensaje,
             buttons: [{
               label: 'Aceptar',
               action: function(dialogItself){
@@ -87,7 +87,7 @@
           BootstrapDialog.show({
             title : 'Error',
             type : BootstrapDialog.TYPE_INFO,
-            message: obj.root,
+            message: obj.mensaje,
             buttons: [{
               label: 'Ok',
               action: function(dialogItself){

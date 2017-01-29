@@ -55,7 +55,7 @@
         var tension       = $("#tension").val();
         var tiempo        = $("#tiempo").val();
 
-
+        console.log(tempi1);
 
         $.ajax({
 
