@@ -179,7 +179,7 @@
 <div class="form-group">
 
 
-  <label for="numdoc" class="control-label col-sm-4">Cobertura por Ozono        
+  <label for="numdoc" class="control-label col-sm-4">Cortadura por Ozono        
 
   </label>
   <div class="col-sm-2">

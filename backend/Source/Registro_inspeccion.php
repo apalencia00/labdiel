@@ -326,7 +326,7 @@ function addTercerEnsayo($param){
 
  curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/inspeccion/registroTerceroInspeccion?". http_build_query($param));
 
- # var_dump( "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/inspeccion/registroTerceroInspeccion?". http_build_query($param));
+ var_dump( "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/inspeccion/registroTerceroInspeccion?". http_build_query($param));
 
  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
