@@ -3,6 +3,9 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT "ID_INSPECCION_EQUIPO", "FK_COTIZACION", "FK_ID_SERIAL_EQUIPO",
        "CLASE", "OBS_CLASE", "TENSION", "OBS_TENSION", "TIPO", "OBS_TIPO",
@@ -15,10 +18,10 @@
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*
   FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co
 
- WHERE ins."FK_COTIZACION" = co."ID_COTIZACION" AND co."FK_CLIENTE" = c."ID_CLIENTE" AND substr("FK_ID_SERIAL_EQUIPO", 1, 1) = 'M'    ;]]>
+ WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" AND ins."FK_COTIZACION" = $P{ncotic} AND co."FK_CLIENTE" = c."ID_CLIENTE" AND substr("FK_ID_SERIAL_EQUIPO", 1, 1) = 'M'    ;]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
-	<field name="FK_COTIZACION" class="java.lang.Integer"/>
+	<field name="FK_COTIZACION" class="java.lang.String"/>
 	<field name="FK_ID_SERIAL_EQUIPO" class="java.lang.String"/>
 	<field name="CLASE" class="java.lang.Integer"/>
 	<field name="OBS_CLASE" class="java.lang.String"/>
@@ -37,9 +40,7 @@
 	<field name="PERFORACION" class="java.lang.Integer"/>
 	<field name="OBS_PERFORACION" class="java.lang.String"/>
 	<field name="ABRASION" class="java.lang.Integer"/>
-	<field name="OBS_ABRASION" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
+	<field name="OBS_ABRASION" class="java.lang.String"/>
 	<field name="DEGRADACION" class="java.lang.Integer"/>
 	<field name="OZONO" class="java.lang.Integer"/>
 	<field name="OBS_OZONO" class="java.lang.String"/>

@@ -22,28 +22,46 @@
 		<groupExpression><![CDATA[$F{total_servicio}]]></groupExpression>
 	</group>
 	<detail>
-		<band height="45" splitType="Stretch">
+		<band height="67" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="365" y="0" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
+				<reportElement mode="Opaque" x="365" y="0" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="365" y="22" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
+				<reportElement mode="Opaque" x="365" y="41" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total Servicio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="365" y="11" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
+				<reportElement mode="Opaque" x="365" y="20" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Iva 16%]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="432" y="0" width="100" height="18" uuid="42d9dfdc-43e3-411d-916b-42e8c1552233"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="22" width="100" height="16" uuid="73e51070-e5f0-4b65-9b6b-6bb0e337dfd8"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{iva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="41" width="100" height="18" uuid="01e5e5ed-e51b-4558-9155-58001e8e0a36"/>
+				<textFieldExpression><![CDATA[""+$F{total_servicio}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>

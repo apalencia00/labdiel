@@ -18,7 +18,7 @@
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*,cl."DESCRIPCION" as laclase
   FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co, labor."TIPO_EQUIPO" eq, labor."CLASE_EQUIPO" cl, labor."EQUIPO_INVENTARIO_EMPRESA" emp
 
- WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" AND co."FK_CLIENTE" = c."ID_CLIENTE" AND substr("FK_ID_SERIAL_EQUIPO", 1, 1) = 'C' AND emp."COD_EQUIPO" = "FK_ID_SERIAL_EQUIPO" AND emp."FK_TIPO_EQUIPO" = cl."ID_CLASE_EQUIPO" AND "FK_COTIZACION" = $P{ncotic} ;]]>
+ WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" AND ins."FK_COTIZACION" = $P{ncotic} AND co."FK_CLIENTE" = c."ID_CLIENTE" AND substr("FK_ID_SERIAL_EQUIPO", 1, 1) = 'C' AND emp."COD_EQUIPO" = "FK_ID_SERIAL_EQUIPO" AND emp."FK_TIPO_EQUIPO" = cl."ID_CLASE_EQUIPO" AND "FK_COTIZACION" = $P{ncotic} ;]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
