@@ -43,9 +43,6 @@
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportParameter name="subreport">
-					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
-				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport0.jasper"]]></subreportExpression>
 			</subreport>
@@ -58,9 +55,6 @@
 				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="subreport">
-					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport1.jasper"]]></subreportExpression>
