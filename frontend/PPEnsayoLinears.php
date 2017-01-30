@@ -38,7 +38,7 @@
       var degradacion           = $("#degradacion").val();
       var obs10                 = $("#obs10").val();
       var polvo                 = $("#polvo").val();
-      var obs10                 = $("#obs11").val();
+      var obs11                 = $("#obs11").val();
       var quemadura             = $("#quemadura").val();
       var obs_quemadura         = $("#obs_quemadura").val();
       var perforacion           = $("#perforacion").val();

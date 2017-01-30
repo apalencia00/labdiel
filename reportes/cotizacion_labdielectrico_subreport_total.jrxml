@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT
-       SUM("VALOR_UNITARIO") as total, SUM("VALOR_UNITARIO")*0.19 as iva, SUM("VALOR_UNITARIO") + SUM("VALOR_UNITARIO")*0.19 as total_servicio
-  FROM labor."DETALLE_COTIZACION"  WHERE "FK_COTIZACION" = $P{ncotic};]]>
+       SUM("VALOR_UNITARIO")::money as total, SUM("VALOR_UNITARIO")::money * 0.19 as iva, SUM("VALOR_UNITARIO") + SUM("VALOR_UNITARIO")::money * 0.19 as total_servicio
+  FROM labor."DETALLE_COTIZACION"  WHERE "FK_COTIZACION" = 'COTIC-1048';]]>
 	</queryString>
 	<field name="total" class="org.postgresql.util.PGmoney"/>
 	<field name="iva" class="org.postgresql.util.PGmoney"/>
@@ -19,7 +19,7 @@
 		<groupExpression><![CDATA[$F{iva}]]></groupExpression>
 	</group>
 	<group name="total_servicio">
-		<groupExpression><![CDATA[$F{total_servicio}]]></groupExpression>
+		<groupExpression><![CDATA[]]></groupExpression>
 	</group>
 	<detail>
 		<band height="67" splitType="Stretch">
@@ -44,23 +44,13 @@
 				</textElement>
 				<text><![CDATA[Iva 16%]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="189" y="11" width="100" height="20" uuid="45fd692f-4644-49e5-b934-4e7a2799a2fc"/>
+				<text><![CDATA[total]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="432" y="0" width="100" height="18" uuid="42d9dfdc-43e3-411d-916b-42e8c1552233"/>
-				<textElement textAlignment="Center">
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[""+$F{total}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="432" y="22" width="100" height="16" uuid="73e51070-e5f0-4b65-9b6b-6bb0e337dfd8"/>
-				<textElement textAlignment="Center">
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[""+$F{iva}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="432" y="41" width="100" height="18" uuid="01e5e5ed-e51b-4558-9155-58001e8e0a36"/>
-				<textFieldExpression><![CDATA[""+$F{total_servicio}]]></textFieldExpression>
+				<reportElement x="0" y="38" width="338" height="20" uuid="79cf6c89-e2fd-41ff-9b26-eaef076b96f8"/>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#.##").format(Double.valueOf(""+$F{total}))]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
