@@ -28,8 +28,8 @@
     {
 
      
-      var cotic                 = $("#cotic" , parent.document).val();
-      var serial                = $("#num_serialequipo", parent.document).val();
+      var cotic  = $("#cotic" , parent.document).val();
+      var serial = $("#num_serialequipo", parent.document).val();
  
       $.ajax({
 
@@ -123,11 +123,11 @@
 
                    <select id="costado" class="form-control">
                       <option>Seleccione</option>
-                      <option>A</option>
-                      <option>B1</option>
-                      <option>B2</option>
-                      <option>B3</option>
-                      <option>B4</option>
+                      <option value="A"  >A</option>
+                      <option value="B1" >B1</option>
+                      <option value="B2" >B2</option>
+                      <option value="B3" >B3</option>
+                      <option value="B4" >B4</option>
                   </select>
               </div>
           </div> <!-- /.form-group -->

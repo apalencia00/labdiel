@@ -154,10 +154,12 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
         break;
 
 
-        case 'addsecondEnsayoLinears':
+        case 'addPrimerEnsayoLinears':
           # code...
 
-        addsecondEnsayoLinears();
+        $paraml = array("cotizacion" => $_GET['cotic'], "serial" => $_GET['serial'], "tipo" => $_GET['tipo'], "aceite" => $_GET['aceite'], "obs8" => $_GET['obs8'], "abrasion" => $_GET['abrasion'], "obs9" => $_GET['obs9'], "degradacion" => $_GET['degradacion'], "obs10" => $_GET['obs10'], "polvo" => $_GET['polvo'], "obs11" => $_GET['obs11'], "quemadura" => $_GET['quemadura'], "obs_quemadura" => $_GET['obs_quemadura'], "perforacion" => $_GET['perforacion'], "obs_perforacion" => $_GET['obs_perforacion'], "inspeccion" => $_GET['inspeccion'], "obs_inspeccion" => $_GET['obs_inspeccion']);
+
+        addPrimerEnsayoLinears($paraml);
           break;
 
 
@@ -483,6 +485,29 @@ $curl = curl_init();
   }
   
   curl_close($curl);
+
+
+}
+
+function addPrimerEnsayoLinears($params3){
+
+$curl = curl_init();
+  
+  curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/inspeccion/addPrimerEnsayoLinears?".http_build_query($params3));
+  
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+  
+  $result = curl_exec($curl);
+  
+  if(!$result){
+
+    die('Error: "' . curl_error($curl). '" - Code: ');
+  }else{
+    echo json_encode($result);
+  }
+  
+  curl_close($curl);
+
 
 
 }

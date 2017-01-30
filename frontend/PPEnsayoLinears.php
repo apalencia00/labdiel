@@ -53,7 +53,7 @@
         type: 'GET',
         contentType : "application/json",
         dataType : "json",
-        data : {"method" : 'addsecondEnsayoLinears', 'cotizacion' : cotic, 'serial' : serial, "tipo" : tipo, "aceite" : aceite, "obs8" : obs8, "abrasion" : abrasion, "obs9" : obs9, "degradacion" : degradacion, "obs10" : obs10, "polvo" : polvo, "obs11" : obs11, "quemadura" : quemadura, "obs_quemadura" : obs_quemadura, "perforacion" : perforacion, "obs_perforacion" : obs_perforacion, "inspeccion" : inspeccion, "obs_inspeccion" : obs_inspeccion
+        data : {"method" : 'addPrimerEnsayoLinears', 'cotizacion' : cotic, 'serial' : serial, "tipo" : tipo, "aceite" : aceite, "obs8" : obs8, "abrasion" : abrasion, "obs9" : obs9, "degradacion" : degradacion, "obs10" : obs10, "polvo" : polvo, "obs11" : obs11, "quemadura" : quemadura, "obs_quemadura" : obs_quemadura, "perforacion" : perforacion, "obs_perforacion" : obs_perforacion, "inspeccion" : inspeccion, "obs_inspeccion" : obs_inspeccion
       },
 
       success: function(json)
@@ -66,7 +66,7 @@
           BootstrapDialog.show({
             title : 'Operacion Exitosa',
             type : BootstrapDialog.TYPE_SUCCESS,
-            message: obj.root,
+            message: obj.mensaje,
             buttons: [{
               label: 'Aceptar',
               action: function(dialogItself){
@@ -81,7 +81,7 @@
           BootstrapDialog.show({
             title : 'Error',
             type : BootstrapDialog.TYPE_INFO,
-            message: obj.root,
+            message: obj.mensaje,
             buttons: [{
               label: 'Ok',
               action: function(dialogItself){

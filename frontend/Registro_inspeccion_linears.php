@@ -38,7 +38,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       
       @media screen and (min-width: 768px) {
   
-  #myModal .modal-dialog  {width:1200px;}
+  #myModal .modal-dialog  {width:900px;}
 
 }
 
