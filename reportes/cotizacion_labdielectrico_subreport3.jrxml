@@ -121,29 +121,4 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 			</textField>
 		</band>
 	</detail>
-	<summary>
-		<band height="40">
-			<staticText>
-				<reportElement mode="Opaque" x="397" y="11" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Iva 16%]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="397" y="22" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Total Servicio]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="397" y="0" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Total]]></text>
-			</staticText>
-		</band>
-	</summary>
 </jasperReport>

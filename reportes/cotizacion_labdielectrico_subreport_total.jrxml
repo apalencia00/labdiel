@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ncotic" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+       SUM("VALOR_UNITARIO") as total, SUM("VALOR_UNITARIO")*0.19 as iva, SUM("VALOR_UNITARIO") + SUM("VALOR_UNITARIO")*0.19 as total_servicio
+  FROM labor."DETALLE_COTIZACION"  WHERE "FK_COTIZACION" = $P{ncotic};]]>
+	</queryString>
+	<field name="total" class="org.postgresql.util.PGmoney"/>
+	<field name="iva" class="org.postgresql.util.PGmoney"/>
+	<field name="total_servicio" class="org.postgresql.util.PGmoney"/>
+	<group name="total">
+		<groupExpression><![CDATA[$F{total}]]></groupExpression>
+	</group>
+	<group name="iva">
+		<groupExpression><![CDATA[$F{iva}]]></groupExpression>
+	</group>
+	<group name="total_servicio">
+		<groupExpression><![CDATA[$F{total_servicio}]]></groupExpression>
+	</group>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="365" y="0" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="365" y="22" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="365" y="11" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Iva 16%]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
