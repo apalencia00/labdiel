@@ -139,8 +139,9 @@
 
            <select id="tipo" class="form-control">
             <option>Seleccione </option>
-            <option>Doble</option>
-            <option>Sencillo</option>
+            
+            <option value="1">Sencillo</option>
+            <option value="2" >Doble</option>
           </select>
         </div>
       </div> <!-- /.form-group -->
