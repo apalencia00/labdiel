@@ -157,7 +157,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
         case 'addPrimerEnsayoLinears':
           # code...
 
-        $paraml = array("cotizacion" => $_GET['cotic'], "serial" => $_GET['serial'], "tipo" => $_GET['tipo'], "aceite" => $_GET['aceite'], "obs8" => $_GET['obs8'], "abrasion" => $_GET['abrasion'], "obs9" => $_GET['obs9'], "degradacion" => $_GET['degradacion'], "obs10" => $_GET['obs10'], "polvo" => $_GET['polvo'], "obs11" => $_GET['obs11'], "quemadura" => $_GET['quemadura'], "obs_quemadura" => $_GET['obs_quemadura'], "perforacion" => $_GET['perforacion'], "obs_perforacion" => $_GET['obs_perforacion'], "inspeccion" => $_GET['inspeccion'], "obs_inspeccion" => $_GET['obs_inspeccion'], "user" =>$usuario);
+        $paraml = array("cotizacion" => $_GET['cotic'], "serial" => $_GET['serial'], "tipo" => $_GET['tipo'], "aceite" => $_GET['aceite'], "obs8" => $_GET['obs8'], "abrasion" => $_GET['abrasion'], "obs9" => $_GET['obs9'], "degradacion" => $_GET['degradacion'], "obs10" => $_GET['obs10'], "polvo" => $_GET['polvo'], "obs11" => $_GET['obs11'], "quemadura" => $_GET['quemadura'], "obs_quemadura" => $_GET['obs_quemadura'], "perforacion" => $_GET['perforacion'], "obs_perforacion" => $_GET['obs_perforacion'], "inspeccion" => $_GET['inspeccion'], "user" =>$usuario);
 
         addPrimerEnsayoLinears($paraml);
           break;
