@@ -494,6 +494,8 @@ function addPrimerEnsayoLinears($params3){
 $curl = curl_init();
   
   curl_setopt($curl, CURLOPT_URL, "http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/inspeccion/addPrimerEnsayoLinears?".http_build_query($params3));
+
+  var_dump("http://".$_SERVER['SERVER_NAME'].":8080/LabDielectrico/webresources/inspeccion/addPrimerEnsayoLinears?".http_build_query($params3));
   
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
   
