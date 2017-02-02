@@ -52,7 +52,7 @@ GROUP BY cl."DESCRIPCION", a."CANTIDAD_APROBADO"]]>
 		</band>
 	</title>
 	<detail>
-		<band height="25" splitType="Stretch">
+		<band height="15" splitType="Stretch">
 			<textField>
 				<reportElement x="-2" y="0" width="113" height="15" uuid="df9de250-22fd-483d-bcbb-d802e41968fc"/>
 				<textElement>

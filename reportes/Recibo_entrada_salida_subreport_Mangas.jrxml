@@ -50,18 +50,23 @@ GROUP BY cl."DESCRIPCION", a."CANTIDAD_APROBADO"]]>
 		</band>
 	</title>
 	<detail>
-		<band height="36" splitType="Stretch">
+		<band height="17" splitType="Stretch">
 			<textField>
-				<reportElement x="-5" y="2" width="115" height="20" uuid="77f696f4-68ec-4ec0-816b-82dc106a35c4"/>
+				<reportElement x="-5" y="2" width="115" height="15" uuid="77f696f4-68ec-4ec0-816b-82dc106a35c4"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="110" y="2" width="60" height="20" uuid="2b20b2ac-67c3-411a-aa3d-b294b2a6b63e"/>
+				<reportElement x="110" y="2" width="60" height="15" uuid="2b20b2ac-67c3-411a-aa3d-b294b2a6b63e"/>
 				<textFieldExpression><![CDATA[$F{CANTIDAD_APROBADO}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="170" y="2" width="100" height="15" uuid="3750520c-a84f-436b-a681-6518985207d6"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>
