@@ -212,6 +212,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
             <th>Codigo Equipo</th>
             <th>Tipo Equipo</th>
             <th>Cantidad</th>
+            <th>Unidad</th>
             <th>Valor Unitario</th>
             
 

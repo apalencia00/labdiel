@@ -108,12 +108,12 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
                             
                             $pos = strpos($division_num_eq, 'B');
 
-                            if($pos){ 
+                            #if($pos){
 
                                 for ($i = 0; $i <= $cantidad - 1 ; $i ++) { 
                                     
                                  $get_number++;
-                                 $cod_serial_equipo = $division_cod[0] . '-' . $get_number . 'A' ; 
+                                 $cod_serial_equipo = $division_cod[0] . '-' . $get_number; 
 
                                  $params = array("codigo_equipo" => $_GET['cod_equipos'], "serial" => $cod_serial_equipo , "fk_cotizacion" => $_GET['cotizacion']);
 
@@ -122,14 +122,14 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
                              }
 
-                         }
+                         #}
 
                      }else{
 
                        for ($i = 0; $i <= $cantidad - 1 ; $i ++) { 
                         
                          $get_number++;
-                         $cod_serial_equipo = $division_cod[0] . '-' . $get_number . 'A' ; 
+                         $cod_serial_equipo = $division_cod[0] . '-' . $get_number; 
 
                          $params = array("codigo_equipo" => $_GET['cod_equipos'], "serial" => $cod_serial_equipo , "fk_cotizacion" => $_GET['cotizacion']);
 
