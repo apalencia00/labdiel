@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2494f3d5-2a08-4d51-b2a3-c8d2aaa4f588">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="378"/>
+	<property name="ireport.y" value="335"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select * from labor."COTIZACION" coti, labor."CLIENTE" c where coti."NUM_COTIZACION" = $P{ncotic} AND c."ID_CLIENTE" = coti."FK_CLIENTE"]]>
@@ -33,23 +33,23 @@
 	<field name="USUARIO" class="java.lang.Integer"/>
 	<field name="APELLIDO" class="java.lang.String"/>
 	<title>
-		<band height="127" splitType="Stretch">
+		<band height="132" splitType="Stretch">
 			<staticText>
-				<reportElement x="162" y="3" width="236" height="20" uuid="d291f14d-dc70-47f7-8017-129b1f4f3b8d"/>
+				<reportElement x="136" y="0" width="324" height="20" uuid="d291f14d-dc70-47f7-8017-129b1f4f3b8d"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[LABORATORIO DIELECTRICO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="136" y="23" width="344" height="20" uuid="93243386-886a-4830-91c3-3f92ede68c15"/>
+				<reportElement x="110" y="20" width="370" height="20" uuid="93243386-886a-4830-91c3-3f92ede68c15"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[COMPROBANTE ENTRADA Y SALIDA DE EQUIPOS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="162" y="43" width="298" height="20" uuid="594d3b0c-b6ff-4661-bda2-2bc50edad61a"/>
+				<reportElement x="136" y="40" width="324" height="20" uuid="594d3b0c-b6ff-4661-bda2-2bc50edad61a"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -57,20 +57,24 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="119" y="63" width="436" height="20" uuid="e242f58d-2ec7-4272-8a07-9fc0db26e020"/>
+				<reportElement x="225" y="63" width="117" height="20" uuid="e242f58d-2ec7-4272-8a07-9fc0db26e020"/>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[Calle 42 No. 44-51  * Tel. 3515740 - 3404892 - 3184561366 Barranquilla
+				<text><![CDATA[Calle 42 No. 44-51
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="169" y="83" width="229" height="20" uuid="1773eb47-e291-4681-a5ac-b5f617e3906a"/>
+				<reportElement x="162" y="103" width="229" height="20" uuid="1773eb47-e291-4681-a5ac-b5f617e3906a"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[e-mail: pruebaselect@jorgebedoya.com
 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="83" width="232" height="20" uuid="9ba340c6-c3a5-43e9-8d62-eac8116f1879"/>
+				<text><![CDATA[ * Tel. 3515740 - 3404892 - 3184561366 Barranquilla]]></text>
 			</staticText>
 		</band>
 	</title>
@@ -195,7 +199,7 @@
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Recibo_entrada_salida_subreport_Guantes.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_subreport_Guantes.jasper"]]></subreportExpression>
 			</subreport>
 			<rectangle>
 				<reportElement x="285" y="0" width="270" height="187" uuid="31a26e93-5adb-46dc-9ce9-e0b8d825af4d"/>
@@ -203,7 +207,7 @@
 			<subreport>
 				<reportElement x="285" y="3" width="270" height="184" uuid="76f4a36a-d72a-4a3c-be8a-aaf27c6ba7d4"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Recibo_entrada_salida_subreport_Mangas.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_subreport_Mangas.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="200">
@@ -216,7 +220,7 @@
 			<subreport>
 				<reportElement x="0" y="0" width="270" height="187" uuid="3b63230d-7c80-4bfc-932b-67f08a383cad"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Recibo_entrada_salida_subreport_Mantas.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_subreport_Mantas.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="108"/>

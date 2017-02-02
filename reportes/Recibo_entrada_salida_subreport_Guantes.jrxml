@@ -7,11 +7,11 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[select tp."DESCRIPCION", a."CANTIDAD_APROBADO"
+		<![CDATA[select cl."DESCRIPCION", a."CANTIDAD_APROBADO"
 
-from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c
+from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c, labor."CLASE_EQUIPO" cl,labor."EQUIPO_INVENTARIO_EMPRESA" emp
 
-where  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic} AND c."NUM_COTIZACION" = a."FK_COTIZACION"]]>
+where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic} AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND substr("COD_EQUIPO", 1, 1) = 'G' AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"]]>
 	</queryString>
 	<field name="DESCRIPCION" class="java.lang.String"/>
 	<field name="CANTIDAD_APROBADO" class="java.lang.Integer"/>
@@ -63,6 +63,11 @@ where  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{n
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CANTIDAD_APROBADO}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="170" y="0" width="100" height="20" uuid="ef10be3c-9e27-4485-8fba-7403cdef9ab7"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[--]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>

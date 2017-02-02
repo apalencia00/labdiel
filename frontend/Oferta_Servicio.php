@@ -200,7 +200,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
 
-       <label> Desea Continuar ?  </label>
+       <label> Desea Cotizar ?  </label>
        <input type="checkbox" id="checkdetalle" disabled data-toggle="toggle">
 
 

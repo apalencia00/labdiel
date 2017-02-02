@@ -7,11 +7,11 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[select tp."DESCRIPCION", a."CANTIDAD_APROBADO"
+		<![CDATA[select cl."DESCRIPCION", a."CANTIDAD_APROBADO"
 
-from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c
+from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c, labor."CLASE_EQUIPO" cl
 
-where  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic} AND c."NUM_COTIZACION" = a."FK_COTIZACION"]]>
+where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic} AND c."NUM_COTIZACION" = a."FK_COTIZACION"]]>
 	</queryString>
 	<field name="DESCRIPCION" class="java.lang.String"/>
 	<field name="CANTIDAD_APROBADO" class="java.lang.Integer"/>
