@@ -26,7 +26,7 @@ $("#genped").click(function(){
 $("#generarpdf").click(function(){
 	
     
-var win = window.open('http://35.161.39.86:8080/LabDielectrico/webresources/recibo_inout/imprimirCotizacion?ncotic='+$("#nocotic").val()+"id_cliente="+$("#listCliente").val(), '_blank');
+var win = window.open('http://35.161.39.86:8080/LabDielectrico/webresources/recibo_inout/imprimirCotizacion?ncotic='+$("#nocotic").val()+"&id_cliente="+$("#listCliente").val(), '_blank');
 win.focus();
 
 
