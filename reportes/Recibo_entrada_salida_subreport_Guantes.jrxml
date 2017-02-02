@@ -11,7 +11,9 @@
 
 from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c, labor."CLASE_EQUIPO" cl,labor."EQUIPO_INVENTARIO_EMPRESA" emp
 
-where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic} AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND substr("COD_EQUIPO", 1, 1) = 'G' AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"]]>
+where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic} AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND substr("COD_EQUIPO", 1, 1) = 'G' AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
+
+GROUP BY cl."DESCRIPCION", a."CANTIDAD_APROBADO"]]>
 	</queryString>
 	<field name="DESCRIPCION" class="java.lang.String"/>
 	<field name="CANTIDAD_APROBADO" class="java.lang.Integer"/>
@@ -48,23 +50,23 @@ where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."
 		</band>
 	</title>
 	<detail>
-		<band height="31" splitType="Stretch">
+		<band height="17" splitType="Stretch">
 			<textField>
-				<reportElement x="-4" y="0" width="114" height="20" uuid="43c2b1c9-6fc1-454e-985b-4d9a36eeaa81"/>
+				<reportElement x="-4" y="0" width="114" height="14" uuid="43c2b1c9-6fc1-454e-985b-4d9a36eeaa81"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="110" y="0" width="60" height="20" uuid="873e03a0-bcc1-40a7-8ff3-7a8b1e452fd3"/>
+				<reportElement x="110" y="0" width="60" height="14" uuid="873e03a0-bcc1-40a7-8ff3-7a8b1e452fd3"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CANTIDAD_APROBADO}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="170" y="0" width="100" height="20" uuid="ef10be3c-9e27-4485-8fba-7403cdef9ab7"/>
+				<reportElement x="170" y="0" width="100" height="14" uuid="ef10be3c-9e27-4485-8fba-7403cdef9ab7"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[--]]></text>
 			</staticText>

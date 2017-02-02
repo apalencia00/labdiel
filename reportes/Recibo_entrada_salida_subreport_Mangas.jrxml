@@ -9,9 +9,11 @@
 	<queryString>
 		<![CDATA[select cl."DESCRIPCION", a."CANTIDAD_APROBADO"
 
-from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c, labor."CLASE_EQUIPO" cl
+from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c, labor."CLASE_EQUIPO" cl,labor."EQUIPO_INVENTARIO_EMPRESA" emp
 
-where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic} AND c."NUM_COTIZACION" = a."FK_COTIZACION"]]>
+where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic} AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND substr("COD_EQUIPO", 1, 1) = 'M' AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
+
+GROUP BY cl."DESCRIPCION", a."CANTIDAD_APROBADO"]]>
 	</queryString>
 	<field name="DESCRIPCION" class="java.lang.String"/>
 	<field name="CANTIDAD_APROBADO" class="java.lang.Integer"/>
