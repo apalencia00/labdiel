@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2494f3d5-2a08-4d51-b2a3-c8d2aaa4f588">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="282"/>
+	<property name="ireport.y" value="435"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select * from labor."COTIZACION" coti, labor."CLIENTE" c where coti."NUM_COTIZACION" = $P{ncotic} AND c."ID_CLIENTE" = coti."FK_CLIENTE"]]>
@@ -227,6 +227,11 @@
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_subreport_Mantas.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="285" y="0" width="270" height="187" uuid="a1d560c7-29da-4be2-9cbc-5008d9a67186"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_subreport_Jumpers.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="108"/>

@@ -7,7 +7,7 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[select cl."DESCRIPCION", a."CANTIDAD_APROBADO"
+		<![CDATA[select cl."DESCRIPCION", SUM(a."CANTIDAD_APROBADO")
 
 from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c, labor."CLASE_EQUIPO" cl,labor."EQUIPO_INVENTARIO_EMPRESA" emp
 
@@ -15,10 +15,10 @@ where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."
 
 AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND   substr("COD_EQUIPO", 1, 3) = 'MNT' AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
 
-GROUP BY cl."DESCRIPCION", a."CANTIDAD_APROBADO"]]>
+GROUP BY cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 	</queryString>
 	<field name="DESCRIPCION" class="java.lang.String"/>
-	<field name="CANTIDAD_APROBADO" class="java.lang.Integer"/>
+	<field name="sum" class="java.lang.Long"/>
 	<title>
 		<band height="46" splitType="Stretch">
 			<staticText>
@@ -60,13 +60,6 @@ GROUP BY cl."DESCRIPCION", a."CANTIDAD_APROBADO"]]>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="111" y="0" width="60" height="15" uuid="ca5e5e03-edad-4b2b-9674-6d37b59edf35"/>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{CANTIDAD_APROBADO}]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement x="171" y="0" width="100" height="15" uuid="0028b73a-a682-4121-b834-4835d3a860c3"/>
 				<textElement textAlignment="Center">
@@ -74,6 +67,13 @@ GROUP BY cl."DESCRIPCION", a."CANTIDAD_APROBADO"]]>
 				</textElement>
 				<text><![CDATA[--]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="111" y="0" width="60" height="15" uuid="d0ec1aaa-3ab3-4b8d-97fc-0faf6dc8952e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sum}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
