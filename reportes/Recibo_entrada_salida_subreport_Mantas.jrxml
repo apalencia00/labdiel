@@ -1,72 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida_subreport_Mantas" language="groovy" pageWidth="216" pageHeight="802" columnWidth="216" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d616a894-9cbb-4cde-b931-8d24780329e3">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida_subreport_Mantas" language="groovy" pageWidth="288" pageHeight="802" columnWidth="288" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d616a894-9cbb-4cde-b931-8d24780329e3">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
-		<![CDATA[select count(1),  ce."DESCRIPCION" ,ec."MARCA"
+		<![CDATA[select cl."DESCRIPCION", a."CANTIDAD_APROBADO"
 
-from   labor."EQUIPO_CLIENTE" ec ,labor."TIPO_EQUIPO" tp, labor."CLASE_EQUIPO" ce
+from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c, labor."CLASE_EQUIPO" cl,labor."EQUIPO_INVENTARIO_EMPRESA" emp
 
-where   ec."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
+where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic}
 
-AND tp."FK_CLASE_EQUIPO" in (17,18,19,20,21)
+AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND   substr("COD_EQUIPO", 1, 3) = 'MNT' AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
 
-AND tp."ID_TIPO_EQUIPO" in (22,23,24,25,26)
-
-AND ce."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO"
-
-GROUP BY  ce."DESCRIPCION" ,ec."MARCA"]]>
+GROUP BY cl."DESCRIPCION", a."CANTIDAD_APROBADO"]]>
 	</queryString>
-	<field name="count" class="java.lang.Long"/>
 	<field name="DESCRIPCION" class="java.lang.String"/>
-	<field name="MARCA" class="java.lang.String"/>
+	<field name="CANTIDAD_APROBADO" class="java.lang.Integer"/>
 	<title>
-		<band height="48" splitType="Stretch">
+		<band height="46" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="0" width="216" height="20" backcolor="#CCCCCC" uuid="d734c7db-5fad-4997-a511-f2ee8049d17b"/>
+				<reportElement mode="Opaque" x="7" y="1" width="259" height="20" backcolor="#CCCCCC" uuid="d734c7db-5fad-4997-a511-f2ee8049d17b"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[3. MANTAS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="22" width="71" height="20" uuid="f5222cfe-3a8c-4035-943f-d6a3f54b5e5a"/>
+				<reportElement x="111" y="22" width="60" height="20" uuid="5de67dfa-a47e-4db1-9974-f4a86b2d407a"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[DESCRIPCION]]></text>
+				<text><![CDATA[CANTIDAD]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="125" y="22" width="91" height="20" uuid="b6b56198-35c5-4eb6-9029-19bed44e5510"/>
+				<reportElement x="171" y="23" width="113" height="20" uuid="e4799906-5ed9-4ca1-b0ec-f1ef88566c7f"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[MARCA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="71" y="22" width="54" height="20" uuid="8c1858c1-92ce-43cb-88bd-a5c599bf379d"/>
+				<reportElement x="-3" y="22" width="114" height="20" uuid="6dd35503-a43c-423d-80bf-2ab26d0a764e"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[CANTIDAD]]></text>
+				<text><![CDATA[DESCRIPCION]]></text>
 			</staticText>
 		</band>
 	</title>
 	<detail>
-		<band height="24" splitType="Stretch">
+		<band height="25" splitType="Stretch">
 			<textField>
-				<reportElement x="71" y="0" width="41" height="20" uuid="89b2f806-eb67-4260-af5b-079cf846ed17"/>
-				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="0" y="0" width="71" height="20" uuid="04609a1a-d2fc-432d-868a-fbe270bd04fb"/>
+				<reportElement x="-2" y="0" width="113" height="15" uuid="df9de250-22fd-483d-bcbb-d802e41968fc"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="0" width="100" height="20" uuid="e5ed0c61-4a4b-4449-ad51-750ee2627731"/>
-				<textFieldExpression><![CDATA[$F{MARCA}]]></textFieldExpression>
+				<reportElement x="111" y="0" width="60" height="15" uuid="ca5e5e03-edad-4b2b-9674-6d37b59edf35"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CANTIDAD_APROBADO}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="171" y="0" width="100" height="15" uuid="0028b73a-a682-4121-b834-4835d3a860c3"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[--]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>
