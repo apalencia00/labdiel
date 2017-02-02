@@ -30,6 +30,7 @@
      
       var cotic  = $("#cotic" , parent.document).val();
       var serial = $("#num_serialequipo", parent.document).val();
+      
  
       $.ajax({
 

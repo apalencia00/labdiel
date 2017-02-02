@@ -68,15 +68,15 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
             </div>
         </div>
         <div class="form-group">
-            <label for="pnombre" class="col-sm-3 control-label">Nombre</label>
+            <label for="pnombre" class="col-sm-3 control-label">Cliente</label>
             <div class="col-sm-9">
                 <input type="text" id="nomb" placeholder="Nombre" class="form-control">
             </div>
         </div>
         <div class="form-group">
-            <label for="papallido" class="col-sm-3 control-label">Apellido</label>
+            <label for="papallido" class="col-sm-3 control-label">Persona Contacto</label>
             <div class="col-sm-9">
-                <input type="text" id="ape" placeholder="Apellido(s)" class="form-control">
+                <input type="text" id="ape" placeholder="Persona Contacto" class="form-control">
             </div>
         </div>
                 <!--

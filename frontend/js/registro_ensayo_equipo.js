@@ -241,6 +241,7 @@ $(document).ready(function(){
 			$("input#tele").val(arr[0].tele);
 			$("input#persona").val(arr[0].contacto);
 			$("input#nombre").val(arr[0].nombre);
+			$("input#ciudad").val(arr[0].desc_ciudad);
 			$("input#email").val(arr[0].email);
 			$("input#dire").val(arr[0].direccion);
 			$("input#tele").val(arr[0].tel_cliente);

@@ -122,6 +122,7 @@ error : function(event){
 							label: 'Aceptar',
 							action: function(dialogItself){
 								dialogItself.close();
+								window.location.href=window.location.href; 
 							}
 						} ]
 					});    

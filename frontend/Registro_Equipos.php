@@ -73,7 +73,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
     <div class="container">
       <form class="form-horizontal" id="form" role="form">
-        <h2>Registro Equipos</h2>
+        <h2>Registro Medicion y Ensayo</h2>
 
         <fieldset class="the-fieldset">
 
@@ -97,7 +97,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
           <label for="numdoc" class="control-label col-sm-4">Serial Interno Equipo</label>
             <div class="col-sm-8">
-              <input type="text"  id="serial_interno" placeholder="Serial Interno Producto" class="form-control col-lg-100" autofocus>
+              <input type="text" readonly="readonly"  id="serial_interno" value="N/A" class="form-control col-lg-100" autofocus>
             </div>
 
           </div>
@@ -107,7 +107,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
             <label for="numdoc" class="control-label col-sm-4">Marca Equipo</label>
             <div class="col-sm-8">
-              <input type="text"  id="marca" placeholder="Nombre Equipo" class="form-control col-lg-100" autofocus>
+              <input type="text" value="N/A" readonly="readonly"  id="marca"  class="form-control col-lg-100" autofocus>
 
             </div>
 

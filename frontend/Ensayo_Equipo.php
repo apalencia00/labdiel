@@ -49,7 +49,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
         <fieldset  >
 
-          <legend>Ensayo Equipo</legend>
+          <legend>Solicitud Ensayo Equipo</legend>
 
 
           <div class="row">
@@ -139,9 +139,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
         <label for="tipodoc" class="control-label col-sm-4">Ciudad</label>
         <div class="col-sm-2 col-xs-5">
 
-         <select id="ciudad" class="form-control col-lg-4">
-          <option>Seleccione </option>
-        </select>
+         <input type="text" name="ciudad" id="ciudad" >
         <span class="help-block"></span>
       </div>
 
@@ -274,6 +272,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 </div>
 
+<div class="row">
 
 <table id="mytable" class="table table-striped">
   <thead>
@@ -297,6 +296,8 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       </tr>
     </tbody>
   </table>
+
+  </div>
 
 </fieldset>
 
