@@ -94,23 +94,23 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
           <div class="form-group">
 
-
+          <!--
           <label for="numdoc" class="control-label col-sm-4">Serial Interno Equipo</label>
-            <div class="col-sm-8">
+            <div class="col-sm-8"> -->
               <input type="hidden" readonly="readonly"  id="serial_interno" value="N/A" class="form-control col-lg-100" autofocus>
             </div>
 
-          </div>
+         <!-- </div> -->
 
           <div class="form-group">
 
-
+            <!--
             <label for="numdoc" class="control-label col-sm-4">Marca Equipo</label>
-            <div class="col-sm-8">
+            <div class="col-sm-8">-->
               <input type="hidden"  value="N/A" readonly="readonly"  id="marca"  class="form-control col-lg-100" autofocus>
 
-            </div>
-
+           <!-- </div> -->
+            
           </div>
 
         
