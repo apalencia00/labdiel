@@ -118,7 +118,7 @@ $(document).ready(function(){
 					$.each(arr, function(key, value){
 
 					//console.log("AQUI ESTOY!!"+arr);
-					html += ' <tr> <td width="10%" id="bacano"  data-target="#myModal" data-toggle="modal" data-id="'+arr[key].COD_SERIAL+'" >' +  arr[key].COD_SERIAL + '</td>' +'<td width="10%"    >' +  arr[key].DESCRIPCION + '</td>' + '<td width="10%" >' +  arr[key].FK_COD_TIPO_EQUIPO + '</td>'  ;
+					html += ' <tr> <td width="10%" id="bacano"  data-target="#myModal" data-toggle="modal" data-id="'+arr[key].ID_DET_COTI_SERIAL_EQUIPO+'" >' +  arr[key].ID_DET_COTI_SERIAL_EQUIPO + '</td>' +'<td width="10%">' +  arr[key].COD_SERIAL + '</td>' + '<td width="10%" >' +  arr[key].DESCRIPCION + '</td>' +'<td width="10%">' +  arr[key].FK_COD_TIPO_EQUIPO + '</td>' ;
 					html += '</tr>';
 
 				});
