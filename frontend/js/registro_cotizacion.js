@@ -221,7 +221,7 @@ for (i = 0, j = rows.length; i < j; ++i) {
 
     		complete : function(events){
 
-    			BootstrapDialog.show({
+    			/*BootstrapDialog.show({
 						title : 'Operacion Exitosa',
 						type : BootstrapDialog.TYPE_SUCCESS,
 						message: 'Registro satisfactorio',
@@ -231,7 +231,7 @@ for (i = 0, j = rows.length; i < j; ++i) {
 								dialogItself.close();
 							}
 						} ]
-					});  
+					});  */
 
     		}
     	});
