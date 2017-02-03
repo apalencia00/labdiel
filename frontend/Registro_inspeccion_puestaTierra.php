@@ -139,7 +139,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           <table  class="table table-striped">
             <thead>
               <tr >
-                <th>Id Serial</th>
+                <th>Codigo Unico</th>
                 <th>Marca Fabricante</th>
                 <th>Tipo Equipo</th>
                 <th>Codigo Asignado</th>

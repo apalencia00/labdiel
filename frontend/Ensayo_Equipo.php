@@ -141,7 +141,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
         <label for="tipodoc" class="control-label col-sm-4">Ciudad</label>
         <div class="col-sm-2 col-xs-5">
 
-         <input type="text" name="ciudad" id="ciudad" >
+         <input class="form-control col-lg-4" type="text" name="ciudad" id="ciudad" >
         <span class="help-block"></span>
       </div>
 
