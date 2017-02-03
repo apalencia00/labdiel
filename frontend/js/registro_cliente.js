@@ -53,6 +53,7 @@ $( document ).ready(function() {
 							label: 'Aceptar',
 							action: function(dialogItself){
 								dialogItself.close();
+								window.refresh();
 							}
 						} ]
 					});    
