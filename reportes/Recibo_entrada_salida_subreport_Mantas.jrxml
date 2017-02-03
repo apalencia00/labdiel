@@ -55,7 +55,7 @@ GROUP BY cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 		<band height="15" splitType="Stretch">
 			<textField>
 				<reportElement x="-2" y="0" width="113" height="15" uuid="df9de250-22fd-483d-bcbb-d802e41968fc"/>
-				<textElement>
+				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
