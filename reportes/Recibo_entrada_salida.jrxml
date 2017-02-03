@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2494f3d5-2a08-4d51-b2a3-c8d2aaa4f588">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida" language="groovy" pageWidth="892" pageHeight="842" columnWidth="852" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2494f3d5-2a08-4d51-b2a3-c8d2aaa4f588">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="435"/>
+	<property name="ireport.x" value="100"/>
+	<property name="ireport.y" value="791"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select * from labor."COTIZACION" coti, labor."CLIENTE" c where coti."NUM_COTIZACION" = $P{ncotic} AND c."ID_CLIENTE" = coti."FK_CLIENTE"]]>
@@ -212,28 +212,134 @@
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_subreport_Mangas.jasper"]]></subreportExpression>
 			</subreport>
-		</band>
-		<band height="200">
 			<rectangle>
-				<reportElement x="0" y="0" width="270" height="187" uuid="b74786b9-7230-4619-a73b-af55be9c2f5e"/>
-			</rectangle>
-			<rectangle>
-				<reportElement x="285" y="0" width="270" height="187" uuid="cd9828c4-2d44-4cbc-ba81-d1056e0a2e85"/>
+				<reportElement x="574" y="0" width="270" height="187" uuid="b74786b9-7230-4619-a73b-af55be9c2f5e"/>
 			</rectangle>
 			<subreport>
-				<reportElement x="0" y="0" width="270" height="187" uuid="3b63230d-7c80-4bfc-932b-67f08a383cad"/>
+				<reportElement x="574" y="0" width="270" height="187" uuid="3b63230d-7c80-4bfc-932b-67f08a383cad"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_subreport_Mantas.jasper"]]></subreportExpression>
 			</subreport>
+		</band>
+		<band height="204">
+			<rectangle>
+				<reportElement x="0" y="0" width="270" height="187" uuid="cd9828c4-2d44-4cbc-ba81-d1056e0a2e85"/>
+			</rectangle>
 			<subreport>
-				<reportElement x="285" y="0" width="270" height="187" uuid="a1d560c7-29da-4be2-9cbc-5008d9a67186"/>
+				<reportElement x="0" y="0" width="270" height="187" uuid="a1d560c7-29da-4be2-9cbc-5008d9a67186"/>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
+				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_subreport_Jumpers.jasper"]]></subreportExpression>
 			</subreport>
+			<rectangle>
+				<reportElement x="285" y="0" width="270" height="187" uuid="31538ea3-0e2b-4515-93c0-e4cd7305b0e5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="574" y="0" width="270" height="187" uuid="f194ac85-9a78-4866-aacc-5f3f85924a8a"/>
+			</rectangle>
+			<subreport>
+				<reportElement x="285" y="0" width="270" height="187" uuid="02f8fef7-8134-4422-a3ba-88b8fefc65b2"/>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_Elevacion.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="574" y="0" width="270" height="187" uuid="1ec0bfc5-ae8a-4943-bfe8-a4ecdc0ca7b7"/>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_Cubridor.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
-		<band height="108"/>
+		<band height="200">
+			<rectangle>
+				<reportElement x="0" y="0" width="270" height="187" uuid="1fe0ce7b-7207-459f-9d4d-6109d1d3990c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="285" y="0" width="270" height="187" uuid="30f12eea-f043-4446-a31c-1fca3f949bd7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="574" y="0" width="270" height="187" uuid="4b64078e-0617-4a08-95b6-2220983136df"/>
+			</rectangle>
+			<subreport>
+				<reportElement x="0" y="0" width="270" height="187" uuid="23676631-c325-4b8d-a698-639d01111d8d"/>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_Pertigas.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="285" y="0" width="270" height="187" uuid="f8734b7e-c4e1-4a22-91c4-7104b07204d8"/>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_Cruceta.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="574" y="0" width="270" height="187" isPrintWhenDetailOverflows="true" uuid="43d9b8b3-ad58-4dba-9b7b-ff2d32b0cba7"/>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_Aislador.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="127">
+			<subreport>
+				<reportElement x="0" y="0" width="844" height="127" uuid="1d57a9eb-c975-489a-b1c0-acd9ed197506"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Recibo_entrada_salida_Otros.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="76">
+			<staticText>
+				<reportElement x="17" y="12" width="268" height="20" uuid="9d1208a5-75ee-4394-926c-d73a6e895942"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RECIBIDO POR(Nombre y Firma)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="12" width="390" height="20" uuid="caf81901-8dfe-45e4-99ee-11ba637627a9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE,  FIRMA  Y DOCUMENTO DE IDENTIDIDAD DEL CLIENTE]]></text>
+			</staticText>
+		</band>
+		<band height="80">
+			<staticText>
+				<reportElement x="225" y="1" width="268" height="20" uuid="a865c902-1aa7-4092-b1a6-c1342b4d5e0b"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENTREGA DE EQUIPOS ENSAYADOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="21" width="208" height="20" uuid="89697034-f073-488a-92c9-20abdc5a5763"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA DE ENTREGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="493" y="21" width="208" height="20" uuid="be0e4238-c139-4e77-8b28-14fe73b5ccaf"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA DE ENTREGA]]></text>
+			</staticText>
+		</band>
 	</detail>
 </jasperReport>

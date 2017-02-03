@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida_subreport_Jumpers" language="groovy" pageWidth="288" pageHeight="802" columnWidth="288" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="02493226-2106-4afb-9118-f4ea83a9fd0b">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida_Cruceta" language="groovy" pageWidth="288" pageHeight="802" columnWidth="288" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e7db9841-aa5f-44a1-9d3a-ee75794c0578">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -13,35 +13,35 @@ from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c
 
 where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic}
 
-AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND   substr("COD_EQUIPO", 1, 1) = 'J' AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
+AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND substr("COD_EQUIPO", 1, 3) = 'CRU'  AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
 
 GROUP BY cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 	</queryString>
 	<title>
-		<band height="54" splitType="Stretch">
+		<band height="79" splitType="Stretch">
 			<staticText>
-				<reportElement x="-4" y="20" width="114" height="20" uuid="279a592a-debb-4b46-b761-670a102a079a"/>
-				<textElement textAlignment="Center">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[DESCRIPCION]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="10" y="0" width="259" height="20" backcolor="#CCCCCC" uuid="acc0acdf-ca8f-4223-9371-06d3af69cfe7"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[4. JUMPERS]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="171" y="20" width="113" height="20" uuid="206603df-a53d-4f6e-bfe7-781b8384d4d8"/>
+				<reportElement x="169" y="21" width="113" height="20" uuid="dbb44325-5b0f-4b58-b2fa-3d8726f799cd"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[MARCA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="111" y="20" width="60" height="20" uuid="e7127340-1ed1-4f68-89a3-8cf32e71ea1c"/>
+				<reportElement mode="Opaque" x="11" y="0" width="256" height="20" backcolor="#CCCCCC" uuid="27a5beae-f090-4138-9499-3a60dce148ce"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[8. CUBRIDOR DE CRUCETA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-2" y="21" width="114" height="20" uuid="0e208e73-1929-4ea5-9ec4-f40293b45b08"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="21" width="60" height="20" uuid="5478e29c-df16-464e-8afd-e37fdd7d3439"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>

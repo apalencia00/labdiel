@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida_Otros" language="groovy" pageWidth="576" pageHeight="802" columnWidth="576" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="837eab1f-4eb8-45ba-a452-d683fe00ffaf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<title>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="275" y="20" width="113" height="20" uuid="2d75aef4-0ea8-414e-9384-669c9940dd73"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLASE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="20" width="114" height="20" uuid="10e546df-3d8d-44ff-8a30-dd916f8ae399"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="0" width="539" height="20" backcolor="#CCCCCC" uuid="247336eb-0d63-43db-9d1a-300ac2c28480"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[8. CUBRIDOR DE CRUCETA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="20" width="94" height="20" uuid="7c2ec821-a10f-42ab-a5a2-0881a4fd6997"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CANTIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="20" width="113" height="20" uuid="9d5727e4-f09b-491c-9ab1-c5a573b254bc"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MARCA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="62" splitType="Stretch"/>
+	</detail>
+</jasperReport>
