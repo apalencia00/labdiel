@@ -15,10 +15,13 @@
        "CRISTAL", "QUEMADURA", "OBS_QUEMADURA", "CONTAMINACION", "OBS_CONTAMINACION",
        "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
-       "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*, cl."DESCRIPCION" as laclase
-  FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co, labor."TIPO_EQUIPO" eq, labor."CLASE_EQUIPO" cl, labor."EQUIPO_INVENTARIO_EMPRESA" emp
+       "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*
 
- WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" and ins."FK_COTIZACION"  = $P{ncotic} AND co."FK_CLIENTE" = c."ID_CLIENTE" AND substr("FK_ID_SERIAL_EQUIPO", 1, 1) = 'G'  AND emp."COD_EQUIPO" = "FK_ID_SERIAL_EQUIPO" AND emp."FK_TIPO_EQUIPO" = cl."ID_CLASE_EQUIPO"  ;]]>
+  FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co
+
+ WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" and ins."FK_COTIZACION"  = 'COTIC-1000' AND co."FK_CLIENTE" = c."ID_CLIENTE"
+
+ AND substr("FK_ID_SERIAL_EQUIPO", 1, 1) = 'G'  ]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
@@ -77,7 +80,6 @@
 	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
 	<field name="USUARIO" class="java.lang.Integer"/>
 	<field name="APELLIDO" class="java.lang.String"/>
-	<field name="laclase" class="java.lang.String"/>
 	<title>
 		<band height="54" splitType="Stretch">
 			<staticText>

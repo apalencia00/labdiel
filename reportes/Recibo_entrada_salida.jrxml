@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida" language="groovy" pageWidth="892" pageHeight="842" columnWidth="852" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2494f3d5-2a08-4d51-b2a3-c8d2aaa4f588">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="35"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.x" value="26"/>
+	<property name="ireport.y" value="915"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select * from labor."COTIZACION" coti, labor."CLIENTE" c where coti."NUM_COTIZACION" = $P{ncotic} AND c."ID_CLIENTE" = coti."FK_CLIENTE"]]>
@@ -321,7 +321,7 @@
 				<text><![CDATA[NOMBRE,  FIRMA  Y DOCUMENTO DE IDENTIDIDAD DEL CLIENTE]]></text>
 			</staticText>
 		</band>
-		<band height="80">
+		<band height="42">
 			<staticText>
 				<reportElement x="225" y="1" width="268" height="20" uuid="a865c902-1aa7-4092-b1a6-c1342b4d5e0b"/>
 				<textElement textAlignment="Center">
@@ -342,6 +342,34 @@
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[FECHA DE ENTREGA]]></text>
+			</staticText>
+		</band>
+		<band height="82">
+			<staticText>
+				<reportElement x="17" y="3" width="208" height="20" uuid="90ce8905-583c-469c-a69b-78ecb2803df0"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENTREGADO POR(Nombre y Firma)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="3" width="408" height="20" uuid="7a57eb3a-a569-45db-9bcb-82a8018e5b66"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE,  FIRMA  Y DOCUMENTO DE IDENTIDIDAD DEL CLIENTE]]></text>
+			</staticText>
+		</band>
+		<band height="50">
+			<staticText>
+				<reportElement x="0" y="0" width="852" height="50" forecolor="#FF0000" uuid="98e0d5f0-a4fd-4061-8f80-f67fc2983035"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOTA: Para la entrega de los equipos ensayados, es necesario presentar este documento. De no contar con este documento al momento de retirar los equipos del Laboratorio, se requiere que el cliente  envie un correo electronico desde un email institucional especificando el nombre y numero de identificiacion de la persona que retirara los equipos al email pruebaselect@jorgebedoya.com
+
+
+]]></text>
 			</staticText>
 		</band>
 	</detail>

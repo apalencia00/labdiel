@@ -47,6 +47,13 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
       <form class="form form-inline" role="form" id="form">
 
+      
+          <div class="form-group">
+            <div class="col-sm-8 col-xs-5">
+            <input type="hidden" id="idrevision" >
+            </div>
+            </div>
+
         <fieldset  >
 
           <legend>Solicitud Ensayo Equipo</legend>
@@ -77,11 +84,6 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
              
           </div>
 
-          <div class="form-group">
-            <div class="col-sm-8 col-xs-5">
-            <input type="hidden" id="idrevision" >
-            </div>
-            </div>
 
         </div>
 
