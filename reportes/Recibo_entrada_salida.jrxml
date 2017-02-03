@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida" language="groovy" pageWidth="892" pageHeight="842" columnWidth="852" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2494f3d5-2a08-4d51-b2a3-c8d2aaa4f588">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="70"/>
+	<property name="ireport.x" value="35"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select * from labor."COTIZACION" coti, labor."CLIENTE" c where coti."NUM_COTIZACION" = $P{ncotic} AND c."ID_CLIENTE" = coti."FK_CLIENTE"]]>
@@ -35,21 +35,21 @@
 	<title>
 		<band height="244" splitType="Stretch">
 			<staticText>
-				<reportElement x="311" y="3" width="324" height="20" uuid="d291f14d-dc70-47f7-8017-129b1f4f3b8d"/>
+				<reportElement x="289" y="3" width="366" height="20" uuid="d291f14d-dc70-47f7-8017-129b1f4f3b8d"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[LABORATORIO DIELECTRICO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="285" y="23" width="370" height="20" uuid="93243386-886a-4830-91c3-3f92ede68c15"/>
+				<reportElement x="289" y="23" width="366" height="20" uuid="93243386-886a-4830-91c3-3f92ede68c15"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[COMPROBANTE ENTRADA Y SALIDA DE EQUIPOS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="311" y="43" width="324" height="20" uuid="594d3b0c-b6ff-4661-bda2-2bc50edad61a"/>
+				<reportElement x="289" y="43" width="366" height="20" uuid="594d3b0c-b6ff-4661-bda2-2bc50edad61a"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -57,24 +57,27 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="400" y="66" width="117" height="20" uuid="e242f58d-2ec7-4272-8a07-9fc0db26e020"/>
-				<textElement>
-					<font size="12" isBold="false"/>
+				<reportElement x="289" y="66" width="366" height="20" uuid="e242f58d-2ec7-4272-8a07-9fc0db26e020"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Calle 42 No. 44-51
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="337" y="106" width="229" height="20" uuid="1773eb47-e291-4681-a5ac-b5f617e3906a"/>
+				<reportElement x="289" y="106" width="366" height="20" uuid="1773eb47-e291-4681-a5ac-b5f617e3906a"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="false"/>
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[e-mail: pruebaselect@jorgebedoya.com
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="337" y="86" width="232" height="20" uuid="9ba340c6-c3a5-43e9-8d62-eac8116f1879"/>
-				<text><![CDATA[ * Tel. 3515740 - 3404892 - 3184561366 Barranquilla]]></text>
+				<reportElement x="289" y="86" width="366" height="20" uuid="9ba340c6-c3a5-43e9-8d62-eac8116f1879"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tel. 3515740 - 3404892 - 3184561366 Barranquilla]]></text>
 			</staticText>
 			<image>
 				<reportElement x="17" y="12" width="104" height="74" uuid="6c4ba62a-5140-4054-a963-8960b491fe3e"/>
