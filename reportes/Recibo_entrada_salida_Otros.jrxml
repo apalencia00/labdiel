@@ -3,6 +3,20 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select cl."DESCRIPCION", SUM(a."CANTIDAD_APROBADO")
+
+from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c, labor."CLASE_EQUIPO" cl,labor."EQUIPO_INVENTARIO_EMPRESA" emp
+
+where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic} AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND substr("COD_EQUIPO", 1, 1) <> 'G' AND substr("COD_EQUIPO", 1, 1) <> 'C' AND substr("COD_EQUIPO", 1, 1) <> 'P' AND substr("COD_EQUIPO", 1, 3) <> 'PER' AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
+
+GROUP BY cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
+	</queryString>
+	<field name="DESCRIPCION" class="java.lang.String"/>
+	<field name="sum" class="java.lang.Long"/>
 	<title>
 		<band height="40" splitType="Stretch">
 			<staticText>
