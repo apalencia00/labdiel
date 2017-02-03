@@ -97,7 +97,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
           <label for="numdoc" class="control-label col-sm-4">Serial Interno Equipo</label>
             <div class="col-sm-8">
-              <input type="text" hidden="hidden" readonly="readonly"  id="serial_interno" value="N/A" class="form-control col-lg-100" autofocus>
+              <input type="hidden" readonly="readonly"  id="serial_interno" value="N/A" class="form-control col-lg-100" autofocus>
             </div>
 
           </div>
@@ -107,7 +107,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
             <label for="numdoc" class="control-label col-sm-4">Marca Equipo</label>
             <div class="col-sm-8">
-              <input type="text" hidden="hidden" value="N/A" readonly="readonly"  id="marca"  class="form-control col-lg-100" autofocus>
+              <input type="hidden"  value="N/A" readonly="readonly"  id="marca"  class="form-control col-lg-100" autofocus>
 
             </div>
 
