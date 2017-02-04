@@ -4,7 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<queryString>
-		<![CDATA[ SELECT "ID_EQUIPO", "COD_EQUIPO", "MARCA", "FK_TIPO_EQUIPO", "FECHA_REGISTRO",
+		<![CDATA[SELECT "ID_EQUIPO", "COD_EQUIPO", "MARCA", "FK_TIPO_EQUIPO", "FECHA_REGISTRO",
        "ESTADO", "SERIAL_INTERNO"
   FROM labor."EQUIPO_INVENTARIO_EMPRESA" WHERE   substr("COD_EQUIPO", 1, 1) = 'P' AND substr("COD_EQUIPO", 1, 3) <> 'PER'  ;]]>
 	</queryString>
@@ -16,7 +16,7 @@
 	<field name="ESTADO" class="java.lang.String"/>
 	<field name="SERIAL_INTERNO" class="java.lang.String"/>
 	<detail>
-		<band height="125" splitType="Stretch">
+		<band height="20" splitType="Stretch">
 			<textField>
 				<reportElement x="107" y="0" width="100" height="20" uuid="481dd53e-fd6b-4c43-85dd-414ed3b2e701"/>
 				<textFieldExpression><![CDATA[$F{COD_EQUIPO}]]></textFieldExpression>
