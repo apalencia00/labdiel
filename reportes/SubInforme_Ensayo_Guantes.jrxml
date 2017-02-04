@@ -16,12 +16,13 @@
        "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*
+  FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co, labor."DET_COTI_SERIALIZAR_EQUIPO" dts
 
-  FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co
+ WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" AND ins."FK_COTIZACION" = $P{ncotic} AND co."FK_CLIENTE" = c."ID_CLIENTE"
 
- WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" and ins."FK_COTIZACION"  = 'COTIC-1000' AND co."FK_CLIENTE" = c."ID_CLIENTE"
+ --
 
- AND substr("FK_ID_SERIAL_EQUIPO", 1, 1) = 'G'  ]]>
+ and dts.id_detalle_serial::integer = ins."FK_ID_SERIAL_EQUIPO"::integer AND substr(dts.cod_seriales, 1, 1) = 'G';]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>

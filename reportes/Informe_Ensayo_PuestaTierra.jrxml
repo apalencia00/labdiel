@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_PuestaTierra" language="groovy" pageWidth="864" pageHeight="842" columnWidth="824" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="de5e7f44-18f1-4e8e-bb24-4ef031a85d88">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="328"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -235,37 +235,44 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="158">
+		<band height="55">
+			<subreport>
+				<reportElement x="2" y="0" width="822" height="55" uuid="69f32886-806c-4821-bf79-189ec97e0eac"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_PuestaTierra_Datos.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="164">
 			<staticText>
-				<reportElement x="11" y="10" width="199" height="20" uuid="0c270b0d-b652-4cfc-861b-b3afc15921ad"/>
+				<reportElement x="1" y="17" width="199" height="20" uuid="0c270b0d-b652-4cfc-861b-b3afc15921ad"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Condiciones ambientales/Enviromental conditio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="228" y="36" width="252" height="20" uuid="fb6cfc72-7bdf-4566-badf-2ce2a5ca6a21"/>
+				<reportElement x="218" y="43" width="252" height="20" uuid="fb6cfc72-7bdf-4566-badf-2ce2a5ca6a21"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Humedad Relativa(%HR)/Relative Humidity(%RH)									]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="11" y="36" width="159" height="20" uuid="2f1b1101-12d5-4ad1-be09-4548d924bb23"/>
+				<reportElement x="1" y="43" width="159" height="20" uuid="2f1b1101-12d5-4ad1-be09-4548d924bb23"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature (°C)			]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="125" width="181" height="20" uuid="4def18dc-7f65-4b50-908b-609b9e0c1e99"/>
+				<reportElement x="0" y="132" width="181" height="20" uuid="4def18dc-7f65-4b50-908b-609b9e0c1e99"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="12" y="62" width="553" height="60" uuid="3e74ddaf-b511-4b4b-acdf-b2fb8c229ee2"/>
+				<reportElement x="2" y="69" width="553" height="60" uuid="3e74ddaf-b511-4b4b-acdf-b2fb8c229ee2"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -273,11 +280,11 @@ Autorized service by customer]]></text>
 La incertidumbre reportada representa la incertidumbre expandida a un nivel de  confianza de 95% utilizando un factor de cobertura k=2/ The reported uncertainties represent expanded uncertainties expressed at approximately the 95% confidence level using a coverage factor k=2."																								]]></text>
 			</staticText>
 		</band>
-		<band height="52">
+		<band height="50">
 			<subreport>
-				<reportElement x="0" y="0" width="824" height="44" uuid="433489ac-8577-457b-a8b6-6c69b92a5a38"/>
+				<reportElement x="1" y="0" width="823" height="50" uuid="433489ac-8577-457b-a8b6-6c69b92a5a38"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\SubInforme_Ensayo_Puestatierra.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/SubInforme_Ensayo_Puestatierra.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>

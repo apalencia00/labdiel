@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas_subreport1" language="groovy" pageWidth="864" pageHeight="802" columnWidth="864" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="aeca0e01-ac90-4322-8b53-51e3d076ed8e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="59"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT "ID_EQUIPO", "COD_EQUIPO", "MARCA", "FK_TIPO_EQUIPO", "FECHA_REGISTRO",
+       "ESTADO", "SERIAL_INTERNO"
+  FROM labor."EQUIPO_INVENTARIO_EMPRESA" WHERE   substr("COD_EQUIPO", 1, 1) = 'G';]]>
+	</queryString>
+	<field name="ID_EQUIPO" class="java.lang.Long"/>
+	<field name="COD_EQUIPO" class="java.lang.String"/>
+	<field name="MARCA" class="java.lang.String"/>
+	<field name="FK_TIPO_EQUIPO" class="java.lang.Integer"/>
+	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
+	<field name="ESTADO" class="java.lang.String"/>
+	<field name="SERIAL_INTERNO" class="java.lang.String"/>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="108" y="0" width="100" height="20" uuid="1671f6da-e99b-4727-8a60-6ff3558aecae"/>
+				<textFieldExpression><![CDATA[$F{COD_EQUIPO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="0" width="100" height="20" uuid="da8dc749-c677-431a-b8ee-3e2a1376da69"/>
+				<textFieldExpression><![CDATA[$F{SERIAL_INTERNO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="50"/>
+	</detail>
+</jasperReport>

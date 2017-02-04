@@ -5,6 +5,7 @@
 
        <meta name="viewport" content="width=device-width, initial-scale=1">
        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+           <link rel="stylesheet" type="text/css" href="css/bootstrap-dialog.css">
 
        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-notifications.css">
        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
@@ -12,10 +13,11 @@
        <script src="bootstrap/js/bootstrap.min.js"></script>
        <script type="text/javascript" src="js/registro_inspeccion.js" ></script>
        <script type="text/javascript" src="bootstrap/css/docs.js" ></script>
+        <script type="text/javascript" src="js/bootstrap-dialog.js" ></script>
 
-       <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
-       <script src="js/bootstrap-toggle.min.js"></script>
-       <script src="js/bootstrap-waitingfor.js"></script>
+     <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="js/bootstrap-toggle.min.js"></script>
+    <script src="js/bootstrap-waitingfor.js"></script>>
 
        <script type="text/javascript">
 
@@ -146,9 +148,60 @@
                    },
              success: function(json)
              {
-                console.log(vcable[0]);
+                
+        try{ 
+
+          var obj = jQuery.parseJSON(json);
+          console.log(obj.success);
+          if(obj.success){ 
+
+          BootstrapDialog.show({
+            title : 'Operacion Exitosa',
+            type : BootstrapDialog.TYPE_SUCCESS,
+            message: obj.root,
+            buttons: [{
+              label: 'Aceptar',
+              action: function(dialogItself){
+                dialogItself.close();
+                window.refresh();
+              }
+            } ]
+          });    
+
+         }else{
+
+          BootstrapDialog.show({
+            title : 'Error',
+            type : BootstrapDialog.TYPE_DANGER,
+            message: obj.root,
+            buttons: [{
+              label: 'Ok',
+              action: function(dialogItself){
+                dialogItself.close();
+              }
+            } ]
+          });  
+
+         }
+
+          }catch(e){}
 
 
+            },
+            error : function(){
+
+              BootstrapDialog.show({
+            title : 'Error en Peticion',
+            type : BootstrapDialog.TYPE_DANGER,
+            message: 'Error no se pudo realizar la solicitud',
+            buttons: [{
+              label: 'Ok',
+              action: function(dialogItself){
+                dialogItself.close();
+              }
+            } ]
+          }); 
+              
             }
           });
 

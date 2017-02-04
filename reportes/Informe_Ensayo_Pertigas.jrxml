@@ -224,16 +224,30 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="153">
+		<band height="50">
+			<subreport>
+				<reportElement x="1" y="0" width="823" height="50" uuid="36c7df0a-f403-4e6a-9256-fcd31a0b8a87"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Pertigas_Datos.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="158">
 			<staticText>
-				<reportElement x="228" y="36" width="252" height="20" uuid="1b75156c-c7f2-4968-92f3-567faf60262d"/>
+				<reportElement x="0" y="120" width="181" height="20" uuid="107e38dc-8078-4748-8530-3ad53de973f8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="26" width="252" height="20" uuid="1b75156c-c7f2-4968-92f3-567faf60262d"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Humedad Relativa(%HR)/Relative Humidity(%RH)									]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="12" y="62" width="553" height="60" uuid="ac01ce47-eb08-4098-8a06-6dcfa0ac6d06"/>
+				<reportElement x="1" y="52" width="553" height="60" uuid="ac01ce47-eb08-4098-8a06-6dcfa0ac6d06"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -241,46 +255,39 @@ Autorized service by customer]]></text>
 La incertidumbre reportada representa la incertidumbre expandida a un nivel de  confianza de 95% utilizando un factor de cobertura k=2/ The reported uncertainties represent expanded uncertainties expressed at approximately the 95% confidence level using a coverage factor k=2."																								]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="11" y="36" width="159" height="20" uuid="0b5d2f53-cbf4-4f91-b149-e3a9e690c768"/>
+				<reportElement x="0" y="26" width="159" height="20" uuid="0b5d2f53-cbf4-4f91-b149-e3a9e690c768"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature (°C)			]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="11" y="10" width="199" height="20" uuid="85ea1bc9-2bba-475f-9675-080539726e83"/>
+				<reportElement x="0" y="0" width="199" height="20" uuid="85ea1bc9-2bba-475f-9675-080539726e83"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Condiciones ambientales/Enviromental conditio]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="10" y="125" width="181" height="20" uuid="107e38dc-8078-4748-8530-3ad53de973f8"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
-			</staticText>
 		</band>
-		<band height="42">
+		<band height="50">
 			<subreport>
-				<reportElement x="0" y="0" width="824" height="42" uuid="eeea33d1-26a9-476b-9399-646bf344ec8c"/>
+				<reportElement x="0" y="0" width="824" height="50" uuid="eeea33d1-26a9-476b-9399-646bf344ec8c"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/SubInforme_Ensayo_Pertigas.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="50">
+		<band height="46">
 			<staticText>
-				<reportElement x="0" y="12" width="470" height="20" uuid="b2b1ec6c-617f-4f4e-a5a3-82d5bdc24145"/>
+				<reportElement x="0" y="26" width="470" height="20" uuid="b2b1ec6c-617f-4f4e-a5a3-82d5bdc24145"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Resultado del(los) equipo(s) ensayados(s)/Equipment test result]]></text>
 			</staticText>
 		</band>
-		<band height="46">
+		<band height="51">
 			<subreport>
-				<reportElement x="0" y="0" width="824" height="41" uuid="39976b3a-8f9e-4f8f-848d-069f6a6be365"/>
+				<reportElement x="0" y="0" width="824" height="50" uuid="39976b3a-8f9e-4f8f-848d-069f6a6be365"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/SubInforme_Ensayo_Pertigas2.jasper"]]></subreportExpression>
 			</subreport>
