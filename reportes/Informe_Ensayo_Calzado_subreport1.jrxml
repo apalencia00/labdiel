@@ -28,7 +28,7 @@
 		<groupExpression><![CDATA[$F{SERIAL_INTERNO}]]></groupExpression>
 	</group>
 	<detail>
-		<band height="49" splitType="Stretch">
+		<band height="20" splitType="Stretch">
 			<textField>
 				<reportElement x="96" y="0" width="100" height="20" uuid="a4f45eb2-da93-4722-a831-e1012a1ac2b5"/>
 				<textFieldExpression><![CDATA[$F{COD_EQUIPO}]]></textFieldExpression>

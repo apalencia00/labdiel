@@ -3,16 +3,19 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT "ID_PUESTA_TIERRA", "FK_COTIZACION", "SERIAL", "CORRIENTE", "N_TRAMO",
        "FALTRAN", "GRIETAS", "ROTURAS", "FALTRAN_CONECT", "FLUJOS",
        "OXIDADOS", "RAJADO", "OPACAS", "ABRASION", "APLASTADO", "SULFATADO",
        "HILOS ROTOS", "AWG", "LONGITUD", "TC_AMBIENTE", "HR_AMBIENTE",
        "RESISTENCIA","FECHA_REGISTRO"
-  FROM labor."REGISTRO_ENSAYO_PUESTATIERRA";]]>
+  FROM labor."REGISTRO_ENSAYO_PUESTATIERRA" WHERE "FK_COTIZACION" = $P{ncotic} ;]]>
 	</queryString>
 	<field name="ID_PUESTA_TIERRA" class="java.lang.Integer"/>
-	<field name="FK_COTIZACION" class="java.lang.Integer"/>
+	<field name="FK_COTIZACION" class="java.lang.String"/>
 	<field name="SERIAL" class="java.lang.String"/>
 	<field name="CORRIENTE" class="java.lang.String"/>
 	<field name="N_TRAMO" class="java.lang.Integer"/>
@@ -28,8 +31,8 @@
 	<field name="APLASTADO" class="java.lang.Integer"/>
 	<field name="SULFATADO" class="java.lang.Integer"/>
 	<field name="HILOS ROTOS" class="java.lang.Integer"/>
-	<field name="AWG" class="java.lang.Integer"/>
-	<field name="LONGITUD" class="java.lang.Integer"/>
+	<field name="AWG" class="java.lang.Double"/>
+	<field name="LONGITUD" class="java.lang.Double"/>
 	<field name="TC_AMBIENTE" class="java.lang.Double"/>
 	<field name="HR_AMBIENTE" class="java.lang.Double"/>
 	<field name="RESISTENCIA" class="java.lang.Double"/>
@@ -121,7 +124,7 @@ Manufacturer
 		</band>
 	</title>
 	<detail>
-		<band height="30" splitType="Stretch">
+		<band height="20" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="0" width="119" height="20" uuid="60c45cbf-b0c3-4854-9ef0-172a758fbcf0"/>
 				<textElement textAlignment="Center">
