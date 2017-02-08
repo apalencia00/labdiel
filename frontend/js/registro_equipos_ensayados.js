@@ -190,7 +190,7 @@ $(document).ready(function(){
 
       	var cotic = $("#form #ncotic").val();
 
-  var win = window.open('http://35.161.39.86:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoGuante?cotic='+cotic, '_blank');
+  var win = window.open('http://35.161.39.86:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoLiner?cotic='+cotic, '_blank');
   win.focus();
 
 
@@ -203,6 +203,17 @@ $(document).ready(function(){
       	var cotic = $("#form #ncotic").val();
 
   var win = window.open('http://35.161.39.86:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoGuante?cotic='+cotic, '_blank');
+  win.focus();
+
+
+  });
+
+
+        $("#myModal #genpdfpertigas").click(function(){
+
+      	var cotic = $("#form #ncotic").val();
+
+  var win = window.open('http://35.161.39.86:8080/LabDielectrico/webresources/inspeccion/imprimirEnsayoPertigas?cotic='+cotic, '_blank');
   win.focus();
 
 

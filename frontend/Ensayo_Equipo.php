@@ -63,7 +63,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
             <div class="form-group">
               <label for="tipodoc" class="control-label col-sm-2">Cliente</label>
-              <div class="col-sm-6 col-xs-5">
+              <div class="col-sm-6">
 
                <select id="listCliente" class="form-control">
                 <option>Seleccione </option>
@@ -77,7 +77,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
             <label for="numdoc" class="control-label col-sm-4">Documento</label>
-            <div class="col-sm-8 col-xs-5">
+            <div class="col-sm-8">
               <input type="text" id="docu" placeholder="Documento/NIT" class="form-control col-lg-4" autofocus>
               <span class="help-block"></span>
             </div>
@@ -93,7 +93,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
           <label for="numdoc" class="control-label col-sm-4">Solicitud</label>
-          <div class="col-sm-2 col-xs-5">
+          <div class="col-sm-2">
             <input type="text" id="fecha" placeholder="" value="<?php echo date('Y-m-d') ?>" class="form-control col-lg-4" autofocus readonly="" >
             <span class="help-block"></span>
           </div>
@@ -104,7 +104,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
           <label for="numdoc" class="control-label col-sm-4">Documento</label>
-          <div class="col-sm-2 col-xs-5">
+          <div class="col-sm-2">
             <input type="text" id="docu" placeholder="" class="form-control col-lg-4" autofocus readonly="" >
             <span class="help-block"></span>
           </div>
@@ -114,7 +114,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
           <label for="numdoc" class="control-label col-sm-4">Cliente</label>
-          <div class="col-sm-2 col-xs-5">
+          <div class="col-sm-2">
             <input type="text"  id="nombre" placeholder="" class="form-control col-lg-4" autofocus>
              <span class="help-block"></span>
           </div>
@@ -129,7 +129,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
         <label for="numdoc" class="control-label col-sm-4">Telefono</label>
-        <div class="col-sm-2 col-xs-5">
+        <div class="col-sm-2">
           <input type="text"  id="tele" placeholder="Telefono Contacto" class="form-control col-lg-4" autofocus>
           <span class="help-block"></span>
 
@@ -139,7 +139,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
       <div class="form-group">
         <label for="tipodoc" class="control-label col-sm-4">Ciudad</label>
-        <div class="col-sm-2 col-xs-5">
+        <div class="col-sm-2">
 
          <input class="form-control col-lg-4" type="text" name="ciudad" id="ciudad" >
         <span class="help-block"></span>
@@ -151,7 +151,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
       <label for="numdoc" class="control-label col-sm-4">Email</label>
-      <div class="col-sm-2 col-xs-5">
+      <div class="col-sm-2">
         <input type="text"  id="email" placeholder="example@example.co" class="form-control col-lg-4" autofocus> 
         <span class="help-block"></span>
 
@@ -171,7 +171,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
       <label for="numdoc" class="control-label col-sm-4">Direccion</label>
-      <div class="col-sm-2 col-xs-5">
+      <div class="col-sm-2">
         <input type="text"  id="dire" placeholder="" class="form-control col-lg-4" autofocus>
          <span class="help-block"></span>
 
@@ -191,12 +191,12 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
    <div class="form-group">
 
-    <div class="radio col-sm-8 col-xs-5">
+    <div class="radio col-sm-8">
       <input type="radio" name="ejecucion" value="0" checked="checked">Ejecucion Laboratorio
       <span class="help-block"></span>
     </div>
 
-    <div class="radio col-sm-8 col-xs-5">
+    <div class="radio col-sm-8">
       <input type="radio" name="ejecucion" value="1">Ejecucion Externa
       <span class="help-block"></span>
     </div>
@@ -211,7 +211,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 
 
     <label for="numdoc" class="control-label col-sm-4">Revision</label>
-    <div class="col-sm-8 col-xs-5">
+    <div class="col-sm-8">
       <input type="text"  id="direrev" placeholder="" disabled="disabled" class="form-control col-lg-6" autofocus>
 
     </div>
