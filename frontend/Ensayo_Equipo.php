@@ -95,7 +95,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
         <div class="form-group">
 
 
-          <label for="numdoc" class="control-label col-sm-6">Documento</label>
+          <label for="numdoc" class="control-label col-sm-4">Documento</label>
           <div class="col-sm-2">
             <input type="text" id="docu" placeholder="Documento/NIT" class="form-control col-lg-4" autofocus>
             <span class="help-block"></span>
