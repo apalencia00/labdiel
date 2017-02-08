@@ -81,7 +81,7 @@ legend.scheduler-border {
                       <div class="row">
 
                         <div class="form-group">
-                          <label for="tipodoc" class="control-label col-sm-6">Seleccione Cliente</label>
+                          <label for="tipodoc" class="control-label col-sm-4">Seleccione Cliente</label>
                           <div class="col-sm-2">
 
                            <select id="listCliente" class="form-control">
@@ -257,7 +257,7 @@ legend.scheduler-border {
 
  <div class="form-group">
   <label for="tipodoc" class="control-label col-sm-4">Clase Equipo</label>
-  <div class="col-sm-4">
+  <div class="col-sm-2">
 
    <select id="tipoequipo" class="form-control">
     <option>Seleccione Equipo</option>
