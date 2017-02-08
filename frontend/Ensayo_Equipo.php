@@ -39,6 +39,26 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     <script src="js/bootstrap-toggle.min.js"></script>
     <script src="js/bootstrap-waitingfor.js"></script>
 
+
+    <style type="text/css">
+      
+      fieldset.scheduler-border {
+    border: 0px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+
+}
+
+    </style>
+
   </head>
 
   <body>
@@ -48,197 +68,196 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       <form class="form form-inline" role="form" id="form">
 
       
-          <div class="form-group">
-            <div class="col-sm-8 col-xs-5">
-            <input type="hidden" id="idrevision" >
+           <div class="form-group">
+                      
+                        <input type="hidden" id="idrevision" >
+                      
+                      </div>
+
+                      <fieldset class="scheduler-border">
+
+                      <legend>Criterio de Busqueda</legend>
+
+                      <div class="row">
+
+                        <div class="form-group">
+                          <label for="tipodoc" class="control-label col-sm-6">Seleccione Cliente</label>
+                          <div class="col-sm-2">
+
+                           <select id="listCliente" class="form-control">
+                            <option>Seleccione </option>
+                          </select>
+                          <span class="help-block"></span>
+                        </div>
+
+                      </div>
+
+                      <div class="form-group">
+
+
+                        <label for="numdoc" class="control-label col-sm-6">Documento</label>
+                        <div class="col-sm-2">
+                          <input type="text" id="docu" placeholder="Documento/NIT" class="form-control col-lg-4" autofocus>
+                          <span class="help-block"></span>
+                        </div>
+
+                      </div>
+
+
+                    </div>
+
+                    </fieldset>
+
+                    <div class="row">
+
+                     <div class="form-group">
+
+
+                      <label for="numdoc" class="control-label col-sm-4">Solicitud</label>
+                      <div class="col-sm-2">
+                        <input type="text" id="fecha" placeholder="" value="<?php echo date('Y-m-d') ?>" class="form-control col-lg-4" autofocus readonly="" >
+                        <span class="help-block"></span>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group">
+
+
+                      <label for="numdoc" class="control-label col-sm-4">Documento</label>
+                      <div class="col-sm-2">
+                        <input type="text" id="docu" placeholder="" class="form-control col-lg-4" autofocus readonly="" >
+                        <span class="help-block"></span>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+
+
+                      <label for="numdoc" class="control-label col-sm-4">Nombre Cliente</label>
+                      <div class="col-sm-2">
+                        <input type="text"  id="nombre" placeholder="" class="form-control col-lg-4" autofocus>
+                        <span class="help-block"></span>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+                  <div class="row">
+
+                   <div class="form-group">
+
+
+                    <label for="numdoc" class="control-label col-sm-4">Telefono</label>
+                    <div class="col-sm-2">
+                      <input type="text"  id="tele" placeholder="Telefono Contacto" class="form-control col-lg-4" autofocus>
+                      <span class="help-block"></span>
+
+                    </div>
+
+                  </div>
+
+                  <div class="form-group">
+                    <label for="tipodoc" class="control-label col-sm-4">Ciudad Origen</label>
+                    <div class="col-sm-2">
+
+                     <input class="form-control col-lg-4" type="text" name="ciudad" id="ciudad" >
+                     <span class="help-block"></span>
+                   </div>
+
+                 </div>
+
+                
+
+              </div>
+
+              <div class="row">
+
+               <div class="form-group">
+
+
+                  <label for="numdoc" class="control-label col-sm-4">Email</label>
+                  <div class="col-sm-2">
+                    <input type="text"  id="email" placeholder="example@example.co" class="form-control col-lg-4" autofocus> 
+                    <span class="help-block"></span>
+
+                  </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+
+                  <label for="numdoc" class="control-label col-sm-4">Direccion</label>
+                  <div class="col-sm-2">
+                    <input type="text"  id="dire" placeholder="" class="form-control col-lg-4" autofocus>
+                    <span class="help-block"></span>
+
+                  </div>
+
+                </div>
+
+
+
+
+
+              </div>
+
+
+
+              <div class="row" >
+
+               <div class="form-group">
+
+                <div class="radio col-sm-8">
+                  <input type="radio" name="ejecucion" value="0" checked="checked">Ejecucion Laboratorio
+                  <span class="help-block"></span>
+                </div>
+
+                <div class="radio col-sm-8">
+                  <input type="radio" name="ejecucion" value="1">Ejecucion Externa
+                  <span class="help-block"></span>
+                </div>
+
+
+
+              </div>
+
+
+
+              <div class="form-group">
+
+
+                <label for="numdoc" class="control-label col-sm-4">Revision</label>
+                <div class="col-sm-8">
+                  <input type="text"  id="direrev" placeholder="" disabled="disabled" class="form-control col-lg-6" autofocus>
+
+                </div>
+
+              </div>
+
             </div>
-            </div>
-
-        <fieldset  >
-
-          <legend>Solicitud Ensayo Equipo</legend>
 
 
-          <div class="row">
+            
 
-            <div class="form-group">
-              <label for="tipodoc" class="control-label col-sm-2">Cliente</label>
-              <div class="col-sm-6">
-
-               <select id="listCliente" class="form-control">
-                <option>Seleccione </option>
-              </select>
-               <span class="help-block"></span>
-            </div>
-
-          </div>
-
-          <div class="form-group">
-
-
-            <label for="numdoc" class="control-label col-sm-4">Documento</label>
-            <div class="col-sm-8">
-              <input type="text" id="docu" placeholder="Documento/NIT" class="form-control col-lg-4" autofocus>
-              <span class="help-block"></span>
-            </div>
              
-          </div>
-
-
-        </div>
-
-        <div class="row">
-
-         <div class="form-group">
-
-
-          <label for="numdoc" class="control-label col-sm-4">Solicitud</label>
-          <div class="col-sm-2">
-            <input type="text" id="fecha" placeholder="" value="<?php echo date('Y-m-d') ?>" class="form-control col-lg-4" autofocus readonly="" >
-            <span class="help-block"></span>
-          </div>
-        </div>
-
-
-        <div class="form-group">
-
-
-          <label for="numdoc" class="control-label col-sm-4">Documento</label>
-          <div class="col-sm-2">
-            <input type="text" id="docu" placeholder="" class="form-control col-lg-4" autofocus readonly="" >
-            <span class="help-block"></span>
-          </div>
-        </div>
-
-        <div class="form-group">
-
-
-          <label for="numdoc" class="control-label col-sm-4">Cliente</label>
-          <div class="col-sm-2">
-            <input type="text"  id="nombre" placeholder="" class="form-control col-lg-4" autofocus>
-             <span class="help-block"></span>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="row">
-
-       <div class="form-group">
-
-
-        <label for="numdoc" class="control-label col-sm-4">Telefono</label>
-        <div class="col-sm-2">
-          <input type="text"  id="tele" placeholder="Telefono Contacto" class="form-control col-lg-4" autofocus>
-          <span class="help-block"></span>
-
-        </div>
-
-      </div>
-
-      <div class="form-group">
-        <label for="tipodoc" class="control-label col-sm-4">Ciudad</label>
-        <div class="col-sm-2">
-
-         <input class="form-control col-lg-4" type="text" name="ciudad" id="ciudad" >
-        <span class="help-block"></span>
-      </div>
-
-    </div>
-
-    <div class="form-group">
-
-
-      <label for="numdoc" class="control-label col-sm-4">Email</label>
-      <div class="col-sm-2">
-        <input type="text"  id="email" placeholder="example@example.co" class="form-control col-lg-4" autofocus> 
-        <span class="help-block"></span>
-
-      </div>
-
-    </div>
-
-
-
-  </div>
-
-  <div class="row">
-
-
-
-    <div class="form-group">
-
-
-      <label for="numdoc" class="control-label col-sm-4">Direccion</label>
-      <div class="col-sm-2">
-        <input type="text"  id="dire" placeholder="" class="form-control col-lg-4" autofocus>
-         <span class="help-block"></span>
-
-      </div>
-
-    </div>
-
-
-
-
-
-  </div>
-
-
-
-  <div class="row" >
-
-   <div class="form-group">
-
-    <div class="radio col-sm-8">
-      <input type="radio" name="ejecucion" value="0" checked="checked">Ejecucion Laboratorio
-      <span class="help-block"></span>
-    </div>
-
-    <div class="radio col-sm-8">
-      <input type="radio" name="ejecucion" value="1">Ejecucion Externa
-      <span class="help-block"></span>
-    </div>
-
-
-
-  </div>
-
-
-
-  <div class="form-group">
-
-
-    <label for="numdoc" class="control-label col-sm-4">Revision</label>
-    <div class="col-sm-8">
-      <input type="text"  id="direrev" placeholder="" disabled="disabled" class="form-control col-lg-6" autofocus>
-
-    </div>
-
-  </div>
-
-</div>
+                <div class="text-right">
+                  <button type="submit" id="addensayo"  class="btn-info btn">Aceptar</button>
+                </div>
+              
 
 
 <div class="row">
-
-  <div class="form-group">
-    <div class="col-sm-2 col-sm-offset-1">
-      <button type="submit" id="addensayo"  class="btn btn-primary">Aceptar</button>
-    </div>
-  </div>
-
-</div>
-
-
-<div class="row">
-
- <legend>Detalle Ensayo Ensayar</legend>
 
  <div class="form-group">
-  <label for="tipodoc" class="control-label col-sm-2">Clase Equipo</label>
-  <div class="col-sm-2">
+  <label for="tipodoc" class="control-label col-sm-4">Clase Equipo</label>
+  <div class="col-sm-4">
 
    <select id="tipoequipo" class="form-control">
     <option>Seleccione Equipo</option>
@@ -250,7 +269,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 <div class="form-group" >
 
   <label for="cant" class="control-label col-sm-4">Cantidad</label>
-  <div class="col-sm-2" >
+  <div class="col-sm-4" >
 
     <input class="form-control" type="text" name="cantidad" id="cantidad">
 
@@ -259,22 +278,15 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
 </div>
 
 <div class="form-group">
-    <div class="col-sm-2 col-sm-offset-1">
+    <div class="col-sm-4">
       <button type="submit" id="adddetalleensayo"  class="btn btn-primary">Agregar</button>
     </div>
   </div>
 
 
-  <div class="form-group">
-    <div class="col-sm-2 col-sm-offset-1">
-      <button type="submit" class="btn btn-danger">PDF</button>
-    </div>
-  </div>
-
 
 </div>
 
-<div class="row">
 
 <table id="mytable" class="table table-striped">
   <thead>
@@ -298,10 +310,6 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
       </tr>
     </tbody>
   </table>
-
-  </div>
-
-</fieldset>
 
 </form> <!-- /form -->
 

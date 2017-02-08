@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL);
 
-require $_SERVER['DOCUMENT_ROOT']."/backend/ConexionBD/Conexion.php";
+require "..\backend\ConexionBD\Conexion.php";
 
 class Modulo {
     

@@ -276,7 +276,7 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
     <!-- Main component for a primary marketing message or call to action -->
     <div class="container">
 
-      <iframe  frameborder="0" scrolling="no" height="1000px" width="100%"  name="servicio" id="servicio" allowfullscreen ></iframe>   
+      <iframe  frameborder="0" scrolling="no" height="1200px" width="100%"  name="servicio" id="servicio" allowfullscreen ></iframe>   
 
     </div>
 
