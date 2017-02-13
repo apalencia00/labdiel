@@ -24,13 +24,14 @@
 	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
 	<title>
 		<band height="74" splitType="Stretch">
-			<staticText>
-				<reportElement x="27" y="0" width="481" height="74" forecolor="#FF0000" uuid="d0094c31-4a77-4482-958d-7bf57438e94b"/>
-				<textElement textAlignment="Center">
-					<font size="48" isBold="true" isPdfEmbedded="false"/>
-				</textElement>
-				<text><![CDATA[NO VIGENTE]]></text>
-			</staticText>
+			<image>
+				<reportElement x="15" y="0" width="113" height="74" uuid="b1db9407-3555-4ac4-8a46-be0ce2baa345"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="426" y="0" width="119" height="74" uuid="aa34f318-e43e-459d-a7ea-261b0644bdcd"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<detail>

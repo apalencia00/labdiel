@@ -143,13 +143,12 @@ if( $_SESSION['admon_mod'] != 0 || $_SESSION['admon_mod'] != "" || $_SESSION['ad
           <table  class="table table-striped">
             <thead>
               <tr >
-
-              
-                <th>Codigo Unico</th>
-                <th>Codigo Asignado</th> 
+                 <th>Codigo Asignado</th> 
                 <th>Marca Fabricante</th>
                 <th>Tipo Equipo</th>
                
+
+
 
               </tr>
             </thead>
