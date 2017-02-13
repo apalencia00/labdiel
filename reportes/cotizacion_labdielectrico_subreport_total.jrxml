@@ -6,12 +6,12 @@
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT
-       SUM("VALOR_UNITARIO") as total, SUM("VALOR_UNITARIO") * 0.19 as iva, SUM("VALOR_UNITARIO") + SUM("VALOR_UNITARIO") * 0.19 as total_servicio
+       SUM("VALOR_UNITARIO")::numeric as total, SUM("VALOR_UNITARIO")::numeric * 0.19 as iva, SUM("VALOR_UNITARIO")::numeric + SUM("VALOR_UNITARIO")::numeric * 0.19 as total_servicio
   FROM labor."DETALLE_COTIZACION"  WHERE "FK_COTIZACION" = $P{ncotic};]]>
 	</queryString>
-	<field name="total" class="org.postgresql.util.PGmoney"/>
-	<field name="iva" class="org.postgresql.util.PGmoney"/>
-	<field name="total_servicio" class="org.postgresql.util.PGmoney"/>
+	<field name="total" class="java.math.BigDecimal"/>
+	<field name="iva" class="java.math.BigDecimal"/>
+	<field name="total_servicio" class="java.math.BigDecimal"/>
 	<group name="total">
 		<groupExpression><![CDATA[$F{total}]]></groupExpression>
 	</group>
