@@ -7,7 +7,7 @@
 	<queryString>
 		<![CDATA[SELECT
        SUM("VALOR_UNITARIO") as total, SUM("VALOR_UNITARIO") * 0.19 as iva, SUM("VALOR_UNITARIO") + SUM("VALOR_UNITARIO") * 0.19 as total_servicio
-  FROM labor."DETALLE_COTIZACION"  WHERE "FK_COTIZACION" = 'COTIC-1048';]]>
+  FROM labor."DETALLE_COTIZACION"  WHERE "FK_COTIZACION" = $P{ncotic};]]>
 	</queryString>
 	<field name="total" class="org.postgresql.util.PGmoney"/>
 	<field name="iva" class="org.postgresql.util.PGmoney"/>
