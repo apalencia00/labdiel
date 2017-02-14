@@ -6,8 +6,9 @@
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT
-       SUM("VALOR_UNITARIO")::numeric * "CANTIDAD" as total, SUM("VALOR_UNITARIO")::numeric * 0.19 as iva, SUM("VALOR_UNITARIO")::numeric + SUM("VALOR_UNITARIO")::numeric * 0.19 as total_servicio
+       SUM("VALOR_UNITARIO")::numeric * "CANTIDAD" as total, SUM("VALOR_UNITARIO")::numeric * "CANTIDAD"::numeric * 0.19 as iva, SUM("VALOR_UNITARIO")::numeric * "CANTIDAD"::numeric + SUM("VALOR_UNITARIO")::numeric * "CANTIDAD"::numeric * 0.19 as total_servicio
   FROM labor."DETALLE_COTIZACION"  WHERE "FK_COTIZACION" = $P{ncotic}
+
 
 GROUP BY "CANTIDAD"]]>
 	</queryString>
