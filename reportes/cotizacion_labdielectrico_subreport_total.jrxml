@@ -24,8 +24,8 @@ GROUP BY "CANTIDAD"]]>
 	<group name="total_servicio">
 		<groupExpression><![CDATA[]]></groupExpression>
 	</group>
-	<detail>
-		<band height="20" splitType="Stretch">
+	<title>
+		<band height="20">
 			<staticText>
 				<reportElement mode="Opaque" x="17" y="0" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
 				<textElement textAlignment="Center">
@@ -48,13 +48,6 @@ GROUP BY "CANTIDAD"]]>
 				<text><![CDATA[Iva 19%]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="102" y="-2" width="88" height="20" uuid="79cf6c89-e2fd-41ff-9b26-eaef076b96f8"/>
-				<textElement textAlignment="Center">
-					<font isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[(""+$F{total})]]></textFieldExpression>
-			</textField>
-			<textField>
 				<reportElement x="289" y="0" width="88" height="20" uuid="924e3498-b244-440f-9534-f3cf6471aa7e"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
@@ -69,5 +62,5 @@ GROUP BY "CANTIDAD"]]>
 				<textFieldExpression><![CDATA[""+$F{total_servicio}]]></textFieldExpression>
 			</textField>
 		</band>
-	</detail>
+	</title>
 </jasperReport>
