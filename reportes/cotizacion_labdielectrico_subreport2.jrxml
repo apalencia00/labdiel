@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport2" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4f35fdf4-f29c-46b3-af1b-c299d9f0115a">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="305"/>
+	<property name="ireport.y" value="242"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
@@ -31,7 +31,7 @@
 				<text><![CDATA[2.1 Booms y liners.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="42" width="555" height="33" forecolor="#000000" uuid="8b1b012f-1ce7-4e55-8ba6-fb13ae8035d9"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="42" width="555" height="33" forecolor="#000000" uuid="8b1b012f-1ce7-4e55-8ba6-fb13ae8035d9"/>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
@@ -47,7 +47,7 @@
 				<text><![CDATA[• Debe haberse retirado el liner del  Boom]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="95" width="555" height="31" forecolor="#000000" uuid="5bb996e5-dd74-4bc6-aa0f-11bf8e9021e7"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="95" width="555" height="31" forecolor="#000000" uuid="5bb996e5-dd74-4bc6-aa0f-11bf8e9021e7"/>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
@@ -64,7 +64,7 @@
 				<text><![CDATA[2.2 Elementos para trabajos en líneas eléctricas energizadas.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="142" width="555" height="35" forecolor="#000000" uuid="4b7960fd-0246-443a-ad22-f90da6eec243"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="142" width="555" height="35" forecolor="#000000" uuid="4b7960fd-0246-443a-ad22-f90da6eec243"/>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
@@ -81,7 +81,7 @@
 				<text><![CDATA[2.3 Pértigas telescópicas y tipo bastón]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="195" width="555" height="35" forecolor="#000000" uuid="d2526adf-91b6-4119-9505-206e7620ae8e"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="195" width="555" height="35" forecolor="#000000" uuid="d2526adf-91b6-4119-9505-206e7620ae8e"/>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
@@ -96,14 +96,14 @@
 				<text><![CDATA[3. ENSAYOS:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="246" width="555" height="22" forecolor="#000000" uuid="7859b0ad-bd16-4850-a34d-cd2e08bedc71"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="246" width="555" height="22" forecolor="#000000" uuid="7859b0ad-bd16-4850-a34d-cd2e08bedc71"/>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[• El usuario del servicio debe entregar y recoger en el horario de 8:00 a.m. a 12:00 m ó 2:00 a 4:00 p.m.							]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="268" width="555" height="31" forecolor="#000000" uuid="5d382fcf-50ca-40dc-add4-306af13e2efd"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="268" width="555" height="31" forecolor="#000000" uuid="5d382fcf-50ca-40dc-add4-306af13e2efd"/>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
@@ -112,14 +112,14 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="299" width="555" height="46" forecolor="#000000" uuid="f1365aa1-4963-4931-9190-dbcbbdfb7800"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="299" width="555" height="46" forecolor="#000000" uuid="f1365aa1-4963-4931-9190-dbcbbdfb7800"/>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[• La inspección visual determina si se puede realizar el ensayo. En el caso de los equipos, si hacen falta accesorios necesarios para los ensayos, o de encontrar daños o defectos en los elementos, estos NO se reciben.  							]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="346" width="555" height="65" forecolor="#000000" uuid="2df55387-5c7e-4a74-a5f6-463a9e70e7aa"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="346" width="555" height="65" forecolor="#000000" uuid="2df55387-5c7e-4a74-a5f6-463a9e70e7aa"/>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
@@ -133,14 +133,14 @@
 				<text><![CDATA[• El tiempo estimado de ensayo para ejecucion del servicio sera:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="411" width="555" height="79" forecolor="#000000" uuid="623eaeed-b079-4605-8096-eaa4bd77d94f"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="411" width="555" height="79" forecolor="#000000" uuid="623eaeed-b079-4605-8096-eaa4bd77d94f"/>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[• Cuando no sea posible identificar las características de clase de uso o nivel de tensión de operación del equipo, se asumirá la información entregada por el cliente como la referencia para determinar la tensión de ensayo de los equipos. En este caso será responsabilidad del cliente los daños que pueda sufrir el equipo durante el ensayo si estos son causados por información incorrecta enviada por él.							]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="0" y="508" width="555" height="151" uuid="d753280c-c265-4e47-a65c-f1b3701bd90f"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="508" width="555" height="151" uuid="d753280c-c265-4e47-a65c-f1b3701bd90f"/>
 				<textFieldExpression><![CDATA[$P{tiempo}]]></textFieldExpression>
 			</textField>
 		</band>

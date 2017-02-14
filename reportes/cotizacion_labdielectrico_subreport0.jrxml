@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport0" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="564eebc9-bf96-411e-86f4-0c5d48aa47e1">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="178"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
@@ -86,7 +86,7 @@
 				<text><![CDATA[Direccion:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="3" y="429" width="539" height="51" forecolor="#000000" uuid="66a902ac-a2fb-454b-813a-83fcbeb4ba3a"/>
+				<reportElement stretchType="RelativeToBandHeight" x="3" y="429" width="539" height="51" forecolor="#000000" uuid="66a902ac-a2fb-454b-813a-83fcbeb4ba3a"/>
 				<text><![CDATA[Ensayo para la verificación dieléctrica de los elementos referenciados en esta oferta mediante la utilización de equipos de ensayos y métodos normalizados. Para la ejecución de estos ensayos se realizaran las actividades descritas en normativas internacionales en su ultima version vigente al momento de la ejecución de los mismos, las cuales se relacionan a continuación.
 
 
@@ -103,7 +103,7 @@
 				<text><![CDATA[Telefono:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="251" width="545" height="46" uuid="89746748-6a9d-426a-8e7e-c7f62c67c411"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="251" width="545" height="46" uuid="89746748-6a9d-426a-8e7e-c7f62c67c411"/>
 				<text><![CDATA[Nos complace presentarle nuestra oferta de servicios para la realización de Ensayos eléctricos a los Equipos de Elevación y/o Protección Personal para trabajos en redes eléctricas energizadas, según los lineamientos de la norma ISO 17025 versión 2005 y los estandares de referencia aplicables para cada uno de los ensayos.
 
 
