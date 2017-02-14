@@ -2,17 +2,23 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport2" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4f35fdf4-f29c-46b3-af1b-c299d9f0115a">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="242"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[SELECT id_detalle_serial, fk_cod_tipo_equipo, cod_seriales, fk_cotizacion
-  FROM labor."DET_COTI_SERIALIZAR_EQUIPO" WHERE fk_cotizacion = $P{ncotic} limit 1;]]>
+		<![CDATA[SELECT *
+  FROM labor."COTIZACION" WHERE "NUM_COTIZACION" = $P{ncotic} limit 1;]]>
 	</queryString>
-	<field name="id_detalle_serial" class="java.lang.Integer"/>
-	<field name="fk_cod_tipo_equipo" class="java.lang.Integer"/>
-	<field name="cod_seriales" class="java.lang.String"/>
-	<field name="fk_cotizacion" class="java.lang.String"/>
+	<field name="ID_COTIZACION" class="java.lang.Integer"/>
+	<field name="NUM_COTIZACION" class="java.lang.String"/>
+	<field name="FK_CLIENTE" class="java.lang.Integer"/>
+	<field name="FK_USUARIO" class="java.lang.Integer"/>
+	<field name="FK_EMPLEADO" class="java.lang.Integer"/>
+	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
+	<field name="ESTADO" class="java.lang.String"/>
+	<field name="US_MODIFICA" class="java.lang.Integer"/>
+	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
+	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
 	<detail>
 		<band height="659">
 			<staticText>
