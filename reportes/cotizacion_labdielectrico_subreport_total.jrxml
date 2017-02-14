@@ -61,6 +61,10 @@ GROUP BY "CANTIDAD"]]>
 				</textElement>
 				<textFieldExpression><![CDATA[""+$F{total_servicio}]]></textFieldExpression>
 			</textField>
+			<textField>
+				<reportElement x="98" y="0" width="100" height="20" uuid="99409972-23a5-4a25-8245-815b070d1fa1"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 </jasperReport>
