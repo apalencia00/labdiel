@@ -17,6 +17,8 @@ AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND substr("COD_EQUIPO", 1, 3) = 'PE
 
 GROUP BY cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 	</queryString>
+	<field name="DESCRIPCION" class="java.lang.String"/>
+	<field name="sum" class="java.lang.Long"/>
 	<title>
 		<band height="41" splitType="Stretch">
 			<staticText>
@@ -50,6 +52,15 @@ GROUP BY cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 		</band>
 	</title>
 	<detail>
-		<band height="125" splitType="Stretch"/>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="111" y="0" width="59" height="20" uuid="e54f8cbc-ea69-42ca-b067-ba141bbe2b19"/>
+				<textFieldExpression><![CDATA[$F{sum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="0" width="100" height="20" uuid="ab649c7f-444e-4879-9e5c-cc7c552c3ead"/>
+				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
+			</textField>
+		</band>
 	</detail>
 </jasperReport>
