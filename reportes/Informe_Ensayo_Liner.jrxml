@@ -3,244 +3,296 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT coti."ID_COTIZACION", coti."NUM_COTIZACION", coti."FK_CLIENTE", coti."FK_USUARIO",
+       coti."FK_EMPLEADO", coti."FECHA_REGISTRO", coti."ESTADO", coti."US_MODIFICA", coti."FECHA_MODIFICACION",
+       coti."FK_REVISION_ENSAYO_EQUIPO",c.*
+  FROM labor."COTIZACION" coti, labor."CLIENTE" c
+
+WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND coti."ESTADO" = 'A'
+  ;]]>
+	</queryString>
+	<field name="ID_COTIZACION" class="java.lang.Integer"/>
+	<field name="NUM_COTIZACION" class="java.lang.String"/>
+	<field name="FK_CLIENTE" class="java.lang.Integer"/>
+	<field name="FK_USUARIO" class="java.lang.Integer"/>
+	<field name="FK_EMPLEADO" class="java.lang.Integer"/>
+	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
+	<field name="ESTADO" class="java.lang.String"/>
+	<field name="US_MODIFICA" class="java.lang.Integer"/>
+	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
+	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
+	<field name="ID_CLIENTE" class="java.lang.Long">
+		<fieldDescription><![CDATA[--]]></fieldDescription>
+	</field>
+	<field name="TIPO_IDE" class="java.lang.Integer"/>
+	<field name="IDE_NIT" class="java.lang.String">
+		<fieldDescription><![CDATA[---]]></fieldDescription>
+	</field>
+	<field name="NOMBRE" class="java.lang.String"/>
+	<field name="TELEFONO_CONTACTO" class="java.lang.String"/>
+	<field name="CIUDAD" class="java.lang.Integer"/>
+	<field name="CONTACTO" class="java.lang.String"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<field name="DIRECCION" class="java.lang.String"/>
+	<field name="USUARIO" class="java.lang.Integer"/>
+	<field name="APELLIDO" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch">
+		<band height="66" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="83" height="62" uuid="d2589993-7a57-4563-95db-b48a37b1d137"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="717" y="0" width="134" height="65" uuid="f14c7e29-7fce-46d2-aff7-b24a6935cb65"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="271" splitType="Stretch">
 			<textField>
-				<reportElement x="120" y="33" width="181" height="20" uuid="11edaa55-ac92-413c-b7d4-09864944ef6e"/>
-				<textFieldExpression><![CDATA[$F{DIRECCION}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="181" y="178" width="100" height="20" uuid="bd3a6952-edd4-46cf-8570-3d862565f4a5"/>
-				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="10" y="130" width="181" height="20" uuid="e9f92293-fdb1-495a-a228-bfb2bcccdd0d"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="359" y="88" width="182" height="20" uuid="5629b018-c97f-4201-b4e0-ccb431460605"/>
-				<textFieldExpression><![CDATA[$F{APELLIDO}]]></textFieldExpression>
+				<reportElement x="133" y="7" width="246" height="20" uuid="81facdac-1deb-4e22-8713-eec3d3b6e29d"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="557" y="13" width="150" height="20" uuid="4c690a2e-a7fb-4d4b-ae4a-6efd0ab05390"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[No de Informe/Report Number]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="181" y="138" width="100" height="20" uuid="275174b7-e64b-45d3-8e57-e8fdd183e0a4"/>
-				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="725" y="13" width="33" height="20" forecolor="#FF0000" uuid="d8c7e663-fddf-4a63-9176-9a80509d6f23"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[N°]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="21" y="221" width="357" height="20" uuid="e4306a29-c5d3-485a-a99f-c82bbdbdcf11"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Información de equipo utilizado para ensayo/test equipment information
-]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="20" y="33" width="93" height="20" uuid="983b14c5-6ece-4f05-95cf-febc4280bdaf"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Dirección/Address
-]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="181" y="118" width="100" height="20" uuid="e43a72fa-eff1-4a94-8c49-8827c2792cae"/>
-				<textFieldExpression><![CDATA[$F{CIUDAD}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="314" y="250" width="62" height="20" uuid="62f20fa1-34f1-43e8-8429-fb5555439f56"/>
-				<textElement>
-					<font isBold="true"/>
+				<reportElement x="285" y="251" width="78" height="20" uuid="62f20fa1-34f1-43e8-8429-fb5555439f56"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Serie/Serial]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="219" y="69" width="222" height="33" uuid="475ab4b4-81cf-4233-a776-3111ae12d2ee"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="289" y="48" width="100" height="20" uuid="6ccbe4b6-e34e-42a6-9c4c-dacaeaee1f3a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
 			<staticText>
-				<reportElement x="20" y="13" width="93" height="20" uuid="d2209a60-21ea-4962-ae5a-760feba98f9a"/>
-				<textElement>
-					<font isBold="true"/>
+				<reportElement x="10" y="7" width="123" height="20" uuid="d2209a60-21ea-4962-ae5a-760feba98f9a"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Cliente/Customer
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="133" y="250" width="160" height="20" uuid="8bf9fae2-b5a3-4f77-83ea-a39a795c1e40"/>
-				<textElement>
-					<font isBold="true"/>
+				<reportElement x="10" y="27" width="123" height="20" uuid="983b14c5-6ece-4f05-95cf-febc4280bdaf"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Código interno/Internal Code]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="557" y="111" width="150" height="41" uuid="ff5599a3-95fb-4639-a13a-7394a745f025"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Estandar de referencia/Reference standard
-						]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="557" y="53" width="150" height="41" uuid="7c369429-a4e3-4e8f-b6de-f3f198393ca2"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Unidad de medida para ensayo/ Unit test  measurement
-
-
+				<text><![CDATA[Dirección/Address
 ]]></text>
 			</staticText>
-			<image>
-				<reportElement x="10" y="10" width="89" height="71" uuid="d2589993-7a57-4563-95db-b48a37b1d137"/>
-				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
-			</image>
 			<staticText>
-				<reportElement x="10" y="36" width="159" height="20" uuid="6666d6aa-af87-4761-a74b-317e0a933e50"/>
-				<textElement>
-					<font isBold="true"/>
+				<reportElement x="10" y="163" width="209" height="40" uuid="3efeefde-309a-4e77-970e-62753e530317"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Temperatura/Temperature (°C)			]]></text>
+				<text><![CDATA[Fecha de ensayo a equipo/Date test
+				]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="408" y="250" width="135" height="20" uuid="01c55d88-83bb-4dd2-a29c-99c221ec9839"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[No. Certificado/Certificate Number]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="237" y="36" width="252" height="20" uuid="05b0bc0e-7969-4ad8-8014-4b7ba30e2661"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Humedad Relativa(%HR)/Relative Humidity(%RH)									]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="557" y="33" width="150" height="20" uuid="4836f25f-29b1-44bc-8782-fcd5714d35fc"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Equipo /Equipment]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="20" y="87" width="161" height="34" uuid="05a932e0-65f3-47e6-9f22-9aa120217792"/>
-				<textElement>
-					<font isBold="true"/>
+				<reportElement x="10" y="68" width="209" height="34" uuid="05a932e0-65f3-47e6-9f22-9aa120217792"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Servicio Autorizado por Cliente
 Autorized service by customer]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="298" y="13" width="182" height="20" uuid="2a046b36-83c3-401a-a6d9-40f7d920e7aa"/>
-				<textFieldExpression><![CDATA[$F{APELLIDO}]]></textFieldExpression>
+				<reportElement x="133" y="27" width="181" height="20" uuid="11edaa55-ac92-413c-b7d4-09864944ef6e"/>
+				<textFieldExpression><![CDATA[$F{DIRECCION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="103" width="100" height="20" uuid="e43a72fa-eff1-4a94-8c49-8827c2792cae"/>
+				<textFieldExpression><![CDATA[$F{CIUDAD}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="21" y="138" width="160" height="40" uuid="cde510b0-99ef-440d-8853-561e9ff9390e"/>
-				<textElement>
-					<font isBold="true"/>
+				<reportElement x="10" y="102" width="209" height="21" uuid="da923b4f-8e88-4470-a768-d9928894e175"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ciudad/City]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="123" width="209" height="40" uuid="cde510b0-99ef-440d-8853-561e9ff9390e"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Fecha de Recepción del equipo/Date received
 
 ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="181" y="88" width="173" height="20" uuid="475ab4b4-81cf-4233-a776-3111ae12d2ee"/>
-				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+				<reportElement x="220" y="123" width="154" height="20" uuid="275174b7-e64b-45d3-8e57-e8fdd183e0a4"/>
+				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="163" width="154" height="20" uuid="40791fbd-9a9d-4474-9f85-a7b1cae2c70f"/>
+				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="21" y="178" width="160" height="40" uuid="3efeefde-309a-4e77-970e-62753e530317"/>
+				<reportElement x="545" y="48" width="205" height="41" uuid="7c369429-a4e3-4e8f-b6de-f3f198393ca2"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unidad de medida para ensayo/ Unit test  measurement
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="695" y="8" width="33" height="20" forecolor="#FF0000" uuid="d8c7e663-fddf-4a63-9176-9a80509d6f23"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Fecha de ensayo a equipo        /Date test
-				]]></text>
+				<text><![CDATA[N°]]></text>
 			</staticText>
-			<textField pattern="yyyy/MM/dd">
-				<reportElement x="301" y="56" width="100" height="20" uuid="6ccbe4b6-e34e-42a6-9c4c-dacaeaee1f3a"/>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
 			<staticText>
-				<reportElement x="557" y="94" width="150" height="13" uuid="e27f61f6-294b-4944-81c8-a402ede38fca"/>
+				<reportElement x="545" y="111" width="205" height="41" uuid="ff5599a3-95fb-4639-a13a-7394a745f025"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estandar de referencia/Reference standard
+						]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="545" y="28" width="150" height="20" uuid="4836f25f-29b1-44bc-8782-fcd5714d35fc"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Equipo /Equipment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="545" y="90" width="150" height="33" uuid="e27f61f6-294b-4944-81c8-a402ede38fca"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Exactitud/Accuaracy (%)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="36" width="470" height="20" uuid="3861b857-de06-413f-9ba8-a486962a684b"/>
+				<reportElement x="545" y="8" width="150" height="20" uuid="4c690a2e-a7fb-4d4b-ae4a-6efd0ab05390"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Resultado del(los) equipo(s) ensayados(s)/Equipment test result]]></text>
-			</staticText>
-		</band>
-	</title>
-	<pageHeader>
-		<band height="35" splitType="Stretch"/>
-	</pageHeader>
-	<columnHeader>
-		<band height="61" splitType="Stretch">
-			<staticText>
-				<reportElement x="20" y="7" width="161" height="17" uuid="da923b4f-8e88-4470-a768-d9928894e175"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Ciudad/City]]></text>
+				<text><![CDATA[No de Informe/Report Number]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="181" y="16" width="199" height="20" uuid="c4751dd1-3167-45fd-903e-dffaa31cc274"/>
-				<textElement>
-					<font isBold="true"/>
+				<reportElement x="10" y="203" width="209" height="20" uuid="dde4e7e3-e883-42cb-880a-bd385e88cdf3"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Condiciones ambientales/Enviromental conditio]]></text>
+				<text><![CDATA[Fecha del Informe/Date report]]></text>
 			</staticText>
-		</band>
-	</columnHeader>
-	<detail>
-		<band height="125" splitType="Stretch">
-			<staticText>
-				<reportElement x="43" y="65" width="553" height="60" uuid="7a9a4870-a9e2-436f-9d35-90967b7568f1"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Incertidumbre de medición/ Uncertaintiny Measurement
-La incertidumbre reportada representa la incertidumbre expandida a un nivel de  confianza de 95% utilizando un factor de cobertura k=2/ The reported uncertainties represent expanded uncertainties expressed at approximately the 95% confidence level using a coverage factor k=2."																								]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="359" y="3" width="173" height="20" uuid="81facdac-1deb-4e22-8713-eec3d3b6e29d"/>
-				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="219" y="203" width="100" height="20" uuid="277789fa-00cc-41fd-a169-f18a933ce8d7"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="576" y="85" width="112" height="20" uuid="b5b147a2-f87f-4cbd-86d7-2beb23018b7d"/>
+				<reportElement x="695" y="28" width="100" height="20" uuid="4adebdc8-69e2-46b2-a968-c62786fce0cd"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Liners]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="227" width="431" height="20" uuid="e4306a29-c5d3-485a-a99f-c82bbdbdcf11"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Información de equipo utilizado para ensayo/test equipment information
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="251" width="183" height="20" uuid="8bf9fae2-b5a3-4f77-83ea-a39a795c1e40"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código interno/Internal Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="251" width="157" height="20" uuid="01c55d88-83bb-4dd2-a29c-99c221ec9839"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Certificado/Certificate Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="612" y="251" width="138" height="20" uuid="b5b147a2-f87f-4cbd-86d7-2beb23018b7d"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Trazado a/Traceable to					]]></text>
 			</staticText>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="45" splitType="Stretch"/>
+		<band height="44" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="824" height="44" uuid="1debed24-0c9a-4cf6-9685-8c24215b62bf"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Liner_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="54" splitType="Stretch"/>
+		<band height="186" splitType="Stretch">
+			<staticText>
+				<reportElement x="45" y="81" width="553" height="60" uuid="7a9a4870-a9e2-436f-9d35-90967b7568f1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Incertidumbre de medición/ Uncertaintiny Measurement
+La incertidumbre reportada representa la incertidumbre expandida a un nivel de  confianza de 95% utilizando un factor de cobertura k=2/ The reported uncertainties represent expanded uncertainties expressed at approximately the 95% confidence level using a coverage factor k=2."																								]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="24" width="252" height="20" uuid="05b0bc0e-7969-4ad8-8014-4b7ba30e2661"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Humedad Relativa(%HR)/Relative Humidity(%RH)									]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="44" width="181" height="20" uuid="e9f92293-fdb1-495a-a228-bfb2bcccdd0d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="44" width="159" height="20" uuid="6666d6aa-af87-4761-a74b-317e0a933e50"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Temperatura/Temperature (°C)			]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="44" width="199" height="20" uuid="c4751dd1-3167-45fd-903e-dffaa31cc274"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Condiciones ambientales/Enviromental conditio]]></text>
+			</staticText>
+		</band>
 	</pageFooter>
 	<summary>
-		<band height="42" splitType="Stretch"/>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="470" height="20" uuid="3861b857-de06-413f-9ba8-a486962a684b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultado del(los) equipo(s) ensayados(s)/Equipment test result]]></text>
+			</staticText>
+		</band>
 	</summary>
 </jasperReport>

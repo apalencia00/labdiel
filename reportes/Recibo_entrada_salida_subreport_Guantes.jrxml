@@ -11,7 +11,7 @@
 
 from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c, labor."CLASE_EQUIPO" cl,labor."EQUIPO_INVENTARIO_EMPRESA" emp
 
-where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic} AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND substr("COD_EQUIPO", 1, 1) = 'G' AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
+where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic} AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
 
 GROUP BY cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 	</queryString>
@@ -24,7 +24,7 @@ GROUP BY cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[1. GUANTES]]></text>
+				<text><![CDATA[EQUIPOS INGRESADOS]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="-4" y="20" width="114" height="20" uuid="80d3af11-ce3a-46ad-ad78-5c044e319688"/>

@@ -40,7 +40,7 @@
 				<text><![CDATA[Calle 42 No 44-51 Barranquilla-Atlantico		]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="195" width="342" height="20" uuid="e6346461-e1e1-4984-93fb-a215a4edc33c"/>
+				<reportElement x="0" y="195" width="441" height="20" uuid="e6346461-e1e1-4984-93fb-a215a4edc33c"/>
 				<text><![CDATA[REF.: Cotización para ensayo de equipos para trabajos en redes eléctricas energizadas.
 ]]></text>
 			</staticText>

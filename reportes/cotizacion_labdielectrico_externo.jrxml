@@ -4,6 +4,8 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
+	<parameter name="tiempo" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select * from labor."COTIZACION" where "ESTADO" = 'P'  AND "NUM_COTIZACION" = $P{ncotic} AND ("FECHA_REGISTRO"::date - now()::date) <= 30 ;]]>
 	</queryString>
@@ -33,6 +35,9 @@
 		<band height="38" splitType="Stretch">
 			<subreport>
 				<reportElement x="0" y="0" width="555" height="38" uuid="b674f173-75ef-43a3-bd10-f32863ece76b"/>
+				<subreportParameter name="tiempo">
+					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
@@ -43,6 +48,9 @@
 		<band height="38">
 			<subreport>
 				<reportElement x="0" y="0" width="555" height="37" uuid="8c53355a-62b1-47eb-b273-dd58b2d6ef79"/>
+				<subreportParameter name="tiempo">
+					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
@@ -53,6 +61,9 @@
 		<band height="39">
 			<subreport>
 				<reportElement x="0" y="0" width="555" height="38" uuid="ed98e6c9-e376-4053-9f07-e8b430400f80"/>
+				<subreportParameter name="tiempo">
+					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
@@ -63,6 +74,9 @@
 		<band height="43">
 			<subreport>
 				<reportElement x="0" y="2" width="555" height="38" uuid="3d47a664-6552-4efa-9f18-dbeec8c62a32"/>
+				<subreportParameter name="tiempo">
+					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
@@ -79,16 +93,6 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="34" splitType="Stretch">
-			<textField>
-				<reportElement x="435" y="10" width="80" height="20" uuid="2e043f70-7a21-48c0-9c55-8103d09bdf62"/>
-				<textElement textAlignment="Right"/>
-				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
-			</textField>
-			<textField evaluationTime="Report">
-				<reportElement x="515" y="10" width="40" height="20" uuid="9f3e102b-97a1-430b-bb12-1e17ab086c94"/>
-				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
-			</textField>
-		</band>
+		<band height="34" splitType="Stretch"/>
 	</pageFooter>
 </jasperReport>
