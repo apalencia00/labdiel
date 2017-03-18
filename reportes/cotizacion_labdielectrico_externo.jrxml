@@ -23,11 +23,11 @@
 		<band height="71" splitType="Stretch">
 			<image>
 				<reportElement x="457" y="2" width="98" height="63" uuid="d0c2cccf-fedf-4da6-bf39-6cb14f069d59"/>
-				<imageExpression><![CDATA["C:\\Users\\Windows 10\\Documents\\NetBeansProjects\\LabDielectrico\\reportes\\onac.jpg"]]></imageExpression>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
 			</image>
 			<image>
 				<reportElement x="0" y="0" width="97" height="66" uuid="d3ce0a45-077d-4e1c-8c92-68738d0ed9a2"/>
-				<imageExpression><![CDATA["C:\\Users\\Windows 10\\Documents\\NetBeansProjects\\LabDielectrico\\reportes\\7.jpg"]]></imageExpression>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
 			</image>
 		</band>
 	</title>
