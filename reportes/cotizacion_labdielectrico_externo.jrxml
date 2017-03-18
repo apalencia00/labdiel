@@ -42,7 +42,7 @@
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\Users\\Windows 10\\Documents\\NetBeansProjects\\LabDielectrico\\reportes\\cotizacion_labdielectrico_externo_subreport1.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_externo_subreport1.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="38">
@@ -55,7 +55,7 @@
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\Users\\Windows 10\\Documents\\NetBeansProjects\\LabDielectrico\\reportes\\cotizacion_labdielectrico_externo_subreport2.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_externo_subreport2.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="39">
@@ -68,7 +68,7 @@
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\Users\\Windows 10\\Documents\\NetBeansProjects\\LabDielectrico\\reportes\\cotizacion_labdielectrico_externo_subreport3.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_externo_subreport3.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="43">
@@ -81,18 +81,15 @@
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\Users\\Windows 10\\Documents\\NetBeansProjects\\LabDielectrico\\reportes\\cotizacion_labdielectrico_externo_subreport4.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_externo_subreport4.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="45">
 			<subreport>
 				<reportElement x="0" y="0" width="555" height="40" uuid="d69a7367-9756-4952-93c8-c46d0c5bc7ee"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\Users\\Windows 10\\Documents\\NetBeansProjects\\LabDielectrico\\reportes\\cotizacion_labdielectrico_externo_subreport5.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_externo_subreport5.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>
-	<pageFooter>
-		<band height="34" splitType="Stretch"/>
-	</pageFooter>
 </jasperReport>
