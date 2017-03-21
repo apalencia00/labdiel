@@ -4,6 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="180"/>
 	<parameter name="ncotic" class="java.lang.String"/>
+	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT c."NUM_COTIZACION", c."FK_CLIENTE", c."FK_USUARIO",
        c."FK_EMPLEADO", c."FECHA_REGISTRO", c."ESTADO", c."US_MODIFICA", c."FECHA_MODIFICACION",

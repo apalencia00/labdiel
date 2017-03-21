@@ -6,6 +6,7 @@
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
+	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select coti."NUM_COTIZACION", coti."ESTADO",dtc."VALOR_UNITARIO"::text,eq."DESCRIPCION" as elequipo, un."DESCRIPCION" as unidad, dtc."CANTIDAD",eq."ID_TIPO_EQUIPO"
 
