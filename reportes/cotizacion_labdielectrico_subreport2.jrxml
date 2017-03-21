@@ -154,7 +154,7 @@
 	<lastPageFooter>
 		<band height="62">
 			<staticText>
-				<reportElement x="481" y="0" width="127" height="62" uuid="d103b558-b9bb-4bbe-a870-48e003720bb4"/>
+				<reportElement x="428" y="0" width="127" height="62" uuid="d103b558-b9bb-4bbe-a870-48e003720bb4"/>
 				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
 				<text><![CDATA[F.LABDIEL.098
 VER: 1

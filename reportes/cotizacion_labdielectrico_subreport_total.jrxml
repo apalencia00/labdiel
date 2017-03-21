@@ -34,40 +34,55 @@ GROUP BY "CANTIDAD"]]>
 		<groupExpression><![CDATA[]]></groupExpression>
 	</group>
 	<title>
-		<band height="81">
+		<band height="71">
 			<staticText>
-				<reportElement mode="Opaque" x="387" y="12" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
+				<reportElement mode="Opaque" x="384" y="2" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="387" y="63" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
+				<reportElement mode="Opaque" x="384" y="53" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total Servicio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="387" y="38" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
+				<reportElement mode="Opaque" x="384" y="28" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Iva 19%]]></text>
 			</staticText>
 			<textField evaluationTime="Report">
-				<reportElement x="470" y="10" width="85" height="20" uuid="8f232089-2b54-4d79-854d-bd801d22737e"/>
+				<reportElement x="467" y="0" width="85" height="20" uuid="8f232089-2b54-4d79-854d-bd801d22737e"/>
 				<textFieldExpression><![CDATA[$V{total_1}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="470" y="36" width="85" height="20" uuid="1cb52523-7f18-4797-9589-2c992e8b8885"/>
+				<reportElement x="467" y="26" width="85" height="20" uuid="1cb52523-7f18-4797-9589-2c992e8b8885"/>
 				<textFieldExpression><![CDATA[$V{iva_1}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="470" y="61" width="85" height="20" uuid="7b13e149-5ae0-49ed-93e2-643913a2d066"/>
+				<reportElement x="467" y="51" width="85" height="20" uuid="7b13e149-5ae0-49ed-93e2-643913a2d066"/>
 				<textFieldExpression><![CDATA[$V{total_servicio_1}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>
+	<lastPageFooter>
+		<band height="64">
+			<staticText>
+				<reportElement x="451" y="0" width="127" height="62" uuid="de05919b-9ef8-44dd-a969-a4311907a988"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[F.LABDIEL.098
+VER: 1
+VIGENCIA: 2016-04-11
+
+
+
+]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
 </jasperReport>

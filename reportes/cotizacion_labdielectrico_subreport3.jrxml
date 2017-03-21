@@ -121,4 +121,19 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 			</textField>
 		</band>
 	</detail>
+	<lastPageFooter>
+		<band height="65">
+			<staticText>
+				<reportElement x="464" y="3" width="127" height="62" uuid="d75fb8f9-f9fd-473e-82ae-a88f2b5464ba"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[F.LABDIEL.098
+VER: 1
+VIGENCIA: 2016-04-11
+
+
+
+]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
 </jasperReport>

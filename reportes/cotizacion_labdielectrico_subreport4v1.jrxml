@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport4v1" language="groovy" pageWidth="648" pageHeight="802" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="50c0083f-4b9c-4c19-8ee2-d41b5605ac45">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="291"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -18,7 +18,7 @@
 	<field name="FK_USU_CREADOR" class="java.lang.Integer"/>
 	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
 	<detail>
-		<band height="588" splitType="Stretch">
+		<band height="569" splitType="Stretch">
 			<staticText>
 				<reportElement x="4" y="0" width="544" height="58" uuid="8abd43aa-9412-4408-83f8-419919ecf82b"/>
 				<text><![CDATA[Los precios son firmes en pesos colombianos y el IVA se liquidará y cobrará según porcentaje vigente en la fecha de facturación, lo mismo que los nuevos impuestos ó aumentos de los impuestos existentes, de orden nacional, departamental ó municipal que intervengan en la facturación final.  El costo discriminado en cada capítulo de la oferta, corresponde al valor neto a pagar después de las deducciones legales que debe realizar el cliente.
@@ -100,7 +100,19 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 			</staticText>
 		</band>
 	</detail>
-	<columnFooter>
-		<band height="45" splitType="Stretch"/>
-	</columnFooter>
+	<lastPageFooter>
+		<band height="72">
+			<staticText>
+				<reportElement x="462" y="0" width="127" height="62" uuid="00fd667a-bd74-462e-87f4-e79392abf7ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[F.LABDIEL.098
+VER: 1
+VIGENCIA: 2016-04-11
+
+
+
+]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
 </jasperReport>
