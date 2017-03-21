@@ -28,12 +28,9 @@ WHERE "NUM_COTIZACION" = dt."FK_COTIZACION" AND dt."FK_COD_TIPO_EQUIPO" = tpe."I
 	<field name="FK_COD_TIPO_EQUIPO" class="java.lang.Integer"/>
 	<field name="DOCUMENTO" class="java.lang.String"/>
 	<title>
-		<band height="15"/>
-	</title>
-	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="11">
 			<staticText>
-				<reportElement mode="Opaque" x="114" y="-11" width="437" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="fbea63a3-f877-4dd1-bd5b-a18015e64d04"/>
+				<reportElement mode="Opaque" x="135" y="0" width="437" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="fbea63a3-f877-4dd1-bd5b-a18015e64d04"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -41,12 +38,16 @@ WHERE "NUM_COTIZACION" = dt."FK_COTIZACION" AND dt."FK_COD_TIPO_EQUIPO" = tpe."I
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="-11" width="114" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="ca5532d2-a6c2-4f9b-a129-f1103cc51c29"/>
+				<reportElement mode="Opaque" x="21" y="0" width="114" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="ca5532d2-a6c2-4f9b-a129-f1103cc51c29"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[EQUIPO A ENSAYAR	]]></text>
 			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="20" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="0" width="114" height="20" uuid="947b8d21-f529-400c-aa05-0ea2ea3c32bc"/>
 				<textElement textAlignment="Center">
