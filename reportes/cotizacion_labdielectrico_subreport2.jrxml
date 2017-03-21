@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport2" language="groovy" pageWidth="648" pageHeight="802" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4f35fdf4-f29c-46b3-af1b-c299d9f0115a">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="391"/>
+	<property name="ireport.y" value="331"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
@@ -151,19 +151,4 @@
 			</textField>
 		</band>
 	</detail>
-	<lastPageFooter>
-		<band height="62">
-			<staticText>
-				<reportElement x="428" y="0" width="127" height="62" uuid="d103b558-b9bb-4bbe-a870-48e003720bb4"/>
-				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
-				<text><![CDATA[F.LABDIEL.098
-VER: 1
-VIGENCIA: 2016-04-11
-
-
-
-]]></text>
-			</staticText>
-		</band>
-	</lastPageFooter>
 </jasperReport>

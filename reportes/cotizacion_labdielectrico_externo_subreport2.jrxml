@@ -6,6 +6,7 @@
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
+	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT coti."NUM_COTIZACION", coti."FK_CLIENTE", coti."FK_USUARIO",
        coti."FK_EMPLEADO", coti."FECHA_REGISTRO", coti."ESTADO", coti."US_MODIFICA", coti."FECHA_MODIFICACION",tpe."DESCRIPCION",
@@ -49,14 +50,14 @@ WHERE "NUM_COTIZACION" = dt."FK_COTIZACION" AND dt."FK_COD_TIPO_EQUIPO" = tpe."I
 			<textField>
 				<reportElement x="0" y="0" width="114" height="20" uuid="947b8d21-f529-400c-aa05-0ea2ea3c32bc"/>
 				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
+					<font size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="114" y="0" width="437" height="20" uuid="684b7ad8-a13a-46f1-89d7-d711b63ac09e"/>
-				<textElement>
-					<font size="8" isBold="true"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{DOCUMENTO}]]></textFieldExpression>
 			</textField>

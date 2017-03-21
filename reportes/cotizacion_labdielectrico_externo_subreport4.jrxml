@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_subreport4" language="groovy" pageWidth="648" pageHeight="842" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d247de98-7ff9-4fe8-9107-6b008de13a66">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="93"/>
+	<property name="ireport.y" value="26"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -60,7 +60,7 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 		</band>
 	</title>
 	<pageHeader>
-		<band height="91" splitType="Stretch">
+		<band height="93" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="21" width="555" height="39" uuid="987b1683-946f-43b9-8cfe-3be6ec6829b0"/>
 				<textElement>
@@ -77,13 +77,6 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 				</textElement>
 				<text><![CDATA[5. CONDICIONES COMERCIALES
 ]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="464" y="80" width="91" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="442ba7f3-8ba8-490c-8bcb-f974c7fcc855"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[SubTotal]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="38" y="80" width="257" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="70c6f48a-9f48-45b0-ab87-3af1d099d7bd"/>
@@ -158,29 +151,4 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 			</textField>
 		</band>
 	</detail>
-	<summary>
-		<band height="42" splitType="Stretch">
-			<staticText>
-				<reportElement mode="Opaque" x="413" y="22" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="2c4713f9-9fe2-431c-b7f9-14ee665fd84e"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Total Servicio]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="413" y="11" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="7fa70da6-c529-4f35-9703-046c21b20c07"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Iva 16%]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="413" y="0" width="67" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="922db222-e679-46c3-b766-7e10ea130755"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Total]]></text>
-			</staticText>
-		</band>
-	</summary>
 </jasperReport>

@@ -70,19 +70,4 @@ GROUP BY "CANTIDAD"]]>
 			</textField>
 		</band>
 	</title>
-	<lastPageFooter>
-		<band height="64">
-			<staticText>
-				<reportElement x="451" y="0" width="127" height="62" uuid="de05919b-9ef8-44dd-a969-a4311907a988"/>
-				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
-				<text><![CDATA[F.LABDIEL.098
-VER: 1
-VIGENCIA: 2016-04-11
-
-
-
-]]></text>
-			</staticText>
-		</band>
-	</lastPageFooter>
 </jasperReport>

@@ -8,8 +8,8 @@
 	<queryString>
 		<![CDATA[SELECT c."NUM_COTIZACION", c."FK_CLIENTE", c."FK_USUARIO",
        c."FK_EMPLEADO", c."FECHA_REGISTRO", c."ESTADO", c."US_MODIFICA", c."FECHA_MODIFICACION",
-       c."FK_REVISION_ENSAYO_EQUIPO", cl."NOMBRE" || ' ' || cl."APELLIDO" as cliente, cl."IDE_NIT",cl."TELEFONO_CONTACTO", cl."DIRECCION"
-  FROM labor."COTIZACION" c , labor."CLIENTE" cl WHERE "ID_CLIENTE" = "FK_CLIENTE" AND c."NUM_COTIZACION" = $P{ncotic}  ;]]>
+       c."FK_REVISION_ENSAYO_EQUIPO", cl."NOMBRE" || ' ' || cl."APELLIDO" as cliente, cl."IDE_NIT",cl."TELEFONO_CONTACTO", cl."DIRECCION",cl."EMAIL",pc."DESCRIPCION" as ciudad,pd."DESCRIPCION" as depto
+  FROM labor."COTIZACION" c , labor."CLIENTE" cl, labor."PARAM_CIUDAD" pc, labor."PARAM_DEPTO" pd WHERE "ID_CLIENTE" = "FK_CLIENTE" AND c."NUM_COTIZACION" = $P{ncotic} AND cl."CIUDAD" = pc."COD_DIVIPO"::integer  AND cl."DEPTO" = pd."COD_DEPA_CODI"::integer ;]]>
 	</queryString>
 	<field name="NUM_COTIZACION" class="java.lang.String"/>
 	<field name="FK_CLIENTE" class="java.lang.Integer"/>
@@ -26,6 +26,9 @@
 	</field>
 	<field name="TELEFONO_CONTACTO" class="java.lang.String"/>
 	<field name="DIRECCION" class="java.lang.String"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<field name="ciudad" class="java.lang.String"/>
+	<field name="depto" class="java.lang.String"/>
 	<detail>
 		<band height="480">
 			<staticText>
@@ -42,7 +45,7 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="45" width="31" height="20" uuid="13ee6136-03d7-470c-940e-7b6557d6a053"/>
+				<reportElement x="0" y="45" width="100" height="20" uuid="13ee6136-03d7-470c-940e-7b6557d6a053"/>
 				<text><![CDATA[NIT:	]]></text>
 			</staticText>
 			<staticText>
@@ -50,7 +53,7 @@
 				<text><![CDATA[Señores]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="66" width="57" height="20" uuid="37c69359-2590-45f8-92d7-6e8613789135"/>
+				<reportElement x="0" y="66" width="100" height="20" uuid="37c69359-2590-45f8-92d7-6e8613789135"/>
 				<text><![CDATA[Atencion:]]></text>
 			</staticText>
 			<staticText>
@@ -58,7 +61,7 @@
 				<text><![CDATA[Teléfono: +57 5 3515740 Ext. 27]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="3" y="149" width="100" height="20" uuid="9327dd0c-5e3f-4612-ac61-04f5527d5ca5"/>
+				<reportElement x="0" y="149" width="100" height="20" uuid="9327dd0c-5e3f-4612-ac61-04f5527d5ca5"/>
 				<text><![CDATA[Ciudad:]]></text>
 			</staticText>
 			<staticText>
@@ -79,7 +82,7 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="88" width="57" height="20" uuid="d329957f-f357-4f97-a9c0-e82c5d34509a"/>
+				<reportElement x="0" y="88" width="100" height="20" uuid="d329957f-f357-4f97-a9c0-e82c5d34509a"/>
 				<text><![CDATA[Direccion:]]></text>
 			</staticText>
 			<staticText>
@@ -96,7 +99,7 @@
 				<text><![CDATA[Cordialmente,]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="108" width="57" height="20" uuid="b5478e68-1a93-41c2-bfe9-5ae5ef3b6f82"/>
+				<reportElement x="0" y="108" width="100" height="20" uuid="b5478e68-1a93-41c2-bfe9-5ae5ef3b6f82"/>
 				<text><![CDATA[Telefono:]]></text>
 			</staticText>
 			<staticText>
@@ -138,21 +141,26 @@
 				<reportElement x="117" y="106" width="100" height="20" uuid="e4765106-8cc4-40eb-bd83-b699a2107f3e"/>
 				<textFieldExpression><![CDATA[$F{TELEFONO_CONTACTO}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="0" y="169" width="100" height="20" uuid="dd273db5-33f5-4b19-83f4-9fefc7f423bb"/>
+				<text><![CDATA[Departamento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="117" y="128" width="100" height="20" uuid="24ec930a-d633-49ec-b301-775de089df62"/>
+				<textFieldExpression><![CDATA[$F{EMAIL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="149" width="176" height="20" uuid="33160e36-55cc-4e21-8b77-403953f93535"/>
+				<textFieldExpression><![CDATA[$F{ciudad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="169" width="176" height="20" uuid="1ffda653-152f-49b1-9697-a427bb379251"/>
+				<textFieldExpression><![CDATA[$F{depto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="220" width="248" height="20" uuid="c2b7d9eb-00dd-458a-a4f5-64e3d5c41248"/>
+				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
-	<lastPageFooter>
-		<band height="62">
-			<staticText>
-				<reportElement x="415" y="0" width="127" height="62" uuid="744b422c-d733-4afd-8c19-5390371ea373"/>
-				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
-				<text><![CDATA[F.LABDIEL.098
-VER: 1
-VIGENCIA: 2016-04-11
-
-
-
-]]></text>
-			</staticText>
-		</band>
-	</lastPageFooter>
 </jasperReport>

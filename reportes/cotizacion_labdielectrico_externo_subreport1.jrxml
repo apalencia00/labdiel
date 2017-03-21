@@ -2,13 +2,13 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_subreport1" language="groovy" pageWidth="648" pageHeight="802" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6d8587fe-1c21-452c-b745-534d91e798d0">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="94"/>
+	<property name="ireport.y" value="180"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT c."NUM_COTIZACION", c."FK_CLIENTE", c."FK_USUARIO",
        c."FK_EMPLEADO", c."FECHA_REGISTRO", c."ESTADO", c."US_MODIFICA", c."FECHA_MODIFICACION",
-       c."FK_REVISION_ENSAYO_EQUIPO", cl."NOMBRE" || ' ' || cl."APELLIDO" as cliente, cl."IDE_NIT",cl."TELEFONO_CONTACTO", cl."DIRECCION"
-  FROM labor."COTIZACION" c , labor."CLIENTE" cl WHERE "ID_CLIENTE" = "FK_CLIENTE" AND c."NUM_COTIZACION" = $P{ncotic}  ;]]>
+       c."FK_REVISION_ENSAYO_EQUIPO", cl."NOMBRE" || ' ' || cl."APELLIDO" as cliente, cl."IDE_NIT",cl."TELEFONO_CONTACTO", cl."DIRECCION",cl."EMAIL",pc."DESCRIPCION" as ciudad,pd."DESCRIPCION" as depto
+  FROM labor."COTIZACION" c , labor."CLIENTE" cl, labor."PARAM_CIUDAD" pc, labor."PARAM_DEPTO" pd WHERE "ID_CLIENTE" = "FK_CLIENTE" AND c."NUM_COTIZACION" = $P{ncotic} AND cl."CIUDAD" = pc."COD_DIVIPO"::integer  AND cl."DEPTO" = pd."COD_DEPA_CODI"::integer ;]]>
 	</queryString>
 	<field name="NUM_COTIZACION" class="java.lang.String"/>
 	<field name="FK_CLIENTE" class="java.lang.Integer"/>
@@ -25,18 +25,21 @@
 	</field>
 	<field name="TELEFONO_CONTACTO" class="java.lang.String"/>
 	<field name="DIRECCION" class="java.lang.String"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<field name="ciudad" class="java.lang.String"/>
+	<field name="depto" class="java.lang.String"/>
 	<title>
-		<band height="28" splitType="Stretch"/>
+		<band height="14" splitType="Stretch"/>
 	</title>
 	<detail>
 		<band height="496" splitType="Stretch">
 			<staticText>
-				<reportElement x="10" y="10" width="100" height="20" uuid="9c1cc087-449e-4879-a025-add3679f2f21"/>
+				<reportElement x="0" y="0" width="100" height="20" uuid="9c1cc087-449e-4879-a025-add3679f2f21"/>
 				<text><![CDATA[Barranquilla,
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="13" y="439" width="539" height="51" forecolor="#000000" uuid="62d8b781-443d-488b-bf7d-03c5277583d1"/>
+				<reportElement x="0" y="445" width="539" height="51" forecolor="#000000" uuid="62d8b781-443d-488b-bf7d-03c5277583d1"/>
 				<text><![CDATA[Ensayo para la verificación dieléctrica de los elementos referenciados en esta oferta mediante la utilización de equipos de ensayos y métodos normalizados. Para la ejecución de estos ensayos se realizaran las actividades descritas en normativas internacionales en su ultima version vigente al momento de la ejecución de los mismos, las cuales se relacionan a continuación.
 
 
@@ -45,97 +48,121 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="230" width="84" height="20" uuid="3d28ce28-e3d0-4b4f-9cbe-851624d2859f"/>
+				<reportElement x="0" y="227" width="84" height="20" uuid="3d28ce28-e3d0-4b4f-9cbe-851624d2859f"/>
 				<text><![CDATA[Respetado Señor:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="36" width="44" height="20" uuid="434e24e4-57a9-4ce5-9b51-c68435e5f4f8"/>
+				<reportElement x="0" y="33" width="100" height="20" uuid="434e24e4-57a9-4ce5-9b51-c68435e5f4f8"/>
 				<text><![CDATA[Señores]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="13" y="159" width="100" height="20" uuid="2e55b293-8c79-498c-bf73-4fa0ec54804f"/>
+				<reportElement x="0" y="153" width="100" height="20" uuid="2e55b293-8c79-498c-bf73-4fa0ec54804f"/>
 				<text><![CDATA[Ciudad:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="310" width="84" height="20" uuid="432b544e-da53-4ac0-a8b0-908e2412d1f2"/>
+				<reportElement x="0" y="318" width="84" height="20" uuid="432b544e-da53-4ac0-a8b0-908e2412d1f2"/>
 				<text><![CDATA[Cordialmente,]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="205" width="342" height="20" uuid="e486a2c3-cb42-492a-8c31-cf9b35ea5136"/>
+				<reportElement x="0" y="202" width="525" height="20" uuid="e486a2c3-cb42-492a-8c31-cf9b35ea5136"/>
 				<text><![CDATA[REF.: Cotización para ensayo de equipos para trabajos en redes eléctricas energizadas.
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="381" width="246" height="20" uuid="cfd80593-b8c5-4b33-b4df-e5b28081ccc1"/>
+				<reportElement x="2" y="386" width="246" height="20" uuid="cfd80593-b8c5-4b33-b4df-e5b28081ccc1"/>
 				<text><![CDATA[Calle 42 No 44-51 Barranquilla-Atlantico		]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="55" width="31" height="20" uuid="e09e2719-5446-4db9-973a-e264702bfd0e"/>
+				<reportElement x="0" y="53" width="100" height="20" uuid="e09e2719-5446-4db9-973a-e264702bfd0e"/>
 				<text><![CDATA[NIT:	]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="76" width="57" height="20" uuid="a5378ad6-f0e0-46b5-9efd-89cbd879411d"/>
+				<reportElement x="0" y="73" width="100" height="20" uuid="a5378ad6-f0e0-46b5-9efd-89cbd879411d"/>
 				<text><![CDATA[Atencion:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="13" y="423" width="246" height="16" forecolor="#000000" uuid="5640db6b-eaf7-4a14-9ee7-6db85749eebe"/>
+				<reportElement x="3" y="429" width="246" height="16" forecolor="#000000" uuid="5640db6b-eaf7-4a14-9ee7-6db85749eebe"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[1. ALCANCE ESPECÍFICO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="118" width="57" height="20" uuid="208391af-d963-477b-b1d4-6dc8b5a08775"/>
+				<reportElement x="0" y="113" width="100" height="20" uuid="208391af-d963-477b-b1d4-6dc8b5a08775"/>
 				<text><![CDATA[Telefono:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="338" width="153" height="20" uuid="a8198978-d8dc-4aae-92f3-629bf0413432"/>
+				<reportElement x="0" y="338" width="153" height="20" uuid="a8198978-d8dc-4aae-92f3-629bf0413432"/>
 				<text><![CDATA[Gerardo Luis Ramírez Zapata
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="352" width="153" height="20" uuid="4d8eed7a-544e-40a8-aedf-d0cf2aed9cf1"/>
+				<reportElement x="0" y="358" width="153" height="20" uuid="4d8eed7a-544e-40a8-aedf-d0cf2aed9cf1"/>
 				<text><![CDATA[Ingeniero Laboratorio Dieléctrico]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="139" width="100" height="20" uuid="f7ceac23-95de-433b-a778-f83a03b56bb0"/>
+				<reportElement x="0" y="133" width="100" height="20" uuid="f7ceac23-95de-433b-a778-f83a03b56bb0"/>
 				<text><![CDATA[Correo Electronico]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="395" width="246" height="20" uuid="19229ca4-3dc0-43f7-b982-25bbe1e1aa7f"/>
+				<reportElement x="2" y="400" width="246" height="20" uuid="19229ca4-3dc0-43f7-b982-25bbe1e1aa7f"/>
 				<text><![CDATA[Teléfono: +57 5 3515740 Ext. 27]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="98" width="57" height="20" uuid="829dbed2-a129-4b8d-a50d-5d560901777e"/>
+				<reportElement x="0" y="93" width="100" height="20" uuid="829dbed2-a129-4b8d-a50d-5d560901777e"/>
 				<text><![CDATA[Direccion:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="397" y="16" width="100" height="20" uuid="3fbb8c23-08f4-4346-9697-acf4e5308d0f"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{ncotic}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="54" y="36" width="282" height="20" uuid="b23e7b61-5eb8-481a-99af-d043329f421e"/>
+				<reportElement x="139" y="33" width="282" height="20" uuid="b23e7b61-5eb8-481a-99af-d043329f421e"/>
 				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="41" y="56" width="100" height="20" uuid="8642ad8f-d4c5-4ca4-8e52-c2450f09e51d"/>
+				<reportElement x="139" y="53" width="100" height="20" uuid="8642ad8f-d4c5-4ca4-8e52-c2450f09e51d"/>
 				<textFieldExpression><![CDATA[$F{IDE_NIT}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="67" y="98" width="100" height="20" uuid="ca5e075e-dc6c-4ce1-abec-aed22497d2fd"/>
+				<reportElement x="139" y="93" width="156" height="20" uuid="ca5e075e-dc6c-4ce1-abec-aed22497d2fd"/>
 				<textFieldExpression><![CDATA[$F{DIRECCION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="67" y="118" width="100" height="20" uuid="3f43d7ed-5fb7-43d1-bb2f-58be2de90813"/>
+				<reportElement x="139" y="113" width="156" height="20" uuid="3f43d7ed-5fb7-43d1-bb2f-58be2de90813"/>
 				<textFieldExpression><![CDATA[$F{TELEFONO_CONTACTO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="13" y="262" width="282" height="20" uuid="205665ed-cd98-4fe0-99ce-c83b9aa38514"/>
+				<reportElement x="139" y="227" width="282" height="20" uuid="205665ed-cd98-4fe0-99ce-c83b9aa38514"/>
 				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
 			</textField>
+			<textField>
+				<reportElement x="421" y="0" width="160" height="20" uuid="d93879d9-0211-4ee5-829b-0651734df71c"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NUM_COTIZACION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="173" width="100" height="20" uuid="a9f747d7-dcec-401b-b1a2-86b693cbecf6"/>
+				<text><![CDATA[Departamento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="139" y="153" width="156" height="20" uuid="01fa1899-6309-46f2-b345-aa66f170b430"/>
+				<textFieldExpression><![CDATA[$F{ciudad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="173" width="156" height="20" uuid="84e08711-5765-436b-ba4c-0b41fb4b5f6a"/>
+				<textFieldExpression><![CDATA[$F{depto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="133" width="100" height="20" uuid="ed8b7253-16a4-4b62-bb4f-7ee8a810b229"/>
+				<textFieldExpression><![CDATA[$F{EMAIL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="251" width="542" height="57" uuid="4ecfec9f-b658-42a8-80c9-25f9a6d54ca9"/>
+				<text><![CDATA[Nos complace presentarle nuestra oferta de servicios para la realización de Ensayos eléctricos a los Equipos de Elevación y/o Protección Personal para trabajos en redes eléctricas energizadas, según los lineamientos de la norma ISO 17025 versión 2005 y los estandares de referencia aplicables para cada uno de los ensayos.
+
+
+
+]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>

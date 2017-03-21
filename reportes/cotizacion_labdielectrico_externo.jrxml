@@ -86,10 +86,42 @@
 		</band>
 		<band height="45">
 			<subreport>
+				<reportElement x="23" y="0" width="555" height="45" uuid="75e03cd8-ef26-4aad-8a74-724969668291"/>
+				<subreportParameter name="ncotic"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport_total.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="50">
+			<subreport>
 				<reportElement x="23" y="0" width="555" height="40" uuid="d69a7367-9756-4952-93c8-c46d0c5bc7ee"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_externo_subreport5.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>
+	<pageFooter>
+		<band height="65">
+			<textField evaluationTime="Report">
+				<reportElement x="558" y="16" width="40" height="20" uuid="486226db-14f9-4af0-8a63-ef13310c1519"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="475" y="16" width="80" height="20" uuid="bdb70c43-3362-47ea-99cf-dc2aef0d1545"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="339" y="3" width="127" height="62" uuid="21171bd5-03af-4a1f-89a3-e4423a68ed00"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[F.LABDIEL.098
+VER: 1
+VIGENCIA: 2016-04-11
+
+
+
+]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
 </jasperReport>

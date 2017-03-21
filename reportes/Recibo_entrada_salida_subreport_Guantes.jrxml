@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida_subreport_Guantes" language="groovy" pageWidth="288" pageHeight="802" columnWidth="288" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="24b23b56-cef3-4087-b6b2-3f58e6d2836a">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida_subreport_Guantes" language="groovy" pageWidth="648" pageHeight="802" columnWidth="648" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="24b23b56-cef3-4087-b6b2-3f58e6d2836a">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -20,28 +20,28 @@ GROUP BY cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 	<title>
 		<band height="45" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="7" y="0" width="256" height="20" backcolor="#CCCCCC" uuid="8e0a8b88-fe8a-4a5f-b851-7830e6201925"/>
+				<reportElement mode="Opaque" x="205" y="0" width="256" height="20" backcolor="#CCCCCC" uuid="8e0a8b88-fe8a-4a5f-b851-7830e6201925"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[EQUIPOS INGRESADOS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="-4" y="20" width="114" height="20" uuid="80d3af11-ce3a-46ad-ad78-5c044e319688"/>
+				<reportElement x="38" y="20" width="114" height="20" uuid="80d3af11-ce3a-46ad-ad78-5c044e319688"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[DESCRIPCION]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="110" y="20" width="60" height="20" uuid="bc5f81c6-896e-4835-b3ae-255c444ccaa2"/>
+				<reportElement x="311" y="20" width="60" height="20" uuid="bc5f81c6-896e-4835-b3ae-255c444ccaa2"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[CANTIDAD]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="170" y="20" width="113" height="20" uuid="dc1b28f8-8fa1-40d4-8038-35e4b234c286"/>
+				<reportElement x="483" y="20" width="113" height="20" uuid="dc1b28f8-8fa1-40d4-8038-35e4b234c286"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
@@ -52,19 +52,19 @@ GROUP BY cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 	<detail>
 		<band height="17" splitType="Stretch">
 			<textField>
-				<reportElement x="-4" y="0" width="114" height="14" uuid="43c2b1c9-6fc1-454e-985b-4d9a36eeaa81"/>
+				<reportElement x="38" y="0" width="114" height="14" uuid="43c2b1c9-6fc1-454e-985b-4d9a36eeaa81"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="170" y="0" width="100" height="14" uuid="ef10be3c-9e27-4485-8fba-7403cdef9ab7"/>
+				<reportElement x="483" y="0" width="100" height="14" uuid="ef10be3c-9e27-4485-8fba-7403cdef9ab7"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[--]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="110" y="0" width="60" height="15" uuid="db0fced0-3b4b-4f48-8005-642fb542ce4d"/>
+				<reportElement x="311" y="2" width="60" height="15" uuid="db0fced0-3b4b-4f48-8005-642fb542ce4d"/>
 				<textFieldExpression><![CDATA[$F{sum}]]></textFieldExpression>
 			</textField>
 		</band>

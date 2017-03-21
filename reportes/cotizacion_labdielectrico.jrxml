@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico" language="groovy" pageWidth="608" pageHeight="762" columnWidth="608" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ec21f255-4bb1-4ab7-a063-8dca9a77192f">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="20"/>
+	<property name="ireport.y" value="43"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["C:\\xampp\\htdocs\\nextexpress\\back-end\\reporteJava\\"]]></defaultValueExpression>
 	</parameter>
@@ -112,16 +112,27 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="50">
+		<band height="71">
 			<textField>
-				<reportElement x="459" y="13" width="80" height="20" uuid="35f1c0d6-ceda-46ae-a06b-febe34629fda"/>
+				<reportElement x="468" y="13" width="80" height="20" uuid="35f1c0d6-ceda-46ae-a06b-febe34629fda"/>
 				<textElement textAlignment="Right"/>
 				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="542" y="13" width="40" height="20" uuid="932cbd48-96da-4a15-900c-836efa4d6b68"/>
+				<reportElement x="551" y="13" width="40" height="20" uuid="932cbd48-96da-4a15-900c-836efa4d6b68"/>
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="332" y="0" width="127" height="62" uuid="744b422c-d733-4afd-8c19-5390371ea373"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[F.LABDIEL.098
+VER: 1
+VIGENCIA: 2016-04-11
+
+
+
+]]></text>
+			</staticText>
 		</band>
 	</pageFooter>
 </jasperReport>

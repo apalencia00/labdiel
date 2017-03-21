@@ -2,7 +2,18 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_subreport3" language="groovy" pageWidth="648" pageHeight="802" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dab5fcd6-524e-4c1e-b1a1-318f82d8a0c2">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="270"/>
+	<property name="ireport.y" value="237"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tiempo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT pc."DESCRIPCION" ciudad, pd."DESCRIPCION" depto, rev."DIRECCION_REVISION"
+  FROM labor."COTIZACION", labor."PARAM_CIUDAD" pc, labor."PARAM_DEPTO" pd, labor."REVISION_ENSAYO_EQUIPO" rev WHERE "NUM_COTIZACION" = $P{ncotic} AND "FK_REVISION_ENSAYO_EQUIPO" = "ID_REVISION_EQUIPO"  AND rev."FK_CIUDAD" = pc."COD_DIVIPO"::integer AND rev."FK_DEPTO" = pd."COD_DEPA_CODI"::integer limit 1;]]>
+	</queryString>
+	<field name="ciudad" class="java.lang.String"/>
+	<field name="depto" class="java.lang.String"/>
+	<field name="DIRECCION_REVISION" class="java.lang.String"/>
 	<title>
 		<band height="19" splitType="Stretch"/>
 	</title>
@@ -126,11 +137,35 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="274" width="555" height="43" forecolor="#000000" uuid="e6552a46-fdd2-4a97-baeb-7cdf3f0c1fc6"/>
+				<reportElement x="4" y="274" width="555" height="43" forecolor="#000000" uuid="e6552a46-fdd2-4a97-baeb-7cdf3f0c1fc6"/>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[• El servicio es prestado por el LABORATORIO DIELÉCTRICO DE JLB Y CIA LTDA. Los ensayos se realizaran en]]></text>
+				<text><![CDATA[• El servicio es prestado por el LABORATORIO DIELÉCTRICO DE JLB Y CIA LTDA. Los ensayos se realizaran en		]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="4" y="524" width="555" height="120" uuid="6c68727a-8e8d-4633-b794-02d686ae9561"/>
+				<textFieldExpression><![CDATA[$P{tiempo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="293" width="146" height="20" uuid="d7718a4f-766e-4b17-a278-7c8dac4e07ce"/>
+				<textFieldExpression><![CDATA[$F{ciudad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="394" y="293" width="17" height="20" uuid="6837638e-7d9d-429e-860b-ecbbee006f20"/>
+				<text><![CDATA[,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="411" y="293" width="100" height="20" uuid="75271394-957b-4ed5-bb24-5c1f5a386f91"/>
+				<textFieldExpression><![CDATA[$F{depto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="89" y="293" width="143" height="20" uuid="445061aa-50fa-4738-8661-2fb3c62bd303"/>
+				<textFieldExpression><![CDATA[$F{DIRECCION_REVISION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="231" y="293" width="17" height="20" uuid="9665b574-f00d-449a-ae2b-9faeee35224e"/>
+				<text><![CDATA[,]]></text>
 			</staticText>
 		</band>
 	</detail>

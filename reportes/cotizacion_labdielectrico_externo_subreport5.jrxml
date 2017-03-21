@@ -2,7 +2,20 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_subreport5" language="groovy" pageWidth="648" pageHeight="842" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="677bc3f0-8ea0-4bd4-9155-78166527e04c">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="302"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT "ID_DETALLE_ENSAYO_EQUIPO", "FK_TIPO_EQUIPO_CLIENTE", "CANTIDAD_EQUIPO",
+       "FK_USU_CREADOR", "FK_REVISION_ENSAYO_EQUIPO"
+  FROM labor."DETALLE_ENSAYO_EQUIPO" LIMIT 1;]]>
+	</queryString>
+	<field name="ID_DETALLE_ENSAYO_EQUIPO" class="java.lang.Integer"/>
+	<field name="FK_TIPO_EQUIPO_CLIENTE" class="java.lang.Integer"/>
+	<field name="CANTIDAD_EQUIPO" class="java.lang.Integer"/>
+	<field name="FK_USU_CREADOR" class="java.lang.Integer"/>
+	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
 	<title>
 		<band height="6" splitType="Stretch"/>
 	</title>
