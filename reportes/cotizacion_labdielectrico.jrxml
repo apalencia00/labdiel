@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico" language="groovy" pageWidth="608" pageHeight="762" columnWidth="608" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ec21f255-4bb1-4ab7-a063-8dca9a77192f">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="43"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["C:\\xampp\\htdocs\\nextexpress\\back-end\\reporteJava\\"]]></defaultValueExpression>
 	</parameter>
@@ -23,7 +23,7 @@
 	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
 	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
 	<title>
-		<band height="74" splitType="Stretch">
+		<band height="79" splitType="Stretch">
 			<image>
 				<reportElement x="13" y="0" width="113" height="74" uuid="b1db9407-3555-4ac4-8a46-be0ce2baa345"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
@@ -35,9 +35,9 @@
 		</band>
 	</title>
 	<detail>
-		<band height="46" splitType="Stretch">
+		<band height="42" splitType="Stretch">
 			<subreport>
-				<reportElement x="22" y="4" width="555" height="40" uuid="4fabf21b-7410-49d1-9446-bcde770b75a2"/>
+				<reportElement x="22" y="2" width="555" height="40" uuid="4fabf21b-7410-49d1-9446-bcde770b75a2"/>
 				<subreportParameter name="tiempo">
 					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
@@ -48,7 +48,7 @@
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport0.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="41">
+		<band height="39">
 			<subreport>
 				<reportElement x="22" y="2" width="555" height="37" uuid="4cf4c017-6ffb-4ce7-926d-7ba49e84f42e"/>
 				<subreportParameter name="tiempo">
@@ -61,7 +61,7 @@
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport1.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="41">
+		<band height="39">
 			<subreport>
 				<reportElement x="22" y="2" width="555" height="37" uuid="282d30b8-d014-42bd-92c2-7d01cc3de18d"/>
 				<subreportParameter name="tiempo">
@@ -74,7 +74,7 @@
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport2.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="42">
+		<band height="39">
 			<subreport>
 				<reportElement x="22" y="0" width="555" height="39" uuid="ad0562e0-2a9f-4f36-91b2-71a8593f4973"/>
 				<subreportParameter name="tiempo">
@@ -97,7 +97,7 @@
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport_total.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="55">
+		<band height="43">
 			<subreport>
 				<reportElement x="22" y="0" width="555" height="43" uuid="bf0f2e32-4374-408b-9137-fc6f546b0da9"/>
 				<subreportParameter name="tiempo">
@@ -112,7 +112,7 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="71">
+		<band height="62">
 			<textField>
 				<reportElement x="27" y="18" width="80" height="20" uuid="35f1c0d6-ceda-46ae-a06b-febe34629fda"/>
 				<textElement textAlignment="Right"/>

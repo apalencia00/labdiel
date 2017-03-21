@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport0" language="groovy" pageWidth="648" pageHeight="842" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="564eebc9-bf96-411e-86f4-0c5d48aa47e1">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="104"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
@@ -138,7 +138,7 @@
 				<textFieldExpression><![CDATA[$F{DIRECCION}]]></textFieldExpression>
 			</textField>
 			<textField pattern="">
-				<reportElement x="117" y="106" width="100" height="20" uuid="e4765106-8cc4-40eb-bd83-b699a2107f3e"/>
+				<reportElement x="117" y="106" width="176" height="20" uuid="e4765106-8cc4-40eb-bd83-b699a2107f3e"/>
 				<textFieldExpression><![CDATA[$F{TELEFONO_CONTACTO}]]></textFieldExpression>
 			</textField>
 			<staticText>
@@ -146,7 +146,7 @@
 				<text><![CDATA[Departamento:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="117" y="128" width="100" height="20" uuid="24ec930a-d633-49ec-b301-775de089df62"/>
+				<reportElement x="117" y="128" width="176" height="20" uuid="24ec930a-d633-49ec-b301-775de089df62"/>
 				<textFieldExpression><![CDATA[$F{EMAIL}]]></textFieldExpression>
 			</textField>
 			<textField>
