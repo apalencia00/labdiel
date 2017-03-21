@@ -65,4 +65,19 @@ WHERE "NUM_COTIZACION" = dt."FK_COTIZACION" AND dt."FK_COD_TIPO_EQUIPO" = tpe."I
 			</textField>
 		</band>
 	</detail>
+	<lastPageFooter>
+		<band height="62">
+			<staticText>
+				<reportElement x="481" y="0" width="127" height="62" uuid="fc8e88d7-534f-466d-bb9c-27cfd86ddfce"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[F.LABDIEL.098
+VER: 1
+VIGENCIA: 2016-04-11
+
+
+
+]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
 </jasperReport>
