@@ -47,22 +47,21 @@ WHERE "NUM_COTIZACION" = dt."FK_COTIZACION" AND dt."FK_COD_TIPO_EQUIPO" = tpe."I
 		</band>
 	</title>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="13" splitType="Stretch">
 			<textField>
-				<reportElement x="18" y="0" width="100" height="20" uuid="947b8d21-f529-400c-aa05-0ea2ea3c32bc"/>
-				<textElement textAlignment="Center">
+				<reportElement x="18" y="0" width="100" height="13" uuid="947b8d21-f529-400c-aa05-0ea2ea3c32bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="118" y="0" width="451" height="20" uuid="684b7ad8-a13a-46f1-89d7-d711b63ac09e"/>
+				<reportElement x="118" y="0" width="451" height="13" uuid="684b7ad8-a13a-46f1-89d7-d711b63ac09e"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{DOCUMENTO}]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="50"/>
 	</detail>
 </jasperReport>
