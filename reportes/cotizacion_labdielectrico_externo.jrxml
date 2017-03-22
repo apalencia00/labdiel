@@ -45,11 +45,71 @@
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_externo_subreport1.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="38"/>
-		<band height="38"/>
-		<band height="38"/>
-		<band height="38"/>
-		<band height="45"/>
+		<band height="38">
+			<subreport>
+				<reportElement x="23" y="0" width="555" height="37" uuid="8c53355a-62b1-47eb-b273-dd58b2d6ef79"/>
+				<subreportParameter name="tiempo">
+					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_externo_subreport2.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="38">
+			<subreport>
+				<reportElement x="23" y="0" width="555" height="38" uuid="ed98e6c9-e376-4053-9f07-e8b430400f80"/>
+				<subreportParameter name="tiempo">
+					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_externo_subreport3.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="38">
+			<subreport>
+				<reportElement x="23" y="0" width="555" height="38" uuid="3d47a664-6552-4efa-9f18-dbeec8c62a32"/>
+				<subreportParameter name="tiempo">
+					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_externo_subreport4.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="38">
+			<subreport>
+				<reportElement x="23" y="0" width="555" height="38" uuid="d0edb7f0-57a2-46f5-9139-db67065d0220"/>
+				<subreportParameter name="tiempo">
+					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_externo_subreport6.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="45">
+			<subreport>
+				<reportElement x="23" y="0" width="555" height="45" uuid="75e03cd8-ef26-4aad-8a74-724969668291"/>
+				<subreportParameter name="tiempo">
+					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport_total.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
 	</detail>
 	<pageFooter>
 		<band height="65">
