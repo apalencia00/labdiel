@@ -30,9 +30,6 @@ WHERE "NUM_COTIZACION" = dt."FK_COTIZACION" AND dt."FK_COD_TIPO_EQUIPO" = tpe."I
 	<title>
 		<band height="11"/>
 	</title>
-	<pageHeader>
-		<band height="11"/>
-	</pageHeader>
 	<detail>
 		<band height="20" splitType="Stretch">
 			<staticText>
