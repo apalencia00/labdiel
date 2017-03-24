@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Liner_subreport1" language="groovy" pageWidth="864" pageHeight="802" columnWidth="864" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fe58c40f-a491-4585-aae9-a29a30dce612">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Liner_subreport1" language="groovy" pageWidth="730" pageHeight="802" columnWidth="730" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fe58c40f-a491-4585-aae9-a29a30dce612">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="95"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<queryString>
-		<![CDATA[SELECT "ID_EQUIPO", "COD_EQUIPO", "MARCA", "FK_TIPO_EQUIPO", "FECHA_REGISTRO",
-       "ESTADO", "SERIAL_INTERNO"
-  FROM labor."EQUIPO_INVENTARIO_EMPRESA" WHERE   substr("COD_EQUIPO", 1, 1) = 'L';  ;]]>
+		<![CDATA[]]>
 	</queryString>
 	<field name="ID_EQUIPO" class="java.lang.Long"/>
 	<field name="COD_EQUIPO" class="java.lang.String"/>
@@ -16,92 +14,67 @@
 	<field name="ESTADO" class="java.lang.String"/>
 	<field name="SERIAL_INTERNO" class="java.lang.String"/>
 	<title>
-		<band height="74">
+		<band height="72">
 			<staticText>
-				<reportElement x="10" y="10" width="119" height="50" uuid="036d79a6-1980-4ff7-98ed-ffd84db91c31"/>
+				<reportElement x="0" y="0" width="119" height="72" uuid="036d79a6-1980-4ff7-98ed-ffd84db91c31"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Código asignado por el cliente/ Code assigned by client]]></text>
+				<text><![CDATA[Codigo interno Del equipo/Internal code equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="425" y="10" width="71" height="62" uuid="7d2bc969-7e45-4b52-b36a-cf4ad618e98e"/>
+				<reportElement x="119" y="0" width="81" height="72" uuid="6021eae7-144d-4607-b65c-366ba4c84db1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Longitud del tramo (m)/ Length]]></text>
+				<text><![CDATA[Equipo/Equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="359" y="10" width="66" height="62" uuid="ec6833a5-003d-45f6-9227-7158edff49d5"/>
+				<reportElement x="200" y="0" width="78" height="72" uuid="270864bb-cf9d-4b77-9f1f-b451856800cd"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Calibre del cable/ AWG]]></text>
+				<text><![CDATA[Tension de Ensayo [KV] A.C Test voltage [KV] A.C]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="574" y="10" width="73" height="62" uuid="17493d14-c66e-479c-993c-389bbe591b3d"/>
+				<reportElement x="278" y="0" width="78" height="72" uuid="78690b26-8489-4f69-882d-1360ba1111c3"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Inspección física external inspection]]></text>
+				<text><![CDATA[Tensión de Diseño [kV]  A.C. 60 Hz
+Unit Range [kV] A.C 60 Hz]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="129" y="10" width="81" height="50" uuid="6021eae7-144d-4607-b65c-366ba4c84db1"/>
+				<reportElement x="356" y="0" width="78" height="72" uuid="8696af86-6564-4226-9c8c-1f7ac671f647"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Código interno
-Del equipo/
-Internal code equipment]]></text>
+				<text><![CDATA[Corriente de fuga
+Máxima microamperios
+[µA]
+ A.C Proof-Test Current, max, [µA]]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="647" y="10" width="103" height="62" uuid="8dc3016f-2e40-4c1a-9cf0-d257c9e7d4d6"/>
+				<reportElement x="434" y="0" width="147" height="72" uuid="3d82737b-844a-4ef7-baca-859a3799e0f1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Medida de Resistencia /
- Resistance measurement (mΩ)]]></text>
+				<text><![CDATA[Corriente de fuga
+obtenida en la prueba
+[µA]
+  A.C Proof-Test Current, max  Obtainet, [µA]]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="750" y="10" width="84" height="62" uuid="9203e770-b23c-4d72-975e-5fd7bc6c96ae"/>
+				<reportElement x="581" y="0" width="147" height="72" uuid="999380a1-589b-4df7-aca2-330c10dfe939"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Resistencia máxima permisible por tramo incluidos los clamps  (mΩ)]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="496" y="10" width="78" height="62" uuid="270864bb-cf9d-4b77-9f1f-b451856800cd"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Resistividad nominal del cable (mΩ/m)  /Cooper Cable Resistence]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="304" y="10" width="55" height="62" uuid="6be56101-9391-4f88-aa81-3304a39069e9"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Sección del conductor en mm2]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="268" y="10" width="36" height="50" uuid="deba56b0-13a6-4334-8892-2a0441526135"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Tramo No.]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="210" y="10" width="58" height="50" uuid="d8b00c55-af29-4f58-963d-3a9d9fd300c7"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Fabricante
-Manufacturer
-]]></text>
+				<text><![CDATA[Incertidumbre
+/Uncertainty]]></text>
 			</staticText>
 		</band>
 	</title>
 	<detail>
-		<band height="125" splitType="Stretch"/>
+		<band height="29" splitType="Stretch"/>
 	</detail>
 </jasperReport>

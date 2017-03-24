@@ -2,14 +2,14 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_subreport3" language="groovy" pageWidth="648" pageHeight="802" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dab5fcd6-524e-4c1e-b1a1-318f82d8a0c2">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="237"/>
+	<property name="ireport.y" value="136"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT pc."DESCRIPCION" ciudad, pd."DESCRIPCION" depto, rev."DIRECCION_REVISION"
-  FROM labor."COTIZACION", labor."PARAM_CIUDAD" pc, labor."PARAM_DEPTO" pd, labor."REVISION_ENSAYO_EQUIPO" rev WHERE "NUM_COTIZACION" = $P{ncotic} AND "FK_REVISION_ENSAYO_EQUIPO" = "ID_REVISION_EQUIPO"  AND rev."FK_CIUDAD" = pc."COD_DIVIPO"::integer AND rev."FK_DEPTO" = pd."COD_DEPA_CODI"::integer limit 1;]]>
+  FROM labor."COTIZACION", labor."PARAM_CIUDAD" pc, labor."PARAM_DEPTO" pd, labor."REVISION_ENSAYO_EQUIPO" rev WHERE "NUM_COTIZACION" = $P{ncotic} AND "FK_REVISION_ENSAYO_EQUIPO" = "ID_REVISION_EQUIPO"  AND rev."FK_CIUDAD" = pc."COD_DIVIPO"::integer AND rev."FK_DEPTO" = pd."COD_DEPA_CODI"::integer;]]>
 	</queryString>
 	<field name="ciudad" class="java.lang.String"/>
 	<field name="depto" class="java.lang.String"/>

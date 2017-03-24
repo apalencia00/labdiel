@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo" language="groovy" pageWidth="608" pageHeight="802" columnWidth="608" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e5f7e991-2815-4330-9990-1d9a6c6346ff">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="130"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
@@ -108,6 +108,15 @@
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport_total.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="40">
+			<subreport>
+				<reportElement x="23" y="0" width="555" height="40" uuid="5139f65e-586c-4252-8092-d33d7d95927b"/>
+				<subreportParameter name="ncotic"/>
+				<subreportParameter name="tiempo"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\cotizacion_labdielectrico_subreport4v1.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>

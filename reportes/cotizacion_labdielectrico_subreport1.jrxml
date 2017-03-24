@@ -50,14 +50,14 @@ WHERE "NUM_COTIZACION" = dt."FK_COTIZACION" AND dt."FK_COD_TIPO_EQUIPO" = tpe."I
 	<detail>
 		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement x="5" y="0" width="95" height="20" uuid="7dbc4e47-94d5-4f78-8b19-05033304be11"/>
+				<reportElement x="5" y="0" width="95" height="13" uuid="7dbc4e47-94d5-4f78-8b19-05033304be11"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="100" y="0" width="455" height="20" uuid="1cdbabf6-9c95-422a-91ce-103866ceffa4"/>
+				<reportElement x="100" y="0" width="455" height="13" uuid="1cdbabf6-9c95-422a-91ce-103866ceffa4"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
