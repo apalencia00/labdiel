@@ -36,14 +36,14 @@
 	<detail>
 		<band height="280" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="0" width="73" height="20" uuid="89ff478f-b611-4934-b868-098d8a9b6960"/>
+				<reportElement x="2" y="0" width="98" height="20" uuid="89ff478f-b611-4934-b868-098d8a9b6960"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Revisado por/]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="73" y="0" width="57" height="20" uuid="19dd6dd9-1825-4c9c-8feb-83d364b2b0eb"/>
+				<reportElement x="100" y="0" width="57" height="20" uuid="19dd6dd9-1825-4c9c-8feb-83d364b2b0eb"/>
 				<text><![CDATA[Cheked By]]></text>
 			</staticText>
 			<staticText>
@@ -54,15 +54,15 @@
 				<text><![CDATA[Jefe de Laboratorio/]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="100" y="65" width="51" height="20" uuid="2d07140c-7995-48bd-acc8-36adfdebe6a2"/>
+				<reportElement x="100" y="65" width="57" height="20" uuid="2d07140c-7995-48bd-acc8-36adfdebe6a2"/>
 				<text><![CDATA[lab Chief]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="77" y="30" width="51" height="20" uuid="5a4c54db-c6cb-489e-931b-5f09d1d9fb88"/>
+				<reportElement x="100" y="30" width="57" height="20" uuid="5a4c54db-c6cb-489e-931b-5f09d1d9fb88"/>
 				<text><![CDATA[Made By]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="30" width="75" height="20" uuid="9626729b-400b-421d-bce3-9611bb387bfb"/>
+				<reportElement x="2" y="30" width="98" height="20" uuid="9626729b-400b-421d-bce3-9611bb387bfb"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -76,7 +76,7 @@
 				<text><![CDATA[Laboratorista/]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="73" y="99" width="68" height="20" uuid="439562e0-577b-4101-98b7-c2d8790d78eb"/>
+				<reportElement x="73" y="99" width="84" height="20" uuid="439562e0-577b-4101-98b7-c2d8790d78eb"/>
 				<text><![CDATA[Lab Assistant]]></text>
 			</staticText>
 			<staticText>
@@ -92,21 +92,21 @@
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="176" width="158" height="20" uuid="fb470ed1-084c-4b83-ab49-0590977bf427"/>
-				<textElement textAlignment="Center">
+				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[LABORATORIO DIELECTRICO]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="196" width="158" height="20" uuid="e24ec919-0e37-4e72-8170-8dae1554e579"/>
-				<textElement textAlignment="Center">
+				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[JLB Y CIA LTADA]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="216" width="230" height="64" uuid="e6a0ad55-94f1-4ad2-9c99-f3628875868c"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
+				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[CALLE 42 # 44-51 – Barranquilla Colombia.
@@ -115,37 +115,37 @@ www.jorgebedoya.com
 pruebaselect@Jjorgebedoya.com]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="130" y="0" width="151" height="20" uuid="f50c9a9a-b39a-4347-9588-802b3c530782"/>
+				<reportElement x="157" y="0" width="151" height="20" uuid="f50c9a9a-b39a-4347-9588-802b3c530782"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="281" y="0" width="150" height="20" uuid="810577fc-3c88-4b29-b96a-99b878ed9dfa"/>
+				<reportElement x="308" y="0" width="150" height="20" uuid="810577fc-3c88-4b29-b96a-99b878ed9dfa"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{APELLIDO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="128" y="30" width="151" height="20" uuid="29593f63-b31f-4396-99d3-3a52e3a30929"/>
+				<reportElement x="158" y="30" width="151" height="20" uuid="29593f63-b31f-4396-99d3-3a52e3a30929"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="279" y="30" width="150" height="20" uuid="06616ff2-7e09-4b1b-a6b9-5e837c36bd1e"/>
+				<reportElement x="309" y="30" width="150" height="20" uuid="06616ff2-7e09-4b1b-a6b9-5e837c36bd1e"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{APELLIDO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="302" y="65" width="150" height="20" uuid="0108162d-61c4-4700-ab28-7892ba47657c"/>
+				<reportElement x="309" y="65" width="150" height="20" uuid="0108162d-61c4-4700-ab28-7892ba47657c"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{APELLIDO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="151" y="65" width="151" height="20" uuid="46bc72b8-6c22-49ce-8cfc-2da37bda1eaf"/>
+				<reportElement x="158" y="65" width="151" height="20" uuid="46bc72b8-6c22-49ce-8cfc-2da37bda1eaf"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="141" y="99" width="151" height="20" uuid="008a05d2-9c31-45f4-be0f-d392a2dd130e"/>
+				<reportElement x="158" y="99" width="151" height="20" uuid="008a05d2-9c31-45f4-be0f-d392a2dd130e"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
