@@ -12,7 +12,7 @@
        coti."FK_REVISION_ENSAYO_EQUIPO",c.*
   FROM labor."COTIZACION" coti, labor."CLIENTE" c
 
-WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND coti."ESTADO" = 'A'
+WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic}
   ;]]>
 	</queryString>
 	<field name="ID_COTIZACION" class="java.lang.Integer"/>
@@ -40,6 +40,8 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND 
 	<field name="DIRECCION" class="java.lang.String"/>
 	<field name="USUARIO" class="java.lang.Integer"/>
 	<field name="APELLIDO" class="java.lang.String"/>
+	<field name="DEPTO" class="java.lang.Integer"/>
+	<field name="USERNAME" class="java.lang.String"/>
 	<title>
 		<band height="58" splitType="Stretch">
 			<image>
