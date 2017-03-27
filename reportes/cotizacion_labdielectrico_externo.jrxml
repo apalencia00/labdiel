@@ -116,7 +116,7 @@
 				<subreportParameter name="ncotic"/>
 				<subreportParameter name="tiempo"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\cotizacion_labdielectrico_subreport4v1.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport4v1.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>

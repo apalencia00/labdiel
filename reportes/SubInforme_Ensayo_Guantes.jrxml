@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Guantes" language="groovy" pageWidth="849" pageHeight="842" columnWidth="809" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3926b6b5-454c-4e51-bbc7-9a121ae66f92">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="138"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -84,7 +84,7 @@
 	<title>
 		<band height="73" splitType="Stretch">
 			<staticText>
-				<reportElement x="397" y="0" width="99" height="73" uuid="76d0db25-1bbb-4ada-af42-31786af0ab2c"/>
+				<reportElement x="367" y="0" width="99" height="73" uuid="76d0db25-1bbb-4ada-af42-31786af0ab2c"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -93,14 +93,14 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="674" y="0" width="78" height="73" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
+				<reportElement x="644" y="0" width="78" height="73" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Humedad Relativa/Relativity Huminty/%RH)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="496" y="0" width="116" height="73" uuid="8a4c8272-ab80-4aeb-8078-aee09c6d2eaf"/>
+				<reportElement x="466" y="0" width="116" height="73" uuid="8a4c8272-ab80-4aeb-8078-aee09c6d2eaf"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -108,7 +108,7 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="119" y="0" width="58" height="73" uuid="61eff778-24a2-47f6-8b8c-0d791327de35"/>
+				<reportElement x="89" y="0" width="58" height="73" uuid="61eff778-24a2-47f6-8b8c-0d791327de35"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -116,7 +116,7 @@
 Equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="177" y="0" width="37" height="73" uuid="ffae61a3-0abd-4f29-b3cb-e94abce73ecd"/>
+				<reportElement x="147" y="0" width="37" height="73" uuid="ffae61a3-0abd-4f29-b3cb-e94abce73ecd"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -124,7 +124,7 @@ Equipment]]></text>
 Class]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="214" y="0" width="100" height="73" uuid="d7591bed-d77e-4c96-963a-f7b6c0f07e10"/>
+				<reportElement x="184" y="0" width="100" height="73" uuid="d7591bed-d77e-4c96-963a-f7b6c0f07e10"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -133,7 +133,7 @@ Ensayo [kV]  A.C
 Test voltage [kV] A.C]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="314" y="0" width="83" height="73" uuid="aa6839eb-138c-4678-a584-07fd382aff61"/>
+				<reportElement x="284" y="0" width="83" height="73" uuid="aa6839eb-138c-4678-a584-07fd382aff61"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -142,7 +142,7 @@ Operation Voltage [kV] A.C
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="0" width="119" height="73" uuid="1cdcad50-ed0a-4cda-9333-216916e6dbfe"/>
+				<reportElement x="0" y="0" width="89" height="73" uuid="1cdcad50-ed0a-4cda-9333-216916e6dbfe"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -151,14 +151,14 @@ Del equipo/
 Internal code equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="612" y="2" width="62" height="71" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
+				<reportElement x="582" y="0" width="62" height="73" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature °C]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="752" y="2" width="57" height="71" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
+				<reportElement x="722" y="0" width="87" height="71" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -167,58 +167,58 @@ Internal code equipment]]></text>
 		</band>
 	</title>
 	<detail>
-		<band height="22" splitType="Stretch">
+		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement mode="Opaque" x="0" y="1" width="119" height="20" backcolor="#CCCCCC" uuid="809b9c0a-6b90-4e7b-9e35-65d43cfe817e"/>
+				<reportElement mode="Opaque" x="0" y="0" width="89" height="20" backcolor="#CCCCCC" uuid="809b9c0a-6b90-4e7b-9e35-65d43cfe817e"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FK_ID_SERIAL_EQUIPO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="177" y="2" width="37" height="20" backcolor="#CCCCCC" uuid="039bde49-8725-4b91-ae94-971cddae2202"/>
+				<reportElement mode="Opaque" x="147" y="0" width="37" height="20" backcolor="#CCCCCC" uuid="039bde49-8725-4b91-ae94-971cddae2202"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OBS_CLASE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="214" y="2" width="100" height="20" backcolor="#CCCCCC" uuid="b9ee8f24-264d-45f3-818d-8ab1cf941718"/>
+				<reportElement mode="Opaque" x="184" y="0" width="100" height="20" backcolor="#CCCCCC" uuid="b9ee8f24-264d-45f3-818d-8ab1cf941718"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENSION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="314" y="2" width="83" height="20" backcolor="#CCCCCC" uuid="148d20b0-6e0c-4f7c-b1ac-4d5bc836b332"/>
+				<reportElement mode="Opaque" x="284" y="0" width="83" height="20" backcolor="#CCCCCC" uuid="148d20b0-6e0c-4f7c-b1ac-4d5bc836b332"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OBS_TENSION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="397" y="2" width="99" height="20" backcolor="#CCCCCC" uuid="0d89694c-e632-433d-9c32-0b65f68f6a30"/>
+				<reportElement mode="Opaque" x="367" y="0" width="99" height="20" backcolor="#CCCCCC" uuid="0d89694c-e632-433d-9c32-0b65f68f6a30"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="496" y="2" width="116" height="20" backcolor="#CCCCCC" uuid="0993bf56-af3b-49f6-b074-e98d0398186a"/>
+				<reportElement mode="Opaque" x="466" y="0" width="116" height="20" backcolor="#CCCCCC" uuid="0993bf56-af3b-49f6-b074-e98d0398186a"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="674" y="2" width="78" height="20" backcolor="#CCCCCC" uuid="df9577df-3850-4872-a7cb-7729d179d519"/>
+				<reportElement mode="Opaque" x="644" y="0" width="78" height="20" backcolor="#CCCCCC" uuid="df9577df-3850-4872-a7cb-7729d179d519"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{HUMEDAD}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="612" y="2" width="62" height="20" backcolor="#CCCCCC" uuid="eb194bbf-8d3a-413d-9df2-82fb708ed24e"/>
+				<reportElement mode="Opaque" x="582" y="0" width="62" height="20" backcolor="#CCCCCC" uuid="eb194bbf-8d3a-413d-9df2-82fb708ed24e"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
