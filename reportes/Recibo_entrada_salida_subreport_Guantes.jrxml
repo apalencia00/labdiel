@@ -61,7 +61,7 @@ GROUP BY tp."DESCRIPCION",cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 				<textFieldExpression><![CDATA[$F{sum}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="38" y="0" width="100" height="15" uuid="ecb9cecb-6e6e-4e62-866f-23888f5d3550"/>
+				<reportElement x="0" y="0" width="311" height="15" uuid="ecb9cecb-6e6e-4e62-866f-23888f5d3550"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{descr_ep}]]></textFieldExpression>
 			</textField>
