@@ -7,15 +7,15 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[select cl."DESCRIPCION", SUM(a."CANTIDAD_APROBADO")
+		<![CDATA[select tp."DESCRIPCION" || '- ' || cl."DESCRIPCION" as descr_ep, SUM(a."CANTIDAD_APROBADO")
 
 from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c, labor."CLASE_EQUIPO" cl,labor."EQUIPO_INVENTARIO_EMPRESA" emp
 
-where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = $P{ncotic} AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
+where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = 'COTIC-1000-2017' AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
 
-GROUP BY cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
+GROUP BY tp."DESCRIPCION",cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 	</queryString>
-	<field name="DESCRIPCION" class="java.lang.String"/>
+	<field name="descr_ep" class="java.lang.String"/>
 	<field name="sum" class="java.lang.Long"/>
 	<title>
 		<band height="45" splitType="Stretch">
@@ -51,13 +51,6 @@ GROUP BY cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 	</title>
 	<detail>
 		<band height="17" splitType="Stretch">
-			<textField>
-				<reportElement x="38" y="0" width="114" height="14" uuid="43c2b1c9-6fc1-454e-985b-4d9a36eeaa81"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement x="483" y="0" width="100" height="14" uuid="ef10be3c-9e27-4485-8fba-7403cdef9ab7"/>
 				<textElement textAlignment="Center"/>
@@ -66,6 +59,11 @@ GROUP BY cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 			<textField>
 				<reportElement x="311" y="2" width="60" height="15" uuid="db0fced0-3b4b-4f48-8005-642fb542ce4d"/>
 				<textFieldExpression><![CDATA[$F{sum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="38" y="0" width="100" height="15" uuid="ecb9cecb-6e6e-4e62-866f-23888f5d3550"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{descr_ep}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
