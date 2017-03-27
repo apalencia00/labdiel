@@ -94,7 +94,7 @@
 			</staticText>
 			<staticText>
 				<reportElement x="626" y="0" width="78" height="73" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
-				<textElement textAlignment="Center" verticalAlignment="Top">
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Humedad Relativa/Relativity Huminty/%RH)]]></text>
@@ -152,14 +152,14 @@ Internal code equipment]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="564" y="0" width="62" height="73" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
-				<textElement textAlignment="Center" verticalAlignment="Top">
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature °C]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="704" y="2" width="70" height="71" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
-				<textElement textAlignment="Center" verticalAlignment="Top">
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Incertidumbre/Uncertainty]]></text>

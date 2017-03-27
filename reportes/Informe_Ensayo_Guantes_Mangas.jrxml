@@ -285,6 +285,9 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		<band height="50">
 			<subreport>
 				<reportElement x="0" y="0" width="824" height="50" uuid="3f5a8915-381a-4786-8579-6277e68123be"/>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
+				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_subreport2.jasper"]]></subreportExpression>
 			</subreport>

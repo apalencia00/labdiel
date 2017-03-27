@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mantas" language="groovy" pageWidth="730" pageHeight="842" columnWidth="690" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0a2187d4-18fd-416e-b868-e427a8b2c851">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mantas" language="groovy" pageWidth="864" pageHeight="842" columnWidth="824" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0a2187d4-18fd-416e-b868-e427a8b2c851">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="183"/>
+	<property name="ireport.y" value="215"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -57,7 +57,7 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND 
 	<detail>
 		<band height="260" splitType="Stretch">
 			<staticText>
-				<reportElement x="395" y="1" width="150" height="20" uuid="14e5be6c-803b-44ec-916d-bbc660e7446d"/>
+				<reportElement x="524" y="1" width="150" height="20" uuid="14e5be6c-803b-44ec-916d-bbc660e7446d"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -103,7 +103,7 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Ciudad/City]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="395" y="117" width="150" height="64" uuid="215a76a6-3fb0-4e20-bf13-687267069387"/>
+				<reportElement x="524" y="117" width="150" height="64" uuid="215a76a6-3fb0-4e20-bf13-687267069387"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -119,7 +119,7 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="395" y="91" width="150" height="26" uuid="bb0b4671-de71-4a36-9939-42fc8c21da5e"/>
+				<reportElement x="524" y="91" width="150" height="26" uuid="bb0b4671-de71-4a36-9939-42fc8c21da5e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -149,7 +149,7 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="395" y="20" width="150" height="20" uuid="359832ee-1c7d-4583-b05c-40c7a6915667"/>
+				<reportElement x="524" y="20" width="150" height="20" uuid="359832ee-1c7d-4583-b05c-40c7a6915667"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -170,7 +170,7 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Serie/Serial]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="395" y="40" width="150" height="51" uuid="dd3ef43a-4395-4669-b3a6-c408a5f5131c"/>
+				<reportElement x="524" y="40" width="150" height="51" uuid="dd3ef43a-4395-4669-b3a6-c408a5f5131c"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -180,14 +180,14 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="546" y="1" width="14" height="20" backcolor="#CCCCCC" uuid="a2281ff2-2cca-4d7d-8bc0-9e4b6129721b"/>
+				<reportElement mode="Opaque" x="675" y="1" width="14" height="20" backcolor="#CCCCCC" uuid="a2281ff2-2cca-4d7d-8bc0-9e4b6129721b"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[N°]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="560" y="1" width="130" height="20" backcolor="#CCCCCC" uuid="2d83ecd5-2323-4c7c-983b-0b7a9024639d"/>
+				<reportElement mode="Opaque" x="689" y="1" width="130" height="20" backcolor="#CCCCCC" uuid="2d83ecd5-2323-4c7c-983b-0b7a9024639d"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -209,7 +209,7 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[$F{CIUDAD}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement mode="Opaque" x="545" y="21" width="145" height="20" backcolor="#CCCCCC" uuid="13b0c166-d50e-4d37-a033-6062513260dd"/>
+				<reportElement mode="Opaque" x="674" y="21" width="145" height="20" backcolor="#CCCCCC" uuid="13b0c166-d50e-4d37-a033-6062513260dd"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -232,7 +232,7 @@ Autorized service by customer]]></text>
 		</band>
 		<band height="52">
 			<subreport>
-				<reportElement x="0" y="0" width="690" height="52" uuid="f2226376-b073-4c4e-8c7d-35ccc1ac0191"/>
+				<reportElement x="0" y="0" width="824" height="52" uuid="f2226376-b073-4c4e-8c7d-35ccc1ac0191"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -280,7 +280,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="0" y="0" width="690" height="50" uuid="297eb62c-8373-462c-be56-4e7ad4f40396"/>
+				<reportElement x="0" y="0" width="824" height="50" uuid="297eb62c-8373-462c-be56-4e7ad4f40396"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -291,7 +291,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		<band height="50"/>
 		<band height="50">
 			<subreport>
-				<reportElement x="0" y="0" width="690" height="50" uuid="4feb3212-f6b5-483f-bde2-bbf715618136"/>
+				<reportElement x="0" y="0" width="824" height="50" uuid="4feb3212-f6b5-483f-bde2-bbf715618136"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -301,7 +301,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="0" y="0" width="690" height="50" uuid="8b9606e7-70a2-4bf3-a1e1-f6b09f63d841"/>
+				<reportElement x="0" y="0" width="824" height="50" uuid="8b9606e7-70a2-4bf3-a1e1-f6b09f63d841"/>
 				<subreportParameter name="observ"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
