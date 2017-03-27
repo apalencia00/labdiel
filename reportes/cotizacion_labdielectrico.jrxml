@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico" language="groovy" pageWidth="608" pageHeight="762" columnWidth="608" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ec21f255-4bb1-4ab7-a063-8dca9a77192f">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="15"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["C:\\xampp\\htdocs\\nextexpress\\back-end\\reporteJava\\"]]></defaultValueExpression>
 	</parameter>
@@ -10,7 +10,7 @@
 	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="subreport" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[select * from labor."COTIZACION" where "ESTADO" = 'A'  AND "NUM_COTIZACION" = $P{ncotic}  ;]]>
+		<![CDATA[select * from labor."COTIZACION" where  "NUM_COTIZACION" = $P{ncotic}  ;]]>
 	</queryString>
 	<field name="ID_COTIZACION" class="java.lang.Integer"/>
 	<field name="NUM_COTIZACION" class="java.lang.String"/>

@@ -114,17 +114,24 @@ Equipment]]></text>
 	<detail>
 		<band height="28" splitType="Stretch">
 			<textField>
-				<reportElement x="0" y="0" width="119" height="20" uuid="02c53b15-3612-4f67-a4d4-1e2bd9d6d4e5"/>
+				<reportElement mode="Opaque" x="0" y="0" width="119" height="20" backcolor="#CCCCCC" uuid="02c53b15-3612-4f67-a4d4-1e2bd9d6d4e5"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{FK_SERIAL_EQUIPO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="301" y="0" width="112" height="20" uuid="1d0e572e-2246-432f-a60d-e003324e2eca"/>
-				<textElement textAlignment="Center"/>
+				<reportElement mode="Opaque" x="301" y="0" width="112" height="20" backcolor="#CCCCCC" uuid="1d0e572e-2246-432f-a60d-e003324e2eca"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{OBS_TENSION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="201" y="0" width="100" height="20" uuid="f2c9651a-522e-4df1-8e8a-985171938f7e"/>
-				<textElement textAlignment="Center"/>
+				<reportElement mode="Opaque" x="201" y="0" width="100" height="20" backcolor="#CCCCCC" uuid="f2c9651a-522e-4df1-8e8a-985171938f7e"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{OBS_LONGITUD}]]></textFieldExpression>
 			</textField>
 		</band>
