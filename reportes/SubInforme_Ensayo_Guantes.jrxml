@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Guantes" language="groovy" pageWidth="730" pageHeight="842" columnWidth="690" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3926b6b5-454c-4e51-bbc7-9a121ae66f92">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Guantes" language="groovy" pageWidth="849" pageHeight="842" columnWidth="809" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3926b6b5-454c-4e51-bbc7-9a121ae66f92">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.x" value="138"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -93,14 +93,11 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="612" y="0" width="78" height="73" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
+				<reportElement x="674" y="0" width="78" height="73" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Incertidumbre
-/Uncertainty
-
-]]></text>
+				<text><![CDATA[Humedad Relativa/Relativity Huminty/%RH)]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="496" y="0" width="116" height="73" uuid="8a4c8272-ab80-4aeb-8078-aee09c6d2eaf"/>
@@ -153,6 +150,20 @@ Operation Voltage [kV] A.C
 Del equipo/
 Internal code equipment]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="612" y="2" width="62" height="71" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Temperatura/Temperature °C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="752" y="2" width="57" height="71" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Incertidumbre/Uncertainty]]></text>
+			</staticText>
 		</band>
 	</title>
 	<detail>
@@ -198,6 +209,20 @@ Internal code equipment]]></text>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="674" y="2" width="78" height="20" backcolor="#CCCCCC" uuid="df9577df-3850-4872-a7cb-7729d179d519"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HUMEDAD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="612" y="2" width="62" height="20" backcolor="#CCCCCC" uuid="eb194bbf-8d3a-413d-9df2-82fb708ed24e"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TEMPERATURA}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

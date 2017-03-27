@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="730" pageHeight="802" columnWidth="690" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="221"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -255,20 +255,6 @@ Autorized service by customer]]></text>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Condiciones ambientales/Enviromental condition]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="2" y="40" width="159" height="20" uuid="a99fc961-4441-4a92-81e4-e72f6fc696b4"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Temperatura/Temperature (°C)			]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="219" y="40" width="252" height="20" uuid="0ac9ebe8-f10c-48c4-8dd9-728805de3833"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Humedad Relativa(%HR)/Relative Humidity(%RH)									]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="3" y="66" width="677" height="63" uuid="ab066ee0-9a4e-4828-859e-a665ee7e3ed7"/>
