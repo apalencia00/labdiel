@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mantas" language="groovy" pageWidth="864" pageHeight="842" columnWidth="824" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0a2187d4-18fd-416e-b868-e427a8b2c851">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="215"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -57,7 +57,7 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND 
 	<detail>
 		<band height="260" splitType="Stretch">
 			<staticText>
-				<reportElement x="524" y="1" width="150" height="20" uuid="14e5be6c-803b-44ec-916d-bbc660e7446d"/>
+				<reportElement x="511" y="1" width="150" height="20" uuid="14e5be6c-803b-44ec-916d-bbc660e7446d"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -103,7 +103,7 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Ciudad/City]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="524" y="117" width="150" height="64" uuid="215a76a6-3fb0-4e20-bf13-687267069387"/>
+				<reportElement x="511" y="117" width="150" height="64" uuid="215a76a6-3fb0-4e20-bf13-687267069387"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -119,7 +119,7 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="524" y="91" width="150" height="26" uuid="bb0b4671-de71-4a36-9939-42fc8c21da5e"/>
+				<reportElement x="511" y="91" width="150" height="26" uuid="bb0b4671-de71-4a36-9939-42fc8c21da5e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -149,7 +149,7 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="524" y="20" width="150" height="20" uuid="359832ee-1c7d-4583-b05c-40c7a6915667"/>
+				<reportElement x="511" y="20" width="150" height="20" uuid="359832ee-1c7d-4583-b05c-40c7a6915667"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -170,7 +170,7 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Serie/Serial]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="524" y="40" width="150" height="51" uuid="dd3ef43a-4395-4669-b3a6-c408a5f5131c"/>
+				<reportElement x="511" y="40" width="150" height="51" uuid="dd3ef43a-4395-4669-b3a6-c408a5f5131c"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -180,14 +180,14 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="675" y="1" width="14" height="20" backcolor="#CCCCCC" uuid="a2281ff2-2cca-4d7d-8bc0-9e4b6129721b"/>
+				<reportElement mode="Opaque" x="661" y="1" width="33" height="20" backcolor="#CCCCCC" uuid="a2281ff2-2cca-4d7d-8bc0-9e4b6129721b"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[N°]]></text>
+				<text><![CDATA[INF-]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="689" y="1" width="130" height="20" backcolor="#CCCCCC" uuid="2d83ecd5-2323-4c7c-983b-0b7a9024639d"/>
+				<reportElement mode="Opaque" x="694" y="0" width="130" height="20" backcolor="#CCCCCC" uuid="2d83ecd5-2323-4c7c-983b-0b7a9024639d"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -288,7 +288,13 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/SubInforme_Ensayo_Calzado.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="50"/>
+		<band height="50">
+			<subreport>
+				<reportElement x="0" y="0" width="824" height="50" uuid="9bec4797-39d1-46a1-bc19-fd57e59bc332"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Calzado_subreport2_resultado.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
 		<band height="50">
 			<subreport>
 				<reportElement x="0" y="0" width="824" height="50" uuid="4feb3212-f6b5-483f-bde2-bbf715618136"/>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Liner" language="groovy" pageWidth="730" pageHeight="842" columnWidth="690" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0a0a48d6-3eb1-4085-997f-b5af83162175">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Liner" language="groovy" pageWidth="864" pageHeight="842" columnWidth="824" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0a0a48d6-3eb1-4085-997f-b5af83162175">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="205"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -47,7 +47,7 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND 
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement x="580" y="0" width="134" height="65" uuid="f14c7e29-7fce-46d2-aff7-b24a6935cb65"/>
+				<reportElement x="715" y="-3" width="134" height="65" uuid="f14c7e29-7fce-46d2-aff7-b24a6935cb65"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
 			</image>
 		</band>
@@ -120,7 +120,7 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="392" y="42" width="150" height="56" uuid="7c369429-a4e3-4e8f-b6de-f3f198393ca2"/>
+				<reportElement x="518" y="42" width="150" height="56" uuid="7c369429-a4e3-4e8f-b6de-f3f198393ca2"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -130,14 +130,14 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="542" y="3" width="15" height="20" backcolor="#CCCCCC" uuid="d8c7e663-fddf-4a63-9176-9a80509d6f23"/>
+				<reportElement mode="Opaque" x="668" y="3" width="15" height="20" backcolor="#CCCCCC" uuid="d8c7e663-fddf-4a63-9176-9a80509d6f23"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[N°]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="392" y="131" width="150" height="52" uuid="ff5599a3-95fb-4639-a13a-7394a745f025"/>
+				<reportElement x="518" y="131" width="150" height="52" uuid="ff5599a3-95fb-4639-a13a-7394a745f025"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -145,21 +145,21 @@ Autorized service by customer]]></text>
 						]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="392" y="22" width="150" height="20" uuid="4836f25f-29b1-44bc-8782-fcd5714d35fc"/>
+				<reportElement x="518" y="22" width="150" height="20" uuid="4836f25f-29b1-44bc-8782-fcd5714d35fc"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Equipo /Equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="392" y="98" width="150" height="33" uuid="e27f61f6-294b-4944-81c8-a402ede38fca"/>
+				<reportElement x="518" y="98" width="150" height="33" uuid="e27f61f6-294b-4944-81c8-a402ede38fca"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Exactitud/Accuaracy (%)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="392" y="3" width="150" height="20" uuid="4c690a2e-a7fb-4d4b-ae4a-6efd0ab05390"/>
+				<reportElement x="518" y="3" width="150" height="20" uuid="4c690a2e-a7fb-4d4b-ae4a-6efd0ab05390"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -210,7 +210,7 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Serie/Serial]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="542" y="22" width="145" height="20" backcolor="#CCCCCC" uuid="38e01e1b-c32d-4866-a41e-73243ff21c49"/>
+				<reportElement mode="Opaque" x="668" y="22" width="145" height="20" backcolor="#CCCCCC" uuid="38e01e1b-c32d-4866-a41e-73243ff21c49"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>

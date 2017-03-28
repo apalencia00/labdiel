@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Mantas" language="groovy" pageWidth="648" pageHeight="842" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45b6efbc-c99e-4961-82c7-0fcd6ed89616">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Mantas" language="groovy" pageWidth="720" pageHeight="842" columnWidth="680" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45b6efbc-c99e-4961-82c7-0fcd6ed89616">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.x" value="9"/>
 	<property name="ireport.y" value="0"/>
 	<queryString>
 		<![CDATA[SELECT "iD_PERTIGAS", "FK_SERIAL_EQUIPO", "TRAMO", "T1", "T2", "T3",
@@ -65,7 +65,7 @@
 	<field name="APRUEBA" class="java.lang.Integer"/>
 	<field name="OBS_APRUEBA" class="java.lang.String"/>
 	<title>
-		<band height="56" splitType="Stretch">
+		<band height="50" splitType="Stretch">
 			<staticText>
 				<reportElement x="301" y="0" width="112" height="50" uuid="94858183-b0e4-499d-aaab-3c9bb49ede52"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -85,7 +85,7 @@ Del equipo/
 Internal code equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="413" y="0" width="86" height="50" uuid="3c98b68e-426b-46fe-9e44-342f3ee2c81b"/>
+				<reportElement x="594" y="0" width="86" height="50" uuid="3c98b68e-426b-46fe-9e44-342f3ee2c81b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -109,10 +109,26 @@ Internal code equipment]]></text>
 				<text><![CDATA[Equipo
 Equipment]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="413" y="0" width="86" height="50" uuid="a4a8299f-bb46-4afa-af83-a6def34825bb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Temperatura/Temperature (°C)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="499" y="0" width="95" height="50" uuid="88600691-dc1d-4778-8974-cf926eec1a97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Humedad Relativa(%HR)/Relative Humidity(%RH)
+]]></text>
+			</staticText>
 		</band>
 	</title>
 	<detail>
-		<band height="28" splitType="Stretch">
+		<band height="20" splitType="Stretch">
 			<textField>
 				<reportElement mode="Opaque" x="0" y="0" width="119" height="20" backcolor="#CCCCCC" uuid="02c53b15-3612-4f67-a4d4-1e2bd9d6d4e5"/>
 				<textElement textAlignment="Center">
@@ -133,6 +149,20 @@ Equipment]]></text>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OBS_LONGITUD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="499" y="0" width="95" height="20" backcolor="#CCCCCC" uuid="34ef78f5-be5d-490d-93a1-a0a9a33c3b57"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HUMEDAD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="413" y="0" width="86" height="20" backcolor="#CCCCCC" uuid="e06c4937-283a-4254-8b29-12516727009f"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TMA}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
