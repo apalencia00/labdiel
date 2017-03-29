@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="informe_Ensayo_Elevacion" language="groovy" pageWidth="864" pageHeight="842" columnWidth="824" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="de375161-0e0d-4b66-8841-c5e04429bc1c">
-	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="326"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[select * from labor."COTIZACION" where "NUM_COTIZACION" = $P{ncotic}]]>
+		<![CDATA[SELECT coti."ID_COTIZACION", coti."NUM_COTIZACION", coti."FK_CLIENTE", coti."FK_USUARIO",
+       coti."FK_EMPLEADO", coti."FECHA_REGISTRO", coti."ESTADO", coti."US_MODIFICA", coti."FECHA_MODIFICACION",
+       coti."FK_REVISION_ENSAYO_EQUIPO",c.*
+  FROM labor."COTIZACION" coti, labor."CLIENTE" c
+
+WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic}
+  ;]]>
 	</queryString>
 	<field name="ID_COTIZACION" class="java.lang.Integer"/>
 	<field name="NUM_COTIZACION" class="java.lang.String"/>
@@ -17,6 +23,23 @@
 	<field name="US_MODIFICA" class="java.lang.Integer"/>
 	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
 	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
+	<field name="ID_CLIENTE" class="java.lang.Long">
+		<fieldDescription><![CDATA[--]]></fieldDescription>
+	</field>
+	<field name="TIPO_IDE" class="java.lang.Integer"/>
+	<field name="IDE_NIT" class="java.lang.String">
+		<fieldDescription><![CDATA[---]]></fieldDescription>
+	</field>
+	<field name="NOMBRE" class="java.lang.String"/>
+	<field name="TELEFONO_CONTACTO" class="java.lang.String"/>
+	<field name="CIUDAD" class="java.lang.Integer"/>
+	<field name="CONTACTO" class="java.lang.String"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<field name="DIRECCION" class="java.lang.String"/>
+	<field name="USUARIO" class="java.lang.Integer"/>
+	<field name="APELLIDO" class="java.lang.String"/>
+	<field name="DEPTO" class="java.lang.Integer"/>
+	<field name="USERNAME" class="java.lang.String"/>
 	<title>
 		<band height="65" splitType="Stretch">
 			<image>
@@ -155,12 +178,42 @@ Autorized service by customer]]></text>
 						]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="656" y="10" width="26" height="20" backcolor="#CCCCCC" uuid="b220d03a-68a5-421e-b518-7b425627c045"/>
+				<reportElement mode="Opaque" x="656" y="10" width="42" height="20" backcolor="#CCCCCC" uuid="b220d03a-68a5-421e-b518-7b425627c045"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[INF-]]></text>
+				<text><![CDATA[INF-E-]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="656" y="29" width="168" height="21" uuid="a6718e54-f15a-4b6f-98a3-ba3c5da47d97"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ELEVACION]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="698" y="10" width="126" height="20" uuid="36e39fe4-c1b8-4557-9531-2135b62d1f25"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NUM_COTIZACION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="30" width="216" height="20" uuid="9c5e8c6b-666e-4f57-868b-2cc6e19ffde8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DIRECCION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="10" width="216" height="20" uuid="17a41f63-91ce-4721-87db-3fd31dece31d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="76" width="216" height="42" uuid="483dd15b-b6f8-4c81-9ecd-afe8a5b814e2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="118" width="216" height="21" uuid="2cb1d366-35da-4945-a291-8850f422bcbd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CIUDAD}]]></textFieldExpression>
+			</textField>
 		</band>
 		<band height="50"/>
 		<band height="152">

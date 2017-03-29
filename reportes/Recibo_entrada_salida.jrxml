@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida" language="groovy" pageWidth="648" pageHeight="842" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2494f3d5-2a08-4d51-b2a3-c8d2aaa4f588">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="21"/>
+	<property name="ireport.y" value="42"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select coti.*,rev.*,c.*,pc."DESCRIPCION" as desc_ciudad from labor."COTIZACION" coti, labor."REVISION_ENSAYO_EQUIPO" rev ,labor."CLIENTE" c, labor."PARAM_CIUDAD" pc where coti."NUM_COTIZACION" = $P{ncotic}
@@ -207,9 +207,9 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND rev."FK_CIUD
 		</band>
 	</title>
 	<detail>
-		<band height="58" splitType="Stretch">
+		<band height="37" splitType="Stretch">
 			<subreport>
-				<reportElement x="0" y="3" width="608" height="55" uuid="9d543465-7d1b-4068-925d-fd2105e4d267"/>
+				<reportElement x="0" y="0" width="608" height="37" uuid="9d543465-7d1b-4068-925d-fd2105e4d267"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
