@@ -1,61 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Liner_subreport1" language="groovy" pageWidth="730" pageHeight="802" columnWidth="730" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fe58c40f-a491-4585-aae9-a29a30dce612">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Liner_subreport1" language="groovy" pageWidth="648" pageHeight="802" columnWidth="648" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fe58c40f-a491-4585-aae9-a29a30dce612">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
-		<![CDATA[]]>
+		<![CDATA[SELECT "ID_INSP_LINER", "TIPO_LINER", "ACEITE", "OBS_ACEITE", "ABRASION",
+       "OBS_ABRASION", "DEGRADACION", "OBS_DEGRADAR", "POLVO", "OBS_POLVO",
+       "QUEMADURA", "OBS_QUEMADURA", "PERFORACION", "OBS_PERFORACION",
+       "APRUEBA", "FK_COTIZACION", "FK_SERIAL_EQUIPO", "FECHA_REGISTRO",
+       "USUARIO", dtl.*
+  FROM labor."REGISTRO_INSPECCION_LINER", labor."DETALLE_INSPECCION_LINER" dtl where dtl."FK_INSPECCION_LINER" =  "ID_INSP_LINER" and "FK_COTIZACION" = $P{ncotic}]]>
 	</queryString>
-	<field name="ID_EQUIPO" class="java.lang.Long"/>
-	<field name="COD_EQUIPO" class="java.lang.String"/>
-	<field name="MARCA" class="java.lang.String"/>
-	<field name="FK_TIPO_EQUIPO" class="java.lang.Integer"/>
+	<field name="ID_INSP_LINER" class="java.lang.Integer"/>
+	<field name="TIPO_LINER" class="java.lang.Integer"/>
+	<field name="ACEITE" class="java.lang.Integer"/>
+	<field name="OBS_ACEITE" class="java.lang.String"/>
+	<field name="ABRASION" class="java.lang.Integer"/>
+	<field name="OBS_ABRASION" class="java.lang.String"/>
+	<field name="DEGRADACION" class="java.lang.Integer"/>
+	<field name="OBS_DEGRADAR" class="java.lang.String"/>
+	<field name="POLVO" class="java.lang.Integer"/>
+	<field name="OBS_POLVO" class="java.lang.String"/>
+	<field name="QUEMADURA" class="java.lang.Integer"/>
+	<field name="OBS_QUEMADURA" class="java.lang.String"/>
+	<field name="PERFORACION" class="java.lang.Integer"/>
+	<field name="OBS_PERFORACION" class="java.lang.String"/>
+	<field name="APRUEBA" class="java.lang.Integer"/>
+	<field name="FK_COTIZACION" class="java.lang.String"/>
+	<field name="FK_SERIAL_EQUIPO" class="java.lang.Integer"/>
 	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
-	<field name="ESTADO" class="java.lang.String"/>
-	<field name="SERIAL_INTERNO" class="java.lang.String"/>
+	<field name="USUARIO" class="java.lang.Integer"/>
+	<field name="ID_DETALLE_INPECCION_LINER" class="java.lang.Integer"/>
+	<field name="FK_INSPECCION_LINER" class="java.lang.Integer"/>
+	<field name="COSTADO" class="java.lang.String"/>
+	<field name="TEMPERATURA" class="java.lang.Double"/>
+	<field name="HR" class="java.lang.Double"/>
+	<field name="TENSION" class="java.lang.Double"/>
+	<field name="FUGA" class="java.lang.Double"/>
+	<field name="TIEMPO" class="java.lang.Double"/>
 	<title>
 		<band height="72">
 			<staticText>
-				<reportElement x="0" y="0" width="119" height="72" uuid="036d79a6-1980-4ff7-98ed-ffd84db91c31"/>
+				<reportElement x="0" y="0" width="81" height="72" uuid="036d79a6-1980-4ff7-98ed-ffd84db91c31"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Codigo interno Del equipo/Internal code equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="119" y="0" width="81" height="72" uuid="6021eae7-144d-4607-b65c-366ba4c84db1"/>
+				<reportElement x="81" y="0" width="81" height="72" uuid="6021eae7-144d-4607-b65c-366ba4c84db1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Equipo/Equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="200" y="0" width="78" height="72" uuid="270864bb-cf9d-4b77-9f1f-b451856800cd"/>
+				<reportElement x="238" y="0" width="78" height="72" uuid="270864bb-cf9d-4b77-9f1f-b451856800cd"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Tension de Ensayo [KV] A.C Test voltage [KV] A.C]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="278" y="0" width="78" height="72" uuid="78690b26-8489-4f69-882d-1360ba1111c3"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Tensión de Diseño [kV]  A.C. 60 Hz
-Unit Range [kV] A.C 60 Hz]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="356" y="0" width="78" height="72" uuid="8696af86-6564-4226-9c8c-1f7ac671f647"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Corriente de fuga
-Máxima microamperios
-[µA]
- A.C Proof-Test Current, max, [µA]]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="434" y="0" width="147" height="72" uuid="3d82737b-844a-4ef7-baca-859a3799e0f1"/>
+				<reportElement x="316" y="0" width="118" height="72" uuid="3d82737b-844a-4ef7-baca-859a3799e0f1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -65,16 +75,66 @@ obtenida en la prueba
   A.C Proof-Test Current, max  Obtainet, [µA]]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="581" y="0" width="147" height="72" uuid="999380a1-589b-4df7-aca2-330c10dfe939"/>
+				<reportElement x="580" y="0" width="68" height="72" uuid="999380a1-589b-4df7-aca2-330c10dfe939"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Incertidumbre
 /Uncertainty]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="434" y="0" width="68" height="72" uuid="c6d0abed-c33c-495b-972a-e1f2933968a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Temperatura/Temperature (°C)			]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="0" width="78" height="72" uuid="cc941bff-d960-4a27-80f0-1564dd9ff7d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Humedad Relativa(%HR)/Relative Humidity(%RH)									]]></text>
+			</staticText>
 		</band>
 	</title>
 	<detail>
-		<band height="29" splitType="Stretch"/>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="81" height="20" backcolor="#CCCCCC" uuid="f7e0027b-11d2-4572-946c-f109789803a2"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FK_SERIAL_EQUIPO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="162" y="0" width="78" height="20" backcolor="#CCCCCC" uuid="f68ceedb-a880-480a-9dd1-b2939002646c"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TENSION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="426" y="0" width="78" height="20" backcolor="#CCCCCC" uuid="839cd435-fd30-4db7-9af3-70686bc740cf"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="240" y="0" width="118" height="20" backcolor="#CCCCCC" uuid="464f0c3d-7c38-4c4b-880f-3638c6503639"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FUGA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="358" y="0" width="68" height="20" backcolor="#CCCCCC" uuid="2e1df251-bde9-4b4a-a938-2f895330ed02"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TEMPERATURA}]]></textFieldExpression>
+			</textField>
+		</band>
 	</detail>
 </jasperReport>

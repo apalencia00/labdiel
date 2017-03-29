@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas_OBS_FINAL" language="groovy" pageWidth="730" pageHeight="802" columnWidth="730" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="abd0e8d1-8005-41b5-a637-248b2f12b9ea">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="observ" class="java.lang.String"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from labor."COTIZACION" where "NUM_COTIZACION" = $P{ncotic}]]>
+	</queryString>
+	<field name="ID_COTIZACION" class="java.lang.Integer"/>
+	<field name="NUM_COTIZACION" class="java.lang.String"/>
+	<field name="FK_CLIENTE" class="java.lang.Integer"/>
+	<field name="FK_USUARIO" class="java.lang.Integer"/>
+	<field name="FK_EMPLEADO" class="java.lang.Integer"/>
+	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
+	<field name="ESTADO" class="java.lang.String"/>
+	<field name="US_MODIFICA" class="java.lang.Integer"/>
+	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
+	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
+	<title>
+		<band height="27" splitType="Stretch"/>
+	</title>
+	<detail>
+		<band height="468" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="36975c68-1620-4fbe-8b1e-27d3480c9ce6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observaciones/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="0" width="100" height="20" uuid="6978a0b2-1006-4475-b717-77a4d5be5f23"/>
+				<text><![CDATA[Remarks]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="27" y="0" width="730" height="149" uuid="36d808f2-773f-4bca-882f-839b696d6ada"/>
+				<textFieldExpression><![CDATA[$P{observ}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="169" width="728" height="35" uuid="8015048a-45ef-48cf-8ae0-d2de17061f68"/>
+				<text><![CDATA[Los resultados contenidos en este se refieren al momento y condiciones en que se realizaron las mediciones. El laboratorio Dieléctrico de JLB CIA Ltda. no se responsabiliza de los perjuicios que puedan derivarse del uso inadecuado de los equipos o elementos sometidos a ensayo.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="206" width="730" height="20" uuid="8532271c-8f27-4694-94c4-4eb0b79f7756"/>
+				<text><![CDATA[Este informe solo es aplicable para las muestras que se relacionan en el, las cuales fueron sometidas a ensayo.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="226" width="730" height="34" uuid="fd3ae822-c47a-4b8f-8923-4d9289b64a39"/>
+				<text><![CDATA[Este informe expresa fielmente el resultado de las mediciones realizadas. No podrá ser reproducido parcialmente, excepto cuando se haya obtenido previamente la aprobación por escrito del Laboratorio Dieléctrico de JLB CIA Ltda.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="260" width="730" height="31" uuid="fc67019f-f0e0-4b5f-a41f-3a194e455ae2"/>
+				<text><![CDATA[El laboratorio no hace responsable por la representatividad de las muestras que los clientes entreguen al laboratorio para su ensayo cuando estas formen parte de un lote.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="292" width="728" height="20" uuid="5f72d4aa-5197-4421-95e1-9db864700ac5"/>
+				<text><![CDATA[El usuario es responsable por el buen uso y manipulación de los equipos ensayados.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="324" width="141" height="20" uuid="80bb496e-dbab-4cd2-9fc5-b0ff3140810e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firma de Recibido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="350" width="141" height="20" uuid="7ef151d4-e08b-44fc-ae67-454e7575fc4d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="377" width="141" height="20" uuid="12ace00f-3afa-4894-a45a-839b8336cd90"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Documento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="403" width="141" height="20" uuid="2d7e9005-33be-4e5c-a808-95e7fcbee89b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="159" y="341" width="517" height="1" uuid="5851412e-4cbe-4f02-b184-c4470b014d2b"/>
+			</line>
+			<line>
+				<reportElement x="159" y="370" width="517" height="1" uuid="05bdb226-e006-41ad-9b01-18d86604ff5e"/>
+			</line>
+			<line>
+				<reportElement x="159" y="396" width="517" height="1" uuid="f1e8f20e-1b1b-4a7d-94dc-6c292a0598a2"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>
