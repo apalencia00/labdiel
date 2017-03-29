@@ -1,64 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="informe_Ensayo_Elevacion_subreport2_resultados" language="groovy" pageWidth="864" pageHeight="802" columnWidth="864" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c30b2133-b185-4359-bc14-3adb37bd6820">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="153"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[SELECT "ID_REGISTRO_ELEVACION", "FK_COTIZACION", "FK_SERIAL_EQUIPO",
-       "FABRICANTE", "CHASIS", "PLACA", "BOOM", "COLOR", "OBS_COLOR",
-       "PLACAC", "OBS_PLACA", "PERFORACION", "OBS_PERFORACION", "ABRASION",
-       "DEGRADACION", "OBS_DEGRADACION", "POLVO", "OBS_POLVO", "QUEMADURA",
-       "OBS_QUEMADURA", "FUGA", "OBS_FUGA", "ELECTRODO", "OBS_ELECTRODO",
-       "CONECTADO", "OBS_CONECTADO", "VALOR_RESISTENCIA", "INSPECCION",
-       "OBS_INSPECCION", "TEMP", "HR", "TENSION_MAX", "TENSION_ENSAYO",
-       "CORRIENTE_FUGA_MAX", "CORRIENTE_FUGA", "TIEMPO", "USUARIO",
-       "FECHA_REGISTRO", "ESTADO", "OBS_FINAL", "SERIAL_VEH"
-  FROM labor."REGISTRO_ENSAYO_ELEVACION" where "FK_COTIZACION" = $P{ncotic} ;]]>
+		<![CDATA[SELECT dt.* , el."FK_SERIAL_EQUIPO"
+  FROM labor."REGISTRO_ENSAYO_ELEVACION" el, labor."DTLE_INSPECCION_ELEVACION" dt WHERE el."FK_COTIZACION" = $P{ncotic}
+AND dt."FK_ID_ELEVACION" = el."ID_REGISTRO_ELEVACION"
+]]>
 	</queryString>
-	<field name="ID_REGISTRO_ELEVACION" class="java.lang.Integer"/>
-	<field name="FK_COTIZACION" class="java.lang.String"/>
-	<field name="FK_SERIAL_EQUIPO" class="java.lang.Integer"/>
-	<field name="FABRICANTE" class="java.lang.String"/>
-	<field name="CHASIS" class="java.lang.String"/>
-	<field name="PLACA" class="java.lang.String"/>
+	<field name="DTL_ID_ELEVACION" class="java.lang.Integer"/>
 	<field name="BOOM" class="java.lang.Integer"/>
 	<field name="COLOR" class="java.lang.String"/>
-	<field name="OBS_COLOR" class="java.lang.String"/>
-	<field name="PLACAC" class="java.lang.Integer"/>
-	<field name="OBS_PLACA" class="java.lang.String"/>
+	<field name="PLACA" class="java.lang.Integer"/>
+	<field name="OBSPLACA" class="java.lang.String"/>
 	<field name="PERFORACION" class="java.lang.Integer"/>
-	<field name="OBS_PERFORACION" class="java.lang.String"/>
+	<field name="OBSPERFORACION" class="java.lang.String"/>
 	<field name="ABRASION" class="java.lang.Integer"/>
+	<field name="OBSABRASION" class="java.lang.String"/>
 	<field name="DEGRADACION" class="java.lang.Integer"/>
-	<field name="OBS_DEGRADACION" class="java.lang.String"/>
+	<field name="OBSDEGRADACION" class="java.lang.String"/>
 	<field name="POLVO" class="java.lang.Integer"/>
-	<field name="OBS_POLVO" class="java.lang.String"/>
-	<field name="QUEMADURA" class="java.lang.Integer"/>
-	<field name="OBS_QUEMADURA" class="java.lang.String"/>
-	<field name="FUGA" class="java.lang.Integer"/>
-	<field name="OBS_FUGA" class="java.lang.String"/>
+	<field name="OBSPOLVO" class="java.lang.String"/>
+	<field name="QUEMAR" class="java.lang.Integer"/>
+	<field name="OBSQUEMAR" class="java.lang.String"/>
+	<field name="ACEITE" class="java.lang.Integer"/>
+	<field name="OBSACEITE" class="java.lang.String"/>
+	<field name="GRASA" class="java.lang.Integer"/>
+	<field name="OBSGRASA" class="java.lang.String"/>
 	<field name="ELECTRODO" class="java.lang.Integer"/>
-	<field name="OBS_ELECTRODO" class="java.lang.String"/>
-	<field name="CONECTADO" class="java.lang.Integer"/>
-	<field name="OBS_CONECTADO" class="java.lang.String"/>
-	<field name="VALOR_RESISTENCIA" class="java.lang.String"/>
-	<field name="INSPECCION" class="java.lang.Integer"/>
-	<field name="OBS_INSPECCION" class="java.lang.String"/>
+	<field name="OBSELECTRODO" class="java.lang.String"/>
+	<field name="RESISTENCIA" class="java.lang.Double"/>
+	<field name="APRUEBA" class="java.lang.Integer"/>
+	<field name="OBSAPRUEBA" class="java.lang.String"/>
+	<field name="FK_ID_ELEVACION" class="java.lang.Integer"/>
 	<field name="TEMP" class="java.lang.Double"/>
 	<field name="HR" class="java.lang.Double"/>
-	<field name="TENSION_MAX" class="java.lang.Double"/>
-	<field name="TENSION_ENSAYO" class="java.lang.Double"/>
-	<field name="CORRIENTE_FUGA_MAX" class="java.lang.Double"/>
-	<field name="CORRIENTE_FUGA" class="java.lang.Double"/>
+	<field name="TENSION_MAX_IN" class="java.lang.Double"/>
+	<field name="TENSION_RMS_IN" class="java.lang.Double"/>
+	<field name="CORRIENTE_FUGA_MAX_IN" class="java.lang.Double"/>
+	<field name="CORRIENTE_FUGA_IN" class="java.lang.Double"/>
 	<field name="TIEMPO" class="java.lang.Double"/>
-	<field name="USUARIO" class="java.lang.Integer"/>
-	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
-	<field name="ESTADO" class="java.lang.String"/>
 	<field name="OBS_FINAL" class="java.lang.String"/>
-	<field name="SERIAL_VEH" class="java.lang.String"/>
+	<field name="FK_SERIAL_EQUIPO" class="java.lang.Integer"/>
 	<title>
 		<band height="53" splitType="Stretch">
 			<staticText>
@@ -138,34 +125,6 @@ obtenida en la prueba
 				<textFieldExpression><![CDATA[$F{FK_SERIAL_EQUIPO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="203" y="0" width="100" height="20" backcolor="#CCCCCC" uuid="5b3a1b2d-a4a3-4774-8684-668023a7f859"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{TENSION_ENSAYO}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="303" y="0" width="100" height="20" backcolor="#CCCCCC" uuid="832cafaf-8d24-4a16-8e37-cd3ea39e99a9"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{TENSION_MAX}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="403" y="0" width="100" height="20" backcolor="#CCCCCC" uuid="e9fe25b7-07f0-424a-b987-ad605cfb7a05"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA_MAX}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="503" y="0" width="135" height="20" backcolor="#CCCCCC" uuid="06a55655-97cd-4459-9c88-3d0ae801890c"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
-			</textField>
-			<textField>
 				<reportElement mode="Opaque" x="638" y="0" width="69" height="20" backcolor="#CCCCCC" uuid="7dff5632-4ca3-4fef-a4d2-e1d0b4084665"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
@@ -178,6 +137,34 @@ obtenida en la prueba
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{HR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="303" y="0" width="100" height="20" backcolor="#CCCCCC" uuid="f4212b54-b5ae-40b7-b883-e0a995b5ee78"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TENSION_MAX_IN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="203" y="0" width="100" height="20" backcolor="#CCCCCC" uuid="1b6b3445-f534-4ca5-8566-292b4c1ca38e"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TENSION_RMS_IN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="403" y="0" width="100" height="20" backcolor="#CCCCCC" uuid="fba660fb-538c-407f-8730-96a1b48732c9"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA_MAX_IN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="503" y="0" width="135" height="20" backcolor="#CCCCCC" uuid="988bdd4c-76a3-4ea1-b007-7460a39a046d"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA_IN}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

@@ -3,6 +3,49 @@
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT dt.* , el."FK_SERIAL_EQUIPO"
+  FROM labor."REGISTRO_ENSAYO_ELEVACION" el, labor."DTLE_INSPECCION_ELEVACION" dt WHERE el."FK_COTIZACION" = $P{ncotic}
+AND dt."FK_ID_ELEVACION" = el."ID_REGISTRO_ELEVACION"
+]]>
+	</queryString>
+	<field name="DTL_ID_ELEVACION" class="java.lang.Integer"/>
+	<field name="BOOM" class="java.lang.Integer"/>
+	<field name="COLOR" class="java.lang.String"/>
+	<field name="PLACA" class="java.lang.Integer"/>
+	<field name="OBSPLACA" class="java.lang.String"/>
+	<field name="PERFORACION" class="java.lang.Integer"/>
+	<field name="OBSPERFORACION" class="java.lang.String"/>
+	<field name="ABRASION" class="java.lang.Integer"/>
+	<field name="OBSABRASION" class="java.lang.String"/>
+	<field name="DEGRADACION" class="java.lang.Integer"/>
+	<field name="OBSDEGRADACION" class="java.lang.String"/>
+	<field name="POLVO" class="java.lang.Integer"/>
+	<field name="OBSPOLVO" class="java.lang.String"/>
+	<field name="QUEMAR" class="java.lang.Integer"/>
+	<field name="OBSQUEMAR" class="java.lang.String"/>
+	<field name="ACEITE" class="java.lang.Integer"/>
+	<field name="OBSACEITE" class="java.lang.String"/>
+	<field name="GRASA" class="java.lang.Integer"/>
+	<field name="OBSGRASA" class="java.lang.String"/>
+	<field name="ELECTRODO" class="java.lang.Integer"/>
+	<field name="OBSELECTRODO" class="java.lang.String"/>
+	<field name="RESISTENCIA" class="java.lang.Double"/>
+	<field name="APRUEBA" class="java.lang.Integer"/>
+	<field name="OBSAPRUEBA" class="java.lang.String"/>
+	<field name="FK_ID_ELEVACION" class="java.lang.Integer"/>
+	<field name="TEMP" class="java.lang.Double"/>
+	<field name="HR" class="java.lang.Double"/>
+	<field name="TENSION_MAX_IN" class="java.lang.Double"/>
+	<field name="TENSION_RMS_IN" class="java.lang.Double"/>
+	<field name="CORRIENTE_FUGA_MAX_IN" class="java.lang.Double"/>
+	<field name="CORRIENTE_FUGA_IN" class="java.lang.Double"/>
+	<field name="TIEMPO" class="java.lang.Double"/>
+	<field name="OBS_FINAL" class="java.lang.String"/>
+	<field name="FK_SERIAL_EQUIPO" class="java.lang.Integer"/>
 	<title>
 		<band height="53" splitType="Stretch">
 			<staticText>
@@ -32,6 +75,21 @@ Test Result
 		</band>
 	</title>
 	<detail>
-		<band height="125" splitType="Stretch"/>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="263" y="0" width="457" height="20" backcolor="#CCCCCC" uuid="1868045b-6935-4e7d-97ee-6f86b4859d51"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OBS_FINAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="126" y="0" width="137" height="20" backcolor="#CCCCCC" uuid="c1d05e93-d792-4d16-a81e-4edd9ffc1cb5"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FK_SERIAL_EQUIPO}]]></textFieldExpression>
+			</textField>
+		</band>
 	</detail>
 </jasperReport>
