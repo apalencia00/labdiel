@@ -7,16 +7,17 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[select tp."DESCRIPCION" || '- ' || cl."DESCRIPCION" as descr_ep, SUM(a."CANTIDAD_APROBADO")
+		<![CDATA[select tp."DESCRIPCION" || '- ' || cl."DESCRIPCION" as descr_ep, SUM(a."CANTIDAD_APROBADO"), med."DESCRIPCION" as medicion_unidad
 
-from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c, labor."CLASE_EQUIPO" cl,labor."EQUIPO_INVENTARIO_EMPRESA" emp
+from   labor."EQUIPOS_APROBADOS" a, labor."TIPO_EQUIPO" tp, labor."COTIZACION" c, labor."CLASE_EQUIPO" cl,labor."EQUIPO_INVENTARIO_EMPRESA" emp, labor."UNIDAD_MEDICION" med
 
-where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = 'COTIC-1000-2017' AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO"
+where cl."ID_CLASE_EQUIPO" = tp."FK_CLASE_EQUIPO" AND  tp."ID_TIPO_EQUIPO" = a."FK_COD_TIPO_EQUIPO" AND a."FK_COTIZACION" = 'COTIC-1000-2017' AND c."NUM_COTIZACION" = a."FK_COTIZACION"  AND emp."FK_TIPO_EQUIPO" = tp."ID_TIPO_EQUIPO" AND med."ID_UNIDAD" = tp."FK_UNIDAD"
 
-GROUP BY tp."DESCRIPCION",cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
+GROUP BY tp."DESCRIPCION",cl."DESCRIPCION",med."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 	</queryString>
 	<field name="descr_ep" class="java.lang.String"/>
 	<field name="sum" class="java.lang.Long"/>
+	<field name="medicion_unidad" class="java.lang.String"/>
 	<title>
 		<band height="45" splitType="Stretch">
 			<staticText>
@@ -41,28 +42,40 @@ GROUP BY tp."DESCRIPCION",cl."DESCRIPCION" ORDER BY cl."DESCRIPCION"]]>
 				<text><![CDATA[CANTIDAD]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="483" y="20" width="113" height="20" uuid="dc1b28f8-8fa1-40d4-8038-35e4b234c286"/>
+				<reportElement x="568" y="20" width="80" height="20" uuid="dc1b28f8-8fa1-40d4-8038-35e4b234c286"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[MARCA]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="443" y="20" width="80" height="20" uuid="ecf2e30d-5771-4996-9342-4d2ae538dce6"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MEDICION]]></text>
+			</staticText>
 		</band>
 	</title>
 	<detail>
-		<band height="17" splitType="Stretch">
+		<band height="15" splitType="Stretch">
 			<staticText>
-				<reportElement x="483" y="0" width="100" height="14" uuid="ef10be3c-9e27-4485-8fba-7403cdef9ab7"/>
+				<reportElement x="568" y="0" width="79" height="14" uuid="ef10be3c-9e27-4485-8fba-7403cdef9ab7"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[--]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="311" y="2" width="60" height="15" uuid="db0fced0-3b4b-4f48-8005-642fb542ce4d"/>
+				<reportElement x="311" y="0" width="60" height="15" uuid="db0fced0-3b4b-4f48-8005-642fb542ce4d"/>
 				<textFieldExpression><![CDATA[$F{sum}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="0" width="311" height="15" uuid="ecb9cecb-6e6e-4e62-866f-23888f5d3550"/>
 				<textFieldExpression><![CDATA[$F{descr_ep}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="0" width="80" height="15" uuid="ba7768b9-8940-46ed-8aa0-cf28612a79f5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{medicion_unidad}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
