@@ -42,14 +42,14 @@ GROUP BY tp."DESCRIPCION",cl."DESCRIPCION",med."DESCRIPCION" ORDER BY cl."DESCRI
 				<text><![CDATA[CANTIDAD]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="568" y="20" width="80" height="20" uuid="dc1b28f8-8fa1-40d4-8038-35e4b234c286"/>
+				<reportElement x="560" y="20" width="80" height="20" uuid="dc1b28f8-8fa1-40d4-8038-35e4b234c286"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[MARCA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="443" y="20" width="80" height="20" uuid="ecf2e30d-5771-4996-9342-4d2ae538dce6"/>
+				<reportElement x="436" y="20" width="80" height="20" uuid="ecf2e30d-5771-4996-9342-4d2ae538dce6"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
@@ -60,7 +60,7 @@ GROUP BY tp."DESCRIPCION",cl."DESCRIPCION",med."DESCRIPCION" ORDER BY cl."DESCRI
 	<detail>
 		<band height="15" splitType="Stretch">
 			<staticText>
-				<reportElement x="568" y="0" width="79" height="14" uuid="ef10be3c-9e27-4485-8fba-7403cdef9ab7"/>
+				<reportElement x="560" y="0" width="79" height="14" uuid="ef10be3c-9e27-4485-8fba-7403cdef9ab7"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[--]]></text>
 			</staticText>
@@ -73,7 +73,7 @@ GROUP BY tp."DESCRIPCION",cl."DESCRIPCION",med."DESCRIPCION" ORDER BY cl."DESCRI
 				<textFieldExpression><![CDATA[$F{descr_ep}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="443" y="0" width="80" height="15" uuid="ba7768b9-8940-46ed-8aa0-cf28612a79f5"/>
+				<reportElement x="436" y="0" width="80" height="15" uuid="ba7768b9-8940-46ed-8aa0-cf28612a79f5"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{medicion_unidad}]]></textFieldExpression>
 			</textField>

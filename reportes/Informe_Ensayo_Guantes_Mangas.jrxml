@@ -73,14 +73,14 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic}
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="484" y="0" width="164" height="20" uuid="daaee9b0-fe8b-43e1-b8bd-d3bff6a89ecf"/>
+				<reportElement x="472" y="0" width="164" height="20" uuid="daaee9b0-fe8b-43e1-b8bd-d3bff6a89ecf"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[No de Informe/Report Number]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="484" y="20" width="164" height="20" uuid="337ab042-d992-41df-8e2a-3b04b4662eb1"/>
+				<reportElement x="472" y="20" width="164" height="20" uuid="337ab042-d992-41df-8e2a-3b04b4662eb1"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -131,7 +131,7 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Fecha del Informe/Date report]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="484" y="40" width="164" height="53" uuid="442b1acf-ea06-4126-b0cb-7302bcf5904e"/>
+				<reportElement x="472" y="40" width="164" height="53" uuid="442b1acf-ea06-4126-b0cb-7302bcf5904e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -141,14 +141,14 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="484" y="93" width="164" height="30" uuid="6a69c538-d7c0-4e79-93fd-adda9c74f3db"/>
+				<reportElement x="472" y="93" width="164" height="30" uuid="6a69c538-d7c0-4e79-93fd-adda9c74f3db"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Exactitud/Accuaracy (%)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="484" y="123" width="164" height="59" uuid="2e144985-c9b8-4257-96de-34407ae8deea"/>
+				<reportElement x="472" y="123" width="164" height="59" uuid="2e144985-c9b8-4257-96de-34407ae8deea"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -156,7 +156,7 @@ Autorized service by customer]]></text>
 						]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="245" width="273" height="20" uuid="26622e09-2da3-42b9-b803-04dddb3b8d7f"/>
+				<reportElement x="1" y="245" width="297" height="20" uuid="26622e09-2da3-42b9-b803-04dddb3b8d7f"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -212,18 +212,18 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="680" y="0" width="144" height="20" backcolor="#CCCCCC" uuid="b648126e-e4f5-47e1-8e57-e753ae199853"/>
-				<textElement textAlignment="Center">
+				<reportElement mode="Opaque" x="680" y="0" width="124" height="20" backcolor="#CCCCCC" uuid="b648126e-e4f5-47e1-8e57-e753ae199853"/>
+				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ID_COTIZACION}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement mode="Opaque" x="648" y="0" width="32" height="20" backcolor="#CCCCCC" uuid="457b615f-3ad6-4e2b-9c33-9c8e34b8c445"/>
+				<reportElement mode="Opaque" x="636" y="0" width="44" height="20" backcolor="#CCCCCC" uuid="457b615f-3ad6-4e2b-9c33-9c8e34b8c445"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[INF-]]></text>
+				<text><![CDATA[INF-G]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="648" y="20" width="139" height="20" backcolor="#CCCCCC" uuid="e79c9744-65f5-4d49-a822-05085f91b6a8"/>
@@ -238,7 +238,7 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="267" y="245" width="188" height="20" uuid="0b8e8a40-a94b-4f66-a571-31917178b5fd"/>
+				<reportElement x="296" y="245" width="188" height="20" uuid="0b8e8a40-a94b-4f66-a571-31917178b5fd"/>
 				<text><![CDATA[test equipment information]]></text>
 			</staticText>
 			<textField>
@@ -319,7 +319,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 	<pageFooter>
 		<band height="66">
 			<staticText>
-				<reportElement x="590" y="11" width="100" height="55" uuid="4c78541a-35d9-4516-9e81-76fdfadc0aca"/>
+				<reportElement x="648" y="0" width="100" height="55" uuid="4c78541a-35d9-4516-9e81-76fdfadc0aca"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
