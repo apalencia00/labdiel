@@ -6,7 +6,7 @@
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
-	<parameter name="tiempo" class="java.lang.String"/>
+	<parameter name="pago" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT "ID_DETALLE_ENSAYO_EQUIPO", "FK_TIPO_EQUIPO_CLIENTE", "CANTIDAD_EQUIPO",
        "FK_USU_CREADOR", "FK_REVISION_ENSAYO_EQUIPO"
@@ -20,7 +20,7 @@
 	<detail>
 		<band height="569" splitType="Stretch">
 			<staticText>
-				<reportElement x="4" y="0" width="544" height="58" uuid="8abd43aa-9412-4408-83f8-419919ecf82b"/>
+				<reportElement x="4" y="0" width="604" height="58" uuid="8abd43aa-9412-4408-83f8-419919ecf82b"/>
 				<text><![CDATA[Los precios son firmes en pesos colombianos y el IVA se liquidará y cobrará según porcentaje vigente en la fecha de facturación, lo mismo que los nuevos impuestos ó aumentos de los impuestos existentes, de orden nacional, departamental ó municipal que intervengan en la facturación final.  El costo discriminado en cada capítulo de la oferta, corresponde al valor neto a pagar después de las deducciones legales que debe realizar el cliente.
 
 
@@ -28,27 +28,27 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="58" width="376" height="20" backcolor="#FFFF33" uuid="8dc5c05f-c09b-4c75-bc85-4448b1d7a636"/>
+				<reportElement mode="Opaque" x="0" y="58" width="130" height="20" uuid="8dc5c05f-c09b-4c75-bc85-4448b1d7a636"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[5. FORMA DE PAGO: De contado antes de iniciar los ensayos.							]]></text>
+				<text><![CDATA[3. FORMA DE PAGO: 						]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="78" width="544" height="58" uuid="1202a61f-7a42-47e7-800b-d8736327aa93"/>
+				<reportElement x="0" y="78" width="608" height="58" uuid="1202a61f-7a42-47e7-800b-d8736327aa93"/>
 				<text><![CDATA[En caso de aceptar la oferta favor consignar en las siguientes cuentas:
 Cuenta Corriente No. 20138920-2 del Helm Bank o a la Cuenta de ahorro número 110879584-3 del Banco Colpatria, la cuenta se encuentra a nombre de Jorge León Bedoya Marín Y CIA LTDA con NIT 800072453-3. Enviar una copia de la consignación o la transferencia bancaria por correo electrónico o fax.
 Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="136" width="376" height="20" backcolor="#FFFF33" uuid="e2924d7a-814b-4f1e-a585-a7357e1d49f0"/>
+				<reportElement mode="Transparent" x="0" y="136" width="376" height="20" uuid="e2924d7a-814b-4f1e-a585-a7357e1d49f0"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[6. PLAZO Y SITIO PARA EFECTUAR LOS TRABAJOS.]]></text>
+				<text><![CDATA[4. PLAZO Y SITIO PARA EFECTUAR LOS TRABAJOS.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="156" width="544" height="131" uuid="c7f0c15f-be62-4920-a638-188e0af8a1d3"/>
+				<reportElement x="0" y="156" width="608" height="131" uuid="c7f0c15f-be62-4920-a638-188e0af8a1d3"/>
 				<text><![CDATA[Los trabajos anteriormente mencionados serán realizados en el Laboratorio Dieléctrico de JLB Y CIA LTDA.
 Una vez recibida la Consignación o la orden de compra u orden de trabajo de acuerdo a las condiciones de pago, se realizará la programación del ítem para que sea traído al laboratorio. En el caso que el ítem se traiga sin dicha consignación u orden de servicio, por mutuo acuerdo, sólo se comienzan los trabajos hasta que sea autorizado por medio de estas dos formas (consignación u orden) el servicio que va a prestar el laboratorio.
 Los resultados de los ensayos  se entregarán al cliente en máximo 5 días hábiles después de la terminacion de los ensayos contratados.
@@ -57,7 +57,7 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="287" width="376" height="20" backcolor="#FFFF33" uuid="b5c5ef8e-7509-462f-96de-d4eb373755ce"/>
+				<reportElement mode="Transparent" x="0" y="287" width="376" height="20" uuid="b5c5ef8e-7509-462f-96de-d4eb373755ce"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -65,11 +65,11 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="307" width="544" height="82" uuid="370e28aa-635e-4bf5-9a0b-1d677e0f4abf"/>
+				<reportElement x="0" y="307" width="608" height="82" uuid="370e28aa-635e-4bf5-9a0b-1d677e0f4abf"/>
 				<text><![CDATA[EL OFERENTE responde por el cumplimiento pleno de sus obligaciones según la presente oferta.  En relación con los perjuicios, EL OFERENTE únicamente responderá por el daño emergente derivado de las acciones u omisiones que le sean directamente imputables.  En ningún evento EL OFERENTE responderá por lucro cesante, daños indirectos, consecuenciales, y/o perdida de información. En todo caso, la responsabilidad del OFERENTE en ningún evento excederá el cien por ciento del valor del presente negocio jurídico, salvo en los eventos de dolor o culpa grave, en los cuales la responsabilidad será plena.							]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="389" width="376" height="20" backcolor="#FFFF33" uuid="1e376f1e-0c6d-450f-8ed0-99eb91f8b439"/>
+				<reportElement mode="Transparent" x="0" y="389" width="376" height="20" uuid="1e376f1e-0c6d-450f-8ed0-99eb91f8b439"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -98,6 +98,10 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 				<reportElement x="0" y="504" width="544" height="15" uuid="3e3021ad-ed53-4279-8a08-4614aa4396ab"/>
 				<text><![CDATA[Cordialmente,]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="112" y="58" width="353" height="20" uuid="4d2a0307-c2cc-42e3-ac55-4760824637f3"/>
+				<textFieldExpression><![CDATA[$P{pago}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>

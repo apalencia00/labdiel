@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mangas" pageWidth="864" pageHeight="842" columnWidth="824" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4227bd6e-0da4-4801-a326-e1e089dd6033">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mangas" language="groovy" pageWidth="864" pageHeight="842" columnWidth="824" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4227bd6e-0da4-4801-a326-e1e089dd6033">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="278"/>
@@ -45,10 +45,19 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND 
 	<field name="DIRECCION_REVISION" class="java.lang.String"/>
 	<field name="ENSAYO_INDOOR" class="java.lang.String"/>
 	<title>
-		<band height="52" splitType="Stretch"/>
+		<band height="52" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="75" height="52" uuid="36985355-fee5-4d61-b899-13afc562826d"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
+			</image>
+		</band>
 	</title>
 	<detail>
 		<band height="298" splitType="Stretch">
+			<image>
+				<reportElement x="738" y="-54" width="102" height="54" uuid="3d146fc9-19fc-421d-86d4-68cbef9e7c86"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
+			</image>
 			<staticText>
 				<reportElement x="494" y="30" width="164" height="20" uuid="48b7d7cd-af41-4952-9dd7-1cb95d218e3c"/>
 				<textElement textAlignment="Center">
@@ -261,31 +270,31 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 			<subreport>
 				<reportElement x="0" y="0" width="824" height="50" uuid="8648b1b4-156a-42c7-a050-81e417b19111"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Mangas_subreport1.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Mangas_subreport1.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="50">
 			<subreport>
 				<reportElement x="0" y="0" width="824" height="50" uuid="1fde8cd7-9727-4390-9d6a-947876cfe52a"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Mangas_subreport2_resultado.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Mangas_subreport2_resultado.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="0" y="0" width="824" height="50" uuid="424b2df4-266b-464c-a3da-276761724228"/>
+				<reportElement x="0" y="0" width="824" height="50" uuid="e581a993-0b5d-4949-a71d-66dba3fc7d65"/>
 				<subreportParameter name="ncotic"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_subreport3.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Guantes_Mangas_subreport3.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="0" y="0" width="824" height="50" uuid="ac65aabd-9509-4ce4-9f8c-1d29e3943585"/>
+				<reportElement x="2" y="0" width="822" height="50" uuid="1f8a84fb-f881-400a-9c75-41142643b2b8"/>
 				<subreportParameter name="observ"/>
 				<subreportParameter name="ncotic"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_OBS_FINAL.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Guantes_Mangas_OBS_FINAL.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>

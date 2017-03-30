@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport0" language="groovy" pageWidth="648" pageHeight="842" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="564eebc9-bf96-411e-86f4-0c5d48aa47e1">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="104"/>
+	<property name="ireport.y" value="176"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
@@ -65,11 +65,11 @@
 				<text><![CDATA[Ciudad:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="3" y="413" width="246" height="16" forecolor="#000000" uuid="23f69c52-440d-48df-ba8b-217d453f47a7"/>
+				<reportElement x="3" y="413" width="264" height="16" forecolor="#000000" uuid="23f69c52-440d-48df-ba8b-217d453f47a7"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[1. ALCANCE ESPECÍFICO]]></text>
+				<text><![CDATA[1. TIEMPO DE EJECUCIÓN DE LOS ENSAYOS]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="0" width="100" height="20" uuid="4aad0018-8dbd-4cc0-a8e9-4f28d7c7a0c3"/>
@@ -86,15 +86,6 @@
 				<text><![CDATA[Direccion:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" x="3" y="429" width="539" height="51" forecolor="#000000" uuid="66a902ac-a2fb-454b-813a-83fcbeb4ba3a"/>
-				<text><![CDATA[Ensayo para la verificación dieléctrica de los elementos referenciados en esta oferta mediante la utilización de equipos de ensayos y métodos normalizados. Para la ejecución de estos ensayos se realizaran las actividades descritas en normativas internacionales en su ultima version vigente al momento de la ejecución de los mismos, las cuales se relacionan a continuación.
-
-
-
-
-]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="0" y="300" width="84" height="20" uuid="45ca87c8-10ef-41bd-91de-c236424c4b0a"/>
 				<text><![CDATA[Cordialmente,]]></text>
 			</staticText>
@@ -103,7 +94,7 @@
 				<text><![CDATA[Telefono:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" x="0" y="240" width="542" height="57" uuid="89746748-6a9d-426a-8e7e-c7f62c67c411"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="240" width="608" height="57" uuid="89746748-6a9d-426a-8e7e-c7f62c67c411"/>
 				<text><![CDATA[Nos complace presentarle nuestra oferta de servicios para la realización de Ensayos eléctricos a los Equipos de Elevación y/o Protección Personal para trabajos en redes eléctricas energizadas, según los lineamientos de la norma ISO 17025 versión 2005 y los estandares de referencia aplicables para cada uno de los ensayos.
 
 
@@ -160,6 +151,10 @@
 			<textField>
 				<reportElement x="117" y="220" width="248" height="20" uuid="c2b7d9eb-00dd-458a-a4f5-64e3d5c41248"/>
 				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="429" width="605" height="51" uuid="6116c009-6215-42f8-8a6d-59701115c2c0"/>
+				<textFieldExpression><![CDATA[$P{tiempo}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

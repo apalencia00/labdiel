@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico" language="groovy" pageWidth="608" pageHeight="762" columnWidth="608" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ec21f255-4bb1-4ab7-a063-8dca9a77192f">
-	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.zoom" value="1.1"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
@@ -9,6 +9,7 @@
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="subreport" class="java.lang.String"/>
+	<parameter name="pago" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select * from labor."COTIZACION" where  "NUM_COTIZACION" = $P{ncotic}  ;]]>
 	</queryString>
@@ -29,7 +30,7 @@
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement x="474" y="0" width="119" height="74" uuid="aa34f318-e43e-459d-a7ea-261b0644bdcd"/>
+				<reportElement x="476" y="5" width="119" height="74" uuid="aa34f318-e43e-459d-a7ea-261b0644bdcd"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
 			</image>
 		</band>
@@ -50,32 +51,6 @@
 		</band>
 		<band height="39">
 			<subreport>
-				<reportElement x="22" y="2" width="555" height="37" uuid="4cf4c017-6ffb-4ce7-926d-7ba49e84f42e"/>
-				<subreportParameter name="tiempo">
-					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="ncotic">
-					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
-				</subreportParameter>
-				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport1.jasper"]]></subreportExpression>
-			</subreport>
-		</band>
-		<band height="39">
-			<subreport>
-				<reportElement x="22" y="2" width="555" height="37" uuid="282d30b8-d014-42bd-92c2-7d01cc3de18d"/>
-				<subreportParameter name="tiempo">
-					<subreportParameterExpression><![CDATA[$P{tiempo}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="ncotic">
-					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
-				</subreportParameter>
-				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport2.jasper"]]></subreportExpression>
-			</subreport>
-		</band>
-		<band height="39">
-			<subreport>
 				<reportElement x="22" y="0" width="555" height="39" uuid="ad0562e0-2a9f-4f36-91b2-71a8593f4973"/>
 				<subreportParameter name="tiempo">
 					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
@@ -87,9 +62,9 @@
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport3.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="41">
+		<band height="39">
 			<subreport>
-				<reportElement x="22" y="-1" width="555" height="42" uuid="71f7c340-dd7d-4a39-ae0d-9461975380ce"/>
+				<reportElement x="22" y="0" width="555" height="39" uuid="71f7c340-dd7d-4a39-ae0d-9461975380ce"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -97,11 +72,11 @@
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport_total.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="43">
+		<band height="39">
 			<subreport>
-				<reportElement x="22" y="0" width="555" height="43" uuid="bf0f2e32-4374-408b-9137-fc6f546b0da9"/>
-				<subreportParameter name="tiempo">
-					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
+				<reportElement x="22" y="0" width="555" height="39" uuid="bf0f2e32-4374-408b-9137-fc6f546b0da9"/>
+				<subreportParameter name="pago">
+					<subreportParameterExpression><![CDATA[$P{pago}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
