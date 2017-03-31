@@ -35,43 +35,43 @@ GROUP BY "CANTIDAD"]]>
 		<groupExpression><![CDATA[]]></groupExpression>
 	</group>
 	<title>
-		<band height="71">
+		<band height="32"/>
+	</title>
+	<detail>
+		<band height="82">
 			<staticText>
-				<reportElement mode="Opaque" x="384" y="2" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
+				<reportElement mode="Opaque" x="381" y="4" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="384" y="53" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
+				<reportElement mode="Opaque" x="381" y="55" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total Servicio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="384" y="28" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
+				<reportElement mode="Opaque" x="381" y="30" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Iva 19%]]></text>
 			</staticText>
 			<textField evaluationTime="Report">
-				<reportElement x="467" y="0" width="85" height="20" uuid="8f232089-2b54-4d79-854d-bd801d22737e"/>
+				<reportElement x="464" y="53" width="85" height="20" uuid="7b13e149-5ae0-49ed-93e2-643913a2d066"/>
+				<textFieldExpression><![CDATA[$V{total_servicio_1}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="464" y="4" width="85" height="20" uuid="8f232089-2b54-4d79-854d-bd801d22737e"/>
 				<textFieldExpression><![CDATA[$V{total_1}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="467" y="26" width="85" height="20" uuid="1cb52523-7f18-4797-9589-2c992e8b8885"/>
+				<reportElement x="464" y="28" width="85" height="20" uuid="1cb52523-7f18-4797-9589-2c992e8b8885"/>
 				<textFieldExpression><![CDATA[$V{iva_1}]]></textFieldExpression>
 			</textField>
-			<textField evaluationTime="Report">
-				<reportElement x="467" y="51" width="85" height="20" uuid="7b13e149-5ae0-49ed-93e2-643913a2d066"/>
-				<textFieldExpression><![CDATA[$V{total_servicio_1}]]></textFieldExpression>
-			</textField>
 		</band>
-	</title>
-	<detail>
-		<band height="50"/>
 	</detail>
 </jasperReport>
