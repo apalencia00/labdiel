@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico" language="groovy" pageWidth="608" pageHeight="762" columnWidth="568" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ec21f255-4bb1-4ab7-a063-8dca9a77192f">
-	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
@@ -65,6 +65,9 @@
 		<band height="39">
 			<subreport>
 				<reportElement x="0" y="0" width="568" height="39" uuid="71f7c340-dd7d-4a39-ae0d-9461975380ce"/>
+				<subreportParameter name="pago">
+					<subreportParameterExpression><![CDATA[$P{pago}]]></subreportParameterExpression>
+				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -72,19 +75,7 @@
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport_total.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="39">
-			<subreport>
-				<reportElement x="0" y="0" width="568" height="39" uuid="bf0f2e32-4374-408b-9137-fc6f546b0da9"/>
-				<subreportParameter name="pago">
-					<subreportParameterExpression><![CDATA[$P{pago}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="ncotic">
-					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
-				</subreportParameter>
-				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport4v1.jasper"]]></subreportExpression>
-			</subreport>
-		</band>
+		<band height="39"/>
 	</detail>
 	<pageFooter>
 		<band height="62">
