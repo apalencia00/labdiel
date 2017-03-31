@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" pageWidth="607" pageHeight="802" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="14"/>
+	<property name="ireport.y" value="403"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="pago" class="java.lang.String"/>
@@ -98,7 +98,7 @@ GROUP BY "CANTIDAD"]]>
 				<text><![CDATA[4. PLAZO Y SITIO PARA EFECTUAR LOS TRABAJOS.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="156" width="465" height="131" uuid="7f959df1-b5d7-4846-a10c-f84b9af5ee72"/>
+				<reportElement x="0" y="156" width="544" height="131" uuid="7f959df1-b5d7-4846-a10c-f84b9af5ee72"/>
 				<text><![CDATA[Los trabajos anteriormente mencionados serán realizados en el Laboratorio Dieléctrico de JLB Y CIA LTDA.
 Una vez recibida la Consignación o la orden de compra u orden de trabajo de acuerdo a las condiciones de pago, se realizará la programación del ítem para que sea traído al laboratorio. En el caso que el ítem se traiga sin dicha consignación u orden de servicio, por mutuo acuerdo, sólo se comienzan los trabajos hasta que sea autorizado por medio de estas dos formas (consignación u orden) el servicio que va a prestar el laboratorio.
 Los resultados de los ensayos  se entregarán al cliente en máximo 5 días hábiles después de la terminacion de los ensayos contratados.
@@ -107,7 +107,7 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="78" width="465" height="58" uuid="aa07a61c-b302-4514-9020-630eaddd1acf"/>
+				<reportElement x="0" y="78" width="544" height="58" uuid="aa07a61c-b302-4514-9020-630eaddd1acf"/>
 				<text><![CDATA[En caso de aceptar la oferta favor consignar en las siguientes cuentas:
 Cuenta Corriente No. 20138920-2 del Helm Bank o a la Cuenta de ahorro número 110879584-3 del Banco Colpatria, la cuenta se encuentra a nombre de Jorge León Bedoya Marín Y CIA LTDA con NIT 800072453-3. Enviar una copia de la consignación o la transferencia bancaria por correo electrónico o fax.
 Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. ]]></text>
@@ -135,7 +135,7 @@ Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. 
 				<text><![CDATA[VALIDEZ DE LA OFERTA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="-1" y="307" width="465" height="82" uuid="a0f2252f-abdc-4b2e-9443-d1f2991085ca"/>
+				<reportElement x="-1" y="307" width="545" height="82" uuid="a0f2252f-abdc-4b2e-9443-d1f2991085ca"/>
 				<text><![CDATA[EL OFERENTE responde por el cumplimiento pleno de sus obligaciones según la presente oferta.  En relación con los perjuicios, EL OFERENTE únicamente responderá por el daño emergente derivado de las acciones u omisiones que le sean directamente imputables.  En ningún evento EL OFERENTE responderá por lucro cesante, daños indirectos, consecuenciales, y/o perdida de información. En todo caso, la responsabilidad del OFERENTE en ningún evento excederá el cien por ciento del valor del presente negocio jurídico, salvo en los eventos de dolor o culpa grave, en los cuales la responsabilidad será plena.							]]></text>
 			</staticText>
 			<textField>
@@ -143,7 +143,7 @@ Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. 
 				<textFieldExpression><![CDATA[$P{pago}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="0" width="461" height="58" uuid="aba7ffef-7665-4433-aee4-66830509743a"/>
+				<reportElement x="0" y="0" width="544" height="58" uuid="aba7ffef-7665-4433-aee4-66830509743a"/>
 				<text><![CDATA[Los precios son firmes en pesos colombianos y el IVA se liquidará y cobrará según porcentaje vigente en la fecha de facturación, lo mismo que los nuevos impuestos ó aumentos de los impuestos existentes, de orden nacional, departamental ó municipal que intervengan en la facturación final.  El costo discriminado en cada capítulo de la oferta, corresponde al valor neto a pagar después de las deducciones legales que debe realizar el cliente.
 
 
@@ -155,7 +155,7 @@ Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. 
 				<text><![CDATA[Cordialmente,]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="447" width="465" height="38" uuid="4af6f2a3-ceec-4332-9c06-663f7eda1acb"/>
+				<reportElement x="0" y="447" width="544" height="38" uuid="4af6f2a3-ceec-4332-9c06-663f7eda1acb"/>
 				<text><![CDATA[Si durante el desarrollo de los trabajos descritos en la presente oferta, surgen trabajos adicionales a los ítems, se modificará el alcance de la presente oferta y  JLB Y CIA LTDA, realizará una oferta adicional para tomar en consideración las modificaciones pertinentes. 							]]></text>
 			</staticText>
 		</band>
