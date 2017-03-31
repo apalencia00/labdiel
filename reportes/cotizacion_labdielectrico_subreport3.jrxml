@@ -25,6 +25,18 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 	<variable name="VALOR_UNITARIO_1" class="java.lang.Integer" calculation="Count">
 		<variableExpression><![CDATA[$F{VALOR_UNITARIO}]]></variableExpression>
 	</variable>
+	<title>
+		<band height="74">
+			<image>
+				<reportElement x="0" y="0" width="113" height="74" uuid="d534d2cd-b42f-44e7-896a-9d4c33428b49"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="489" y="0" width="119" height="74" uuid="bd02c55a-c1c9-4579-9e9a-686ad57f9c42"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
 	<pageHeader>
 		<band height="84">
 			<staticText>

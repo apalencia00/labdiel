@@ -17,10 +17,22 @@
 	<field name="CANTIDAD_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_USU_CREADOR" class="java.lang.Integer"/>
 	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
+	<title>
+		<band height="74">
+			<image>
+				<reportElement x="4" y="0" width="113" height="74" uuid="5c15573a-7349-4695-ba31-f223c127582c"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="489" y="0" width="119" height="74" uuid="16fdce3d-3958-43dc-804e-f83b16784639"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
 	<detail>
 		<band height="569" splitType="Stretch">
 			<staticText>
-				<reportElement x="4" y="0" width="604" height="58" uuid="8abd43aa-9412-4408-83f8-419919ecf82b"/>
+				<reportElement x="4" y="0" width="461" height="58" uuid="8abd43aa-9412-4408-83f8-419919ecf82b"/>
 				<text><![CDATA[Los precios son firmes en pesos colombianos y el IVA se liquidará y cobrará según porcentaje vigente en la fecha de facturación, lo mismo que los nuevos impuestos ó aumentos de los impuestos existentes, de orden nacional, departamental ó municipal que intervengan en la facturación final.  El costo discriminado en cada capítulo de la oferta, corresponde al valor neto a pagar después de las deducciones legales que debe realizar el cliente.
 
 
@@ -35,7 +47,7 @@
 				<text><![CDATA[3. FORMA DE PAGO: 						]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="78" width="608" height="58" uuid="1202a61f-7a42-47e7-800b-d8736327aa93"/>
+				<reportElement x="0" y="78" width="465" height="58" uuid="1202a61f-7a42-47e7-800b-d8736327aa93"/>
 				<text><![CDATA[En caso de aceptar la oferta favor consignar en las siguientes cuentas:
 Cuenta Corriente No. 20138920-2 del Helm Bank o a la Cuenta de ahorro número 110879584-3 del Banco Colpatria, la cuenta se encuentra a nombre de Jorge León Bedoya Marín Y CIA LTDA con NIT 800072453-3. Enviar una copia de la consignación o la transferencia bancaria por correo electrónico o fax.
 Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. ]]></text>
@@ -48,7 +60,7 @@ Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. 
 				<text><![CDATA[4. PLAZO Y SITIO PARA EFECTUAR LOS TRABAJOS.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="156" width="608" height="131" uuid="c7f0c15f-be62-4920-a638-188e0af8a1d3"/>
+				<reportElement x="0" y="156" width="465" height="131" uuid="c7f0c15f-be62-4920-a638-188e0af8a1d3"/>
 				<text><![CDATA[Los trabajos anteriormente mencionados serán realizados en el Laboratorio Dieléctrico de JLB Y CIA LTDA.
 Una vez recibida la Consignación o la orden de compra u orden de trabajo de acuerdo a las condiciones de pago, se realizará la programación del ítem para que sea traído al laboratorio. En el caso que el ítem se traiga sin dicha consignación u orden de servicio, por mutuo acuerdo, sólo se comienzan los trabajos hasta que sea autorizado por medio de estas dos formas (consignación u orden) el servicio que va a prestar el laboratorio.
 Los resultados de los ensayos  se entregarán al cliente en máximo 5 días hábiles después de la terminacion de los ensayos contratados.
@@ -65,7 +77,7 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="307" width="608" height="82" uuid="370e28aa-635e-4bf5-9a0b-1d677e0f4abf"/>
+				<reportElement x="0" y="307" width="465" height="82" uuid="370e28aa-635e-4bf5-9a0b-1d677e0f4abf"/>
 				<text><![CDATA[EL OFERENTE responde por el cumplimiento pleno de sus obligaciones según la presente oferta.  En relación con los perjuicios, EL OFERENTE únicamente responderá por el daño emergente derivado de las acciones u omisiones que le sean directamente imputables.  En ningún evento EL OFERENTE responderá por lucro cesante, daños indirectos, consecuenciales, y/o perdida de información. En todo caso, la responsabilidad del OFERENTE en ningún evento excederá el cien por ciento del valor del presente negocio jurídico, salvo en los eventos de dolor o culpa grave, en los cuales la responsabilidad será plena.							]]></text>
 			</staticText>
 			<staticText>
@@ -87,7 +99,7 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 				<text><![CDATA[MODIFICACIONES AL ALCANCE DE LOS TRABAJOS.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="447" width="544" height="38" uuid="d6002326-4f5f-43b9-aa8f-9b6b05975b9e"/>
+				<reportElement x="0" y="447" width="465" height="38" uuid="d6002326-4f5f-43b9-aa8f-9b6b05975b9e"/>
 				<text><![CDATA[Si durante el desarrollo de los trabajos descritos en la presente oferta, surgen trabajos adicionales a los ítems, se modificará el alcance de la presente oferta y  JLB Y CIA LTDA, realizará una oferta adicional para tomar en consideración las modificaciones pertinentes. 							]]></text>
 			</staticText>
 			<staticText>
