@@ -5,11 +5,13 @@
 	<property name="ireport.y" value="42"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[select coti.*,rev.*,c.*,pc."DESCRIPCION" as desc_ciudad from labor."COTIZACION" coti, labor."REVISION_ENSAYO_EQUIPO" rev ,labor."CLIENTE" c, labor."PARAM_CIUDAD" pc where coti."NUM_COTIZACION" = $P{ncotic}
+		<![CDATA[  select coti.*,rev.*,c.*,pc."DESCRIPCION" as desc_ciudad
+
+  from labor."COTIZACION" coti, labor."REVISION_ENSAYO_EQUIPO" rev ,labor."CLIENTE" c, labor."PARAM_CIUDAD" pc where coti."NUM_COTIZACION" = $P{ncotic}
 
 AND c."ID_CLIENTE" = coti."FK_CLIENTE"
 
-AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND rev."FK_CIUDAD" = pc."COD_DIVIPO"::integer]]>
+AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND rev."FK_CIUDAD" = pc."ID_COD_DIVIPO"::integer]]>
 	</queryString>
 	<field name="ID_COTIZACION" class="java.lang.Integer"/>
 	<field name="NUM_COTIZACION" class="java.lang.String"/>
