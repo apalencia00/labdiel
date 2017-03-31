@@ -32,7 +32,7 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement x="448" y="0" width="119" height="74" uuid="bd02c55a-c1c9-4579-9e9a-686ad57f9c42"/>
+				<reportElement x="429" y="0" width="119" height="74" uuid="bd02c55a-c1c9-4579-9e9a-686ad57f9c42"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
 			</image>
 		</band>
@@ -101,7 +101,7 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="35" splitType="Stretch">
+		<band height="20" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="0" width="67" height="20" uuid="f166a67f-85d9-44b3-bd72-94e57bf1c725"/>
 				<textFieldExpression><![CDATA[$F{ID_TIPO_EQUIPO}]]></textFieldExpression>
