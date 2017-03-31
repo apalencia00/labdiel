@@ -71,4 +71,7 @@ GROUP BY "CANTIDAD"]]>
 			</textField>
 		</band>
 	</title>
+	<detail>
+		<band height="50"/>
+	</detail>
 </jasperReport>
