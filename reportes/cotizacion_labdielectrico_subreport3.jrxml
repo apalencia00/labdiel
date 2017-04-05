@@ -8,7 +8,7 @@
 	</parameter>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[select coti."NUM_COTIZACION", coti."ESTADO",dtc."VALOR_UNITARIO"::text,eq."DESCRIPCION" as elequipo, un."DESCRIPCION" as unidad, dtc."CANTIDAD",eq."ID_TIPO_EQUIPO", dtc."CANTIDAD" * dtc."VALOR_UNITARIO" as subtotal_cal
+		<![CDATA[select coti."NUM_COTIZACION", coti."ESTADO",dtc."VALOR_UNITARIO"::text,eq."DESCRIPCION" as elequipo, un."DESCRIPCION" as unidad, dtc."CANTIDAD",eq."ID_TIPO_EQUIPO", dtc."CANTIDAD" * dtc."VALOR_UNITARIO"::numeric as subtotal_cal
 
 from labor."COTIZACION" coti, labor."DETALLE_COTIZACION" dtc, labor."CLIENTE" cl, labor."EMPLEADO" e, auth."USUARIO" us ,labor."REVISION_ENSAYO_EQUIPO" rv, labor."TIPO_EQUIPO" eq, labor."UNIDAD_MEDICION" un
 
@@ -22,7 +22,7 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 	<field name="unidad" class="java.lang.String"/>
 	<field name="CANTIDAD" class="java.lang.Integer"/>
 	<field name="ID_TIPO_EQUIPO" class="java.lang.Integer"/>
-	<field name="subtotal_cal" class="org.postgresql.util.PGmoney"/>
+	<field name="subtotal_cal" class="java.math.BigDecimal"/>
 	<variable name="VALOR_UNITARIO_1" class="java.lang.Integer" calculation="Count">
 		<variableExpression><![CDATA[$F{VALOR_UNITARIO}]]></variableExpression>
 	</variable>
