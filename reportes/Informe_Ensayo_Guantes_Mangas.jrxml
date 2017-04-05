@@ -111,15 +111,7 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="163" width="160" height="40" uuid="d5ab3a4d-a862-4e2d-be4b-a7335e7a3e43"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Fecha de ensayo a equipo        /Date test
-				]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="0" y="203" width="160" height="20" uuid="4523cd18-4611-4bfc-8a60-d8187036335b"/>
+				<reportElement x="3" y="162" width="160" height="20" uuid="4523cd18-4611-4bfc-8a60-d8187036335b"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -196,8 +188,8 @@ Autorized service by customer]]></text>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{CIUDAD}]]></textFieldExpression>
 			</textField>
-			<textField pattern="dd/MM/yyyy">
-				<reportElement mode="Opaque" x="161" y="203" width="214" height="20" backcolor="#CCCCCC" uuid="e27336c8-af57-411e-b9a3-c57c93cc49e7"/>
+			<textField pattern="dd/MM/YYYY">
+				<reportElement mode="Opaque" x="161" y="163" width="214" height="20" backcolor="#CCCCCC" uuid="e27336c8-af57-411e-b9a3-c57c93cc49e7"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
