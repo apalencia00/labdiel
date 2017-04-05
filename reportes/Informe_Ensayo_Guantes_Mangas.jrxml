@@ -9,11 +9,11 @@
 	<queryString>
 		<![CDATA[SELECT coti."ID_COTIZACION", SUBSTR(coti."NUM_COTIZACION",7,9) as lacoti , coti."FK_CLIENTE", coti."FK_USUARIO",
        coti."FK_EMPLEADO", coti."FECHA_REGISTRO", coti."ESTADO", coti."US_MODIFICA", coti."FECHA_MODIFICACION",
-       coti."FK_REVISION_ENSAYO_EQUIPO",c.*
-  FROM labor."COTIZACION" coti, labor."CLIENTE" c
+       coti."FK_REVISION_ENSAYO_EQUIPO",c.*, pc."DESCRIPCION" as laciudad
+  FROM labor."COTIZACION" coti, labor."CLIENTE" c, labor."PARAM_CIUDAD" pc
 
-WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic}
-  ;]]>
+WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and pc."ID_COD_DIVIPO" = c."CIUDAD"
+  ]]>
 	</queryString>
 	<field name="ID_COTIZACION" class="java.lang.Integer"/>
 	<field name="lacoti" class="java.lang.String"/>
@@ -42,6 +42,7 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic}
 	<field name="APELLIDO" class="java.lang.String"/>
 	<field name="DEPTO" class="java.lang.Integer"/>
 	<field name="USERNAME" class="java.lang.String"/>
+	<field name="laciudad" class="java.lang.String"/>
 	<title>
 		<band height="58" splitType="Stretch">
 			<image>
@@ -52,6 +53,20 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic}
 				<reportElement x="722" y="0" width="102" height="54" uuid="eb9bc268-2670-41b8-90e5-f2bf7a7bccc2"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
 			</image>
+			<staticText>
+				<reportElement x="107" y="2" width="589" height="20" uuid="d14bcfac-d94c-4831-8cf1-fcecc00325cc"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFORME DE ENSAYO DIELECTRICO A GUANTES O MANGAS AISLADAS EN SERVICIO.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="22" width="589" height="20" uuid="844abeff-d47e-4130-916d-a0a40650bacf"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIELECTRICAL TEST REPORT FOR GLOVES SLEVEES INSULATE IN SERVICE.]]></text>
+			</staticText>
 		</band>
 	</title>
 	<detail>
@@ -188,11 +203,6 @@ Autorized service by customer]]></text>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{CIUDAD}]]></textFieldExpression>
 			</textField>
-			<textField pattern="dd/MM/YYYY">
-				<reportElement mode="Opaque" x="161" y="163" width="214" height="20" backcolor="#CCCCCC" uuid="e27336c8-af57-411e-b9a3-c57c93cc49e7"/>
-				<textElement textAlignment="Center"/>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement mode="Transparent" x="636" y="0" width="60" height="20" backcolor="#CCCCCC" uuid="457b615f-3ad6-4e2b-9c33-9c8e34b8c445"/>
 				<textElement textAlignment="Center">
@@ -222,7 +232,7 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Transparent" x="696" y="0" width="128" height="20" backcolor="#CCCCCC" uuid="3184dea7-c8d4-4329-9082-e809f18454ac"/>
+				<reportElement mode="Transparent" x="690" y="0" width="128" height="20" backcolor="#CCCCCC" uuid="3184dea7-c8d4-4329-9082-e809f18454ac"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -238,6 +248,11 @@ Autorized service by customer]]></text>
 				<textElement textAlignment="Justified"/>
 				<textFieldExpression><![CDATA[$F{FECHA_MODIFICACION}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="636" y="123" width="224" height="59" uuid="88d3e141-f699-427c-81d3-ff522cdca88c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ASTM F496 - 14a   Standard Specification for In-Service Care of Insulating Gloves and Sleeves]]></text>
+			</staticText>
 		</band>
 		<band height="50"/>
 		<band height="150">
