@@ -85,7 +85,23 @@
 	<field name="USERNAME" class="java.lang.String"/>
 	<field name="cod_seriales" class="java.lang.String"/>
 	<title>
-		<band height="45" splitType="Stretch"/>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="70" width="181" height="20" uuid="bb197a76-891c-4ba2-9e86-92f902b8b198"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+			</staticText>
+			<image>
+				<reportElement x="721" y="-2" width="102" height="54" uuid="526eea2c-3fab-4fff-9ce8-b6c05879e571"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="106" height="52" uuid="96417bb2-8a3a-4f16-8653-ef34654cbb94"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
+			</image>
+		</band>
 	</title>
 	<pageHeader>
 		<band height="97">
@@ -232,7 +248,7 @@ Internal code equipment]]></text>
 			</textField>
 			<textField pattern="dd/MM/YYYY">
 				<reportElement mode="Opaque" x="774" y="0" width="70" height="20" backcolor="#CCCCCC" uuid="161d1783-4f4c-4f8a-a8f9-d30a9334af2c"/>
-				<textElement>
+				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
