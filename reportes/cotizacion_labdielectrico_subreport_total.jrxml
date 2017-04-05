@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" pageWidth="607" pageHeight="802" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="404"/>
+	<property name="ireport.y" value="68"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="pago" class="java.lang.String"/>
@@ -87,7 +87,7 @@ GROUP BY "CANTIDAD"]]>
 				<text><![CDATA[MODIFICACIONES AL ALCANCE DE LOS TRABAJOS.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="-1" y="264" width="376" height="20" backcolor="#FFFF00" uuid="e7be04a3-5455-4e2d-aa9b-2161b3b51dc0"/>
+				<reportElement mode="Transparent" x="-1" y="264" width="376" height="20" backcolor="#FFFF00" uuid="e7be04a3-5455-4e2d-aa9b-2161b3b51dc0"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -108,7 +108,7 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="-1" y="58" width="192" height="20" backcolor="#FFFF00" uuid="674e503a-2b60-42b2-963a-c12df696accb"/>
+				<reportElement mode="Transparent" x="-1" y="58" width="192" height="20" backcolor="#FFFF00" uuid="674e503a-2b60-42b2-963a-c12df696accb"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -142,7 +142,7 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="129" y="58" width="353" height="20" uuid="610b77c5-5de6-41d3-8c6e-6f592b3b12eb"/>
+				<reportElement mode="Opaque" x="129" y="58" width="353" height="20" backcolor="#FFFF00" uuid="610b77c5-5de6-41d3-8c6e-6f592b3b12eb"/>
 				<textFieldExpression><![CDATA[$P{pago}]]></textFieldExpression>
 			</textField>
 			<staticText>

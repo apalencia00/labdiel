@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport3" language="groovy" pageWidth="607" pageHeight="842" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a2d64b84-25c5-43ad-8fcb-406fe46db8e1">
-	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
@@ -102,7 +102,7 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 				<text><![CDATA[1. TIEMPO DE EJECUCIÓN DE LOS ENSAYOS]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="0" y="20" width="567" height="25" uuid="42bb03e7-70a1-4257-a971-048661335997"/>
+				<reportElement mode="Opaque" x="0" y="20" width="567" height="25" backcolor="#FFFF00" uuid="42bb03e7-70a1-4257-a971-048661335997"/>
 				<textFieldExpression><![CDATA[$P{tiempo}]]></textFieldExpression>
 			</textField>
 		</band>
