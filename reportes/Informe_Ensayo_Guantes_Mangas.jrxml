@@ -194,14 +194,9 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Trazado a/Traceable to					]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="160" y="20" width="215" height="20" backcolor="#CCCCCC" uuid="003816ac-91b8-4e76-8c25-1a8edfb7e31d"/>
+				<reportElement mode="Transparent" x="160" y="20" width="215" height="20" backcolor="#CCCCCC" uuid="003816ac-91b8-4e76-8c25-1a8edfb7e31d"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{DIRECCION}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="160" y="106" width="215" height="17" backcolor="#CCCCCC" uuid="352f3d7d-9ba1-4c14-9c4b-20b07f6568b2"/>
-				<textElement textAlignment="Center"/>
-				<textFieldExpression><![CDATA[$F{CIUDAD}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement mode="Transparent" x="636" y="0" width="60" height="20" backcolor="#CCCCCC" uuid="457b615f-3ad6-4e2b-9c33-9c8e34b8c445"/>
@@ -218,7 +213,7 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Guantes Dielectricas]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="161" y="0" width="214" height="20" backcolor="#CCCCCC" uuid="6a753573-a9d6-4704-8570-951372e579b1"/>
+				<reportElement mode="Transparent" x="161" y="0" width="214" height="20" backcolor="#CCCCCC" uuid="6a753573-a9d6-4704-8570-951372e579b1"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
@@ -227,7 +222,7 @@ Autorized service by customer]]></text>
 				<text><![CDATA[test equipment information]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="161" y="123" width="214" height="28" backcolor="#CCCCCC" uuid="79073fd9-ad2d-425f-a1e3-12548e6d8928"/>
+				<reportElement mode="Transparent" x="161" y="123" width="214" height="28" backcolor="#CCCCCC" uuid="79073fd9-ad2d-425f-a1e3-12548e6d8928"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
 			</textField>
@@ -253,6 +248,11 @@ Autorized service by customer]]></text>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[ASTM F496 - 14a   Standard Specification for In-Service Care of Insulating Gloves and Sleeves]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="163" y="106" width="212" height="20" uuid="718c3e7c-2769-41d9-9d66-2b74fa807768"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{laciudad}]]></textFieldExpression>
+			</textField>
 		</band>
 		<band height="50"/>
 		<band height="150">
