@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="802" pageHeight="900" columnWidth="762" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="900" pageHeight="900" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="96"/>
+	<property name="ireport.y" value="27"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -45,7 +45,7 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and 
 	<title>
 		<band height="58" splitType="Stretch">
 			<image>
-				<reportElement x="1" y="2" width="106" height="52" uuid="2788508b-4116-484f-a2ec-99f3e4221991"/>
+				<reportElement x="1" y="2" width="75" height="52" uuid="2788508b-4116-484f-a2ec-99f3e4221991"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
 			</image>
 			<image>
@@ -265,7 +265,7 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Condiciones ambientales/Enviromental condition]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="3" y="66" width="549" height="63" uuid="ab066ee0-9a4e-4828-859e-a665ee7e3ed7"/>
+				<reportElement x="3" y="66" width="719" height="63" uuid="ab066ee0-9a4e-4828-859e-a665ee7e3ed7"/>
 				<textElement textAlignment="Justified" verticalAlignment="Top">
 					<font isBold="true"/>
 				</textElement>
@@ -324,9 +324,9 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[F.LABDIEL.003
-VER 9
-FECHA: 2017-05-01]]></text>
+				<text><![CDATA[F.LABDIEL.025
+VER 0
+FECHA: 2010-07-19]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="3" y="28" width="80" height="20" uuid="3ec5d3ee-63ad-48e2-9cc6-eda5b1b6cdd9"/>
