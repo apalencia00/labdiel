@@ -95,6 +95,7 @@ AND pc."FK_DEPTO" = pd."COD_DEPA_CODI"
 			</staticText>
 			<staticText>
 				<reportElement stretchType="RelativeToBandHeight" x="0" y="240" width="542" height="57" uuid="89746748-6a9d-426a-8e7e-c7f62c67c411"/>
+				<textElement textAlignment="Justified"/>
 				<text><![CDATA[Nos complace presentarle nuestra oferta de servicios para la realización de Ensayos eléctricos a los Equipos de Elevación y/o Protección Personal para trabajos en redes eléctricas energizadas, según los lineamientos de la norma ISO 17025 versión 2005 y los estandares de referencia aplicables para cada uno de los ensayos.
 
 

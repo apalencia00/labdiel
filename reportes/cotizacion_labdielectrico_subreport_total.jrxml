@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" pageWidth="607" pageHeight="802" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="385"/>
+	<property name="ireport.y" value="336"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="pago" class="java.lang.String"/>
@@ -39,7 +39,7 @@ GROUP BY "CANTIDAD"]]>
 		<band height="32"/>
 	</title>
 	<detail>
-		<band height="82">
+		<band height="62">
 			<staticText>
 				<reportElement mode="Opaque" x="381" y="4" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
 				<textElement textAlignment="Center">
@@ -48,21 +48,21 @@ GROUP BY "CANTIDAD"]]>
 				<text><![CDATA[Total]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="381" y="55" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
+				<reportElement mode="Opaque" x="381" y="40" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total Servicio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="381" y="30" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
+				<reportElement mode="Opaque" x="381" y="22" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Iva 19%]]></text>
 			</staticText>
 			<textField evaluationTime="Report">
-				<reportElement x="464" y="53" width="85" height="20" uuid="7b13e149-5ae0-49ed-93e2-643913a2d066"/>
+				<reportElement x="464" y="42" width="85" height="20" uuid="7b13e149-5ae0-49ed-93e2-643913a2d066"/>
 				<textFieldExpression><![CDATA[$V{total_servicio_1}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
@@ -70,7 +70,7 @@ GROUP BY "CANTIDAD"]]>
 				<textFieldExpression><![CDATA[$V{total_1}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="464" y="28" width="85" height="20" uuid="1cb52523-7f18-4797-9589-2c992e8b8885"/>
+				<reportElement x="464" y="22" width="85" height="20" uuid="1cb52523-7f18-4797-9589-2c992e8b8885"/>
 				<textFieldExpression><![CDATA[$V{iva_1}]]></textFieldExpression>
 			</textField>
 		</band>
@@ -95,6 +95,7 @@ GROUP BY "CANTIDAD"]]>
 			</staticText>
 			<staticText>
 				<reportElement x="1" y="183" width="544" height="135" uuid="7f959df1-b5d7-4846-a10c-f84b9af5ee72"/>
+				<textElement textAlignment="Justified"/>
 				<text><![CDATA[
 Una vez recibida la Consignación o la orden de compra u orden de trabajo de acuerdo a las condiciones de pago, se realizará la programación del ítem para que sea traído al laboratorio. En el caso que el ítem se traiga sin dicha consignación u orden de servicio, por mutuo acuerdo, sólo se comienzan los trabajos hasta que sea autorizado por medio de estas dos formas (consignación u orden) el servicio que va a prestar el laboratorio.
 Los resultados de los ensayos  se entregarán al cliente en máximo 5 días hábiles después de la terminacion de los ensayos contratados.
@@ -131,6 +132,7 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 			</staticText>
 			<staticText>
 				<reportElement x="1" y="338" width="545" height="83" uuid="a0f2252f-abdc-4b2e-9443-d1f2991085ca"/>
+				<textElement textAlignment="Justified"/>
 				<text><![CDATA[EL OFERENTE responde por el cumplimiento pleno de sus obligaciones según la presente oferta.  En relación con los perjuicios, EL OFERENTE únicamente responderá por el daño emergente derivado de las acciones u omisiones que le sean directamente imputables.  En ningún evento EL OFERENTE responderá por lucro cesante, daños indirectos, consecuenciales, y/o perdida de información. En todo caso, la responsabilidad del OFERENTE en ningún evento excederá el cien por ciento del valor del presente negocio jurídico, salvo en los eventos de dolor o culpa grave, en los cuales la responsabilidad será plena.
 
 
@@ -146,6 +148,7 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 			</textField>
 			<staticText>
 				<reportElement x="0" y="0" width="544" height="58" uuid="aba7ffef-7665-4433-aee4-66830509743a"/>
+				<textElement textAlignment="Justified"/>
 				<text><![CDATA[Los precios son firmes en pesos colombianos y el IVA se liquidará y cobrará según porcentaje vigente en la fecha de facturación, lo mismo que los nuevos impuestos ó aumentos de los impuestos existentes, de orden nacional, departamental ó municipal que intervengan en la facturación final.  El costo discriminado en cada capítulo de la oferta, corresponde al valor neto a pagar después de las deducciones legales que debe realizar el cliente.
 
 
@@ -158,6 +161,7 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 			</staticText>
 			<staticText>
 				<reportElement x="2" y="479" width="544" height="45" uuid="4af6f2a3-ceec-4332-9c06-663f7eda1acb"/>
+				<textElement textAlignment="Justified"/>
 				<text><![CDATA[Si durante el desarrollo de los trabajos descritos en la presente oferta, surgen trabajos adicionales a los ítems, se modificará el alcance de la presente oferta y  LADEE JLB  Y CIA LTDA, realizará una oferta adicional para tomar en consideración las modificaciones pertinentes.
 
 
@@ -172,6 +176,7 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="112" width="544" height="51" uuid="6285731e-e182-48df-82f9-663d8f9f9ab9"/>
+				<textElement textAlignment="Justified"/>
 				<text><![CDATA[la cuenta se encuentra a nombre de Laboratorios de ensayos electricos JLB Y CIA S.A.S. con NIT 901005281-4. Enviar una copia de la consignación o la transferencia bancaria por correo electrónico o fax.
 Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. ]]></text>
 			</staticText>
