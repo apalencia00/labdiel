@@ -29,10 +29,6 @@
 				<reportElement x="0" y="0" width="113" height="74" uuid="b1db9407-3555-4ac4-8a46-be0ce2baa345"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
 			</image>
-			<image>
-				<reportElement x="432" y="0" width="119" height="74" uuid="aa34f318-e43e-459d-a7ea-261b0644bdcd"/>
-				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<detail>
@@ -94,9 +90,9 @@
 			<staticText>
 				<reportElement x="450" y="0" width="127" height="62" uuid="744b422c-d733-4afd-8c19-5390371ea373"/>
 				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
-				<text><![CDATA[F.LABDIEL.098
+				<text><![CDATA[F.LADEE.024
 VER: 1
-VIGENCIA: 2016-04-11
+VIGENCIA: 2017-05-01
 
 
 
