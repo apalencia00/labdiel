@@ -53,7 +53,7 @@
 			<subreport>
 				<reportElement x="0" y="0" width="568" height="39" uuid="ad0562e0-2a9f-4f36-91b2-71a8593f4973"/>
 				<subreportParameter name="tiempo">
-					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
+					<subreportParameterExpression><![CDATA[$P{tiempo}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportParameter name="pago">
 					<subreportParameterExpression><![CDATA[$P{pago}]]></subreportParameterExpression>
