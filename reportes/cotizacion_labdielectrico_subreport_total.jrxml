@@ -80,14 +80,14 @@ GROUP BY "CANTIDAD"]]>
 				<text><![CDATA[La oferta tiene una valides de 30 días contados a partir de la fecha de emisión de la misma.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="1" y="540" width="376" height="20" backcolor="#FFFF33" uuid="30a45b4a-bfe0-4d9e-aec8-0ac20f3e0f2d"/>
+				<reportElement mode="Transparent" x="1" y="540" width="376" height="20" backcolor="#FFFF33" uuid="30a45b4a-bfe0-4d9e-aec8-0ac20f3e0f2d"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[MODIFICACIONES AL ALCANCE DE LOS TRABAJOS.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="-1" y="264" width="376" height="20" uuid="e7be04a3-5455-4e2d-aa9b-2161b3b51dc0"/>
+				<reportElement mode="Opaque" x="-1" y="264" width="376" height="20" backcolor="#FFFF00" uuid="e7be04a3-5455-4e2d-aa9b-2161b3b51dc0"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -108,7 +108,7 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="-1" y="58" width="192" height="20" uuid="674e503a-2b60-42b2-963a-c12df696accb"/>
+				<reportElement mode="Opaque" x="-1" y="58" width="192" height="20" backcolor="#FFFF00" uuid="674e503a-2b60-42b2-963a-c12df696accb"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
