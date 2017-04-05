@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" pageWidth="607" pageHeight="802" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="336"/>
+	<property name="ireport.y" value="192"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="pago" class="java.lang.String"/>
@@ -87,17 +87,16 @@ GROUP BY "CANTIDAD"]]>
 				<text><![CDATA[MODIFICACIONES AL ALCANCE DE LOS TRABAJOS.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="0" y="163" width="376" height="20" uuid="e7be04a3-5455-4e2d-aa9b-2161b3b51dc0"/>
+				<reportElement mode="Transparent" x="0" y="183" width="376" height="20" uuid="e7be04a3-5455-4e2d-aa9b-2161b3b51dc0"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[4. PLAZO Y SITIO PARA EFECTUAR LOS TRABAJOS.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="183" width="544" height="135" uuid="7f959df1-b5d7-4846-a10c-f84b9af5ee72"/>
+				<reportElement x="1" y="203" width="544" height="116" uuid="7f959df1-b5d7-4846-a10c-f84b9af5ee72"/>
 				<textElement textAlignment="Justified"/>
-				<text><![CDATA[
-Una vez recibida la Consignación o la orden de compra u orden de trabajo de acuerdo a las condiciones de pago, se realizará la programación del ítem para que sea traído al laboratorio. En el caso que el ítem se traiga sin dicha consignación u orden de servicio, por mutuo acuerdo, sólo se comienzan los trabajos hasta que sea autorizado por medio de estas dos formas (consignación u orden) el servicio que va a prestar el laboratorio.
+				<text><![CDATA[Una vez recibida la Consignación o la orden de compra u orden de trabajo de acuerdo a las condiciones de pago, se realizará la programación del ítem para que sea traído al laboratorio. En el caso que el ítem se traiga sin dicha consignación u orden de servicio, por mutuo acuerdo, sólo se comienzan los trabajos hasta que sea autorizado por medio de estas dos formas (consignación u orden) el servicio que va a prestar el laboratorio.
 Los resultados de los ensayos  se entregarán al cliente en máximo 5 días hábiles después de la terminacion de los ensayos contratados.
 
 El laboratorio no se hará cargo de los costos de transporte, ni se responsabiliza de  los daños que puedan ocurrir durante este.
