@@ -234,7 +234,7 @@ Internal code equipment]]></text>
 				<textFieldExpression><![CDATA[$F{HUMEDAD}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="774" y="0" width="70" height="20" uuid="161d1783-4f4c-4f8a-a8f9-d30a9334af2c"/>
+				<reportElement mode="Opaque" x="774" y="0" width="70" height="20" backcolor="#CCCCCC" uuid="161d1783-4f4c-4f8a-a8f9-d30a9334af2c"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
