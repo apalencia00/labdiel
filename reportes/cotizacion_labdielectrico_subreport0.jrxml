@@ -61,7 +61,7 @@ AND pc."FK_DEPTO" = pd."COD_DEPA_CODI"
 				<text><![CDATA[Atencion:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="414" width="246" height="20" uuid="5e671dc8-2841-477a-ad3b-5837bba36238"/>
+				<reportElement x="0" y="414" width="246" height="22" uuid="5e671dc8-2841-477a-ad3b-5837bba36238"/>
 				<text><![CDATA[Teléfono: +57 5 3515740 Ext. 27]]></text>
 			</staticText>
 			<staticText>
@@ -169,6 +169,14 @@ AND pc."FK_DEPTO" = pd."COD_DEPA_CODI"
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Laboratorios de Ensayos Electricos JLB & CIA S.A.S]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="432" width="246" height="22" uuid="d82d0056-695d-4b98-b82d-a82d2e3f9065"/>
+				<text><![CDATA[Correo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="449" width="246" height="22" uuid="bd77aea9-89b4-455a-b9f2-7bc7b3b47e96"/>
+				<text><![CDATA[Movil]]></text>
 			</staticText>
 		</band>
 	</detail>
