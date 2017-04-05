@@ -32,7 +32,7 @@ GROUP BY tp."DESCRIPCION",cl."DESCRIPCION",a."CANTIDAD_APROBADO",med."DESCRIPCIO
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[DESCRIPCION]]></text>
+				<text><![CDATA[DESCRIPCIÓN]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="311" y="20" width="60" height="20" uuid="bc5f81c6-896e-4835-b3ae-255c444ccaa2"/>

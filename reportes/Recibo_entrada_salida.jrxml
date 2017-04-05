@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida" language="groovy" pageWidth="648" pageHeight="842" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2494f3d5-2a08-4d51-b2a3-c8d2aaa4f588">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="223"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select coti.*,rev.*,c.*,pc."DESCRIPCION" as desc_ciudad
@@ -213,7 +213,7 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND rev."FK_CIUD
 		</band>
 		<band height="76">
 			<staticText>
-				<reportElement x="5" y="0" width="192" height="20" uuid="9d1208a5-75ee-4394-926c-d73a6e895942"/>
+				<reportElement x="5" y="8" width="220" height="20" uuid="9d1208a5-75ee-4394-926c-d73a6e895942"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -221,12 +221,18 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND rev."FK_CIUD
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="225" y="0" width="383" height="20" uuid="caf81901-8dfe-45e4-99ee-11ba637627a9"/>
+				<reportElement x="225" y="8" width="383" height="20" uuid="caf81901-8dfe-45e4-99ee-11ba637627a9"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[NOMBRE,  FIRMA  Y DOCUMENTO DE IDENTIDIDAD DEL CLIENTE]]></text>
 			</staticText>
+			<rectangle>
+				<reportElement x="3" y="27" width="220" height="48" uuid="bbddc19f-21b8-4527-8246-b121769e368e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="225" y="27" width="383" height="48" uuid="a1d50a47-7496-4f03-ac5d-1ddd446b6722"/>
+			</rectangle>
 		</band>
 		<band height="42">
 			<staticText>
@@ -266,6 +272,12 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND rev."FK_CIUD
 				</textElement>
 				<text><![CDATA[NOMBRE,  FIRMA  Y DOCUMENTO DE IDENTIDIDAD DEL CLIENTE]]></text>
 			</staticText>
+			<rectangle>
+				<reportElement x="5" y="23" width="203" height="48" uuid="8f966d97-6c7d-45f4-8186-c5e6c78d5ead"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="225" y="23" width="383" height="48" uuid="29c7aff2-6bf8-4e1e-897e-b2155bc98e1f"/>
+			</rectangle>
 		</band>
 		<band height="72">
 			<staticText>
