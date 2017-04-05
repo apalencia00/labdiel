@@ -204,13 +204,6 @@ Internal code equipment]]></text>
 				<textFieldExpression><![CDATA[$F{OBS_CLASE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="184" y="0" width="100" height="20" backcolor="#CCCCCC" uuid="b9ee8f24-264d-45f3-818d-8ab1cf941718"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{TENSION}]]></textFieldExpression>
-			</textField>
-			<textField>
 				<reportElement mode="Opaque" x="284" y="0" width="83" height="20" backcolor="#CCCCCC" uuid="148d20b0-6e0c-4f7c-b1ac-4d5bc836b332"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
@@ -264,6 +257,13 @@ Internal code equipment]]></text>
 				</textElement>
 				<text><![CDATA[Guantes Dielectricas]]></text>
 			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="184" y="0" width="100" height="20" backcolor="#CCCCCC" uuid="6241139a-fd83-492a-b7db-474d2b87f163"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TENSION_ENSAYO}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
