@@ -239,6 +239,13 @@ Internal code equipment]]></text>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="89" y="0" width="58" height="20" backcolor="#CCCCCC" uuid="843de7a8-2f69-45a2-907a-7383a33ace30"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Guantes Dielectricas]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>
