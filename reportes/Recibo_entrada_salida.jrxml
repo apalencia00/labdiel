@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida" language="groovy" pageWidth="648" pageHeight="842" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2494f3d5-2a08-4d51-b2a3-c8d2aaa4f588">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="223"/>
+	<property name="ireport.y" value="285"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select coti.*,rev.*,c.*,pc."DESCRIPCION" as desc_ciudad
@@ -213,9 +213,9 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND rev."FK_CIUD
 		</band>
 		<band height="76">
 			<staticText>
-				<reportElement x="5" y="8" width="220" height="20" uuid="9d1208a5-75ee-4394-926c-d73a6e895942"/>
+				<reportElement x="1" y="8" width="220" height="20" uuid="9d1208a5-75ee-4394-926c-d73a6e895942"/>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[RECIBIDO POR(Nombre y Firma)
 ]]></text>
@@ -223,12 +223,12 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND rev."FK_CIUD
 			<staticText>
 				<reportElement x="225" y="8" width="383" height="20" uuid="caf81901-8dfe-45e4-99ee-11ba637627a9"/>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[NOMBRE,  FIRMA  Y DOCUMENTO DE IDENTIDIDAD DEL CLIENTE]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="3" y="27" width="220" height="48" uuid="bbddc19f-21b8-4527-8246-b121769e368e"/>
+				<reportElement x="1" y="27" width="220" height="48" uuid="bbddc19f-21b8-4527-8246-b121769e368e"/>
 			</rectangle>
 			<rectangle>
 				<reportElement x="225" y="27" width="383" height="48" uuid="a1d50a47-7496-4f03-ac5d-1ddd446b6722"/>
@@ -261,14 +261,14 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND rev."FK_CIUD
 			<staticText>
 				<reportElement x="0" y="3" width="208" height="20" uuid="90ce8905-583c-469c-a69b-78ecb2803df0"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ENTREGADO POR(Nombre y Firma)]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="225" y="3" width="383" height="20" uuid="7a57eb3a-a569-45db-9bcb-82a8018e5b66"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[NOMBRE,  FIRMA  Y DOCUMENTO DE IDENTIDIDAD DEL CLIENTE]]></text>
 			</staticText>
@@ -282,14 +282,38 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND rev."FK_CIUD
 		<band height="72">
 			<staticText>
 				<reportElement x="0" y="0" width="608" height="72" forecolor="#FF0000" uuid="98e0d5f0-a4fd-4061-8f80-f67fc2983035"/>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Justified">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[NOTA: Para la entrega de los equipos ensayados, es necesario presentar este documento. De no contar con este documento al momento de retirar los equipos del Laboratorio, se requiere que el cliente  envie un correo electronico desde un email institucional especificando el nombre y numero de identificiacion de la persona que retirara los equipos al email pruebaselect@jorgebedoya.com
+				<text><![CDATA[NOTA: Para la entrega de los equipos ensayados, es necesario presentar este documento. De no contar con este documento al momento de retirar los equipos del Laboratorio, se requiere que el cliente  envie un correo electronico desde un email institucional especificando el nombre y numero de identificiacion de la persona que retirara los equipos al email cliente@ladee.co
 
 
 ]]></text>
 			</staticText>
 		</band>
 	</detail>
+	<pageFooter>
+		<band height="62">
+			<textField>
+				<reportElement x="10" y="28" width="80" height="20" uuid="9ecf2c34-7807-4956-ba38-3d610464b56f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="445" y="0" width="127" height="62" uuid="6736b648-f68e-4c54-b7dc-9ffa282ae75d"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[F.LADEE.024
+VER: 1
+VIGENCIA: 2017-05-01
+
+
+
+]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement x="93" y="28" width="40" height="20" uuid="7e5aa618-1801-4730-a529-143c0bbe060f"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
 </jasperReport>
