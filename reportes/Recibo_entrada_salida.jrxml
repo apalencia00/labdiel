@@ -249,13 +249,9 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND rev."FK_CIUD
 				</textElement>
 				<text><![CDATA[FECHA DE ENTREGA]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="400" y="22" width="208" height="20" uuid="be0e4238-c139-4e77-8b28-14fe73b5ccaf"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[FECHA DE ENTREGA]]></text>
-			</staticText>
+			<rectangle>
+				<reportElement x="149" y="21" width="268" height="20" uuid="2d9ef101-60ad-4065-bdd3-5bca3fa3fcac"/>
+			</rectangle>
 		</band>
 		<band height="82">
 			<staticText>
@@ -302,8 +298,8 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND rev."FK_CIUD
 			<staticText>
 				<reportElement x="445" y="0" width="127" height="62" uuid="6736b648-f68e-4c54-b7dc-9ffa282ae75d"/>
 				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
-				<text><![CDATA[F.LADEE.024
-VER: 1
+				<text><![CDATA[F.LADEE.081
+VER: 0
 VIGENCIA: 2017-05-01
 
 
