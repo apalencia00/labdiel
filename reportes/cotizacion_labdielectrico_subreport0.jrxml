@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport0" language="groovy" pageWidth="607" pageHeight="842" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="564eebc9-bf96-411e-86f4-0c5d48aa47e1">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="150"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
@@ -40,7 +40,7 @@ AND pc."FK_DEPTO" = pd."COD_DEPA_CODI"
 				<text><![CDATA[Correo Electronico]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="371" width="246" height="20" uuid="9196471a-ee5e-4a5e-b10f-862b8a7ce962"/>
+				<reportElement x="0" y="398" width="246" height="20" uuid="9196471a-ee5e-4a5e-b10f-862b8a7ce962"/>
 				<text><![CDATA[Calle 42 No 44-51 Barranquilla-Atlantico		]]></text>
 			</staticText>
 			<staticText>
@@ -61,7 +61,7 @@ AND pc."FK_DEPTO" = pd."COD_DEPA_CODI"
 				<text><![CDATA[Atencion:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="385" width="246" height="20" uuid="5e671dc8-2841-477a-ad3b-5837bba36238"/>
+				<reportElement x="0" y="414" width="246" height="20" uuid="5e671dc8-2841-477a-ad3b-5837bba36238"/>
 				<text><![CDATA[Teléfono: +57 5 3515740 Ext. 27]]></text>
 			</staticText>
 			<staticText>
@@ -69,19 +69,15 @@ AND pc."FK_DEPTO" = pd."COD_DEPA_CODI"
 				<text><![CDATA[Ciudad:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="3" y="413" width="264" height="16" forecolor="#000000" uuid="23f69c52-440d-48df-ba8b-217d453f47a7"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[1. TIEMPO DE EJECUCIÓN DE LOS ENSAYOS]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="0" y="0" width="100" height="20" uuid="4aad0018-8dbd-4cc0-a8e9-4f28d7c7a0c3"/>
 				<text><![CDATA[Barranquilla,
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="328" width="153" height="20" uuid="b0dfc57a-7d39-4947-9092-851ecd934b66"/>
+				<reportElement x="0" y="328" width="220" height="20" uuid="b0dfc57a-7d39-4947-9092-851ecd934b66"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[Gerardo Luis Ramírez Zapata
 ]]></text>
 			</staticText>
@@ -157,13 +153,23 @@ AND pc."FK_DEPTO" = pd."COD_DEPA_CODI"
 				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="3" y="429" width="605" height="51" uuid="6116c009-6215-42f8-8a6d-59701115c2c0"/>
-				<textFieldExpression><![CDATA[$P{tiempo}]]></textFieldExpression>
-			</textField>
-			<textField>
 				<reportElement x="117" y="66" width="248" height="20" uuid="109ebf3e-9ac0-49ea-8417-9df1b7d7ee61"/>
 				<textFieldExpression><![CDATA[$F{APELLIDO}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="0" y="359" width="246" height="20" uuid="32205c7b-3ad6-4fc0-9dd4-1ae31c0ddbc7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LADEE & CIA S.A.S]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="379" width="365" height="20" uuid="9a03244d-1ea8-4ebf-98f1-c759f18849a8"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laboratorios de Ensayos Electricos JLB & CIA S.A.S]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>

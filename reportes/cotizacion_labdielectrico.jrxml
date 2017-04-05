@@ -55,6 +55,9 @@
 				<subreportParameter name="tiempo">
 					<subreportParameterExpression><![CDATA[]]></subreportParameterExpression>
 				</subreportParameter>
+				<subreportParameter name="pago">
+					<subreportParameterExpression><![CDATA[$P{pago}]]></subreportParameterExpression>
+				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
