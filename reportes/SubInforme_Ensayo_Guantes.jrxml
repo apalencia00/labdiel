@@ -172,7 +172,7 @@ Internal code equipment]]></text>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Date/Fecha]]></text>
+				<text><![CDATA[Test Date/Fecha Ensayo]]></text>
 			</staticText>
 		</band>
 	</title>
