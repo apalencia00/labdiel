@@ -8,7 +8,7 @@
 	<queryString>
 		<![CDATA[SELECT c."NUM_COTIZACION", c."FK_CLIENTE", c."FK_USUARIO",
        c."FK_EMPLEADO", c."FECHA_REGISTRO", c."ESTADO", c."US_MODIFICA", c."FECHA_MODIFICACION",
-       c."FK_REVISION_ENSAYO_EQUIPO", cl."NOMBRE"  as cliente, cl."IDE_NIT",cl."TELEFONO_CONTACTO", cl."DIRECCION",cl."EMAIL",pc."DESCRIPCION" as ciudad,pd."DESCRIPCION" as depto
+       c."FK_REVISION_ENSAYO_EQUIPO", cl."NOMBRE"  as cliente, cl."APELLIDO" ,cl."IDE_NIT",cl."TELEFONO_CONTACTO", cl."DIRECCION",cl."EMAIL",pc."DESCRIPCION" as ciudad,pd."DESCRIPCION" as depto
   FROM labor."COTIZACION" c , labor."CLIENTE" cl, labor."PARAM_CIUDAD" pc, labor."PARAM_DEPTO" pd WHERE "ID_CLIENTE" = "FK_CLIENTE" AND c."NUM_COTIZACION" = $P{ncotic} AND cl."CIUDAD" = pc."ID_COD_DIVIPO"::integer  AND cl."DEPTO" = pd."COD_DEPA_CODI"::integer
 
 AND pc."FK_DEPTO" = pd."COD_DEPA_CODI"
@@ -24,6 +24,7 @@ AND pc."FK_DEPTO" = pd."COD_DEPA_CODI"
 	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
 	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
 	<field name="cliente" class="java.lang.String"/>
+	<field name="APELLIDO" class="java.lang.String"/>
 	<field name="IDE_NIT" class="java.lang.String">
 		<fieldDescription><![CDATA[---]]></fieldDescription>
 	</field>
@@ -158,6 +159,10 @@ AND pc."FK_DEPTO" = pd."COD_DEPA_CODI"
 			<textField>
 				<reportElement x="3" y="429" width="605" height="51" uuid="6116c009-6215-42f8-8a6d-59701115c2c0"/>
 				<textFieldExpression><![CDATA[$P{tiempo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="66" width="248" height="20" uuid="109ebf3e-9ac0-49ea-8417-9df1b7d7ee61"/>
+				<textFieldExpression><![CDATA[$F{APELLIDO}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
