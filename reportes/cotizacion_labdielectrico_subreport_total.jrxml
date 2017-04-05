@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" pageWidth="607" pageHeight="802" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="403"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="pago" class="java.lang.String"/>
@@ -113,7 +113,7 @@ Cuenta Corriente No. 20138920-2 del Helm Bank o a la Cuenta de ahorro número 11
 Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="-1" y="58" width="130" height="20" uuid="674e503a-2b60-42b2-963a-c12df696accb"/>
+				<reportElement mode="Opaque" x="-1" y="58" width="192" height="20" uuid="674e503a-2b60-42b2-963a-c12df696accb"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -139,7 +139,7 @@ Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. 
 				<text><![CDATA[EL OFERENTE responde por el cumplimiento pleno de sus obligaciones según la presente oferta.  En relación con los perjuicios, EL OFERENTE únicamente responderá por el daño emergente derivado de las acciones u omisiones que le sean directamente imputables.  En ningún evento EL OFERENTE responderá por lucro cesante, daños indirectos, consecuenciales, y/o perdida de información. En todo caso, la responsabilidad del OFERENTE en ningún evento excederá el cien por ciento del valor del presente negocio jurídico, salvo en los eventos de dolor o culpa grave, en los cuales la responsabilidad será plena.							]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="111" y="58" width="353" height="20" uuid="610b77c5-5de6-41d3-8c6e-6f592b3b12eb"/>
+				<reportElement x="129" y="58" width="353" height="20" uuid="610b77c5-5de6-41d3-8c6e-6f592b3b12eb"/>
 				<textFieldExpression><![CDATA[$P{pago}]]></textFieldExpression>
 			</textField>
 			<staticText>
