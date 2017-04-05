@@ -85,56 +85,40 @@
 	<field name="USERNAME" class="java.lang.String"/>
 	<field name="cod_seriales" class="java.lang.String"/>
 	<title>
-		<band height="90" splitType="Stretch">
-			<staticText>
-				<reportElement x="3" y="70" width="181" height="20" uuid="bb197a76-891c-4ba2-9e86-92f902b8b198"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
-			</staticText>
-			<image>
-				<reportElement x="721" y="-2" width="102" height="54" uuid="526eea2c-3fab-4fff-9ce8-b6c05879e571"/>
-				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
-			</image>
-			<image>
-				<reportElement x="0" y="0" width="106" height="52" uuid="96417bb2-8a3a-4f16-8653-ef34654cbb94"/>
-				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
-			</image>
-		</band>
+		<band height="27" splitType="Stretch"/>
 	</title>
 	<pageHeader>
-		<band height="97">
+		<band height="162">
 			<staticText>
-				<reportElement x="704" y="2" width="70" height="71" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
+				<reportElement x="704" y="89" width="70" height="71" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Incertidumbre/Uncertainty]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="774" y="2" width="70" height="71" uuid="1412563b-926b-478c-8348-18735d0de8ce"/>
+				<reportElement x="774" y="89" width="70" height="71" uuid="1412563b-926b-478c-8348-18735d0de8ce"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Test Date/Fecha Ensayo]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="626" y="2" width="78" height="73" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
+				<reportElement x="626" y="89" width="78" height="73" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Humedad Relativa/Relativity Huminty/%RH)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="564" y="2" width="62" height="73" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
+				<reportElement x="564" y="89" width="62" height="73" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature °C]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="466" y="2" width="98" height="73" uuid="8a4c8272-ab80-4aeb-8078-aee09c6d2eaf"/>
+				<reportElement x="466" y="89" width="98" height="73" uuid="8a4c8272-ab80-4aeb-8078-aee09c6d2eaf"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -142,7 +126,7 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="367" y="2" width="99" height="73" uuid="76d0db25-1bbb-4ada-af42-31786af0ab2c"/>
+				<reportElement x="367" y="89" width="99" height="73" uuid="76d0db25-1bbb-4ada-af42-31786af0ab2c"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -151,7 +135,7 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="284" y="2" width="83" height="73" uuid="aa6839eb-138c-4678-a584-07fd382aff61"/>
+				<reportElement x="284" y="89" width="83" height="73" uuid="aa6839eb-138c-4678-a584-07fd382aff61"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -160,7 +144,7 @@ Operation Voltage [kV] A.C
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="184" y="2" width="100" height="73" uuid="d7591bed-d77e-4c96-963a-f7b6c0f07e10"/>
+				<reportElement x="184" y="89" width="100" height="73" uuid="d7591bed-d77e-4c96-963a-f7b6c0f07e10"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -169,7 +153,7 @@ Ensayo [kV]  A.C
 Test voltage [kV] A.C]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="89" y="2" width="58" height="73" uuid="61eff778-24a2-47f6-8b8c-0d791327de35"/>
+				<reportElement x="89" y="89" width="58" height="73" uuid="61eff778-24a2-47f6-8b8c-0d791327de35"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -177,7 +161,7 @@ Test voltage [kV] A.C]]></text>
 Equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="147" y="2" width="37" height="73" uuid="ffae61a3-0abd-4f29-b3cb-e94abce73ecd"/>
+				<reportElement x="147" y="89" width="37" height="73" uuid="ffae61a3-0abd-4f29-b3cb-e94abce73ecd"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -185,7 +169,7 @@ Equipment]]></text>
 Class]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="2" width="89" height="73" uuid="1cdcad50-ed0a-4cda-9333-216916e6dbfe"/>
+				<reportElement x="0" y="89" width="89" height="73" uuid="1cdcad50-ed0a-4cda-9333-216916e6dbfe"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -193,6 +177,21 @@ Class]]></text>
 Del equipo/
 Internal code equipment]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="3" y="67" width="181" height="20" uuid="bb197a76-891c-4ba2-9e86-92f902b8b198"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+			</staticText>
+			<image>
+				<reportElement x="721" y="0" width="102" height="54" uuid="526eea2c-3fab-4fff-9ce8-b6c05879e571"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="2" width="106" height="52" uuid="96417bb2-8a3a-4f16-8653-ef34654cbb94"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
+			</image>
 		</band>
 	</pageHeader>
 	<detail>
