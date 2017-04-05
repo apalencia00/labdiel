@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="900" pageHeight="802" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="267"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -86,13 +86,8 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic}
 				</textElement>
 				<text><![CDATA[Equipo /Equipment]]></text>
 			</staticText>
-			<textField pattern="dd/MM/yyyy">
-				<reportElement mode="Opaque" x="161" y="46" width="214" height="20" backcolor="#CCCCCC" uuid="6c681b7d-5616-4808-9aad-5567562f8230"/>
-				<textElement textAlignment="Center"/>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
 			<staticText>
-				<reportElement x="0" y="72" width="161" height="34" uuid="091ac0c1-7e0d-4c05-ba4a-4679211ae8c7"/>
+				<reportElement x="0" y="72" width="207" height="34" uuid="091ac0c1-7e0d-4c05-ba4a-4679211ae8c7"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -197,11 +192,6 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[$F{DIRECCION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="161" y="72" width="214" height="34" backcolor="#CCCCCC" uuid="28855647-f18a-4351-824a-32095a54750a"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
-			</textField>
-			<textField>
 				<reportElement mode="Opaque" x="160" y="106" width="215" height="17" backcolor="#CCCCCC" uuid="352f3d7d-9ba1-4c14-9c4b-20b07f6568b2"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{CIUDAD}]]></textFieldExpression>
@@ -245,6 +235,16 @@ Autorized service by customer]]></text>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{lacoti}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="161" y="47" width="214" height="20" uuid="8d1cd85a-c87e-4479-81a6-bf61276f214c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Fecha/Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="207" y="73" width="168" height="20" uuid="fb468e9c-0c3a-4deb-a1fa-e5189563f123"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{FECHA_MODIFICACION}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="50"/>
