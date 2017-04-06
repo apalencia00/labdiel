@@ -180,14 +180,6 @@ Internal code equipment]]></text>
 				</textElement>
 				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
 			</staticText>
-			<image>
-				<reportElement x="718" y="87" width="102" height="54" uuid="526eea2c-3fab-4fff-9ce8-b6c05879e571"/>
-				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
-			</image>
-			<image>
-				<reportElement x="-3" y="89" width="106" height="52" uuid="96417bb2-8a3a-4f16-8653-ef34654cbb94"/>
-				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
-			</image>
 		</band>
 	</pageHeader>
 	<detail>
