@@ -266,7 +266,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 			<subreport>
 				<reportElement x="0" y="0" width="860" height="50" uuid="7c8cdb68-2388-4992-b024-225f7acf32cc"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Jumpers_subreport1.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Jumpers_subreport1.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="50">
@@ -276,7 +276,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Jumpers_subreport2_result_observ.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Jumpers_subreport2_result_observ.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="50">
@@ -284,7 +284,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 				<reportElement x="0" y="0" width="860" height="50" uuid="ee754bf4-1330-4e6a-b3f2-c2a55e3b16f5"/>
 				<subreportParameter name="ncotic"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Guantes_Mangas_subreport3.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_subreport3.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="56">
@@ -293,7 +293,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 				<subreportParameter name="observ"/>
 				<subreportParameter name="ncotic"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Guantes_Mangas_OBS_FINAL.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_OBS_FINAL.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>
