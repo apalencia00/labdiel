@@ -265,6 +265,9 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		<band height="50">
 			<subreport>
 				<reportElement x="-1" y="0" width="861" height="50" uuid="0064da4b-85b7-446f-b0de-1ab0508e4fb7"/>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
+				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Cubridor_Linea_subreport1_result_test.jasper"]]></subreportExpression>
 			</subreport>
@@ -272,6 +275,9 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		<band height="50">
 			<subreport>
 				<reportElement x="-1" y="0" width="861" height="50" uuid="bfa6eb78-5a2a-4d47-b562-7b2e0fbea0d2"/>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
+				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Cubridor_Linea_subreport2_result_obs.jasper"]]></subreportExpression>
 			</subreport>

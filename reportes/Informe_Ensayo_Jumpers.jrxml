@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Jumpers" language="groovy" pageWidth="900" pageHeight="842" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e8c025c-603b-417e-ac0d-7f53f1949c7d">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="290"/>
+	<property name="ireport.y" value="269"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -265,6 +265,9 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		<band height="50">
 			<subreport>
 				<reportElement x="0" y="0" width="860" height="50" uuid="7c8cdb68-2388-4992-b024-225f7acf32cc"/>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
+				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Jumpers_subreport1.jasper"]]></subreportExpression>
 			</subreport>
@@ -282,7 +285,9 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		<band height="50">
 			<subreport>
 				<reportElement x="0" y="0" width="860" height="50" uuid="ee754bf4-1330-4e6a-b3f2-c2a55e3b16f5"/>
-				<subreportParameter name="ncotic"/>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
+				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_subreport3.jasper"]]></subreportExpression>
 			</subreport>
