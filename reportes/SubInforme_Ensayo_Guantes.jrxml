@@ -15,7 +15,7 @@
        "CRISTAL", "QUEMADURA", "OBS_QUEMADURA", "CONTAMINACION", "OBS_CONTAMINACION",
        "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
-       "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*, ins."FECHA_REGISTRO", serde.cod_seriales
+       "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*, ins."FECHA_REGISTRO", serde.cod_seriales, "CORRIENTE_FUGA_MEDIDA"
   FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co, labor."DET_COTI_SERIALIZAR_EQUIPO" dts, labor."DET_COTI_SERIALIZAR_EQUIPO" serde
 
  WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" AND ins."FK_COTIZACION" = $P{ncotic} AND co."FK_CLIENTE" = c."ID_CLIENTE"  and dts.id_detalle_serial::integer = ins."FK_ID_SERIAL_EQUIPO"::integer AND substr(dts.cod_seriales, 1, 1) = 'G' and serde.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" order by "ID_INSPECCION_EQUIPO" asc]]>
@@ -59,7 +59,7 @@
 	<field name="CORRIENTE_FUGA" class="java.lang.Double"/>
 	<field name="TEMPERATURA" class="java.lang.Double"/>
 	<field name="HUMEDAD" class="java.lang.Double"/>
-	<field name="TIEMPO_ENSAYO_MIN" class="java.lang.Integer"/>
+	<field name="TIEMPO_ENSAYO_MIN" class="java.lang.Double"/>
 	<field name="OBS_FINAL" class="java.lang.String"/>
 	<field name="ID_CLIENTE" class="java.lang.Long">
 		<fieldDescription><![CDATA[--]]></fieldDescription>
@@ -80,6 +80,7 @@
 	<field name="DEPTO" class="java.lang.Integer"/>
 	<field name="USERNAME" class="java.lang.String"/>
 	<field name="cod_seriales" class="java.lang.String"/>
+	<field name="CORRIENTE_FUGA_MEDIDA" class="java.lang.Double"/>
 	<title>
 		<band height="27" splitType="Stretch"/>
 	</title>
@@ -206,13 +207,6 @@ Internal code equipment]]></text>
 				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="466" y="0" width="98" height="20" backcolor="#CCCCCC" uuid="0993bf56-af3b-49f6-b074-e98d0398186a"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
-			</textField>
-			<textField>
 				<reportElement mode="Opaque" x="564" y="0" width="62" height="20" backcolor="#CCCCCC" uuid="eb194bbf-8d3a-413d-9df2-82fb708ed24e"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
@@ -251,6 +245,13 @@ Internal code equipment]]></text>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENSION_ENSAYO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="466" y="0" width="98" height="20" backcolor="#CCCCCC" uuid="33cce7f6-95cd-4038-bd55-9f0888f2c1e5"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA_MEDIDA}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
