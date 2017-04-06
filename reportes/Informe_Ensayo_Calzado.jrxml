@@ -9,16 +9,15 @@
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[SELECT coti."ID_COTIZACION", coti."NUM_COTIZACION", coti."FK_CLIENTE", coti."FK_USUARIO",
+		<![CDATA[SELECT coti."ID_COTIZACION", SUBSTR(coti."NUM_COTIZACION",7,9) as lacoti , coti."FK_CLIENTE", coti."FK_USUARIO",
        coti."FK_EMPLEADO", coti."FECHA_REGISTRO", coti."ESTADO", coti."US_MODIFICA", coti."FECHA_MODIFICACION",
-       coti."FK_REVISION_ENSAYO_EQUIPO",c.*
-  FROM labor."COTIZACION" coti, labor."CLIENTE" c
+       coti."FK_REVISION_ENSAYO_EQUIPO",c.*, pc."DESCRIPCION" as laciudad
+  FROM labor."COTIZACION" coti, labor."CLIENTE" c, labor."PARAM_CIUDAD" pc
 
-WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND coti."ESTADO" = 'A'
-  ;]]>
+WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and pc."ID_COD_DIVIPO" = c."CIUDAD"]]>
 	</queryString>
 	<field name="ID_COTIZACION" class="java.lang.Integer"/>
-	<field name="NUM_COTIZACION" class="java.lang.String"/>
+	<field name="lacoti" class="java.lang.String"/>
 	<field name="FK_CLIENTE" class="java.lang.Integer"/>
 	<field name="FK_USUARIO" class="java.lang.Integer"/>
 	<field name="FK_EMPLEADO" class="java.lang.Integer"/>
@@ -42,18 +41,24 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" =  $P{ncotic} AND 
 	<field name="DIRECCION" class="java.lang.String"/>
 	<field name="USUARIO" class="java.lang.Integer"/>
 	<field name="APELLIDO" class="java.lang.String"/>
+	<field name="DEPTO" class="java.lang.Integer"/>
+	<field name="USERNAME" class="java.lang.String"/>
+	<field name="laciudad" class="java.lang.String"/>
 	<title>
-		<band height="57" splitType="Stretch">
+		<band height="57" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="85">
 			<image>
-				<reportElement x="0" y="0" width="74" height="54" uuid="282fa682-a70e-42f3-a015-7ce3755f746f"/>
+				<reportElement x="14" y="6" width="103" height="68" uuid="282fa682-a70e-42f3-a015-7ce3755f746f"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement x="598" y="0" width="125" height="54" uuid="ec38548a-3bcd-4f4a-8207-196f5e0ab5ae"/>
+				<reportElement x="681" y="6" width="119" height="70" uuid="c0815315-e304-43fc-9df6-d16822de3f84"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
 			</image>
 		</band>
-	</title>
+	</pageHeader>
 	<detail>
 		<band height="260" splitType="Stretch">
 			<staticText>
@@ -180,48 +185,36 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="661" y="1" width="33" height="20" backcolor="#CCCCCC" uuid="a2281ff2-2cca-4d7d-8bc0-9e4b6129721b"/>
+				<reportElement mode="Transparent" x="661" y="1" width="41" height="20" backcolor="#CCCCCC" uuid="a2281ff2-2cca-4d7d-8bc0-9e4b6129721b"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[INF-]]></text>
+				<text><![CDATA[INF-C-]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="694" y="0" width="130" height="20" backcolor="#CCCCCC" uuid="2d83ecd5-2323-4c7c-983b-0b7a9024639d"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{ID_COTIZACION}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="170" y="73" width="214" height="31" backcolor="#CCCCCC" uuid="7456921e-4b58-4d89-acc8-a32857c777cb"/>
+				<reportElement mode="Transparent" x="170" y="73" width="214" height="31" backcolor="#CCCCCC" uuid="7456921e-4b58-4d89-acc8-a32857c777cb"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
-			<textField pattern="dd/MM/yyyy">
-				<reportElement mode="Opaque" x="171" y="47" width="214" height="20" backcolor="#CCCCCC" uuid="d4be7ed1-06bc-4281-a613-e3753c2479d4"/>
-				<textElement textAlignment="Center"/>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="170" y="117" width="214" height="20" backcolor="#CCCCCC" uuid="4aa81cd6-ad41-4a6a-b436-2f948ac46773"/>
+				<reportElement mode="Transparent" x="170" y="117" width="214" height="20" backcolor="#CCCCCC" uuid="4aa81cd6-ad41-4a6a-b436-2f948ac46773"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{CIUDAD}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement mode="Opaque" x="674" y="21" width="145" height="20" backcolor="#CCCCCC" uuid="13b0c166-d50e-4d37-a033-6062513260dd"/>
+				<reportElement mode="Transparent" x="661" y="21" width="158" height="20" backcolor="#CCCCCC" uuid="13b0c166-d50e-4d37-a033-6062513260dd"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Calzado Dielectrico]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="170" y="1" width="214" height="20" backcolor="#CCCCCC" uuid="17fe37f1-a8b6-49e1-b37d-84253381dcbb"/>
+				<reportElement mode="Transparent" x="170" y="1" width="214" height="20" backcolor="#CCCCCC" uuid="17fe37f1-a8b6-49e1-b37d-84253381dcbb"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="170" y="21" width="214" height="20" backcolor="#CCCCCC" uuid="6e636ff7-5452-4f12-ba30-cdc4f180f940"/>
+				<reportElement mode="Transparent" x="170" y="21" width="214" height="20" backcolor="#CCCCCC" uuid="6e636ff7-5452-4f12-ba30-cdc4f180f940"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{DIRECCION}]]></textFieldExpression>
 			</textField>
@@ -229,17 +222,17 @@ Autorized service by customer]]></text>
 				<reportElement x="256" y="214" width="175" height="20" uuid="86aa2b28-a678-4ff1-bac8-e86127ab61c1"/>
 				<text><![CDATA[test equipment information]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="702" y="1" width="117" height="20" uuid="9b016b97-1944-4a8a-bf77-c4732b7f4fb7"/>
+				<textFieldExpression><![CDATA[$F{lacoti}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="170" y="48" width="214" height="20" uuid="69f28ed3-227f-4204-b7a3-7664d0fb9c6e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Fecha/Date]]></text>
+			</staticText>
 		</band>
-		<band height="52">
-			<subreport>
-				<reportElement x="0" y="0" width="824" height="52" uuid="f2226376-b073-4c4e-8c7d-35ccc1ac0191"/>
-				<subreportParameter name="ncotic">
-					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
-				</subreportParameter>
-				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Calzado_subreport1.jasper"]]></subreportExpression>
-			</subreport>
-		</band>
+		<band height="52"/>
 		<band height="145">
 			<staticText>
 				<reportElement x="223" y="36" width="252" height="20" uuid="1b75156c-c7f2-4968-92f3-567faf60262d"/>

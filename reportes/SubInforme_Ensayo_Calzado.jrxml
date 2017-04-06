@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Mantas" language="groovy" pageWidth="864" pageHeight="842" columnWidth="824" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45b6efbc-c99e-4961-82c7-0fcd6ed89616">
-	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="153"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Mantas" language="groovy" pageWidth="900" pageHeight="842" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45b6efbc-c99e-4961-82c7-0fcd6ed89616">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -101,7 +101,7 @@ Del equipo/
 Internal code equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="738" y="0" width="86" height="56" uuid="3c98b68e-426b-46fe-9e44-342f3ee2c81b"/>
+				<reportElement x="684" y="0" width="86" height="50" uuid="3c98b68e-426b-46fe-9e44-342f3ee2c81b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -136,18 +136,25 @@ Class]]></text>
 Equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="593" y="0" width="145" height="56" uuid="358db444-fad7-49f9-a34c-e047c639b900"/>
+				<reportElement x="539" y="0" width="145" height="50" uuid="358db444-fad7-49f9-a34c-e047c639b900"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Humedad Relativa/Relativity Huminty/%RH)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="470" y="0" width="123" height="56" uuid="ca193615-4743-4c35-a931-b8372caf93f5"/>
+				<reportElement x="470" y="0" width="69" height="50" uuid="ca193615-4743-4c35-a931-b8372caf93f5"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature °C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="770" y="0" width="70" height="50" uuid="100ce27e-dfbe-4afa-91f9-335ffe48bead"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Test Date/Fecha Ensayo]]></text>
 			</staticText>
 		</band>
 	</title>
@@ -182,18 +189,30 @@ Equipment]]></text>
 				<textFieldExpression><![CDATA[$F{OBS_TENSION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="470" y="0" width="123" height="20" backcolor="#CCCCCC" uuid="7ef09a3f-4e5b-4f38-814c-fbb78477f866"/>
+				<reportElement mode="Opaque" x="470" y="0" width="69" height="20" backcolor="#CCCCCC" uuid="7ef09a3f-4e5b-4f38-814c-fbb78477f866"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TEMPERATURA}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="593" y="0" width="145" height="20" backcolor="#CCCCCC" uuid="e8ff9b06-2ea2-406f-be54-106fb9833efe"/>
+				<reportElement mode="Opaque" x="539" y="0" width="145" height="20" backcolor="#CCCCCC" uuid="e8ff9b06-2ea2-406f-be54-106fb9833efe"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{HUMEDAD}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="119" y="0" width="81" height="20" backcolor="#CCCCCC" uuid="1e5186ec-a5b7-4016-92cf-c5731d53bb5d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Calzado]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="770" y="0" width="70" height="20" backcolor="#CCCCCC" uuid="4f1a97c3-0e5a-424b-babe-7a56e07dda26"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

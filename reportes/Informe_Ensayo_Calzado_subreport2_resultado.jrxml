@@ -16,9 +16,8 @@
        "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", "FECHA_REGISTRO",
-       "CORRIENTE_FUGA_MEDIDA"
-  FROM labor."REGISTRO_INSPECCION_EQUIPO" where "FK_COTIZACION" =  $P{ncotic};
-]]>
+       "CORRIENTE_FUGA_MEDIDA","COD_CLIENTE"
+  FROM labor."REGISTRO_INSPECCION_EQUIPO" where "FK_COTIZACION" =  $P{ncotic};]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
@@ -59,10 +58,11 @@
 	<field name="CORRIENTE_FUGA" class="java.lang.Double"/>
 	<field name="TEMPERATURA" class="java.lang.Double"/>
 	<field name="HUMEDAD" class="java.lang.Double"/>
-	<field name="TIEMPO_ENSAYO_MIN" class="java.lang.Integer"/>
+	<field name="TIEMPO_ENSAYO_MIN" class="java.lang.Double"/>
 	<field name="OBS_FINAL" class="java.lang.String"/>
 	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
 	<field name="CORRIENTE_FUGA_MEDIDA" class="java.lang.Double"/>
+	<field name="COD_CLIENTE" class="java.lang.String"/>
 	<title>
 		<band height="46" splitType="Stretch">
 			<staticText>
@@ -113,6 +113,13 @@ Test Result
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FK_ID_SERIAL_EQUIPO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="155" height="20" backcolor="#CCCCCC" uuid="ef795a1c-c91f-40d8-ae2c-5e9f5af8e4c1"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COD_CLIENTE}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
