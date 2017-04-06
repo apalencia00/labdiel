@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" pageWidth="607" pageHeight="802" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="68"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="pago" class="java.lang.String"/>
@@ -36,44 +36,44 @@ GROUP BY "CANTIDAD"]]>
 		<groupExpression><![CDATA[]]></groupExpression>
 	</group>
 	<title>
-		<band height="32"/>
-	</title>
-	<detail>
-		<band height="62">
+		<band height="77">
 			<staticText>
-				<reportElement mode="Opaque" x="381" y="4" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
+				<reportElement mode="Opaque" x="380" y="19" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="381" y="40" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
+				<reportElement mode="Opaque" x="380" y="55" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total Servicio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="381" y="22" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
+				<reportElement mode="Opaque" x="380" y="37" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Iva 19%]]></text>
 			</staticText>
 			<textField evaluationTime="Report">
-				<reportElement x="464" y="42" width="85" height="20" uuid="7b13e149-5ae0-49ed-93e2-643913a2d066"/>
+				<reportElement x="463" y="57" width="85" height="20" uuid="7b13e149-5ae0-49ed-93e2-643913a2d066"/>
 				<textFieldExpression><![CDATA[$V{total_servicio_1}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="464" y="4" width="85" height="20" uuid="8f232089-2b54-4d79-854d-bd801d22737e"/>
+				<reportElement x="463" y="19" width="85" height="20" uuid="8f232089-2b54-4d79-854d-bd801d22737e"/>
 				<textFieldExpression><![CDATA[$V{total_1}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="464" y="22" width="85" height="20" uuid="1cb52523-7f18-4797-9589-2c992e8b8885"/>
+				<reportElement x="463" y="37" width="85" height="20" uuid="1cb52523-7f18-4797-9589-2c992e8b8885"/>
 				<textFieldExpression><![CDATA[$V{iva_1}]]></textFieldExpression>
 			</textField>
 		</band>
+	</title>
+	<detail>
+		<band height="11"/>
 		<band height="640">
 			<staticText>
 				<reportElement x="0" y="522" width="544" height="18" uuid="eb1c092b-d8c6-485c-a676-3940f8842306"/>
