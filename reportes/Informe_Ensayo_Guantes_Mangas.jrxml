@@ -48,22 +48,22 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and 
 	<pageHeader>
 		<band height="70">
 			<image>
-				<reportElement x="1" y="2" width="75" height="52" uuid="2788508b-4116-484f-a2ec-99f3e4221991"/>
+				<reportElement x="12" y="2" width="92" height="68" uuid="2788508b-4116-484f-a2ec-99f3e4221991"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement x="722" y="0" width="102" height="54" uuid="eb9bc268-2670-41b8-90e5-f2bf7a7bccc2"/>
+				<reportElement x="733" y="0" width="119" height="70" uuid="eb9bc268-2670-41b8-90e5-f2bf7a7bccc2"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="107" y="2" width="589" height="20" uuid="d14bcfac-d94c-4831-8cf1-fcecc00325cc"/>
+				<reportElement x="118" y="2" width="606" height="36" uuid="d14bcfac-d94c-4831-8cf1-fcecc00325cc"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[INFORME DE ENSAYO DIELECTRICO A GUANTES O MANGAS AISLADAS EN SERVICIO.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="107" y="22" width="589" height="20" uuid="844abeff-d47e-4130-916d-a0a40650bacf"/>
+				<reportElement x="118" y="22" width="606" height="36" uuid="844abeff-d47e-4130-916d-a0a40650bacf"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
