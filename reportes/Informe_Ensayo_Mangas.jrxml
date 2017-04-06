@@ -276,7 +276,7 @@ Autorized service by customer]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="1" y="52" width="677" height="63" uuid="06759cb8-c61b-49bb-a2e4-abb37cebf291"/>
-				<textElement verticalAlignment="Top">
+				<textElement textAlignment="Justified" verticalAlignment="Top">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Incertidumbre de medición/ Uncertaintiny Measurement

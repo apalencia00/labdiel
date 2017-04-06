@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Mantas" language="groovy" pageWidth="720" pageHeight="842" columnWidth="680" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45b6efbc-c99e-4961-82c7-0fcd6ed89616">
-	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="9"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Mantas" language="groovy" pageWidth="900" pageHeight="842" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45b6efbc-c99e-4961-82c7-0fcd6ed89616">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -15,18 +15,14 @@
        "CRISTAL", "QUEMADURA", "OBS_QUEMADURA", "CONTAMINACION", "OBS_CONTAMINACION",
        "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
-       "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*
-  FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co, labor."DET_COTI_SERIALIZAR_EQUIPO" dts
+       "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*, ins."FECHA_REGISTRO", serde.cod_seriales
+  FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co, labor."DET_COTI_SERIALIZAR_EQUIPO" dts, labor."DET_COTI_SERIALIZAR_EQUIPO" serde
 
- WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" AND ins."FK_COTIZACION" = $P{ncotic} AND co."FK_CLIENTE" = c."ID_CLIENTE"
-
- --
-
- and dts.id_detalle_serial::integer = ins."FK_ID_SERIAL_EQUIPO"::integer AND substr(dts.cod_seriales, 1, 3) = 'MNT']]>
+ WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" AND ins."FK_COTIZACION" = $P{ncotic} AND co."FK_CLIENTE" = c."ID_CLIENTE"  and dts.id_detalle_serial::integer = ins."FK_ID_SERIAL_EQUIPO"::integer AND substr(dts.cod_seriales, 1, 1) = 'MT' and serde.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" order by "ID_INSPECCION_EQUIPO" asc]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
-	<field name="FK_ID_SERIAL_EQUIPO" class="java.lang.String"/>
+	<field name="FK_ID_SERIAL_EQUIPO" class="java.lang.Integer"/>
 	<field name="CLASE" class="java.lang.Integer"/>
 	<field name="OBS_CLASE" class="java.lang.String"/>
 	<field name="TENSION" class="java.lang.Integer"/>
@@ -63,7 +59,7 @@
 	<field name="CORRIENTE_FUGA" class="java.lang.Double"/>
 	<field name="TEMPERATURA" class="java.lang.Double"/>
 	<field name="HUMEDAD" class="java.lang.Double"/>
-	<field name="TIEMPO_ENSAYO_MIN" class="java.lang.Integer"/>
+	<field name="TIEMPO_ENSAYO_MIN" class="java.lang.Double"/>
 	<field name="OBS_FINAL" class="java.lang.String"/>
 	<field name="ID_CLIENTE" class="java.lang.Long">
 		<fieldDescription><![CDATA[--]]></fieldDescription>
@@ -81,10 +77,16 @@
 	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
 	<field name="USUARIO" class="java.lang.Integer"/>
 	<field name="APELLIDO" class="java.lang.String"/>
+	<field name="DEPTO" class="java.lang.Integer"/>
+	<field name="USERNAME" class="java.lang.String"/>
+	<field name="cod_seriales" class="java.lang.String"/>
 	<title>
-		<band height="50" splitType="Stretch">
+		<band height="50" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="91">
 			<staticText>
-				<reportElement x="331" y="0" width="112" height="50" uuid="94858183-b0e4-499d-aaab-3c9bb49ede52"/>
+				<reportElement x="331" y="41" width="112" height="50" uuid="94858183-b0e4-499d-aaab-3c9bb49ede52"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -93,7 +95,7 @@ Operation Voltage [kV] A.C
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="0" width="119" height="50" uuid="9bf227ff-d67f-4832-bcf5-1856e4c2eb56"/>
+				<reportElement x="0" y="41" width="119" height="50" uuid="9bf227ff-d67f-4832-bcf5-1856e4c2eb56"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -102,7 +104,7 @@ Del equipo/
 Internal code equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="594" y="0" width="86" height="50" uuid="3c98b68e-426b-46fe-9e44-342f3ee2c81b"/>
+				<reportElement x="594" y="41" width="86" height="50" uuid="3c98b68e-426b-46fe-9e44-342f3ee2c81b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -112,7 +114,7 @@ Internal code equipment]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="231" y="0" width="100" height="50" uuid="c212270b-e331-4347-89bb-bb4edaeb5699"/>
+				<reportElement x="231" y="41" width="100" height="50" uuid="c212270b-e331-4347-89bb-bb4edaeb5699"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -121,7 +123,7 @@ Ensayo [kV]  A.C
 Test voltage [kV] A.C]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="186" y="0" width="45" height="50" uuid="4a7bfd97-823c-4554-8b7c-6af2a5154d15"/>
+				<reportElement x="186" y="41" width="45" height="50" uuid="4a7bfd97-823c-4554-8b7c-6af2a5154d15"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -129,7 +131,7 @@ Test voltage [kV] A.C]]></text>
 Class]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="119" y="0" width="67" height="50" uuid="8e870d4e-314a-4280-9c10-a5c956ef49d1"/>
+				<reportElement x="119" y="41" width="67" height="50" uuid="8e870d4e-314a-4280-9c10-a5c956ef49d1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -137,30 +139,37 @@ Class]]></text>
 Equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="443" y="0" width="81" height="50" uuid="4318c0b5-ae10-42a5-bf47-8f6c636b3b0a"/>
+				<reportElement x="443" y="41" width="81" height="50" uuid="4318c0b5-ae10-42a5-bf47-8f6c636b3b0a"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature (°C)			]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="524" y="0" width="70" height="50" uuid="7a99f449-d97c-4c0e-b3f3-f5fade72e675"/>
+				<reportElement x="524" y="41" width="70" height="50" uuid="7a99f449-d97c-4c0e-b3f3-f5fade72e675"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Humedad Relativa(%HR)/Relative Humidity(%RH)									]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="680" y="40" width="70" height="51" uuid="519595df-7dd5-486a-8cfa-8991f735a18b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Test Date/Fecha Ensayo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="13" width="181" height="20" uuid="107e38dc-8078-4748-8530-3ad53de973f8"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+			</staticText>
 		</band>
-	</title>
+	</pageHeader>
 	<detail>
 		<band height="20" splitType="Stretch">
-			<textField>
-				<reportElement mode="Opaque" x="0" y="0" width="119" height="20" backcolor="#CCCCCC" uuid="02c53b15-3612-4f67-a4d4-1e2bd9d6d4e5"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{FK_ID_SERIAL_EQUIPO}]]></textFieldExpression>
-			</textField>
 			<textField>
 				<reportElement mode="Opaque" x="186" y="0" width="45" height="20" backcolor="#CCCCCC" uuid="3eb29594-f773-4604-8113-9029af32fd16"/>
 				<textElement textAlignment="Center">
@@ -195,6 +204,27 @@ Equipment]]></text>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{HUMEDAD}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="119" y="0" width="67" height="20" backcolor="#CCCCCC" uuid="80aeccba-e116-4f2a-860a-541ee62cd1a8"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Mantas]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="680" y="0" width="70" height="20" backcolor="#CCCCCC" uuid="5d6f932c-d026-4beb-837b-8db1cea89546"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="119" height="20" backcolor="#CCCCCC" uuid="1ded892d-a0fb-4797-871b-4abc6bb81bf4"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
