@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" pageWidth="607" pageHeight="802" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="282"/>
+	<property name="ireport.y" value="382"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="pago" class="java.lang.String"/>
@@ -76,25 +76,25 @@ GROUP BY "CANTIDAD"]]>
 		<band height="11"/>
 		<band height="634">
 			<staticText>
-				<reportElement x="-1" y="455" width="544" height="18" uuid="eb1c092b-d8c6-485c-a676-3940f8842306"/>
+				<reportElement x="-1" y="470" width="544" height="18" uuid="eb1c092b-d8c6-485c-a676-3940f8842306"/>
 				<text><![CDATA[La oferta tiene una valides de 30 días contados a partir de la fecha de emisión de la misma.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="-1" y="473" width="376" height="20" backcolor="#FFFF33" uuid="30a45b4a-bfe0-4d9e-aec8-0ac20f3e0f2d"/>
+				<reportElement mode="Transparent" x="-1" y="488" width="376" height="20" backcolor="#FFFF33" uuid="30a45b4a-bfe0-4d9e-aec8-0ac20f3e0f2d"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[MODIFICACIONES AL ALCANCE DE LOS TRABAJOS.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="1" y="196" width="376" height="20" backcolor="#FFFF00" uuid="e7be04a3-5455-4e2d-aa9b-2161b3b51dc0"/>
+				<reportElement mode="Transparent" x="1" y="211" width="376" height="20" backcolor="#FFFF00" uuid="e7be04a3-5455-4e2d-aa9b-2161b3b51dc0"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[4. PLAZO Y CONDICIONES PARA EL INICIO DEL ENSAYO.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="216" width="544" height="116" uuid="7f959df1-b5d7-4846-a10c-f84b9af5ee72"/>
+				<reportElement x="1" y="231" width="544" height="116" uuid="7f959df1-b5d7-4846-a10c-f84b9af5ee72"/>
 				<textElement textAlignment="Justified"/>
 				<text><![CDATA[Una vez recibida la Consignación o la orden de compra u orden de trabajo de acuerdo a las condiciones de pago, se realizará la programación del ítem para que sea traído al laboratorio. En el caso que el ítem se traiga sin dicha consignación u orden de servicio, por mutuo acuerdo, sólo se comienzan los trabajos hasta que sea autorizado por medio de estas dos formas (consignación u orden) el servicio que va a prestar el laboratorio.
 Los resultados de los ensayos  se entregarán al cliente en máximo 5 días hábiles después de la terminacion de los ensayos contratados.
@@ -109,7 +109,7 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 				<text><![CDATA[3. FORMA DE PAGO: 						]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="0" y="332" width="381" height="20" uuid="84005e23-64ac-4a0e-9c3d-d5a073e07631"/>
+				<reportElement mode="Transparent" x="0" y="347" width="381" height="20" uuid="84005e23-64ac-4a0e-9c3d-d5a073e07631"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -117,14 +117,14 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="1" y="435" width="376" height="20" uuid="2ff8439f-1f85-4e35-8e0b-a1ea3be9aeda"/>
+				<reportElement mode="Transparent" x="1" y="450" width="376" height="20" uuid="2ff8439f-1f85-4e35-8e0b-a1ea3be9aeda"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[VALIDEZ DE LA OFERTA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="-1" y="352" width="545" height="83" uuid="a0f2252f-abdc-4b2e-9443-d1f2991085ca"/>
+				<reportElement x="-1" y="367" width="545" height="83" uuid="a0f2252f-abdc-4b2e-9443-d1f2991085ca"/>
 				<textElement textAlignment="Justified"/>
 				<text><![CDATA[EL OFERENTE responde por el cumplimiento pleno de sus obligaciones según la presente oferta.  En relación con los perjuicios, EL OFERENTE únicamente responderá por el daño emergente derivado de las acciones u omisiones que le sean directamente imputables.  En ningún evento EL OFERENTE responderá por lucro cesante, daños indirectos, consecuenciales, y/o perdida de información. En todo caso, la responsabilidad del OFERENTE en ningún evento excederá el cien por ciento del valor del presente negocio jurídico, salvo en los eventos de dolor o culpa grave, en los cuales la responsabilidad será plena.
 
@@ -145,16 +145,16 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 				<text><![CDATA[Los precios son firmes en pesos colombianos y el IVA se liquidará y cobrará según porcentaje vigente en la fecha de facturación, lo mismo que los nuevos impuestos ó aumentos de los impuestos existentes, de orden nacional, departamental ó municipal que intervengan en la facturación final.  El costo discriminado en cada capítulo de la oferta, corresponde al valor neto a pagar después de las deducciones legales que debe realizar el cliente.El costo discriminado en cada capítulo de la oferta, corresponde al valor neto a pagar después de las deducciones legales que debe realizar el cliente.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="558" width="544" height="15" uuid="46fb7369-a309-47c7-8f37-eb21d75f8184"/>
+				<reportElement x="2" y="573" width="544" height="15" uuid="46fb7369-a309-47c7-8f37-eb21d75f8184"/>
 				<text><![CDATA[Cordialmente,]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="-1" y="493" width="544" height="45" uuid="4af6f2a3-ceec-4332-9c06-663f7eda1acb"/>
+				<reportElement x="-1" y="508" width="544" height="45" uuid="4af6f2a3-ceec-4332-9c06-663f7eda1acb"/>
 				<textElement textAlignment="Justified"/>
 				<text><![CDATA[Si durante el desarrollo de los trabajos descritos en la presente oferta, surgen trabajos adicionales a los ítems, se modificará el alcance de la presente oferta y  LADEE JLB & CIA LTDA, realizará una oferta adicional para tomar en consideración las modificaciones pertinentes. 						]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="538" width="462" height="20" uuid="4e37f12c-d256-4442-b67c-9536cc96e92b"/>
+				<reportElement x="1" y="553" width="462" height="20" uuid="4e37f12c-d256-4442-b67c-9536cc96e92b"/>
 				<text><![CDATA[Gracias por su atención y estaremos atentos a sus comentarios e inquietudes.]]></text>
 			</staticText>
 			<staticText>
