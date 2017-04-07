@@ -87,35 +87,35 @@
 	<pageHeader>
 		<band height="136">
 			<staticText>
-				<reportElement x="704" y="63" width="70" height="71" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
+				<reportElement x="720" y="63" width="70" height="71" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Incertidumbre/Uncertainty]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="774" y="63" width="70" height="71" uuid="1412563b-926b-478c-8348-18735d0de8ce"/>
+				<reportElement x="790" y="63" width="70" height="71" uuid="1412563b-926b-478c-8348-18735d0de8ce"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Test Date/Fecha Ensayo]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="626" y="63" width="78" height="73" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
+				<reportElement x="642" y="61" width="78" height="73" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Humedad Relativa/Relativity Huminty/%RH)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="564" y="63" width="62" height="73" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
+				<reportElement x="580" y="63" width="62" height="73" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature °C]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="466" y="63" width="98" height="73" uuid="8a4c8272-ab80-4aeb-8078-aee09c6d2eaf"/>
+				<reportElement x="466" y="63" width="114" height="73" uuid="8a4c8272-ab80-4aeb-8078-aee09c6d2eaf"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -207,21 +207,21 @@ Internal code equipment]]></text>
 				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="564" y="0" width="62" height="20" backcolor="#CCCCCC" uuid="eb194bbf-8d3a-413d-9df2-82fb708ed24e"/>
+				<reportElement mode="Opaque" x="580" y="0" width="62" height="20" backcolor="#CCCCCC" uuid="eb194bbf-8d3a-413d-9df2-82fb708ed24e"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TEMPERATURA}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="626" y="0" width="78" height="20" backcolor="#CCCCCC" uuid="df9577df-3850-4872-a7cb-7729d179d519"/>
+				<reportElement mode="Opaque" x="642" y="0" width="78" height="20" backcolor="#CCCCCC" uuid="df9577df-3850-4872-a7cb-7729d179d519"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{HUMEDAD}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd/MM/YYYY">
-				<reportElement mode="Opaque" x="774" y="0" width="70" height="20" backcolor="#CCCCCC" uuid="161d1783-4f4c-4f8a-a8f9-d30a9334af2c"/>
+				<reportElement mode="Opaque" x="790" y="0" width="70" height="20" backcolor="#CCCCCC" uuid="161d1783-4f4c-4f8a-a8f9-d30a9334af2c"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
@@ -247,7 +247,7 @@ Internal code equipment]]></text>
 				<textFieldExpression><![CDATA[$F{TENSION_ENSAYO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="466" y="0" width="98" height="20" backcolor="#CCCCCC" uuid="33cce7f6-95cd-4038-bd55-9f0888f2c1e5"/>
+				<reportElement mode="Opaque" x="466" y="0" width="114" height="20" backcolor="#CCCCCC" uuid="33cce7f6-95cd-4038-bd55-9f0888f2c1e5"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
