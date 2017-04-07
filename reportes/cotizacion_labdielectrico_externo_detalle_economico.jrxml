@@ -7,7 +7,7 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[select coti."NUM_COTIZACION", coti."ESTADO",dtc."VALOR_UNITARIO"::text,eq."DESCRIPCION" as elequipo, un."DESCRIPCION" as unidad, dtc."CANTIDAD",eq."ID_TIPO_EQUIPO", dtc."CANTIDAD" * dtc."VALOR_UNITARIO"::numeric as subtotal_cal
+		<![CDATA[select coti."NUM_COTIZACION", coti."ESTADO",dtc."VALOR_UNITARIO"::text,eq."DESCRIPCION" as elequipo, un."DESCRIPCION" as unidad, dtc."CANTIDAD",eq."ID_TIPO_EQUIPO", dtc."CANTIDAD" * dtc."VALOR_UNITARIO"::numeric(17,0) as subtotal_cal
 
 from labor."COTIZACION" coti, labor."DETALLE_COTIZACION" dtc, labor."CLIENTE" cl, labor."EMPLEADO" e, auth."USUARIO" us ,labor."REVISION_ENSAYO_EQUIPO" rv, labor."TIPO_EQUIPO" eq, labor."UNIDAD_MEDICION" un
 

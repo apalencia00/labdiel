@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas_subreport3" language="groovy" pageWidth="730" pageHeight="802" columnWidth="730" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="182a4d5e-01fd-4d45-943d-d74f302d6001">
-	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="141"/>
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -37,7 +37,7 @@
 				<text><![CDATA[Elaborado por/Made By]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="397" y="65" width="157" height="20" uuid="2af9dc86-7f80-4498-9e19-07a357592de1"/>
+				<reportElement x="394" y="65" width="157" height="20" uuid="2af9dc86-7f80-4498-9e19-07a357592de1"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -94,7 +94,7 @@ pruebaselect@Jjorgebedoya.com]]></text>
 				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="554" y="65" width="176" height="20" uuid="637f13dd-4962-455c-bfda-a52900121c38"/>
+				<reportElement x="551" y="65" width="176" height="20" uuid="637f13dd-4962-455c-bfda-a52900121c38"/>
 				<textElement textAlignment="Justified"/>
 				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
 			</textField>
