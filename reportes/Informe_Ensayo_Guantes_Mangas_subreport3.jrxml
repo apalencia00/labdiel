@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas_subreport3" language="groovy" pageWidth="730" pageHeight="802" columnWidth="730" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="182a4d5e-01fd-4d45-943d-d74f302d6001">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.x" value="141"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -16,7 +16,7 @@
 	<detail>
 		<band height="280" splitType="Stretch">
 			<staticText>
-				<reportElement x="22" y="0" width="134" height="20" uuid="89ff478f-b611-4934-b868-098d8a9b6960"/>
+				<reportElement x="22" y="0" width="151" height="20" uuid="89ff478f-b611-4934-b868-098d8a9b6960"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -30,7 +30,7 @@
 				<text><![CDATA[Jefe de Laboratorio/lab Chief]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="394" y="0" width="135" height="20" uuid="9626729b-400b-421d-bce3-9611bb387bfb"/>
+				<reportElement x="394" y="0" width="160" height="20" uuid="9626729b-400b-421d-bce3-9611bb387bfb"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -79,12 +79,12 @@ www.jorgebedoya.com
 pruebaselect@Jjorgebedoya.com]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="156" y="0" width="221" height="20" uuid="e44fc798-a7d6-4131-b091-7d5a79b29c95"/>
+				<reportElement x="173" y="0" width="221" height="20" uuid="e44fc798-a7d6-4131-b091-7d5a79b29c95"/>
 				<textElement textAlignment="Justified"/>
 				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="529" y="0" width="201" height="20" uuid="be33b8dc-c030-4e4f-886b-4634c1513446"/>
+				<reportElement x="554" y="0" width="176" height="20" uuid="be33b8dc-c030-4e4f-886b-4634c1513446"/>
 				<textElement textAlignment="Justified"/>
 				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
 			</textField>
