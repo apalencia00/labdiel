@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas_subreport3" language="groovy" pageWidth="730" pageHeight="802" columnWidth="730" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="182a4d5e-01fd-4d45-943d-d74f302d6001">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="172"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -16,48 +16,32 @@
 	<detail>
 		<band height="280" splitType="Stretch">
 			<staticText>
-				<reportElement x="22" y="0" width="98" height="20" uuid="89ff478f-b611-4934-b868-098d8a9b6960"/>
+				<reportElement x="22" y="0" width="134" height="20" uuid="89ff478f-b611-4934-b868-098d8a9b6960"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Revisado por/]]></text>
+				<text><![CDATA[Revisado por/Cheked By]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="99" y="0" width="57" height="20" uuid="19dd6dd9-1825-4c9c-8feb-83d364b2b0eb"/>
-				<text><![CDATA[Cheked By]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="20" y="65" width="100" height="20" uuid="9581e7f5-0328-4f80-8efb-bcf0c847f1f6"/>
+				<reportElement x="20" y="65" width="153" height="20" uuid="9581e7f5-0328-4f80-8efb-bcf0c847f1f6"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Jefe de Laboratorio/]]></text>
+				<text><![CDATA[Jefe de Laboratorio/lab Chief]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="120" y="65" width="57" height="20" uuid="2d07140c-7995-48bd-acc8-36adfdebe6a2"/>
-				<text><![CDATA[lab Chief]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="472" y="0" width="57" height="20" uuid="5a4c54db-c6cb-489e-931b-5f09d1d9fb88"/>
-				<text><![CDATA[Made By]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="394" y="0" width="98" height="20" uuid="9626729b-400b-421d-bce3-9611bb387bfb"/>
+				<reportElement x="394" y="0" width="135" height="20" uuid="9626729b-400b-421d-bce3-9611bb387bfb"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Elaborado por/]]></text>
+				<text><![CDATA[Elaborado por/Made By]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="397" y="65" width="75" height="20" uuid="2af9dc86-7f80-4498-9e19-07a357592de1"/>
+				<reportElement x="397" y="65" width="157" height="20" uuid="2af9dc86-7f80-4498-9e19-07a357592de1"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Laboratorista/]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="470" y="65" width="84" height="20" uuid="439562e0-577b-4101-98b7-c2d8790d78eb"/>
-				<text><![CDATA[Lab Assistant]]></text>
+				<text><![CDATA[Laboratorista/Lab Assistant]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="34" y="156" width="43" height="20" uuid="81693de5-b5f3-424d-9962-ca0829d06d9d"/>
