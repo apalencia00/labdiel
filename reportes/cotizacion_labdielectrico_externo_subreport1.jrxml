@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_subreport1" language="groovy" pageWidth="648" pageHeight="802" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6d8587fe-1c21-452c-b745-534d91e798d0">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="96"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
@@ -164,10 +164,6 @@
 			<staticText>
 				<reportElement x="0" y="421" width="246" height="20" uuid="7968f109-483b-4608-9209-d290fa25190b"/>
 				<text><![CDATA[Calle 42 No 44-51 Barranquilla-Atlantico		]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="10" y="131" width="246" height="22" uuid="543b938e-a407-4550-b00b-247f6823e848"/>
-				<text><![CDATA[Movil]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="437" width="246" height="22" uuid="47f1bf23-1774-4051-bbdf-5c88b7b69f0d"/>
