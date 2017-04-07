@@ -45,7 +45,7 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and 
 	<field name="USERNAME" class="java.lang.String"/>
 	<field name="laciudad" class="java.lang.String"/>
 	<title>
-		<band height="57" splitType="Stretch"/>
+		<band height="31" splitType="Stretch"/>
 	</title>
 	<pageHeader>
 		<band height="85">

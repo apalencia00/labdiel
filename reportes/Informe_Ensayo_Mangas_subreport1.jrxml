@@ -86,7 +86,7 @@
 	<pageHeader>
 		<band height="151">
 			<staticText>
-				<reportElement x="626" y="78" width="78" height="73" uuid="802ecf17-7a37-4766-b2c4-f2ec673725e4"/>
+				<reportElement x="640" y="78" width="78" height="73" uuid="802ecf17-7a37-4766-b2c4-f2ec673725e4"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -110,7 +110,7 @@
 Equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="564" y="78" width="62" height="73" uuid="2ddf7955-e25c-4291-b71b-d48b2e491c00"/>
+				<reportElement x="578" y="78" width="62" height="73" uuid="2ddf7955-e25c-4291-b71b-d48b2e491c00"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -134,7 +134,7 @@ Del equipo/
 Internal code equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="704" y="80" width="70" height="71" uuid="5ed76d45-1b48-4532-ab36-d9d352777d05"/>
+				<reportElement x="718" y="80" width="70" height="71" uuid="5ed76d45-1b48-4532-ab36-d9d352777d05"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -150,7 +150,7 @@ Ensayo [kV]  A.C
 Test voltage [kV] A.C]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="466" y="78" width="98" height="73" uuid="baee09b1-5b11-44c9-8179-af65ca379065"/>
+				<reportElement x="466" y="78" width="112" height="73" uuid="baee09b1-5b11-44c9-8179-af65ca379065"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -167,7 +167,7 @@ Operation Voltage [kV] A.C
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="774" y="80" width="70" height="71" uuid="184b9bd6-2f80-4c05-9840-f4137b2c9fae"/>
+				<reportElement x="788" y="80" width="70" height="71" uuid="184b9bd6-2f80-4c05-9840-f4137b2c9fae"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -206,21 +206,21 @@ Operation Voltage [kV] A.C
 				<textFieldExpression><![CDATA[$F{OBS_CLASE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="564" y="0" width="62" height="20" backcolor="#CCCCCC" uuid="0ce72edb-a1c2-47ff-aabc-db26b33357e7"/>
+				<reportElement mode="Opaque" x="578" y="0" width="62" height="20" backcolor="#CCCCCC" uuid="0ce72edb-a1c2-47ff-aabc-db26b33357e7"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TEMPERATURA}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="466" y="0" width="98" height="20" backcolor="#CCCCCC" uuid="12d5a413-8d29-4e4a-8db5-2b6d83f762c7"/>
+				<reportElement mode="Opaque" x="466" y="0" width="112" height="20" backcolor="#CCCCCC" uuid="12d5a413-8d29-4e4a-8db5-2b6d83f762c7"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="626" y="0" width="78" height="20" backcolor="#CCCCCC" uuid="89f2e0af-f51a-4008-8a51-9d0741712efa"/>
+				<reportElement mode="Opaque" x="640" y="0" width="78" height="20" backcolor="#CCCCCC" uuid="89f2e0af-f51a-4008-8a51-9d0741712efa"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
@@ -248,7 +248,7 @@ Operation Voltage [kV] A.C
 				<textFieldExpression><![CDATA[$F{TENSION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="774" y="0" width="70" height="20" backcolor="#CCCCCC" uuid="90facaf1-c27f-4446-8ba9-09d61a836db1"/>
+				<reportElement mode="Opaque" x="788" y="0" width="70" height="20" backcolor="#CCCCCC" uuid="90facaf1-c27f-4446-8ba9-09d61a836db1"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>

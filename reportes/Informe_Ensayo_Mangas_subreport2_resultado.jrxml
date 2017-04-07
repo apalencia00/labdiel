@@ -16,8 +16,8 @@
        "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", "FECHA_REGISTRO",
-       "CORRIENTE_FUGA_MEDIDA","COD_CLIENTE"
-  FROM labor."REGISTRO_INSPECCION_EQUIPO" where "FK_COTIZACION" = $P{ncotic};]]>
+       "CORRIENTE_FUGA_MEDIDA", "COD_CLIENTE",dts.cod_seriales
+  FROM labor."REGISTRO_INSPECCION_EQUIPO", labor."DET_COTI_SERIALIZAR_EQUIPO" dts where dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" AND "FK_COTIZACION" = $P{ncotic}]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
@@ -63,6 +63,7 @@
 	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
 	<field name="CORRIENTE_FUGA_MEDIDA" class="java.lang.Double"/>
 	<field name="COD_CLIENTE" class="java.lang.String"/>
+	<field name="cod_seriales" class="java.lang.String"/>
 	<title>
 		<band height="56" splitType="Stretch">
 			<staticText>
@@ -99,13 +100,6 @@ Internal code equipment
 	<detail>
 		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement mode="Opaque" x="125" y="0" width="125" height="20" backcolor="#CCCCCC" uuid="b8078c89-2c19-457a-8270-9311975829cc"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{FK_ID_SERIAL_EQUIPO}]]></textFieldExpression>
-			</textField>
-			<textField>
 				<reportElement mode="Opaque" x="250" y="0" width="480" height="20" backcolor="#CCCCCC" uuid="b6718020-bbc1-496f-ae60-7b2e4c6740bb"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{OBS_FINAL}]]></textFieldExpression>
@@ -116,6 +110,11 @@ Internal code equipment
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{COD_CLIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="125" y="0" width="125" height="20" backcolor="#CCCCCC" uuid="f8a3f49c-ee9f-46b2-b8fd-d78874613b91"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
