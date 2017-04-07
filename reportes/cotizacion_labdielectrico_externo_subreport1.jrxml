@@ -2,13 +2,13 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_subreport1" language="groovy" pageWidth="648" pageHeight="802" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6d8587fe-1c21-452c-b745-534d91e798d0">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="150"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT c."NUM_COTIZACION", c."FK_CLIENTE", c."FK_USUARIO",
        c."FK_EMPLEADO", c."FECHA_REGISTRO", c."ESTADO", c."US_MODIFICA", c."FECHA_MODIFICACION",
-       c."FK_REVISION_ENSAYO_EQUIPO", cl."NOMBRE" || ' ' || cl."APELLIDO" as cliente, cl."IDE_NIT",cl."TELEFONO_CONTACTO", cl."DIRECCION",cl."EMAIL",pc."DESCRIPCION" as ciudad,pd."DESCRIPCION" as depto
+       c."FK_REVISION_ENSAYO_EQUIPO", cl."NOMBRE"  as cliente,cl."APELLIDO" ,cl."IDE_NIT",cl."TELEFONO_CONTACTO", cl."DIRECCION",cl."EMAIL",pc."DESCRIPCION" as ciudad,pd."DESCRIPCION" as depto
   FROM labor."COTIZACION" c , labor."CLIENTE" cl, labor."PARAM_CIUDAD" pc, labor."PARAM_DEPTO" pd WHERE "ID_CLIENTE" = "FK_CLIENTE" AND c."NUM_COTIZACION" = $P{ncotic} AND cl."CIUDAD" = pc."ID_COD_DIVIPO"::integer  AND cl."DEPTO" = pd."COD_DEPA_CODI"::integer ;]]>
 	</queryString>
 	<field name="NUM_COTIZACION" class="java.lang.String"/>
@@ -21,6 +21,7 @@
 	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
 	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
 	<field name="cliente" class="java.lang.String"/>
+	<field name="APELLIDO" class="java.lang.String"/>
 	<field name="IDE_NIT" class="java.lang.String">
 		<fieldDescription><![CDATA[---]]></fieldDescription>
 	</field>
@@ -101,7 +102,7 @@
 				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="394" y="0" width="160" height="20" uuid="d93879d9-0211-4ee5-829b-0651734df71c"/>
+				<reportElement x="375" y="0" width="160" height="20" uuid="d93879d9-0211-4ee5-829b-0651734df71c"/>
 				<textElement>
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -132,7 +133,7 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="554" y="0" width="54" height="20" uuid="e3cb16e5-37aa-43ae-9f1e-e4026d079022"/>
+				<reportElement x="535" y="0" width="54" height="20" uuid="e3cb16e5-37aa-43ae-9f1e-e4026d079022"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -180,6 +181,10 @@
 				<text><![CDATA[Gerardo Luis Ramírez Zapata
 ]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="139" y="73" width="282" height="20" uuid="e29a602d-9f7d-4508-848d-246e900f1221"/>
+				<textFieldExpression><![CDATA[$F{APELLIDO}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
