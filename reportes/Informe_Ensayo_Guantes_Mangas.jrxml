@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="900" pageHeight="900" columnWidth="880" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="192"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -220,7 +220,7 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="417" y="247" width="188" height="20" uuid="0b8e8a40-a94b-4f66-a571-31917178b5fd"/>
+				<reportElement x="410" y="247" width="188" height="20" uuid="0b8e8a40-a94b-4f66-a571-31917178b5fd"/>
 				<text><![CDATA[test equipment information]]></text>
 			</staticText>
 			<textField>
@@ -268,7 +268,7 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Condiciones ambientales/Enviromental condition]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="17" y="72" width="497" height="63" uuid="ab066ee0-9a4e-4828-859e-a665ee7e3ed7"/>
+				<reportElement x="83" y="53" width="497" height="63" uuid="ab066ee0-9a4e-4828-859e-a665ee7e3ed7"/>
 				<textElement textAlignment="Justified" verticalAlignment="Top">
 					<font isBold="true"/>
 				</textElement>
