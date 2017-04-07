@@ -133,7 +133,7 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="526" y="0" width="54" height="20" uuid="e3cb16e5-37aa-43ae-9f1e-e4026d079022"/>
+				<reportElement x="522" y="0" width="54" height="20" uuid="e3cb16e5-37aa-43ae-9f1e-e4026d079022"/>
 				<textElement verticalAlignment="Top">
 					<font size="12" isBold="true"/>
 				</textElement>
