@@ -136,10 +136,6 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 
 ]]></text>
 			</staticText>
-			<textField>
-				<reportElement mode="Opaque" x="129" y="58" width="353" height="20" backcolor="#FFFF00" uuid="610b77c5-5de6-41d3-8c6e-6f592b3b12eb"/>
-				<textFieldExpression><![CDATA[$P{pago}]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement x="0" y="0" width="544" height="58" uuid="aba7ffef-7665-4433-aee4-66830509743a"/>
 				<textElement textAlignment="Justified"/>
@@ -164,6 +160,10 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 				<text><![CDATA[En caso de aceptar la oferta favor consignar en las siguientes cuentas:
 Cuenta de ahorros Banco de Bogota # 151510302, la cuenta se encuentra a nombre de Laboratorios de ensayos electricos JLB & CIA SAS con NIT 901005281-4. Enviar una copia de la consignación o la transferencia bancaria por correo electrónico o fax.
 Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="58" width="129" height="20" uuid="7ff832e8-094e-4982-a256-06ccefe473c7"/>
+				<text><![CDATA[De contado.]]></text>
 			</staticText>
 		</band>
 	</detail>
