@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_subreport1" language="groovy" pageWidth="648" pageHeight="802" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6d8587fe-1c21-452c-b745-534d91e798d0">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="180"/>
+	<property name="ireport.y" value="150"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
@@ -33,19 +33,10 @@
 		<band height="14" splitType="Stretch"/>
 	</title>
 	<detail>
-		<band height="496" splitType="Stretch">
+		<band height="476" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="100" height="20" uuid="9c1cc087-449e-4879-a025-add3679f2f21"/>
 				<text><![CDATA[Barranquilla,
-]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="0" y="445" width="539" height="51" forecolor="#000000" uuid="62d8b781-443d-488b-bf7d-03c5277583d1"/>
-				<text><![CDATA[Ensayo para la verificación dieléctrica de los elementos referenciados en esta oferta mediante la utilización de equipos de ensayos y métodos normalizados. Para la ejecución de estos ensayos se realizaran las actividades descritas en normativas internacionales en su ultima version vigente al momento de la ejecución de los mismos, las cuales se relacionan a continuación.
-
-
-
-
 ]]></text>
 			</staticText>
 			<staticText>
@@ -70,10 +61,6 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="386" width="246" height="20" uuid="cfd80593-b8c5-4b33-b4df-e5b28081ccc1"/>
-				<text><![CDATA[Calle 42 No 44-51 Barranquilla-Atlantico		]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="0" y="53" width="100" height="20" uuid="e09e2719-5446-4db9-973a-e264702bfd0e"/>
 				<text><![CDATA[NIT:	]]></text>
 			</staticText>
@@ -82,32 +69,12 @@
 				<text><![CDATA[Atencion:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="3" y="429" width="246" height="16" forecolor="#000000" uuid="5640db6b-eaf7-4a14-9ee7-6db85749eebe"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[1. ALCANCE ESPECÍFICO]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="0" y="113" width="100" height="20" uuid="208391af-d963-477b-b1d4-6dc8b5a08775"/>
 				<text><![CDATA[Telefono:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="338" width="153" height="20" uuid="a8198978-d8dc-4aae-92f3-629bf0413432"/>
-				<text><![CDATA[Gerardo Luis Ramírez Zapata
-]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="0" y="358" width="153" height="20" uuid="4d8eed7a-544e-40a8-aedf-d0cf2aed9cf1"/>
-				<text><![CDATA[Ingeniero Laboratorio Dieléctrico]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="0" y="133" width="100" height="20" uuid="f7ceac23-95de-433b-a778-f83a03b56bb0"/>
 				<text><![CDATA[Correo Electronico]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="2" y="400" width="246" height="20" uuid="19229ca4-3dc0-43f7-b982-25bbe1e1aa7f"/>
-				<text><![CDATA[Teléfono: +57 5 3515740 Ext. 27]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="93" width="100" height="20" uuid="829dbed2-a129-4b8d-a50d-5d560901777e"/>
@@ -134,7 +101,7 @@
 				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="421" y="0" width="160" height="20" uuid="d93879d9-0211-4ee5-829b-0651734df71c"/>
+				<reportElement x="394" y="0" width="160" height="20" uuid="d93879d9-0211-4ee5-829b-0651734df71c"/>
 				<textElement>
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -157,11 +124,60 @@
 				<textFieldExpression><![CDATA[$F{EMAIL}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement stretchType="RelativeToBandHeight" x="0" y="251" width="542" height="57" uuid="4ecfec9f-b658-42a8-80c9-25f9a6d54ca9"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="251" width="525" height="57" uuid="4ecfec9f-b658-42a8-80c9-25f9a6d54ca9"/>
 				<text><![CDATA[Nos complace presentarle nuestra oferta de servicios para la realización de Ensayos eléctricos a los Equipos de Elevación y/o Protección Personal para trabajos en redes eléctricas energizadas, según los lineamientos de la norma ISO 17025 versión 2005 y los estandares de referencia aplicables para cada uno de los ensayos.
 
 
 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="554" y="0" width="54" height="20" uuid="e3cb16e5-37aa-43ae-9f1e-e4026d079022"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[-EXT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="381" width="246" height="20" uuid="31c48af8-d41a-48dc-8409-9d0f60df155d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LADEE & CIA S.A.S]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="364" width="153" height="20" uuid="3dc9ead5-1139-4570-975b-4b237bb2d45a"/>
+				<text><![CDATA[Ingeniero Laboratorio Dieléctrico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="454" width="246" height="22" uuid="e97e3261-4ba3-4820-aa9d-e5908e5c1a60"/>
+				<text><![CDATA[Correo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="401" width="365" height="20" uuid="fd1baf2c-cdd0-4387-981e-7a62c60c1891"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laboratorios de Ensayos Electricos JLB & CIA S.A.S]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="421" width="246" height="20" uuid="7968f109-483b-4608-9209-d290fa25190b"/>
+				<text><![CDATA[Calle 42 No 44-51 Barranquilla-Atlantico		]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="131" width="246" height="22" uuid="543b938e-a407-4550-b00b-247f6823e848"/>
+				<text><![CDATA[Movil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="437" width="246" height="22" uuid="47f1bf23-1774-4051-bbdf-5c88b7b69f0d"/>
+				<text><![CDATA[Teléfono: +57 5 3515740 Ext. 27]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="350" width="220" height="20" uuid="fee31df3-13c3-426f-9d8f-f5ec314a7442"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gerardo Luis Ramírez Zapata
 ]]></text>
 			</staticText>
 		</band>
