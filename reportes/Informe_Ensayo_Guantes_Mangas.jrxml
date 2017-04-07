@@ -160,7 +160,7 @@ Autorized service by customer]]></text>
 						]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="245" width="343" height="20" uuid="26622e09-2da3-42b9-b803-04dddb3b8d7f"/>
+				<reportElement x="92" y="247" width="343" height="20" uuid="26622e09-2da3-42b9-b803-04dddb3b8d7f"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -168,28 +168,28 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="268" width="197" height="20" uuid="36e50c1c-5464-4f1d-a799-8589bc4497bd"/>
+				<reportElement x="91" y="270" width="197" height="20" uuid="36e50c1c-5464-4f1d-a799-8589bc4497bd"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Código interno/Internal Code]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="207" y="268" width="122" height="20" uuid="fb67680f-4e90-4adb-845f-d18a529b8f7a"/>
+				<reportElement x="298" y="270" width="122" height="20" uuid="fb67680f-4e90-4adb-845f-d18a529b8f7a"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Serie/Serial]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="344" y="268" width="162" height="20" uuid="ae11d06f-4534-41a1-a2ae-57520589ce84"/>
+				<reportElement x="435" y="270" width="162" height="20" uuid="ae11d06f-4534-41a1-a2ae-57520589ce84"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[No. Certificado/Certificate Number]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="526" y="268" width="147" height="20" uuid="3f1571c3-a86b-417d-84b6-883b9ed0d79d"/>
+				<reportElement x="617" y="270" width="147" height="20" uuid="3f1571c3-a86b-417d-84b6-883b9ed0d79d"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -220,7 +220,7 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="326" y="245" width="188" height="20" uuid="0b8e8a40-a94b-4f66-a571-31917178b5fd"/>
+				<reportElement x="417" y="247" width="188" height="20" uuid="0b8e8a40-a94b-4f66-a571-31917178b5fd"/>
 				<text><![CDATA[test equipment information]]></text>
 			</staticText>
 			<textField>
@@ -268,7 +268,7 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Condiciones ambientales/Enviromental condition]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="12" y="66" width="546" height="63" uuid="ab066ee0-9a4e-4828-859e-a665ee7e3ed7"/>
+				<reportElement x="17" y="72" width="497" height="63" uuid="ab066ee0-9a4e-4828-859e-a665ee7e3ed7"/>
 				<textElement textAlignment="Justified" verticalAlignment="Top">
 					<font isBold="true"/>
 				</textElement>
