@@ -16,8 +16,8 @@
        "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", "FECHA_REGISTRO",
-       "CORRIENTE_FUGA_MEDIDA", "COD_CLIENTE"
-  FROM labor."REGISTRO_INSPECCION_EQUIPO" where "FK_COTIZACION" = $P{ncotic};]]>
+       "CORRIENTE_FUGA_MEDIDA", "COD_CLIENTE",dts.cod_seriales
+  FROM labor."REGISTRO_INSPECCION_EQUIPO", labor."DET_COTI_SERIALIZAR_EQUIPO" dts where dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" AND "FK_COTIZACION" = $P{ncotic}]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
@@ -63,6 +63,7 @@
 	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
 	<field name="CORRIENTE_FUGA_MEDIDA" class="java.lang.Double"/>
 	<field name="COD_CLIENTE" class="java.lang.String"/>
+	<field name="cod_seriales" class="java.lang.String"/>
 	<title>
 		<band height="29" splitType="Stretch"/>
 	</title>
@@ -109,13 +110,6 @@ Test Result
 	<detail>
 		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement mode="Opaque" x="125" y="0" width="125" height="20" backcolor="#CCCCCC" uuid="bac66ad3-2509-410b-be29-8b4796c27641"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{FK_ID_SERIAL_EQUIPO}]]></textFieldExpression>
-			</textField>
-			<textField>
 				<reportElement mode="Opaque" x="250" y="0" width="440" height="20" backcolor="#CCCCCC" uuid="e25c86aa-4eda-412a-89a3-5cfc711846a7"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
@@ -128,6 +122,13 @@ Test Result
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{COD_CLIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="125" y="0" width="125" height="20" backcolor="#CCCCCC" uuid="30893bf2-a073-487e-980d-f7632c9416bc"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
