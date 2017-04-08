@@ -143,22 +143,13 @@ Operation Voltage [kV] A.C
 ]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="368" y="37" width="89" height="71" uuid="6ea215dd-9004-46f0-abb0-74f2c98fffb3"/>
+				<reportElement x="368" y="37" width="105" height="71" uuid="6ea215dd-9004-46f0-abb0-74f2c98fffb3"/>
 			</rectangle>
-			<staticText>
-				<reportElement x="368" y="39" width="89" height="73" uuid="76d0db25-1bbb-4ada-af42-31786af0ab2c"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]
-
-]]></text>
-			</staticText>
 			<rectangle>
-				<reportElement x="457" y="37" width="113" height="71" uuid="68b8239d-2a1e-4cdb-be36-88e6ae5bf656"/>
+				<reportElement x="473" y="37" width="107" height="71" uuid="68b8239d-2a1e-4cdb-be36-88e6ae5bf656"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="454" y="38" width="122" height="73" uuid="8a4c8272-ab80-4aeb-8078-aee09c6d2eaf"/>
+				<reportElement x="474" y="40" width="107" height="69" uuid="8a4c8272-ab80-4aeb-8078-aee09c6d2eaf"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -166,20 +157,10 @@ Operation Voltage [kV] A.C
 ]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="570" y="37" width="68" height="71" uuid="c09d2e43-4bfd-449a-8ca3-9ca1ff013775"/>
+				<reportElement x="647" y="37" width="81" height="71" uuid="e51a89b5-1905-4471-82c1-53a0373ce1ab"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="572" y="39" width="68" height="73" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Temperatura/Temperature °C]]></text>
-			</staticText>
-			<rectangle>
-				<reportElement x="638" y="37" width="91" height="71" uuid="e51a89b5-1905-4471-82c1-53a0373ce1ab"/>
-			</rectangle>
-			<staticText>
-				<reportElement x="641" y="40" width="78" height="71" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
+				<reportElement x="648" y="40" width="78" height="71" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -213,6 +194,25 @@ Operation Voltage [kV] A.C
 				<text><![CDATA[Tensión de
 Ensayo [kV]  A.C
 Test voltage [kV] A.C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="364" y="41" width="112" height="66" uuid="76d0db25-1bbb-4ada-af42-31786af0ab2c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]
+
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="580" y="38" width="68" height="71" uuid="c09d2e43-4bfd-449a-8ca3-9ca1ff013775"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="580" y="35" width="68" height="73" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Temperatura/Temperature °C]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
@@ -250,7 +250,7 @@ Test voltage [kV] A.C]]></text>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Guantes Dielectricas]]></text>
+				<text><![CDATA[Guantes Dielectrico]]></text>
 			</staticText>
 			<textField>
 				<reportElement mode="Opaque" x="183" y="2" width="99" height="24" backcolor="#CCCCCC" uuid="6241139a-fd83-492a-b7db-474d2b87f163"/>
@@ -282,7 +282,9 @@ Test voltage [kV] A.C]]></text>
 			</textField>
 			<textField>
 				<reportElement mode="Opaque" x="572" y="2" width="66" height="23" backcolor="#CCCCCC" uuid="279d85a1-3e79-4336-9e37-364ab2a4d13e"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{TEMPERATURA}]]></textFieldExpression>
 			</textField>
 			<textField>

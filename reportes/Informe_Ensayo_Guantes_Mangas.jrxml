@@ -302,17 +302,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="0" y="0" width="880" height="50" uuid="309f35b6-4dfa-4e9d-b4ad-69aed7f83680"/>
-				<subreportParameter name="ncotic">
-					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
-				</subreportParameter>
-				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_subreport3.jasper"]]></subreportExpression>
-			</subreport>
-		</band>
-		<band height="51">
-			<subreport>
-				<reportElement x="1" y="0" width="879" height="50" uuid="f3dabfb7-0d6a-40df-b202-37ca2f12fcbe"/>
+				<reportElement x="0" y="0" width="879" height="50" uuid="f3dabfb7-0d6a-40df-b202-37ca2f12fcbe"/>
 				<subreportParameter name="observ">
 					<subreportParameterExpression><![CDATA[$P{observ}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -323,6 +313,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_OBS_FINAL.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
+		<band height="51"/>
 	</detail>
 	<pageFooter>
 		<band height="285">
