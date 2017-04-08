@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="900" pageHeight="900" columnWidth="880" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="293"/>
+	<property name="ireport.y" value="24"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -129,7 +129,7 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="168" width="160" height="20" uuid="4523cd18-4611-4bfc-8a60-d8187036335b"/>
+				<reportElement x="1" y="168" width="223" height="20" uuid="4523cd18-4611-4bfc-8a60-d8187036335b"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -325,18 +325,18 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="67">
+		<band height="285">
 			<textField>
-				<reportElement x="3" y="28" width="80" height="20" uuid="3ec5d3ee-63ad-48e2-9cc6-eda5b1b6cdd9"/>
+				<reportElement x="24" y="245" width="80" height="20" uuid="3ec5d3ee-63ad-48e2-9cc6-eda5b1b6cdd9"/>
 				<textElement textAlignment="Right"/>
 				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="83" y="28" width="40" height="20" uuid="8b25c5ba-5cb2-4e6f-b78c-cd34d87c9a97"/>
+				<reportElement x="104" y="245" width="40" height="20" uuid="8b25c5ba-5cb2-4e6f-b78c-cd34d87c9a97"/>
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="724" y="27" width="100" height="40" uuid="4c78541a-35d9-4516-9e81-76fdfadc0aca"/>
+				<reportElement x="724" y="245" width="100" height="40" uuid="4c78541a-35d9-4516-9e81-76fdfadc0aca"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
@@ -345,9 +345,88 @@ VER 0
 FECHA: 2010-07-19]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="724" y="7" width="100" height="20" uuid="d5c0c5c3-42a8-436b-8769-9a5dd1ff8379"/>
+				<reportElement x="724" y="225" width="100" height="20" uuid="d5c0c5c3-42a8-436b-8769-9a5dd1ff8379"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{NORMA_INFORME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="541" y="10" width="200" height="20" uuid="f9c4f30a-461c-4ae5-8981-e5f09c4fb149"/>
+				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="68" y="76" width="68" height="20" uuid="dd1258cd-15fd-4680-b85e-2108772b3474"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="10" width="200" height="20" uuid="a82bc4a2-3bd3-46df-9c7e-9416105ba0cd"/>
+				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="96" width="158" height="20" uuid="cf2ba648-949a-4b81-8fa8-ea2ddab4607e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[LABORATORIO DIELECTRICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="10" width="151" height="20" uuid="1b8d0fd2-ae95-4907-9db2-f1522d4bea9b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Revisado por/Cheked By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="39" width="153" height="20" uuid="4f0ab0aa-3fe1-4207-9088-f99f98cb10ea"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jefe de Laboratorio/lab Chief]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="76" width="43" height="20" uuid="9556a4ce-5f59-4598-a490-479d5f9054e7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="116" width="158" height="20" uuid="d244c242-1264-4d43-9fdc-37a9b870fec3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JLB Y CIA LTADA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="10" width="160" height="20" uuid="c1889054-6181-4c45-94ab-ac91ceeaf41a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Elaborado por/Made By]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="178" y="39" width="200" height="20" uuid="ab7706ef-a694-4ef9-be3e-a3e54d5badff"/>
+				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="384" y="39" width="157" height="20" uuid="bd534aeb-2191-4da0-a886-c13dec3aaa18"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laboratorista/Lab Assistant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="136" width="230" height="64" uuid="6648b6c6-5e80-4ca3-a917-09cce8b64afe"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CALLE 42 # 44-51 – Barranquilla Colombia.
+TEL: 3404892 - 3515740
+www.ladee.co
+cliente@ladee.co]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="544" y="39" width="200" height="20" uuid="7e72475d-8f8c-4edd-b602-ba8a1bf9aedc"/>
+				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageFooter>
