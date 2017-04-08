@@ -217,7 +217,7 @@ Test voltage [kV] A.C]]></text>
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="271" splitType="Stretch">
+		<band height="26" splitType="Stretch">
 			<rectangle>
 				<reportElement x="89" y="1" width="53" height="25" uuid="44ed1bbe-0905-42c5-a7a2-8d64da422630"/>
 			</rectangle>
