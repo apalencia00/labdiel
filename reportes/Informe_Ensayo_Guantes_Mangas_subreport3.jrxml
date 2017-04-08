@@ -14,34 +14,34 @@
 		<band height="30" splitType="Stretch"/>
 	</title>
 	<detail>
-		<band height="280" splitType="Stretch">
+		<band height="190" splitType="Stretch">
 			<staticText>
-				<reportElement x="34" y="156" width="43" height="20" uuid="81693de5-b5f3-424d-9962-ca0829d06d9d"/>
+				<reportElement x="15" y="66" width="43" height="20" uuid="81693de5-b5f3-424d-9962-ca0829d06d9d"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Nombre/]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="77" y="156" width="68" height="20" uuid="2d8b58ea-678d-4fca-a188-4ba92dd1d797"/>
+				<reportElement x="58" y="66" width="68" height="20" uuid="2d8b58ea-678d-4fca-a188-4ba92dd1d797"/>
 				<text><![CDATA[Name]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="34" y="176" width="158" height="20" uuid="fb470ed1-084c-4b83-ab49-0590977bf427"/>
+				<reportElement x="15" y="86" width="158" height="20" uuid="fb470ed1-084c-4b83-ab49-0590977bf427"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[LABORATORIO DIELECTRICO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="34" y="196" width="158" height="20" uuid="e24ec919-0e37-4e72-8170-8dae1554e579"/>
+				<reportElement x="15" y="106" width="158" height="20" uuid="e24ec919-0e37-4e72-8170-8dae1554e579"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[JLB Y CIA LTADA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="34" y="216" width="230" height="64" uuid="e6a0ad55-94f1-4ad2-9c99-f3628875868c"/>
+				<reportElement x="15" y="126" width="230" height="64" uuid="e6a0ad55-94f1-4ad2-9c99-f3628875868c"/>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
@@ -51,7 +51,7 @@ www.jorgebedoya.com
 pruebaselect@Jjorgebedoya.com]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="29" width="153" height="20" uuid="f1406132-f19b-42c1-82fc-283be281e533"/>
+				<reportElement x="17" y="29" width="153" height="20" uuid="f1406132-f19b-42c1-82fc-283be281e533"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -65,7 +65,7 @@ pruebaselect@Jjorgebedoya.com]]></text>
 				<text><![CDATA[Elaborado por/Made By]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="0" width="151" height="20" uuid="1ef296cd-3a44-4256-8347-1e282ee3ebfc"/>
+				<reportElement x="17" y="0" width="151" height="20" uuid="1ef296cd-3a44-4256-8347-1e282ee3ebfc"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -79,11 +79,11 @@ pruebaselect@Jjorgebedoya.com]]></text>
 				<text><![CDATA[Laboratorista/Lab Assistant]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="153" y="0" width="200" height="20" uuid="3acf9ca7-f825-42df-9710-fbdc2a885119"/>
+				<reportElement x="170" y="0" width="200" height="20" uuid="3acf9ca7-f825-42df-9710-fbdc2a885119"/>
 				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="151" y="29" width="200" height="20" uuid="d0669b70-dfd1-4336-b5a5-deae25326ef4"/>
+				<reportElement x="168" y="29" width="200" height="20" uuid="d0669b70-dfd1-4336-b5a5-deae25326ef4"/>
 				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
 			</textField>
 			<textField>

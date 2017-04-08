@@ -87,7 +87,7 @@
 	<pageHeader>
 		<band height="136">
 			<staticText>
-				<reportElement x="730" y="63" width="70" height="71" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
+				<reportElement x="730" y="63" width="71" height="71" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -101,7 +101,7 @@
 				<text><![CDATA[Test Date/Fecha Ensayo]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="652" y="63" width="78" height="71" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
+				<reportElement x="651" y="64" width="78" height="71" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -184,74 +184,105 @@ Internal code equipment]]></text>
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="35" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="89" height="25" uuid="6ea215dd-9004-46f0-abb0-74f2c98fffb3"/>
+			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="147" y="0" width="37" height="20" backcolor="#CCCCCC" uuid="039bde49-8725-4b91-ae94-971cddae2202"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{OBS_CLASE}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="284" y="0" width="83" height="20" backcolor="#CCCCCC" uuid="148d20b0-6e0c-4f7c-b1ac-4d5bc836b332"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{OBS_TENSION}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="367" y="0" width="99" height="20" backcolor="#CCCCCC" uuid="0d89694c-e632-433d-9c32-0b65f68f6a30"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="588" y="0" width="62" height="20" backcolor="#CCCCCC" uuid="eb194bbf-8d3a-413d-9df2-82fb708ed24e"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{TEMPERATURA}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="653" y="0" width="78" height="20" backcolor="#CCCCCC" uuid="df9577df-3850-4872-a7cb-7729d179d519"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{HUMEDAD}]]></textFieldExpression>
-			</textField>
-			<textField pattern="YYYY/MM/dd">
-				<reportElement mode="Opaque" x="790" y="0" width="70" height="20" backcolor="#CCCCCC" uuid="161d1783-4f4c-4f8a-a8f9-d30a9334af2c"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="0" y="0" width="89" height="20" backcolor="#CCCCCC" uuid="7ed7a9dc-4a91-478d-819a-025699c03d14"/>
-				<textElement textAlignment="Center"/>
+				<reportElement mode="Opaque" x="1" y="2" width="87" height="24" backcolor="#CCCCCC" uuid="bac45087-7877-40b0-a021-3dfb1505b977"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
 			</textField>
+			<rectangle>
+				<reportElement x="89" y="1" width="58" height="25" uuid="44ed1bbe-0905-42c5-a7a2-8d64da422630"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="147" y="1" width="37" height="25" uuid="52609f54-d0c0-41d3-8407-17aa3b223d3e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="184" y="1" width="100" height="25" uuid="4db9caf9-6263-4894-a478-7b2ddc8b157a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="284" y="1" width="83" height="25" uuid="ae58cdee-2a6f-4e9a-97ed-a0f2381321a0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="367" y="1" width="100" height="25" uuid="eb9746eb-e67f-485d-ba1e-3cd3e371e950"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="466" y="1" width="122" height="25" uuid="9d0fdacb-4626-4618-a44f-7ded29b013c3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="588" y="1" width="62" height="25" uuid="566a7e4b-7ba1-430a-be62-248b0dd7247f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="651" y="1" width="78" height="25" uuid="31b02bf8-ee6b-4f18-ad26-6cd6116ca2a4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="729" y="1" width="72" height="25" uuid="58ab703e-c983-4a10-8c19-fd5deb525a8d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="801" y="1" width="59" height="25" uuid="1df20ade-2dde-4f47-a75e-da3bc36a9868"/>
+			</rectangle>
 			<staticText>
-				<reportElement mode="Opaque" x="89" y="0" width="58" height="20" backcolor="#CCCCCC" uuid="843de7a8-2f69-45a2-907a-7383a33ace30"/>
-				<textElement textAlignment="Center">
+				<reportElement mode="Opaque" x="89" y="2" width="57" height="24" backcolor="#CCCCCC" uuid="843de7a8-2f69-45a2-907a-7383a33ace30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Guantes Dielectricas]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="184" y="0" width="100" height="20" backcolor="#CCCCCC" uuid="6241139a-fd83-492a-b7db-474d2b87f163"/>
-				<textElement textAlignment="Center">
+				<reportElement mode="Opaque" x="185" y="2" width="99" height="24" backcolor="#CCCCCC" uuid="6241139a-fd83-492a-b7db-474d2b87f163"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENSION_ENSAYO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="466" y="0" width="122" height="20" backcolor="#CCCCCC" uuid="33cce7f6-95cd-4038-bd55-9f0888f2c1e5"/>
-				<textElement textAlignment="Center">
+				<reportElement mode="Opaque" x="148" y="2" width="35" height="24" backcolor="#CCCCCC" uuid="039bde49-8725-4b91-ae94-971cddae2202"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OBS_CLASE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="284" y="2" width="84" height="24" backcolor="#CCCCCC" uuid="148d20b0-6e0c-4f7c-b1ac-4d5bc836b332"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OBS_TENSION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="366" y="2" width="100" height="24" backcolor="#CCCCCC" uuid="0d89694c-e632-433d-9c32-0b65f68f6a30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="467" y="2" width="121" height="24" backcolor="#CCCCCC" uuid="f8369642-2180-4f72-b651-ad689473de40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA_MEDIDA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="588" y="3" width="62" height="22" backcolor="#CCCCCC" uuid="279d85a1-3e79-4336-9e37-364ab2a4d13e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TEMPERATURA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="650" y="2" width="78" height="25" backcolor="#CCCCCC" uuid="9d4a6d87-8b33-4016-a510-bb57c83c1553"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HUMEDAD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="802" y="1" width="58" height="25" backcolor="#CCCCCC" uuid="8ac2dcf1-bacf-4b1e-a8f4-b9f19aac3d9b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
