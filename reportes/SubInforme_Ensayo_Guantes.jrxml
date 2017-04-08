@@ -101,7 +101,7 @@
 				<text><![CDATA[Test Date/Fecha Ensayo]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="642" y="61" width="78" height="73" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
+				<reportElement x="642" y="63" width="78" height="71" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>

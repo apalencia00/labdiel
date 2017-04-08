@@ -16,34 +16,6 @@
 	<detail>
 		<band height="280" splitType="Stretch">
 			<staticText>
-				<reportElement x="22" y="0" width="151" height="20" uuid="89ff478f-b611-4934-b868-098d8a9b6960"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Revisado por/Cheked By]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="20" y="65" width="153" height="20" uuid="9581e7f5-0328-4f80-8efb-bcf0c847f1f6"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Jefe de Laboratorio/lab Chief]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="394" y="0" width="160" height="20" uuid="9626729b-400b-421d-bce3-9611bb387bfb"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Elaborado por/Made By]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="394" y="65" width="157" height="20" uuid="2af9dc86-7f80-4498-9e19-07a357592de1"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Laboratorista/Lab Assistant]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="34" y="156" width="43" height="20" uuid="81693de5-b5f3-424d-9962-ca0829d06d9d"/>
 				<textElement>
 					<font isBold="true"/>
@@ -78,26 +50,6 @@ TEL: 3404892 - 3515740
 www.jorgebedoya.com
 pruebaselect@Jjorgebedoya.com]]></text>
 			</staticText>
-			<textField>
-				<reportElement x="173" y="0" width="221" height="20" uuid="e44fc798-a7d6-4131-b091-7d5a79b29c95"/>
-				<textElement textAlignment="Justified"/>
-				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="554" y="0" width="176" height="20" uuid="be33b8dc-c030-4e4f-886b-4634c1513446"/>
-				<textElement textAlignment="Justified"/>
-				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="173" y="65" width="221" height="20" uuid="fe4063d4-fea6-4ae9-bfe5-d0c6079a00ea"/>
-				<textElement textAlignment="Justified"/>
-				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="551" y="65" width="176" height="20" uuid="637f13dd-4962-455c-bfda-a52900121c38"/>
-				<textElement textAlignment="Justified"/>
-				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
-			</textField>
 		</band>
 	</detail>
 </jasperReport>

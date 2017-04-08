@@ -132,4 +132,71 @@ Test Result
 			</textField>
 		</band>
 	</detail>
+	<pageFooter>
+		<band height="210">
+			<staticText>
+				<reportElement x="1" y="39" width="153" height="20" uuid="f1406132-f19b-42c1-82fc-283be281e533"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jefe de Laboratorio/lab Chief]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="39" width="157" height="20" uuid="18259548-9201-41d8-9eb3-14009043b2a1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laboratorista/Lab Assistant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="10" width="151" height="20" uuid="1ef296cd-3a44-4256-8347-1e282ee3ebfc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Revisado por/Cheked By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="10" width="160" height="20" uuid="7101314d-996e-4397-932e-d297cd297bc4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Elaborado por/Made By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="126" width="158" height="20" uuid="1956befb-ec64-438e-9ad9-b808079f3941"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JLB Y CIA LTADA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="106" width="158" height="20" uuid="99d7833c-b176-43b4-851c-d2c046b9638b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[LABORATORIO DIELECTRICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="86" width="43" height="20" uuid="a75767ca-4f30-487d-83e9-3e7919fc442e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="146" width="230" height="64" uuid="cbba792b-4e8c-4d38-a318-e594d60ab248"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CALLE 42 # 44-51 – Barranquilla Colombia.
+TEL: 3404892 - 3515740
+www.jorgebedoya.com
+pruebaselect@Jjorgebedoya.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="86" width="68" height="20" uuid="8030561e-0c10-41a6-aa78-2ab3fa5f0c97"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
 </jasperReport>
