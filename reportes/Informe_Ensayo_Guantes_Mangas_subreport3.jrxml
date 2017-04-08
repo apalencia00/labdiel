@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas_subreport3" language="groovy" pageWidth="730" pageHeight="802" columnWidth="730" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="182a4d5e-01fd-4d45-943d-d74f302d6001">
-	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
@@ -47,8 +47,8 @@
 				</textElement>
 				<text><![CDATA[CALLE 42 # 44-51 – Barranquilla Colombia.
 TEL: 3404892 - 3515740
-www.jorgebedoya.com
-pruebaselect@Jjorgebedoya.com]]></text>
+www.ladee.co
+cliente@ladee.co]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="17" y="29" width="153" height="20" uuid="f1406132-f19b-42c1-82fc-283be281e533"/>
