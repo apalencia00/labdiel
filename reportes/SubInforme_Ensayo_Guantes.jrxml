@@ -81,6 +81,9 @@
 	<field name="USERNAME" class="java.lang.String"/>
 	<field name="cod_seriales" class="java.lang.String"/>
 	<field name="CORRIENTE_FUGA_MEDIDA" class="java.lang.Double"/>
+	<title>
+		<band height="65"/>
+	</title>
 	<pageHeader>
 		<band height="112">
 			<staticText>
