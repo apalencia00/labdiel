@@ -101,7 +101,7 @@
 				<text><![CDATA[Test Date/Fecha Ensayo]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="651" y="63" width="78" height="71" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
+				<reportElement x="652" y="63" width="78" height="71" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -214,7 +214,7 @@ Internal code equipment]]></text>
 				<textFieldExpression><![CDATA[$F{TEMPERATURA}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="652" y="0" width="78" height="20" backcolor="#CCCCCC" uuid="df9577df-3850-4872-a7cb-7729d179d519"/>
+				<reportElement mode="Opaque" x="653" y="0" width="78" height="20" backcolor="#CCCCCC" uuid="df9577df-3850-4872-a7cb-7729d179d519"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>

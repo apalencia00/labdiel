@@ -50,6 +50,50 @@ TEL: 3404892 - 3515740
 www.jorgebedoya.com
 pruebaselect@Jjorgebedoya.com]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="0" y="29" width="153" height="20" uuid="f1406132-f19b-42c1-82fc-283be281e533"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jefe de Laboratorio/lab Chief]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="0" width="160" height="20" uuid="7101314d-996e-4397-932e-d297cd297bc4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Elaborado por/Made By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="151" height="20" uuid="1ef296cd-3a44-4256-8347-1e282ee3ebfc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Revisado por/Cheked By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="29" width="157" height="20" uuid="18259548-9201-41d8-9eb3-14009043b2a1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laboratorista/Lab Assistant]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="153" y="0" width="200" height="20" uuid="3acf9ca7-f825-42df-9710-fbdc2a885119"/>
+				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="151" y="29" width="200" height="20" uuid="d0669b70-dfd1-4336-b5a5-deae25326ef4"/>
+				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="531" y="0" width="200" height="20" uuid="5078e180-cb28-494d-99dc-8825d3e7acaf"/>
+				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="534" y="29" width="200" height="20" uuid="fee781cf-531b-43a5-9d8f-d64565143a1f"/>
+				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
