@@ -26,41 +26,37 @@
 	<detail>
 		<band height="468" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="0" width="100" height="20" uuid="36975c68-1620-4fbe-8b1e-27d3480c9ce6"/>
+				<reportElement x="16" y="0" width="100" height="20" uuid="36975c68-1620-4fbe-8b1e-27d3480c9ce6"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Observaciones/]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="81" y="0" width="100" height="20" uuid="6978a0b2-1006-4475-b717-77a4d5be5f23"/>
+				<reportElement x="97" y="0" width="100" height="20" uuid="6978a0b2-1006-4475-b717-77a4d5be5f23"/>
 				<textElement>
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[Remarks]]></text>
 			</staticText>
-			<textField>
-				<reportElement x="0" y="20" width="730" height="149" uuid="36d808f2-773f-4bca-882f-839b696d6ada"/>
-				<textFieldExpression><![CDATA[$P{observ}]]></textFieldExpression>
-			</textField>
 			<staticText>
-				<reportElement x="2" y="169" width="728" height="35" uuid="8015048a-45ef-48cf-8ae0-d2de17061f68"/>
-				<textElement>
+				<reportElement x="18" y="160" width="712" height="46" uuid="8015048a-45ef-48cf-8ae0-d2de17061f68"/>
+				<textElement textAlignment="Justified">
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[Los resultados contenidos en este se refieren al momento y condiciones en que se realizaron las mediciones. El laboratorio Dieléctrico de JLB CIA Ltda. no se responsabiliza de los perjuicios que puedan derivarse del uso inadecuado de los equipos o elementos sometidos a ensayo.
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="206" width="730" height="20" uuid="8532271c-8f27-4694-94c4-4eb0b79f7756"/>
-				<textElement>
+				<reportElement x="16" y="206" width="714" height="20" uuid="8532271c-8f27-4694-94c4-4eb0b79f7756"/>
+				<textElement textAlignment="Justified">
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[Este informe solo es aplicable para las muestras que se relacionan en el, las cuales fueron sometidas a ensayo.
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="226" width="730" height="34" uuid="fd3ae822-c47a-4b8f-8923-4d9289b64a39"/>
+				<reportElement x="16" y="226" width="714" height="34" uuid="fd3ae822-c47a-4b8f-8923-4d9289b64a39"/>
 				<textElement>
 					<font size="12"/>
 				</textElement>
@@ -68,7 +64,7 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="260" width="730" height="31" uuid="fc67019f-f0e0-4b5f-a41f-3a194e455ae2"/>
+				<reportElement x="16" y="260" width="714" height="31" uuid="fc67019f-f0e0-4b5f-a41f-3a194e455ae2"/>
 				<textElement>
 					<font size="12"/>
 				</textElement>
@@ -76,7 +72,7 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="292" width="728" height="20" uuid="5f72d4aa-5197-4421-95e1-9db864700ac5"/>
+				<reportElement x="18" y="292" width="712" height="20" uuid="5f72d4aa-5197-4421-95e1-9db864700ac5"/>
 				<textElement>
 					<font size="12"/>
 				</textElement>
@@ -84,28 +80,28 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="324" width="141" height="20" uuid="80bb496e-dbab-4cd2-9fc5-b0ff3140810e"/>
+				<reportElement x="17" y="324" width="141" height="20" uuid="80bb496e-dbab-4cd2-9fc5-b0ff3140810e"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Firma de Recibido]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="350" width="141" height="20" uuid="7ef151d4-e08b-44fc-ae67-454e7575fc4d"/>
+				<reportElement x="18" y="350" width="141" height="20" uuid="7ef151d4-e08b-44fc-ae67-454e7575fc4d"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Nombre]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="377" width="141" height="20" uuid="12ace00f-3afa-4894-a45a-839b8336cd90"/>
+				<reportElement x="18" y="377" width="141" height="20" uuid="12ace00f-3afa-4894-a45a-839b8336cd90"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Documento]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="403" width="141" height="20" uuid="2d7e9005-33be-4e5c-a808-95e7fcbee89b"/>
+				<reportElement x="18" y="403" width="141" height="20" uuid="2d7e9005-33be-4e5c-a808-95e7fcbee89b"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
