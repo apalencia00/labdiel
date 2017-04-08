@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="900" pageHeight="900" columnWidth="880" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="24"/>
+	<property name="ireport.y" value="411"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -349,18 +349,10 @@ FECHA: 2010-07-19]]></text>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{NORMA_INFORME}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="541" y="10" width="200" height="20" uuid="f9c4f30a-461c-4ae5-8981-e5f09c4fb149"/>
-				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement x="68" y="76" width="68" height="20" uuid="dd1258cd-15fd-4680-b85e-2108772b3474"/>
 				<text><![CDATA[Name]]></text>
 			</staticText>
-			<textField>
-				<reportElement x="180" y="10" width="200" height="20" uuid="a82bc4a2-3bd3-46df-9c7e-9416105ba0cd"/>
-				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement x="25" y="96" width="158" height="20" uuid="cf2ba648-949a-4b81-8fa8-ea2ddab4607e"/>
 				<textElement>
@@ -403,10 +395,6 @@ FECHA: 2010-07-19]]></text>
 				</textElement>
 				<text><![CDATA[Elaborado por/Made By]]></text>
 			</staticText>
-			<textField>
-				<reportElement x="178" y="39" width="200" height="20" uuid="ab7706ef-a694-4ef9-be3e-a3e54d5badff"/>
-				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement x="384" y="39" width="157" height="20" uuid="bd534aeb-2191-4da0-a886-c13dec3aaa18"/>
 				<textElement>
@@ -424,10 +412,6 @@ TEL: 3404892 - 3515740
 www.ladee.co
 cliente@ladee.co]]></text>
 			</staticText>
-			<textField>
-				<reportElement x="544" y="39" width="200" height="20" uuid="7e72475d-8f8c-4edd-b602-ba8a1bf9aedc"/>
-				<textFieldExpression><![CDATA[$F{empleado}]]></textFieldExpression>
-			</textField>
 		</band>
 	</pageFooter>
 </jasperReport>
