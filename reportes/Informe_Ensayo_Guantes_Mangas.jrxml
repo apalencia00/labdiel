@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="900" pageHeight="900" columnWidth="880" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="411"/>
+	<property name="ireport.y" value="240"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -226,7 +226,7 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Transparent" x="699" y="0" width="128" height="20" backcolor="#CCCCCC" uuid="3184dea7-c8d4-4329-9082-e809f18454ac"/>
+				<reportElement mode="Transparent" x="697" y="1" width="128" height="20" backcolor="#CCCCCC" uuid="3184dea7-c8d4-4329-9082-e809f18454ac"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -262,7 +262,13 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Direccion de ejecucion de ensayos/Test Address]]></text>
 			</staticText>
 		</band>
-		<band height="50"/>
+		<band height="50">
+			<subreport>
+				<reportElement x="1" y="0" width="878" height="50" uuid="2ef997a6-46fc-4d30-b240-4fb9db9bb1b9"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Guantes_Mangas_equipo_inspeccion.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
 		<band height="150">
 			<staticText>
 				<reportElement x="12" y="20" width="327" height="20" uuid="f53e39b7-8469-4355-b688-657b8b95a855"/>

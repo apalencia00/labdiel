@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Puestatierra" language="groovy" pageWidth="864" pageHeight="842" columnWidth="824" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fd1de50d-f422-45d7-895c-232b37433238">
-	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="153"/>
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -38,16 +38,19 @@
 	<field name="RESISTENCIA" class="java.lang.Double"/>
 	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
 	<title>
-		<band height="62" splitType="Stretch">
+		<band height="22" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="128">
 			<staticText>
-				<reportElement x="0" y="0" width="84" height="62" uuid="20db7c71-241b-47d8-80d0-b20d6f497308"/>
+				<reportElement x="0" y="66" width="84" height="62" uuid="20db7c71-241b-47d8-80d0-b20d6f497308"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Código asignado por el cliente/ Code assigned by client]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="84" y="0" width="81" height="62" uuid="18450d8c-5316-4fa2-801f-150479ead590"/>
+				<reportElement x="84" y="66" width="81" height="62" uuid="18450d8c-5316-4fa2-801f-150479ead590"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -56,7 +59,7 @@ Del equipo/
 Internal code equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="165" y="0" width="43" height="62" uuid="5ec89ebb-6b01-4576-aa29-dadf4ed8ea6f"/>
+				<reportElement x="165" y="66" width="43" height="62" uuid="5ec89ebb-6b01-4576-aa29-dadf4ed8ea6f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -65,49 +68,49 @@ Manufacturer
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="208" y="0" width="36" height="62" uuid="715d4c89-6128-42e6-945c-0e70001195ba"/>
+				<reportElement x="208" y="66" width="36" height="62" uuid="715d4c89-6128-42e6-945c-0e70001195ba"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Tramo No.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="244" y="0" width="55" height="62" uuid="54e870ab-e0cd-4461-a166-f9661d8cf55d"/>
+				<reportElement x="244" y="66" width="55" height="62" uuid="54e870ab-e0cd-4461-a166-f9661d8cf55d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Sección del conductor en mm2]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="299" y="0" width="54" height="62" uuid="813a9afc-d786-49d6-b927-d99d1ee0e25e"/>
+				<reportElement x="299" y="66" width="54" height="62" uuid="813a9afc-d786-49d6-b927-d99d1ee0e25e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Calibre del cable/ AWG]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="353" y="0" width="62" height="62" uuid="f5b427e0-8d90-4367-961a-6145ba663a68"/>
+				<reportElement x="353" y="66" width="62" height="62" uuid="f5b427e0-8d90-4367-961a-6145ba663a68"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Longitud del tramo (m)/ Length]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="415" y="0" width="78" height="62" uuid="7459a583-99f4-44c7-8504-94626a613e2a"/>
+				<reportElement x="415" y="66" width="78" height="62" uuid="7459a583-99f4-44c7-8504-94626a613e2a"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Resistividad nominal del cable (mΩ/m)  /Cooper Cable Resistence]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="493" y="0" width="63" height="62" uuid="0ddb6570-b443-45c8-9b03-03aad9316e69"/>
+				<reportElement x="493" y="66" width="63" height="62" uuid="0ddb6570-b443-45c8-9b03-03aad9316e69"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Inspección física external inspection]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="556" y="0" width="67" height="62" uuid="ad63a854-c641-4551-bb10-bd9d09e44caf"/>
+				<reportElement x="556" y="66" width="67" height="62" uuid="ad63a854-c641-4551-bb10-bd9d09e44caf"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -115,32 +118,32 @@ Manufacturer
  Resistance measurement (mΩ)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="757" y="0" width="67" height="62" uuid="6ee1a53d-6264-422b-9e2f-e2ec23f7bd9e"/>
+				<reportElement x="757" y="66" width="67" height="62" uuid="6ee1a53d-6264-422b-9e2f-e2ec23f7bd9e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Resistencia máxima permisible por tramo incluidos los clamps  (mΩ)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="623" y="0" width="67" height="62" uuid="e0e398db-6fd5-449e-a21a-0296b6c0439c"/>
+				<reportElement x="623" y="66" width="67" height="62" uuid="e0e398db-6fd5-449e-a21a-0296b6c0439c"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature (°C)			]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="690" y="0" width="67" height="62" uuid="a7d9e012-9eb3-4ddd-9935-2f6499ec54f4"/>
+				<reportElement x="690" y="66" width="67" height="62" uuid="a7d9e012-9eb3-4ddd-9935-2f6499ec54f4"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Humedad Relativa(%HR)/Relative Humidity(%RH)									]]></text>
 			</staticText>
 		</band>
-	</title>
+	</pageHeader>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="30" splitType="Stretch">
 			<textField>
-				<reportElement mode="Opaque" x="0" y="0" width="84" height="20" backcolor="#CCCCCC" uuid="60c45cbf-b0c3-4854-9ef0-172a758fbcf0"/>
+				<reportElement mode="Opaque" x="84" y="0" width="81" height="20" backcolor="#CCCCCC" uuid="60c45cbf-b0c3-4854-9ef0-172a758fbcf0"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -182,21 +185,21 @@ Manufacturer
 				<textFieldExpression><![CDATA[$F{RESISTENCIA}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="757" y="0" width="67" height="20" uuid="647eede5-b979-4daf-91d5-c6b351f0424a"/>
+				<reportElement mode="Opaque" x="757" y="0" width="67" height="20" backcolor="#CCCCCC" uuid="647eede5-b979-4daf-91d5-c6b351f0424a"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[0,35]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="690" y="0" width="67" height="20" uuid="a2be89a6-48e5-47b7-b9ba-b770e23732cc"/>
+				<reportElement mode="Opaque" x="690" y="0" width="67" height="20" backcolor="#CCCCCC" uuid="a2be89a6-48e5-47b7-b9ba-b770e23732cc"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{HR_AMBIENTE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="623" y="0" width="67" height="20" uuid="214f7341-10d6-48a4-98da-093419f0be9d"/>
+				<reportElement mode="Opaque" x="623" y="0" width="67" height="20" backcolor="#CCCCCC" uuid="214f7341-10d6-48a4-98da-093419f0be9d"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>

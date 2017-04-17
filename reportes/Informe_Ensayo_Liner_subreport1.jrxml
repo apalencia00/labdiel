@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Liner_subreport1" language="groovy" pageWidth="648" pageHeight="802" columnWidth="648" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fe58c40f-a491-4585-aae9-a29a30dce612">
-	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
@@ -58,14 +58,14 @@
 				<text><![CDATA[Equipo/Equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="238" y="0" width="78" height="72" uuid="270864bb-cf9d-4b77-9f1f-b451856800cd"/>
+				<reportElement x="160" y="0" width="78" height="72" uuid="270864bb-cf9d-4b77-9f1f-b451856800cd"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Tension de Ensayo [KV] A.C Test voltage [KV] A.C]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="316" y="0" width="118" height="72" uuid="3d82737b-844a-4ef7-baca-859a3799e0f1"/>
+				<reportElement x="238" y="0" width="118" height="72" uuid="3d82737b-844a-4ef7-baca-859a3799e0f1"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -75,7 +75,7 @@ obtenida en la prueba
   A.C Proof-Test Current, max  Obtainet, [µA]]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="580" y="0" width="68" height="72" uuid="999380a1-589b-4df7-aca2-330c10dfe939"/>
+				<reportElement x="502" y="0" width="78" height="72" uuid="999380a1-589b-4df7-aca2-330c10dfe939"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -83,14 +83,14 @@ obtenida en la prueba
 /Uncertainty]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="434" y="0" width="68" height="72" uuid="c6d0abed-c33c-495b-972a-e1f2933968a2"/>
+				<reportElement x="356" y="0" width="68" height="72" uuid="c6d0abed-c33c-495b-972a-e1f2933968a2"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature (°C)			]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="502" y="0" width="78" height="72" uuid="cc941bff-d960-4a27-80f0-1564dd9ff7d8"/>
+				<reportElement x="424" y="0" width="78" height="72" uuid="cc941bff-d960-4a27-80f0-1564dd9ff7d8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -115,26 +115,33 @@ obtenida en la prueba
 				<textFieldExpression><![CDATA[$F{TENSION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="426" y="0" width="78" height="20" backcolor="#CCCCCC" uuid="839cd435-fd30-4db7-9af3-70686bc740cf"/>
+				<reportElement mode="Opaque" x="424" y="0" width="78" height="20" backcolor="#CCCCCC" uuid="839cd435-fd30-4db7-9af3-70686bc740cf"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{HR}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="240" y="0" width="118" height="20" backcolor="#CCCCCC" uuid="464f0c3d-7c38-4c4b-880f-3638c6503639"/>
+				<reportElement mode="Opaque" x="240" y="0" width="116" height="20" backcolor="#CCCCCC" uuid="464f0c3d-7c38-4c4b-880f-3638c6503639"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FUGA}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="358" y="0" width="68" height="20" backcolor="#CCCCCC" uuid="2e1df251-bde9-4b4a-a938-2f895330ed02"/>
+				<reportElement mode="Opaque" x="356" y="0" width="68" height="20" backcolor="#CCCCCC" uuid="2e1df251-bde9-4b4a-a938-2f895330ed02"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TEMPERATURA}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="81" y="0" width="81" height="20" backcolor="#CCCCCC" uuid="1cdeef6f-e9a1-4148-8f7e-28c3c456ba8f"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Liners]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>

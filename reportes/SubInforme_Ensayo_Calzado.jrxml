@@ -159,7 +159,7 @@ Equipment]]></text>
 		</band>
 	</title>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="31" splitType="Stretch">
 			<textField>
 				<reportElement mode="Opaque" x="0" y="0" width="119" height="20" backcolor="#CCCCCC" uuid="0cca44de-8e70-4284-8179-5669a6a70059"/>
 				<textElement textAlignment="Center">
@@ -205,7 +205,7 @@ Equipment]]></text>
 			<staticText>
 				<reportElement mode="Opaque" x="119" y="0" width="81" height="20" backcolor="#CCCCCC" uuid="1e5186ec-a5b7-4016-92cf-c5731d53bb5d"/>
 				<textElement textAlignment="Center"/>
-				<text><![CDATA[Calzado]]></text>
+				<text><![CDATA[Calzado Dielectrico]]></text>
 			</staticText>
 			<textField>
 				<reportElement mode="Opaque" x="770" y="0" width="70" height="20" backcolor="#CCCCCC" uuid="4f1a97c3-0e5a-424b-babe-7a56e07dda26"/>

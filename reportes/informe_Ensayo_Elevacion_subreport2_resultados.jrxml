@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="informe_Ensayo_Elevacion_subreport2_resultados" language="groovy" pageWidth="864" pageHeight="802" columnWidth="864" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c30b2133-b185-4359-bc14-3adb37bd6820">
-	<property name="ireport.zoom" value="1.0"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="informe_Ensayo_Elevacion_subreport2_resultados" language="groovy" pageWidth="900" pageHeight="802" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c30b2133-b185-4359-bc14-3adb37bd6820">
+	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
@@ -9,8 +9,7 @@
 	<queryString>
 		<![CDATA[SELECT dt.* , el."FK_SERIAL_EQUIPO"
   FROM labor."REGISTRO_ENSAYO_ELEVACION" el, labor."DTLE_INSPECCION_ELEVACION" dt WHERE el."FK_COTIZACION" = $P{ncotic}
-AND dt."FK_ID_ELEVACION" = el."ID_REGISTRO_ELEVACION"
-]]>
+AND dt."FK_ID_ELEVACION" = el."ID_REGISTRO_ELEVACION"]]>
 	</queryString>
 	<field name="DTL_ID_ELEVACION" class="java.lang.Integer"/>
 	<field name="BOOM" class="java.lang.Integer"/>
@@ -47,9 +46,12 @@ AND dt."FK_ID_ELEVACION" = el."ID_REGISTRO_ELEVACION"
 	<field name="OBS_FINAL" class="java.lang.String"/>
 	<field name="FK_SERIAL_EQUIPO" class="java.lang.Integer"/>
 	<title>
-		<band height="53" splitType="Stretch">
+		<band height="26" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="126">
 			<staticText>
-				<reportElement x="0" y="0" width="118" height="53" uuid="bf56a1cd-b2d7-41d8-8233-f7f197f15578"/>
+				<reportElement x="0" y="73" width="118" height="53" uuid="bf56a1cd-b2d7-41d8-8233-f7f197f15578"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código interno
 Del equipo/
@@ -58,20 +60,20 @@ Internal code equipment
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="118" y="0" width="85" height="53" uuid="5855a37a-9432-46d9-a548-7f0232514a19"/>
+				<reportElement x="118" y="73" width="85" height="53" uuid="5855a37a-9432-46d9-a548-7f0232514a19"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Equipo
 Equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="203" y="0" width="100" height="53" uuid="627d919b-1592-45e0-b597-829623863fd8"/>
+				<reportElement x="203" y="73" width="100" height="53" uuid="627d919b-1592-45e0-b597-829623863fd8"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Tensión de
 Ensayo [kV]  A.C
 Test voltage [kV] A.C]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="303" y="0" width="100" height="53" uuid="5209cd82-3efb-461b-a0b7-1de4e93409e7"/>
+				<reportElement x="303" y="73" width="100" height="53" uuid="5209cd82-3efb-461b-a0b7-1de4e93409e7"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Tensión de Diseño [kV]  A.C. 60 Hz
 Unit Range [kV] A.C 60 Hz
@@ -79,7 +81,7 @@ Unit Range [kV] A.C 60 Hz
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="403" y="0" width="100" height="53" uuid="00292bd8-9dd5-4c38-994e-f0e43214407f"/>
+				<reportElement x="403" y="73" width="100" height="53" uuid="00292bd8-9dd5-4c38-994e-f0e43214407f"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Corriente de fuga
 Máxima microamperios
@@ -88,7 +90,7 @@ Máxima microamperios
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="503" y="0" width="135" height="53" uuid="dbace8b5-70bc-4830-9c5d-b8f87ae86aea"/>
+				<reportElement x="503" y="73" width="135" height="53" uuid="dbace8b5-70bc-4830-9c5d-b8f87ae86aea"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Corriente de fuga
 obtenida en la prueba
@@ -96,25 +98,32 @@ obtenida en la prueba
   A.C ProofTest Current, max  Obtainet, [µA]]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="793" y="0" width="71" height="53" uuid="57e025d1-12f4-4c34-8899-240467593703"/>
+				<reportElement x="793" y="73" width="67" height="53" uuid="57e025d1-12f4-4c34-8899-240467593703"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Incertidumbre
 /Uncertainty]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="638" y="0" width="69" height="53" uuid="e4ffc7dc-49b6-41ce-be55-b818ca8065cf"/>
+				<reportElement x="638" y="73" width="69" height="53" uuid="e4ffc7dc-49b6-41ce-be55-b818ca8065cf"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Temperatura/Temperature (°C)
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="707" y="0" width="86" height="53" uuid="2a8da8bb-9afb-4a94-baed-a8b5261301b5"/>
+				<reportElement x="707" y="73" width="86" height="53" uuid="2a8da8bb-9afb-4a94-baed-a8b5261301b5"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Humedad Relativa(%HR)/Relative Humidity(%RH)
 ]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="0" y="28" width="181" height="20" uuid="1fe84747-ff27-47df-b522-54ebba2c16b7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+			</staticText>
 		</band>
-	</title>
+	</pageHeader>
 	<detail>
 		<band height="20" splitType="Stretch">
 			<textField>
@@ -166,6 +175,13 @@ obtenida en la prueba
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA_IN}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="118" y="0" width="85" height="20" uuid="da356442-51e8-4317-bf20-c03f6f5b6019"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Elevacion]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>

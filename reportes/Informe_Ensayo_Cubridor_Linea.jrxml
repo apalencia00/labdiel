@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Cubridor_Linea" language="groovy" pageWidth="900" pageHeight="842" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9a3a1144-eee5-4c0b-b712-235117d50ae2">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Cubridor_Linea" language="groovy" pageWidth="900" pageHeight="842" columnWidth="880" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9a3a1144-eee5-4c0b-b712-235117d50ae2">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="330"/>
+	<property name="ireport.y" value="471"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
 		<![CDATA[SELECT coti."ID_COTIZACION", SUBSTR(coti."NUM_COTIZACION",7,9) as lacoti , coti."FK_CLIENTE", coti."FK_USUARIO",
        coti."FK_EMPLEADO", coti."FECHA_REGISTRO", coti."ESTADO", coti."US_MODIFICA", coti."FECHA_MODIFICACION",
-       coti."FK_REVISION_ENSAYO_EQUIPO",c.*, pc."DESCRIPCION" as laciudad
-  FROM labor."COTIZACION" coti, labor."CLIENTE" c, labor."PARAM_CIUDAD" pc
+       coti."FK_REVISION_ENSAYO_EQUIPO",c.*, pc."DESCRIPCION" as laciudad,"NORMA_INFORME"
+  FROM labor."COTIZACION" coti, labor."CLIENTE" c, labor."PARAM_CIUDAD" pc, labor."REVISION_ENSAYO_EQUIPO" rev
 
-WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and pc."ID_COD_DIVIPO" = c."CIUDAD"]]>
+WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and pc."ID_COD_DIVIPO" = c."CIUDAD" AND "FK_REVISION_ENSAYO_EQUIPO" = "ID_REVISION_EQUIPO"]]>
 	</queryString>
 	<field name="ID_COTIZACION" class="java.lang.Integer"/>
 	<field name="lacoti" class="java.lang.String"/>
@@ -42,19 +42,34 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and 
 	<field name="DEPTO" class="java.lang.Integer"/>
 	<field name="USERNAME" class="java.lang.String"/>
 	<field name="laciudad" class="java.lang.String"/>
+	<field name="NORMA_INFORME" class="java.lang.String"/>
 	<title>
-		<band height="79" splitType="Stretch"/>
+		<band height="25" splitType="Stretch"/>
 	</title>
 	<pageHeader>
-		<band height="83" splitType="Stretch">
+		<band height="78" splitType="Stretch">
 			<image>
-				<reportElement x="729" y="13" width="119" height="70" uuid="0ef13aa1-a138-48b0-8cc7-8414c91a35d4"/>
-				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
-			</image>
-			<image>
-				<reportElement x="8" y="15" width="92" height="68" uuid="f934d543-3ad4-4cae-8ad3-4201aba2f718"/>
+				<reportElement x="10" y="10" width="92" height="68" uuid="07a029dd-11b0-4618-b4cf-fc6f96189d53"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
 			</image>
+			<image>
+				<reportElement x="746" y="10" width="119" height="58" uuid="2f245821-9de3-4fbf-8007-2e8539b23056"/>
+				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="116" y="10" width="606" height="36" uuid="c289846d-34a0-41b2-9777-04021ea529e8"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFORME DE ENSAYO DIELECTRICO A GUANTES O MANGAS AISLADAS EN SERVICIO.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="30" width="606" height="36" uuid="ffd0a0a9-85b8-4c8e-af30-fcec20b4c261"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIELECTRICAL TEST REPORT FOR GLOVES SLEVEES INSULATE IN SERVICE.]]></text>
+			</staticText>
 		</band>
 	</pageHeader>
 	<detail>
@@ -72,11 +87,11 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and 
 				<text><![CDATA[Exactitud/Accuaracy (%)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="9" y="265" width="297" height="20" uuid="a74e0dc0-3213-4974-a684-be39c7480e34"/>
-				<textElement textAlignment="Center">
+				<reportElement x="65" y="265" width="456" height="20" uuid="a74e0dc0-3213-4974-a684-be39c7480e34"/>
+				<textElement textAlignment="Justified">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Información de equipo utilizado para ensayo/
+				<text><![CDATA[Información de equipo utilizado para ensayo/test equipment information
 ]]></text>
 			</staticText>
 			<staticText>
@@ -111,15 +126,11 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and 
 				<text><![CDATA[Ciudad/City]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="352" y="288" width="162" height="20" uuid="c77e2e8b-ea3a-48a7-9bbb-71eee0edf29a"/>
+				<reportElement x="408" y="288" width="162" height="20" uuid="c77e2e8b-ea3a-48a7-9bbb-71eee0edf29a"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[No. Certificado/Certificate Number]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="304" y="265" width="188" height="20" uuid="e8181487-54d9-48b1-87b9-3f1f3dd9609a"/>
-				<text><![CDATA[test equipment information]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="492" y="202" width="164" height="59" uuid="e33f474f-c277-4ce0-af32-f63d5c2e3219"/>
@@ -134,14 +145,14 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and 
 				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="215" y="288" width="122" height="20" uuid="d2e46e82-4446-4f2e-8e50-ba828679d589"/>
+				<reportElement x="271" y="288" width="122" height="20" uuid="d2e46e82-4446-4f2e-8e50-ba828679d589"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Serie/Serial]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="698" y="20" width="142" height="20" uuid="163912d3-dc31-4cb1-bbc8-49faf20e13fe"/>
+				<reportElement x="706" y="20" width="142" height="20" uuid="163912d3-dc31-4cb1-bbc8-49faf20e13fe"/>
 				<textElement>
 					<font size="12"/>
 				</textElement>
@@ -181,11 +192,11 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and 
 				<text><![CDATA[Fecha/Date]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="654" y="20" width="44" height="20" backcolor="#CCCCCC" uuid="ac414d06-baa2-4906-85ee-e69d33991616"/>
+				<reportElement mode="Transparent" x="654" y="20" width="54" height="20" backcolor="#CCCCCC" uuid="ac414d06-baa2-4906-85ee-e69d33991616"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[INF-M-]]></text>
+				<text><![CDATA[INF-CU-]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="492" y="60" width="164" height="53" uuid="fb0a6800-0018-460f-a1e2-fa427ee79ed7"/>
@@ -206,14 +217,14 @@ WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and 
 Autorized service by customer]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="8" y="288" width="197" height="20" uuid="97e1ec05-5aea-426c-b1ae-231f266df597"/>
+				<reportElement x="64" y="288" width="197" height="20" uuid="97e1ec05-5aea-426c-b1ae-231f266df597"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Código interno/Internal Code]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="534" y="288" width="147" height="20" uuid="749fbd66-e108-4a4a-841f-f13a10fce0bd"/>
+				<reportElement x="590" y="288" width="147" height="20" uuid="749fbd66-e108-4a4a-841f-f13a10fce0bd"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -247,24 +258,24 @@ Autorized service by customer]]></text>
 		<band height="50"/>
 		<band height="125">
 			<staticText>
-				<reportElement x="0" y="10" width="327" height="20" uuid="231e8feb-254d-49c2-b0ad-4ba36316d972"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Condiciones ambientales/Enviromental condition]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="1" y="62" width="677" height="63" uuid="c694c7bb-2a4f-4bc1-8371-69b5fcbee4fe"/>
+				<reportElement x="20" y="46" width="413" height="63" uuid="8cbe7d7e-cea9-48d2-a0d5-898b7fff4f8a"/>
 				<textElement textAlignment="Justified" verticalAlignment="Top">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Incertidumbre de medición/ Uncertaintiny Measurement
-La incertidumbre reportada representa la incertidumbre expandida a un nivel de  confianza de 95% utilizando un factor de cobertura k=2/ The reported uncertainties represent expanded uncertainties expressed at approximately the 95% confidence level using a coverage factor k=2."																								]]></text>
+La incertidumbre reportada representa la incertidumbre expandida a un nivel de  confianza de 95% utilizando un factor de cobertura k=2/ The reported uncertainties represent expanded uncertainties expressed at approximately the 95% confidence level using a coverage factor k=2.																						]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="10" width="327" height="20" uuid="321dba16-8dc7-48dc-a71a-52e61f81fcbf"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Condiciones ambientales/Enviromental condition]]></text>
 			</staticText>
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="-1" y="0" width="861" height="50" uuid="0064da4b-85b7-446f-b0de-1ab0508e4fb7"/>
+				<reportElement x="-1" y="0" width="881" height="50" uuid="0064da4b-85b7-446f-b0de-1ab0508e4fb7"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -274,7 +285,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="-1" y="0" width="861" height="50" uuid="bfa6eb78-5a2a-4d47-b562-7b2e0fbea0d2"/>
+				<reportElement x="-1" y="0" width="881" height="50" uuid="bfa6eb78-5a2a-4d47-b562-7b2e0fbea0d2"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -284,42 +295,103 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="-1" y="0" width="861" height="50" uuid="a4a9a590-68ef-4d7a-b115-1ca3c8016eed"/>
-				<subreportParameter name="ncotic"/>
-				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_subreport3.jasper"]]></subreportExpression>
-			</subreport>
-		</band>
-		<band height="50">
-			<subreport>
-				<reportElement x="0" y="0" width="860" height="50" uuid="d016efe7-e5b4-43fc-9112-9008010139df"/>
+				<reportElement x="1" y="0" width="879" height="50" uuid="d016efe7-e5b4-43fc-9112-9008010139df"/>
 				<subreportParameter name="observ"/>
 				<subreportParameter name="ncotic"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_OBS_FINAL.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
+		<band height="50"/>
 	</detail>
 	<pageFooter>
-		<band height="65" splitType="Stretch">
+		<band height="262" splitType="Stretch">
 			<textField evaluationTime="Report">
-				<reportElement x="79" y="23" width="40" height="20" uuid="56c18d59-4899-468c-b3eb-365199602def"/>
+				<reportElement x="81" y="220" width="40" height="20" uuid="56c18d59-4899-468c-b3eb-365199602def"/>
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="-1" y="23" width="80" height="20" uuid="8111cacd-2787-4837-92e0-ef32647476a3"/>
+				<reportElement x="1" y="220" width="80" height="20" uuid="8111cacd-2787-4837-92e0-ef32647476a3"/>
 				<textElement textAlignment="Right"/>
 				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="706" y="10" width="100" height="55" uuid="570e8b1d-f632-419e-a80f-396aace36b11"/>
+				<reportElement x="708" y="220" width="100" height="42" uuid="570e8b1d-f632-419e-a80f-396aace36b11"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[F.LABDIEL.025
+				<text><![CDATA[
 VER 0
 FECHA: 2010-07-19]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="12" y="10" width="151" height="20" uuid="fa060000-ac4e-4f74-aa8e-052591d166ca"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Revisado por/Cheked By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="39" width="153" height="20" uuid="badf64bd-3d1d-4c5b-853c-02d68dd8d2b3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jefe de Laboratorio/lab Chief]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="39" width="157" height="20" uuid="6a4d06a3-ff57-4536-ac99-b6892cac3759"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laboratorista/Lab Assistant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="76" width="43" height="20" uuid="3d687e26-ee33-4003-9971-886abb4879b9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="76" width="68" height="20" uuid="b334c3b3-bd5e-4769-9300-728e942e150c"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="136" width="230" height="64" uuid="1ea25e00-466b-4a83-b6d4-71cd1b8b95ec"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CALLE 42 # 44-51 – Barranquilla Colombia.
+TEL: 3404892 - 3515740
+www.ladee.co
+cliente@ladee.co]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="10" width="160" height="20" uuid="e8a81dd2-62c8-4ec5-b34f-66a6d9311e34"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Elaborado por/Made By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="96" width="158" height="20" uuid="4c4bb32d-8084-40fd-b393-73d94d2eb036"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[LABORATORIO DIELECTRICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="116" width="158" height="20" uuid="9e0cac6d-cb9a-47a0-8f01-7893b26d07ff"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JLB Y CIA LTADA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="708" y="200" width="100" height="20" uuid="ea1f477f-12af-4811-a88d-7aefbf2ea022"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{NORMA_INFORME}]]></textFieldExpression>
+			</textField>
 		</band>
 	</pageFooter>
 </jasperReport>

@@ -81,12 +81,12 @@
 	<field name="USERNAME" class="java.lang.String"/>
 	<field name="cod_seriales" class="java.lang.String"/>
 	<title>
-		<band height="35" splitType="Stretch"/>
+		<band height="25" splitType="Stretch"/>
 	</title>
 	<pageHeader>
 		<band height="134" splitType="Stretch">
 			<staticText>
-				<reportElement x="603" y="61" width="70" height="71" uuid="4e2f832f-10fe-4221-8d4d-956cb14937bc"/>
+				<reportElement x="603" y="59" width="70" height="73" uuid="4e2f832f-10fe-4221-8d4d-956cb14937bc"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -132,7 +132,7 @@ Equipment]]></text>
 Class]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="533" y="61" width="70" height="71" uuid="faa12f80-2eca-4612-b77b-5920d5d36dc9"/>
+				<reportElement x="533" y="59" width="70" height="73" uuid="faa12f80-2eca-4612-b77b-5920d5d36dc9"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -155,6 +155,13 @@ Internal code equipment]]></text>
 				<text><![CDATA[Tensión de uso [kV]  A.C.
 Operation Voltage [kV] A.C
 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="17" width="181" height="20" uuid="996fa239-0096-4ae2-9049-de16d82e1cf9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
 			</staticText>
 		</band>
 	</pageHeader>

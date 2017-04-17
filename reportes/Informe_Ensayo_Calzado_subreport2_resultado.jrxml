@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Calzado_subreport2_resultado" language="groovy" pageWidth="720" pageHeight="802" columnWidth="720" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6a3c36c8-819a-4153-a495-de4cabeb9475">
-	<property name="ireport.zoom" value="1.0"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Calzado_subreport2_resultado" language="groovy" pageWidth="720" pageHeight="802" columnWidth="680" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6a3c36c8-819a-4153-a495-de4cabeb9475">
+	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
@@ -64,9 +64,12 @@
 	<field name="CORRIENTE_FUGA_MEDIDA" class="java.lang.Double"/>
 	<field name="COD_CLIENTE" class="java.lang.String"/>
 	<title>
-		<band height="46" splitType="Stretch">
+		<band height="28" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="98">
 			<staticText>
-				<reportElement x="0" y="0" width="155" height="46" uuid="87d8be9e-99aa-4563-9c2d-f2b8f4064967"/>
+				<reportElement x="0" y="52" width="155" height="46" uuid="87d8be9e-99aa-4563-9c2d-f2b8f4064967"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Código asignado por el cliente/
  code assigned by client
@@ -75,7 +78,7 @@
 				]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="155" y="0" width="155" height="46" uuid="ba5ce809-b7c7-4767-81d9-cb8d358ffd43"/>
+				<reportElement x="155" y="52" width="155" height="46" uuid="ba5ce809-b7c7-4767-81d9-cb8d358ffd43"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Código interno
 Del equipo/
@@ -86,7 +89,7 @@ Internal code equipment
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="310" y="0" width="410" height="46" uuid="d2dbb78c-f055-428e-9cfe-4f5bb7292e7d"/>
+				<reportElement x="310" y="52" width="370" height="46" uuid="d2dbb78c-f055-428e-9cfe-4f5bb7292e7d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Resultado del ensayo/
 Test Result
@@ -96,12 +99,19 @@ Test Result
 
 ]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="0" y="13" width="181" height="20" uuid="5984f12f-dffb-4374-b325-4a267e527c57"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+			</staticText>
 		</band>
-	</title>
+	</pageHeader>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="28" splitType="Stretch">
 			<textField>
-				<reportElement mode="Opaque" x="310" y="0" width="410" height="20" backcolor="#CCCCCC" uuid="aa951e3b-3457-4d42-b71c-2f343b73fa90"/>
+				<reportElement mode="Opaque" x="310" y="0" width="370" height="20" backcolor="#CCCCCC" uuid="aa951e3b-3457-4d42-b71c-2f343b73fa90"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
