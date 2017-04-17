@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="900" pageHeight="900" columnWidth="880" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="240"/>
+	<property name="ireport.y" value="144"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -168,34 +168,6 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Información de equipo utilizado para ensayo/test equipment information
 ]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="91" y="270" width="197" height="20" uuid="36e50c1c-5464-4f1d-a799-8589bc4497bd"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Código interno/Internal Code]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="298" y="270" width="122" height="20" uuid="fb67680f-4e90-4adb-845f-d18a529b8f7a"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Serie/Serial]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="435" y="270" width="162" height="20" uuid="ae11d06f-4534-41a1-a2ae-57520589ce84"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[No. Certificado/Certificate Number]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="617" y="270" width="147" height="20" uuid="3f1571c3-a86b-417d-84b6-883b9ed0d79d"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Trazado a/Traceable to					]]></text>
-			</staticText>
 			<textField>
 				<reportElement mode="Transparent" x="228" y="20" width="215" height="20" backcolor="#CCCCCC" uuid="003816ac-91b8-4e76-8c25-1a8edfb7e31d"/>
 				<textElement textAlignment="Center"/>
@@ -266,7 +238,7 @@ Autorized service by customer]]></text>
 			<subreport>
 				<reportElement x="1" y="0" width="878" height="50" uuid="2ef997a6-46fc-4d30-b240-4fb9db9bb1b9"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Guantes_Mangas_equipo_inspeccion.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_equipo_inspeccion.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="150">
