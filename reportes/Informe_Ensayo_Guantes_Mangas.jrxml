@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="900" pageHeight="900" columnWidth="880" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="181"/>
+	<property name="ireport.y" value="74"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -129,8 +129,8 @@ Autorized service by customer]]></text>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="168" width="223" height="20" uuid="4523cd18-4611-4bfc-8a60-d8187036335b"/>
-				<textElement textAlignment="Center">
+				<reportElement x="1" y="168" width="223" height="32" uuid="4523cd18-4611-4bfc-8a60-d8187036335b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Fecha del Informe/Date report]]></text>
@@ -233,6 +233,11 @@ Autorized service by customer]]></text>
 				</textElement>
 				<text><![CDATA[Direccion de ejecucion de ensayos/Test Address]]></text>
 			</staticText>
+			<subreport>
+				<reportElement x="228" y="168" width="200" height="32" uuid="15d9ff13-67a3-461b-97e4-8cbba6184ab7"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Guantes_Mangas_ultimafecha_G.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 		<band height="50">
 			<subreport>
