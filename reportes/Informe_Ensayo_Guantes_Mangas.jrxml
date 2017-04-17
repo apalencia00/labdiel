@@ -236,7 +236,7 @@ Autorized service by customer]]></text>
 			<subreport>
 				<reportElement x="228" y="168" width="200" height="32" uuid="15d9ff13-67a3-461b-97e4-8cbba6184ab7"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Guantes_Mangas_ultimafecha_G.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_ultimafecha_G.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="50">
