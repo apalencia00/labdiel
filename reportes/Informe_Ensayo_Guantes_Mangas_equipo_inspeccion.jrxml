@@ -115,13 +115,6 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CERTIFICADO}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="492" y="1" width="114" height="20" uuid="8f1d0d45-b359-427f-be0f-3a3f8bc80673"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE}]]></textFieldExpression>
-			</textField>
 		</band>
 	</detail>
 </jasperReport>
