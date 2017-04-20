@@ -320,7 +320,7 @@ Equipment]]></text>
 			</textField>
 			<textField>
 				<reportElement mode="Opaque" x="716" y="1" width="71" height="23" backcolor="#CCCCCC" uuid="17e28eab-43b1-4a90-aad3-8358017a3ec7"/>
-				<textElement textAlignment="Justified">
+				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE_TENSION} + " - " + $F{INCERTIDUMBRE_CORRIENTE}]]></textFieldExpression>
