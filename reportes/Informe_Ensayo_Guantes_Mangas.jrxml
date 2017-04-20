@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="0" bottomMargin="0" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="33"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -188,7 +188,7 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Transparent" x="451" y="1" width="128" height="20" backcolor="#CCCCCC" uuid="3184dea7-c8d4-4329-9082-e809f18454ac"/>
+				<reportElement mode="Transparent" x="451" y="1" width="121" height="20" backcolor="#CCCCCC" uuid="3184dea7-c8d4-4329-9082-e809f18454ac"/>
 				<textElement>
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -205,7 +205,7 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[$F{FECHA_MODIFICACION}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="399" y="41" width="193" height="59" uuid="88d3e141-f699-427c-81d3-ff522cdca88c"/>
+				<reportElement x="399" y="41" width="174" height="59" uuid="88d3e141-f699-427c-81d3-ff522cdca88c"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
 					<font size="10"/>
 				</textElement>
