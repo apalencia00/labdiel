@@ -22,6 +22,7 @@
 	<field name="SERIAL" class="java.lang.String"/>
 	<field name="CERTIFICADO" class="java.lang.String"/>
 	<field name="TRAZADO" class="java.lang.String"/>
+	<field name="INCERTIDUMBRE" class="java.lang.String"/>
 	<pageHeader>
 		<band height="32">
 			<rectangle>
@@ -117,6 +118,16 @@
 					<font size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TRAZADO}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="704" y="1" width="142" height="20" uuid="34aecde0-1e15-4594-bc0a-5c041d78dcac"/>
+			</rectangle>
+			<textField>
+				<reportElement mode="Opaque" x="709" y="2" width="132" height="19" backcolor="#CCCCCC" uuid="cfdd37a5-3854-45ec-8da7-174794a83bf6"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
