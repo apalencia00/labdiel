@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="612" pageHeight="792" columnWidth="592" leftMargin="0" rightMargin="20" topMargin="0" bottomMargin="0" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="352"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -84,7 +84,7 @@ AND coti."FK_EMPLEADO" = "ID_EMPLEADO"]]>
 			<staticText>
 				<reportElement x="0" y="0" width="118" height="20" uuid="d89e2e01-c751-484d-957a-71e5057df5a1"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Cliente/Customer
 ]]></text>
@@ -92,7 +92,7 @@ AND coti."FK_EMPLEADO" = "ID_EMPLEADO"]]>
 			<staticText>
 				<reportElement x="0" y="20" width="118" height="20" uuid="dacdc2b6-8d20-4e24-90ef-f2fa66c1e187"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Dirección/Address
 ]]></text>
@@ -100,21 +100,21 @@ AND coti."FK_EMPLEADO" = "ID_EMPLEADO"]]>
 			<staticText>
 				<reportElement x="267" y="0" width="132" height="20" uuid="daaee9b0-fe8b-43e1-b8bd-d3bff6a89ecf"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[No de Informe/Report Number]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="267" y="20" width="132" height="20" uuid="337ab042-d992-41df-8e2a-3b04b4662eb1"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Equipo /Equipment]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="72" width="118" height="34" uuid="091ac0c1-7e0d-4c05-ba4a-4679211ae8c7"/>
 				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Servicio Autorizado por Cliente
 Autorized service by customer]]></text>
@@ -122,14 +122,14 @@ Autorized service by customer]]></text>
 			<staticText>
 				<reportElement x="0" y="108" width="118" height="17" uuid="5c94a1a0-d594-47ba-a3e5-601636ec7789"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Ciudad/City]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="1" y="126" width="117" height="40" uuid="f0a878ad-5476-407c-9ddb-0c137a55321e"/>
 				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Fecha de Recepción del equipo/Date received
 
@@ -138,14 +138,14 @@ Autorized service by customer]]></text>
 			<staticText>
 				<reportElement x="1" y="168" width="117" height="32" uuid="4523cd18-4611-4bfc-8a60-d8187036335b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Fecha del Informe/Date report]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="267" y="41" width="132" height="59" uuid="2e144985-c9b8-4257-96de-34407ae8deea"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Estandar de referencia/Reference standard
 						]]></text>
@@ -166,14 +166,14 @@ Autorized service by customer]]></text>
 			<staticText>
 				<reportElement mode="Transparent" x="399" y="0" width="60" height="20" backcolor="#CCCCCC" uuid="457b615f-3ad6-4e2b-9c33-9c8e34b8c445"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[INF-G-]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Transparent" x="399" y="21" width="139" height="20" backcolor="#CCCCCC" uuid="e79c9744-65f5-4d49-a822-05085f91b6a8"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Guantes Dielectricas]]></text>
 			</staticText>
@@ -190,7 +190,7 @@ Autorized service by customer]]></text>
 			<textField>
 				<reportElement mode="Transparent" x="451" y="1" width="128" height="20" backcolor="#CCCCCC" uuid="3184dea7-c8d4-4329-9082-e809f18454ac"/>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{lacoti}]]></textFieldExpression>
 			</textField>
@@ -207,7 +207,7 @@ Autorized service by customer]]></text>
 			<staticText>
 				<reportElement x="399" y="41" width="193" height="59" uuid="88d3e141-f699-427c-81d3-ff522cdca88c"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font size="12"/>
+					<font size="10"/>
 				</textElement>
 				<text><![CDATA[ASTM F496 - 14a   Standard Specification for In-Service Care of Insulating Gloves and Sleeves]]></text>
 			</staticText>
@@ -219,7 +219,7 @@ Autorized service by customer]]></text>
 			<staticText>
 				<reportElement x="267" y="100" width="132" height="59" uuid="bcdaba39-303c-446f-b132-74773e5e92fa"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Direccion de ejecucion de ensayos/Test Address]]></text>
 			</staticText>

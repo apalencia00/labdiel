@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Guantes" language="groovy" pageWidth="900" pageHeight="792" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3926b6b5-454c-4e51-bbc7-9a121ae66f92">
 	<property name="ireport.zoom" value="1.5"/>
-	<property name="ireport.x" value="649"/>
+	<property name="ireport.x" value="408"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -119,22 +119,22 @@ Tensión de uso [kV]  A.C.
 Operation Voltage [kV] A.C]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="356" y="38" width="107" height="70" uuid="8a4c8272-ab80-4aeb-8078-aee09c6d2eaf"/>
+				<reportElement x="356" y="38" width="66" height="70" uuid="8a4c8272-ab80-4aeb-8078-aee09c6d2eaf"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[
-Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max  Obtainet [mA]]]></text>
+Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="513" y="38" width="78" height="70" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
+				<reportElement x="474" y="38" width="67" height="70" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Humedad Relativa/Relativity Huminty/%RH)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="590" y="38" width="58" height="70" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
+				<reportElement x="540" y="38" width="58" height="70" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -158,7 +158,7 @@ Test voltage [kV] A.C]]></text>
 Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="462" y="38" width="52" height="70" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
+				<reportElement x="422" y="38" width="52" height="70" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -173,7 +173,7 @@ Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]]
 Equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="648" y="38" width="41" height="70" uuid="1412563b-926b-478c-8348-18735d0de8ce"/>
+				<reportElement x="598" y="38" width="41" height="70" uuid="1412563b-926b-478c-8348-18735d0de8ce"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
