@@ -68,13 +68,6 @@
 			<rectangle>
 				<reportElement x="492" y="10" width="114" height="20" uuid="171ee84f-ae36-4912-8539-b72c6c0d259a"/>
 			</rectangle>
-			<staticText>
-				<reportElement x="492" y="12" width="114" height="20" uuid="528ccbc1-413e-438d-8237-5ac0ae772bab"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Incertidumbre]]></text>
-			</staticText>
 		</band>
 	</pageHeader>
 	<detail>
