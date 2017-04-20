@@ -56,10 +56,10 @@
 				<text><![CDATA[No. Certificado/Certificate Number]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="373" y="10" width="100" height="20" uuid="8d1e95b3-86b6-4454-a47c-5764a37606ca"/>
+				<reportElement x="373" y="10" width="107" height="20" uuid="8d1e95b3-86b6-4454-a47c-5764a37606ca"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="373" y="12" width="100" height="20" uuid="3f1571c3-a86b-417d-84b6-883b9ed0d79d"/>
+				<reportElement x="373" y="12" width="107" height="20" uuid="3f1571c3-a86b-417d-84b6-883b9ed0d79d"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -100,10 +100,10 @@
 				<textFieldExpression><![CDATA[$F{SERIAL}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="373" y="0" width="100" height="22" uuid="11de4dbf-90c9-4939-b792-5f9d80e970aa"/>
+				<reportElement x="373" y="0" width="107" height="22" uuid="11de4dbf-90c9-4939-b792-5f9d80e970aa"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="373" y="2" width="100" height="20" backcolor="#CCCCCC" uuid="c12fa510-ea70-4658-bb1b-7356ad981c7d"/>
+				<reportElement mode="Opaque" x="373" y="2" width="107" height="20" backcolor="#CCCCCC" uuid="c12fa510-ea70-4658-bb1b-7356ad981c7d"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
