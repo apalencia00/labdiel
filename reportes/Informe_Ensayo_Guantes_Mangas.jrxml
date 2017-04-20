@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="612" pageHeight="792" columnWidth="592" leftMargin="0" rightMargin="20" topMargin="0" bottomMargin="0" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="254"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -241,7 +241,7 @@ Autorized service by customer]]></text>
 			<staticText>
 				<reportElement x="14" y="241" width="547" height="177" uuid="a6dbeeb9-5ede-4ad6-b659-848c1592cbba"/>
 				<textElement textAlignment="Justified">
-					<font size="12"/>
+					<font size="10"/>
 				</textElement>
 				<text><![CDATA[Los resultados contenidos en este se refieren al momento y condiciones en que se realizaron las mediciones. El laboratorio Dieléctrico de JLB CIA Ltda. no se responsabiliza de los perjuicios que puedan derivarse del uso inadecuado de los equipos o elementos sometidos a ensayo.
 
