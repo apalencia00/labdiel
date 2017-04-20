@@ -322,11 +322,11 @@ FECHA: 2010-07-19]]></text>
 				<textFieldExpression><![CDATA[$F{NORMA_INFORME}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="196" width="158" height="20" uuid="cf2ba648-949a-4b81-8fa8-ea2ddab4607e"/>
-				<textElement>
+				<reportElement x="0" y="196" width="267" height="20" uuid="cf2ba648-949a-4b81-8fa8-ea2ddab4607e"/>
+				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[LABORATORIO DIELECTRICO]]></text>
+				<text><![CDATA[LABORATORIO DIELECTRICO JLB Y CIA S.A.S]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="22" y="10" width="151" height="20" uuid="1b8d0fd2-ae95-4907-9db2-f1522d4bea9b"/>
@@ -343,13 +343,6 @@ FECHA: 2010-07-19]]></text>
 				<text><![CDATA[Jefe de Laboratorio/lab Chief]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="159" y="196" width="158" height="20" uuid="d244c242-1264-4d43-9fdc-37a9b870fec3"/>
-				<textElement textAlignment="Center">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[JLB Y CIA S.A.S]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="384" y="10" width="160" height="20" uuid="c1889054-6181-4c45-94ab-ac91ceeaf41a"/>
 				<textElement>
 					<font isBold="true"/>
@@ -364,18 +357,18 @@ FECHA: 2010-07-19]]></text>
 				<text><![CDATA[Laboratorista/Lab Assistant]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="317" y="196" width="224" height="20" uuid="6648b6c6-5e80-4ca3-a917-09cce8b64afe"/>
+				<reportElement x="267" y="196" width="274" height="20" uuid="6648b6c6-5e80-4ca3-a917-09cce8b64afe"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[CALLE 42 # 44-51 – Barranquilla Colombia.]]></text>
+				<text><![CDATA[CALLE 42 # 44-51 – BARRANQUILLA, COLOMBIA]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="541" y="196" width="335" height="20" uuid="59f65828-36d2-4d6c-bfc4-1ae24221236d"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[TEL: 3404892 - 3515740  www.ladee.co  cliente@ladee.co]]></text>
+				<text><![CDATA[TEL: 3404892 - 3515740  WWW.LADEE.CO  CLIENTE@LADEE.CO]]></text>
 			</staticText>
 		</band>
 	</pageFooter>

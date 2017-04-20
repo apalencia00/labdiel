@@ -319,9 +319,9 @@ Equipment]]></text>
 				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="717" y="1" width="71" height="23" uuid="17e28eab-43b1-4a90-aad3-8358017a3ec7"/>
+				<reportElement mode="Opaque" x="717" y="1" width="71" height="23" backcolor="#CCCCCC" uuid="17e28eab-43b1-4a90-aad3-8358017a3ec7"/>
 				<textElement>
-					<font size="6"/>
+					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE_TENSION} + " - " + $F{INCERTIDUMBRE_CORRIENTE}]]></textFieldExpression>
 			</textField>
