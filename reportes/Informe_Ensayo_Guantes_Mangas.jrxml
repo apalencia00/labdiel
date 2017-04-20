@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="0" bottomMargin="0" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="33"/>
+	<property name="ireport.y" value="292"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -254,7 +254,7 @@ El usuario es responsable por el buen uso y manipulación de los equipos ensayad
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="1" y="0" width="591" height="50" uuid="2ef997a6-46fc-4d30-b240-4fb9db9bb1b9"/>
+				<reportElement x="1" y="0" width="571" height="50" uuid="2ef997a6-46fc-4d30-b240-4fb9db9bb1b9"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -264,7 +264,7 @@ El usuario es responsable por el buen uso y manipulación de los equipos ensayad
 		</band>
 		<band height="51">
 			<subreport>
-				<reportElement x="0" y="0" width="592" height="51" uuid="c21385a6-a224-4bc9-8105-cc70cfc045db"/>
+				<reportElement x="0" y="0" width="572" height="51" uuid="c21385a6-a224-4bc9-8105-cc70cfc045db"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -274,7 +274,7 @@ El usuario es responsable por el buen uso y manipulación de los equipos ensayad
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="0" y="0" width="592" height="50" uuid="3f5a8915-381a-4786-8579-6277e68123be"/>
+				<reportElement x="0" y="0" width="573" height="50" uuid="3f5a8915-381a-4786-8579-6277e68123be"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -284,7 +284,7 @@ El usuario es responsable por el buen uso y manipulación de los equipos ensayad
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="0" y="0" width="592" height="50" uuid="f3dabfb7-0d6a-40df-b202-37ca2f12fcbe"/>
+				<reportElement x="0" y="0" width="573" height="50" uuid="f3dabfb7-0d6a-40df-b202-37ca2f12fcbe"/>
 				<subreportParameter name="observ">
 					<subreportParameterExpression><![CDATA[$P{observ}]]></subreportParameterExpression>
 				</subreportParameter>

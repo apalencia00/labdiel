@@ -267,13 +267,6 @@ Equipment]]></text>
 			<rectangle>
 				<reportElement x="591" y="1" width="48" height="26" uuid="566a7e4b-7ba1-430a-be62-248b0dd7247f"/>
 			</rectangle>
-			<textField>
-				<reportElement mode="Opaque" x="591" y="2" width="48" height="23" backcolor="#CCCCCC" uuid="17e28eab-43b1-4a90-aad3-8358017a3ec7"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="6"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE_TENSION} + " - " + $F{INCERTIDUMBRE_CORRIENTE}]]></textFieldExpression>
-			</textField>
 			<rectangle>
 				<reportElement x="265" y="1" width="91" height="26" uuid="31b02bf8-ee6b-4f18-ad26-6cd6116ca2a4"/>
 			</rectangle>
