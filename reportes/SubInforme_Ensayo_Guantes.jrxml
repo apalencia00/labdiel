@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Guantes" language="groovy" pageWidth="992" pageHeight="842" columnWidth="952" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3926b6b5-454c-4e51-bbc7-9a121ae66f92">
-	<property name="ireport.zoom" value="1.5"/>
-	<property name="ireport.x" value="612"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Guantes" language="groovy" pageWidth="972" pageHeight="842" columnWidth="932" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3926b6b5-454c-4e51-bbc7-9a121ae66f92">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="261"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -125,7 +125,7 @@ Class]]></text>
 				<reportElement x="270" y="37" width="84" height="71" uuid="42fcc5b2-892a-48db-bcf9-32a81b255221"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="271" y="37" width="83" height="70" uuid="aa6839eb-138c-4678-a584-07fd382aff61"/>
+				<reportElement x="271" y="42" width="83" height="64" uuid="aa6839eb-138c-4678-a584-07fd382aff61"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="900" pageHeight="900" columnWidth="880" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="972" pageHeight="900" columnWidth="952" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.x" value="32"/>
 	<property name="ireport.y" value="319"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
@@ -239,7 +239,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="1" y="0" width="878" height="50" uuid="2ef997a6-46fc-4d30-b240-4fb9db9bb1b9"/>
+				<reportElement x="1" y="0" width="951" height="50" uuid="2ef997a6-46fc-4d30-b240-4fb9db9bb1b9"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -249,7 +249,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		</band>
 		<band height="51">
 			<subreport>
-				<reportElement x="0" y="0" width="880" height="51" uuid="c21385a6-a224-4bc9-8105-cc70cfc045db"/>
+				<reportElement x="0" y="0" width="952" height="51" uuid="c21385a6-a224-4bc9-8105-cc70cfc045db"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -259,7 +259,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="0" y="0" width="880" height="50" uuid="3f5a8915-381a-4786-8579-6277e68123be"/>
+				<reportElement x="0" y="0" width="952" height="50" uuid="3f5a8915-381a-4786-8579-6277e68123be"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -269,7 +269,7 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 		</band>
 		<band height="50">
 			<subreport>
-				<reportElement x="0" y="0" width="879" height="50" uuid="f3dabfb7-0d6a-40df-b202-37ca2f12fcbe"/>
+				<reportElement x="0" y="0" width="952" height="50" uuid="f3dabfb7-0d6a-40df-b202-37ca2f12fcbe"/>
 				<subreportParameter name="observ">
 					<subreportParameterExpression><![CDATA[$P{observ}]]></subreportParameterExpression>
 				</subreportParameter>
