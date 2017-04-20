@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Guantes" language="groovy" pageWidth="972" pageHeight="842" columnWidth="932" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3926b6b5-454c-4e51-bbc7-9a121ae66f92">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Guantes" language="groovy" pageWidth="900" pageHeight="842" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3926b6b5-454c-4e51-bbc7-9a121ae66f92">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="261"/>
+	<property name="ireport.x" value="189"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -167,9 +167,6 @@ Operation Voltage [kV] A.C
 				</textElement>
 				<text><![CDATA[Incertidumbre/Uncertainty]]></text>
 			</staticText>
-			<rectangle>
-				<reportElement x="789" y="37" width="73" height="71" uuid="22607e81-0ec4-4941-9304-ccf44ab67998"/>
-			</rectangle>
 			<staticText>
 				<reportElement x="169" y="39" width="99" height="68" uuid="d7591bed-d77e-4c96-963a-f7b6c0f07e10"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -206,18 +203,11 @@ Test voltage [kV] A.C]]></text>
 				<text><![CDATA[Equipo
 Equipment]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="790" y="38" width="71" height="66" uuid="f4bec822-bfd5-430e-b471-c84e0012782b"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Incertidumbre/Uncertainty]]></text>
-			</staticText>
 			<rectangle>
-				<reportElement x="862" y="37" width="58" height="71" uuid="5f6e1ece-92d6-4041-8e9e-c352f0125aa0"/>
+				<reportElement x="788" y="37" width="58" height="71" uuid="5f6e1ece-92d6-4041-8e9e-c352f0125aa0"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="862" y="38" width="58" height="67" uuid="1412563b-926b-478c-8348-18735d0de8ce"/>
+				<reportElement x="788" y="38" width="58" height="67" uuid="1412563b-926b-478c-8348-18735d0de8ce"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -319,13 +309,10 @@ Equipment]]></text>
 				<reportElement x="714" y="0" width="74" height="25" uuid="566a7e4b-7ba1-430a-be62-248b0dd7247f"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="789" y="0" width="74" height="25" uuid="39ae1762-253b-4d0c-99fd-d76e4cbfbcc0"/>
-			</rectangle>
-			<rectangle>
-				<reportElement x="863" y="0" width="57" height="25" uuid="1df20ade-2dde-4f47-a75e-da3bc36a9868"/>
+				<reportElement x="789" y="0" width="57" height="25" uuid="1df20ade-2dde-4f47-a75e-da3bc36a9868"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="864" y="0" width="56" height="24" backcolor="#CCCCCC" uuid="8ac2dcf1-bacf-4b1e-a8f4-b9f19aac3d9b"/>
+				<reportElement mode="Opaque" x="790" y="0" width="56" height="24" backcolor="#CCCCCC" uuid="8ac2dcf1-bacf-4b1e-a8f4-b9f19aac3d9b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
 				</textElement>
@@ -334,16 +321,9 @@ Equipment]]></text>
 			<textField>
 				<reportElement x="717" y="1" width="71" height="23" uuid="17e28eab-43b1-4a90-aad3-8358017a3ec7"/>
 				<textElement>
-					<font size="8"/>
+					<font size="6"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE_TENSION}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="790" y="1" width="71" height="23" uuid="1060fbfa-478c-4de8-af89-9da049918686"/>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE_CORRIENTE}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE_TENSION} + " - " + $F{INCERTIDUMBRE_CORRIENTE}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
