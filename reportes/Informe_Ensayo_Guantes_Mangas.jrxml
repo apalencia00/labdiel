@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="639" pageHeight="792" columnWidth="599" leftMargin="20" rightMargin="20" topMargin="0" bottomMargin="0" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="292"/>
+	<property name="ireport.y" value="352"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -322,9 +322,9 @@ FECHA: 2010-07-19]]></text>
 				<textFieldExpression><![CDATA[$F{NORMA_INFORME}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="196" width="175" height="20" uuid="cf2ba648-949a-4b81-8fa8-ea2ddab4607e"/>
+				<reportElement x="0" y="196" width="159" height="20" uuid="cf2ba648-949a-4b81-8fa8-ea2ddab4607e"/>
 				<textElement textAlignment="Center">
-					<font isBold="true"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[LABORATORIO DIELECTRICO JLB Y CIA S.A.S]]></text>
 			</staticText>
@@ -357,16 +357,16 @@ FECHA: 2010-07-19]]></text>
 				<text><![CDATA[Laboratorista/Lab Assistant]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="175" y="196" width="164" height="20" uuid="6648b6c6-5e80-4ca3-a917-09cce8b64afe"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font isBold="true"/>
+				<reportElement x="159" y="196" width="180" height="20" uuid="6648b6c6-5e80-4ca3-a917-09cce8b64afe"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[CALLE 42 # 44-51 – BARRANQUILLA, COLOMBIA]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="339" y="196" width="253" height="20" uuid="59f65828-36d2-4d6c-bfc4-1ae24221236d"/>
 				<textElement textAlignment="Center">
-					<font isBold="true"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[TEL: 3404892 - 3515740  WWW.LADEE.CO  CLIENTE@LADEE.CO]]></text>
 			</staticText>
