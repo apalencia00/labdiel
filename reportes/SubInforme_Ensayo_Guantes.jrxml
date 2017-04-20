@@ -298,7 +298,7 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
 				</textElement>
-				<text><![CDATA[Guantes Dielectrico]]></text>
+				<text><![CDATA[Guantes]]></text>
 			</staticText>
 			<rectangle>
 				<reportElement x="310" y="0" width="66" height="26" uuid="eb9746eb-e67f-485d-ba1e-3cd3e371e950"/>

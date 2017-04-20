@@ -23,53 +23,65 @@
 	<field name="CERTIFICADO" class="java.lang.String"/>
 	<field name="TRAZADO" class="java.lang.String"/>
 	<field name="INCERTIDUMBRE" class="java.lang.String"/>
+	<title>
+		<band height="50">
+			<staticText>
+				<reportElement x="64" y="30" width="505" height="20" uuid="3ba820a1-7922-4cf0-9aec-665c1eee1625"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Información de equipo utilizado para ensayo/test equipment information
+]]></text>
+			</staticText>
+		</band>
+	</title>
 	<pageHeader>
-		<band height="32">
+		<band height="50">
 			<rectangle>
-				<reportElement x="4" y="11" width="120" height="20" uuid="9ccb1de8-94cd-406c-97a3-d140edefef15"/>
+				<reportElement x="4" y="23" width="120" height="20" uuid="9ccb1de8-94cd-406c-97a3-d140edefef15"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="4" y="10" width="120" height="20" uuid="36e50c1c-5464-4f1d-a799-8589bc4497bd"/>
+				<reportElement x="4" y="22" width="120" height="20" uuid="36e50c1c-5464-4f1d-a799-8589bc4497bd"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Código interno/Internal Code]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="136" y="11" width="73" height="20" uuid="7ac6ff29-4299-4694-af0a-3f57c8314277"/>
+				<reportElement x="136" y="23" width="73" height="20" uuid="7ac6ff29-4299-4694-af0a-3f57c8314277"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="136" y="12" width="73" height="20" uuid="fb67680f-4e90-4adb-845f-d18a529b8f7a"/>
+				<reportElement x="136" y="24" width="73" height="20" uuid="fb67680f-4e90-4adb-845f-d18a529b8f7a"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Serie/Serial]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="222" y="11" width="136" height="20" uuid="ad26a8da-a2f6-40ae-b762-e38a8dba965a"/>
+				<reportElement x="222" y="23" width="136" height="20" uuid="ad26a8da-a2f6-40ae-b762-e38a8dba965a"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="222" y="11" width="136" height="20" uuid="ae11d06f-4534-41a1-a2ae-57520589ce84"/>
+				<reportElement x="222" y="23" width="136" height="20" uuid="ae11d06f-4534-41a1-a2ae-57520589ce84"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[No. Certificado/Certificate Number]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="373" y="10" width="107" height="20" uuid="8d1e95b3-86b6-4454-a47c-5764a37606ca"/>
+				<reportElement x="373" y="22" width="107" height="20" uuid="8d1e95b3-86b6-4454-a47c-5764a37606ca"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="373" y="12" width="107" height="20" uuid="3f1571c3-a86b-417d-84b6-883b9ed0d79d"/>
+				<reportElement x="373" y="24" width="107" height="20" uuid="3f1571c3-a86b-417d-84b6-883b9ed0d79d"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Trazado a/Traceable to					]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="490" y="10" width="114" height="20" uuid="171ee84f-ae36-4912-8539-b72c6c0d259a"/>
+				<reportElement x="490" y="22" width="114" height="20" uuid="171ee84f-ae36-4912-8539-b72c6c0d259a"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="490" y="12" width="110" height="17" uuid="f01cbaeb-02b1-45b7-a184-38fdcb396503"/>
+				<reportElement x="490" y="24" width="110" height="17" uuid="f01cbaeb-02b1-45b7-a184-38fdcb396503"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
