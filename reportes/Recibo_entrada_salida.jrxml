@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida" language="groovy" pageWidth="648" pageHeight="842" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2494f3d5-2a08-4d51-b2a3-c8d2aaa4f588">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="48"/>
+	<property name="ireport.y" value="128"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select coti.*,rev.*,c.*,pc."DESCRIPCION" as desc_ciudad
@@ -167,11 +167,11 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND rev."FK_CIUD
 				<textFieldExpression><![CDATA[$F{NUM_COTIZACION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="67" y="146" width="240" height="20" uuid="189f1a6b-d983-411d-b0db-17d0ac3a2b0d"/>
+				<reportElement x="67" y="146" width="304" height="20" uuid="189f1a6b-d983-411d-b0db-17d0ac3a2b0d"/>
 				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="141" y="166" width="100" height="20" uuid="c3f5bef3-fa52-48a4-bdde-5e608e902a3c"/>
+				<reportElement x="141" y="166" width="230" height="20" uuid="c3f5bef3-fa52-48a4-bdde-5e608e902a3c"/>
 				<textFieldExpression><![CDATA[$F{APELLIDO}]]></textFieldExpression>
 			</textField>
 			<textField>
