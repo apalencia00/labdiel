@@ -93,7 +93,7 @@
 				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="451" y="0" width="127" height="62" uuid="21171bd5-03af-4a1f-89a3-e4423a68ed00"/>
+				<reportElement x="420" y="0" width="127" height="62" uuid="21171bd5-03af-4a1f-89a3-e4423a68ed00"/>
 				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
 				<text><![CDATA[F.LABDIEL.098
 VER: 1
