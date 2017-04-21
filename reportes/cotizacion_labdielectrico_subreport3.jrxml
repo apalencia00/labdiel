@@ -112,29 +112,31 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 			</textField>
 			<textField>
 				<reportElement x="295" y="0" width="58" height="20" uuid="0c3577ee-b84d-4197-8304-a8b713be13b4"/>
-				<textElement>
+				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{unidad}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="353" y="0" width="44" height="20" uuid="36139d96-d816-4d01-8a52-174def84fc8c"/>
-				<textElement>
+				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CANTIDAD}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="397" y="0" width="81" height="20" uuid="860e61bd-7b36-4508-8bf2-3a821bcdfcfb"/>
+				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{VALOR_UNITARIO}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="478" y="0" width="77" height="20" uuid="a57a0ee9-64cc-44c6-872d-cef2c1034968"/>
+				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[""+$F{subtotal_cal}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="229" y="0" width="66" height="20" uuid="51413a6a-886b-452d-9129-582bbee6382f"/>
-				<textElement>
+				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{laclase}]]></textFieldExpression>
