@@ -61,16 +61,34 @@ GROUP BY "CANTIDAD"]]>
 			</staticText>
 			<textField evaluationTime="Report">
 				<reportElement x="463" y="57" width="85" height="20" uuid="7b13e149-5ae0-49ed-93e2-643913a2d066"/>
+				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$V{total_servicio_1}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
 				<reportElement x="463" y="19" width="85" height="20" uuid="8f232089-2b54-4d79-854d-bd801d22737e"/>
+				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$V{total_1}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
 				<reportElement x="463" y="37" width="85" height="20" uuid="1cb52523-7f18-4797-9589-2c992e8b8885"/>
+				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$V{iva_1}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="448" y="19" width="10" height="20" uuid="c507daa2-36bb-4be1-8e90-cb5110ff2bc2"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="39" width="10" height="20" uuid="b95ddff6-f366-4828-b9e4-ba3682f0c6d5"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="57" width="10" height="20" uuid="285b5f2b-b593-4678-8132-29df5147382a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[$]]></text>
+			</staticText>
 		</band>
 	</title>
 	<detail>
@@ -161,10 +179,10 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 Cuenta de ahorros Banco de Bogota # 151510302, la cuenta se encuentra a nombre de Laboratorios de ensayos electricos JLB & CIA SAS con NIT 901005281-4. Enviar una copia de la consignación o la transferencia bancaria por correo electrónico o fax.
 Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. ]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="191" y="58" width="129" height="20" uuid="7ff832e8-094e-4982-a256-06ccefe473c7"/>
-				<text><![CDATA[De contado.]]></text>
-			</staticText>
+			<textField>
+				<reportElement x="191" y="58" width="352" height="20" uuid="16779f49-76d3-4a8f-a312-c5de0fbc5da7"/>
+				<textFieldExpression><![CDATA[$P{pago}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
