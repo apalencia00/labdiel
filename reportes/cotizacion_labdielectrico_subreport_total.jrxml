@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" pageWidth="607" pageHeight="802" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="178"/>
+	<property name="ireport.y" value="265"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="pago" class="java.lang.String"/>
@@ -106,19 +106,30 @@ GROUP BY "CANTIDAD"]]>
 				<text><![CDATA[MODIFICACIONES AL ALCANCE DE LOS TRABAJOS.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="-1" y="240" width="376" height="20" backcolor="#FFFF00" uuid="e7be04a3-5455-4e2d-aa9b-2161b3b51dc0"/>
+				<reportElement mode="Transparent" x="0" y="159" width="542" height="320" backcolor="#FFFF00" uuid="e7be04a3-5455-4e2d-aa9b-2161b3b51dc0"/>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font size="10" isBold="false"/>
 				</textElement>
-				<text><![CDATA[4. PLAZO Y CONDICIONES PARA EL INICIO DEL ENSAYO.]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="-1" y="260" width="544" height="116" uuid="7f959df1-b5d7-4846-a10c-f84b9af5ee72"/>
-				<textElement textAlignment="Justified"/>
-				<text><![CDATA[Una vez recibida la Consignación o la orden de compra u orden de trabajo de acuerdo a las condiciones de pago, se realizará la programación del ítem para que sea traído al laboratorio. En el caso que el ítem se traiga sin dicha consignación u orden de servicio, por mutuo acuerdo, sólo se comienzan los trabajos hasta que sea autorizado por medio de estas dos formas (consignación u orden) el servicio que va a prestar el laboratorio.
+				<text><![CDATA[
+
+4. PLAZO Y CONDICIONES PARA EL INICIO DEL ENSAYO.
+
+
+Una vez recibida la Consignación o la orden de compra u orden de trabajo de acuerdo a las condiciones de pago, se realizará la programación del ítem para que sea traído al laboratorio. En el caso que el ítem se traiga sin dicha consignación u orden de servicio, por mutuo acuerdo, sólo se comienzan los trabajos hasta que sea autorizado por medio de estas dos formas (consignación u orden) el servicio que va a prestar el laboratorio.
 Los resultados de los ensayos  se entregarán al cliente en máximo 5 días hábiles después de la terminacion de los ensayos contratados.
 
-El laboratorio no se hará cargo de los costos de transporte, ni se responsabiliza de  los daños que puedan ocurrir durante este.]]></text>
+El laboratorio no se hará cargo de los costos de transporte, ni se responsabiliza de  los daños que puedan ocurrir durante este.
+
+5. RESPONSABILIDAD.
+
+EL OFERENTE responde por el cumplimiento pleno de sus obligaciones según la presente oferta.  En relación con los perjuicios, EL OFERENTE únicamente responderá por el daño emergente derivado de las acciones u omisiones que le sean directamente imputables.  En ningún evento EL OFERENTE responderá por lucro cesante, daños indirectos, consecuenciales, y/o perdida de información. En todo caso, la responsabilidad del OFERENTE en ningún evento excederá el cien por ciento del valor del presente negocio jurídico, salvo en los eventos de dolor o culpa grave, en los cuales la responsabilidad será plena.
+
+
+
+
+
+
+]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Transparent" x="-1" y="58" width="192" height="20" backcolor="#FFFF00" uuid="674e503a-2b60-42b2-963a-c12df696accb"/>
@@ -128,31 +139,11 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 				<text><![CDATA[3. FORMA DE PAGO: 						]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="-2" y="376" width="381" height="20" uuid="84005e23-64ac-4a0e-9c3d-d5a073e07631"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[5. RESPONSABILIDAD.
-]]></text>
-			</staticText>
-			<staticText>
 				<reportElement mode="Transparent" x="-1" y="479" width="376" height="20" uuid="2ff8439f-1f85-4e35-8e0b-a1ea3be9aeda"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[VALIDEZ DE LA OFERTA]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="-3" y="396" width="545" height="83" uuid="a0f2252f-abdc-4b2e-9443-d1f2991085ca"/>
-				<textElement textAlignment="Justified"/>
-				<text><![CDATA[EL OFERENTE responde por el cumplimiento pleno de sus obligaciones según la presente oferta.  En relación con los perjuicios, EL OFERENTE únicamente responderá por el daño emergente derivado de las acciones u omisiones que le sean directamente imputables.  En ningún evento EL OFERENTE responderá por lucro cesante, daños indirectos, consecuenciales, y/o perdida de información. En todo caso, la responsabilidad del OFERENTE en ningún evento excederá el cien por ciento del valor del presente negocio jurídico, salvo en los eventos de dolor o culpa grave, en los cuales la responsabilidad será plena.
-
-
-
-
-
-
-]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="0" width="544" height="58" uuid="aba7ffef-7665-4433-aee4-66830509743a"/>
@@ -173,7 +164,7 @@ El laboratorio no se hará cargo de los costos de transporte, ni se responsabili
 				<text><![CDATA[Gracias por su atención y estaremos atentos a sus comentarios e inquietudes.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="91" width="547" height="74" uuid="de520f5c-e1af-444e-8cc3-fc39dfa0bd9d"/>
+				<reportElement x="1" y="91" width="547" height="117" uuid="de520f5c-e1af-444e-8cc3-fc39dfa0bd9d"/>
 				<textElement textAlignment="Justified"/>
 				<text><![CDATA[En caso de aceptar la oferta favor consignar en las siguientes cuentas:
 Cuenta de ahorros Banco de Bogota # 151510302, la cuenta se encuentra a nombre de Laboratorios de ensayos electricos JLB & CIA SAS con NIT 901005281-4. Enviar una copia de la consignación o la transferencia bancaria por correo electrónico o fax.
