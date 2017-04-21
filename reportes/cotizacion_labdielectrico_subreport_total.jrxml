@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" pageWidth="607" pageHeight="802" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="265"/>
+	<property name="ireport.y" value="419"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="pago" class="java.lang.String"/>
@@ -151,17 +151,13 @@ EL OFERENTE responde por el cumplimiento pleno de sus obligaciones según la pre
 				<text><![CDATA[Los precios son firmes en pesos colombianos y el IVA se liquidará y cobrará según porcentaje vigente en la fecha de facturación, lo mismo que los nuevos impuestos ó aumentos de los impuestos existentes, de orden nacional, departamental ó municipal que intervengan en la facturación final.  El costo discriminado en cada capítulo de la oferta, corresponde al valor neto a pagar después de las deducciones legales que debe realizar el cliente.El costo discriminado en cada capítulo de la oferta, corresponde al valor neto a pagar después de las deducciones legales que debe realizar el cliente.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="602" width="544" height="15" uuid="46fb7369-a309-47c7-8f37-eb21d75f8184"/>
-				<text><![CDATA[Cordialmente,]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="-3" y="537" width="544" height="45" uuid="4af6f2a3-ceec-4332-9c06-663f7eda1acb"/>
+				<reportElement x="1" y="537" width="462" height="97" uuid="4af6f2a3-ceec-4332-9c06-663f7eda1acb"/>
 				<textElement textAlignment="Justified"/>
-				<text><![CDATA[Si durante el desarrollo de los trabajos descritos en la presente oferta, surgen trabajos adicionales a los ítems, se modificará el alcance de la presente oferta y  LADEE JLB & CIA LTDA, realizará una oferta adicional para tomar en consideración las modificaciones pertinentes. 						]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="-1" y="582" width="462" height="20" uuid="4e37f12c-d256-4442-b67c-9536cc96e92b"/>
-				<text><![CDATA[Gracias por su atención y estaremos atentos a sus comentarios e inquietudes.]]></text>
+				<text><![CDATA[Si durante el desarrollo de los trabajos descritos en la presente oferta, surgen trabajos adicionales a los ítems, se modificará el alcance de la presente oferta y  LADEE JLB & CIA LTDA, realizará una oferta adicional para tomar en consideración las modificaciones pertinentes.
+
+Gracias por su atención y estaremos atentos a sus comentarios e inquietudes.
+
+Cordialmente,]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="1" y="91" width="547" height="117" uuid="de520f5c-e1af-444e-8cc3-fc39dfa0bd9d"/>
