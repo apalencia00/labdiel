@@ -2,14 +2,14 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="639" pageHeight="792" columnWidth="599" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="352"/>
+	<property name="ireport.y" value="11"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT coti."ID_COTIZACION", SUBSTR(coti."NUM_COTIZACION",7,9) as lacoti , coti."FK_CLIENTE", coti."FK_USUARIO",
        coti."FK_EMPLEADO", coti."FECHA_REGISTRO", coti."ESTADO", coti."US_MODIFICA", coti."FECHA_MODIFICACION",
-       coti."FK_REVISION_ENSAYO_EQUIPO",c.*, pc."DESCRIPCION" as laciudad,"NORMA_INFORME",emp.*
+       coti."FK_REVISION_ENSAYO_EQUIPO",c.*, pc."DESCRIPCION" as laciudad,"NORMA_INFORME",emp.*,"DIRECCION_REVISION"
   FROM labor."COTIZACION" coti, labor."CLIENTE" c, labor."PARAM_CIUDAD" pc, labor."REVISION_ENSAYO_EQUIPO" rev, labor."EMPLEADO" emp
 
 WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and pc."ID_COD_DIVIPO" = c."CIUDAD" AND "FK_REVISION_ENSAYO_EQUIPO" = "ID_REVISION_EQUIPO"
@@ -53,6 +53,7 @@ AND coti."FK_EMPLEADO" = "ID_EMPLEADO"]]>
 	<field name="FIRMA" class="java.lang.String"/>
 	<field name="EDAD" class="java.lang.Integer"/>
 	<field name="GENERO" class="java.lang.String"/>
+	<field name="DIRECCION_REVISION" class="java.lang.String"/>
 	<pageHeader>
 		<band height="70">
 			<image>
@@ -243,6 +244,11 @@ El laboratorio no hace responsable por la representatividad de las muestras que 
 
 El usuario es responsable por el buen uso y manipulación de los equipos ensayados.]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="399" y="100" width="173" height="59" uuid="9e5946f1-de16-4133-ab5b-2ccc87311f59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DIRECCION_REVISION}]]></textFieldExpression>
+			</textField>
 		</band>
 		<band height="50">
 			<subreport>
