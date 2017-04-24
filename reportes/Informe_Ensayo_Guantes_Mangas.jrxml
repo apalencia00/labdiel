@@ -181,7 +181,7 @@ Autorized service by customer]]></text>
 				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Transparent" x="451" y="1" width="121" height="20" backcolor="#CCCCCC" uuid="3184dea7-c8d4-4329-9082-e809f18454ac"/>
+				<reportElement mode="Transparent" x="449" y="0" width="121" height="20" backcolor="#CCCCCC" uuid="3184dea7-c8d4-4329-9082-e809f18454ac"/>
 				<textElement>
 					<font size="10" isBold="true"/>
 				</textElement>

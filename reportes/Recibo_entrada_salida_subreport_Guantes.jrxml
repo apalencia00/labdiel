@@ -19,9 +19,12 @@ GROUP BY tp."DESCRIPCION",cl."DESCRIPCION",a."CANTIDAD_APROBADO",med."DESCRIPCIO
 	<field name="CANTIDAD_APROBADO" class="java.lang.Integer"/>
 	<field name="medicion_unidad" class="java.lang.String"/>
 	<title>
-		<band height="45" splitType="Stretch">
+		<band height="21" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="50">
 			<staticText>
-				<reportElement mode="Opaque" x="205" y="0" width="256" height="20" backcolor="#CCCCCC" uuid="8e0a8b88-fe8a-4a5f-b851-7830e6201925"/>
+				<reportElement mode="Opaque" x="198" y="0" width="256" height="20" backcolor="#CCCCCC" uuid="8e0a8b88-fe8a-4a5f-b851-7830e6201925"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -49,7 +52,7 @@ GROUP BY tp."DESCRIPCION",cl."DESCRIPCION",a."CANTIDAD_APROBADO",med."DESCRIPCIO
 				<text><![CDATA[UNIDAD]]></text>
 			</staticText>
 		</band>
-	</title>
+	</pageHeader>
 	<detail>
 		<band height="15" splitType="Stretch">
 			<textField>
