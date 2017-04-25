@@ -221,13 +221,13 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<reportElement x="181" y="0" width="52" height="26" uuid="4db9caf9-6263-4894-a478-7b2ddc8b157a"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="376" y="0" width="51" height="26" uuid="ae58cdee-2a6f-4e9a-97ed-a0f2381321a0"/>
+				<reportElement x="376" y="0" width="52" height="26" uuid="ae58cdee-2a6f-4e9a-97ed-a0f2381321a0"/>
 			</rectangle>
 			<rectangle>
 				<reportElement x="129" y="0" width="52" height="26" uuid="9d0fdacb-4626-4618-a44f-7ded29b013c3"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="427" y="0" width="69" height="26" uuid="58ab703e-c983-4a10-8c19-fd5deb525a8d"/>
+				<reportElement x="428" y="0" width="68" height="26" uuid="58ab703e-c983-4a10-8c19-fd5deb525a8d"/>
 			</rectangle>
 			<textField>
 				<reportElement mode="Opaque" x="182" y="1" width="51" height="24" backcolor="#CCCCCC" uuid="148d20b0-6e0c-4f7c-b1ac-4d5bc836b332"/>
@@ -319,6 +319,13 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE_TENSION} + " - " + $F{INCERTIDUMBRE_CORRIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="556" y="4" width="44" height="20" backcolor="#CCCCCC" uuid="0ae99761-7170-4394-af39-f2a88f9f113a"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
