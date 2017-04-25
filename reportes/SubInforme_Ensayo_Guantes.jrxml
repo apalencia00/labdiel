@@ -15,10 +15,10 @@
        "CRISTAL", "QUEMADURA", "OBS_QUEMADURA", "CONTAMINACION", "OBS_CONTAMINACION",
        "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
-       "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*, ins."FECHA_REGISTRO", serde.cod_seriales, "CORRIENTE_FUGA_MEDIDA","INCERTIDUMBRE_TENSION","INCERTIDUMBRE_CORRIENTE"
-  FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co, labor."DET_COTI_SERIALIZAR_EQUIPO" dts, labor."DET_COTI_SERIALIZAR_EQUIPO" serde
+       "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*, ins."FECHA_REGISTRO", dts.cod_seriales, "CORRIENTE_FUGA_MEDIDA","INCERTIDUMBRE_TENSION","INCERTIDUMBRE_CORRIENTE"
+  FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co, labor."DET_COTI_SERIALIZAR_EQUIPO" dts
 
- WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" AND ins."FK_COTIZACION" = $P{ncotic} AND co."FK_CLIENTE" = c."ID_CLIENTE"  and dts.id_detalle_serial::integer = ins."FK_ID_SERIAL_EQUIPO"::integer AND substr(dts.cod_seriales, 1, 1) = 'G' and serde.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" order by "ID_INSPECCION_EQUIPO" asc]]>
+ WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" AND ins."FK_COTIZACION" = $P{ncotic} AND co."FK_CLIENTE" = c."ID_CLIENTE"  and dts.id_detalle_serial::integer = ins."FK_ID_SERIAL_EQUIPO"::integer AND substr(dts.cod_seriales, 1, 1) = 'G' and dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" order by "ID_INSPECCION_EQUIPO" asc]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
@@ -86,7 +86,7 @@
 	<pageHeader>
 		<band height="110">
 			<staticText>
-				<reportElement x="0" y="2" width="181" height="20" uuid="bb197a76-891c-4ba2-9e86-92f902b8b198"/>
+				<reportElement x="0" y="2" width="281" height="20" uuid="bb197a76-891c-4ba2-9e86-92f902b8b198"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -221,23 +221,23 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<reportElement x="181" y="0" width="52" height="26" uuid="4db9caf9-6263-4894-a478-7b2ddc8b157a"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="377" y="0" width="51" height="26" uuid="ae58cdee-2a6f-4e9a-97ed-a0f2381321a0"/>
+				<reportElement x="376" y="0" width="51" height="26" uuid="ae58cdee-2a6f-4e9a-97ed-a0f2381321a0"/>
 			</rectangle>
 			<rectangle>
 				<reportElement x="129" y="0" width="52" height="26" uuid="9d0fdacb-4626-4618-a44f-7ded29b013c3"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="428" y="0" width="67" height="26" uuid="58ab703e-c983-4a10-8c19-fd5deb525a8d"/>
+				<reportElement x="427" y="0" width="69" height="26" uuid="58ab703e-c983-4a10-8c19-fd5deb525a8d"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="181" y="1" width="52" height="24" backcolor="#CCCCCC" uuid="148d20b0-6e0c-4f7c-b1ac-4d5bc836b332"/>
+				<reportElement mode="Opaque" x="182" y="0" width="51" height="24" backcolor="#CCCCCC" uuid="148d20b0-6e0c-4f7c-b1ac-4d5bc836b332"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OBS_TENSION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="429" y="2" width="66" height="23" backcolor="#CCCCCC" uuid="9d4a6d87-8b33-4016-a510-bb57c83c1553"/>
+				<reportElement mode="Opaque" x="428" y="1" width="66" height="23" backcolor="#CCCCCC" uuid="9d4a6d87-8b33-4016-a510-bb57c83c1553"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
@@ -261,14 +261,14 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<textFieldExpression><![CDATA[$F{TENSION_ENSAYO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="378" y="2" width="50" height="23" backcolor="#CCCCCC" uuid="279d85a1-3e79-4336-9e37-364ab2a4d13e"/>
+				<reportElement mode="Opaque" x="377" y="1" width="50" height="23" backcolor="#CCCCCC" uuid="279d85a1-3e79-4336-9e37-364ab2a4d13e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TEMPERATURA}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="495" y="0" width="58" height="26" uuid="566a7e4b-7ba1-430a-be62-248b0dd7247f"/>
+				<reportElement x="495" y="0" width="59" height="26" uuid="566a7e4b-7ba1-430a-be62-248b0dd7247f"/>
 			</rectangle>
 			<rectangle>
 				<reportElement x="233" y="0" width="77" height="26" uuid="31b02bf8-ee6b-4f18-ad26-6cd6116ca2a4"/>
@@ -304,17 +304,17 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<reportElement x="310" y="0" width="66" height="26" uuid="eb9746eb-e67f-485d-ba1e-3cd3e371e950"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="310" y="1" width="66" height="24" backcolor="#CCCCCC" uuid="f8369642-2180-4f72-b651-ad689473de40"/>
+				<reportElement mode="Opaque" x="311" y="1" width="65" height="24" backcolor="#CCCCCC" uuid="f8369642-2180-4f72-b651-ad689473de40"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA_MEDIDA}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="553" y="0" width="45" height="26" uuid="1135a032-d94c-42d4-8f6d-26fd3be8321b"/>
+				<reportElement x="554" y="0" width="44" height="26" uuid="1135a032-d94c-42d4-8f6d-26fd3be8321b"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="496" y="1" width="57" height="24" backcolor="#CCCCCC" uuid="628f0ff5-6514-42ab-9e48-f1c48d182a6f"/>
+				<reportElement mode="Opaque" x="497" y="0" width="57" height="24" backcolor="#CCCCCC" uuid="628f0ff5-6514-42ab-9e48-f1c48d182a6f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>

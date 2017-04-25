@@ -135,7 +135,7 @@
 				<textFieldExpression><![CDATA[$F{CERTIFICADO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="494" y="2" width="110" height="20" uuid="2a2e3d7a-e858-42fb-bde3-247772a98f4e"/>
+				<reportElement mode="Opaque" x="494" y="2" width="110" height="20" backcolor="#CCCCCC" uuid="2a2e3d7a-e858-42fb-bde3-247772a98f4e"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>

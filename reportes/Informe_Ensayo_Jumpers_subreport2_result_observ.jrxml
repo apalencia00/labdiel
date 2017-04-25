@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Jumpers_subreport2_result_observ" language="groovy" pageWidth="720" pageHeight="802" columnWidth="720" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="0c7b6a5a-08eb-4752-8fcf-2fdd09153455">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Jumpers_subreport2_result_observ" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0c7b6a5a-08eb-4752-8fcf-2fdd09153455">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -16,8 +16,8 @@
        "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", "FECHA_REGISTRO",
-       "CORRIENTE_FUGA_MEDIDA","COD_CLIENTE"
-  FROM labor."REGISTRO_INSPECCION_EQUIPO" where "FK_COTIZACION" = $P{ncotic};]]>
+       "CORRIENTE_FUGA_MEDIDA", "COD_CLIENTE",dts.cod_seriales
+  FROM labor."REGISTRO_INSPECCION_EQUIPO", labor."DET_COTI_SERIALIZAR_EQUIPO" dts where dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" AND "FK_COTIZACION" = $P{ncotic} ORDER BY "ID_INSPECCION_EQUIPO" asc]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
@@ -63,13 +63,14 @@
 	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
 	<field name="CORRIENTE_FUGA_MEDIDA" class="java.lang.Double"/>
 	<field name="COD_CLIENTE" class="java.lang.String"/>
+	<field name="cod_seriales" class="java.lang.String"/>
 	<title>
-		<band height="30" splitType="Stretch"/>
+		<band height="20" splitType="Stretch"/>
 	</title>
 	<pageHeader>
-		<band height="56" splitType="Stretch">
+		<band height="111" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="0" width="125" height="56" uuid="1cf264de-09e8-4985-9362-71d75770e552"/>
+				<reportElement x="0" y="51" width="125" height="56" uuid="1cf264de-09e8-4985-9362-71d75770e552"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código asignado por el cliente/
  code assigned by client
@@ -79,7 +80,7 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="250" y="0" width="470" height="56" uuid="58dbab85-7e82-4a2a-bd18-bbe09586aaf4"/>
+				<reportElement x="250" y="51" width="322" height="56" uuid="58dbab85-7e82-4a2a-bd18-bbe09586aaf4"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Resultado del ensayo/
 Test Result
@@ -88,7 +89,7 @@ Test Result
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="125" y="0" width="125" height="56" uuid="8532fe69-d656-4ac1-a084-4ac623f21f09"/>
+				<reportElement x="125" y="51" width="125" height="56" uuid="8532fe69-d656-4ac1-a084-4ac623f21f09"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código interno
 Del equipo/
@@ -97,30 +98,46 @@ Internal code equipment
 
 ]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="315" height="20" uuid="026d0b30-8865-4035-b140-9e019ab075ed"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+			</staticText>
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="125" height="20" uuid="ea752925-3d40-492c-9890-2dc1cd8a960a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="125" y="1" width="125" height="20" uuid="46fc9607-5343-4be3-ac8a-8b23be42b495"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="250" y="1" width="322" height="20" uuid="316936e2-fc83-4956-8795-11616f213497"/>
+			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="0" y="0" width="125" height="20" backcolor="#CCCCCC" uuid="3ccdb8e0-b3b5-4310-a147-d9c46e75b153"/>
-				<textElement textAlignment="Center">
+				<reportElement mode="Opaque" x="1" y="1" width="124" height="20" backcolor="#CCCCCC" uuid="3ccdb8e0-b3b5-4310-a147-d9c46e75b153"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{COD_CLIENTE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="250" y="0" width="470" height="20" backcolor="#CCCCCC" uuid="9837b48d-9886-4412-b55c-dd483ad53bd2"/>
+				<reportElement mode="Opaque" x="126" y="1" width="124" height="20" backcolor="#CCCCCC" uuid="02f6a751-5adf-49e1-bb0e-d24f64da927b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="251" y="1" width="320" height="20" backcolor="#CCCCCC" uuid="9837b48d-9886-4412-b55c-dd483ad53bd2"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OBS_FINAL}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="125" y="0" width="125" height="20" backcolor="#CCCCCC" uuid="83f4df0b-2b19-4c8b-97d7-eb8228bb4ddc"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{FK_ID_SERIAL_EQUIPO}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
