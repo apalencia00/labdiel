@@ -230,7 +230,7 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<reportElement x="427" y="0" width="69" height="26" uuid="58ab703e-c983-4a10-8c19-fd5deb525a8d"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="182" y="0" width="51" height="24" backcolor="#CCCCCC" uuid="148d20b0-6e0c-4f7c-b1ac-4d5bc836b332"/>
+				<reportElement mode="Opaque" x="182" y="1" width="51" height="24" backcolor="#CCCCCC" uuid="148d20b0-6e0c-4f7c-b1ac-4d5bc836b332"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
@@ -247,7 +247,7 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<reportElement x="102" y="0" width="27" height="26" uuid="52609f54-d0c0-41d3-8407-17aa3b223d3e"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="102" y="1" width="26" height="24" backcolor="#CCCCCC" uuid="039bde49-8725-4b91-ae94-971cddae2202"/>
+				<reportElement mode="Opaque" x="103" y="1" width="26" height="24" backcolor="#CCCCCC" uuid="039bde49-8725-4b91-ae94-971cddae2202"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
