@@ -237,7 +237,7 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<textFieldExpression><![CDATA[$F{OBS_TENSION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="428" y="1" width="66" height="23" backcolor="#CCCCCC" uuid="9d4a6d87-8b33-4016-a510-bb57c83c1553"/>
+				<reportElement mode="Opaque" x="429" y="1" width="66" height="23" backcolor="#CCCCCC" uuid="9d4a6d87-8b33-4016-a510-bb57c83c1553"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
@@ -247,14 +247,14 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<reportElement x="102" y="0" width="27" height="26" uuid="52609f54-d0c0-41d3-8407-17aa3b223d3e"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="103" y="1" width="26" height="24" backcolor="#CCCCCC" uuid="039bde49-8725-4b91-ae94-971cddae2202"/>
+				<reportElement mode="Opaque" x="103" y="1" width="25" height="24" backcolor="#CCCCCC" uuid="039bde49-8725-4b91-ae94-971cddae2202"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OBS_CLASE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="130" y="1" width="51" height="24" backcolor="#CCCCCC" uuid="6241139a-fd83-492a-b7db-474d2b87f163"/>
+				<reportElement mode="Opaque" x="130" y="1" width="50" height="24" backcolor="#CCCCCC" uuid="6241139a-fd83-492a-b7db-474d2b87f163"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
@@ -294,7 +294,7 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<reportElement x="60" y="0" width="42" height="26" uuid="44ed1bbe-0905-42c5-a7a2-8d64da422630"/>
 			</rectangle>
 			<staticText>
-				<reportElement mode="Opaque" x="61" y="1" width="41" height="24" backcolor="#CCCCCC" uuid="843de7a8-2f69-45a2-907a-7383a33ace30"/>
+				<reportElement mode="Opaque" x="61" y="1" width="40" height="24" backcolor="#CCCCCC" uuid="843de7a8-2f69-45a2-907a-7383a33ace30"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
 				</textElement>

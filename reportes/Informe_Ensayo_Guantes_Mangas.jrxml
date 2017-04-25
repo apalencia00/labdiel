@@ -225,7 +225,7 @@ Autorized service by customer]]></text>
 				<text><![CDATA[Direccion de ejecucion de ensayos/Test Address]]></text>
 			</staticText>
 			<subreport>
-				<reportElement x="125" y="157" width="128" height="32" uuid="15d9ff13-67a3-461b-97e4-8cbba6184ab7"/>
+				<reportElement x="128" y="157" width="128" height="32" uuid="15d9ff13-67a3-461b-97e4-8cbba6184ab7"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
