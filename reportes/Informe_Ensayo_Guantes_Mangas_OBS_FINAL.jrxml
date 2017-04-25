@@ -51,13 +51,13 @@
 				<text><![CDATA[FECHA]]></text>
 			</staticText>
 			<line>
-				<reportElement x="159" y="20" width="395" height="1" uuid="5851412e-4cbe-4f02-b184-c4470b014d2b"/>
+				<reportElement x="160" y="20" width="315" height="1" uuid="5851412e-4cbe-4f02-b184-c4470b014d2b"/>
 			</line>
 			<line>
-				<reportElement x="159" y="48" width="395" height="1" uuid="ddd9fb20-bdfa-47e4-bde2-40ad6848e44d"/>
+				<reportElement x="160" y="48" width="315" height="1" uuid="7b046df0-fba5-4165-bf08-19ca6e3685e3"/>
 			</line>
 			<line>
-				<reportElement x="159" y="75" width="395" height="1" uuid="9fc4fb77-2983-43bd-8d11-ed975d1a02e0"/>
+				<reportElement x="160" y="81" width="315" height="1" uuid="539aa3e2-0681-44a7-a07b-e8922006d002"/>
 			</line>
 		</band>
 	</detail>

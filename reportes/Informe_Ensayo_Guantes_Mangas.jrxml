@@ -79,8 +79,8 @@ AND coti."FK_EMPLEADO" = "ID_EMPLEADO"]]>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="478" y="62" width="121" height="20" uuid="27dd1a70-327c-4968-a9b0-fa572fec8909"/>
-				<textElement textAlignment="Center" verticalAlignment="Top">
+				<reportElement x="478" y="64" width="121" height="20" uuid="27dd1a70-327c-4968-a9b0-fa572fec8909"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<text><![CDATA[ACREDITADO ISO/IEC 17025:2005
@@ -324,8 +324,8 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="453" y="112" width="114" height="40" uuid="4c78541a-35d9-4516-9e81-76fdfadc0aca"/>
-				<textElement textAlignment="Center">
+				<reportElement x="453" y="122" width="114" height="32" uuid="4c78541a-35d9-4516-9e81-76fdfadc0aca"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[
@@ -333,7 +333,7 @@ VER 0
 FECHA: 2010-07-19]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="453" y="98" width="114" height="20" uuid="d5c0c5c3-42a8-436b-8769-9a5dd1ff8379"/>
+				<reportElement x="453" y="115" width="114" height="20" uuid="d5c0c5c3-42a8-436b-8769-9a5dd1ff8379"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
 				</textElement>
@@ -377,7 +377,7 @@ FECHA: 2010-07-19]]></text>
 			<staticText>
 				<reportElement x="22" y="141" width="431" height="22" uuid="7a325c24-40f4-473c-93c3-19dd857a1f04"/>
 				<textElement textAlignment="Justified">
-					<font size="8"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[EQUIPOS DE PROTECCION DE CALIDAD, REQUIEREN ENSAYOS HECHOS CON CALIDAD]]></text>
 			</staticText>
