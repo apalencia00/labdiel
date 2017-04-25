@@ -284,7 +284,7 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<reportElement x="1" y="0" width="59" height="26" uuid="6ecc2279-84d0-4d77-aea1-0dca806b3f96"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="1" y="1" width="59" height="25" backcolor="#CCCCCC" uuid="bac45087-7877-40b0-a021-3dfb1505b977"/>
+				<reportElement mode="Opaque" x="2" y="1" width="59" height="25" backcolor="#CCCCCC" uuid="bac45087-7877-40b0-a021-3dfb1505b977"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
