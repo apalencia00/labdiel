@@ -105,7 +105,7 @@ Test Result
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="29" splitType="Stretch">
+		<band height="26" splitType="Stretch">
 			<rectangle>
 				<reportElement x="0" y="1" width="125" height="22" uuid="8ee4e894-5d40-4cdd-905d-c51c70f67d77"/>
 			</rectangle>
