@@ -24,9 +24,9 @@
 	<field name="TRAZADO" class="java.lang.String"/>
 	<field name="INCERTIDUMBRE" class="java.lang.String"/>
 	<title>
-		<band height="35">
+		<band height="46">
 			<staticText>
-				<reportElement x="51" y="15" width="505" height="20" uuid="3ba820a1-7922-4cf0-9aec-665c1eee1625"/>
+				<reportElement x="51" y="24" width="505" height="20" uuid="3ba820a1-7922-4cf0-9aec-665c1eee1625"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
