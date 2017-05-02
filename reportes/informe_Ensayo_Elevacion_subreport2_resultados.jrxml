@@ -142,7 +142,13 @@ obtenida en la prueba
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="54" splitType="Stretch">
+		<band height="64" splitType="Stretch">
+			<rectangle>
+				<reportElement x="395" y="1" width="111" height="22" uuid="ed90ecfb-eb0a-4e56-84bc-6b3502ed71be"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="316" y="1" width="79" height="22" uuid="222b7de3-93ef-4ae6-8e44-66a4662136d6"/>
+			</rectangle>
 			<rectangle>
 				<reportElement x="225" y="1" width="91" height="22" uuid="cf3e915d-8740-44d8-9bd9-46264711f751"/>
 			</rectangle>
@@ -160,35 +166,21 @@ obtenida en la prueba
 				<textFieldExpression><![CDATA[$F{FK_SERIAL_EQUIPO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="641" y="117" width="69" height="20" backcolor="#CCCCCC" uuid="7dff5632-4ca3-4fef-a4d2-e1d0b4084665"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{TEMP}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="710" y="117" width="86" height="20" backcolor="#CCCCCC" uuid="8a9861d3-07c3-40c0-bbf9-d1de81c2c6e4"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{HR}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="225" y="1" width="91" height="20" backcolor="#CCCCCC" uuid="f4212b54-b5ae-40b7-b883-e0a995b5ee78"/>
+				<reportElement mode="Opaque" x="225" y="2" width="89" height="19" backcolor="#CCCCCC" uuid="f4212b54-b5ae-40b7-b883-e0a995b5ee78"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENSION_MAX_IN}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="406" y="117" width="100" height="20" backcolor="#CCCCCC" uuid="fba660fb-538c-407f-8730-96a1b48732c9"/>
+				<reportElement mode="Opaque" x="317" y="2" width="77" height="20" backcolor="#CCCCCC" uuid="fba660fb-538c-407f-8730-96a1b48732c9"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA_MAX_IN}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="506" y="117" width="135" height="20" backcolor="#CCCCCC" uuid="988bdd4c-76a3-4ea1-b007-7460a39a046d"/>
+				<reportElement mode="Opaque" x="395" y="2" width="110" height="20" backcolor="#CCCCCC" uuid="988bdd4c-76a3-4ea1-b007-7460a39a046d"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
@@ -203,12 +195,6 @@ obtenida en la prueba
 			</staticText>
 			<rectangle>
 				<reportElement x="146" y="1" width="79" height="22" uuid="337d26c3-851b-44fb-aece-204bb60efd1c"/>
-			</rectangle>
-			<rectangle>
-				<reportElement x="316" y="1" width="79" height="22" uuid="222b7de3-93ef-4ae6-8e44-66a4662136d6"/>
-			</rectangle>
-			<rectangle>
-				<reportElement x="395" y="1" width="111" height="22" uuid="ed90ecfb-eb0a-4e56-84bc-6b3502ed71be"/>
 			</rectangle>
 			<rectangle>
 				<reportElement x="507" y="1" width="67" height="22" uuid="fb36d8f2-4e4f-47d3-bce0-b9849afc4366"/>

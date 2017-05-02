@@ -7,17 +7,22 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[SELECT DISTINCT("FK_ID_EQUIPO_INSPECCIONADOR"), *
-  FROM labor."RGTRO_ESAY_EQIP_INSPC", labor."INSTRUMENTO_ENSAYO" WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO" = 'G']]>
+		<![CDATA[SELECT distinct "FK_ID_EQUIPO_INSPECCIONADOR","CODIGO_INTERNO","SERIAL","CERTIFICADO","TRAZADO","INCERTIDUMBRE"
+
+  FROM labor."RGTRO_ESAY_EQIP_INSPC" t, labor."INSTRUMENTO_ENSAYO" p
+
+  WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO" = 'G'
+
+  GROUP BY  "ENSAYO_EQUIPOS_PROBADORES","ID_EQUIPO_ENSAYO","DESCRIPCION","FK_COTIZACION","FORMULARIO","USUARIO","FECHA_REGISTRO","ID_EQUIPO_ENSAYO",
+  "CODIGO_INTERNO","SERIAL","CERTIFICADO","TRAZADO","INCERTIDUMBRE","FK_ID_EQUIPO_INSPECCIONADOR"
+
+
+
+
+
+]]>
 	</queryString>
 	<field name="FK_ID_EQUIPO_INSPECCIONADOR" class="java.lang.Integer"/>
-	<field name="ENSAYO_EQUIPOS_PROBADORES" class="java.lang.Integer"/>
-	<field name="FK_COTIZACION" class="java.lang.String"/>
-	<field name="FORMULARIO" class="java.lang.String"/>
-	<field name="USUARIO" class="java.lang.Integer"/>
-	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
-	<field name="ID_EQUIPO_ENSAYO" class="java.lang.Integer"/>
-	<field name="DESCRIPCION" class="java.lang.String"/>
 	<field name="CODIGO_INTERNO" class="java.lang.String"/>
 	<field name="SERIAL" class="java.lang.String"/>
 	<field name="CERTIFICADO" class="java.lang.String"/>

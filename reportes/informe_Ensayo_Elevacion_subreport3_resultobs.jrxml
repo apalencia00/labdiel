@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="informe_Ensayo_Elevacion_subreport3_resultobs" language="groovy" pageWidth="720" pageHeight="802" columnWidth="680" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="996a03e8-7456-4e72-8a69-29acebe8426a">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="informe_Ensayo_Elevacion_subreport3_resultobs" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="996a03e8-7456-4e72-8a69-29acebe8426a">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -66,7 +66,7 @@ Del equipo/
 Internal code equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="263" y="62" width="417" height="53" uuid="27f0cfbd-7975-47aa-b834-ca78279ff87e"/>
+				<reportElement x="263" y="62" width="309" height="53" uuid="27f0cfbd-7975-47aa-b834-ca78279ff87e"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Resultado del ensayo/
 Test Result
@@ -75,7 +75,7 @@ Test Result
 									]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="16" width="181" height="20" uuid="e8b68754-bedd-4773-ad30-97e87200e9a8"/>
+				<reportElement x="0" y="16" width="282" height="20" uuid="e8b68754-bedd-4773-ad30-97e87200e9a8"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -84,20 +84,29 @@ Test Result
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="32" splitType="Stretch">
+			<rectangle>
+				<reportElement x="126" y="3" width="137" height="22" uuid="4c14ec8b-3da5-41cc-87d1-d5b63a5de6f4"/>
+			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="263" y="0" width="417" height="20" backcolor="#CCCCCC" uuid="1868045b-6935-4e7d-97ee-6f86b4859d51"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{OBS_FINAL}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="126" y="0" width="137" height="20" backcolor="#CCCCCC" uuid="c1d05e93-d792-4d16-a81e-4edd9ffc1cb5"/>
+				<reportElement mode="Opaque" x="126" y="5" width="137" height="20" backcolor="#CCCCCC" uuid="c1d05e93-d792-4d16-a81e-4edd9ffc1cb5"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FK_SERIAL_EQUIPO}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="263" y="3" width="309" height="22" uuid="e9e63513-ff19-44d0-a923-da66b4461e81"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="3" width="126" height="22" uuid="ef884181-5a34-424e-8258-41df083809cd"/>
+			</rectangle>
+			<textField>
+				<reportElement mode="Opaque" x="263" y="5" width="309" height="20" backcolor="#CCCCCC" uuid="1868045b-6935-4e7d-97ee-6f86b4859d51"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OBS_FINAL}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
