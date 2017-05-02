@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mantas" language="groovy" pageWidth="639" pageHeight="792" columnWidth="599" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0a2187d4-18fd-416e-b868-e427a8b2c851">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="279"/>
+	<property name="ireport.y" value="375"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -272,10 +272,9 @@ Autorized service by customer]]></text>
 		</band>
 		<band height="44">
 			<subreport>
-				<reportElement x="0" y="0" width="599" height="44" uuid="ccc457ee-17d4-48a5-ad9a-d8e99da74c6e"/>
-				<subreportParameter name="ncotic"/>
+				<reportElement x="0" y="0" width="599" height="44" uuid="cd45d03a-1274-4eab-a44b-cb9bcbbf8287"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\Informe_Ensayo_Guantes_Mangas_equipo_inspeccion.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/reportes/Informe_Ensayo_Calzado_equipo_inspeccion.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="50">
@@ -370,7 +369,7 @@ FECHA: 2010-07-19]]></text>
 				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="10" y="183" width="599" height="20" uuid="31ce44dc-a2a2-4d17-ac77-1dbd0dcc12e7"/>
+				<reportElement x="0" y="183" width="599" height="20" uuid="31ce44dc-a2a2-4d17-ac77-1dbd0dcc12e7"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>

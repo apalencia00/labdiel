@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Cubridor_Linea_subreport1_result_test" language="groovy" pageWidth="720" pageHeight="802" columnWidth="720" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="5b14614d-e398-42c0-b7f0-27c36faf7ccc">
-	<property name="ireport.zoom" value="0.75"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Cubridor_Linea_subreport1_result_test" language="groovy" pageWidth="720" pageHeight="802" columnWidth="700" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5b14614d-e398-42c0-b7f0-27c36faf7ccc">
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
@@ -15,7 +15,7 @@
        "CRISTAL", "QUEMADURA", "OBS_QUEMADURA", "CONTAMINACION", "OBS_CONTAMINACION",
        "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
-       "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*, ins."FECHA_REGISTRO", serde.cod_seriales
+       "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*, ins."FECHA_REGISTRO", serde.cod_seriales, "INCERTIDUMBRE_TENSION", "INCERTIDUMBRE_CORRIENTE","CORRIENTE_FUGA_MEDIDA"
   FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co, labor."DET_COTI_SERIALIZAR_EQUIPO" dts, labor."DET_COTI_SERIALIZAR_EQUIPO" serde
 
  WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" AND ins."FK_COTIZACION" = $P{ncotic} AND co."FK_CLIENTE" = c."ID_CLIENTE"  and dts.id_detalle_serial::integer = ins."FK_ID_SERIAL_EQUIPO"::integer AND substr(dts.cod_seriales, 1, 1) = 'CU' and serde.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" order by "ID_INSPECCION_EQUIPO" asc]]>
@@ -80,148 +80,295 @@
 	<field name="DEPTO" class="java.lang.Integer"/>
 	<field name="USERNAME" class="java.lang.String"/>
 	<field name="cod_seriales" class="java.lang.String"/>
+	<field name="INCERTIDUMBRE_TENSION" class="java.lang.String"/>
+	<field name="INCERTIDUMBRE_CORRIENTE" class="java.lang.String"/>
+	<field name="CORRIENTE_FUGA_MEDIDA" class="java.lang.Double"/>
 	<title>
-		<band height="25" splitType="Stretch"/>
+		<band height="12" splitType="Stretch"/>
 	</title>
 	<pageHeader>
-		<band height="134" splitType="Stretch">
+		<band height="106" splitType="Stretch">
+			<rectangle>
+				<reportElement x="375" y="33" width="52" height="71" uuid="65c66d44-2d35-4cbd-80e3-b7820d626ee1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="232" y="33" width="77" height="71" uuid="52b15aee-d4e9-4462-a1f3-8e177a57df53"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="180" y="33" width="52" height="71" uuid="8671ca10-79cd-4a93-a1a9-72398328c6b9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="59" y="33" width="42" height="71" uuid="1a92b454-fb09-4d42-b448-e8b4c4afefd9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="33" width="59" height="71" uuid="10d34572-ab9f-4432-a66a-536c78d7a745"/>
+			</rectangle>
 			<staticText>
-				<reportElement x="603" y="59" width="70" height="73" uuid="4e2f832f-10fe-4221-8d4d-956cb14937bc"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+				<reportElement x="0" y="0" width="281" height="20" uuid="ccff00a9-4535-4e4c-8b43-5bdde4a6336f"/>
+				<textElement>
+					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Test Date/Fecha Ensayo]]></text>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="209" y="61" width="100" height="73" uuid="9e29e401-1c4a-4844-99bf-aa5d16228e56"/>
+				<reportElement x="375" y="33" width="52" height="71" uuid="c0cb843c-947d-45e7-a109-ded322d92289"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Tensión de
-Ensayo [kV]  A.C
-Test voltage [kV] A.C]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="89" y="61" width="83" height="73" uuid="e953dc2a-a060-46b2-b498-e1e04debf2a8"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Equipo
-Equipment]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="455" y="59" width="78" height="73" uuid="1618f428-22c6-4f66-9813-7b20f3920ba3"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Humedad Relativa/Relativity Huminty/%RH)]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="393" y="59" width="62" height="73" uuid="d8401fbf-15ae-4a97-9017-460e443377a5"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature °C]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="172" y="61" width="37" height="73" uuid="1202fa37-2ab9-4d7b-9752-ccc251f60281"/>
+				<reportElement x="427" y="33" width="67" height="71" uuid="b7b1c777-74e1-414e-9afd-943804cec565"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+					<font size="8" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Clase
-Class]]></text>
+				<text><![CDATA[Humedad Relativa/Relativity Huminty/%RH)]]></text>
 			</staticText>
+			<rectangle>
+				<reportElement x="309" y="33" width="66" height="71" uuid="458ea3fd-8914-439e-b8a6-2f34b5ca24e0"/>
+			</rectangle>
 			<staticText>
-				<reportElement x="533" y="59" width="70" height="73" uuid="faa12f80-2eca-4612-b77b-5920d5d36dc9"/>
+				<reportElement x="0" y="33" width="59" height="71" uuid="1df1e7b0-5f5a-4adb-b064-fb4a96f8328f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Incertidumbre/Uncertainty]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="0" y="61" width="89" height="73" uuid="aac66f8b-8e95-46b9-94ce-471017e52cff"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Código interno
 Del equipo/
 Internal code equipment]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="309" y="61" width="83" height="73" uuid="b8e926a8-acc0-4e14-96e5-b6cc87ace058"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+				<reportElement x="232" y="33" width="77" height="71" uuid="843043e0-2450-4299-89ce-4d9b0523bb18"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Tensión de uso [kV]  A.C.
-Operation Voltage [kV] A.C
-]]></text>
+				<text><![CDATA[
+Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="17" width="181" height="20" uuid="996fa239-0096-4ae2-9049-de16d82e1cf9"/>
-				<textElement>
-					<font isBold="true"/>
+				<reportElement x="59" y="33" width="42" height="71" uuid="5b8a43d4-3d93-4a73-a780-1d818fb4bfc8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+				<text><![CDATA[Equipo
+Equipment]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="552" y="33" width="45" height="71" uuid="6318ccbf-39c4-4fdf-87d1-91046eddafa3"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="128" y="33" width="52" height="71" uuid="a3de7365-6791-459a-907f-b5f08fe3ed85"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[
+Tensión de
+Ensayo [kV]  A.C
+Test voltage [kV] A.C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="33" width="27" height="71" uuid="6933de75-0a88-4c08-a4ca-b3916ddf96e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clase
+Class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="33" width="52" height="71" uuid="99c2e847-89c5-4cc9-adae-5e990b4e844d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[
+Tensión de uso [kV]  A.C.
+Operation Voltage [kV] A.C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="552" y="33" width="45" height="71" uuid="723a4877-ef73-456d-acc2-300854c007e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Test Date/Fecha Ensayo]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="494" y="33" width="58" height="71" uuid="dbb5a5f5-e83e-4add-bb57-1b025ba97823"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="427" y="33" width="67" height="71" uuid="50f7181a-0abd-4b9f-baa5-164cde9adabf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="128" y="33" width="52" height="71" uuid="ec4f241e-3744-43ab-aac2-1781aa947ebe"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="494" y="33" width="58" height="71" uuid="5cbfe199-713f-458d-ae34-d2d023309c9f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Incertidumbre/Uncertainty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="33" width="77" height="71" uuid="42ea0bcc-c63d-4d4b-961e-c04d0ff081f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[
+Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="33" width="67" height="71" uuid="8a083291-8845-4773-bba6-50a77300aef2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Humedad Relativa/Relativity Huminty/%RH)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="33" width="52" height="71" uuid="9424c588-1c2a-459c-a333-1fc0d9e53ed2"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[
+Tensión de
+Ensayo [kV]  A.C
+Test voltage [kV] A.C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="33" width="58" height="71" uuid="97225384-437f-4a14-a727-22f63b0a2177"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Incertidumbre/Uncertainty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="33" width="66" height="71" uuid="1d65c5f7-84fa-4f5c-ab4b-8e074e874f4d"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[
+Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="100" y="33" width="27" height="71" uuid="d3034b32-e3c9-45e5-bd84-766c1f005be6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="101" y="33" width="27" height="71" uuid="04abd68b-6fb7-4256-9c63-b7afc6e8ea10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clase
+Class]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="180" y="1" width="52" height="26" uuid="8f3a1e3b-8ec2-44d0-983e-6d438b95d69d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="309" y="1" width="66" height="26" uuid="11ee2897-d041-441f-8f7b-c95858b31f0d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="494" y="1" width="58" height="26" uuid="df64b72a-71d5-4e51-9329-ef37af4c8e2d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="427" y="1" width="67" height="26" uuid="0f983c5d-8cd8-40c0-ae37-08fad7d55396"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="100" y="1" width="27" height="26" uuid="deed46fa-3428-4d60-8706-99768dbdf7bf"/>
+			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="0" y="0" width="89" height="20" backcolor="#CCCCCC" uuid="c8b93176-9c36-4109-83e0-e70cb6d5d572"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
+				<reportElement mode="Opaque" x="428" y="2" width="66" height="25" backcolor="#CCCCCC" uuid="a0134a05-a658-4600-a1b3-c5df6fd5bcc2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{HUMEDAD}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement mode="Opaque" x="89" y="0" width="83" height="20" backcolor="#CCCCCC" uuid="b4dc0b37-de38-458a-9478-f5f3c69a7667"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[Cubridor de Linea]]></text>
-			</staticText>
+			<rectangle>
+				<reportElement x="127" y="1" width="52" height="26" uuid="acd8efd8-bb3e-43b2-b203-4f7630855e94"/>
+			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="172" y="0" width="37" height="20" backcolor="#CCCCCC" uuid="abcdeba6-6a6b-4d86-aa57-737c96ecb1f5"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{OBS_CLASE}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="209" y="0" width="100" height="20" backcolor="#CCCCCC" uuid="1323fe27-ff05-4b4d-ab70-e17cc5938387"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{TENSION_ENSAYO}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="309" y="0" width="84" height="20" backcolor="#CCCCCC" uuid="d217822c-1f2a-47ed-984f-308f87ab161a"/>
+				<reportElement mode="Opaque" x="180" y="2" width="52" height="25" backcolor="#CCCCCC" uuid="b6cef7b2-4de1-4cb9-9757-d6dd94fdfc90"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OBS_TENSION}]]></textFieldExpression>
 			</textField>
+			<rectangle>
+				<reportElement x="232" y="1" width="77" height="26" uuid="069029f7-7a34-4d13-b5a4-cfc68a28b6bf"/>
+			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="455" y="0" width="78" height="20" backcolor="#CCCCCC" uuid="8cc84e0d-4d29-429a-87c3-a85bd3a62a56"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
+				<reportElement mode="Opaque" x="495" y="2" width="57" height="25" backcolor="#CCCCCC" uuid="a4e10cc1-aac6-4283-88e5-ebd15e779bd8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{HUMEDAD}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE_TENSION} + " - " + $F{INCERTIDUMBRE_CORRIENTE}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="552" y="1" width="45" height="26" uuid="b8189fcf-d2f9-461b-a0cc-6100d4c1190e"/>
+			</rectangle>
+			<textField>
+				<reportElement mode="Opaque" x="128" y="2" width="51" height="25" backcolor="#CCCCCC" uuid="708c581b-3d7e-4315-9b96-6cae909f514e"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TENSION_ENSAYO}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="59" y="1" width="41" height="26" uuid="f753bda3-b95f-4f8e-aca8-79c667320862"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="375" y="1" width="52" height="26" uuid="f45c3e0a-1729-4a1e-a459-547c4d654ccd"/>
+			</rectangle>
+			<textField>
+				<reportElement mode="Opaque" x="101" y="2" width="26" height="25" backcolor="#CCCCCC" uuid="02e6449a-5bef-4bef-900f-42c4d9cbba0a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CLASE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="392" y="0" width="63" height="20" backcolor="#CCCCCC" uuid="7ac69686-80fc-483e-a932-d86ac4955865"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
+				<reportElement mode="Opaque" x="310" y="2" width="65" height="25" backcolor="#CCCCCC" uuid="9f79175d-d1a4-47f4-a294-7dbe923c7d64"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA_MEDIDA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="376" y="2" width="51" height="25" backcolor="#CCCCCC" uuid="0e2f89c4-d7d3-422d-b52f-e72a386a8cd6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TEMPERATURA}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="603" y="0" width="70" height="20" backcolor="#CCCCCC" uuid="80c0be9a-faeb-4c00-9f11-839a5817e2c0"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
+				<reportElement mode="Opaque" x="553" y="2" width="44" height="25" backcolor="#CCCCCC" uuid="044d7e76-6fbc-4c9f-a350-149b252bfa9b"/>
+				<textElement>
+					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="1" width="59" height="26" uuid="68ee5311-8777-4e10-94dd-02790ce530ab"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="60" y="2" width="40" height="25" backcolor="#CCCCCC" uuid="eadd9119-c35b-4500-b2da-020e71cd9105"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Calzado]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="233" y="2" width="76" height="25" backcolor="#CCCCCC" uuid="a779c69c-ef44-42ad-944e-e1731942ecd9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="1" y="2" width="58" height="25" backcolor="#CCCCCC" uuid="1ffa5813-1bc5-4815-9ef6-ed5cd03ce648"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

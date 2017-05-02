@@ -99,7 +99,7 @@ Test Result
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="3" width="181" height="20" uuid="6fa680dd-3424-4e49-acd6-09c2fff27784"/>
+				<reportElement x="0" y="3" width="283" height="20" uuid="6fa680dd-3424-4e49-acd6-09c2fff27784"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>

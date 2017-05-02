@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mantas_subreport_result_obser" language="groovy" pageWidth="730" pageHeight="802" columnWidth="690" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e4a63e46-9563-48d2-8eac-84e8035b3344">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mantas_subreport_result_obser" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e4a63e46-9563-48d2-8eac-84e8035b3344">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -16,8 +16,8 @@
        "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", "FECHA_REGISTRO",
-       "CORRIENTE_FUGA_MEDIDA","COD_CLIENTE"
-  FROM labor."REGISTRO_INSPECCION_EQUIPO" where "FK_COTIZACION" = $P{ncotic};]]>
+       "CORRIENTE_FUGA_MEDIDA","COD_CLIENTE",dts.cod_seriales
+  FROM labor."REGISTRO_INSPECCION_EQUIPO", labor."DET_COTI_SERIALIZAR_EQUIPO" dts where dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" AND "FK_COTIZACION" = $P{ncotic} ORDER BY "ID_INSPECCION_EQUIPO" asc]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
@@ -63,32 +63,14 @@
 	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
 	<field name="CORRIENTE_FUGA_MEDIDA" class="java.lang.Double"/>
 	<field name="COD_CLIENTE" class="java.lang.String"/>
+	<field name="cod_seriales" class="java.lang.String"/>
 	<title>
-		<band height="21" splitType="Stretch"/>
+		<band height="7" splitType="Stretch"/>
 	</title>
 	<pageHeader>
-		<band height="161" splitType="Stretch">
+		<band height="102" splitType="Stretch">
 			<staticText>
-				<reportElement x="248" y="105" width="442" height="56" uuid="7245293f-c6c5-43b1-addc-9f726875c9af"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[Resultado del ensayo/
-Test Result
-
-
-]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="-2" y="105" width="125" height="56" uuid="d027aaac-476d-42f3-822f-1fa8cee7e31e"/>
-				<textElement textAlignment="Center"/>
-				<text><![CDATA[Código asignado por el cliente/
- code assigned by client
-
-
-
-]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="123" y="105" width="125" height="56" uuid="628eef83-d8c5-4c33-a51f-a1f42855e2c5"/>
+				<reportElement x="125" y="41" width="125" height="56" uuid="7c536c6b-52f1-45cd-a219-ed7d1d991f7d"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código interno
 Del equipo/
@@ -97,26 +79,61 @@ Internal code equipment
 
 ]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="283" height="20" uuid="0e81f372-29c1-4d6b-b3be-41539fc04eaa"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="41" width="322" height="56" uuid="1705f02b-6130-4ec8-9d05-ee3637615b4a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Resultado del ensayo/
+Test Result
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="41" width="125" height="56" uuid="6f99265c-6b14-4c2a-bab8-54d22a64e916"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Código asignado por el cliente/
+ code assigned by client
+
+
+
+]]></text>
+			</staticText>
 		</band>
 	</pageHeader>
 	<detail>
 		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="248" y="4" width="322" height="22" uuid="f59e09ad-5bfd-40b7-b0bd-c2352e35541c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="124" y="4" width="124" height="22" uuid="59f30315-c611-4949-8f45-f1b9aecf123e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="4" width="124" height="22" uuid="2ecdeda3-64cc-4284-aa23-0fe6c9c0c746"/>
+			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="-2" y="0" width="125" height="20" backcolor="#CCCCCC" uuid="02d32fca-9e81-4d1f-a146-9c6f348c3869"/>
-				<textElement textAlignment="Center">
+				<reportElement mode="Opaque" x="1" y="5" width="122" height="20" backcolor="#CCCCCC" uuid="f183d31f-23b5-4d69-85fc-0f23d1f8917b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{COD_CLIENTE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="123" y="0" width="125" height="20" backcolor="#CCCCCC" uuid="43fc98dd-def0-405b-b45a-ee118a4b3c23"/>
+				<reportElement mode="Opaque" x="125" y="5" width="122" height="20" backcolor="#CCCCCC" uuid="dd820ea2-aaa7-4194-a5e4-3983be795bca"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{FK_ID_SERIAL_EQUIPO}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="248" y="0" width="442" height="20" backcolor="#CCCCCC" uuid="7b2692fc-6eb0-4771-a4fa-8b0b8c328fe7"/>
+				<reportElement mode="Opaque" x="249" y="5" width="321" height="20" backcolor="#CCCCCC" uuid="86b16c89-d338-4746-8d9f-bc0d6c105d77"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>

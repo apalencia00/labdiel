@@ -274,7 +274,7 @@ Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]]
 				<reportElement x="60" y="0" width="41" height="26" uuid="2b3d9bfd-4396-4672-b557-bb1a476a020c"/>
 			</rectangle>
 			<staticText>
-				<reportElement mode="Opaque" x="60" y="0" width="41" height="26" backcolor="#CCCCCC" uuid="bd43d865-6b07-4712-ac54-b6a83e24bef9"/>
+				<reportElement mode="Opaque" x="61" y="0" width="41" height="26" backcolor="#CCCCCC" uuid="bd43d865-6b07-4712-ac54-b6a83e24bef9"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
@@ -294,10 +294,10 @@ Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]]
 				<textFieldExpression><![CDATA[$F{CLASE}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="181" y="0" width="51" height="26" uuid="d5114d52-fd3c-4cbd-bdfd-62ec184e54a1"/>
+				<reportElement x="181" y="0" width="52" height="26" uuid="d5114d52-fd3c-4cbd-bdfd-62ec184e54a1"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="182" y="0" width="50" height="26" backcolor="#CCCCCC" uuid="d2b7f548-5a85-425d-8b8d-cf5e492e8cdc"/>
+				<reportElement mode="Opaque" x="182" y="0" width="51" height="26" backcolor="#CCCCCC" uuid="d2b7f548-5a85-425d-8b8d-cf5e492e8cdc"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
@@ -311,15 +311,8 @@ Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]]
 				<textFieldExpression><![CDATA[$F{TENSION_ENSAYO}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="232" y="0" width="78" height="26" uuid="cc9324a5-53bf-4e7d-95be-30a82f49facd"/>
+				<reportElement x="233" y="0" width="77" height="26" uuid="cc9324a5-53bf-4e7d-95be-30a82f49facd"/>
 			</rectangle>
-			<textField>
-				<reportElement mode="Opaque" x="233" y="0" width="77" height="26" backcolor="#CCCCCC" uuid="18100e1c-ae40-49e6-96d6-a1bbe5e219cb"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="6"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
-			</textField>
 			<rectangle>
 				<reportElement x="310" y="0" width="66" height="26" uuid="2f8fe354-aaf0-42ef-aa34-e9cca34888f5"/>
 			</rectangle>
@@ -369,6 +362,20 @@ Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]]
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="554" y="1" width="44" height="25" backcolor="#CCCCCC" uuid="65bfb1e6-8dbe-4b0f-8075-23421f84153d"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="234" y="1" width="76" height="25" backcolor="#CCCCCC" uuid="af8b7988-fd0c-44c0-b6a7-b73cb144d40e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
