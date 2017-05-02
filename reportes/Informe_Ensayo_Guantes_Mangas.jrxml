@@ -79,7 +79,7 @@ AND coti."FK_EMPLEADO" = "ID_EMPLEADO"]]>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="477" y="64" width="121" height="20" uuid="27dd1a70-327c-4968-a9b0-fa572fec8909"/>
+				<reportElement x="476" y="64" width="121" height="20" uuid="27dd1a70-327c-4968-a9b0-fa572fec8909"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
