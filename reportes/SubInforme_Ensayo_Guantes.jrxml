@@ -84,7 +84,7 @@
 	<field name="INCERTIDUMBRE_TENSION" class="java.lang.String"/>
 	<field name="INCERTIDUMBRE_CORRIENTE" class="java.lang.String"/>
 	<pageHeader>
-		<band height="110">
+		<band height="98">
 			<staticText>
 				<reportElement x="0" y="2" width="281" height="20" uuid="bb197a76-891c-4ba2-9e86-92f902b8b198"/>
 				<textElement>
@@ -93,10 +93,10 @@
 				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="1" y="37" width="59" height="71" uuid="752a103a-1d0f-48b2-ac63-4cda82d97456"/>
+				<reportElement x="1" y="27" width="59" height="71" uuid="752a103a-1d0f-48b2-ac63-4cda82d97456"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="1" y="37" width="59" height="71" uuid="1cdcad50-ed0a-4cda-9333-216916e6dbfe"/>
+				<reportElement x="1" y="27" width="59" height="71" uuid="1cdcad50-ed0a-4cda-9333-216916e6dbfe"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -105,10 +105,10 @@ Del equipo/
 Internal code equipment]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="60" y="37" width="42" height="71" uuid="86dafc94-844c-41d0-83a5-276acbb9ea5d"/>
+				<reportElement x="60" y="27" width="42" height="71" uuid="86dafc94-844c-41d0-83a5-276acbb9ea5d"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="60" y="37" width="42" height="71" uuid="61eff778-24a2-47f6-8b8c-0d791327de35"/>
+				<reportElement x="60" y="27" width="42" height="71" uuid="61eff778-24a2-47f6-8b8c-0d791327de35"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -116,10 +116,10 @@ Internal code equipment]]></text>
 Equipment]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="102" y="37" width="27" height="71" uuid="5ae5bdde-d077-4f06-b4e2-7f0594c7bd2d"/>
+				<reportElement x="102" y="27" width="27" height="71" uuid="5ae5bdde-d077-4f06-b4e2-7f0594c7bd2d"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="102" y="37" width="27" height="71" uuid="ffae61a3-0abd-4f29-b3cb-e94abce73ecd"/>
+				<reportElement x="102" y="27" width="27" height="71" uuid="ffae61a3-0abd-4f29-b3cb-e94abce73ecd"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -127,10 +127,10 @@ Equipment]]></text>
 Class]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="129" y="37" width="52" height="71" uuid="949b0b6e-8ee9-4d24-aa88-c62a07b4e7b9"/>
+				<reportElement x="129" y="27" width="52" height="71" uuid="949b0b6e-8ee9-4d24-aa88-c62a07b4e7b9"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="129" y="37" width="52" height="71" uuid="d7591bed-d77e-4c96-963a-f7b6c0f07e10"/>
+				<reportElement x="129" y="27" width="52" height="71" uuid="d7591bed-d77e-4c96-963a-f7b6c0f07e10"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -140,10 +140,10 @@ Ensayo [kV]  A.C
 Test voltage [kV] A.C]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="181" y="37" width="52" height="71" uuid="5f3ee9d2-fbf0-40d4-afbc-e1e2951ed272"/>
+				<reportElement x="181" y="27" width="52" height="71" uuid="5f3ee9d2-fbf0-40d4-afbc-e1e2951ed272"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="181" y="37" width="52" height="71" uuid="aa6839eb-138c-4678-a584-07fd382aff61"/>
+				<reportElement x="181" y="27" width="52" height="71" uuid="aa6839eb-138c-4678-a584-07fd382aff61"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -152,10 +152,10 @@ Tensión de uso [kV]  A.C.
 Operation Voltage [kV] A.C]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="233" y="37" width="77" height="71" uuid="77668b18-ecd0-45d3-a904-fc0dcc847615"/>
+				<reportElement x="233" y="27" width="77" height="71" uuid="77668b18-ecd0-45d3-a904-fc0dcc847615"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="233" y="37" width="77" height="71" uuid="76d0db25-1bbb-4ada-af42-31786af0ab2c"/>
+				<reportElement x="233" y="27" width="77" height="71" uuid="76d0db25-1bbb-4ada-af42-31786af0ab2c"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -163,10 +163,10 @@ Operation Voltage [kV] A.C]]></text>
 Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="310" y="37" width="66" height="71" uuid="b021169f-c1d4-4644-8698-07778912fc4e"/>
+				<reportElement x="310" y="27" width="66" height="71" uuid="b021169f-c1d4-4644-8698-07778912fc4e"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="310" y="37" width="66" height="71" uuid="8a4c8272-ab80-4aeb-8078-aee09c6d2eaf"/>
+				<reportElement x="310" y="27" width="66" height="71" uuid="8a4c8272-ab80-4aeb-8078-aee09c6d2eaf"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -174,40 +174,40 @@ Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]]
 Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="376" y="37" width="52" height="71" uuid="088be53e-8c0c-47bf-a2ed-5ee709bca4c6"/>
+				<reportElement x="376" y="27" width="52" height="71" uuid="088be53e-8c0c-47bf-a2ed-5ee709bca4c6"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="376" y="37" width="52" height="71" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
+				<reportElement x="376" y="27" width="52" height="71" uuid="677a4ca3-830a-44df-a741-6a1c470b67d6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Temperatura/Temperature °C]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="428" y="37" width="67" height="71" uuid="f383a53d-cd1d-437f-9097-52d247e737e5"/>
+				<reportElement x="428" y="27" width="67" height="71" uuid="f383a53d-cd1d-437f-9097-52d247e737e5"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="428" y="37" width="67" height="71" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
+				<reportElement x="428" y="27" width="67" height="71" uuid="7d0717d5-6762-4068-930d-9d6088438512"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Humedad Relativa/Relativity Huminty/%RH)]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="495" y="37" width="58" height="71" uuid="ce054e9a-95d2-46c6-bcbb-be4a954065fd"/>
+				<reportElement x="495" y="27" width="58" height="71" uuid="ce054e9a-95d2-46c6-bcbb-be4a954065fd"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="495" y="37" width="58" height="71" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
+				<reportElement x="495" y="27" width="58" height="71" uuid="77fe3e1e-044d-41d0-8a01-59d080e05cb8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Incertidumbre/Uncertainty]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="553" y="37" width="45" height="71" uuid="6e92b58c-62a2-43f0-b13e-66862f0f3203"/>
+				<reportElement x="553" y="27" width="45" height="71" uuid="6e92b58c-62a2-43f0-b13e-66862f0f3203"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="553" y="37" width="45" height="71" uuid="1412563b-926b-478c-8348-18735d0de8ce"/>
+				<reportElement x="553" y="27" width="45" height="71" uuid="1412563b-926b-478c-8348-18735d0de8ce"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
