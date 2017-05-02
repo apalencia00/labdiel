@@ -20,6 +20,9 @@
 	<field name="US_MODIFICA" class="java.lang.Integer"/>
 	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
 	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
+	<title>
+		<band height="35"/>
+	</title>
 	<detail>
 		<band height="102" splitType="Stretch">
 			<staticText>
