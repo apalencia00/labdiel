@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Cubridor_Linea_subreport2_result_obs" language="groovy" pageWidth="720" pageHeight="802" columnWidth="720" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="84d7882c-8ceb-47e4-806e-01b3579cc83b">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Cubridor_Linea_subreport2_result_obs" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="84d7882c-8ceb-47e4-806e-01b3579cc83b">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -16,8 +16,8 @@
        "INFLADO", "OBS_INFLADO", "INSPECCION", "OBS_INSPECCION", "OBS_DEGRADACION",
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", "FECHA_REGISTRO",
-       "CORRIENTE_FUGA_MEDIDA", "COD_CLIENTE"
-  FROM labor."REGISTRO_INSPECCION_EQUIPO" where "FK_COTIZACION" = $P{ncotic};]]>
+       "CORRIENTE_FUGA_MEDIDA", "COD_CLIENTE",dts.cod_seriales
+  FROM labor."REGISTRO_INSPECCION_EQUIPO", labor."DET_COTI_SERIALIZAR_EQUIPO" dts where dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" AND "FK_COTIZACION" = $P{ncotic} ORDER BY "ID_INSPECCION_EQUIPO" asc]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
@@ -63,13 +63,14 @@
 	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
 	<field name="CORRIENTE_FUGA_MEDIDA" class="java.lang.Double"/>
 	<field name="COD_CLIENTE" class="java.lang.String"/>
+	<field name="cod_seriales" class="java.lang.String"/>
 	<title>
 		<band height="32" splitType="Stretch"/>
 	</title>
 	<pageHeader>
 		<band height="113" splitType="Stretch">
 			<staticText>
-				<reportElement x="125" y="57" width="125" height="56" uuid="98df92da-7288-4c50-9a99-68780339bd49"/>
+				<reportElement x="155" y="57" width="155" height="56" uuid="98df92da-7288-4c50-9a99-68780339bd49"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
@@ -81,7 +82,7 @@ Internal code equipment
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="57" width="125" height="56" uuid="c8d8be72-9ca3-47c4-a664-9f7825980fd6"/>
+				<reportElement x="0" y="57" width="155" height="56" uuid="c8d8be72-9ca3-47c4-a664-9f7825980fd6"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
@@ -93,7 +94,7 @@ Internal code equipment
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="250" y="57" width="470" height="56" uuid="e76d1b50-ac94-4cad-912b-b3476d8b981e"/>
+				<reportElement x="310" y="57" width="262" height="56" uuid="e76d1b50-ac94-4cad-912b-b3476d8b981e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
@@ -104,7 +105,7 @@ Test Result
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="25" width="181" height="20" uuid="2c4ebce8-504d-4084-b406-ec2529d60c75"/>
+				<reportElement x="0" y="13" width="277" height="20" uuid="d2375e30-ff34-48b8-801f-25fee63a255d"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -113,27 +114,36 @@ Test Result
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="31" splitType="Stretch">
+		<band height="36" splitType="Stretch">
+			<rectangle>
+				<reportElement x="310" y="1" width="262" height="22" uuid="658892b7-ea62-4c73-be36-4ef173fa5a02"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="1" width="155" height="22" uuid="284dceeb-3ebf-4a81-896f-26bead55ab60"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="155" y="1" width="155" height="22" uuid="b30ba4c4-8372-402c-ac76-2a5741c51854"/>
+			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="0" y="0" width="125" height="20" backcolor="#CCCCCC" uuid="8de67570-1440-42e8-ad96-c86a203f39d0"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{COD_CLIENTE}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="125" y="0" width="125" height="20" backcolor="#CCCCCC" uuid="7a461738-6b64-45bd-ac8e-c364156b18dc"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{FK_ID_SERIAL_EQUIPO}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="250" y="0" width="470" height="20" backcolor="#CCCCCC" uuid="26032166-631a-448d-b5c7-2f5c13d50c89"/>
+				<reportElement mode="Opaque" x="312" y="2" width="260" height="20" backcolor="#CCCCCC" uuid="cbf4547d-fca7-476a-a642-0a431317ddff"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OBS_FINAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="155" y="2" width="155" height="20" backcolor="#CCCCCC" uuid="0374449c-8e5b-492e-bb34-937c6ce116a7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="1" y="2" width="153" height="20" backcolor="#CCCCCC" uuid="81f1c3fc-2d14-44ff-b78d-c048d4d7749f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COD_CLIENTE}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

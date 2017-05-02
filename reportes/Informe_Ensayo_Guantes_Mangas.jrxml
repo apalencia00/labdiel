@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="639" pageHeight="792" columnWidth="599" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="289"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -89,7 +89,7 @@ AND coti."FK_EMPLEADO" = "ID_EMPLEADO"]]>
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="446" splitType="Stretch">
+		<band height="431" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="118" height="20" uuid="d89e2e01-c751-484d-957a-71e5057df5a1"/>
 				<textElement textAlignment="Center">
@@ -268,9 +268,9 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 ]]></text>
 			</staticText>
 		</band>
-		<band height="50">
+		<band height="40">
 			<subreport>
-				<reportElement x="1" y="0" width="598" height="50" uuid="2ef997a6-46fc-4d30-b240-4fb9db9bb1b9"/>
+				<reportElement x="1" y="0" width="598" height="40" uuid="2ef997a6-46fc-4d30-b240-4fb9db9bb1b9"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -278,9 +278,9 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_equipo_inspeccion.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="51">
+		<band height="40">
 			<subreport>
-				<reportElement x="0" y="0" width="599" height="51" uuid="c21385a6-a224-4bc9-8105-cc70cfc045db"/>
+				<reportElement x="0" y="0" width="599" height="40" uuid="c21385a6-a224-4bc9-8105-cc70cfc045db"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -288,9 +288,9 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/SubInforme_Ensayo_Guantes.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="50">
+		<band height="40">
 			<subreport>
-				<reportElement x="0" y="0" width="599" height="50" uuid="3f5a8915-381a-4786-8579-6277e68123be"/>
+				<reportElement x="0" y="0" width="599" height="40" uuid="3f5a8915-381a-4786-8579-6277e68123be"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -298,9 +298,9 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/Informe_Ensayo_Guantes_Mangas_subreport2.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="50">
+		<band height="40">
 			<subreport>
-				<reportElement x="0" y="0" width="599" height="50" uuid="f3dabfb7-0d6a-40df-b202-37ca2f12fcbe"/>
+				<reportElement x="0" y="0" width="599" height="40" uuid="f3dabfb7-0d6a-40df-b202-37ca2f12fcbe"/>
 				<subreportParameter name="observ">
 					<subreportParameterExpression><![CDATA[$P{observ}]]></subreportParameterExpression>
 				</subreportParameter>

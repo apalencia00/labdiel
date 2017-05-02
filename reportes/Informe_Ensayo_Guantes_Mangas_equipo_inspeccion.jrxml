@@ -7,12 +7,12 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[SELECT *
+		<![CDATA[SELECT DISTINCT("FK_ID_EQUIPO_INSPECCIONADOR"), *
   FROM labor."RGTRO_ESAY_EQIP_INSPC", labor."INSTRUMENTO_ENSAYO" WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO" = 'G']]>
 	</queryString>
+	<field name="FK_ID_EQUIPO_INSPECCIONADOR" class="java.lang.Integer"/>
 	<field name="ENSAYO_EQUIPOS_PROBADORES" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
-	<field name="FK_ID_EQUIPO_INSPECCIONADOR" class="java.lang.Integer"/>
 	<field name="FORMULARIO" class="java.lang.String"/>
 	<field name="USUARIO" class="java.lang.Integer"/>
 	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
