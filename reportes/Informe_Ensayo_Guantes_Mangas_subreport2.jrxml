@@ -64,13 +64,10 @@
 	<field name="CORRIENTE_FUGA_MEDIDA" class="java.lang.Double"/>
 	<field name="COD_CLIENTE" class="java.lang.String"/>
 	<field name="cod_seriales" class="java.lang.String"/>
-	<title>
-		<band height="7" splitType="Stretch"/>
-	</title>
 	<pageHeader>
-		<band height="100">
+		<band height="84">
 			<staticText>
-				<reportElement x="0" y="44" width="125" height="56" uuid="7f843ca6-2e04-419e-b0c1-9afed60cc12d"/>
+				<reportElement x="0" y="28" width="125" height="56" uuid="7f843ca6-2e04-419e-b0c1-9afed60cc12d"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código asignado por el cliente/
  code assigned by client
@@ -80,7 +77,7 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="125" y="44" width="125" height="56" uuid="0414aee1-58c2-4cb9-8ef3-dcff4175bbb2"/>
+				<reportElement x="125" y="28" width="125" height="56" uuid="0414aee1-58c2-4cb9-8ef3-dcff4175bbb2"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código interno
 Del equipo/
@@ -90,7 +87,7 @@ Internal code equipment
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="250" y="44" width="322" height="56" uuid="51253100-d848-4eb7-8bf3-ac33c02b4164"/>
+				<reportElement x="250" y="28" width="322" height="56" uuid="51253100-d848-4eb7-8bf3-ac33c02b4164"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Resultado del ensayo/
 Test Result
