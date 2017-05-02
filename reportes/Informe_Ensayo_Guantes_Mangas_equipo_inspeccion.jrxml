@@ -122,7 +122,7 @@
 				<textFieldExpression><![CDATA[$F{TRAZADO}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="490" y="0" width="114" height="20" uuid="34aecde0-1e15-4594-bc0a-5c041d78dcac"/>
+				<reportElement x="490" y="1" width="114" height="22" uuid="34aecde0-1e15-4594-bc0a-5c041d78dcac"/>
 			</rectangle>
 			<rectangle>
 				<reportElement x="222" y="1" width="136" height="20" uuid="d37d0e50-96cc-40bb-b4f1-3813dd9623f6"/>
@@ -135,7 +135,7 @@
 				<textFieldExpression><![CDATA[$F{CERTIFICADO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="493" y="2" width="110" height="18" backcolor="#CCCCCC" uuid="2a2e3d7a-e858-42fb-bde3-247772a98f4e"/>
+				<reportElement mode="Opaque" x="492" y="3" width="110" height="18" backcolor="#CCCCCC" uuid="2a2e3d7a-e858-42fb-bde3-247772a98f4e"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
