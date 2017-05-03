@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="639" pageHeight="792" columnWidth="599" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="289"/>
+	<property name="ireport.y" value="335"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
@@ -57,29 +57,29 @@ AND coti."FK_EMPLEADO" = "ID_EMPLEADO"]]>
 	<pageHeader>
 		<band height="84">
 			<image>
-				<reportElement x="12" y="2" width="92" height="61" uuid="2788508b-4116-484f-a2ec-99f3e4221991"/>
+				<reportElement x="8" y="2" width="92" height="61" uuid="2788508b-4116-484f-a2ec-99f3e4221991"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="118" y="2" width="362" height="36" uuid="d14bcfac-d94c-4831-8cf1-fcecc00325cc"/>
+				<reportElement x="114" y="2" width="362" height="36" uuid="d14bcfac-d94c-4831-8cf1-fcecc00325cc"/>
 				<textElement textAlignment="Center">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[INFORME DE ENSAYO DIELECTRICO A GUANTES O MANGAS AISLADAS EN SERVICIO.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="118" y="27" width="362" height="36" uuid="844abeff-d47e-4130-916d-a0a40650bacf"/>
+				<reportElement x="114" y="27" width="362" height="36" uuid="844abeff-d47e-4130-916d-a0a40650bacf"/>
 				<textElement textAlignment="Center">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[DIELECTRICAL TEST REPORT FOR GLOVES SLEVEES INSULATE IN SERVICE.]]></text>
 			</staticText>
 			<image>
-				<reportElement x="480" y="0" width="119" height="63" uuid="eb9bc268-2670-41b8-90e5-f2bf7a7bccc2"/>
+				<reportElement x="476" y="0" width="119" height="63" uuid="eb9bc268-2670-41b8-90e5-f2bf7a7bccc2"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/onac.jpg"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="476" y="64" width="121" height="20" uuid="27dd1a70-327c-4968-a9b0-fa572fec8909"/>
+				<reportElement x="470" y="64" width="121" height="20" uuid="27dd1a70-327c-4968-a9b0-fa572fec8909"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
@@ -315,16 +315,21 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 	<pageFooter>
 		<band height="216">
 			<textField>
-				<reportElement x="453" y="152" width="80" height="20" uuid="3ec5d3ee-63ad-48e2-9cc6-eda5b1b6cdd9"/>
-				<textElement textAlignment="Right"/>
+				<reportElement x="453" y="135" width="80" height="20" uuid="3ec5d3ee-63ad-48e2-9cc6-eda5b1b6cdd9"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="533" y="152" width="40" height="20" uuid="8b25c5ba-5cb2-4e6f-b78c-cd34d87c9a97"/>
+				<reportElement x="533" y="135" width="40" height="20" uuid="8b25c5ba-5cb2-4e6f-b78c-cd34d87c9a97"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="453" y="122" width="114" height="32" uuid="4c78541a-35d9-4516-9e81-76fdfadc0aca"/>
+				<reportElement x="453" y="105" width="114" height="32" uuid="4c78541a-35d9-4516-9e81-76fdfadc0aca"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -333,14 +338,14 @@ VER 0
 FECHA: 2010-07-19]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="453" y="115" width="114" height="20" uuid="d5c0c5c3-42a8-436b-8769-9a5dd1ff8379"/>
+				<reportElement x="453" y="98" width="114" height="20" uuid="d5c0c5c3-42a8-436b-8769-9a5dd1ff8379"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NORMA_INFORME}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="183" width="599" height="20" uuid="cf2ba648-949a-4b81-8fa8-ea2ddab4607e"/>
+				<reportElement x="0" y="166" width="599" height="20" uuid="cf2ba648-949a-4b81-8fa8-ea2ddab4607e"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -375,7 +380,7 @@ FECHA: 2010-07-19]]></text>
 				<text><![CDATA[Laboratorista/Lab Assistant]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="22" y="141" width="431" height="22" uuid="7a325c24-40f4-473c-93c3-19dd857a1f04"/>
+				<reportElement x="2" y="186" width="431" height="22" uuid="7a325c24-40f4-473c-93c3-19dd857a1f04"/>
 				<textElement textAlignment="Justified">
 					<font size="8" isBold="true"/>
 				</textElement>

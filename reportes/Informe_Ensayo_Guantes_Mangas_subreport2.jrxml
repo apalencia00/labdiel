@@ -67,17 +67,23 @@
 	<pageHeader>
 		<band height="84">
 			<staticText>
-				<reportElement x="0" y="28" width="125" height="56" uuid="7f843ca6-2e04-419e-b0c1-9afed60cc12d"/>
-				<textElement textAlignment="Center"/>
-				<text><![CDATA[Código asignado por el cliente/
- code assigned by client
-
-
-
-]]></text>
+				<reportElement x="0" y="3" width="283" height="20" uuid="6fa680dd-3424-4e49-acd6-09c2fff27784"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
 			</staticText>
+			<rectangle>
+				<reportElement x="1" y="33" width="125" height="51" uuid="345f2fe1-e9ad-4f34-bf28-d2fc07a18622"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="126" y="33" width="127" height="51" uuid="5c4448fb-68ba-4d88-81af-b29c08f5b563"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="251" y="33" width="320" height="51" uuid="9d259bd1-4059-4e26-b3b5-5d0094a7de09"/>
+			</rectangle>
 			<staticText>
-				<reportElement x="125" y="28" width="125" height="56" uuid="0414aee1-58c2-4cb9-8ef3-dcff4175bbb2"/>
+				<reportElement x="127" y="33" width="125" height="51" uuid="0414aee1-58c2-4cb9-8ef3-dcff4175bbb2"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código interno
 Del equipo/
@@ -87,7 +93,7 @@ Internal code equipment
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="250" y="28" width="322" height="56" uuid="51253100-d848-4eb7-8bf3-ac33c02b4164"/>
+				<reportElement x="253" y="33" width="318" height="51" uuid="51253100-d848-4eb7-8bf3-ac33c02b4164"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Resultado del ensayo/
 Test Result
@@ -96,31 +102,34 @@ Test Result
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="3" width="283" height="20" uuid="6fa680dd-3424-4e49-acd6-09c2fff27784"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+				<reportElement x="2" y="33" width="125" height="51" uuid="7f843ca6-2e04-419e-b0c1-9afed60cc12d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Código asignado por el cliente/
+ code assigned by client
+
+
+
+]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
 	<detail>
 		<band height="26" splitType="Stretch">
 			<rectangle>
-				<reportElement x="0" y="1" width="125" height="22" uuid="8ee4e894-5d40-4cdd-905d-c51c70f67d77"/>
+				<reportElement x="1" y="1" width="125" height="22" uuid="8ee4e894-5d40-4cdd-905d-c51c70f67d77"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="1" y="2" width="125" height="20" backcolor="#CCCCCC" uuid="20957c62-1019-47ff-9f15-a0a695f2465e"/>
+				<reportElement mode="Opaque" x="2" y="2" width="125" height="20" backcolor="#CCCCCC" uuid="20957c62-1019-47ff-9f15-a0a695f2465e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{COD_CLIENTE}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="125" y="1" width="125" height="22" uuid="da819607-3812-44c3-baf7-1c360c94444d"/>
+				<reportElement x="127" y="1" width="124" height="22" uuid="da819607-3812-44c3-baf7-1c360c94444d"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="126" y="2" width="124" height="20" backcolor="#CCCCCC" uuid="30893bf2-a073-487e-980d-f7632c9416bc"/>
+				<reportElement mode="Opaque" x="127" y="2" width="124" height="20" backcolor="#CCCCCC" uuid="30893bf2-a073-487e-980d-f7632c9416bc"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
