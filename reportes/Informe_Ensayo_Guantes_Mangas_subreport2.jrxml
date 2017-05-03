@@ -77,13 +77,13 @@
 				<reportElement x="1" y="33" width="125" height="51" uuid="345f2fe1-e9ad-4f34-bf28-d2fc07a18622"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="128" y="33" width="125" height="51" uuid="5c4448fb-68ba-4d88-81af-b29c08f5b563"/>
+				<reportElement x="127" y="33" width="125" height="51" uuid="5c4448fb-68ba-4d88-81af-b29c08f5b563"/>
 			</rectangle>
 			<rectangle>
 				<reportElement x="251" y="33" width="320" height="51" uuid="9d259bd1-4059-4e26-b3b5-5d0094a7de09"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="128" y="35" width="122" height="49" uuid="0414aee1-58c2-4cb9-8ef3-dcff4175bbb2"/>
+				<reportElement x="127" y="33" width="122" height="49" uuid="0414aee1-58c2-4cb9-8ef3-dcff4175bbb2"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código interno
 Del equipo/
