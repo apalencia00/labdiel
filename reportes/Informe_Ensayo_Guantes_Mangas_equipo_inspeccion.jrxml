@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas_equipo_inspeccion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c709b0a3-a15c-4c27-9ac2-bea3cf755785">
-	<property name="ireport.zoom" value="0.75"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="83"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -37,54 +37,54 @@
 	<pageHeader>
 		<band height="30">
 			<rectangle>
-				<reportElement x="4" y="8" width="120" height="20" uuid="9ccb1de8-94cd-406c-97a3-d140edefef15"/>
+				<reportElement x="4" y="7" width="120" height="20" uuid="9ccb1de8-94cd-406c-97a3-d140edefef15"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="4" y="9" width="120" height="20" uuid="36e50c1c-5464-4f1d-a799-8589bc4497bd"/>
+				<reportElement x="4" y="7" width="120" height="20" uuid="36e50c1c-5464-4f1d-a799-8589bc4497bd"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Código interno/Internal Code]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="136" y="9" width="73" height="20" uuid="7ac6ff29-4299-4694-af0a-3f57c8314277"/>
+				<reportElement x="137" y="7" width="73" height="20" uuid="7ac6ff29-4299-4694-af0a-3f57c8314277"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="136" y="10" width="73" height="20" uuid="fb67680f-4e90-4adb-845f-d18a529b8f7a"/>
+				<reportElement x="136" y="7" width="73" height="20" uuid="fb67680f-4e90-4adb-845f-d18a529b8f7a"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Serie/Serial]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="222" y="9" width="136" height="20" uuid="ad26a8da-a2f6-40ae-b762-e38a8dba965a"/>
+				<reportElement x="221" y="7" width="136" height="20" uuid="ad26a8da-a2f6-40ae-b762-e38a8dba965a"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="222" y="9" width="136" height="20" uuid="ae11d06f-4534-41a1-a2ae-57520589ce84"/>
+				<reportElement x="221" y="7" width="136" height="20" uuid="ae11d06f-4534-41a1-a2ae-57520589ce84"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[No. Certificado/Certificate Number]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="373" y="8" width="107" height="20" uuid="8d1e95b3-86b6-4454-a47c-5764a37606ca"/>
+				<reportElement x="373" y="7" width="107" height="20" uuid="8d1e95b3-86b6-4454-a47c-5764a37606ca"/>
 			</rectangle>
-			<staticText>
-				<reportElement x="373" y="10" width="107" height="20" uuid="3f1571c3-a86b-417d-84b6-883b9ed0d79d"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Trazado a/Traceable to					]]></text>
-			</staticText>
 			<rectangle>
-				<reportElement x="490" y="8" width="114" height="20" uuid="171ee84f-ae36-4912-8539-b72c6c0d259a"/>
+				<reportElement x="490" y="7" width="114" height="20" uuid="171ee84f-ae36-4912-8539-b72c6c0d259a"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="490" y="10" width="110" height="17" uuid="f01cbaeb-02b1-45b7-a184-38fdcb396503"/>
+				<reportElement x="490" y="7" width="110" height="17" uuid="f01cbaeb-02b1-45b7-a184-38fdcb396503"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Incertidumbre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="7" width="107" height="20" uuid="3f1571c3-a86b-417d-84b6-883b9ed0d79d"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trazado a/Traceable to					]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
@@ -101,40 +101,40 @@
 				<textFieldExpression><![CDATA[$F{CODIGO_INTERNO}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="136" y="1" width="73" height="22" uuid="e935f457-9896-49e4-a412-b04f8c918d12"/>
+				<reportElement x="137" y="1" width="73" height="22" uuid="e935f457-9896-49e4-a412-b04f8c918d12"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="137" y="2" width="72" height="20" backcolor="#CCCCCC" uuid="ed891b08-1ab4-4a4c-84d8-d820ab627bbb"/>
+				<reportElement mode="Opaque" x="138" y="2" width="72" height="20" backcolor="#CCCCCC" uuid="ed891b08-1ab4-4a4c-84d8-d820ab627bbb"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SERIAL}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="373" y="1" width="107" height="21" uuid="11de4dbf-90c9-4939-b792-5f9d80e970aa"/>
+				<reportElement x="373" y="2" width="107" height="22" uuid="11de4dbf-90c9-4939-b792-5f9d80e970aa"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="374" y="2" width="105" height="20" backcolor="#CCCCCC" uuid="c12fa510-ea70-4658-bb1b-7356ad981c7d"/>
+				<reportElement mode="Opaque" x="374" y="3" width="105" height="20" backcolor="#CCCCCC" uuid="c12fa510-ea70-4658-bb1b-7356ad981c7d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TRAZADO}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="490" y="1" width="114" height="22" uuid="34aecde0-1e15-4594-bc0a-5c041d78dcac"/>
+				<reportElement x="490" y="2" width="114" height="22" uuid="34aecde0-1e15-4594-bc0a-5c041d78dcac"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="222" y="1" width="136" height="22" uuid="d37d0e50-96cc-40bb-b4f1-3813dd9623f6"/>
+				<reportElement x="222" y="2" width="136" height="22" uuid="d37d0e50-96cc-40bb-b4f1-3813dd9623f6"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="223" y="2" width="135" height="20" backcolor="#CCCCCC" uuid="6f571dc9-c45e-4b93-9113-6c24873b9e9b"/>
+				<reportElement mode="Opaque" x="223" y="3" width="135" height="20" backcolor="#CCCCCC" uuid="6f571dc9-c45e-4b93-9113-6c24873b9e9b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CERTIFICADO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="492" y="3" width="110" height="18" backcolor="#CCCCCC" uuid="2a2e3d7a-e858-42fb-bde3-247772a98f4e"/>
+				<reportElement mode="Opaque" x="492" y="4" width="110" height="18" backcolor="#CCCCCC" uuid="2a2e3d7a-e858-42fb-bde3-247772a98f4e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6" isBold="true"/>
 				</textElement>
