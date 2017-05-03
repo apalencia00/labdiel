@@ -83,7 +83,7 @@
 				<reportElement x="251" y="33" width="320" height="51" uuid="9d259bd1-4059-4e26-b3b5-5d0094a7de09"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="127" y="33" width="122" height="49" uuid="0414aee1-58c2-4cb9-8ef3-dcff4175bbb2"/>
+				<reportElement x="127" y="34" width="122" height="49" uuid="0414aee1-58c2-4cb9-8ef3-dcff4175bbb2"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código interno
 Del equipo/
@@ -93,7 +93,7 @@ Internal code equipment
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="253" y="33" width="318" height="51" uuid="51253100-d848-4eb7-8bf3-ac33c02b4164"/>
+				<reportElement x="252" y="33" width="318" height="51" uuid="51253100-d848-4eb7-8bf3-ac33c02b4164"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Resultado del ensayo/
 Test Result
@@ -102,7 +102,7 @@ Test Result
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="33" width="125" height="51" uuid="7f843ca6-2e04-419e-b0c1-9afed60cc12d"/>
+				<reportElement x="0" y="33" width="125" height="51" uuid="7f843ca6-2e04-419e-b0c1-9afed60cc12d"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código asignado por el cliente/
  code assigned by client
