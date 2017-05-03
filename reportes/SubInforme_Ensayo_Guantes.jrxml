@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Guantes" language="groovy" pageWidth="684" pageHeight="792" columnWidth="664" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3926b6b5-454c-4e51-bbc7-9a121ae66f92">
 	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="368"/>
+	<property name="ireport.x" value="399"/>
 	<property name="ireport.y" value="38"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -304,7 +304,7 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<reportElement x="310" y="1" width="66" height="26" uuid="eb9746eb-e67f-485d-ba1e-3cd3e371e950"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="311" y="2" width="65" height="24" backcolor="#CCCCCC" uuid="f8369642-2180-4f72-b651-ad689473de40"/>
+				<reportElement mode="Opaque" x="311" y="2" width="64" height="24" backcolor="#CCCCCC" uuid="f8369642-2180-4f72-b651-ad689473de40"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
@@ -322,7 +322,7 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 			</textField>
 			<textField>
 				<reportElement mode="Opaque" x="554" y="2" width="43" height="24" backcolor="#CCCCCC" uuid="0ae99761-7170-4394-af39-f2a88f9f113a"/>
-				<textElement>
+				<textElement textAlignment="Center">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
