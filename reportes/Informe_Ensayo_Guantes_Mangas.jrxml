@@ -2,17 +2,17 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="639" pageHeight="792" columnWidth="599" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="335"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT coti."ID_COTIZACION", SUBSTR(coti."NUM_COTIZACION",7,9) as lacoti , coti."FK_CLIENTE", coti."FK_USUARIO",
        coti."FK_EMPLEADO", coti."FECHA_REGISTRO", coti."ESTADO", coti."US_MODIFICA", coti."FECHA_MODIFICACION",
-       coti."FK_REVISION_ENSAYO_EQUIPO",c.*, pc."DESCRIPCION" as laciudad,"NORMA_INFORME",emp.*,"DIRECCION_REVISION"
+       coti."FK_REVISION_ENSAYO_EQUIPO",c.*, pc."DESCRIPCION" as laciudad,"NORMA_INFORME",emp.*,"DIRECCION_REVISION",pc."DESCRIPCION" as ciudad_ensayo
   FROM labor."COTIZACION" coti, labor."CLIENTE" c, labor."PARAM_CIUDAD" pc, labor."REVISION_ENSAYO_EQUIPO" rev, labor."EMPLEADO" emp
 
-WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and pc."ID_COD_DIVIPO" = c."CIUDAD" AND "FK_REVISION_ENSAYO_EQUIPO" = "ID_REVISION_EQUIPO"
+WHERE c."ID_CLIENTE" = coti."FK_CLIENTE" AND "NUM_COTIZACION" = $P{ncotic}  and pc."ID_COD_DIVIPO" = c."CIUDAD" AND "FK_REVISION_ENSAYO_EQUIPO" = "ID_REVISION_EQUIPO" and pc."ID_COD_DIVIPO" = rev."ID_REVISION_EQUIPO"
 
 AND coti."FK_EMPLEADO" = "ID_EMPLEADO"]]>
 	</queryString>
@@ -54,6 +54,7 @@ AND coti."FK_EMPLEADO" = "ID_EMPLEADO"]]>
 	<field name="EDAD" class="java.lang.Integer"/>
 	<field name="GENERO" class="java.lang.String"/>
 	<field name="DIRECCION_REVISION" class="java.lang.String"/>
+	<field name="ciudad_ensayo" class="java.lang.String"/>
 	<pageHeader>
 		<band height="84">
 			<image>
@@ -248,12 +249,12 @@ Autorized service by customer]]></text>
 
 Este informe expresa fielmente el resultado de las mediciones realizadas. No podrá ser reproducido parcialmente, excepto cuando se haya obtenido previamente la aprobación por escrito del Laboratorio Dieléctrico de JLB CIA S.A.S.
 
-El laboratorio no hace responsable por la representatividad de las muestras que los clientes entreguen al laboratorio para su ensayo cuando estas formen parte de un lote.
+El laboratorio no se hace responsable por la representatividad de las muestras que los clientes entreguen al laboratorio para su ensayo cuando estas formen parte de un lote.
 
 El usuario es responsable por el buen uso y manipulación de los equipos ensayados.]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="422" y="100" width="173" height="59" uuid="9e5946f1-de16-4133-ab5b-2ccc87311f59"/>
+				<reportElement x="422" y="100" width="177" height="33" uuid="9e5946f1-de16-4133-ab5b-2ccc87311f59"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{DIRECCION_REVISION}]]></textFieldExpression>
 			</textField>
@@ -267,6 +268,11 @@ La incertidumbre reportada representa la incertidumbre expandida a un nivel de  
 
 ]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="422" y="133" width="174" height="24" uuid="2a669d8c-3b1b-432d-9185-b247b7a6d645"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ciudad_ensayo}]]></textFieldExpression>
+			</textField>
 		</band>
 		<band height="40">
 			<subreport>
@@ -359,7 +365,7 @@ FECHA: 2010-07-19]]></text>
 				<text><![CDATA[Revisado por/Cheked By]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="22" y="39" width="153" height="20" uuid="4f0ab0aa-3fe1-4207-9088-f99f98cb10ea"/>
+				<reportElement x="22" y="39" width="181" height="20" uuid="4f0ab0aa-3fe1-4207-9088-f99f98cb10ea"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>

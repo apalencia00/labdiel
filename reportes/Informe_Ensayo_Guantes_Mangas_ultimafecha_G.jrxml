@@ -7,10 +7,10 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[SELECT MAX("FECHA_REGISTRO")
+		<![CDATA[SELECT to_char(MAX("FECHA_REGISTRO") , 'YYYY-MM-DD HH12:MI:SS' ) as max
   FROM labor."REGISTRO_INSPECCION_EQUIPO" WHERE "FK_COTIZACION" = $P{ncotic};]]>
 	</queryString>
-	<field name="max" class="java.sql.Timestamp"/>
+	<field name="max" class="java.lang.String"/>
 	<title>
 		<band height="20">
 			<textField>

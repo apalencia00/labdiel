@@ -37,10 +37,10 @@
 	<pageHeader>
 		<band height="30">
 			<rectangle>
-				<reportElement x="4" y="9" width="120" height="20" uuid="9ccb1de8-94cd-406c-97a3-d140edefef15"/>
+				<reportElement x="4" y="8" width="120" height="20" uuid="9ccb1de8-94cd-406c-97a3-d140edefef15"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="4" y="8" width="120" height="20" uuid="36e50c1c-5464-4f1d-a799-8589bc4497bd"/>
+				<reportElement x="4" y="9" width="120" height="20" uuid="36e50c1c-5464-4f1d-a799-8589bc4497bd"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -89,33 +89,33 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="30" splitType="Stretch">
+		<band height="33" splitType="Stretch">
 			<rectangle>
-				<reportElement x="4" y="0" width="120" height="22" uuid="95dbb386-cb59-4373-95c1-830e722e28ab"/>
+				<reportElement x="4" y="1" width="120" height="21" uuid="95dbb386-cb59-4373-95c1-830e722e28ab"/>
 			</rectangle>
 			<textField>
 				<reportElement mode="Opaque" x="5" y="2" width="118" height="20" backcolor="#CCCCCC" uuid="048ff7e7-f630-45bc-9a66-6b8409d542e3"/>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CODIGO_INTERNO}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="136" y="1" width="73" height="20" uuid="e935f457-9896-49e4-a412-b04f8c918d12"/>
+				<reportElement x="136" y="1" width="73" height="22" uuid="e935f457-9896-49e4-a412-b04f8c918d12"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="137" y="1" width="72" height="20" backcolor="#CCCCCC" uuid="ed891b08-1ab4-4a4c-84d8-d820ab627bbb"/>
-				<textElement textAlignment="Center">
+				<reportElement mode="Opaque" x="137" y="2" width="72" height="20" backcolor="#CCCCCC" uuid="ed891b08-1ab4-4a4c-84d8-d820ab627bbb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SERIAL}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="373" y="0" width="107" height="22" uuid="11de4dbf-90c9-4939-b792-5f9d80e970aa"/>
+				<reportElement x="373" y="1" width="107" height="21" uuid="11de4dbf-90c9-4939-b792-5f9d80e970aa"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="374" y="1" width="105" height="20" backcolor="#CCCCCC" uuid="c12fa510-ea70-4658-bb1b-7356ad981c7d"/>
-				<textElement textAlignment="Center">
+				<reportElement mode="Opaque" x="374" y="2" width="105" height="20" backcolor="#CCCCCC" uuid="c12fa510-ea70-4658-bb1b-7356ad981c7d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TRAZADO}]]></textFieldExpression>
@@ -124,18 +124,18 @@
 				<reportElement x="490" y="1" width="114" height="22" uuid="34aecde0-1e15-4594-bc0a-5c041d78dcac"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="222" y="1" width="136" height="20" uuid="d37d0e50-96cc-40bb-b4f1-3813dd9623f6"/>
+				<reportElement x="222" y="1" width="136" height="22" uuid="d37d0e50-96cc-40bb-b4f1-3813dd9623f6"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="223" y="1" width="135" height="20" backcolor="#CCCCCC" uuid="6f571dc9-c45e-4b93-9113-6c24873b9e9b"/>
-				<textElement textAlignment="Center">
+				<reportElement mode="Opaque" x="223" y="2" width="135" height="20" backcolor="#CCCCCC" uuid="6f571dc9-c45e-4b93-9113-6c24873b9e9b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CERTIFICADO}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement mode="Opaque" x="492" y="3" width="110" height="18" backcolor="#CCCCCC" uuid="2a2e3d7a-e858-42fb-bde3-247772a98f4e"/>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE}]]></textFieldExpression>

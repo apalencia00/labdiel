@@ -65,7 +65,7 @@
 	<field name="COD_CLIENTE" class="java.lang.String"/>
 	<field name="cod_seriales" class="java.lang.String"/>
 	<pageHeader>
-		<band height="84">
+		<band height="87">
 			<staticText>
 				<reportElement x="0" y="3" width="283" height="20" uuid="6fa680dd-3424-4e49-acd6-09c2fff27784"/>
 				<textElement>
