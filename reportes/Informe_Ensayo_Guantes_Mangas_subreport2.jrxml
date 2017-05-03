@@ -102,7 +102,7 @@ Test Result
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="33" width="125" height="51" uuid="7f843ca6-2e04-419e-b0c1-9afed60cc12d"/>
+				<reportElement x="1" y="33" width="125" height="51" uuid="7f843ca6-2e04-419e-b0c1-9afed60cc12d"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código asignado por el cliente/
  code assigned by client
