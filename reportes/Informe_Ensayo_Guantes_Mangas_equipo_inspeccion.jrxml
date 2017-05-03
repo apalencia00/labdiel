@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas_equipo_inspeccion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c709b0a3-a15c-4c27-9ac2-bea3cf755785">
 	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="163"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -91,7 +91,7 @@
 	<detail>
 		<band height="33" splitType="Stretch">
 			<rectangle>
-				<reportElement x="4" y="1" width="120" height="21" uuid="95dbb386-cb59-4373-95c1-830e722e28ab"/>
+				<reportElement x="4" y="1" width="120" height="22" uuid="95dbb386-cb59-4373-95c1-830e722e28ab"/>
 			</rectangle>
 			<textField>
 				<reportElement mode="Opaque" x="5" y="2" width="118" height="20" backcolor="#CCCCCC" uuid="048ff7e7-f630-45bc-9a66-6b8409d542e3"/>
