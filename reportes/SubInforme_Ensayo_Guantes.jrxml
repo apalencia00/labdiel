@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Guantes" language="groovy" pageWidth="684" pageHeight="792" columnWidth="664" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3926b6b5-454c-4e51-bbc7-9a121ae66f92">
 	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.x" value="628"/>
+	<property name="ireport.y" value="38"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -84,7 +84,7 @@
 	<field name="INCERTIDUMBRE_TENSION" class="java.lang.String"/>
 	<field name="INCERTIDUMBRE_CORRIENTE" class="java.lang.String"/>
 	<pageHeader>
-		<band height="100">
+		<band height="101">
 			<staticText>
 				<reportElement x="0" y="2" width="281" height="20" uuid="bb197a76-891c-4ba2-9e86-92f902b8b198"/>
 				<textElement>
@@ -218,111 +218,111 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 	<detail>
 		<band height="32" splitType="Stretch">
 			<rectangle>
-				<reportElement x="181" y="0" width="52" height="26" uuid="4db9caf9-6263-4894-a478-7b2ddc8b157a"/>
+				<reportElement x="181" y="1" width="52" height="26" uuid="4db9caf9-6263-4894-a478-7b2ddc8b157a"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="376" y="0" width="52" height="26" uuid="ae58cdee-2a6f-4e9a-97ed-a0f2381321a0"/>
+				<reportElement x="376" y="1" width="52" height="26" uuid="ae58cdee-2a6f-4e9a-97ed-a0f2381321a0"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="129" y="0" width="52" height="26" uuid="9d0fdacb-4626-4618-a44f-7ded29b013c3"/>
+				<reportElement x="129" y="1" width="52" height="26" uuid="9d0fdacb-4626-4618-a44f-7ded29b013c3"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="428" y="0" width="68" height="26" uuid="58ab703e-c983-4a10-8c19-fd5deb525a8d"/>
+				<reportElement x="428" y="1" width="68" height="26" uuid="58ab703e-c983-4a10-8c19-fd5deb525a8d"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="182" y="0" width="51" height="25" backcolor="#CCCCCC" uuid="148d20b0-6e0c-4f7c-b1ac-4d5bc836b332"/>
+				<reportElement mode="Opaque" x="182" y="2" width="51" height="24" backcolor="#CCCCCC" uuid="148d20b0-6e0c-4f7c-b1ac-4d5bc836b332"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OBS_TENSION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="429" y="0" width="66" height="25" backcolor="#CCCCCC" uuid="9d4a6d87-8b33-4016-a510-bb57c83c1553"/>
+				<reportElement mode="Opaque" x="429" y="2" width="66" height="24" backcolor="#CCCCCC" uuid="9d4a6d87-8b33-4016-a510-bb57c83c1553"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{HUMEDAD}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="102" y="0" width="27" height="26" uuid="52609f54-d0c0-41d3-8407-17aa3b223d3e"/>
+				<reportElement x="102" y="1" width="27" height="26" uuid="52609f54-d0c0-41d3-8407-17aa3b223d3e"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="103" y="0" width="25" height="25" backcolor="#CCCCCC" uuid="039bde49-8725-4b91-ae94-971cddae2202"/>
+				<reportElement mode="Opaque" x="103" y="2" width="25" height="24" backcolor="#CCCCCC" uuid="039bde49-8725-4b91-ae94-971cddae2202"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OBS_CLASE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="130" y="0" width="50" height="25" backcolor="#CCCCCC" uuid="6241139a-fd83-492a-b7db-474d2b87f163"/>
+				<reportElement mode="Opaque" x="130" y="2" width="50" height="24" backcolor="#CCCCCC" uuid="6241139a-fd83-492a-b7db-474d2b87f163"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENSION_ENSAYO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="377" y="0" width="50" height="25" backcolor="#CCCCCC" uuid="279d85a1-3e79-4336-9e37-364ab2a4d13e"/>
+				<reportElement mode="Opaque" x="377" y="2" width="50" height="24" backcolor="#CCCCCC" uuid="279d85a1-3e79-4336-9e37-364ab2a4d13e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TEMPERATURA}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="495" y="0" width="58" height="26" uuid="566a7e4b-7ba1-430a-be62-248b0dd7247f"/>
+				<reportElement x="495" y="1" width="58" height="26" uuid="566a7e4b-7ba1-430a-be62-248b0dd7247f"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="233" y="0" width="77" height="26" uuid="31b02bf8-ee6b-4f18-ad26-6cd6116ca2a4"/>
+				<reportElement x="233" y="1" width="77" height="26" uuid="31b02bf8-ee6b-4f18-ad26-6cd6116ca2a4"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="234" y="0" width="76" height="25" backcolor="#CCCCCC" uuid="0d89694c-e632-433d-9c32-0b65f68f6a30"/>
+				<reportElement mode="Opaque" x="234" y="2" width="76" height="24" backcolor="#CCCCCC" uuid="0d89694c-e632-433d-9c32-0b65f68f6a30"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="1" y="0" width="59" height="26" uuid="6ecc2279-84d0-4d77-aea1-0dca806b3f96"/>
+				<reportElement x="1" y="1" width="59" height="26" uuid="6ecc2279-84d0-4d77-aea1-0dca806b3f96"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="2" y="0" width="59" height="25" backcolor="#CCCCCC" uuid="bac45087-7877-40b0-a021-3dfb1505b977"/>
+				<reportElement mode="Opaque" x="2" y="2" width="58" height="25" backcolor="#CCCCCC" uuid="bac45087-7877-40b0-a021-3dfb1505b977"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="60" y="0" width="42" height="26" uuid="44ed1bbe-0905-42c5-a7a2-8d64da422630"/>
+				<reportElement x="60" y="1" width="42" height="26" uuid="44ed1bbe-0905-42c5-a7a2-8d64da422630"/>
 			</rectangle>
 			<staticText>
-				<reportElement mode="Opaque" x="61" y="0" width="40" height="25" backcolor="#CCCCCC" uuid="843de7a8-2f69-45a2-907a-7383a33ace30"/>
+				<reportElement mode="Opaque" x="61" y="2" width="40" height="25" backcolor="#CCCCCC" uuid="843de7a8-2f69-45a2-907a-7383a33ace30"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Guantes]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="310" y="0" width="66" height="26" uuid="eb9746eb-e67f-485d-ba1e-3cd3e371e950"/>
+				<reportElement x="310" y="1" width="66" height="26" uuid="eb9746eb-e67f-485d-ba1e-3cd3e371e950"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="311" y="0" width="65" height="25" backcolor="#CCCCCC" uuid="f8369642-2180-4f72-b651-ad689473de40"/>
+				<reportElement mode="Opaque" x="311" y="2" width="65" height="24" backcolor="#CCCCCC" uuid="f8369642-2180-4f72-b651-ad689473de40"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CORRIENTE_FUGA_MEDIDA}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="553" y="0" width="45" height="26" uuid="1135a032-d94c-42d4-8f6d-26fd3be8321b"/>
+				<reportElement x="553" y="1" width="45" height="26" uuid="1135a032-d94c-42d4-8f6d-26fd3be8321b"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="496" y="0" width="56" height="25" backcolor="#CCCCCC" uuid="628f0ff5-6514-42ab-9e48-f1c48d182a6f"/>
+				<reportElement mode="Opaque" x="496" y="2" width="56" height="24" backcolor="#CCCCCC" uuid="628f0ff5-6514-42ab-9e48-f1c48d182a6f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE_TENSION} + " - " + $F{INCERTIDUMBRE_CORRIENTE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="554" y="0" width="43" height="25" backcolor="#CCCCCC" uuid="0ae99761-7170-4394-af39-f2a88f9f113a"/>
-				<textElement>
+				<reportElement mode="Opaque" x="554" y="2" width="43" height="24" backcolor="#CCCCCC" uuid="0ae99761-7170-4394-af39-f2a88f9f113a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
