@@ -126,20 +126,20 @@ Test Result
 				<textFieldExpression><![CDATA[$F{COD_CLIENTE}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="127" y="1" width="124" height="22" uuid="da819607-3812-44c3-baf7-1c360c94444d"/>
+				<reportElement x="127" y="1" width="126" height="22" uuid="da819607-3812-44c3-baf7-1c360c94444d"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="127" y="2" width="124" height="20" backcolor="#CCCCCC" uuid="30893bf2-a073-487e-980d-f7632c9416bc"/>
+				<reportElement mode="Opaque" x="128" y="2" width="124" height="20" backcolor="#CCCCCC" uuid="30893bf2-a073-487e-980d-f7632c9416bc"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="250" y="1" width="322" height="22" uuid="916172d0-36ca-4e5a-bcdf-f531245cf5bc"/>
+				<reportElement x="250" y="1" width="321" height="22" uuid="916172d0-36ca-4e5a-bcdf-f531245cf5bc"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="253" y="2" width="318" height="20" backcolor="#CCCCCC" uuid="e25c86aa-4eda-412a-89a3-5cfc711846a7"/>
+				<reportElement mode="Opaque" x="251" y="2" width="318" height="20" backcolor="#CCCCCC" uuid="e25c86aa-4eda-412a-89a3-5cfc711846a7"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
