@@ -8,7 +8,7 @@
 	</parameter>
 	<queryString>
 		<![CDATA[SELECT *
-  FROM labor."RGTRO_ESAY_EQIP_INSPC", labor."INSTRUMENTO_ENSAYO" WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO" = 'CU']]>
+  FROM labor."RGTRO_ESAY_EQIP_INSPC", labor."INSTRUMENTO_ENSAYO" WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO" = 'CL']]>
 	</queryString>
 	<field name="ENSAYO_EQUIPOS_PROBADORES" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>

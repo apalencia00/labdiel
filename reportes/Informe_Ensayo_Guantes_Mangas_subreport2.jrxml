@@ -17,7 +17,7 @@
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", "FECHA_REGISTRO",
        "CORRIENTE_FUGA_MEDIDA", "COD_CLIENTE",dts.cod_seriales
-  FROM labor."REGISTRO_INSPECCION_EQUIPO", labor."DET_COTI_SERIALIZAR_EQUIPO" dts where dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" AND "FK_COTIZACION" = $P{ncotic} ORDER BY "ID_INSPECCION_EQUIPO" asc]]>
+  FROM labor."REGISTRO_INSPECCION_EQUIPO", labor."DET_COTI_SERIALIZAR_EQUIPO" dts where dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" AND "FK_COTIZACION" = $P{ncotic} and  substr(dts.cod_seriales, 1, 1) in ('G','M','B','J','MT','CL','CAR','CP','CA','CC','CCC','CE','CCL','RCP','RCL','RCA','RCC','RCCC','RCE','CJ','T') ORDER BY "ID_INSPECCION_EQUIPO" desc]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>

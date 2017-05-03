@@ -11,7 +11,7 @@
 
   FROM labor."RGTRO_ESAY_EQIP_INSPC" t, labor."INSTRUMENTO_ENSAYO" p
 
-  WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO" = 'G'
+  WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO" in ('G','M','B','J','MT','CL','CAR','CP','CA','CC','CCC','CE','CCL','RCP','RCL','RCA','RCC','RCCC','RCE','CJ','T')
 
   GROUP BY  "ENSAYO_EQUIPOS_PROBADORES","ID_EQUIPO_ENSAYO","DESCRIPCION","FK_COTIZACION","FORMULARIO","USUARIO","FECHA_REGISTRO","ID_EQUIPO_ENSAYO",
   "CODIGO_INTERNO","SERIAL","CERTIFICADO","TRAZADO","INCERTIDUMBRE","FK_ID_EQUIPO_INSPECCIONADOR"]]>
@@ -96,7 +96,7 @@
 			<textField>
 				<reportElement mode="Opaque" x="5" y="2" width="118" height="20" backcolor="#CCCCCC" uuid="048ff7e7-f630-45bc-9a66-6b8409d542e3"/>
 				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
+					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CODIGO_INTERNO}]]></textFieldExpression>
 			</textField>
@@ -106,7 +106,7 @@
 			<textField>
 				<reportElement mode="Opaque" x="137" y="1" width="72" height="20" backcolor="#CCCCCC" uuid="ed891b08-1ab4-4a4c-84d8-d820ab627bbb"/>
 				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
+					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SERIAL}]]></textFieldExpression>
 			</textField>
@@ -116,7 +116,7 @@
 			<textField>
 				<reportElement mode="Opaque" x="374" y="1" width="105" height="20" backcolor="#CCCCCC" uuid="c12fa510-ea70-4658-bb1b-7356ad981c7d"/>
 				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
+					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TRAZADO}]]></textFieldExpression>
 			</textField>
@@ -129,14 +129,14 @@
 			<textField>
 				<reportElement mode="Opaque" x="223" y="1" width="135" height="20" backcolor="#CCCCCC" uuid="6f571dc9-c45e-4b93-9113-6c24873b9e9b"/>
 				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
+					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CERTIFICADO}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement mode="Opaque" x="492" y="3" width="110" height="18" backcolor="#CCCCCC" uuid="2a2e3d7a-e858-42fb-bde3-247772a98f4e"/>
 				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
+					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE}]]></textFieldExpression>
 			</textField>
