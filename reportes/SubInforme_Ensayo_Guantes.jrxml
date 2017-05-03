@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInforme_Ensayo_Guantes" language="groovy" pageWidth="684" pageHeight="792" columnWidth="664" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3926b6b5-454c-4e51-bbc7-9a121ae66f92">
-	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
@@ -314,7 +314,7 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<reportElement x="553" y="0" width="45" height="26" uuid="1135a032-d94c-42d4-8f6d-26fd3be8321b"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="496" y="0" width="57" height="25" backcolor="#CCCCCC" uuid="628f0ff5-6514-42ab-9e48-f1c48d182a6f"/>
+				<reportElement mode="Opaque" x="496" y="1" width="57" height="25" backcolor="#CCCCCC" uuid="628f0ff5-6514-42ab-9e48-f1c48d182a6f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
