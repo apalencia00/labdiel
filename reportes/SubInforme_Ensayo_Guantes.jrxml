@@ -314,14 +314,14 @@ Corriente de fuga obtenida en la prueba [mA]/ A.C Proof-Test Current, max]]></te
 				<reportElement x="553" y="0" width="45" height="26" uuid="1135a032-d94c-42d4-8f6d-26fd3be8321b"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="496" y="1" width="57" height="25" backcolor="#CCCCCC" uuid="628f0ff5-6514-42ab-9e48-f1c48d182a6f"/>
+				<reportElement mode="Opaque" x="496" y="0" width="57" height="25" backcolor="#CCCCCC" uuid="628f0ff5-6514-42ab-9e48-f1c48d182a6f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE_TENSION} + " - " + $F{INCERTIDUMBRE_CORRIENTE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="555" y="1" width="42" height="25" backcolor="#CCCCCC" uuid="0ae99761-7170-4394-af39-f2a88f9f113a"/>
+				<reportElement mode="Opaque" x="554" y="1" width="44" height="25" backcolor="#CCCCCC" uuid="0ae99761-7170-4394-af39-f2a88f9f113a"/>
 				<textElement>
 					<font size="6"/>
 				</textElement>
