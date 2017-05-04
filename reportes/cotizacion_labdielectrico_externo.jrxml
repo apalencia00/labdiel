@@ -4,7 +4,6 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
-	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select * from labor."COTIZACION" where  "NUM_COTIZACION" = $P{ncotic}  ;]]>
@@ -34,9 +33,6 @@
 		<band height="38" splitType="Stretch">
 			<subreport>
 				<reportElement x="0" y="0" width="568" height="38" uuid="b674f173-75ef-43a3-bd10-f32863ece76b"/>
-				<subreportParameter name="tiempo">
-					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
-				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
@@ -47,9 +43,6 @@
 		<band height="39">
 			<subreport>
 				<reportElement x="0" y="1" width="568" height="38" uuid="ed98e6c9-e376-4053-9f07-e8b430400f80"/>
-				<subreportParameter name="tiempo">
-					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
-				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
@@ -70,9 +63,6 @@
 		<band height="38">
 			<subreport>
 				<reportElement x="0" y="0" width="568" height="38" uuid="75e03cd8-ef26-4aad-8a74-724969668291"/>
-				<subreportParameter name="tiempo">
-					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
-				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>

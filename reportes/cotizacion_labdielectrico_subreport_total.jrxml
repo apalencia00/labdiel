@@ -2,10 +2,8 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" pageWidth="607" pageHeight="802" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="381"/>
 	<parameter name="ncotic" class="java.lang.String"/>
-	<parameter name="tiempo" class="java.lang.String"/>
-	<parameter name="pago" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT
        SUM("VALOR_UNITARIO")::numeric(17,0) * "CANTIDAD" as total, SUM("VALOR_UNITARIO")::numeric(17,0) * "CANTIDAD"::numeric(17,0) * 0.19 as iva,
