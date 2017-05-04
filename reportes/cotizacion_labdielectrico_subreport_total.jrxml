@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" pageWidth="607" pageHeight="802" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="102"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT
@@ -37,53 +37,53 @@ GROUP BY "CANTIDAD"]]>
 	<title>
 		<band height="58">
 			<staticText>
-				<reportElement mode="Opaque" x="381" y="0" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
+				<reportElement mode="Opaque" x="398" y="0" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="bafb0f0b-3b63-4d7a-b413-483b45f7cd94"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="381" y="36" width="67" height="22" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
+				<reportElement mode="Opaque" x="398" y="36" width="67" height="22" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="5f9341f8-f3d7-4a29-b715-b75595fdb6d3"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total Servicio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="381" y="18" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
+				<reportElement mode="Opaque" x="398" y="18" width="67" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74e399ef-f387-4b43-836a-dcba63555b14"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Iva 19%]]></text>
 			</staticText>
 			<textField evaluationTime="Report">
-				<reportElement x="464" y="38" width="85" height="20" uuid="7b13e149-5ae0-49ed-93e2-643913a2d066"/>
+				<reportElement x="481" y="38" width="85" height="20" uuid="7b13e149-5ae0-49ed-93e2-643913a2d066"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$V{total_servicio_1}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="464" y="0" width="85" height="20" uuid="8f232089-2b54-4d79-854d-bd801d22737e"/>
+				<reportElement x="481" y="0" width="85" height="20" uuid="8f232089-2b54-4d79-854d-bd801d22737e"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$V{total_1}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="464" y="18" width="85" height="20" uuid="1cb52523-7f18-4797-9589-2c992e8b8885"/>
+				<reportElement x="481" y="18" width="85" height="20" uuid="1cb52523-7f18-4797-9589-2c992e8b8885"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$V{iva_1}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="449" y="0" width="10" height="20" uuid="c507daa2-36bb-4be1-8e90-cb5110ff2bc2"/>
+				<reportElement x="466" y="0" width="10" height="20" uuid="c507daa2-36bb-4be1-8e90-cb5110ff2bc2"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[$]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="449" y="20" width="10" height="20" uuid="b95ddff6-f366-4828-b9e4-ba3682f0c6d5"/>
+				<reportElement x="466" y="20" width="10" height="20" uuid="b95ddff6-f366-4828-b9e4-ba3682f0c6d5"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[$]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="449" y="38" width="10" height="20" uuid="285b5f2b-b593-4678-8132-29df5147382a"/>
+				<reportElement x="466" y="38" width="10" height="20" uuid="285b5f2b-b593-4678-8132-29df5147382a"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[$]]></text>
 			</staticText>

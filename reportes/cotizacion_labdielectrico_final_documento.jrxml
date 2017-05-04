@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_final_documento" language="groovy" pageWidth="612" pageHeight="792" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a3a57bf3-e280-4f5f-9fd8-088f63436944">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT "PAGO" FROM labor."COTIZACION" WHERE "NUM_COTIZACION" = $P{ncotic}]]>
+	</queryString>
+	<field name="PAGO" class="java.lang.String"/>
+	<title>
+		<band height="608" splitType="Stretch">
+			<staticText>
+				<reportElement x="6" y="36" width="540" height="117" uuid="331a5243-6053-4ab1-a53f-df82b6cfd00b"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[En caso de aceptar la oferta favor consignar en las siguientes cuentas:
+Cuenta de ahorros Banco de Bogota # 151510302, la cuenta se encuentra a nombre de Laboratorios de ensayos electricos JLB & CIA SAS con NIT 901005281-4. Enviar una copia de la consignación o la transferencia bancaria por correo electrónico o fax.
+Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="2" y="462" width="376" height="20" backcolor="#FFFF33" uuid="2f3c946b-0335-4047-a388-3b048f0d5d20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MODIFICACIONES AL ALCANCE DE LOS TRABAJOS.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="482" width="462" height="97" uuid="0de6f409-70bf-4915-8c05-83c48b778142"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Si durante el desarrollo de los trabajos descritos en la presente oferta, surgen trabajos adicionales a los ítems, se modificará el alcance de la presente oferta y  LADEE JLB & CIA LTDA, realizará una oferta adicional para tomar en consideración las modificaciones pertinentes.
+
+Gracias por su atención y estaremos atentos a sus comentarios e inquietudes.
+
+Cordialmente,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="5" y="104" width="542" height="320" backcolor="#FFFF00" uuid="00271467-d8d6-4f91-ac41-ba56ab25b231"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[
+
+4. PLAZO Y CONDICIONES PARA EL INICIO DEL ENSAYO.
+
+
+Una vez recibida la Consignación o la orden de compra u orden de trabajo de acuerdo a las condiciones de pago, se realizará la programación del ítem para que sea traído al laboratorio. En el caso que el ítem se traiga sin dicha consignación u orden de servicio, por mutuo acuerdo, sólo se comienzan los trabajos hasta que sea autorizado por medio de estas dos formas (consignación u orden) el servicio que va a prestar el laboratorio.
+Los resultados de los ensayos  se entregarán al cliente en máximo 5 días hábiles después de la terminacion de los ensayos contratados.
+
+El laboratorio no se hará cargo de los costos de transporte, ni se responsabiliza de  los daños que puedan ocurrir durante este.
+
+5. RESPONSABILIDAD.
+
+EL OFERENTE responde por el cumplimiento pleno de sus obligaciones según la presente oferta.  En relación con los perjuicios, EL OFERENTE únicamente responderá por el daño emergente derivado de las acciones u omisiones que le sean directamente imputables.  En ningún evento EL OFERENTE responderá por lucro cesante, daños indirectos, consecuenciales, y/o perdida de información. En todo caso, la responsabilidad del OFERENTE en ningún evento excederá el cien por ciento del valor del presente negocio jurídico, salvo en los eventos de dolor o culpa grave, en los cuales la responsabilidad será plena.
+
+
+
+
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="4" y="424" width="376" height="20" uuid="1ef88eb6-1184-4c87-8360-7115efa36a6f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VALIDEZ DE LA OFERTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="444" width="544" height="18" uuid="7f7e7f16-df45-4005-a044-613e7281d678"/>
+				<text><![CDATA[La oferta tiene una valides de 30 días contados a partir de la fecha de emisión de la misma.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="4" y="3" width="192" height="20" backcolor="#FFFF00" uuid="c4360461-1632-443e-9cd9-ce0bc358f199"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3. FORMA DE PAGO: 						]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="199" y="3" width="348" height="20" uuid="98e52910-2921-4acc-a8d5-228150d4ca8e"/>
+				<textFieldExpression><![CDATA[$F{PAGO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>
