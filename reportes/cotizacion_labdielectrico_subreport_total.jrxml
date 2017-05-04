@@ -92,7 +92,6 @@ GROUP BY "CANTIDAD"]]>
 		</band>
 	</title>
 	<detail>
-		<band height="11"/>
 		<band height="634">
 			<staticText>
 				<reportElement x="-3" y="499" width="544" height="18" uuid="eb1c092b-d8c6-485c-a676-3940f8842306"/>
