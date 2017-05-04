@@ -7,9 +7,7 @@
 		<defaultValueExpression><![CDATA["C:\\xampp\\htdocs\\nextexpress\\back-end\\reporteJava\\"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="ncotic" class="java.lang.String"/>
-	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="subreport" class="java.lang.String"/>
-	<parameter name="pago" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[select * from labor."COTIZACION" where  "NUM_COTIZACION" = $P{ncotic}  ;]]>
 	</queryString>
@@ -35,9 +33,6 @@
 		<band height="42" splitType="Stretch">
 			<subreport>
 				<reportElement x="0" y="2" width="572" height="40" uuid="4fabf21b-7410-49d1-9446-bcde770b75a2"/>
-				<subreportParameter name="tiempo">
-					<subreportParameterExpression><![CDATA[$P{tiempo}.toString()]]></subreportParameterExpression>
-				</subreportParameter>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
 				</subreportParameter>
