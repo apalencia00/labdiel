@@ -8,7 +8,7 @@
 	</parameter>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[SELECT co.*,rev.*, pc."DESCRIPCION" as ciudad, pd."DESCRIPCION" as depto
+		<![CDATA[SELECT co.*,rev.*, pc."DESCRIPCION" as ciudad, pd."DESCRIPCION" as depto, "TIEMPO"
   FROM labor."COTIZACION" co, labor."REVISION_ENSAYO_EQUIPO" rev, labor."PARAM_CIUDAD" pc, labor."PARAM_DEPTO" pd  WHERE "COD_DEPA_CODI" = rev."FK_DEPTO" AND "FK_REVISION_ENSAYO_EQUIPO" = "ID_REVISION_EQUIPO"
 
   AND "NUM_COTIZACION" = $P{ncotic} and "ID_COD_DIVIPO" = "FK_CIUDAD"]]>
@@ -23,6 +23,8 @@
 	<field name="US_MODIFICA" class="java.lang.Integer"/>
 	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
 	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
+	<field name="TIEMPO" class="java.lang.String"/>
+	<field name="PAGO" class="java.lang.String"/>
 	<field name="ID_REVISION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FECHA_SOLICITUD" class="java.sql.Timestamp"/>
 	<field name="LUGAR_REVISION" class="java.lang.String"/>
@@ -35,6 +37,7 @@
 	<field name="FK_USU_CREADOR" class="java.lang.Integer"/>
 	<field name="FK_CIUDAD" class="java.lang.Integer"/>
 	<field name="FK_DEPTO" class="java.lang.Integer"/>
+	<field name="NORMA_INFORME" class="java.lang.String"/>
 	<field name="ciudad" class="java.lang.String"/>
 	<field name="depto" class="java.lang.String"/>
 	<title>
@@ -55,19 +58,14 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="16" width="269" height="20" forecolor="#000000" backcolor="#FFFF00" uuid="e6552a46-fdd2-4a97-baeb-7cdf3f0c1fc6"/>
+				<reportElement mode="Transparent" x="0" y="16" width="269" height="20" forecolor="#000000" uuid="e6552a46-fdd2-4a97-baeb-7cdf3f0c1fc6"/>
 				<textElement textAlignment="Justified">
 					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Los ensayos se realizaran en la direccion :	]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="347" y="61" width="327" height="17" uuid="6c68727a-8e8d-4633-b794-02d686ae9561"/>
-				<textElement textAlignment="Justified"/>
-				<textFieldExpression><![CDATA[$P{tiempo}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="0" y="36" width="281" height="20" backcolor="#FFFF00" uuid="d7718a4f-766e-4b17-a278-7c8dac4e07ce"/>
+				<reportElement mode="Transparent" x="0" y="36" width="281" height="20" uuid="d7718a4f-766e-4b17-a278-7c8dac4e07ce"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{ciudad}]]></textFieldExpression>
 			</textField>
@@ -76,7 +74,7 @@
 				<text><![CDATA[,]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="252" y="15" width="172" height="20" backcolor="#FFFF00" uuid="445061aa-50fa-4738-8661-2fb3c62bd303"/>
+				<reportElement mode="Transparent" x="252" y="15" width="358" height="20" uuid="445061aa-50fa-4738-8661-2fb3c62bd303"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{DIRECCION_REVISION}]]></textFieldExpression>
 			</textField>
@@ -85,9 +83,13 @@
 				<text><![CDATA[,]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="281" y="35" width="329" height="20" backcolor="#FFFF00" uuid="639fca7c-c162-4c92-852d-524a02fc30e9"/>
+				<reportElement mode="Transparent" x="281" y="35" width="329" height="20" uuid="639fca7c-c162-4c92-852d-524a02fc30e9"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{depto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="343" y="58" width="337" height="20" uuid="0f5cf777-5590-4d43-8f01-dbcc26593c19"/>
+				<textFieldExpression><![CDATA[$F{TIEMPO}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>
