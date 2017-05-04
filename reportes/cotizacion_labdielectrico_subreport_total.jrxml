@@ -165,14 +165,6 @@ Cordialmente,]]></text>
 Cuenta de ahorros Banco de Bogota # 151510302, la cuenta se encuentra a nombre de Laboratorios de ensayos electricos JLB & CIA SAS con NIT 901005281-4. Enviar una copia de la consignación o la transferencia bancaria por correo electrónico o fax.
 Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. ]]></text>
 			</staticText>
-			<subreport>
-				<reportElement x="191" y="58" width="287" height="20" uuid="24dc908b-4d16-4c39-bb1e-810a15e3f659"/>
-				<subreportParameter name="ncotic">
-					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
-				</subreportParameter>
-				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport_pago.jasper"]]></subreportExpression>
-			</subreport>
 		</band>
 	</detail>
 </jasperReport>
