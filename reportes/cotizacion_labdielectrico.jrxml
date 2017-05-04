@@ -77,7 +77,7 @@
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\cotizacion_labdielectrico_final_documento.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_final_documento.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>
