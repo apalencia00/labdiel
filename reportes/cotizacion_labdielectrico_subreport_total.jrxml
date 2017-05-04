@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_subreport_total" pageWidth="607" pageHeight="802" columnWidth="567" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e344db8-6c31-4d3b-a4e9-6d0787935dbf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="193"/>
+	<property name="ireport.y" value="66"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="tiempo" class="java.lang.String"/>
 	<parameter name="pago" class="java.lang.String"/>
@@ -166,10 +166,11 @@ Cordialmente,]]></text>
 Cuenta de ahorros Banco de Bogota # 151510302, la cuenta se encuentra a nombre de Laboratorios de ensayos electricos JLB & CIA SAS con NIT 901005281-4. Enviar una copia de la consignación o la transferencia bancaria por correo electrónico o fax.
 Si desea cancelar en efectivo, puede hacerlo directamente en nuestras oficinas. ]]></text>
 			</staticText>
-			<textField>
-				<reportElement x="191" y="58" width="352" height="20" uuid="16779f49-76d3-4a8f-a312-c5de0fbc5da7"/>
-				<textFieldExpression><![CDATA[$P{pago}]]></textFieldExpression>
-			</textField>
+			<subreport>
+				<reportElement x="191" y="58" width="287" height="20" uuid="24dc908b-4d16-4c39-bb1e-810a15e3f659"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport_pago.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 	</detail>
 </jasperReport>
