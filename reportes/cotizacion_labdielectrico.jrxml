@@ -22,9 +22,9 @@
 	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
 	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
 	<pageHeader>
-		<band height="78">
+		<band height="68">
 			<image>
-				<reportElement x="0" y="2" width="113" height="74" uuid="b1db9407-3555-4ac4-8a46-be0ce2baa345"/>
+				<reportElement x="0" y="2" width="94" height="66" uuid="b1db9407-3555-4ac4-8a46-be0ce2baa345"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
 			</image>
 		</band>

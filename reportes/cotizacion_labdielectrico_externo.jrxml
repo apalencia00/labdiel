@@ -22,9 +22,9 @@
 		<band height="25" splitType="Stretch"/>
 	</title>
 	<pageHeader>
-		<band height="69">
+		<band height="66">
 			<image>
-				<reportElement x="12" y="3" width="97" height="66" uuid="d3ce0a45-077d-4e1c-8c92-68738d0ed9a2"/>
+				<reportElement x="0" y="0" width="97" height="66" uuid="d3ce0a45-077d-4e1c-8c92-68738d0ed9a2"/>
 				<imageExpression><![CDATA["/var/www/labdiel/reportes/7.jpg"]]></imageExpression>
 			</image>
 		</band>
