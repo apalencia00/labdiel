@@ -67,7 +67,7 @@
 				<textFieldExpression><![CDATA[$P{tiempo}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="389" y="16" width="101" height="20" backcolor="#FFFF00" uuid="d7718a4f-766e-4b17-a278-7c8dac4e07ce"/>
+				<reportElement mode="Opaque" x="424" y="16" width="133" height="20" backcolor="#FFFF00" uuid="d7718a4f-766e-4b17-a278-7c8dac4e07ce"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{ciudad}]]></textFieldExpression>
 			</textField>
@@ -76,7 +76,7 @@
 				<text><![CDATA[,]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="245" y="16" width="143" height="20" backcolor="#FFFF00" uuid="445061aa-50fa-4738-8661-2fb3c62bd303"/>
+				<reportElement mode="Opaque" x="251" y="16" width="172" height="20" backcolor="#FFFF00" uuid="445061aa-50fa-4738-8661-2fb3c62bd303"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{DIRECCION_REVISION}]]></textFieldExpression>
 			</textField>
@@ -85,7 +85,7 @@
 				<text><![CDATA[,]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="490" y="16" width="100" height="20" backcolor="#FFFF00" uuid="639fca7c-c162-4c92-852d-524a02fc30e9"/>
+				<reportElement mode="Opaque" x="557" y="16" width="123" height="20" backcolor="#FFFF00" uuid="639fca7c-c162-4c92-852d-524a02fc30e9"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{depto}]]></textFieldExpression>
 			</textField>

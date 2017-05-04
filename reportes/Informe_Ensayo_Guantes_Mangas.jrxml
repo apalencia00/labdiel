@@ -2,13 +2,13 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas" language="groovy" pageWidth="639" pageHeight="792" columnWidth="599" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="0523bb25-f4f4-4ebf-ba43-35fd6873a602">
 	<property name="ireport.zoom" value="0.75"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="265"/>
+	<property name="ireport.y" value="34"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT coti."ID_COTIZACION", SUBSTR(coti."NUM_COTIZACION",7,9) as lacoti , coti."FK_CLIENTE", coti."FK_USUARIO",
-       coti."FK_EMPLEADO", coti."FECHA_REGISTRO", coti."ESTADO", coti."US_MODIFICA", coti."FECHA_MODIFICACION",
+       coti."FK_EMPLEADO", to_char(coti."FECHA_REGISTRO", 'YYYY-MM-DD HH12:MI:SS') as "FECHA_REGISTRO", coti."ESTADO", coti."US_MODIFICA", to_char(coti."FECHA_MODIFICACION", 'YYYY-MM-DD HH12:MI:SS') as "FECHA_MODIFICACION",
        coti."FK_REVISION_ENSAYO_EQUIPO",c.*, pc."DESCRIPCION" as laciudad,"NORMA_INFORME",emp.*,"DIRECCION_REVISION",pc."DESCRIPCION" as ciudad_ensayo
   FROM labor."COTIZACION" coti, labor."CLIENTE" c, labor."PARAM_CIUDAD" pc, labor."REVISION_ENSAYO_EQUIPO" rev, labor."EMPLEADO" emp
 
@@ -21,10 +21,10 @@ AND coti."FK_EMPLEADO" = "ID_EMPLEADO"]]>
 	<field name="FK_CLIENTE" class="java.lang.Integer"/>
 	<field name="FK_USUARIO" class="java.lang.Integer"/>
 	<field name="FK_EMPLEADO" class="java.lang.Integer"/>
-	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
+	<field name="FECHA_REGISTRO" class="java.lang.String"/>
 	<field name="ESTADO" class="java.lang.String"/>
 	<field name="US_MODIFICA" class="java.lang.Integer"/>
-	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
+	<field name="FECHA_MODIFICACION" class="java.lang.String"/>
 	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
 	<field name="ID_CLIENTE" class="java.lang.Long">
 		<fieldDescription><![CDATA[--]]></fieldDescription>
