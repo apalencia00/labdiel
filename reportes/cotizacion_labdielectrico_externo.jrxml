@@ -70,6 +70,14 @@
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport_total.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
+		<band height="40">
+			<subreport>
+				<reportElement x="0" y="0" width="568" height="40" uuid="5e158b7b-a319-4510-a7fa-dec35c2f5ab9"/>
+				<subreportParameter name="ncotic"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_final_documento.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
 	</detail>
 	<pageFooter>
 		<band height="65">

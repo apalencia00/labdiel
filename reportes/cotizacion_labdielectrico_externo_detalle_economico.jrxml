@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_detalle_economico" language="groovy" pageWidth="720" pageHeight="802" columnWidth="720" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="5e36cfa7-60c7-409d-928f-12f815606756">
-	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[select coti."NUM_COTIZACION", coti."ESTADO",dtc."VALOR_UNITARIO"::text,eq."DESCRIPCION" as elequipo, un."DESCRIPCION" as unidad, dtc."CANTIDAD",eq."ID_TIPO_EQUIPO", dtc."CANTIDAD" * dtc."VALOR_UNITARIO"::numeric(17,0) as subtotal_cal
+		<![CDATA[select coti."NUM_COTIZACION", coti."ESTADO",dtc."VALOR_UNITARIO"::text,eq."DESCRIPCION" as elequipo, un."DESCRIPCION" as unidad, dtc."CANTIDAD",eq."ID_TIPO_EQUIPO", dtc."CANTIDAD" * dtc."VALOR_UNITARIO"::numeric(17,0) as subtotal_cal,cle."DESCRIPCION" as laclase
 
-from labor."COTIZACION" coti, labor."DETALLE_COTIZACION" dtc, labor."CLIENTE" cl, labor."EMPLEADO" e, auth."USUARIO" us ,labor."REVISION_ENSAYO_EQUIPO" rv, labor."TIPO_EQUIPO" eq, labor."UNIDAD_MEDICION" un
+from labor."COTIZACION" coti, labor."DETALLE_COTIZACION" dtc, labor."CLIENTE" cl, labor."EMPLEADO" e, auth."USUARIO" us ,labor."REVISION_ENSAYO_EQUIPO" rv, labor."TIPO_EQUIPO" eq, labor."UNIDAD_MEDICION" un, labor."CLASE_EQUIPO" cle
 
 where coti."NUM_COTIZACION" = dtc."FK_COTIZACION" AND coti."FK_CLIENTE" = cl."ID_CLIENTE" AND e."ID_EMPLEADO" = coti."FK_EMPLEADO"
-AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario = coti."FK_USUARIO" AND coti."US_MODIFICA" = us.id_usuario AND coti."NUM_COTIZACION" = $P{ncotic} AND dtc."FK_COD_TIPO_EQUIPO" = eq."ID_TIPO_EQUIPO" AND eq."FK_UNIDAD" = un."ID_UNIDAD"]]>
+AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario = coti."FK_USUARIO" AND coti."US_MODIFICA" = us.id_usuario AND coti."NUM_COTIZACION" = $P{ncotic} AND dtc."FK_COD_TIPO_EQUIPO" = eq."ID_TIPO_EQUIPO" AND eq."FK_UNIDAD" = un."ID_UNIDAD" AND cle."ID_CLASE_EQUIPO" = "FK_CLASE_EQUIPO"]]>
 	</queryString>
 	<field name="NUM_COTIZACION" class="java.lang.String"/>
 	<field name="ESTADO" class="java.lang.String"/>
@@ -22,6 +22,7 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 	<field name="CANTIDAD" class="java.lang.Integer"/>
 	<field name="ID_TIPO_EQUIPO" class="java.lang.Integer"/>
 	<field name="subtotal_cal" class="java.math.BigDecimal"/>
+	<field name="laclase" class="java.lang.String"/>
 	<title>
 		<band height="92" splitType="Stretch">
 			<staticText>
@@ -46,46 +47,53 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 	<pageHeader>
 		<band height="35" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="289" y="24" width="72" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="e0594ad3-5b4f-4a02-b96c-6356d5db7052"/>
+				<reportElement mode="Opaque" x="379" y="24" width="72" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="e0594ad3-5b4f-4a02-b96c-6356d5db7052"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Unidad]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="46" y="24" width="257" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="2a2e06a3-1327-4464-8799-0c807583e6b0"/>
+				<reportElement mode="Opaque" x="46" y="24" width="261" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="2a2e06a3-1327-4464-8799-0c807583e6b0"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Descripcion]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="6" y="24" width="52" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="08fe0758-4218-4073-857a-3d9872d71140"/>
+				<reportElement mode="Opaque" x="10" y="24" width="48" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="08fe0758-4218-4073-857a-3d9872d71140"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Item]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="347" y="24" width="72" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="b4486c4f-b90e-4053-9ea4-4c6048e0d213"/>
+				<reportElement mode="Opaque" x="437" y="24" width="72" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="b4486c4f-b90e-4053-9ea4-4c6048e0d213"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Cantidad]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="416" y="24" width="81" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="118b61ea-c499-45cb-ba09-e7206441ceae"/>
+				<reportElement mode="Opaque" x="506" y="24" width="81" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="118b61ea-c499-45cb-ba09-e7206441ceae"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Valor Unitario]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="497" y="24" width="81" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="981f04a1-3352-48af-ac66-81fb79327da6"/>
+				<reportElement mode="Opaque" x="587" y="24" width="81" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="981f04a1-3352-48af-ac66-81fb79327da6"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[SubTotal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="307" y="24" width="72" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="63bb921d-bd35-466b-ab4f-b930441e20d4"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clase]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
@@ -106,32 +114,39 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 				<textFieldExpression><![CDATA[$F{elequipo}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="485" y="0" width="93" height="20" uuid="493bfbc9-6977-41c9-9aa1-a7a7a1084269"/>
+				<reportElement x="575" y="0" width="93" height="20" uuid="493bfbc9-6977-41c9-9aa1-a7a7a1084269"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{subtotal_cal}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="349" y="0" width="72" height="20" uuid="e1cbe780-0022-4114-a470-b0934e5ce96d"/>
+				<reportElement x="439" y="0" width="72" height="20" uuid="e1cbe780-0022-4114-a470-b0934e5ce96d"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CANTIDAD}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="421" y="0" width="64" height="20" uuid="e3ca27f0-3e35-4bdf-85ae-bc2998043df6"/>
+				<reportElement x="511" y="0" width="64" height="20" uuid="e3ca27f0-3e35-4bdf-85ae-bc2998043df6"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{VALOR_UNITARIO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="307" y="0" width="42" height="20" uuid="df44c2b7-b607-459a-acf7-90ec2ac03d12"/>
+				<reportElement x="397" y="0" width="42" height="20" uuid="df44c2b7-b607-459a-acf7-90ec2ac03d12"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{unidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="0" width="90" height="20" uuid="ca257841-d6c4-4c75-a7d0-045177b85173"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laclase}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
