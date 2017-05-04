@@ -45,45 +45,9 @@
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport0.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="39">
-			<subreport>
-				<reportElement x="0" y="0" width="572" height="39" uuid="6cd3a8af-d474-46c1-b0f4-bf9b59701a88"/>
-				<subreportParameter name="ncotic">
-					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
-				</subreportParameter>
-				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_tiempo.jasper"]]></subreportExpression>
-			</subreport>
-		</band>
-		<band height="39">
-			<subreport>
-				<reportElement x="0" y="0" width="572" height="39" uuid="ad0562e0-2a9f-4f36-91b2-71a8593f4973"/>
-				<subreportParameter name="tiempo">
-					<subreportParameterExpression><![CDATA[$P{tiempo}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="pago">
-					<subreportParameterExpression><![CDATA[$P{pago}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="ncotic">
-					<subreportParameterExpression><![CDATA[$P{ncotic}.toString()]]></subreportParameterExpression>
-				</subreportParameter>
-				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport3.jasper"]]></subreportExpression>
-			</subreport>
-		</band>
-		<band height="39">
-			<subreport>
-				<reportElement x="0" y="0" width="572" height="39" uuid="71f7c340-dd7d-4a39-ae0d-9461975380ce"/>
-				<subreportParameter name="pago">
-					<subreportParameterExpression><![CDATA[$P{pago}]]></subreportParameterExpression>
-				</subreportParameter>
-				<subreportParameter name="ncotic">
-					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
-				</subreportParameter>
-				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA["/var/www/labdiel/reportes/cotizacion_labdielectrico_subreport_total.jasper"]]></subreportExpression>
-			</subreport>
-		</band>
+		<band height="39"/>
+		<band height="39"/>
+		<band height="39"/>
 		<band height="50"/>
 	</detail>
 	<pageFooter>
