@@ -2,10 +2,10 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recibo_entrada_salida" language="groovy" pageWidth="648" pageHeight="842" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2494f3d5-2a08-4d51-b2a3-c8d2aaa4f588">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="11"/>
+	<property name="ireport.y" value="134"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[select coti.*,rev.*,c.*,pc."DESCRIPCION" as desc_ciudad
+		<![CDATA[select coti.*,rev.*,c.*,pc."DESCRIPCION" as desc_ciudad,to_char(rev."FECHA_REGISTRO" , 'YYYY-MM-DD HH:MM:SS') as fecha_sol
 
   from labor."COTIZACION" coti, labor."REVISION_ENSAYO_EQUIPO" rev ,labor."CLIENTE" c, labor."PARAM_CIUDAD" pc where coti."NUM_COTIZACION" = $P{ncotic}
 
@@ -23,6 +23,8 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND c."CIUDAD" =
 	<field name="US_MODIFICA" class="java.lang.Integer"/>
 	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
 	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
+	<field name="TIEMPO" class="java.lang.String"/>
+	<field name="PAGO" class="java.lang.String"/>
 	<field name="ID_REVISION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FECHA_SOLICITUD" class="java.sql.Timestamp"/>
 	<field name="LUGAR_REVISION" class="java.lang.String"/>
@@ -54,6 +56,7 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND c."CIUDAD" =
 	<field name="DEPTO" class="java.lang.Integer"/>
 	<field name="USERNAME" class="java.lang.String"/>
 	<field name="desc_ciudad" class="java.lang.String"/>
+	<field name="fecha_sol" class="java.lang.String"/>
 	<title>
 		<band height="244" splitType="Stretch">
 			<staticText>
@@ -105,7 +108,7 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND c."CIUDAD" =
 				<text><![CDATA[INFORMACIÓN CLIENTE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="5" y="146" width="60" height="20" uuid="663ba379-ec41-49d3-b395-1c8e774c02cb"/>
+				<reportElement x="5" y="146" width="136" height="20" uuid="663ba379-ec41-49d3-b395-1c8e774c02cb"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -119,7 +122,7 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND c."CIUDAD" =
 				<text><![CDATA[PERSONA CONTACTO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="5" y="186" width="65" height="20" uuid="253149f1-3712-44eb-b33c-9f786e6aaae0"/>
+				<reportElement x="5" y="186" width="136" height="20" uuid="253149f1-3712-44eb-b33c-9f786e6aaae0"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -133,71 +136,71 @@ AND rev."ID_REVISION_EQUIPO" = coti."FK_REVISION_ENSAYO_EQUIPO" AND c."CIUDAD" =
 				<text><![CDATA[FECHA INGRESO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="383" y="156" width="60" height="20" uuid="8b19b6c2-1c1b-4a3d-b2a3-d3543e4cc141"/>
+				<reportElement x="383" y="146" width="60" height="20" uuid="8b19b6c2-1c1b-4a3d-b2a3-d3543e4cc141"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[NIT/CC]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="383" y="176" width="60" height="20" uuid="5296040e-1986-4f5b-a9bf-886aca387884"/>
+				<reportElement x="383" y="166" width="60" height="20" uuid="5296040e-1986-4f5b-a9bf-886aca387884"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[TEL]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="383" y="195" width="60" height="20" uuid="0350c36d-80e7-4a59-8417-f69af7c6ed53"/>
+				<reportElement x="383" y="185" width="60" height="20" uuid="0350c36d-80e7-4a59-8417-f69af7c6ed53"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[CIUDAD]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="383" y="215" width="60" height="20" uuid="85809e12-0d30-44c7-9d68-a9416e7abdf1"/>
+				<reportElement x="383" y="205" width="60" height="20" uuid="85809e12-0d30-44c7-9d68-a9416e7abdf1"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[EMAIL]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="385" y="126" width="159" height="20" uuid="ed337ead-bea3-49b8-8756-ee0ca4072439"/>
+				<reportElement x="384" y="106" width="159" height="20" uuid="ed337ead-bea3-49b8-8756-ee0ca4072439"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NUM_COTIZACION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="67" y="146" width="304" height="20" uuid="189f1a6b-d983-411d-b0db-17d0ac3a2b0d"/>
-				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
-			</textField>
-			<textField>
 				<reportElement x="141" y="166" width="230" height="20" uuid="c3f5bef3-fa52-48a4-bdde-5e608e902a3c"/>
 				<textFieldExpression><![CDATA[$F{APELLIDO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="70" y="186" width="237" height="20" uuid="246c6861-9174-4f67-8986-0b82e37b6ac4"/>
+				<reportElement x="141" y="185" width="230" height="20" uuid="246c6861-9174-4f67-8986-0b82e37b6ac4"/>
 				<textFieldExpression><![CDATA[$F{DIRECCION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="141" y="205" width="100" height="20" uuid="79ce66a4-67f3-44c5-85b1-397201267068"/>
-				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="443" y="156" width="100" height="20" uuid="dc77b487-696a-46fb-84d3-5a1ab1ff9e1f"/>
+				<reportElement x="443" y="146" width="100" height="20" uuid="dc77b487-696a-46fb-84d3-5a1ab1ff9e1f"/>
 				<textFieldExpression><![CDATA[$F{IDE_NIT}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="444" y="176" width="164" height="20" uuid="4db25ac2-0634-47ed-a664-d5dd71f9d598"/>
+				<reportElement x="444" y="166" width="164" height="20" uuid="4db25ac2-0634-47ed-a664-d5dd71f9d598"/>
 				<textFieldExpression><![CDATA[$F{TELEFONO_CONTACTO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="444" y="216" width="164" height="20" uuid="8ee19970-6b3a-4857-b4b7-8786a67ab13b"/>
+				<reportElement x="444" y="206" width="164" height="20" uuid="8ee19970-6b3a-4857-b4b7-8786a67ab13b"/>
 				<textFieldExpression><![CDATA[$F{EMAIL}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="445" y="196" width="163" height="20" uuid="a751e894-6e04-4e38-be44-8e020162c9dc"/>
+				<reportElement x="445" y="186" width="163" height="20" uuid="a751e894-6e04-4e38-be44-8e020162c9dc"/>
 				<textFieldExpression><![CDATA[$F{desc_ciudad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="205" width="166" height="20" uuid="2f52a4f8-eb03-4d4e-89f2-17c4dc537ba7"/>
+				<textFieldExpression><![CDATA[$F{fecha_sol}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="146" width="231" height="20" uuid="189f1a6b-d983-411d-b0db-17d0ac3a2b0d"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>

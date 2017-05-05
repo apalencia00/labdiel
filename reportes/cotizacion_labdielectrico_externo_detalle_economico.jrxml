@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_detalle_economico" language="groovy" pageWidth="720" pageHeight="802" columnWidth="720" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="5e36cfa7-60c7-409d-928f-12f815606756">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizacion_labdielectrico_externo_detalle_economico" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5e36cfa7-60c7-409d-928f-12f815606756">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -47,49 +47,42 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 	<pageHeader>
 		<band height="35" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="379" y="24" width="72" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="e0594ad3-5b4f-4a02-b96c-6356d5db7052"/>
+				<reportElement mode="Opaque" x="305" y="24" width="60" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="e0594ad3-5b4f-4a02-b96c-6356d5db7052"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Unidad]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="46" y="24" width="261" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="2a2e06a3-1327-4464-8799-0c807583e6b0"/>
+				<reportElement mode="Opaque" x="0" y="24" width="233" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="2a2e06a3-1327-4464-8799-0c807583e6b0"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Descripcion]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="10" y="24" width="48" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="08fe0758-4218-4073-857a-3d9872d71140"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Item]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Opaque" x="437" y="24" width="72" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="b4486c4f-b90e-4053-9ea4-4c6048e0d213"/>
+				<reportElement mode="Opaque" x="365" y="24" width="72" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="b4486c4f-b90e-4053-9ea4-4c6048e0d213"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Cantidad]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="506" y="24" width="81" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="118b61ea-c499-45cb-ba09-e7206441ceae"/>
+				<reportElement mode="Opaque" x="437" y="24" width="64" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="118b61ea-c499-45cb-ba09-e7206441ceae"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Valor Unitario]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="587" y="24" width="81" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="981f04a1-3352-48af-ac66-81fb79327da6"/>
+				<reportElement mode="Opaque" x="501" y="24" width="69" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="981f04a1-3352-48af-ac66-81fb79327da6"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[SubTotal]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="307" y="24" width="72" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="63bb921d-bd35-466b-ab4f-b930441e20d4"/>
+				<reportElement mode="Opaque" x="233" y="24" width="72" height="11" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="63bb921d-bd35-466b-ab4f-b930441e20d4"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -100,49 +93,42 @@ AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario
 	<detail>
 		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement x="10" y="0" width="52" height="20" uuid="8c1bc0c8-5820-424e-bdd7-3e32ed1bc43b"/>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{ID_TIPO_EQUIPO}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="62" y="0" width="245" height="20" uuid="87d2882f-1f6f-43e0-abd3-9c10950360a3"/>
+				<reportElement x="0" y="0" width="233" height="20" uuid="87d2882f-1f6f-43e0-abd3-9c10950360a3"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{elequipo}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="575" y="0" width="93" height="20" uuid="493bfbc9-6977-41c9-9aa1-a7a7a1084269"/>
+				<reportElement x="501" y="0" width="69" height="20" uuid="493bfbc9-6977-41c9-9aa1-a7a7a1084269"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{subtotal_cal}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="439" y="0" width="72" height="20" uuid="e1cbe780-0022-4114-a470-b0934e5ce96d"/>
+				<reportElement x="365" y="0" width="72" height="20" uuid="e1cbe780-0022-4114-a470-b0934e5ce96d"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CANTIDAD}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="511" y="0" width="64" height="20" uuid="e3ca27f0-3e35-4bdf-85ae-bc2998043df6"/>
+				<reportElement x="437" y="0" width="64" height="20" uuid="e3ca27f0-3e35-4bdf-85ae-bc2998043df6"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{VALOR_UNITARIO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="397" y="0" width="42" height="20" uuid="df44c2b7-b607-459a-acf7-90ec2ac03d12"/>
+				<reportElement x="305" y="0" width="60" height="20" uuid="df44c2b7-b607-459a-acf7-90ec2ac03d12"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{unidad}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="307" y="0" width="90" height="20" uuid="ca257841-d6c4-4c75-a7d0-045177b85173"/>
+				<reportElement x="233" y="0" width="72" height="20" uuid="ca257841-d6c4-4c75-a7d0-045177b85173"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>

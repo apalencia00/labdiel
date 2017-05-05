@@ -81,19 +81,19 @@
 				<text><![CDATA[Direccion:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="139" y="33" width="282" height="20" uuid="b23e7b61-5eb8-481a-99af-d043329f421e"/>
+				<reportElement x="139" y="33" width="437" height="20" uuid="b23e7b61-5eb8-481a-99af-d043329f421e"/>
 				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="139" y="53" width="100" height="20" uuid="8642ad8f-d4c5-4ca4-8e52-c2450f09e51d"/>
+				<reportElement x="139" y="53" width="202" height="20" uuid="8642ad8f-d4c5-4ca4-8e52-c2450f09e51d"/>
 				<textFieldExpression><![CDATA[$F{IDE_NIT}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="139" y="93" width="156" height="20" uuid="ca5e075e-dc6c-4ce1-abec-aed22497d2fd"/>
+				<reportElement x="139" y="93" width="240" height="20" uuid="ca5e075e-dc6c-4ce1-abec-aed22497d2fd"/>
 				<textFieldExpression><![CDATA[$F{DIRECCION}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="139" y="113" width="156" height="20" uuid="3f43d7ed-5fb7-43d1-bb2f-58be2de90813"/>
+				<reportElement x="139" y="113" width="240" height="20" uuid="3f43d7ed-5fb7-43d1-bb2f-58be2de90813"/>
 				<textFieldExpression><![CDATA[$F{TELEFONO_CONTACTO}]]></textFieldExpression>
 			</textField>
 			<textField>
@@ -112,15 +112,15 @@
 				<text><![CDATA[Departamento:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="139" y="153" width="156" height="20" uuid="01fa1899-6309-46f2-b345-aa66f170b430"/>
+				<reportElement x="139" y="153" width="240" height="20" uuid="01fa1899-6309-46f2-b345-aa66f170b430"/>
 				<textFieldExpression><![CDATA[$F{ciudad}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="139" y="173" width="156" height="20" uuid="84e08711-5765-436b-ba4c-0b41fb4b5f6a"/>
+				<reportElement x="139" y="173" width="240" height="20" uuid="84e08711-5765-436b-ba4c-0b41fb4b5f6a"/>
 				<textFieldExpression><![CDATA[$F{depto}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="139" y="133" width="100" height="20" uuid="ed8b7253-16a4-4b62-bb4f-7ee8a810b229"/>
+				<reportElement x="139" y="133" width="240" height="20" uuid="ed8b7253-16a4-4b62-bb4f-7ee8a810b229"/>
 				<textFieldExpression><![CDATA[$F{EMAIL}]]></textFieldExpression>
 			</textField>
 			<staticText>
@@ -132,7 +132,7 @@
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="522" y="0" width="54" height="20" uuid="e3cb16e5-37aa-43ae-9f1e-e4026d079022"/>
+				<reportElement x="519" y="1" width="54" height="20" uuid="e3cb16e5-37aa-43ae-9f1e-e4026d079022"/>
 				<textElement verticalAlignment="Top">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -177,7 +177,7 @@
 ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="139" y="73" width="282" height="20" uuid="e29a602d-9f7d-4508-848d-246e900f1221"/>
+				<reportElement x="139" y="73" width="437" height="20" uuid="e29a602d-9f7d-4508-848d-246e900f1221"/>
 				<textFieldExpression><![CDATA[$F{APELLIDO}]]></textFieldExpression>
 			</textField>
 		</band>

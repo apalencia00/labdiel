@@ -59,7 +59,16 @@
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/recotizacion_labdielectrico_subreport1.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
-		<band height="39"/>
+		<band height="39">
+			<subreport>
+				<reportElement x="0" y="0" width="572" height="39" uuid="9d994289-6715-49bd-a2bf-89b37332352c"/>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\xampp\\htdocs\\labdiel\\reportes\\recotizacion_labdielectrico_total.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
 		<band height="40">
 			<subreport>
 				<reportElement x="0" y="0" width="572" height="40" uuid="15478b15-0da7-45b1-a071-2236a8015d63"/>

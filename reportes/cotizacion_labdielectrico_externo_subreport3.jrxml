@@ -73,7 +73,7 @@
 				<text><![CDATA[,]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Transparent" x="252" y="15" width="358" height="20" uuid="445061aa-50fa-4738-8661-2fb3c62bd303"/>
+				<reportElement mode="Transparent" x="252" y="14" width="358" height="20" uuid="445061aa-50fa-4738-8661-2fb3c62bd303"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{DIRECCION_REVISION}]]></textFieldExpression>
 			</textField>
@@ -87,7 +87,7 @@
 				<textFieldExpression><![CDATA[$F{depto}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="343" y="58" width="337" height="20" uuid="0f5cf777-5590-4d43-8f01-dbcc26593c19"/>
+				<reportElement mode="Opaque" x="343" y="59" width="337" height="17" backcolor="#FFFF00" uuid="0f5cf777-5590-4d43-8f01-dbcc26593c19"/>
 				<textFieldExpression><![CDATA[$F{TIEMPO}]]></textFieldExpression>
 			</textField>
 		</band>
