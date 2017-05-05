@@ -5,6 +5,21 @@
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String"/>
 	<parameter name="norma" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from labor."COTIZACION" where "NUM_COTIZACION" = $P{ncotic}]]>
+	</queryString>
+	<field name="ID_COTIZACION" class="java.lang.Integer"/>
+	<field name="NUM_COTIZACION" class="java.lang.String"/>
+	<field name="FK_CLIENTE" class="java.lang.Integer"/>
+	<field name="FK_USUARIO" class="java.lang.Integer"/>
+	<field name="FK_EMPLEADO" class="java.lang.Integer"/>
+	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
+	<field name="ESTADO" class="java.lang.String"/>
+	<field name="US_MODIFICA" class="java.lang.Integer"/>
+	<field name="FECHA_MODIFICACION" class="java.sql.Timestamp"/>
+	<field name="FK_REVISION_ENSAYO_EQUIPO" class="java.lang.Integer"/>
+	<field name="TIEMPO" class="java.lang.String"/>
+	<field name="PAGO" class="java.lang.String"/>
 	<pageHeader>
 		<band height="66" splitType="Stretch">
 			<image>
