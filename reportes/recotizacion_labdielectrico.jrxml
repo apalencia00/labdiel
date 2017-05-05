@@ -52,6 +52,9 @@
 		<band height="39">
 			<subreport>
 				<reportElement x="0" y="0" width="572" height="39" uuid="5ed272ae-f47f-42f5-b7b7-b8c2d8363839"/>
+				<subreportParameter name="ncotic">
+					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
+				</subreportParameter>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
 				<subreportExpression><![CDATA["/var/www/labdiel/reportes/recotizacion_labdielectrico_subreport1.jasper"]]></subreportExpression>
 			</subreport>
