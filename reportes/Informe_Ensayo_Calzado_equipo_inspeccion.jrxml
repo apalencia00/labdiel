@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Calzado_equipo_inspeccion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="0877aad4-dd32-4925-bdfc-eeed4eb4b656">
-	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[SELECT *
-  FROM labor."RGTRO_ESAY_EQIP_INSPC", labor."INSTRUMENTO_ENSAYO" WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO" = 'B']]>
+		<![CDATA[SELECT distinct "FK_ID_EQUIPO_INSPECCIONADOR","CODIGO_INTERNO","SERIAL","CERTIFICADO","TRAZADO","INCERTIDUMBRE"
+
+  FROM labor."RGTRO_ESAY_EQIP_INSPC" t, labor."INSTRUMENTO_ENSAYO" p
+
+  WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO"  = 'B'
+
+  GROUP BY  "ENSAYO_EQUIPOS_PROBADORES","ID_EQUIPO_ENSAYO","DESCRIPCION","FK_COTIZACION","FORMULARIO","USUARIO","FECHA_REGISTRO","ID_EQUIPO_ENSAYO",
+  "CODIGO_INTERNO","SERIAL","CERTIFICADO","TRAZADO","INCERTIDUMBRE","FK_ID_EQUIPO_INSPECCIONADOR"]]>
 	</queryString>
-	<field name="ENSAYO_EQUIPOS_PROBADORES" class="java.lang.Integer"/>
-	<field name="FK_COTIZACION" class="java.lang.String"/>
 	<field name="FK_ID_EQUIPO_INSPECCIONADOR" class="java.lang.Integer"/>
-	<field name="FORMULARIO" class="java.lang.String"/>
-	<field name="USUARIO" class="java.lang.Integer"/>
-	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
-	<field name="ID_EQUIPO_ENSAYO" class="java.lang.Integer"/>
-	<field name="DESCRIPCION" class="java.lang.String"/>
 	<field name="CODIGO_INTERNO" class="java.lang.String"/>
 	<field name="SERIAL" class="java.lang.String"/>
 	<field name="CERTIFICADO" class="java.lang.String"/>
 	<field name="TRAZADO" class="java.lang.String"/>
 	<field name="INCERTIDUMBRE" class="java.lang.String"/>
 	<title>
-		<band height="44" splitType="Stretch">
+		<band height="48" splitType="Stretch">
 			<staticText>
-				<reportElement x="51" y="24" width="505" height="20" uuid="d78711c7-bbd5-4efa-b449-31ae77338233"/>
+				<reportElement x="57" y="24" width="505" height="20" uuid="da1e8752-d03f-4919-98b4-d03510084750"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -36,108 +35,108 @@
 		</band>
 	</title>
 	<pageHeader>
-		<band height="38" splitType="Stretch">
+		<band height="29" splitType="Stretch">
 			<rectangle>
-				<reportElement x="492" y="10" width="114" height="20" uuid="ca70acc0-9ffb-4b3d-9693-352aa104e9b8"/>
+				<reportElement x="374" y="7" width="107" height="20" uuid="baa8b470-30b3-44d9-83b6-3def2f39d38c"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="224" y="11" width="136" height="20" uuid="746cbdd3-f0a5-4bd9-b7f7-72fdfe76b43c"/>
+				<reportElement x="5" y="7" width="120" height="20" uuid="87576f9f-ea5f-4de0-b9f3-fa4be0915778"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="6" y="12" width="120" height="20" uuid="3db55ba3-b911-46df-b382-151ed92c8f2b"/>
+				<reportElement x="222" y="7" width="136" height="20" uuid="353e24d7-c47b-49bc-b2e9-5e3318820aaa"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="6" y="11" width="120" height="20" uuid="20caff4f-7230-4820-b4b2-574f3134067b"/>
+				<reportElement x="374" y="7" width="107" height="20" uuid="ac8b5dac-6a6c-43a9-b981-dc41803a7f2b"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trazado a/Traceable to					]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="138" y="7" width="73" height="20" uuid="558ca246-c4f8-45aa-9442-016f9d8c9c5c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="491" y="7" width="114" height="20" uuid="48632e56-1b39-4aea-b07e-f37ad4ccaff3"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="7" width="120" height="20" uuid="75669f7f-c10c-479f-8e57-69abc09b0d01"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Código interno/Internal Code]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="224" y="11" width="136" height="20" uuid="4f996bb5-035e-4456-8368-6644a09a37ba"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[No. Certificado/Certificate Number]]></text>
-			</staticText>
-			<rectangle>
-				<reportElement x="138" y="11" width="73" height="20" uuid="a0955075-f079-4c9b-9c44-e231f343c265"/>
-			</rectangle>
-			<rectangle>
-				<reportElement x="375" y="10" width="107" height="20" uuid="3514948e-fafb-410f-b947-a827ddb6a73a"/>
-			</rectangle>
-			<staticText>
-				<reportElement x="375" y="12" width="107" height="20" uuid="0baf5158-cf71-414e-bef5-74872412fd86"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Trazado a/Traceable to					]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="492" y="12" width="110" height="17" uuid="c6847db4-6bdc-40b9-8cbd-d5341fc34c3a"/>
+				<reportElement x="494" y="8" width="110" height="17" uuid="b8d3bba6-9b85-4f04-ae68-7bc2ae4052be"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Incertidumbre]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="138" y="12" width="73" height="20" uuid="3fd0a98f-3445-44ca-8c20-781c31f853f2"/>
+				<reportElement x="137" y="7" width="73" height="20" uuid="cfa0860b-0498-41a6-aaa0-fcf11bb3a860"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Serie/Serial]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="222" y="7" width="136" height="20" uuid="905e9faa-1d07-4989-b945-d726f9a01559"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Certificado/Certificate Number]]></text>
+			</staticText>
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="42" splitType="Stretch">
+		<band height="34" splitType="Stretch">
 			<rectangle>
-				<reportElement x="375" y="10" width="107" height="22" uuid="78857235-17af-49f2-bcad-87d6c265c930"/>
+				<reportElement x="492" y="4" width="114" height="22" uuid="d635334a-d2ff-4215-ba2d-14c2ff08e21b"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="138" y="11" width="73" height="22" uuid="4d4ebbe2-c5f6-4a26-bdd6-761bc3a0523f"/>
+				<reportElement x="375" y="4" width="107" height="22" uuid="aca7c063-cfd3-4dc5-872c-6241e3fb9116"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="6" y="10" width="120" height="22" uuid="a88a06d3-45f0-403a-8785-7c91e0252bfc"/>
-			</rectangle>
-			<rectangle>
-				<reportElement x="493" y="10" width="114" height="20" uuid="3585e9fa-875f-4c7a-9838-0599c812d845"/>
+				<reportElement x="224" y="4" width="136" height="22" uuid="f9606f66-8016-4ddb-8017-b8ab1e04601c"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="494" y="11" width="110" height="18" backcolor="#CCCCCC" uuid="c7bd4e46-27b2-446e-abab-4325773b2150"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement mode="Opaque" x="6" y="12" width="120" height="20" backcolor="#CCCCCC" uuid="f871ffd7-bbba-445f-bad6-1df454c4f24f"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{CODIGO_INTERNO}]]></textFieldExpression>
-			</textField>
-			<rectangle>
-				<reportElement x="224" y="11" width="136" height="22" uuid="d5d610e7-ba91-420f-b605-fd3f1059d214"/>
-			</rectangle>
-			<textField>
-				<reportElement mode="Opaque" x="375" y="12" width="107" height="20" backcolor="#CCCCCC" uuid="d8910b52-2ce4-4075-be55-2627ef15c7ec"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
+				<reportElement mode="Opaque" x="376" y="5" width="105" height="20" backcolor="#CCCCCC" uuid="5691f2e6-aa04-4e2c-933d-2163a94d420f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TRAZADO}]]></textFieldExpression>
 			</textField>
+			<rectangle>
+				<reportElement x="6" y="3" width="120" height="22" uuid="3e76e229-3eae-45eb-8975-bf8750aec3b0"/>
+			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="139" y="12" width="71" height="20" backcolor="#CCCCCC" uuid="e0cb3e18-557d-4959-abc9-3d1b912ec337"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
+				<reportElement mode="Opaque" x="494" y="6" width="110" height="18" backcolor="#CCCCCC" uuid="c259c863-7e66-4841-b8de-a09c9e5e382f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="139" y="3" width="73" height="22" uuid="0fecfc9c-b7bf-4012-8382-4be47636e3cd"/>
+			</rectangle>
+			<textField>
+				<reportElement mode="Opaque" x="140" y="4" width="71" height="20" backcolor="#CCCCCC" uuid="ce167c28-3878-46f2-928f-c7b18f5da532"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SERIAL}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="224" y="12" width="135" height="20" backcolor="#CCCCCC" uuid="bc83464e-05ab-4945-9741-eeed5fc1e354"/>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
+				<reportElement mode="Opaque" x="7" y="4" width="118" height="20" backcolor="#CCCCCC" uuid="54e51e33-44ba-4fb2-8eac-7a690d658534"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CODIGO_INTERNO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="225" y="5" width="134" height="20" backcolor="#CCCCCC" uuid="4f1d9241-c16a-4a16-8af4-1fd5fe85a06d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CERTIFICADO}]]></textFieldExpression>
 			</textField>

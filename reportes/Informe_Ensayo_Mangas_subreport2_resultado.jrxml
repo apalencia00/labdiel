@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mangas_subreport2_resultado" language="groovy" pageWidth="730" pageHeight="802" columnWidth="730" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9bc10846-7f00-4b5a-a50b-855d57fe218e">
-	<property name="ireport.zoom" value="0.75"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mangas_subreport2_resultado" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9bc10846-7f00-4b5a-a50b-855d57fe218e">
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
@@ -17,7 +17,7 @@
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", "FECHA_REGISTRO",
        "CORRIENTE_FUGA_MEDIDA", "COD_CLIENTE",dts.cod_seriales
-  FROM labor."REGISTRO_INSPECCION_EQUIPO", labor."DET_COTI_SERIALIZAR_EQUIPO" dts where dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" AND "FK_COTIZACION" = $P{ncotic}]]>
+  FROM labor."REGISTRO_INSPECCION_EQUIPO", labor."DET_COTI_SERIALIZAR_EQUIPO" dts where dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" AND "FK_COTIZACION" = $P{ncotic} AND  substr(dts.cod_seriales, 1, 1) = 'M' AND  substr(dts.cod_seriales, 1, 2) <> 'MT']]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
@@ -65,9 +65,22 @@
 	<field name="COD_CLIENTE" class="java.lang.String"/>
 	<field name="cod_seriales" class="java.lang.String"/>
 	<title>
-		<band height="56" splitType="Stretch">
+		<band height="19" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="103">
 			<staticText>
-				<reportElement x="0" y="0" width="125" height="56" uuid="d3ab8524-7e01-44be-8734-b04b987cfc20"/>
+				<reportElement x="0" y="0" width="283" height="20" uuid="a86622f3-376e-4aaa-ab32-9ec9b4281823"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="33" width="125" height="64" uuid="f3dfe10e-5d8f-4788-b24f-74debc1420dc"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="34" width="125" height="56" uuid="d3ab8524-7e01-44be-8734-b04b987cfc20"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código asignado por el cliente/
  code assigned by client
@@ -76,17 +89,14 @@
 
 ]]></text>
 			</staticText>
+			<rectangle>
+				<reportElement x="125" y="33" width="125" height="64" uuid="8606f70c-f3fb-4abb-927a-e088f9953f40"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="250" y="33" width="322" height="64" uuid="4934bcf6-2c05-43a2-bcb3-0c0afbcf22c1"/>
+			</rectangle>
 			<staticText>
-				<reportElement x="250" y="0" width="480" height="56" uuid="a2a2af09-e90e-463e-a748-5ccd716ac1d8"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[Resultado del ensayo/
-Test Result
-
-
-]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="125" y="0" width="125" height="56" uuid="579f125b-7ad2-4e12-866d-68bf7747b7f3"/>
+				<reportElement x="125" y="35" width="125" height="56" uuid="579f125b-7ad2-4e12-866d-68bf7747b7f3"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código interno
 Del equipo/
@@ -95,24 +105,42 @@ Internal code equipment
 
 ]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="250" y="36" width="322" height="56" uuid="a2a2af09-e90e-463e-a748-5ccd716ac1d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Resultado del ensayo/
+Test Result
+
+
+]]></text>
+			</staticText>
 		</band>
-	</title>
+	</pageHeader>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="34" splitType="Stretch">
+			<rectangle>
+				<reportElement x="250" y="3" width="322" height="22" uuid="639f9424-c849-4a46-9bdc-4a0e93a575b9"/>
+			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="250" y="0" width="480" height="20" backcolor="#CCCCCC" uuid="b6718020-bbc1-496f-ae60-7b2e4c6740bb"/>
+				<reportElement mode="Opaque" x="252" y="5" width="320" height="20" backcolor="#CCCCCC" uuid="b6718020-bbc1-496f-ae60-7b2e4c6740bb"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{OBS_FINAL}]]></textFieldExpression>
 			</textField>
+			<rectangle>
+				<reportElement x="0" y="3" width="125" height="22" uuid="b6ea063e-33ae-495c-abb9-d2c20f24291c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="125" y="3" width="125" height="22" uuid="8aca76fb-0f20-41c0-a3fc-a3d60229074b"/>
+			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="0" y="0" width="125" height="20" backcolor="#CCCCCC" uuid="704e1615-d9ef-4883-a5a6-4002616bd206"/>
+				<reportElement mode="Opaque" x="2" y="5" width="123" height="20" backcolor="#CCCCCC" uuid="704e1615-d9ef-4883-a5a6-4002616bd206"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{COD_CLIENTE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="125" y="0" width="125" height="20" backcolor="#CCCCCC" uuid="f8a3f49c-ee9f-46b2-b8fd-d78874613b91"/>
+				<reportElement mode="Opaque" x="127" y="5" width="123" height="20" backcolor="#CCCCCC" uuid="f8a3f49c-ee9f-46b2-b8fd-d78874613b91"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
 			</textField>

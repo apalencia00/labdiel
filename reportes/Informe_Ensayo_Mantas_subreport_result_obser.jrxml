@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mantas_subreport_result_obser" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e4a63e46-9563-48d2-8eac-84e8035b3344">
-	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
@@ -17,7 +17,7 @@
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", "FECHA_REGISTRO",
        "CORRIENTE_FUGA_MEDIDA","COD_CLIENTE",dts.cod_seriales
-  FROM labor."REGISTRO_INSPECCION_EQUIPO", labor."DET_COTI_SERIALIZAR_EQUIPO" dts where dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" AND "FK_COTIZACION" = $P{ncotic} ORDER BY "ID_INSPECCION_EQUIPO" asc]]>
+  FROM labor."REGISTRO_INSPECCION_EQUIPO", labor."DET_COTI_SERIALIZAR_EQUIPO" dts where dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" AND "FK_COTIZACION" = $P{ncotic} AND  substr(dts.cod_seriales, 1, 2) = 'MT' AND  substr(dts.cod_seriales, 1, 1) <> 'M' ORDER BY "ID_INSPECCION_EQUIPO" asc]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
@@ -69,16 +69,12 @@
 	</title>
 	<pageHeader>
 		<band height="102" splitType="Stretch">
-			<staticText>
-				<reportElement x="125" y="41" width="125" height="56" uuid="7c536c6b-52f1-45cd-a219-ed7d1d991f7d"/>
-				<textElement textAlignment="Center"/>
-				<text><![CDATA[Código interno
-Del equipo/
-Internal code equipment
-
-
-]]></text>
-			</staticText>
+			<rectangle>
+				<reportElement x="248" y="33" width="322" height="64" uuid="e3167504-875f-4708-b896-fede0efe0a73"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="33" width="125" height="64" uuid="a25474c1-77e4-4677-aa5a-de95548bd67c"/>
+			</rectangle>
 			<staticText>
 				<reportElement x="0" y="0" width="283" height="20" uuid="0e81f372-29c1-4d6b-b3be-41539fc04eaa"/>
 				<textElement>
@@ -87,7 +83,7 @@ Internal code equipment
 				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="250" y="41" width="322" height="56" uuid="1705f02b-6130-4ec8-9d05-ee3637615b4a"/>
+				<reportElement x="250" y="37" width="322" height="56" uuid="c29c63e9-1786-4fa4-b83a-6f72cb306b88"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Resultado del ensayo/
 Test Result
@@ -96,11 +92,24 @@ Test Result
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="41" width="125" height="56" uuid="6f99265c-6b14-4c2a-bab8-54d22a64e916"/>
+				<reportElement x="0" y="34" width="125" height="56" uuid="e6a09f90-fc70-42e9-9a4c-24c440cc1912"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código asignado por el cliente/
  code assigned by client
 
+
+
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="123" y="33" width="127" height="64" uuid="a9ae1063-5d1d-46e1-8d3c-ecabae774da2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="124" y="37" width="125" height="56" uuid="371aab2a-019b-4b17-943c-5508db02872e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Código interno
+Del equipo/
+Internal code equipment
 
 
 ]]></text>

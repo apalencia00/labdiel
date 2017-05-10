@@ -7,19 +7,14 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[select coti."NUM_COTIZACION", coti."ESTADO",dtc."VALOR_UNITARIO"::text,eq."DESCRIPCION" as elequipo, cle."DESCRIPCION" as laclase, un."DESCRIPCION" as unidad,eq."ID_TIPO_EQUIPO",
+		<![CDATA[select dtc."VALOR_UNITARIO"::text,eq."DESCRIPCION" as elequipo, cle."DESCRIPCION" as laclase, un."DESCRIPCION" as unidad,eq."ID_TIPO_EQUIPO",
 apr."CANTIDAD_APROBADO",apr."CANTIDAD_APROBADO" * dtc."VALOR_UNITARIO"::numeric(17,0) as subtotal_cal
 
-from labor."COTIZACION" coti, labor."DETALLE_COTIZACION" dtc, labor."EQUIPOS_APROBADOS" apr ,labor."CLIENTE" cl, labor."EMPLEADO" e, auth."USUARIO" us ,labor."REVISION_ENSAYO_EQUIPO" rv,
-labor."TIPO_EQUIPO" eq, labor."UNIDAD_MEDICION" un
-, labor."CLASE_EQUIPO" cle
-where coti."NUM_COTIZACION" = dtc."FK_COTIZACION" AND coti."FK_CLIENTE" = cl."ID_CLIENTE" AND e."ID_EMPLEADO" = coti."FK_EMPLEADO"
-AND coti."FK_REVISION_ENSAYO_EQUIPO" = rv."ID_REVISION_EQUIPO" AND us.id_usuario = coti."FK_USUARIO" AND coti."US_MODIFICA" = us.id_usuario
-AND coti."NUM_COTIZACION" = $P{ncotic} AND dtc."FK_COD_TIPO_EQUIPO" = eq."ID_TIPO_EQUIPO" AND eq."FK_UNIDAD" = un."ID_UNIDAD" and cle."ID_CLASE_EQUIPO" = "FK_CLASE_EQUIPO"
-AND apr."FK_COTIZACION" = coti."NUM_COTIZACION" and apr."FK_COTIZACION" = dtc."FK_COTIZACION"]]>
+from labor."DETALLE_COTIZACION" dtc, labor."EQUIPOS_APROBADOS" apr,labor."TIPO_EQUIPO" eq, labor."UNIDAD_MEDICION" un, labor."CLASE_EQUIPO" cle
+
+where apr."FK_COTIZACION" = $P{ncotic} AND dtc."FK_COD_TIPO_EQUIPO" = eq."ID_TIPO_EQUIPO" AND eq."FK_UNIDAD" = un."ID_UNIDAD" and cle."ID_CLASE_EQUIPO" = "FK_CLASE_EQUIPO"
+and apr."FK_COTIZACION" = dtc."FK_COTIZACION" AND apr."FK_COD_TIPO_EQUIPO" = dtc."FK_COD_TIPO_EQUIPO"]]>
 	</queryString>
-	<field name="NUM_COTIZACION" class="java.lang.String"/>
-	<field name="ESTADO" class="java.lang.String"/>
 	<field name="VALOR_UNITARIO" class="java.lang.String"/>
 	<field name="elequipo" class="java.lang.String"/>
 	<field name="laclase" class="java.lang.String"/>

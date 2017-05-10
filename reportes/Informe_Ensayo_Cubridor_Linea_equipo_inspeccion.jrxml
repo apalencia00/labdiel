@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Cubridor_Linea_equipo_inspeccion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fb8945af-60e3-406c-865c-8169e3bb7c50">
-	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[SELECT *
-  FROM labor."RGTRO_ESAY_EQIP_INSPC", labor."INSTRUMENTO_ENSAYO" WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO" = 'CL']]>
+		<![CDATA[SELECT distinct "FK_ID_EQUIPO_INSPECCIONADOR","CODIGO_INTERNO","SERIAL","CERTIFICADO","TRAZADO","INCERTIDUMBRE"
+
+  FROM labor."RGTRO_ESAY_EQIP_INSPC" t, labor."INSTRUMENTO_ENSAYO" p
+
+  WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO"  = 'CL'
+
+  GROUP BY  "ENSAYO_EQUIPOS_PROBADORES","ID_EQUIPO_ENSAYO","DESCRIPCION","FK_COTIZACION","FORMULARIO","USUARIO","FECHA_REGISTRO","ID_EQUIPO_ENSAYO",
+  "CODIGO_INTERNO","SERIAL","CERTIFICADO","TRAZADO","INCERTIDUMBRE","FK_ID_EQUIPO_INSPECCIONADOR"]]>
 	</queryString>
-	<field name="ENSAYO_EQUIPOS_PROBADORES" class="java.lang.Integer"/>
-	<field name="FK_COTIZACION" class="java.lang.String"/>
 	<field name="FK_ID_EQUIPO_INSPECCIONADOR" class="java.lang.Integer"/>
-	<field name="FORMULARIO" class="java.lang.String"/>
-	<field name="USUARIO" class="java.lang.Integer"/>
-	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
-	<field name="ID_EQUIPO_ENSAYO" class="java.lang.Integer"/>
-	<field name="DESCRIPCION" class="java.lang.String"/>
 	<field name="CODIGO_INTERNO" class="java.lang.String"/>
 	<field name="SERIAL" class="java.lang.String"/>
 	<field name="CERTIFICADO" class="java.lang.String"/>
@@ -98,7 +97,7 @@
 				<reportElement x="137" y="8" width="73" height="22" uuid="91d1727c-5d2d-4001-9bb5-4deaeb1b0b4c"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="374" y="9" width="107" height="20" backcolor="#CCCCCC" uuid="7589c06f-a890-45d2-9673-91265e236929"/>
+				<reportElement mode="Opaque" x="375" y="8" width="106" height="20" backcolor="#CCCCCC" uuid="7589c06f-a890-45d2-9673-91265e236929"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -121,21 +120,21 @@
 				<reportElement x="223" y="8" width="136" height="22" uuid="4710da01-cf24-41ad-93c5-91370656ec7c"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="223" y="9" width="135" height="20" backcolor="#CCCCCC" uuid="7595bba4-d94c-4ff8-9d71-b7ab42da2402"/>
+				<reportElement mode="Opaque" x="224" y="9" width="135" height="20" backcolor="#CCCCCC" uuid="7595bba4-d94c-4ff8-9d71-b7ab42da2402"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CERTIFICADO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="138" y="9" width="71" height="20" backcolor="#CCCCCC" uuid="f73a1593-a2f1-4400-b561-3cc0b1cc465d"/>
+				<reportElement mode="Opaque" x="139" y="9" width="70" height="20" backcolor="#CCCCCC" uuid="f73a1593-a2f1-4400-b561-3cc0b1cc465d"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SERIAL}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="6" y="8" width="119" height="20" backcolor="#CCCCCC" uuid="ffb4b33c-5d2d-4813-9d8f-a0fb02398ca7"/>
+				<reportElement mode="Opaque" x="6" y="8" width="118" height="20" backcolor="#CCCCCC" uuid="ffb4b33c-5d2d-4813-9d8f-a0fb02398ca7"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>

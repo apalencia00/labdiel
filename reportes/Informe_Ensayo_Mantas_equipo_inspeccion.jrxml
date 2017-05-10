@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Mantas_equipo_inspeccion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7f64205e-6868-43f6-a52b-f8b64e03f3e8">
-	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[SELECT *
-  FROM labor."RGTRO_ESAY_EQIP_INSPC", labor."INSTRUMENTO_ENSAYO" WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO" = 'MT']]>
+		<![CDATA[SELECT distinct "FK_ID_EQUIPO_INSPECCIONADOR","CODIGO_INTERNO","SERIAL","CERTIFICADO","TRAZADO","INCERTIDUMBRE"
+
+  FROM labor."RGTRO_ESAY_EQIP_INSPC" t, labor."INSTRUMENTO_ENSAYO" p
+
+  WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO"  = 'MT'
+
+  GROUP BY  "ENSAYO_EQUIPOS_PROBADORES","ID_EQUIPO_ENSAYO","DESCRIPCION","FK_COTIZACION","FORMULARIO","USUARIO","FECHA_REGISTRO","ID_EQUIPO_ENSAYO",
+  "CODIGO_INTERNO","SERIAL","CERTIFICADO","TRAZADO","INCERTIDUMBRE","FK_ID_EQUIPO_INSPECCIONADOR"]]>
 	</queryString>
-	<field name="ENSAYO_EQUIPOS_PROBADORES" class="java.lang.Integer"/>
-	<field name="FK_COTIZACION" class="java.lang.String"/>
 	<field name="FK_ID_EQUIPO_INSPECCIONADOR" class="java.lang.Integer"/>
-	<field name="FORMULARIO" class="java.lang.String"/>
-	<field name="USUARIO" class="java.lang.Integer"/>
-	<field name="FECHA_REGISTRO" class="java.sql.Timestamp"/>
-	<field name="ID_EQUIPO_ENSAYO" class="java.lang.Integer"/>
-	<field name="DESCRIPCION" class="java.lang.String"/>
 	<field name="CODIGO_INTERNO" class="java.lang.String"/>
 	<field name="SERIAL" class="java.lang.String"/>
 	<field name="CERTIFICADO" class="java.lang.String"/>

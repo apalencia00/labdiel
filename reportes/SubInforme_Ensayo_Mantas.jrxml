@@ -18,7 +18,7 @@
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", c.*, ins."FECHA_REGISTRO", serde.cod_seriales, "CORRIENTE_FUGA_MEDIDA","INCERTIDUMBRE_TENSION","INCERTIDUMBRE_CORRIENTE"
   FROM labor."REGISTRO_INSPECCION_EQUIPO" ins, labor."CLIENTE" c, labor."COTIZACION" co, labor."DET_COTI_SERIALIZAR_EQUIPO" dts, labor."DET_COTI_SERIALIZAR_EQUIPO" serde
 
- WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" AND ins."FK_COTIZACION" = $P{ncotic} AND co."FK_CLIENTE" = c."ID_CLIENTE"  and dts.id_detalle_serial::integer = ins."FK_ID_SERIAL_EQUIPO"::integer AND substr(dts.cod_seriales, 1, 1) = 'MT' and serde.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" order by "ID_INSPECCION_EQUIPO" asc]]>
+ WHERE ins."FK_COTIZACION" = co."NUM_COTIZACION" AND ins."FK_COTIZACION" = $P{ncotic} AND co."FK_CLIENTE" = c."ID_CLIENTE"  and dts.id_detalle_serial::integer = ins."FK_ID_SERIAL_EQUIPO"::integer AND substr(dts.cod_seriales, 1, 2) = 'MT' and substr(dts.cod_seriales, 1, 1) <> 'M' AND serde.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" order by "ID_INSPECCION_EQUIPO" asc]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
@@ -279,7 +279,7 @@ Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]]
 				<textFieldExpression><![CDATA[$F{HUMEDAD}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="495" y="4" width="57" height="24" backcolor="#CCCCCC" uuid="10bcaad8-a005-46ad-a8b1-740078a1a023"/>
+				<reportElement mode="Opaque" x="496" y="4" width="57" height="24" backcolor="#CCCCCC" uuid="10bcaad8-a005-46ad-a8b1-740078a1a023"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>
@@ -314,7 +314,7 @@ Corriente de fuga Máxima miliamperios [mA]/ A.C Proof-Test Current, max,  [mA]]
 				<text><![CDATA[Guantes]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="1" y="4" width="59" height="25" backcolor="#CCCCCC" uuid="856ace16-e23b-484c-b223-c0dc2b024f34"/>
+				<reportElement mode="Opaque" x="1" y="4" width="57" height="25" backcolor="#CCCCCC" uuid="856ace16-e23b-484c-b223-c0dc2b024f34"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6"/>
 				</textElement>

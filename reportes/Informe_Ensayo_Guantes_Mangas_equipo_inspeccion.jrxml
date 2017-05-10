@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Guantes_Mangas_equipo_inspeccion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c709b0a3-a15c-4c27-9ac2-bea3cf755785">
-	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
@@ -11,7 +11,7 @@
 
   FROM labor."RGTRO_ESAY_EQIP_INSPC" t, labor."INSTRUMENTO_ENSAYO" p
 
-  WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO" in ('G','M','B','J','MT','CL','CAR','CP','CA','CC','CCC','CE','CCL','RCP','RCL','RCA','RCC','RCCC','RCE','CJ','T')
+  WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO"  = 'M'
 
   GROUP BY  "ENSAYO_EQUIPOS_PROBADORES","ID_EQUIPO_ENSAYO","DESCRIPCION","FK_COTIZACION","FORMULARIO","USUARIO","FECHA_REGISTRO","ID_EQUIPO_ENSAYO",
   "CODIGO_INTERNO","SERIAL","CERTIFICADO","TRAZADO","INCERTIDUMBRE","FK_ID_EQUIPO_INSPECCIONADOR"]]>
@@ -60,7 +60,7 @@
 				<reportElement x="221" y="7" width="136" height="20" uuid="ad26a8da-a2f6-40ae-b762-e38a8dba965a"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="221" y="7" width="136" height="20" uuid="ae11d06f-4534-41a1-a2ae-57520589ce84"/>
+				<reportElement x="223" y="7" width="134" height="20" uuid="ae11d06f-4534-41a1-a2ae-57520589ce84"/>
 				<textElement textAlignment="Center">
 					<font size="8" isBold="true"/>
 				</textElement>

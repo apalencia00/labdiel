@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Jumpers_equipo_inspeccion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ed236be2-aa4c-4396-a19e-45435822bb40">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ncotic" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT distinct "FK_ID_EQUIPO_INSPECCIONADOR","CODIGO_INTERNO","SERIAL","CERTIFICADO","TRAZADO","INCERTIDUMBRE"
+
+  FROM labor."RGTRO_ESAY_EQIP_INSPC" t, labor."INSTRUMENTO_ENSAYO" p
+
+  WHERE "FK_ID_EQUIPO_INSPECCIONADOR" = "ID_EQUIPO_ENSAYO" AND "FK_COTIZACION" = $P{ncotic} AND "FORMULARIO"  = 'J'
+
+  GROUP BY  "ENSAYO_EQUIPOS_PROBADORES","ID_EQUIPO_ENSAYO","DESCRIPCION","FK_COTIZACION","FORMULARIO","USUARIO","FECHA_REGISTRO","ID_EQUIPO_ENSAYO",
+  "CODIGO_INTERNO","SERIAL","CERTIFICADO","TRAZADO","INCERTIDUMBRE","FK_ID_EQUIPO_INSPECCIONADOR"]]>
+	</queryString>
+	<field name="FK_ID_EQUIPO_INSPECCIONADOR" class="java.lang.Integer"/>
+	<field name="CODIGO_INTERNO" class="java.lang.String"/>
+	<field name="SERIAL" class="java.lang.String"/>
+	<field name="CERTIFICADO" class="java.lang.String"/>
+	<field name="TRAZADO" class="java.lang.String"/>
+	<field name="INCERTIDUMBRE" class="java.lang.String"/>
+	<title>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="28" y="22" width="505" height="20" uuid="1459bd5c-a40d-416f-a268-a033968e7ec3"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Información de equipo utilizado para ensayo/test equipment information
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="372" y="7" width="107" height="20" uuid="cc9c3c11-0743-45b0-8380-d68c00c45ea3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="5" y="7" width="120" height="20" uuid="914b914c-240b-4658-a74c-fa2a84d3b73f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="7" width="120" height="20" uuid="5b92083e-c665-4bbe-9f11-15456d0eee01"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código interno/Internal Code]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="491" y="7" width="114" height="20" uuid="de2e4d79-d258-45b4-b477-52551ff8349d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="222" y="7" width="136" height="20" uuid="3c2e65e0-b66d-4003-84b9-82f5e9a5f6b5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="372" y="7" width="107" height="20" uuid="3c7d8fe8-b845-45b2-a0cd-354e1fd83882"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trazado a/Traceable to					]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="7" width="136" height="20" uuid="ad76fa25-4457-4698-bee2-a77565f5daef"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Certificado/Certificate Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="491" y="7" width="110" height="17" uuid="35fbfc05-734b-430f-ab2b-6e631bb74b5f"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Incertidumbre]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="137" y="7" width="73" height="20" uuid="86c4a8c4-0ca7-4661-8646-2423a2d31f86"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="137" y="7" width="73" height="20" uuid="d80a6064-b1b0-4f49-98d8-af05f1975366"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Serie/Serial]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="5" y="1" width="120" height="22" uuid="5e169025-ee10-4831-8958-9d2895645f3e"/>
+			</rectangle>
+			<textField>
+				<reportElement mode="Opaque" x="6" y="2" width="118" height="20" backcolor="#CCCCCC" uuid="fe11b8c7-fc03-4159-8302-d285f8d0a395"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CODIGO_INTERNO}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="372" y="2" width="107" height="22" uuid="06ce3727-e9c6-472a-8377-99212b795475"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="222" y="2" width="136" height="22" uuid="8d138c80-9bfc-437a-a4aa-1813e28a8539"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="491" y="2" width="114" height="22" uuid="b86531f4-0f34-4f52-a3dd-f6b86fcbbedf"/>
+			</rectangle>
+			<textField>
+				<reportElement mode="Opaque" x="374" y="3" width="105" height="20" backcolor="#CCCCCC" uuid="c4e2b441-c8f4-4ba3-b68f-327d57fba5a1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TRAZADO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="224" y="4" width="134" height="20" backcolor="#CCCCCC" uuid="06bd63a1-ece2-492b-9b5d-c76c462a3b1a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CERTIFICADO}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="137" y="1" width="73" height="22" uuid="85f0d4be-fcde-4e6e-9b88-fcb62a46383a"/>
+			</rectangle>
+			<textField>
+				<reportElement mode="Opaque" x="494" y="4" width="110" height="18" backcolor="#CCCCCC" uuid="ad39c97e-fd1c-4103-9a45-89539b8e1f85"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{INCERTIDUMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="139" y="3" width="71" height="20" backcolor="#CCCCCC" uuid="8dcdaa19-15e1-45a4-8d10-e5b058a1405e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SERIAL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

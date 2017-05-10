@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Informe_Ensayo_Jumpers_subreport2_result_observ" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0c7b6a5a-08eb-4752-8fcf-2fdd09153455">
-	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="ncotic" class="java.lang.String">
@@ -17,7 +17,7 @@
        "OBS_CRISTAL", "TENSION_ENSAYO", "CORRIENTE_FUGA", "TEMPERATURA",
        "HUMEDAD", "TIEMPO_ENSAYO_MIN", "OBS_FINAL", "FECHA_REGISTRO",
        "CORRIENTE_FUGA_MEDIDA", "COD_CLIENTE",dts.cod_seriales
-  FROM labor."REGISTRO_INSPECCION_EQUIPO", labor."DET_COTI_SERIALIZAR_EQUIPO" dts where dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" AND "FK_COTIZACION" = $P{ncotic} ORDER BY "ID_INSPECCION_EQUIPO" asc]]>
+  FROM labor."REGISTRO_INSPECCION_EQUIPO", labor."DET_COTI_SERIALIZAR_EQUIPO" dts where dts.id_detalle_serial = "FK_ID_SERIAL_EQUIPO" AND "FK_COTIZACION" = $P{ncotic} AND  substr(dts.cod_seriales, 1, 1) = 'J' ORDER BY "ID_INSPECCION_EQUIPO" asc]]>
 	</queryString>
 	<field name="ID_INSPECCION_EQUIPO" class="java.lang.Integer"/>
 	<field name="FK_COTIZACION" class="java.lang.String"/>
@@ -65,22 +65,28 @@
 	<field name="COD_CLIENTE" class="java.lang.String"/>
 	<field name="cod_seriales" class="java.lang.String"/>
 	<title>
-		<band height="20" splitType="Stretch"/>
+		<band height="14" splitType="Stretch"/>
 	</title>
 	<pageHeader>
 		<band height="111" splitType="Stretch">
+			<rectangle>
+				<reportElement x="250" y="34" width="322" height="64" uuid="0ef2e018-f268-464f-81eb-5f58265f3c4b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="34" width="125" height="64" uuid="b08d1759-5ae3-4b78-a9f8-a174b7bd0b91"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="125" y="34" width="125" height="64" uuid="79324d61-e35a-4030-9895-13d813869df4"/>
+			</rectangle>
 			<staticText>
-				<reportElement x="0" y="51" width="125" height="56" uuid="1cf264de-09e8-4985-9362-71d75770e552"/>
-				<textElement textAlignment="Center"/>
-				<text><![CDATA[Código asignado por el cliente/
- code assigned by client
-
-
-
-]]></text>
+				<reportElement x="0" y="0" width="315" height="20" uuid="026d0b30-8865-4035-b140-9e019ab075ed"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="250" y="51" width="322" height="56" uuid="58dbab85-7e82-4a2a-bd18-bbe09586aaf4"/>
+				<reportElement x="260" y="36" width="309" height="56" uuid="61b54e11-0238-4cfa-b89a-af756702193a"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Resultado del ensayo/
 Test Result
@@ -89,7 +95,7 @@ Test Result
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="125" y="51" width="125" height="56" uuid="8532fe69-d656-4ac1-a084-4ac623f21f09"/>
+				<reportElement x="126" y="35" width="125" height="56" uuid="93a85e1f-1838-41dc-8229-1f1775f2c7cc"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Código interno
 Del equipo/
@@ -99,41 +105,44 @@ Internal code equipment
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="0" width="315" height="20" uuid="026d0b30-8865-4035-b140-9e019ab075ed"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Resultados de ensayo/Test Result]]></text>
+				<reportElement x="1" y="34" width="125" height="56" uuid="479a5cb8-6717-4bcd-8082-c7fbbcd08066"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Código asignado por el cliente/
+ code assigned by client
+
+
+
+]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
 	<detail>
 		<band height="28" splitType="Stretch">
 			<rectangle>
-				<reportElement x="0" y="1" width="125" height="20" uuid="ea752925-3d40-492c-9890-2dc1cd8a960a"/>
+				<reportElement x="0" y="1" width="125" height="22" uuid="ea752925-3d40-492c-9890-2dc1cd8a960a"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="125" y="1" width="125" height="20" uuid="46fc9607-5343-4be3-ac8a-8b23be42b495"/>
+				<reportElement x="125" y="1" width="125" height="22" uuid="46fc9607-5343-4be3-ac8a-8b23be42b495"/>
 			</rectangle>
 			<rectangle>
-				<reportElement x="250" y="1" width="322" height="20" uuid="316936e2-fc83-4956-8795-11616f213497"/>
+				<reportElement x="250" y="1" width="322" height="22" uuid="316936e2-fc83-4956-8795-11616f213497"/>
 			</rectangle>
 			<textField>
-				<reportElement mode="Opaque" x="1" y="1" width="124" height="20" backcolor="#CCCCCC" uuid="3ccdb8e0-b3b5-4310-a147-d9c46e75b153"/>
+				<reportElement mode="Opaque" x="1" y="3" width="124" height="20" backcolor="#CCCCCC" uuid="3ccdb8e0-b3b5-4310-a147-d9c46e75b153"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{COD_CLIENTE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="126" y="1" width="124" height="20" backcolor="#CCCCCC" uuid="02f6a751-5adf-49e1-bb0e-d24f64da927b"/>
+				<reportElement mode="Opaque" x="126" y="3" width="124" height="20" backcolor="#CCCCCC" uuid="02f6a751-5adf-49e1-bb0e-d24f64da927b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cod_seriales}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="251" y="1" width="320" height="20" backcolor="#CCCCCC" uuid="9837b48d-9886-4412-b55c-dd483ad53bd2"/>
+				<reportElement mode="Opaque" x="252" y="3" width="317" height="20" backcolor="#CCCCCC" uuid="9837b48d-9886-4412-b55c-dd483ad53bd2"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>

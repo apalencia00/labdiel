@@ -7,7 +7,7 @@
 	<parameter name="observ" class="java.lang.String"/>
 	<parameter name="idcotic" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[ SELECT coti."ID_COTIZACION",
+		<![CDATA[SELECT coti."ID_COTIZACION",
        SUBSTR(coti."NUM_COTIZACION",7,9) as lacoti ,
        coti."FK_CLIENTE", coti."FK_USUARIO",
        coti."FK_EMPLEADO",
@@ -35,7 +35,7 @@
        and pc."ID_COD_DIVIPO" = rev."FK_CIUDAD"
        and coti."FK_CLIENTE" = c."ID_CLIENTE"
        AND coti."FK_REVISION_ENSAYO_EQUIPO" = rev."ID_REVISION_EQUIPO"
-       and pcc."ID_COD_DIVIPO" = c."CIUDAD" ]]>
+       and pcc."ID_COD_DIVIPO" = c."CIUDAD"]]>
 	</queryString>
 	<field name="ID_COTIZACION" class="java.lang.Integer"/>
 	<field name="lacoti" class="java.lang.String"/>
@@ -235,14 +235,14 @@ Autorized service by customer]]></text>
 				<text><![CDATA[ASTM F496 - 14a   Standard Specification for In-Service Care of Insulating Gloves and Sleeves]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="290" y="100" width="132" height="59" uuid="bcdaba39-303c-446f-b132-74773e5e92fa"/>
+				<reportElement x="290" y="100" width="132" height="53" uuid="bcdaba39-303c-446f-b132-74773e5e92fa"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Direccion de ejecucion de ensayos/Test Address]]></text>
 			</staticText>
 			<subreport>
-				<reportElement x="135" y="157" width="128" height="32" uuid="15d9ff13-67a3-461b-97e4-8cbba6184ab7"/>
+				<reportElement x="144" y="157" width="128" height="32" uuid="15d9ff13-67a3-461b-97e4-8cbba6184ab7"/>
 				<subreportParameter name="ncotic">
 					<subreportParameterExpression><![CDATA[$P{ncotic}]]></subreportParameterExpression>
 				</subreportParameter>
