@@ -8,12 +8,13 @@
 	</parameter>
 	<queryString>
 		<![CDATA[SELECT
-       SUM("VALOR_UNITARIO")::numeric(17,0) * "CANTIDAD" as total, SUM("VALOR_UNITARIO")::numeric(17,0) * "CANTIDAD"::numeric(17,0) * 0.19 as iva,
-       SUM("VALOR_UNITARIO")::numeric(17,0) * "CANTIDAD"::numeric(17,0) + SUM("VALOR_UNITARIO")::numeric(17,0) * "CANTIDAD"::numeric(17,0) * 0.19 as total_servicio
-  FROM labor."DETALLE_COTIZACION" dt, labor."EQUIPOS_APROBADOS" apr  WHERE apr."FK_COTIZACION" = $P{ncotic} and dt."FK_COTIZACION" = apr."FK_COTIZACION" and apr."FK_COD_TIPO_EQUIPO" = dt."FK_COD_TIPO_EQUIPO"
+       SUM("VALOR_UNITARIO")::numeric(17,0) * apr."CANTIDAD_APROBADO" as total, SUM("VALOR_UNITARIO")::numeric(17,0) * apr."CANTIDAD_APROBADO"::numeric(17,0) * 0.19 as iva,
+       SUM("VALOR_UNITARIO")::numeric(17,0) * apr."CANTIDAD_APROBADO"::numeric(17,0) + SUM("VALOR_UNITARIO")::numeric(17,0) * apr."CANTIDAD_APROBADO"::numeric(17,0) * 0.19 as total_servicio
+FROM labor."DETALLE_COTIZACION" dt, labor."EQUIPOS_APROBADOS" apr
+WHERE apr."FK_COTIZACION" = $P{ncotic} and dt."FK_COTIZACION" = apr."FK_COTIZACION" and apr."FK_COD_TIPO_EQUIPO" = dt."FK_COD_TIPO_EQUIPO"
 
 
-GROUP BY "CANTIDAD"]]>
+GROUP BY "CANTIDAD_APROBADO"]]>
 	</queryString>
 	<field name="total" class="java.math.BigDecimal"/>
 	<field name="iva" class="java.math.BigDecimal"/>
