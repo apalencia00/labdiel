@@ -10,11 +10,14 @@
 		<![CDATA[SELECT
        SUM("VALOR_UNITARIO")::numeric(17,0) * "CANTIDAD" as total, SUM("VALOR_UNITARIO")::numeric(17,0) * "CANTIDAD"::numeric(17,0) * 0.19 as iva,
        SUM("VALOR_UNITARIO")::numeric(17,0) * "CANTIDAD"::numeric(17,0) + SUM("VALOR_UNITARIO")::numeric(17,0) * "CANTIDAD"::numeric(17,0) * 0.19 as total_servicio
-  FROM labor."DETALLE_COTIZACION"  WHERE "FK_COTIZACION" = $P{ncotic}
+  FROM labor."DETALLE_COTIZACION" dt, labor."EQUIPOS_APROBADOS" apr  WHERE apr."FK_COTIZACION" = $P{ncotic} and dt."FK_COTIZACION" = apr."FK_COTIZACION" and apr."FK_COD_TIPO_EQUIPO" = dt."FK_COD_TIPO_EQUIPO"
 
 
 GROUP BY "CANTIDAD"]]>
 	</queryString>
+	<field name="total" class="java.math.BigDecimal"/>
+	<field name="iva" class="java.math.BigDecimal"/>
+	<field name="total_servicio" class="java.math.BigDecimal"/>
 	<title>
 		<band height="58" splitType="Stretch">
 			<staticText>
@@ -53,6 +56,23 @@ GROUP BY "CANTIDAD"]]>
 				</textElement>
 				<text><![CDATA[Total]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="503" y="0" width="69" height="20" uuid="8c163235-1740-49ad-ad91-2761cbdad6ec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="503" y="20" width="69" height="20" uuid="9548151c-1616-4dad-b85e-569a55819dff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{iva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="503" y="37" width="69" height="20" uuid="6dbc4411-1bea-4e44-8318-d89d922ace7f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{total_servicio}]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 </jasperReport>
